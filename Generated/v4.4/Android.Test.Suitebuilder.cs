@@ -72,7 +72,7 @@ namespace Android.Test.Suitebuilder
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TestMethod() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TestMethod() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -237,7 +237,7 @@ namespace Android.Test.Suitebuilder
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TestSuiteBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TestSuiteBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -280,7 +280,7 @@ namespace Android.Test.Suitebuilder
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal FailedToCreateTests() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal FailedToCreateTests() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

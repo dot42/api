@@ -1052,7 +1052,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1067,7 +1067,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
 				public virtual byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);

@@ -279,7 +279,7 @@ namespace Org.Apache.Http.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DefaultedHttpParams() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DefaultedHttpParams() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -312,7 +312,7 @@ namespace Org.Apache.Http.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpAbstractParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpAbstractParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -379,7 +379,7 @@ namespace Org.Apache.Http.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpConnectionParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpConnectionParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -554,7 +554,7 @@ namespace Org.Apache.Http.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpProtocolParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpProtocolParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

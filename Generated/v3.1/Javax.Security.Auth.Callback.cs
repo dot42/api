@@ -64,7 +64,7 @@ namespace Javax.Security.Auth.Callback
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PasswordCallback() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PasswordCallback() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -144,7 +144,7 @@ namespace Javax.Security.Auth.Callback
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnsupportedCallbackException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UnsupportedCallbackException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

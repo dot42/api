@@ -135,7 +135,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copyFromUnchecked
 				/// </java-name>
-				[Dot42.DexImport("copyFromUnchecked", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("copyFromUnchecked", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void CopyFromUnchecked(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -143,7 +143,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copyFromUnchecked
 				/// </java-name>
-				[Dot42.DexImport("copyFromUnchecked", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("copyFromUnchecked", "([B)V", AccessFlags = 1)]
 				public virtual void CopyFromUnchecked(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -184,7 +184,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copyFrom
 				/// </java-name>
-				[Dot42.DexImport("copyFrom", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("copyFrom", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void CopyFrom(sbyte[] d) /* MethodBuilder.Create */ 
 				{
 				}
@@ -195,7 +195,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copyFrom
 				/// </java-name>
-				[Dot42.DexImport("copyFrom", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("copyFrom", "([B)V", AccessFlags = 1)]
 				public virtual void CopyFrom(byte[] d) /* MethodBuilder.Create */ 
 				{
 				}
@@ -274,7 +274,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copy1DRangeFromUnchecked
 				/// </java-name>
-				[Dot42.DexImport("copy1DRangeFromUnchecked", "(II[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("copy1DRangeFromUnchecked", "(II[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Copy1DRangeFromUnchecked(int int32, int int321, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -282,7 +282,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copy1DRangeFromUnchecked
 				/// </java-name>
-				[Dot42.DexImport("copy1DRangeFromUnchecked", "(II[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("copy1DRangeFromUnchecked", "(II[B)V", AccessFlags = 1)]
 				public virtual void Copy1DRangeFromUnchecked(int int32, int int321, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -314,7 +314,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copy1DRangeFrom
 				/// </java-name>
-				[Dot42.DexImport("copy1DRangeFrom", "(II[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("copy1DRangeFrom", "(II[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Copy1DRangeFrom(int int32, int int321, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -322,7 +322,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copy1DRangeFrom
 				/// </java-name>
-				[Dot42.DexImport("copy1DRangeFrom", "(II[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("copy1DRangeFrom", "(II[B)V", AccessFlags = 1)]
 				public virtual void Copy1DRangeFrom(int int32, int int321, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -349,7 +349,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copy2DRangeFrom
 				/// </java-name>
-				[Dot42.DexImport("copy2DRangeFrom", "(IIII[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("copy2DRangeFrom", "(IIII[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Copy2DRangeFrom(int int32, int int321, int int322, int int323, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -357,7 +357,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copy2DRangeFrom
 				/// </java-name>
-				[Dot42.DexImport("copy2DRangeFrom", "(IIII[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("copy2DRangeFrom", "(IIII[B)V", AccessFlags = 1)]
 				public virtual void Copy2DRangeFrom(int int32, int int321, int int322, int int323, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -425,7 +425,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copyTo
 				/// </java-name>
-				[Dot42.DexImport("copyTo", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("copyTo", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void CopyTo(sbyte[] b) /* MethodBuilder.Create */ 
 				{
 				}
@@ -436,7 +436,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// copyTo
 				/// </java-name>
-				[Dot42.DexImport("copyTo", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("copyTo", "([B)V", AccessFlags = 1)]
 				public virtual void CopyTo(byte[] b) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1026,12 +1026,12 @@ namespace Android.Renderscripts
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(BB)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(BB)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public Byte2(sbyte initX, sbyte initY) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(BB)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(BB)V", AccessFlags = 1)]
 				public Byte2(byte initX, byte initY) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1068,12 +1068,12 @@ namespace Android.Renderscripts
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(BBB)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(BBB)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public Byte3(sbyte initX, sbyte initY, sbyte initZ) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(BBB)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(BBB)V", AccessFlags = 1)]
 				public Byte3(byte initX, byte initY, byte initZ) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1115,12 +1115,12 @@ namespace Android.Renderscripts
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(BBBB)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(BBBB)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public Byte4(sbyte initX, sbyte initY, sbyte initZ, sbyte initW) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(BBBB)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(BBBB)V", AccessFlags = 1)]
 				public Byte4(byte initX, byte initY, byte initZ, byte initW) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2086,7 +2086,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2386,7 +2386,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// addI8
 				/// </java-name>
-				[Dot42.DexImport("addI8", "(B)V", AccessFlags = 1)]
+				[Dot42.DexImport("addI8", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void AddI8(sbyte v) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2394,7 +2394,7 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// addI8
 				/// </java-name>
-				[Dot42.DexImport("addI8", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("addI8", "(B)V", AccessFlags = 1)]
 				public virtual void AddI8(byte v) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2754,14 +2754,14 @@ namespace Android.Renderscripts
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("getData", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FieldPacker() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FieldPacker() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2770,7 +2770,7 @@ namespace Android.Renderscripts
 				/// </java-name>
 				public byte[] Data
 				{
-						[Dot42.DexImport("getData", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 17)]
 						get{ return default(byte[]); }
 				}
 
@@ -4368,7 +4368,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal TriangleMeshBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal TriangleMeshBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -4449,7 +4449,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AllocationBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AllocationBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -4590,7 +4590,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -4911,7 +4911,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal BaseProgramBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal BaseProgramBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5030,7 +5030,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5130,7 +5130,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5373,7 +5373,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5730,7 +5730,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6042,7 +6042,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6136,7 +6136,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Constants() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Constants() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6185,7 +6185,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6540,7 +6540,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RenderScriptGL() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RenderScriptGL() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6658,7 +6658,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSDriverException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSDriverException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6680,7 +6680,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSIllegalArgumentException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSIllegalArgumentException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6702,7 +6702,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSInvalidStateException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSInvalidStateException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6724,7 +6724,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSRuntimeException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSRuntimeException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6836,7 +6836,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6977,7 +6977,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSTextureView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSTextureView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7245,7 +7245,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -7594,7 +7594,7 @@ namespace Android.Renderscripts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScriptC() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ScriptC() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7901,7 +7901,7 @@ namespace Android.Renderscripts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

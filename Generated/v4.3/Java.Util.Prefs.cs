@@ -229,8 +229,8 @@ namespace Java.Util.Prefs
 				/// <java-name>
 				/// getByteArray
 				/// </java-name>
-				[Dot42.DexImport("getByteArray", "(Ljava/lang/String;[B)[B", AccessFlags = 1)]
-				public override sbyte[] GetByteArray(string key, sbyte[] deflt) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("getByteArray", "(Ljava/lang/String;[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual sbyte[] GetByteArray(string key, sbyte[] deflt) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
@@ -238,7 +238,7 @@ namespace Java.Util.Prefs
 				/// <java-name>
 				/// getByteArray
 				/// </java-name>
-				[Dot42.DexImport("getByteArray", "(Ljava/lang/String;[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByteArray", "(Ljava/lang/String;[B)[B", AccessFlags = 1)]
 				public override byte[] GetByteArray(string key, byte[] deflt) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -344,15 +344,15 @@ namespace Java.Util.Prefs
 				/// <java-name>
 				/// putByteArray
 				/// </java-name>
-				[Dot42.DexImport("putByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
-				public override void PutByteArray(string key, sbyte[] value) /* MethodBuilder.Create */ 
+				[Dot42.DexImport("putByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				public virtual void PutByteArray(string key, sbyte[] value) /* MethodBuilder.Create */ 
 				{
 				}
 
 				/// <java-name>
 				/// putByteArray
 				/// </java-name>
-				[Dot42.DexImport("putByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("putByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
 				public override void PutByteArray(string key, byte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -455,7 +455,7 @@ namespace Java.Util.Prefs
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractPreferences() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractPreferences() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -506,7 +506,7 @@ namespace Java.Util.Prefs
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BackingStoreException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BackingStoreException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -571,7 +571,7 @@ namespace Java.Util.Prefs
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InvalidPreferencesFormatException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InvalidPreferencesFormatException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -653,7 +653,7 @@ namespace Java.Util.Prefs
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NodeChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NodeChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -708,7 +708,7 @@ namespace Java.Util.Prefs
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PreferenceChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PreferenceChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -901,18 +901,6 @@ namespace Java.Util.Prefs
 				/// getByteArray
 				/// </java-name>
 				[Dot42.DexImport("getByteArray", "(Ljava/lang/String;[B)[B", AccessFlags = 1025)]
-				public abstract sbyte[] GetByteArray(string key, sbyte[] deflt) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Gets the <c>byte </c> array value mapped to the given key or its default value if no value is mapped, if the backing store is unavailable, or if the value is an invalid string. </para> <para>To be valid, the value string must be Base64-encoded binary data. The Base64 encoding is as defined in , section 6.8. </para> <para>Some implementations may store default values in backing stores. In this case, if there is no value mapped to the given key, the stored default value is returned. </para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the byte array value mapped to the given key. </para>
-				/// </returns>
-				/// <java-name>
-				/// getByteArray
-				/// </java-name>
-				[Dot42.DexImport("getByteArray", "(Ljava/lang/String;[B)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract byte[] GetByteArray(string key, byte[] deflt) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1061,15 +1049,6 @@ namespace Java.Util.Prefs
 				/// putByteArray
 				/// </java-name>
 				[Dot42.DexImport("putByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 1025)]
-				public abstract void PutByteArray(string key, sbyte[] value) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Adds a new preference to this node using the given key and the string form of the given value or updates the value if a preference with the given key already exists. </para> <para>The string form of the value is the Base64-encoded binary data of the given byte array. The Base64 encoding is as defined in , section 6.8. </para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// putByteArray
-				/// </java-name>
-				[Dot42.DexImport("putByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract void PutByteArray(string key, byte[] value) /* MethodBuilder.Create */ ;
 
 				/// <summary>

@@ -188,7 +188,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -293,7 +293,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)[B", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([B)[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] Update(sbyte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -308,7 +308,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([B)[B", AccessFlags = 17)]
 				public byte[] Update(byte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -323,7 +323,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)[B", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([BII)[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] Update(sbyte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -338,7 +338,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII)[B", AccessFlags = 17)]
 				public byte[] Update(byte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -353,7 +353,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII[B)I", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([BII[B)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int Update(sbyte[] input, int inputOffset, int inputLen, sbyte[] output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -368,7 +368,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII[B)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII[B)I", AccessFlags = 17)]
 				public int Update(byte[] input, int inputOffset, int inputLen, byte[] output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -383,7 +383,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII[BI)I", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([BII[BI)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int Update(sbyte[] input, int inputOffset, int inputLen, sbyte[] output, int outputOffset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -398,7 +398,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII[BI)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII[BI)I", AccessFlags = 17)]
 				public int Update(byte[] input, int inputOffset, int inputLen, byte[] output, int outputOffset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -425,7 +425,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// updateAAD
 				/// </java-name>
-				[Dot42.DexImport("updateAAD", "([B)V", AccessFlags = 17)]
+				[Dot42.DexImport("updateAAD", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void UpdateAAD(sbyte[] input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -436,7 +436,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// updateAAD
 				/// </java-name>
-				[Dot42.DexImport("updateAAD", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("updateAAD", "([B)V", AccessFlags = 17)]
 				public void UpdateAAD(byte[] input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -447,7 +447,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// updateAAD
 				/// </java-name>
-				[Dot42.DexImport("updateAAD", "([BII)V", AccessFlags = 17)]
+				[Dot42.DexImport("updateAAD", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void UpdateAAD(sbyte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 				}
@@ -458,7 +458,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// updateAAD
 				/// </java-name>
-				[Dot42.DexImport("updateAAD", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("updateAAD", "([BII)V", AccessFlags = 17)]
 				public void UpdateAAD(byte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 				}
@@ -483,7 +483,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaDoFinal() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -498,7 +498,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17)]
 				public byte[] DoFinal() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -513,7 +513,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BI)I", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "([BI)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int DoFinal(sbyte[] input, int output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -528,7 +528,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BI)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "([BI)I", AccessFlags = 17)]
 				public int DoFinal(byte[] input, int output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -543,7 +543,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] DoFinal(sbyte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -558,7 +558,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17)]
 				public byte[] DoFinal(byte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -573,7 +573,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BII)[B", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "([BII)[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] DoFinal(sbyte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -588,7 +588,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BII)[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "([BII)[B", AccessFlags = 17)]
 				public byte[] DoFinal(byte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -603,7 +603,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BII[B)I", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "([BII[B)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int DoFinal(sbyte[] input, int inputOffset, int inputLen, sbyte[] output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -618,7 +618,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BII[B)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "([BII[B)I", AccessFlags = 17)]
 				public int DoFinal(byte[] input, int inputOffset, int inputLen, byte[] output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -633,7 +633,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BII[BI)I", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "([BII[BI)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int DoFinal(sbyte[] input, int inputOffset, int inputLen, sbyte[] output, int outputOffset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -648,7 +648,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BII[BI)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "([BII[BI)I", AccessFlags = 17)]
 				public int DoFinal(byte[] input, int inputOffset, int inputLen, byte[] output, int outputOffset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -678,7 +678,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("wrap", "(Ljava/security/Key;)[B", AccessFlags = 17)]
+				[Dot42.DexImport("wrap", "(Ljava/security/Key;)[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaWrap(global::Java.Security.IKey key) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -693,7 +693,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("wrap", "(Ljava/security/Key;)[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("wrap", "(Ljava/security/Key;)[B", AccessFlags = 17)]
 				public byte[] Wrap(global::Java.Security.IKey key) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -708,7 +708,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// unwrap
 				/// </java-name>
-				[Dot42.DexImport("unwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 17)]
+				[Dot42.DexImport("unwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 17, IgnoreFromJava = true)]
 				public global::Java.Security.IKey Unwrap(sbyte[] wrappedKey, string wrappedKeyAlgorithm, int wrappedKeyType) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.IKey);
@@ -723,7 +723,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// unwrap
 				/// </java-name>
-				[Dot42.DexImport("unwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("unwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 17)]
 				public global::Java.Security.IKey Unwrap(byte[] wrappedKey, string wrappedKeyAlgorithm, int wrappedKeyType) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.IKey);
@@ -760,7 +760,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Cipher() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Cipher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -820,7 +820,7 @@ namespace Javax.Crypto
 				/// </java-name>
 				public byte[] IV
 				{
-						[Dot42.DexImport("getIV", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 17)]
 						get{ return default(byte[]); }
 				}
 
@@ -906,7 +906,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buf, int off, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -921,7 +921,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buf, int off, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -972,7 +972,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CipherInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CipherInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1021,7 +1021,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1032,7 +1032,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1060,7 +1060,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CipherOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CipherOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1136,18 +1136,6 @@ namespace Javax.Crypto
 				/// engineGetIV
 				/// </java-name>
 				[Dot42.DexImport("engineGetIV", "()[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineGetIV() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the Initialization Vector (IV) that was used to initialize this cipher or <c>null </c> if none was used.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the Initialization Vector (IV), or <c>null </c> if none was used. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGetIV
-				/// </java-name>
-				[Dot42.DexImport("engineGetIV", "()[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineGetIV() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1201,18 +1189,6 @@ namespace Javax.Crypto
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "([BII)[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] EngineUpdate(sbyte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Continues a multi-part transformation (encryption or decryption). The transformed bytes are returned.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the transformed bytes in a new buffer, or <c>null </c> if the input has zero length. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "([BII)[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineUpdate(byte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1225,18 +1201,6 @@ namespace Javax.Crypto
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "([BII[BI)I", AccessFlags = 1028)]
-				protected internal abstract int EngineUpdate(sbyte[] input, int inputOffset, int inputLen, sbyte[] output, int outputOffset) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Continues a multi-part transformation (encryption or decryption). The transformed bytes are stored in the <c>output </c> buffer. </para> <para>If the size of the <c>output </c> buffer is too small to hold the result, a <c>ShortBufferException </c> is thrown. Use getOutputSize to check for the size of the output buffer.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the number of bytes placed in output. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "([BII[BI)I", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract int EngineUpdate(byte[] input, int inputOffset, int inputLen, byte[] output, int outputOffset) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1260,7 +1224,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// engineUpdateAAD
 				/// </java-name>
-				[Dot42.DexImport("engineUpdateAAD", "([BII)V", AccessFlags = 4)]
+				[Dot42.DexImport("engineUpdateAAD", "([BII)V", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual void EngineUpdateAAD(sbyte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1271,7 +1235,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// engineUpdateAAD
 				/// </java-name>
-				[Dot42.DexImport("engineUpdateAAD", "([BII)V", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("engineUpdateAAD", "([BII)V", AccessFlags = 4)]
 				protected internal virtual void EngineUpdateAAD(byte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1297,18 +1261,6 @@ namespace Javax.Crypto
 				/// engineDoFinal
 				/// </java-name>
 				[Dot42.DexImport("engineDoFinal", "([BII)[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] EngineDoFinal(sbyte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Finishes a multi-part transformation (encryption or decryption). </para> <para>Processes the <c>inputLen </c> bytes in <c>input </c> buffer at <c>inputOffset </c> , and any bytes that have been buffered in previous <c>update </c> calls.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the final bytes from the transformation. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineDoFinal
-				/// </java-name>
-				[Dot42.DexImport("engineDoFinal", "([BII)[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineDoFinal(byte[] input, int inputOffset, int inputLen) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1321,18 +1273,6 @@ namespace Javax.Crypto
 				/// engineDoFinal
 				/// </java-name>
 				[Dot42.DexImport("engineDoFinal", "([BII[BI)I", AccessFlags = 1028)]
-				protected internal abstract int EngineDoFinal(sbyte[] input, int inputOffset, int inputLen, sbyte[] output, int outputOffset) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Finishes a multi-part transformation (encryption or decryption). </para> <para>Processes the <c>inputLen </c> bytes in <c>input </c> buffer at  <c>inputOffset </c> , and any bytes that have been buffered in previous  <c>update </c> calls.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the number of bytes placed in the output buffer. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineDoFinal
-				/// </java-name>
-				[Dot42.DexImport("engineDoFinal", "([BII[BI)I", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract int EngineDoFinal(byte[] input, int inputOffset, int inputLen, byte[] output, int outputOffset) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1359,7 +1299,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// engineWrap
 				/// </java-name>
-				[Dot42.DexImport("engineWrap", "(Ljava/security/Key;)[B", AccessFlags = 4)]
+				[Dot42.DexImport("engineWrap", "(Ljava/security/Key;)[B", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual sbyte[] JavaEngineWrap(global::Java.Security.IKey key) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1374,7 +1314,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// engineWrap
 				/// </java-name>
-				[Dot42.DexImport("engineWrap", "(Ljava/security/Key;)[B", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("engineWrap", "(Ljava/security/Key;)[B", AccessFlags = 4)]
 				protected internal virtual byte[] EngineWrap(global::Java.Security.IKey key) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1389,7 +1329,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// engineUnwrap
 				/// </java-name>
-				[Dot42.DexImport("engineUnwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 4)]
+				[Dot42.DexImport("engineUnwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual global::Java.Security.IKey EngineUnwrap(sbyte[] wrappedKey, string wrappedKeyAlgorithm, int wrappedKeyType) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.IKey);
@@ -1404,7 +1344,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// engineUnwrap
 				/// </java-name>
-				[Dot42.DexImport("engineUnwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("engineUnwrap", "([BLjava/lang/String;I)Ljava/security/Key;", AccessFlags = 4)]
 				protected internal virtual global::Java.Security.IKey EngineUnwrap(byte[] wrappedKey, string wrappedKeyAlgorithm, int wrappedKeyType) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Security.IKey);
@@ -1440,7 +1380,7 @@ namespace Javax.Crypto
 				/// <summary>
 				///  <para>Creates an <c>EncryptedPrivateKeyInfo </c> instance from its encoded representation by parsing it.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public EncryptedPrivateKeyInfo(sbyte[] encoded) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1448,27 +1388,27 @@ namespace Javax.Crypto
 				/// <summary>
 				///  <para>Creates an <c>EncryptedPrivateKeyInfo </c> instance from its encoded representation by parsing it.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public EncryptedPrivateKeyInfo(byte[] encoded) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public EncryptedPrivateKeyInfo(string @string, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
 				public EncryptedPrivateKeyInfo(string @string, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/security/AlgorithmParameters;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljava/security/AlgorithmParameters;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public EncryptedPrivateKeyInfo(global::Java.Security.AlgorithmParameters algorithmParameters, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/security/AlgorithmParameters;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/security/AlgorithmParameters;[B)V", AccessFlags = 1)]
 				public EncryptedPrivateKeyInfo(global::Java.Security.AlgorithmParameters algorithmParameters, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1482,7 +1422,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// getEncryptedData
 				/// </java-name>
-				[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetEncryptedData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1558,14 +1498,14 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EncryptedPrivateKeyInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EncryptedPrivateKeyInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1610,7 +1550,7 @@ namespace Javax.Crypto
 				/// </java-name>
 				public virtual byte[] EncryptedData
 				{
-						[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncryptedData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1625,7 +1565,7 @@ namespace Javax.Crypto
 				/// </java-name>
 				public virtual byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1755,7 +1695,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// genExemptionBlob
 				/// </java-name>
-				[Dot42.DexImport("genExemptionBlob", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("genExemptionBlob", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGenExemptionBlob() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1770,7 +1710,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// genExemptionBlob
 				/// </java-name>
-				[Dot42.DexImport("genExemptionBlob", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("genExemptionBlob", "()[B", AccessFlags = 17)]
 				public byte[] GenExemptionBlob() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1785,7 +1725,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// genExemptionBlob
 				/// </java-name>
-				[Dot42.DexImport("genExemptionBlob", "([B)I", AccessFlags = 17)]
+				[Dot42.DexImport("genExemptionBlob", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int GenExemptionBlob(sbyte[] output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1800,7 +1740,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// genExemptionBlob
 				/// </java-name>
-				[Dot42.DexImport("genExemptionBlob", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("genExemptionBlob", "([B)I", AccessFlags = 17)]
 				public int GenExemptionBlob(byte[] output) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1815,7 +1755,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// genExemptionBlob
 				/// </java-name>
-				[Dot42.DexImport("genExemptionBlob", "([BI)I", AccessFlags = 17)]
+				[Dot42.DexImport("genExemptionBlob", "([BI)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int GenExemptionBlob(sbyte[] output, int outputOffset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1830,7 +1770,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// genExemptionBlob
 				/// </java-name>
-				[Dot42.DexImport("genExemptionBlob", "([BI)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("genExemptionBlob", "([BI)I", AccessFlags = 17)]
 				public int GenExemptionBlob(byte[] output, int outputOffset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1846,7 +1786,7 @@ namespace Javax.Crypto
 				extern ~ExemptionMechanism() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExemptionMechanism() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ExemptionMechanism() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1938,18 +1878,6 @@ namespace Javax.Crypto
 				/// engineGenExemptionBlob
 				/// </java-name>
 				[Dot42.DexImport("engineGenExemptionBlob", "()[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineGenExemptionBlob() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Generates the result key blob for this exemption mechanism.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the result key blob for this exemption mechanism. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGenExemptionBlob
-				/// </java-name>
-				[Dot42.DexImport("engineGenExemptionBlob", "()[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineGenExemptionBlob() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1962,18 +1890,6 @@ namespace Javax.Crypto
 				/// engineGenExemptionBlob
 				/// </java-name>
 				[Dot42.DexImport("engineGenExemptionBlob", "([BI)I", AccessFlags = 1028)]
-				protected internal abstract int EngineGenExemptionBlob(sbyte[] output, int outputOffset) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Generates the result key blob for this exemption mechanism and stores it into the <c>output </c> buffer at offset <c>outputOffset </c> .</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the number of bytes written to the <c>output </c> buffer. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGenExemptionBlob
-				/// </java-name>
-				[Dot42.DexImport("engineGenExemptionBlob", "([BI)I", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract int EngineGenExemptionBlob(byte[] output, int outputOffset) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -2197,7 +2113,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// generateSecret
 				/// </java-name>
-				[Dot42.DexImport("generateSecret", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("generateSecret", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGenerateSecret() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2212,7 +2128,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// generateSecret
 				/// </java-name>
-				[Dot42.DexImport("generateSecret", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("generateSecret", "()[B", AccessFlags = 17)]
 				public byte[] GenerateSecret() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2227,7 +2143,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// generateSecret
 				/// </java-name>
-				[Dot42.DexImport("generateSecret", "([BI)I", AccessFlags = 17)]
+				[Dot42.DexImport("generateSecret", "([BI)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int GenerateSecret(sbyte[] sharedSecret, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2242,7 +2158,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// generateSecret
 				/// </java-name>
-				[Dot42.DexImport("generateSecret", "([BI)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("generateSecret", "([BI)I", AccessFlags = 17)]
 				public int GenerateSecret(byte[] sharedSecret, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2264,7 +2180,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyAgreement() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyAgreement() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2340,18 +2256,6 @@ namespace Javax.Crypto
 				/// engineGenerateSecret
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateSecret", "()[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineGenerateSecret() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Generates the shared secret.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the generated shared secret. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGenerateSecret
-				/// </java-name>
-				[Dot42.DexImport("engineGenerateSecret", "()[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineGenerateSecret() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -2364,18 +2268,6 @@ namespace Javax.Crypto
 				/// engineGenerateSecret
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateSecret", "([BI)I", AccessFlags = 1028)]
-				protected internal abstract int EngineGenerateSecret(sbyte[] sharedSecret, int offset) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Generates the shared secret and stores it into the buffer <c>sharedSecred </c> at <c>offset </c> .</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the number of bytes stored in the buffer. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGenerateSecret
-				/// </java-name>
-				[Dot42.DexImport("engineGenerateSecret", "([BI)I", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract int EngineGenerateSecret(byte[] sharedSecret, int offset) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -2533,7 +2425,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyGenerator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyGenerator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2707,7 +2599,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "(B)V", AccessFlags = 17)]
+				[Dot42.DexImport("update", "(B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Update(sbyte input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2718,7 +2610,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "(B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "(B)V", AccessFlags = 17)]
 				public void Update(byte input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2729,7 +2621,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Update(sbyte[] input, int offset, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2740,7 +2632,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17)]
 				public void Update(byte[] input, int offset, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2751,7 +2643,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Update(sbyte[] input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2762,7 +2654,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 17)]
 				public void Update(byte[] input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2787,7 +2679,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaDoFinal() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2802,7 +2694,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "()[B", AccessFlags = 17)]
 				public byte[] DoFinal() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2814,7 +2706,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BI)V", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "([BI)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void DoFinal(sbyte[] output, int outOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2825,7 +2717,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([BI)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "([BI)V", AccessFlags = 17)]
 				public void DoFinal(byte[] output, int outOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2839,7 +2731,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17)]
+				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] DoFinal(sbyte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2854,7 +2746,7 @@ namespace Javax.Crypto
 				/// <java-name>
 				/// doFinal
 				/// </java-name>
-				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("doFinal", "([B)[B", AccessFlags = 17)]
 				public byte[] DoFinal(byte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2887,7 +2779,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Mac() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Mac() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2984,15 +2876,6 @@ namespace Javax.Crypto
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "(B)V", AccessFlags = 1028)]
-				protected internal abstract void EngineUpdate(sbyte input) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Updates this <c>MacSpi </c> instance with the data from the specified buffer, starting at ByteBuffer#position(), including the next ByteBuffer#remaining() bytes.</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "(B)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineUpdate(byte input) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -3002,15 +2885,6 @@ namespace Javax.Crypto
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "([BII)V", AccessFlags = 1028)]
-				protected internal abstract void EngineUpdate(sbyte[] input, int offset, int len) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Updates this <c>MacSpi </c> instance with the data from the specified buffer <c>input </c> from the specified <c>offset </c> and length <c>len </c> .</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "([BII)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineUpdate(byte[] input, int offset, int len) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -3034,18 +2908,6 @@ namespace Javax.Crypto
 				/// engineDoFinal
 				/// </java-name>
 				[Dot42.DexImport("engineDoFinal", "()[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineDoFinal() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Computes the digest of this MAC based on the data previously specified in engineUpdate calls. </para> <para>This <c>MacSpi </c> instance is reverted to its initial state and can be used to start the next MAC computation with the same parameters or initialized with different parameters.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the generated digest. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineDoFinal
-				/// </java-name>
-				[Dot42.DexImport("engineDoFinal", "()[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineDoFinal() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -3202,7 +3064,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SealedObject() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SealedObject() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3320,7 +3182,7 @@ namespace Javax.Crypto
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SecretKeyFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SecretKeyFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

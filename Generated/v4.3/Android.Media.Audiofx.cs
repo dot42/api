@@ -621,7 +621,7 @@ namespace Android.Media.Audiofx
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BassBoost() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BassBoost() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -841,7 +841,7 @@ namespace Android.Media.Audiofx
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EnvironmentalReverb() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EnvironmentalReverb() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1343,7 +1343,7 @@ namespace Android.Media.Audiofx
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Equalizer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Equalizer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1634,7 +1634,7 @@ namespace Android.Media.Audiofx
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PresetReverb() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PresetReverb() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1788,7 +1788,7 @@ namespace Android.Media.Audiofx
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Virtualizer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Virtualizer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2091,7 +2091,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getWaveForm
 				/// </java-name>
-				[Dot42.DexImport("getWaveForm", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("getWaveForm", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int GetWaveForm(sbyte[] waveform) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2106,7 +2106,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getWaveForm
 				/// </java-name>
-				[Dot42.DexImport("getWaveForm", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getWaveForm", "([B)I", AccessFlags = 1)]
 				public virtual int GetWaveForm(byte[] waveform) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2121,7 +2121,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getFft
 				/// </java-name>
-				[Dot42.DexImport("getFft", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("getFft", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int GetFft(sbyte[] fft) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2136,7 +2136,7 @@ namespace Android.Media.Audiofx
 				/// <java-name>
 				/// getFft
 				/// </java-name>
-				[Dot42.DexImport("getFft", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getFft", "([B)I", AccessFlags = 1)]
 				public virtual int GetFft(byte[] fft) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2158,7 +2158,7 @@ namespace Android.Media.Audiofx
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Visualizer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Visualizer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2269,7 +2269,7 @@ namespace Android.Media.Audiofx
 						/// onWaveFormDataCapture
 						/// </java-name>
 						[Dot42.DexImport("onWaveFormDataCapture", "(Landroid/media/audiofx/Visualizer;[BI)V", AccessFlags = 1025)]
-						void OnWaveFormDataCapture(global::Android.Media.Audiofx.Visualizer visualizer, sbyte[] waveform, int samplingRate) /* MethodBuilder.Create */ ;
+						void OnWaveFormDataCapture(global::Android.Media.Audiofx.Visualizer visualizer, byte[] waveform, int samplingRate) /* MethodBuilder.Create */ ;
 
 						/// <summary>
 						///  <para>Method called when a new frequency capture is available. </para> <para>Data in the fft buffer is valid only within the scope of the callback. Applications which needs access to the fft data after returning from the callback should make a copy of the data instead of holding a reference. </para>        
@@ -2278,7 +2278,7 @@ namespace Android.Media.Audiofx
 						/// onFftDataCapture
 						/// </java-name>
 						[Dot42.DexImport("onFftDataCapture", "(Landroid/media/audiofx/Visualizer;[BI)V", AccessFlags = 1025)]
-						void OnFftDataCapture(global::Android.Media.Audiofx.Visualizer visualizer, sbyte[] fft, int samplingRate) /* MethodBuilder.Create */ ;
+						void OnFftDataCapture(global::Android.Media.Audiofx.Visualizer visualizer, byte[] fft, int samplingRate) /* MethodBuilder.Create */ ;
 
 				}
 

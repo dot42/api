@@ -661,7 +661,7 @@ namespace Android.Graphics.Drawables
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ClipDrawable() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ClipDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2462,7 +2462,7 @@ namespace Android.Graphics.Drawables
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InsetDrawable() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InsetDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2750,7 +2750,7 @@ namespace Android.Graphics.Drawables
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LayerDrawable() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LayerDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2888,7 +2888,7 @@ namespace Android.Graphics.Drawables
 				/// <summary>
 				///  <para>Create drawable from raw nine-patch data, not dealing with density.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use NinePatchDrawable(Resources, Bitmap, byte[], Rect, String) to ensure that the drawable has correctly set its target density. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLandroid/graphics/Rect;Ljava/lang/String;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLandroid/graphics/Rect;Ljava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public NinePatchDrawable(global::Android.Graphics.Bitmap bitmap, sbyte[] chunk, global::Android.Graphics.Rect padding, string srcName) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2896,7 +2896,7 @@ namespace Android.Graphics.Drawables
 				/// <summary>
 				///  <para>Create drawable from raw nine-patch data, not dealing with density.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use NinePatchDrawable(Resources, Bitmap, byte[], Rect, String) to ensure that the drawable has correctly set its target density. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLandroid/graphics/Rect;Ljava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLandroid/graphics/Rect;Ljava/lang/String;)V", AccessFlags = 1)]
 				public NinePatchDrawable(global::Android.Graphics.Bitmap bitmap, byte[] chunk, global::Android.Graphics.Rect padding, string srcName) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2905,7 +2905,7 @@ namespace Android.Graphics.Drawables
 				///  <para>Create drawable from raw nine-patch data, setting initial target density based on the display metrics of the resources. </para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/graphics/Bitmap;[BLandroid/graphics/Rect" +
-    ";Ljava/lang/String;)V", AccessFlags = 1)]
+    ";Ljava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public NinePatchDrawable(global::Android.Content.Res.Resources res, global::Android.Graphics.Bitmap bitmap, sbyte[] chunk, global::Android.Graphics.Rect padding, string srcName) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2914,7 +2914,7 @@ namespace Android.Graphics.Drawables
 				///  <para>Create drawable from raw nine-patch data, setting initial target density based on the display metrics of the resources. </para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/content/res/Resources;Landroid/graphics/Bitmap;[BLandroid/graphics/Rect" +
-    ";Ljava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+    ";Ljava/lang/String;)V", AccessFlags = 1)]
 				public NinePatchDrawable(global::Android.Content.Res.Resources res, global::Android.Graphics.Bitmap bitmap, byte[] chunk, global::Android.Graphics.Rect padding, string srcName) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3045,7 +3045,7 @@ namespace Android.Graphics.Drawables
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NinePatchDrawable() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NinePatchDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3245,7 +3245,7 @@ namespace Android.Graphics.Drawables
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PictureDrawable() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PictureDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3644,7 +3644,7 @@ namespace Android.Graphics.Drawables
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScaleDrawable() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ScaleDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4121,7 +4121,7 @@ namespace Android.Graphics.Drawables
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TransitionDrawable() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TransitionDrawable() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

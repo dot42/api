@@ -471,7 +471,7 @@ namespace Java.Util.Jar
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Name() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Name() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -514,7 +514,7 @@ namespace Java.Util.Jar
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JarEntry() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal JarEntry() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -717,7 +717,7 @@ namespace Java.Util.Jar
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JarFile() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal JarFile() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -770,7 +770,7 @@ namespace Java.Util.Jar
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -782,7 +782,7 @@ namespace Java.Util.Jar
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -798,7 +798,7 @@ namespace Java.Util.Jar
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JarInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal JarInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -887,7 +887,7 @@ namespace Java.Util.Jar
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JarOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal JarOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

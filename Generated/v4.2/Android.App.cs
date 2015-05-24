@@ -637,7 +637,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5056,7 +5056,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AlertDialog() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AlertDialog() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5613,7 +5613,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6409,7 +6409,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DatePickerDialog() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DatePickerDialog() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7350,7 +7350,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Dialog() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Dialog() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8490,7 +8490,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Request() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Request() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9557,7 +9557,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal InstantiationException() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal InstantiationException() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9722,7 +9722,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FragmentBreadCrumbs() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FragmentBreadCrumbs() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11152,7 +11152,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ActivityResult() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ActivityResult() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11233,7 +11233,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ActivityMonitor() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ActivityMonitor() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11388,7 +11388,7 @@ namespace Android.App
 				protected internal abstract void OnHandleIntent(global::Android.Content.Intent intent) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IntentService() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IntentService() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11544,7 +11544,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal KeyguardLock() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal KeyguardLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11706,7 +11706,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal IconResizer() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal IconResizer() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -12390,7 +12390,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LocalActivityManager() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LocalActivityManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12497,7 +12497,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaRouteActionProvider() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaRouteActionProvider() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12638,7 +12638,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaRouteButton() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaRouteButton() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13994,7 +13994,7 @@ namespace Android.App
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -14610,7 +14610,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Presentation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Presentation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14817,7 +14817,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProgressDialog() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProgressDialog() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -16429,7 +16429,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TimePickerDialog() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TimePickerDialog() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -16726,7 +16726,7 @@ namespace Android.App
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal WallpaperInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal WallpaperInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

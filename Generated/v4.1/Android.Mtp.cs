@@ -604,7 +604,7 @@ namespace Android.Mtp
 				/// <java-name>
 				/// getObject
 				/// </java-name>
-				[Dot42.DexImport("getObject", "(II)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getObject", "(II)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetObject(int objectHandle, int objectSize) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -619,7 +619,7 @@ namespace Android.Mtp
 				/// <java-name>
 				/// getObject
 				/// </java-name>
-				[Dot42.DexImport("getObject", "(II)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getObject", "(II)[B", AccessFlags = 1)]
 				public byte[] GetObject(int objectHandle, int objectSize) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -634,7 +634,7 @@ namespace Android.Mtp
 				/// <java-name>
 				/// getThumbnail
 				/// </java-name>
-				[Dot42.DexImport("getThumbnail", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getThumbnail", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetThumbnail(int objectHandle) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -649,7 +649,7 @@ namespace Android.Mtp
 				/// <java-name>
 				/// getThumbnail
 				/// </java-name>
-				[Dot42.DexImport("getThumbnail", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getThumbnail", "(I)[B", AccessFlags = 1)]
 				public byte[] GetThumbnail(int objectHandle) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -746,7 +746,7 @@ namespace Android.Mtp
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MtpDevice() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MtpDevice() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

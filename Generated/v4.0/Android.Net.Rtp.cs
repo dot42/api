@@ -247,7 +247,7 @@ namespace Android.Net.Rtp
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AudioStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AudioStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

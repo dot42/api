@@ -139,7 +139,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AlphaAnimation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AlphaAnimation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -872,7 +872,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AnimationSet() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AnimationSet() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1244,7 +1244,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CycleInterpolator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CycleInterpolator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1420,7 +1420,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GridLayoutAnimationController() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GridLayoutAnimationController() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1739,7 +1739,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LayoutAnimationController() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LayoutAnimationController() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2002,7 +2002,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RotateAnimation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RotateAnimation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2067,7 +2067,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScaleAnimation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ScaleAnimation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2294,7 +2294,7 @@ namespace Android.Views.Animations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TranslateAnimation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TranslateAnimation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

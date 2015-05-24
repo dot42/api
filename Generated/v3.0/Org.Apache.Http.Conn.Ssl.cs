@@ -281,7 +281,7 @@ namespace Org.Apache.Http.Conn.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

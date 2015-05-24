@@ -103,7 +103,7 @@ namespace Android.Content.Res
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AssetFileDescriptor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AssetFileDescriptor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -185,7 +185,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// write
 						/// </java-name>
-						[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+						[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 						public override void Write(sbyte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 						{
 						}
@@ -193,7 +193,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// write
 						/// </java-name>
-						[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 						public override void Write(byte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 						{
 						}
@@ -201,7 +201,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// write
 						/// </java-name>
-						[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+						[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 						public override void Write(sbyte[] oneByte) /* MethodBuilder.Create */ 
 						{
 						}
@@ -209,7 +209,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// write
 						/// </java-name>
-						[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 						public override void Write(byte[] oneByte) /* MethodBuilder.Create */ 
 						{
 						}
@@ -223,7 +223,7 @@ namespace Android.Content.Res
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AutoCloseOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AutoCloseOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -265,7 +265,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+						[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 						public override int Read(sbyte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -274,7 +274,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 						public override int Read(byte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -283,7 +283,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+						[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 						public override int Read(sbyte[] buffer) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -292,7 +292,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 						public override int Read(byte[] buffer) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -333,7 +333,7 @@ namespace Android.Content.Res
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AutoCloseInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AutoCloseInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -584,7 +584,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([B)I", AccessFlags = 17)]
+						[Dot42.DexImport("read", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
 						public override int Read(sbyte[] b) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -593,7 +593,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("read", "([B)I", AccessFlags = 17)]
 						public override int Read(byte[] b) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -602,7 +602,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17)]
+						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
 						public override int Read(sbyte[] b, int off, int len) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -611,7 +611,7 @@ namespace Android.Content.Res
 						/// <java-name>
 						/// read
 						/// </java-name>
-						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("read", "([BII)I", AccessFlags = 17)]
 						public override int Read(byte[] b, int off, int len) /* MethodBuilder.Create */ 
 						{
 								return default(int);
@@ -633,7 +633,7 @@ namespace Android.Content.Res
 						extern ~AssetInputStream() /* MethodBuilder.Create */ ;
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AssetInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AssetInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -768,7 +768,7 @@ namespace Android.Content.Res
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ColorStateList() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ColorStateList() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2390,7 +2390,7 @@ namespace Android.Content.Res
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Resources() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Resources() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2568,7 +2568,7 @@ namespace Android.Content.Res
 						extern ~Theme() /* MethodBuilder.Create */ ;
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Theme() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Theme() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

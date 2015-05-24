@@ -299,7 +299,7 @@ namespace Org.Apache.Http.Protocol
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DefaultedHttpContext() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DefaultedHttpContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -726,7 +726,7 @@ namespace Org.Apache.Http.Protocol
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpService() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpService() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1255,7 +1255,7 @@ namespace Org.Apache.Http.Protocol
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SyncBasicHttpContext() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SyncBasicHttpContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

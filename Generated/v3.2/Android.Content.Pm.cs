@@ -911,7 +911,7 @@ namespace Android.Content.PM
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal DisplayNameComparator() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal DisplayNameComparator() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1499,7 +1499,7 @@ namespace Android.Content.PM
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LabeledIntent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LabeledIntent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1950,7 +1950,7 @@ namespace Android.Content.PM
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal DisplayNameComparator() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal DisplayNameComparator() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3438,7 +3438,7 @@ namespace Android.Content.PM
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PackageStats() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PackageStats() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3481,7 +3481,7 @@ namespace Android.Content.PM
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PathPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PathPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4099,7 +4099,7 @@ namespace Android.Content.PM
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal DisplayNameComparator() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal DisplayNameComparator() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -4206,12 +4206,12 @@ namespace Android.Content.PM
 				/// </java-name>
 				[Dot42.DexImport("CREATOR", "Landroid/os/Parcelable$Creator;", AccessFlags = 25)]
 				public static readonly global::Android.OS.IParcelable_ICreator<global::Android.Content.PM.Signature> CREATOR;
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public Signature(sbyte[] source) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public Signature(byte[] source) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4269,7 +4269,7 @@ namespace Android.Content.PM
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -4284,7 +4284,7 @@ namespace Android.Content.PM
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
 				public virtual byte[] ToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -4335,7 +4335,7 @@ namespace Android.Content.PM
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Signature() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Signature() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

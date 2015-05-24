@@ -50,18 +50,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <summary>
-				///  <para>Returns the encoded representation for this certificate.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the encoded representation for this certificate. </para>
-				/// </returns>
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <summary>
 				///  <para>Verifies that this certificate was signed with the given public key.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
@@ -110,7 +98,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Certificate() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Certificate() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -140,7 +128,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -169,12 +157,12 @@ namespace Java.Security.Cert
 				protected internal partial class CertificateRep : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4)]
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4, IgnoreFromJava = true)]
 						protected internal CertificateRep(string @string, sbyte[] sByte) /* MethodBuilder.Create */ 
 						{
 						}
 
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4, IgnoreFromJava = true)]
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4)]
 						protected internal CertificateRep(string @string, byte[] @byte) /* MethodBuilder.Create */ 
 						{
 						}
@@ -195,7 +183,7 @@ namespace Java.Security.Cert
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal CertificateRep() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal CertificateRep() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -464,7 +452,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CertificateFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CertificateFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -777,33 +765,12 @@ namespace Java.Security.Cert
 				}
 
 				/// <summary>
-				///  <para>Returns an encoding of the <c>CertPath </c> using the default encoding.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>default encoding of the <c>CertPath </c> . </para>
-				/// </returns>
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <summary>
 				///  <para>Returns an encoding of this <c>CertPath </c> using the given  <c>encoding </c> from getEncodings().</para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
 				[Dot42.DexImport("getEncoded", "(Ljava/lang/String;)[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetEncoded(string encoding) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns an encoding of this <c>CertPath </c> using the given  <c>encoding </c> from getEncodings().</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract byte[] GetEncoded(string encoding) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -822,7 +789,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CertPath() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CertPath() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -867,7 +834,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -896,12 +863,12 @@ namespace Java.Security.Cert
 				protected internal partial class CertPathRep : global::Java.IO.ISerializable
  /* scope: __dot42__ */ 
 				{
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4)]
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4, IgnoreFromJava = true)]
 						protected internal CertPathRep(string @string, sbyte[] sByte) /* MethodBuilder.Create */ 
 						{
 						}
 
-						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4, IgnoreFromJava = true)]
+						[Dot42.DexImport("<init>", "(Ljava/lang/String;[B)V", AccessFlags = 4)]
 						protected internal CertPathRep(string @string, byte[] @byte) /* MethodBuilder.Create */ 
 						{
 						}
@@ -922,7 +889,7 @@ namespace Java.Security.Cert
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal CertPathRep() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal CertPathRep() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -999,7 +966,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CertPathBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CertPathBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1191,7 +1158,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CertPathValidator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CertPathValidator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1439,7 +1406,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CertStore() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CertStore() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1588,7 +1555,7 @@ namespace Java.Security.Cert
 				public abstract global::Java.Util.ICollection<global::Java.Security.Cert.CRL> EngineGetCRLs(global::Java.Security.Cert.ICRLSelector selector) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CertStoreSpi() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CertStoreSpi() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1713,7 +1680,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CRL() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CRL() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2091,7 +2058,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getExtensionValue
 				/// </java-name>
-				[Dot42.DexImport("getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025)]
 				byte[] GetExtensionValue(string oid) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -2280,7 +2247,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PKIXBuilderParameters() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PKIXBuilderParameters() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2338,7 +2305,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PKIXCertPathBuilderResult() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PKIXCertPathBuilderResult() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2498,7 +2465,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PKIXCertPathValidatorResult() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PKIXCertPathValidatorResult() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2628,7 +2595,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PKIXParameters() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PKIXParameters() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2851,7 +2818,7 @@ namespace Java.Security.Cert
 				/// <summary>
 				///  <para>Creates a new <c>PolicyQualifierInfo </c> from the specified encoded form.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public PolicyQualifierInfo(sbyte[] encoded) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2859,7 +2826,7 @@ namespace Java.Security.Cert
 				/// <summary>
 				///  <para>Creates a new <c>PolicyQualifierInfo </c> from the specified encoded form.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public PolicyQualifierInfo(byte[] encoded) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2873,7 +2840,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2888,7 +2855,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getPolicyQualifier
 				/// </java-name>
-				[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetPolicyQualifier() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2910,7 +2877,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PolicyQualifierInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PolicyQualifierInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2925,7 +2892,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17)]
 						get{ return default(byte[]); }
 				}
 
@@ -2955,7 +2922,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public byte[] PolicyQualifier
 				{
-						[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("getPolicyQualifier", "()[B", AccessFlags = 17)]
 						get{ return default(byte[]); }
 				}
 
@@ -2974,7 +2941,7 @@ namespace Java.Security.Cert
 				/// <summary>
 				///  <para>Creates a new <c>TrustAnchor </c> with the specified certificate and name constraints. </para> <para>The name constraints will be used as additional constraints during the validation of certification paths.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/security/cert/X509Certificate;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljava/security/cert/X509Certificate;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public TrustAnchor(global::Java.Security.Cert.X509Certificate trustedCert, sbyte[] nameConstraints) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2982,27 +2949,27 @@ namespace Java.Security.Cert
 				/// <summary>
 				///  <para>Creates a new <c>TrustAnchor </c> with the specified certificate and name constraints. </para> <para>The name constraints will be used as additional constraints during the validation of certification paths.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/security/cert/X509Certificate;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/security/cert/X509Certificate;[B)V", AccessFlags = 1)]
 				public TrustAnchor(global::Java.Security.Cert.X509Certificate trustedCert, byte[] nameConstraints) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/security/PublicKey;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/security/PublicKey;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public TrustAnchor(string @string, global::Java.Security.IPublicKey publicKey, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/security/PublicKey;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/lang/String;Ljava/security/PublicKey;[B)V", AccessFlags = 1)]
 				public TrustAnchor(string @string, global::Java.Security.IPublicKey publicKey, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljavax/security/auth/x500/X500Principal;Ljava/security/PublicKey;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljavax/security/auth/x500/X500Principal;Ljava/security/PublicKey;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public TrustAnchor(global::Javax.Security.Auth.X500.X500Principal x500Principal, global::Java.Security.IPublicKey publicKey, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(Ljavax/security/auth/x500/X500Principal;Ljava/security/PublicKey;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljavax/security/auth/x500/X500Principal;Ljava/security/PublicKey;[B)V", AccessFlags = 1)]
 				public TrustAnchor(global::Javax.Security.Auth.X500.X500Principal x500Principal, global::Java.Security.IPublicKey publicKey, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3016,7 +2983,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getNameConstraints
 				/// </java-name>
-				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetNameConstraints() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3038,7 +3005,7 @@ namespace Java.Security.Cert
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TrustAnchor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TrustAnchor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3053,7 +3020,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public byte[] NameConstraints
 				{
-						[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 17)]
 						get{ return default(byte[]); }
 				}
 
@@ -3180,43 +3147,7 @@ namespace Java.Security.Cert
 				[Dot42.DexImport("checkValidity", "(Ljava/util/Date;)V", AccessFlags = 1025)]
 				public abstract void CheckValidity(global::Java.Util.Date date) /* MethodBuilder.Create */ ;
 
-				/// <summary>
-				///  <para>Returns the <c>tbsCertificate </c> information from this certificate in DER-encoded format.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the DER-encoded certificate information. </para>
-				/// </returns>
-				/// <java-name>
-				/// getTBSCertificate
-				/// </java-name>
-				[Dot42.DexImport("getTBSCertificate", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetTBSCertificate() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the raw signature bits from the certificate.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the raw signature bits from the certificate. </para>
-				/// </returns>
-				/// <java-name>
-				/// getSignature
-				/// </java-name>
-				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetSignature() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the parameters of the signature algorithm in DER-encoded format.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the parameters of the signature algorithm, or <c>null </c> if none are used. </para>
-				/// </returns>
-				/// <java-name>
-				/// getSigAlgParams
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetSigAlgParams() /* MethodBuilder.Create */ ;
-
-				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025)]
 				public virtual byte[] GetExtensionValue(string oid) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(byte[]);
@@ -3367,7 +3298,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] TBSCertificate
 				{
-						[Dot42.DexImport("getTBSCertificate", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getTBSCertificate", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -3382,7 +3313,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] Signature
 				{
-						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -3427,7 +3358,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] SigAlgParams
 				{
-						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -3618,7 +3549,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setIssuer
 				/// </java-name>
-				[Dot42.DexImport("setIssuer", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setIssuer", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetIssuer(sbyte[] issuer) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3629,7 +3560,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setIssuer
 				/// </java-name>
-				[Dot42.DexImport("setIssuer", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setIssuer", "([B)V", AccessFlags = 1)]
 				public virtual void SetIssuer(byte[] issuer) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3643,7 +3574,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getIssuerAsBytes
 				/// </java-name>
-				[Dot42.DexImport("getIssuerAsBytes", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getIssuerAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetIssuerAsBytes() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3666,7 +3597,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setSubject
 				/// </java-name>
-				[Dot42.DexImport("setSubject", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setSubject", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetSubject(sbyte[] subject) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3677,7 +3608,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setSubject
 				/// </java-name>
-				[Dot42.DexImport("setSubject", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setSubject", "([B)V", AccessFlags = 1)]
 				public virtual void SetSubject(byte[] subject) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3691,7 +3622,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getSubjectAsBytes
 				/// </java-name>
-				[Dot42.DexImport("getSubjectAsBytes", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getSubjectAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetSubjectAsBytes() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3703,7 +3634,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setSubjectKeyIdentifier
 				/// </java-name>
-				[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetSubjectKeyIdentifier(sbyte[] subjectKeyIdentifier) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3717,7 +3648,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getSubjectKeyIdentifier
 				/// </java-name>
-				[Dot42.DexImport("getSubjectKeyIdentifier", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getSubjectKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetSubjectKeyIdentifier() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3729,7 +3660,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setAuthorityKeyIdentifier
 				/// </java-name>
-				[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetAuthorityKeyIdentifier(sbyte[] authorityKeyIdentifier) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3743,7 +3674,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getAuthorityKeyIdentifier
 				/// </java-name>
-				[Dot42.DexImport("getAuthorityKeyIdentifier", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getAuthorityKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetAuthorityKeyIdentifier() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3755,7 +3686,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setSubjectPublicKey
 				/// </java-name>
-				[Dot42.DexImport("setSubjectPublicKey", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setSubjectPublicKey", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetSubjectPublicKey(sbyte[] key) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3766,7 +3697,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setSubjectPublicKey
 				/// </java-name>
-				[Dot42.DexImport("setSubjectPublicKey", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setSubjectPublicKey", "([B)V", AccessFlags = 1)]
 				public virtual void SetSubjectPublicKey(byte[] key) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3782,7 +3713,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// addSubjectAlternativeName
 				/// </java-name>
-				[Dot42.DexImport("addSubjectAlternativeName", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("addSubjectAlternativeName", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void AddSubjectAlternativeName(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3790,7 +3721,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// addSubjectAlternativeName
 				/// </java-name>
-				[Dot42.DexImport("addSubjectAlternativeName", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("addSubjectAlternativeName", "(I[B)V", AccessFlags = 1)]
 				public virtual void AddSubjectAlternativeName(int int32, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3816,7 +3747,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// setNameConstraints
 				/// </java-name>
-				[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetNameConstraints(sbyte[] bytes) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3830,7 +3761,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// getNameConstraints
 				/// </java-name>
-				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetNameConstraints() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3847,7 +3778,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// addPathToName
 				/// </java-name>
-				[Dot42.DexImport("addPathToName", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("addPathToName", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void AddPathToName(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3855,7 +3786,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// addPathToName
 				/// </java-name>
-				[Dot42.DexImport("addPathToName", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("addPathToName", "(I[B)V", AccessFlags = 1)]
 				public virtual void AddPathToName(int int32, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3982,7 +3913,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public virtual byte[] IssuerAsBytes
 				{
-						[Dot42.DexImport("getIssuerAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getIssuerAsBytes", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -4029,7 +3960,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public virtual byte[] SubjectAsBytes
 				{
-						[Dot42.DexImport("getSubjectAsBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSubjectAsBytes", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -4044,9 +3975,9 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public virtual byte[] SubjectKeyIdentifier
 				{
-						[Dot42.DexImport("getSubjectKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSubjectKeyIdentifier", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
-						[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("setSubjectKeyIdentifier", "([B)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -4061,9 +3992,9 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public virtual byte[] AuthorityKeyIdentifier
 				{
-						[Dot42.DexImport("getAuthorityKeyIdentifier", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getAuthorityKeyIdentifier", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
-						[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("setAuthorityKeyIdentifier", "([B)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -4214,9 +4145,9 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public virtual byte[] NameConstraints
 				{
-						[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getNameConstraints", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
-						[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("setNameConstraints", "([B)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -4322,18 +4253,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <summary>
-				///  <para>Returns this CRL in ASN.1 DER encoded form.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>this CRL in ASN.1 DER encoded form. </para>
-				/// </returns>
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <summary>
 				///  <para>Verifies this CRL by verifying that this CRL was signed with the corresponding private key to the specified public key.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
@@ -4378,43 +4297,7 @@ namespace Java.Security.Cert
 						return default(global::Java.Security.Cert.X509CRLEntry);
 				}
 
-				/// <summary>
-				///  <para>Returns the <c>tbsCertList </c> information of this CRL in DER encoded form.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the CRL information in DER encoded form. </para>
-				/// </returns>
-				/// <java-name>
-				/// getTBSCertList
-				/// </java-name>
-				[Dot42.DexImport("getTBSCertList", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetTBSCertList() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the signature bytes of this CRL.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the signature bytes of this CRL. </para>
-				/// </returns>
-				/// <java-name>
-				/// getSignature
-				/// </java-name>
-				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetSignature() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the parameters of the signature algorithm in DER encoded form.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the parameters of the signature algorithm in DER encoded form, or  <c>null </c> if not present. </para>
-				/// </returns>
-				/// <java-name>
-				/// getSigAlgParams
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetSigAlgParams() /* MethodBuilder.Create */ ;
-
-				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025)]
 				public virtual byte[] GetExtensionValue(string oid) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(byte[]);
@@ -4431,7 +4314,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -4536,7 +4419,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] TBSCertList
 				{
-						[Dot42.DexImport("getTBSCertList", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getTBSCertList", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -4551,7 +4434,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] Signature
 				{
-						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -4596,7 +4479,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] SigAlgParams
 				{
-						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -4669,18 +4552,6 @@ namespace Java.Security.Cert
 				}
 
 				/// <summary>
-				///  <para>Returns this entry in ASN.1 DER encoded form.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the encoded form of this entry. </para>
-				/// </returns>
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <summary>
 				///  <para>Returns a string representation of this instance.</para> <para></para>        
 				/// </summary>
 				/// <returns>
@@ -4695,7 +4566,7 @@ namespace Java.Security.Cert
 						return default(string);
 				}
 
-				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("java/security/cert/X509Extension", "getExtensionValue", "(Ljava/lang/String;)[B", AccessFlags = 1025)]
 				public virtual byte[] GetExtensionValue(string oid) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(byte[]);
@@ -4712,7 +4583,7 @@ namespace Java.Security.Cert
 				/// </java-name>
 				public abstract byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -4836,7 +4707,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// addIssuerName
 				/// </java-name>
-				[Dot42.DexImport("addIssuerName", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("addIssuerName", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void AddIssuerName(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4844,7 +4715,7 @@ namespace Java.Security.Cert
 				/// <java-name>
 				/// addIssuerName
 				/// </java-name>
-				[Dot42.DexImport("addIssuerName", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("addIssuerName", "([B)V", AccessFlags = 1)]
 				public virtual void AddIssuerName(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}

@@ -549,7 +549,7 @@ namespace Android.Gestures
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GestureOverlayView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GestureOverlayView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -834,7 +834,7 @@ namespace Android.Gestures
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GesturePoint() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GesturePoint() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1114,7 +1114,7 @@ namespace Android.Gestures
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GestureStroke() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GestureStroke() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

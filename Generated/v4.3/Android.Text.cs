@@ -128,7 +128,7 @@ namespace Android.Text
 				/// <java-name>
 				/// getDirectionalities
 				/// </java-name>
-				[Dot42.DexImport("getDirectionalities", "([C[BI)V", AccessFlags = 265)]
+				[Dot42.DexImport("getDirectionalities", "([C[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GetDirectionalities(char[] src, sbyte[] dest, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -139,7 +139,7 @@ namespace Android.Text
 				/// <java-name>
 				/// getDirectionalities
 				/// </java-name>
-				[Dot42.DexImport("getDirectionalities", "([C[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("getDirectionalities", "([C[BI)V", AccessFlags = 265)]
 				public static void GetDirectionalities(char[] src, byte[] dest, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -165,7 +165,7 @@ namespace Android.Text
 				/// <java-name>
 				/// getEastAsianWidths
 				/// </java-name>
-				[Dot42.DexImport("getEastAsianWidths", "([CII[B)V", AccessFlags = 265)]
+				[Dot42.DexImport("getEastAsianWidths", "([CII[B)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GetEastAsianWidths(char[] src, int start, int count, sbyte[] dest) /* MethodBuilder.Create */ 
 				{
 				}
@@ -176,7 +176,7 @@ namespace Android.Text
 				/// <java-name>
 				/// getEastAsianWidths
 				/// </java-name>
-				[Dot42.DexImport("getEastAsianWidths", "([CII[B)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("getEastAsianWidths", "([CII[B)V", AccessFlags = 265)]
 				public static void GetEastAsianWidths(char[] src, int start, int count, byte[] dest) /* MethodBuilder.Create */ 
 				{
 				}
@@ -257,7 +257,7 @@ namespace Android.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Annotation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Annotation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -746,7 +746,7 @@ namespace Android.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BoringLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BoringLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -978,7 +978,7 @@ namespace Android.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DynamicLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DynamicLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1381,7 +1381,7 @@ namespace Android.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IInputFilter_LengthFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IInputFilter_LengthFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2583,7 +2583,7 @@ namespace Android.Text
 				public abstract int GetEllipsisCount(int line) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Layout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Layout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3322,7 +3322,7 @@ namespace Android.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SpannableString() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SpannableString() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3923,7 +3923,7 @@ namespace Android.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SpannedString() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SpannedString() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4039,7 +4039,7 @@ namespace Android.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StaticLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StaticLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4793,7 +4793,7 @@ namespace Android.Text
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal SimpleStringSplitter() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal SimpleStringSplitter() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

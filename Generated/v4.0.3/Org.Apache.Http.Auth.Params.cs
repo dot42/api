@@ -22,7 +22,7 @@ namespace Org.Apache.Http.Auth.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AuthParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AuthParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

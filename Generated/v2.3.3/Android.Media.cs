@@ -42,7 +42,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AsyncPlayer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AsyncPlayer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1458,7 +1458,7 @@ namespace Android.Media
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1467,7 +1467,7 @@ namespace Android.Media
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public virtual int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1551,7 +1551,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AudioRecord() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AudioRecord() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2032,7 +2032,7 @@ namespace Android.Media
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2041,7 +2041,7 @@ namespace Android.Media
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1)]
 				public virtual int Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2102,7 +2102,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AudioTrack() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AudioTrack() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2823,7 +2823,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getThumbnail
 				/// </java-name>
-				[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetThumbnail() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2854,7 +2854,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExifInterface() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ExifInterface() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2878,7 +2878,7 @@ namespace Android.Media
 				/// </java-name>
 				public virtual byte[] Thumbnail
 				{
-						[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -2924,7 +2924,7 @@ namespace Android.Media
 				extern ~FaceDetector() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FaceDetector() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FaceDetector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3031,7 +3031,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Face() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Face() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3182,7 +3182,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegment
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1)]
+				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool QueueJetSegment(int segmentNum, int libNum, int repeatCount, int transpose, int muteFlags, sbyte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3197,7 +3197,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegment
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1)]
 				public virtual bool QueueJetSegment(int segmentNum, int libNum, int repeatCount, int transpose, int muteFlags, byte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3212,7 +3212,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegmentMuteArray
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1)]
+				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool QueueJetSegmentMuteArray(int segmentNum, int libNum, int repeatCount, int transpose, bool[] muteArray, sbyte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3227,7 +3227,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegmentMuteArray
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1)]
 				public virtual bool QueueJetSegmentMuteArray(int segmentNum, int libNum, int repeatCount, int transpose, bool[] muteArray, byte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3359,7 +3359,7 @@ namespace Android.Media
 						/// onJetEvent
 						/// </java-name>
 						[Dot42.DexImport("onJetEvent", "(Landroid/media/JetPlayer;SBBBB)V", AccessFlags = 1025)]
-						void OnJetEvent(global::Android.Media.JetPlayer player, short segment, sbyte track, sbyte channel, sbyte controller, sbyte value) /* MethodBuilder.Create */ ;
+						void OnJetEvent(global::Android.Media.JetPlayer player, short segment, byte track, byte channel, byte controller, byte value) /* MethodBuilder.Create */ ;
 
 						/// <summary>
 						///  <para>Callback for when JET's currently playing segment's userID is updated.</para> <para></para>        
@@ -3665,7 +3665,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getEmbeddedPicture
 				/// </java-name>
-				[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetEmbeddedPicture() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3714,7 +3714,7 @@ namespace Android.Media
 				/// </java-name>
 				public virtual byte[] EmbeddedPicture
 				{
-						[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -4883,7 +4883,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal VideoEncoder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal VideoEncoder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -4939,7 +4939,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AudioEncoder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AudioEncoder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5011,7 +5011,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal OutputFormat() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal OutputFormat() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5051,7 +5051,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal VideoSource() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal VideoSource() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5134,7 +5134,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AudioSource() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AudioSource() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5229,7 +5229,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaScannerConnection() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaScannerConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5745,7 +5745,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RingtoneManager() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RingtoneManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6022,7 +6022,7 @@ namespace Android.Media
 				extern ~SoundPool() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SoundPool() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SoundPool() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6986,7 +6986,7 @@ namespace Android.Media
 				extern ~ToneGenerator() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ToneGenerator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ToneGenerator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

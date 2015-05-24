@@ -1307,7 +1307,7 @@ namespace System
 				/// <java-name>
 				/// getDirectionality
 				/// </java-name>
-				[Dot42.DexImport("getDirectionality", "(C)B", AccessFlags = 9)]
+				[Dot42.DexImport("getDirectionality", "(C)B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte JavaGetDirectionality(char c) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -1322,7 +1322,7 @@ namespace System
 				/// <java-name>
 				/// getDirectionality
 				/// </java-name>
-				[Dot42.DexImport("getDirectionality", "(C)B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getDirectionality", "(C)B", AccessFlags = 9)]
 				public static byte GetDirectionality(char c) /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -1337,7 +1337,7 @@ namespace System
 				/// <java-name>
 				/// getDirectionality
 				/// </java-name>
-				[Dot42.DexImport("getDirectionality", "(I)B", AccessFlags = 9)]
+				[Dot42.DexImport("getDirectionality", "(I)B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte JavaGetDirectionality(int c) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -1352,7 +1352,7 @@ namespace System
 				/// <java-name>
 				/// getDirectionality
 				/// </java-name>
-				[Dot42.DexImport("getDirectionality", "(I)B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getDirectionality", "(I)B", AccessFlags = 9)]
 				public static byte GetDirectionality(int c) /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -3116,7 +3116,7 @@ namespace System
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Subset() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Subset() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6240,7 +6240,7 @@ namespace System
 				/// <java-name>
 				/// nextBytes
 				/// </java-name>
-				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void NextBytes(sbyte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6251,7 +6251,7 @@ namespace System
 				/// <java-name>
 				/// nextBytes
 				/// </java-name>
-				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 1)]
 				public virtual void NextBytes(byte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7102,7 +7102,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string using the system's default charset. </para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7110,7 +7110,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string using the system's default charset. </para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public String(byte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7118,7 +7118,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to the specified value.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[]) or String(byte[], String) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data, int high) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7126,7 +7126,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to the specified value.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[]) or String(byte[], String) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
 				public String(byte[] data, int high) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7134,7 +7134,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts a subsequence of the byte array to a string using the system's default charset.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7142,7 +7142,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts a subsequence of the byte array to a string using the system's default charset.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
 				public String(byte[] data, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7150,7 +7150,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to <c>high </c> .</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[], int, int) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BIII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data, int high, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7158,7 +7158,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to <c>high </c> .</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[], int, int) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BIII)V", AccessFlags = 1)]
 				public String(byte[] data, int high, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7166,7 +7166,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to <c>high </c> .</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[], int, int) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data, int high, int offset, string byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7174,7 +7174,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to <c>high </c> .</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[], int, int) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1)]
 				public String(byte[] data, int high, int offset, string byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7182,7 +7182,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to the specified value.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[]) or String(byte[], String) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data, string high) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7190,7 +7190,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to the specified value.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[]) or String(byte[], String) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1)]
 				public String(byte[] data, string high) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7198,7 +7198,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to <c>high </c> .</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[], int, int) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/nio/charset/Charset;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BIILjava/nio/charset/Charset;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data, int high, int offset, global::Java.Nio.Charset.Charset byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7206,7 +7206,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to <c>high </c> .</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[], int, int) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/nio/charset/Charset;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BIILjava/nio/charset/Charset;)V", AccessFlags = 1)]
 				public String(byte[] data, int high, int offset, global::Java.Nio.Charset.Charset byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7214,7 +7214,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to the specified value.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[]) or String(byte[], String) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BLjava/nio/charset/Charset;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BLjava/nio/charset/Charset;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public String(sbyte[] data, global::Java.Nio.Charset.Charset high) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7222,7 +7222,7 @@ namespace System
 				/// <summary>
 				///  <para>Converts the byte array to a string, setting the high byte of every character to the specified value.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use String(byte[]) or String(byte[], String) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BLjava/nio/charset/Charset;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BLjava/nio/charset/Charset;)V", AccessFlags = 1)]
 				public String(byte[] data, global::Java.Nio.Charset.Charset high) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7416,7 +7416,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(II[BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("getBytes", "(II[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public void GetBytes(int start, int end, sbyte[] data, int index) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7427,7 +7427,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(II[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(II[BI)V", AccessFlags = 1)]
 				public void GetBytes(int start, int end, byte[] data, int index) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7438,7 +7438,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetBytes() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -7450,7 +7450,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1)]
 				public byte[] GetBytes() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -7462,7 +7462,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetBytes(string charsetName) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -7474,7 +7474,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1)]
 				public byte[] GetBytes(string charsetName) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -7486,7 +7486,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/nio/charset/Charset;)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBytes", "(Ljava/nio/charset/Charset;)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetBytes(global::Java.Nio.Charset.Charset charsetName) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -7498,7 +7498,7 @@ namespace System
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/nio/charset/Charset;)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(Ljava/nio/charset/Charset;)[B", AccessFlags = 1)]
 				public byte[] GetBytes(global::Java.Nio.Charset.Charset charsetName) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -9259,7 +9259,7 @@ namespace System
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Uri() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Uri() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

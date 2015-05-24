@@ -54,7 +54,7 @@ namespace Org.Apache.Http.Client.Protocol
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ClientContextConfigurer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ClientContextConfigurer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

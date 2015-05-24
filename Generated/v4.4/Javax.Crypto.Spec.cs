@@ -22,7 +22,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESedeKeySpec</code> instance from the first 24 ( DES_EDE_KEY_LEN) bytes of the specified key data.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DESedeKeySpec(sbyte[] key) /* MethodBuilder.Create */ 
 				{
 				}
@@ -30,7 +30,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESedeKeySpec</code> instance from the first 24 ( DES_EDE_KEY_LEN) bytes of the specified key data.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public DESedeKeySpec(byte[] key) /* MethodBuilder.Create */ 
 				{
 				}
@@ -38,7 +38,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESedeKeySpec</code> instance from the first 24 ( DES_EDE_KEY_LEN ) bytes of the specified key data starting at  <code>offset</code>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DESedeKeySpec(sbyte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -46,7 +46,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESedeKeySpec</code> instance from the first 24 ( DES_EDE_KEY_LEN ) bytes of the specified key data starting at  <code>offset</code>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
 				public DESedeKeySpec(byte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -60,7 +60,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetKey() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -75,7 +75,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// isParityAdjusted
 				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
 				public static bool IsParityAdjusted(sbyte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -90,14 +90,14 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// isParityAdjusted
 				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
 				public static bool IsParityAdjusted(byte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DESedeKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DESedeKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -112,7 +112,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] Key
 				{
-						[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -139,7 +139,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESKeySpec</code> from the first 8 bytes of the specified key data.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DESKeySpec(sbyte[] key) /* MethodBuilder.Create */ 
 				{
 				}
@@ -147,7 +147,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESKeySpec</code> from the first 8 bytes of the specified key data.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public DESKeySpec(byte[] key) /* MethodBuilder.Create */ 
 				{
 				}
@@ -155,7 +155,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESKeySpec</code> from the first 8 bytes of the specified key data starting at  <code>offset</code>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DESKeySpec(sbyte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -163,7 +163,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>DESKeySpec</code> from the first 8 bytes of the specified key data starting at  <code>offset</code>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
 				public DESKeySpec(byte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -177,7 +177,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getKey
 				/// </java-name>
-				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetKey() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -192,7 +192,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// isParityAdjusted
 				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
 				public static bool IsParityAdjusted(sbyte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -207,7 +207,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// isParityAdjusted
 				/// </java-name>
-				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("isParityAdjusted", "([BI)Z", AccessFlags = 9)]
 				public static bool IsParityAdjusted(byte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -222,7 +222,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// isWeak
 				/// </java-name>
-				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9)]
+				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
 				public static bool IsWeak(sbyte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -237,14 +237,14 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// isWeak
 				/// </java-name>
-				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("isWeak", "([BI)Z", AccessFlags = 9)]
 				public static bool IsWeak(byte[] key, int offset) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DESKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DESKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -259,7 +259,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] Key
 				{
-						[Dot42.DexImport("getKey", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getKey", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -284,7 +284,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DHGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DHGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -347,7 +347,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DHParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DHParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -417,7 +417,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DHPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DHPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -487,7 +487,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DHPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DHPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -551,7 +551,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new <c>GCMParameterSpec </c> instance from the specified Initial Vector (IV) from buffer <c>iv </c> and a tag length of  <c>tagLen </c> in bits.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public GCMParameterSpec(int tagLen, sbyte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -559,7 +559,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new <c>GCMParameterSpec </c> instance from the specified Initial Vector (IV) from buffer <c>iv </c> and a tag length of  <c>tagLen </c> in bits.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
 				public GCMParameterSpec(int tagLen, byte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -567,7 +567,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new <c>GCMParameterSpec </c> instance with the Initial Vector (IV) of <c>byteCount </c> bytes from the specified buffer <c>iv </c> starting at <c>offset </c> and a tag length of <c>tagLen </c> in bits.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(I[BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public GCMParameterSpec(int tagLen, sbyte[] iv, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -575,7 +575,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new <c>GCMParameterSpec </c> instance with the Initial Vector (IV) of <c>byteCount </c> bytes from the specified buffer <c>iv </c> starting at <c>offset </c> and a tag length of <c>tagLen </c> in bits.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(I[BII)V", AccessFlags = 1)]
 				public GCMParameterSpec(int tagLen, byte[] iv, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -586,14 +586,14 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GCMParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GCMParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -617,7 +617,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] IV
 				{
-						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -636,7 +636,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>IvParameterSpec</code> instance with the bytes from the specified buffer  <b>iv</b> used as  <b>initialization vector</b>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public IvParameterSpec(sbyte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -644,7 +644,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>IvParameterSpec</code> instance with the bytes from the specified buffer  <b>iv</b> used as  <b>initialization vector</b>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public IvParameterSpec(byte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -652,7 +652,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>IvParameterSpec</code> instance with  <code>byteCount</code> bytes from the specified buffer  <code>iv</code> starting at  <code>offset</code>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public IvParameterSpec(sbyte[] iv, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -660,7 +660,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>IvParameterSpec</code> instance with  <code>byteCount</code> bytes from the specified buffer  <code>iv</code> starting at  <code>offset</code>.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
 				public IvParameterSpec(byte[] iv, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -674,14 +674,14 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IvParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IvParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -696,7 +696,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] IV
 				{
-						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -730,7 +730,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal OAEPParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal OAEPParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -817,7 +817,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>PBEKeySpec</code> with the specified password, salt, iteration count and the desired length of the derived key.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public PBEKeySpec(char[] password, sbyte[] salt, int iterationCount, int keyLength) /* MethodBuilder.Create */ 
 				{
 				}
@@ -825,7 +825,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>PBEKeySpec</code> with the specified password, salt, iteration count and the desired length of the derived key.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([C[BII)V", AccessFlags = 1)]
 				public PBEKeySpec(char[] password, byte[] salt, int iterationCount, int keyLength) /* MethodBuilder.Create */ 
 				{
 				}
@@ -833,7 +833,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>PBEKeySpec</code> with the specified password, salt and iteration count.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public PBEKeySpec(char[] password, sbyte[] salt, int iterationCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -841,7 +841,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>PBEKeySpec</code> with the specified password, salt and iteration count.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([C[BI)V", AccessFlags = 1)]
 				public PBEKeySpec(char[] password, byte[] salt, int iterationCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -866,14 +866,14 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getSalt
 				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetSalt() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PBEKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PBEKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -903,7 +903,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public byte[] Salt
 				{
-						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 17)]
 						get{ return default(byte[]); }
 				}
 
@@ -952,7 +952,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>PBEParameterSpec</code> with the specified salt and iteration count.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public PBEParameterSpec(sbyte[] salt, int iterationCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -960,7 +960,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>PBEParameterSpec</code> with the specified salt and iteration count.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
 				public PBEParameterSpec(byte[] salt, int iterationCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -974,14 +974,14 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getSalt
 				/// </java-name>
-				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetSalt() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PBEParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PBEParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -996,7 +996,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] Salt
 				{
-						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1036,7 +1036,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PSource() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PSource() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1073,12 +1073,12 @@ namespace Javax.Crypto.Spec
 						/// </java-name>
 						[Dot42.DexImport("DEFAULT", "Ljavax/crypto/spec/PSource$PSpecified;", AccessFlags = 25)]
 						public static readonly PSpecified DEFAULT;
-						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 						public PSpecified(sbyte[] sByte) /* MethodBuilder.Create */ 
 						{
 						}
 
-						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 						public PSpecified(byte[] @byte) /* MethodBuilder.Create */ 
 						{
 						}
@@ -1092,14 +1092,14 @@ namespace Javax.Crypto.Spec
 						/// <java-name>
 						/// getValue
 						/// </java-name>
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
+						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 						public sbyte[] JavaGetValue() /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal PSpecified() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal PSpecified() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1114,7 +1114,7 @@ namespace Javax.Crypto.Spec
 						/// </java-name>
 						public byte[] Value
 						{
-								[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+								[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
 								get{ return default(byte[]); }
 						}
 
@@ -1143,7 +1143,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC2ParameterSpec</code> instance with the specified effective key length (in bits) and  <b>initialization vector</b>. </para> <para>The size of the  <b>initialization vector</b> must be at least 8 bytes which are copied to protect them against modification.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public RC2ParameterSpec(int effectiveKeyBits, sbyte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1151,7 +1151,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC2ParameterSpec</code> instance with the specified effective key length (in bits) and  <b>initialization vector</b>. </para> <para>The size of the  <b>initialization vector</b> must be at least 8 bytes which are copied to protect them against modification.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
 				public RC2ParameterSpec(int effectiveKeyBits, byte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1159,7 +1159,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC2ParameterSpec</code> instance with the specified effective key length (in bits) and  <b>initialization vector <b>. </b></b></para> <para> <b> <b> The size of the  <b>initialization vector</b> starting at  <code>offset</code> must be at least 8 bytes which are copied to protect them against modification.</b></b></para> <para> <b> <b></b></b></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public RC2ParameterSpec(int effectiveKeyBits, sbyte[] iv, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1167,7 +1167,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC2ParameterSpec</code> instance with the specified effective key length (in bits) and  <b>initialization vector <b>. </b></b></para> <para> <b> <b> The size of the  <b>initialization vector</b> starting at  <code>offset</code> must be at least 8 bytes which are copied to protect them against modification.</b></b></para> <para> <b> <b></b></b></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1)]
 				public RC2ParameterSpec(int effectiveKeyBits, byte[] iv, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1181,7 +1181,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1218,7 +1218,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RC2ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RC2ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1248,7 +1248,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] IV
 				{
-						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1275,7 +1275,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC5ParameterSpec</code> instance with the specified version, round count, word size (in bits) and an  <b>initialization vector</b>. </para> <para>The size of the  <b>initialization vector</b> must be at least  <code>2 * (wordSize / 8)</code> bytes which are copied to protect them against modification.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(III[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(III[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public RC5ParameterSpec(int version, int rounds, int wordSize, sbyte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1283,7 +1283,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC5ParameterSpec</code> instance with the specified version, round count, word size (in bits) and an  <b>initialization vector</b>. </para> <para>The size of the  <b>initialization vector</b> must be at least  <code>2 * (wordSize / 8)</code> bytes which are copied to protect them against modification.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(III[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(III[B)V", AccessFlags = 1)]
 				public RC5ParameterSpec(int version, int rounds, int wordSize, byte[] iv) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1291,7 +1291,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC5ParameterSpec</code> instance with the specified version, round count, wordSize (in bits), an  <b>initialization vector</b> and an offset. </para> <para>The size of the  <b>initialization vector</b> must be at least  <code>offset + (2 * (wordSize / 8))</code> bytes. The bytes starting at  <code>offset</code> are copied to protect them against modification.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(III[BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(III[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public RC5ParameterSpec(int version, int rounds, int wordSize, sbyte[] iv, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1299,7 +1299,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>RC5ParameterSpec</code> instance with the specified version, round count, wordSize (in bits), an  <b>initialization vector</b> and an offset. </para> <para>The size of the  <b>initialization vector</b> must be at least  <code>offset + (2 * (wordSize / 8))</code> bytes. The bytes starting at  <code>offset</code> are copied to protect them against modification.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(III[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(III[BI)V", AccessFlags = 1)]
 				public RC5ParameterSpec(int version, int rounds, int wordSize, byte[] iv, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1313,7 +1313,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getIV
 				/// </java-name>
-				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetIV() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1350,7 +1350,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RC5ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RC5ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1410,7 +1410,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] IV
 				{
-						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getIV", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1429,7 +1429,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>SecretKeySpec</code> for the specified key data and algorithm name.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public SecretKeySpec(sbyte[] key, string algorithm) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1437,7 +1437,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>SecretKeySpec</code> for the specified key data and algorithm name.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BLjava/lang/String;)V", AccessFlags = 1)]
 				public SecretKeySpec(byte[] key, string algorithm) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1445,7 +1445,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>SecretKeySpec</code> for the key data from the specified buffer  <code>key</code> starting at  <code>offset</code> with length  <code>len</code> and the specified  <code>algorithm</code> name.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public SecretKeySpec(sbyte[] key, int offset, int len, string algorithm) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1453,7 +1453,7 @@ namespace Javax.Crypto.Spec
 				/// <summary>
 				///  <para>Creates a new  <code>SecretKeySpec</code> for the key data from the specified buffer  <code>key</code> starting at  <code>offset</code> with length  <code>len</code> and the specified  <code>algorithm</code> name.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BIILjava/lang/String;)V", AccessFlags = 1)]
 				public SecretKeySpec(byte[] key, int offset, int len, string algorithm) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1467,7 +1467,7 @@ namespace Javax.Crypto.Spec
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1504,7 +1504,7 @@ namespace Javax.Crypto.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SecretKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SecretKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1549,7 +1549,7 @@ namespace Javax.Crypto.Spec
 				/// </java-name>
 				public virtual byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

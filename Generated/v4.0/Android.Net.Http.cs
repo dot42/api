@@ -188,7 +188,7 @@ namespace Android.Net.Http
 				/// <java-name>
 				/// getCompressedEntity
 				/// </java-name>
-				[Dot42.DexImport("getCompressedEntity", "([BLandroid/content/ContentResolver;)Lorg/apache/http/entity/AbstractHttpEntity;", AccessFlags = 9)]
+				[Dot42.DexImport("getCompressedEntity", "([BLandroid/content/ContentResolver;)Lorg/apache/http/entity/AbstractHttpEntity;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Org.Apache.Http.Entity.AbstractHttpEntity GetCompressedEntity(sbyte[] data, global::Android.Content.ContentResolver resolver) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.Apache.Http.Entity.AbstractHttpEntity);
@@ -203,7 +203,7 @@ namespace Android.Net.Http
 				/// <java-name>
 				/// getCompressedEntity
 				/// </java-name>
-				[Dot42.DexImport("getCompressedEntity", "([BLandroid/content/ContentResolver;)Lorg/apache/http/entity/AbstractHttpEntity;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getCompressedEntity", "([BLandroid/content/ContentResolver;)Lorg/apache/http/entity/AbstractHttpEntity;", AccessFlags = 9)]
 				public static global::Org.Apache.Http.Entity.AbstractHttpEntity GetCompressedEntity(byte[] data, global::Android.Content.ContentResolver resolver) /* MethodBuilder.Create */ 
 				{
 						return default(global::Org.Apache.Http.Entity.AbstractHttpEntity);
@@ -586,7 +586,7 @@ namespace Android.Net.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SslCertificate() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SslCertificate() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -716,7 +716,7 @@ namespace Android.Net.Http
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal DName() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal DName() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -907,7 +907,7 @@ namespace Android.Net.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SslError() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SslError() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

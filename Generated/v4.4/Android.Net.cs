@@ -316,7 +316,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Credentials() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Credentials() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -486,7 +486,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LocalServerSocket() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LocalServerSocket() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -876,7 +876,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LocalSocketAddress() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LocalSocketAddress() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1685,7 +1685,7 @@ namespace Android.Net
 				/// <java-name>
 				/// setNpnProtocols
 				/// </java-name>
-				[Dot42.DexImport("setNpnProtocols", "([[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setNpnProtocols", "([[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetNpnProtocols(sbyte[][] npnProtocols) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1696,7 +1696,7 @@ namespace Android.Net
 				/// <java-name>
 				/// setNpnProtocols
 				/// </java-name>
-				[Dot42.DexImport("setNpnProtocols", "([[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setNpnProtocols", "([[B)V", AccessFlags = 1)]
 				public virtual void SetNpnProtocols(byte[][] npnProtocols) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1707,7 +1707,7 @@ namespace Android.Net
 				/// <java-name>
 				/// getNpnSelectedProtocol
 				/// </java-name>
-				[Dot42.DexImport("getNpnSelectedProtocol", "(Ljava/net/Socket;)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getNpnSelectedProtocol", "(Ljava/net/Socket;)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetNpnSelectedProtocol(global::Java.Net.Socket socket) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1719,7 +1719,7 @@ namespace Android.Net
 				/// <java-name>
 				/// getNpnSelectedProtocol
 				/// </java-name>
-				[Dot42.DexImport("getNpnSelectedProtocol", "(Ljava/net/Socket;)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getNpnSelectedProtocol", "(Ljava/net/Socket;)[B", AccessFlags = 1)]
 				public virtual byte[] GetNpnSelectedProtocol(global::Java.Net.Socket socket) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1831,7 +1831,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLCertificateSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLCertificateSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1882,7 +1882,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLSessionCache() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLSessionCache() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3658,7 +3658,7 @@ namespace Android.Net
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal IllegalCharacterValueSanitizer() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal IllegalCharacterValueSanitizer() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3725,7 +3725,7 @@ namespace Android.Net
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ParameterValuePair() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ParameterValuePair() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3998,7 +3998,7 @@ namespace Android.Net
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

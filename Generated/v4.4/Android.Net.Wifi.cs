@@ -1898,7 +1898,7 @@ namespace Android.Net.Wifi
 						extern ~MulticastLock() /* MethodBuilder.Create */ ;
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal MulticastLock() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal MulticastLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1996,7 +1996,7 @@ namespace Android.Net.Wifi
 						extern ~WifiLock() /* MethodBuilder.Create */ ;
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal WifiLock() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal WifiLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

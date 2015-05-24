@@ -84,7 +84,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractThreadedSyncAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractThreadedSyncAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -270,7 +270,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AsyncQueryHandler() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AsyncQueryHandler() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -300,7 +300,7 @@ namespace Android.Content
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal WorkerHandler() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal WorkerHandler() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -469,7 +469,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AsyncTaskLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AsyncTaskLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1117,7 +1117,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ClipData() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ClipData() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1241,7 +1241,7 @@ namespace Android.Content
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Item() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Item() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1453,7 +1453,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ClipDescription() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ClipDescription() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1677,7 +1677,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ComponentName() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ComponentName() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2801,7 +2801,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ContentProviderResult() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ContentProviderResult() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2877,7 +2877,7 @@ namespace Android.Content
 				extern ~ContentQueryMap() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ContentQueryMap() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ContentQueryMap() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3585,7 +3585,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ContentResolver() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ContentResolver() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3855,7 +3855,7 @@ namespace Android.Content
 				/// <java-name>
 				/// put
 				/// </java-name>
-				[Dot42.DexImport("put", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("put", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public void Put(string @string, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3863,7 +3863,7 @@ namespace Android.Content
 				/// <java-name>
 				/// put
 				/// </java-name>
-				[Dot42.DexImport("put", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("put", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
 				public void Put(string @string, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4075,7 +4075,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getAsByteArray
 				/// </java-name>
-				[Dot42.DexImport("getAsByteArray", "(Ljava/lang/String;)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getAsByteArray", "(Ljava/lang/String;)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetAsByteArray(string key) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -4090,7 +4090,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getAsByteArray
 				/// </java-name>
-				[Dot42.DexImport("getAsByteArray", "(Ljava/lang/String;)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getAsByteArray", "(Ljava/lang/String;)[B", AccessFlags = 1)]
 				public byte[] GetAsByteArray(string key) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -6060,7 +6060,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ContextWrapper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ContextWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6361,7 +6361,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CursorLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CursorLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6455,7 +6455,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Entity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Entity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6500,7 +6500,7 @@ namespace Android.Content
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal NamedContentValues() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal NamedContentValues() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -8864,7 +8864,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getByteExtra
 				/// </java-name>
-				[Dot42.DexImport("getByteExtra", "(Ljava/lang/String;B)B", AccessFlags = 1)]
+				[Dot42.DexImport("getByteExtra", "(Ljava/lang/String;B)B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte GetByteExtra(string name, sbyte defaultValue) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -8879,7 +8879,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getByteExtra
 				/// </java-name>
-				[Dot42.DexImport("getByteExtra", "(Ljava/lang/String;B)B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByteExtra", "(Ljava/lang/String;B)B", AccessFlags = 1)]
 				public virtual byte GetByteExtra(string name, byte defaultValue) /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -9134,7 +9134,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getByteArrayExtra
 				/// </java-name>
-				[Dot42.DexImport("getByteArrayExtra", "(Ljava/lang/String;)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getByteArrayExtra", "(Ljava/lang/String;)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetByteArrayExtra(string name) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -9149,7 +9149,7 @@ namespace Android.Content
 				/// <java-name>
 				/// getByteArrayExtra
 				/// </java-name>
-				[Dot42.DexImport("getByteArrayExtra", "(Ljava/lang/String;)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByteArrayExtra", "(Ljava/lang/String;)[B", AccessFlags = 1)]
 				public virtual byte[] GetByteArrayExtra(string name) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -9469,7 +9469,7 @@ namespace Android.Content
 				/// <java-name>
 				/// putExtra
 				/// </java-name>
-				[Dot42.DexImport("putExtra", "(Ljava/lang/String;B)Landroid/content/Intent;", AccessFlags = 1)]
+				[Dot42.DexImport("putExtra", "(Ljava/lang/String;B)Landroid/content/Intent;", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual global::Android.Content.Intent PutExtra(string @string, sbyte sByte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
@@ -9478,7 +9478,7 @@ namespace Android.Content
 				/// <java-name>
 				/// putExtra
 				/// </java-name>
-				[Dot42.DexImport("putExtra", "(Ljava/lang/String;B)Landroid/content/Intent;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("putExtra", "(Ljava/lang/String;B)Landroid/content/Intent;", AccessFlags = 1)]
 				public virtual global::Android.Content.Intent PutExtra(string @string, byte @byte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
@@ -9659,7 +9659,7 @@ namespace Android.Content
 				/// <java-name>
 				/// putExtra
 				/// </java-name>
-				[Dot42.DexImport("putExtra", "(Ljava/lang/String;[B)Landroid/content/Intent;", AccessFlags = 1)]
+				[Dot42.DexImport("putExtra", "(Ljava/lang/String;[B)Landroid/content/Intent;", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual global::Android.Content.Intent PutExtra(string @string, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
@@ -9668,7 +9668,7 @@ namespace Android.Content
 				/// <java-name>
 				/// putExtra
 				/// </java-name>
-				[Dot42.DexImport("putExtra", "(Ljava/lang/String;[B)Landroid/content/Intent;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("putExtra", "(Ljava/lang/String;[B)Landroid/content/Intent;", AccessFlags = 1)]
 				public virtual global::Android.Content.Intent PutExtra(string @string, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Content.Intent);
@@ -10291,7 +10291,7 @@ namespace Android.Content
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal FilterComparison() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal FilterComparison() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11152,7 +11152,7 @@ namespace Android.Content
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AuthorityEntry() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AuthorityEntry() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -12008,7 +12008,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Loader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Loader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12158,7 +12158,7 @@ namespace Android.Content
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ForceLoadContentObserver() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ForceLoadContentObserver() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -12193,7 +12193,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MutableContextWrapper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MutableContextWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12341,7 +12341,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PeriodicSync() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PeriodicSync() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12363,7 +12363,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ReceiverCallNotAllowedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ReceiverCallNotAllowedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12619,7 +12619,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SyncAdapterType() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SyncAdapterType() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13242,7 +13242,7 @@ namespace Android.Content
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UriMatcher() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UriMatcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

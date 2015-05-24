@@ -22,7 +22,7 @@ namespace Org.Apache.Http.Conn.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ConnConnectionParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ConnConnectionParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -65,7 +65,7 @@ namespace Org.Apache.Http.Conn.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ConnManagerParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ConnManagerParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -244,7 +244,7 @@ namespace Org.Apache.Http.Conn.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ConnRouteParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ConnRouteParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

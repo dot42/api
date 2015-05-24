@@ -214,7 +214,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// readEntityData
 				/// </java-name>
-				[Dot42.DexImport("readEntityData", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("readEntityData", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int ReadEntityData(sbyte[] data, int offset, int size) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -229,7 +229,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// readEntityData
 				/// </java-name>
-				[Dot42.DexImport("readEntityData", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("readEntityData", "([BII)I", AccessFlags = 1)]
 				public virtual int ReadEntityData(byte[] data, int offset, int size) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -317,7 +317,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] b, int offset, int size) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -332,7 +332,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] b, int offset, int size) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -347,7 +347,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] b) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -362,7 +362,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public override int Read(byte[] b) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -447,7 +447,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// writeEntityData
 				/// </java-name>
-				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1)]
+				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int WriteEntityData(sbyte[] data, int size) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -462,7 +462,7 @@ namespace Android.App.Backup
 				/// <java-name>
 				/// writeEntityData
 				/// </java-name>
-				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("writeEntityData", "([BI)I", AccessFlags = 1)]
 				public virtual int WriteEntityData(byte[] data, int size) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -526,7 +526,7 @@ namespace Android.App.Backup
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BackupManager() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BackupManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -588,7 +588,7 @@ namespace Android.App.Backup
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FileBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -802,7 +802,7 @@ namespace Android.App.Backup
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SharedPreferencesBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SharedPreferencesBackupHelper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

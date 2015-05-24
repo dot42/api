@@ -322,7 +322,7 @@ namespace Android.Speech.Tts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextToSpeech() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextToSpeech() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -497,7 +497,7 @@ namespace Android.Speech.Tts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Engine() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Engine() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

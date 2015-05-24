@@ -364,7 +364,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getRemoteDevice
 				/// </java-name>
-				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
+				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1, IgnoreFromJava = true)]
 				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Bluetooth.BluetoothDevice);
@@ -373,7 +373,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getRemoteDevice
 				/// </java-name>
-				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
 				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Bluetooth.BluetoothDevice);

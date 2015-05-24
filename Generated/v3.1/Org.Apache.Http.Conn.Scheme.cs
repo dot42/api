@@ -182,7 +182,7 @@ namespace Org.Apache.Http.Conn.Scheme
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Scheme() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Scheme() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -102,7 +102,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CheckBoxPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CheckBoxPreference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -345,7 +345,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DialogPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DialogPreference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -564,7 +564,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EditTextPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EditTextPreference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -721,7 +721,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ListPreference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ListPreference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1321,7 +1321,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Preference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Preference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1664,7 +1664,7 @@ namespace Android.Preferences
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal BaseSavedState() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal BaseSavedState() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1920,7 +1920,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PreferenceCategory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PreferenceCategory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2085,7 +2085,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PreferenceGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PreferenceGroup() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2602,7 +2602,7 @@ namespace Android.Preferences
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RingtonePreference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RingtonePreference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

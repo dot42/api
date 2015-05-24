@@ -139,7 +139,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -148,7 +148,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -181,7 +181,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BufferedInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BufferedInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -248,7 +248,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -259,7 +259,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33)]
 				public override void Write(byte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -276,7 +276,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BufferedOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BufferedOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -431,7 +431,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BufferedReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BufferedReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -526,7 +526,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BufferedWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BufferedWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -577,7 +577,7 @@ namespace Java.IO
 				/// <summary>
 				///  <para>Constructs a new <c>ByteArrayInputStream </c> on the byte array  <c>buf </c> .</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public ByteArrayInputStream(sbyte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -585,7 +585,7 @@ namespace Java.IO
 				/// <summary>
 				///  <para>Constructs a new <c>ByteArrayInputStream </c> on the byte array  <c>buf </c> .</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public ByteArrayInputStream(byte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -593,7 +593,7 @@ namespace Java.IO
 				/// <summary>
 				///  <para>Constructs a new <c>ByteArrayInputStream </c> on the byte array  <c>buf </c> with the initial position set to <c>offset </c> and the number of bytes available set to <c>offset </c> + <c>length </c> .</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public ByteArrayInputStream(sbyte[] buf, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -601,7 +601,7 @@ namespace Java.IO
 				/// <summary>
 				///  <para>Constructs a new <c>ByteArrayInputStream </c> on the byte array  <c>buf </c> with the initial position set to <c>offset </c> and the number of bytes available set to <c>offset </c> + <c>length </c> .</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
 				public ByteArrayInputStream(byte[] buf, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -676,7 +676,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -685,7 +685,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -718,7 +718,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ByteArrayInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ByteArrayInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -812,7 +812,7 @@ namespace Java.IO
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 33)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -827,7 +827,7 @@ namespace Java.IO
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 33)]
 				public virtual byte[] ToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -884,7 +884,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -895,7 +895,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 33)]
 				public override void Write(byte[] buffer, int offset, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1088,7 +1088,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CharArrayReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CharArrayReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1336,7 +1336,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 17)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1345,7 +1345,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 17)]
 				public override int Read(byte[] buffer) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1354,7 +1354,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 17)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1363,7 +1363,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 17)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1393,7 +1393,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 17)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte JavaReadByte() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -1408,7 +1408,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 17)]
 				public byte ReadByte() /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -1465,7 +1465,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17)]
+				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void ReadFully(sbyte[] dst) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1476,7 +1476,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17)]
 				public void ReadFully(byte[] dst) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1487,7 +1487,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17)]
+				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void ReadFully(sbyte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1498,7 +1498,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17)]
 				public void ReadFully(byte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1630,7 +1630,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DataInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DataInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1694,7 +1694,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1705,7 +1705,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1843,12 +1843,12 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DataOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DataOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				[Dot42.DexImport("java/io/DataOutput", "write", "([B)V", AccessFlags = 1025)]
-				public override void Write(sbyte[] oneByte) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override void Write(byte[] oneByte) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 				}
 
@@ -2288,7 +2288,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal File() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal File() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2657,7 +2657,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2666,7 +2666,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2675,7 +2675,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2684,7 +2684,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2700,7 +2700,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FileInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2814,7 +2814,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2822,7 +2822,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public override void Write(byte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2830,7 +2830,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2838,7 +2838,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2852,7 +2852,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FileOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2934,7 +2934,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FilePermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FilePermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2984,7 +2984,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FileReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3035,7 +3035,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FileWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3131,7 +3131,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -3140,7 +3140,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -3149,7 +3149,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -3158,7 +3158,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -3191,7 +3191,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FilterInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FilterInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3251,7 +3251,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3262,7 +3262,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public override void Write(byte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3273,7 +3273,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3284,7 +3284,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3301,7 +3301,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FilterOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FilterOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3439,7 +3439,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FilterReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FilterReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3521,7 +3521,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FilterWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FilterWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3579,7 +3579,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 1025)]
 				byte ReadByte() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -3625,7 +3625,7 @@ namespace Java.IO
 				/// readFully
 				/// </java-name>
 				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 1025)]
-				void ReadFully(sbyte[] dst) /* MethodBuilder.Create */ ;
+				void ReadFully(byte[] dst) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Reads <c>byteCount </c> bytes from this stream and stores them in the byte array <c>dst </c> starting at <c>offset </c> . If <c>byteCount </c> is zero, then this method returns without reading any bytes. Otherwise, this method blocks until  <c>byteCount </c> bytes have been read. If insufficient bytes are available,  <c>EOFException </c> is thrown. If an I/O error occurs, <c>IOException </c> is thrown. When an exception is thrown, some bytes may have been consumed from the stream and written into the array.</para> <para></para>        
@@ -3634,7 +3634,7 @@ namespace Java.IO
 				/// readFully
 				/// </java-name>
 				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 1025)]
-				void ReadFully(sbyte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ ;
+				void ReadFully(byte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Reads a big-endian 32-bit integer value.</para> <para> <para>DataOutput::writeInt(int) </para></para>        
@@ -3751,7 +3751,7 @@ namespace Java.IO
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([B)V", AccessFlags = 1025)]
-				void Write(sbyte[] oneByte) /* MethodBuilder.Create */ ;
+				void Write(byte[] oneByte) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Writes <c>count </c> bytes from the byte array <c>buffer </c> starting at offset <c>index </c> .</para> <para></para>        
@@ -3760,7 +3760,7 @@ namespace Java.IO
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1025)]
-				void Write(sbyte[] buffer, int offset, int count) /* MethodBuilder.Create */ ;
+				void Write(byte[] buffer, int offset, int count) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Writes the specified 8-bit byte.</para> <para> <para>DataInput::readByte() </para></para>        
@@ -4056,7 +4056,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] buffer) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4068,7 +4068,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public virtual int Read(byte[] buffer) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4080,7 +4080,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4092,7 +4092,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public virtual int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4222,7 +4222,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InputStreamReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InputStreamReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4326,7 +4326,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InvalidClassException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InvalidClassException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4351,7 +4351,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InvalidObjectException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InvalidObjectException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4407,7 +4407,7 @@ namespace Java.IO
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "([B)I", AccessFlags = 1025)]
-				int Read(sbyte[] buffer) /* MethodBuilder.Create */ ;
+				int Read(byte[] buffer) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Reads up to <c>byteCount </c> bytes from this stream and stores them in byte array <c>buffer </c> starting at offset <c>byteOffset </c> . Blocks while waiting for input. Returns the number of bytes read or -1 if the end of this stream has been reached.</para> <para></para>        
@@ -4416,7 +4416,7 @@ namespace Java.IO
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1025)]
-				int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ ;
+				int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Reads the next object from this stream.</para> <para></para>        
@@ -4500,7 +4500,7 @@ namespace Java.IO
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([B)V", AccessFlags = 1025)]
-				void Write(sbyte[] value) /* MethodBuilder.Create */ ;
+				void Write(byte[] value) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Writes <c>count </c> bytes from the byte array <c>buffer </c> starting at position <c>offset </c> to the target stream. Blocks until all bytes are written.</para> <para></para>        
@@ -4509,7 +4509,7 @@ namespace Java.IO
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1025)]
-				void Write(sbyte[] buffer, int offset, int count) /* MethodBuilder.Create */ ;
+				void Write(byte[] buffer, int offset, int count) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Writes a single byte to the target stream. Only the least significant byte of the integer <c>value </c> is written to the stream. Blocks until the byte is actually written.</para> <para></para>        
@@ -4881,7 +4881,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4893,7 +4893,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4926,7 +4926,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LineNumberInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LineNumberInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5055,7 +5055,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LineNumberReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LineNumberReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5233,7 +5233,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -5245,7 +5245,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -5275,7 +5275,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 1)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte JavaReadByte() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -5290,7 +5290,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 1)]
 				public virtual byte ReadByte() /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -5362,7 +5362,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void ReadFully(sbyte[] dst) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5373,7 +5373,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 1)]
 				public virtual void ReadFully(byte[] dst) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5384,7 +5384,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void ReadFully(sbyte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5395,7 +5395,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 1)]
 				public virtual void ReadFully(byte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5648,7 +5648,7 @@ namespace Java.IO
 				}
 
 				[Dot42.DexImport("java/io/ObjectInput", "read", "([B)I", AccessFlags = 1025)]
-				public override int Read(sbyte[] buffer) /* TypeBuilder.AddAbstractInterfaceMethods */ 
+				public override int Read(byte[] buffer) /* TypeBuilder.AddAbstractInterfaceMethods */ 
 				{
 						return default(int);
 				}
@@ -5702,12 +5702,6 @@ namespace Java.IO
 						/// get
 						/// </java-name>
 						[Dot42.DexImport("get", "(Ljava/lang/String;B)B", AccessFlags = 1025)]
-						public abstract sbyte Get(string @string, sbyte sByte) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// get
-						/// </java-name>
-						[Dot42.DexImport("get", "(Ljava/lang/String;B)B", AccessFlags = 1025, IgnoreFromJava = true)]
 						public abstract byte Get(string @string, byte @byte) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
@@ -5930,7 +5924,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5941,7 +5935,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public override void Write(byte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5952,7 +5946,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5963,7 +5957,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6197,12 +6191,6 @@ namespace Java.IO
 						/// put
 						/// </java-name>
 						[Dot42.DexImport("put", "(Ljava/lang/String;B)V", AccessFlags = 1025)]
-						public abstract void Put(string @string, sbyte sByte) /* MethodBuilder.Create */ ;
-
-						/// <java-name>
-						/// put
-						/// </java-name>
-						[Dot42.DexImport("put", "(Ljava/lang/String;B)V", AccessFlags = 1025, IgnoreFromJava = true)]
 						public abstract void Put(string @string, byte @byte) /* MethodBuilder.Create */ ;
 
 						/// <java-name>
@@ -6480,7 +6468,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ObjectStreamField() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ObjectStreamField() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6684,7 +6672,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6695,7 +6683,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public virtual void Write(byte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6706,7 +6694,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6717,7 +6705,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public virtual void Write(byte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6825,7 +6813,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal OutputStreamWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal OutputStreamWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6964,7 +6952,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
 				public override int Read(sbyte[] bytes, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -6976,7 +6964,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
 				public override int Read(byte[] bytes, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -7060,7 +7048,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7071,7 +7059,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int offset, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7644,7 +7632,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7655,7 +7643,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -7705,7 +7693,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrintStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrintStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8199,7 +8187,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrintWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrintWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8303,7 +8291,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -8315,7 +8303,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -8342,7 +8330,7 @@ namespace Java.IO
 				/// <java-name>
 				/// unread
 				/// </java-name>
-				[Dot42.DexImport("unread", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("unread", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Unread(sbyte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8353,7 +8341,7 @@ namespace Java.IO
 				/// <java-name>
 				/// unread
 				/// </java-name>
-				[Dot42.DexImport("unread", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("unread", "([B)V", AccessFlags = 1)]
 				public virtual void Unread(byte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8364,7 +8352,7 @@ namespace Java.IO
 				/// <java-name>
 				/// unread
 				/// </java-name>
-				[Dot42.DexImport("unread", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("unread", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Unread(sbyte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8375,7 +8363,7 @@ namespace Java.IO
 				/// <java-name>
 				/// unread
 				/// </java-name>
-				[Dot42.DexImport("unread", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("unread", "([BII)V", AccessFlags = 1)]
 				public virtual void Unread(byte[] buffer, int offset, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8414,7 +8402,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PushbackInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PushbackInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8585,7 +8573,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PushbackReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PushbackReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8658,7 +8646,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] buffer) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -8670,7 +8658,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public virtual int Read(byte[] buffer) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -8682,7 +8670,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -8694,7 +8682,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public virtual int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -8724,7 +8712,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 17)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte JavaReadByte() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -8739,7 +8727,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 17)]
 				public byte ReadByte() /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -8796,7 +8784,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17)]
+				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void ReadFully(sbyte[] dst) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8807,7 +8795,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("readFully", "([B)V", AccessFlags = 17)]
 				public void ReadFully(byte[] dst) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8818,7 +8806,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17)]
+				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void ReadFully(sbyte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8829,7 +8817,7 @@ namespace Java.IO
 				/// <java-name>
 				/// readFully
 				/// </java-name>
-				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("readFully", "([BII)V", AccessFlags = 17)]
 				public void ReadFully(byte[] dst, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8982,7 +8970,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8993,7 +8981,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public virtual void Write(byte[] oneByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -9004,7 +8992,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -9015,7 +9003,7 @@ namespace Java.IO
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public virtual void Write(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -9153,7 +9141,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RandomAccessFile() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RandomAccessFile() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9439,7 +9427,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -9451,14 +9439,14 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SequenceInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SequenceInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9485,7 +9473,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SerializablePermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SerializablePermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9790,7 +9778,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StreamTokenizer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StreamTokenizer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9865,7 +9853,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -9874,7 +9862,7 @@ namespace Java.IO
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 33)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -9907,7 +9895,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringBufferInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StringBufferInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10037,7 +10025,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringReader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StringReader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10213,7 +10201,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SyncFailedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SyncFailedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10317,7 +10305,7 @@ namespace Java.IO
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal WriteAbortedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal WriteAbortedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

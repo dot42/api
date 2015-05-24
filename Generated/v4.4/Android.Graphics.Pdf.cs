@@ -268,7 +268,7 @@ namespace Android.Graphics.Pdf
 								}
 
 								[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-								internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+								protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 								{
 								}
 

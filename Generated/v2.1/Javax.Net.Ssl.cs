@@ -20,7 +20,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CertPathTrustManagerParameters() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CertPathTrustManagerParameters() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -60,7 +60,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HandshakeCompletedEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HandshakeCompletedEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -261,7 +261,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpsURLConnection() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpsURLConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -584,7 +584,7 @@ namespace Javax.Net.Ssl
 				/// </java-name>
 				byte[] Id
 				{
-						[Dot42.DexImport("getId", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getId", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -832,7 +832,7 @@ namespace Javax.Net.Ssl
 				/// getSession
 				/// </java-name>
 				[Dot42.DexImport("getSession", "([B)Ljavax/net/ssl/SSLSession;", AccessFlags = 1025)]
-				global::Javax.Net.Ssl.ISSLSession GetSession(sbyte[] sessionId) /* MethodBuilder.Create */ ;
+				global::Javax.Net.Ssl.ISSLSession GetSession(byte[] sessionId) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Returns an iterable of all session identifiers in this session context.</para> <para></para>        
@@ -1103,7 +1103,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyManagerFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyManagerFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1246,7 +1246,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyStoreBuilderParameters() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyStoreBuilderParameters() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1361,7 +1361,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLContext() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2024,7 +2024,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLEngineResult() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLEngineResult() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2166,7 +2166,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2188,7 +2188,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLHandshakeException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLHandshakeException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2213,7 +2213,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLKeyException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLKeyException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2238,7 +2238,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLPeerUnverifiedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLPeerUnverifiedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2265,7 +2265,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2290,7 +2290,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLProtocolException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLProtocolException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2556,7 +2556,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLSessionBindingEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLSessionBindingEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2949,7 +2949,7 @@ namespace Javax.Net.Ssl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TrustManagerFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TrustManagerFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

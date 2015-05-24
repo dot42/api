@@ -64,7 +64,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ActivityInstrumentationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ActivityInstrumentationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -164,7 +164,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ActivityInstrumentationTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ActivityInstrumentationTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -297,7 +297,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ActivityUnitTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ActivityUnitTestCase() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -716,7 +716,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ApplicationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ApplicationTestCase() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -802,7 +802,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1194,7 +1194,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InstrumentationTestSuite() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InstrumentationTestSuite() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1367,7 +1367,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IsolatedContext() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IsolatedContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1524,7 +1524,7 @@ namespace Android.Test
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;[B[B)V", AccessFlags = 9)]
+				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;[B[B)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void AssertEquals(string @string, sbyte[] sByte, sbyte[] sByte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1532,7 +1532,7 @@ namespace Android.Test
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;[B[B)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;[B[B)V", AccessFlags = 9)]
 				public static void AssertEquals(string @string, byte[] @byte, byte[] byte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1543,7 +1543,7 @@ namespace Android.Test
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "([B[B)V", AccessFlags = 9)]
+				[Dot42.DexImport("assertEquals", "([B[B)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void AssertEquals(sbyte[] expected, sbyte[] actual) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1554,7 +1554,7 @@ namespace Android.Test
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "([B[B)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("assertEquals", "([B[B)V", AccessFlags = 9)]
 				public static void AssertEquals(byte[] expected, byte[] actual) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1921,7 +1921,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProviderTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProviderTestCase() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2013,7 +2013,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProviderTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProviderTestCase2() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2216,7 +2216,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RenamingDelegatingContext() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RenamingDelegatingContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2343,7 +2343,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ServiceTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ServiceTestCase() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2442,7 +2442,7 @@ namespace Android.Test
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SingleLaunchActivityTestCase() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SingleLaunchActivityTestCase() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

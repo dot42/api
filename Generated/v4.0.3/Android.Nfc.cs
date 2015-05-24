@@ -38,7 +38,7 @@ namespace Android.Nfc
 				/// <summary>
 				///  <para>Construct an NDEF Message from one or more NDEF Records.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public NdefMessage(sbyte[] records) /* MethodBuilder.Create */ 
 				{
 				}
@@ -46,7 +46,7 @@ namespace Android.Nfc
 				/// <summary>
 				///  <para>Construct an NDEF Message from one or more NDEF Records.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public NdefMessage(byte[] records) /* MethodBuilder.Create */ 
 				{
 				}
@@ -68,7 +68,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -83,7 +83,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
 				public byte[] ToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -116,7 +116,7 @@ namespace Android.Nfc
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NdefMessage() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NdefMessage() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -269,7 +269,7 @@ namespace Android.Nfc
 				/// <summary>
 				///  <para>Construct an NDEF Record from its component fields.</para> <para>Recommend to use helpers such as {createUri} or {createExternal where possible, since they perform stricter validation that the record is correctly formatted as per NDEF specifications. However if you know what you are doing then this constructor offers the most flexibility.</para> <para>An NdefRecord represents a logical (complete) record, and cannot represent NDEF Record chunks.</para> <para>Basic validation of the tnf, type, id and payload is performed as per the following rules:  <ul> <li> <para>The tnf paramter must be a 3-bit value. </para></li> <li> <para>Records with a tnf of TNF_EMPTY cannot have a type, id or payload. </para></li> <li> <para>Records with a tnf of TNF_UNKNOWN or { 0x07} cannot have a type. </para></li> <li> <para>Records with a tnf of TNF_UNCHANGED are not allowed since this class only represents complete (unchunked) records. </para></li></ul>This minimal validation is specified by NFCForum-TS-NDEF_1.0 section 3.2.6 (Type Name Format).</para> <para>If any of the above validation steps fail then IllegalArgumentException is thrown.</para> <para>Deep inspection of the type, id and payload fields is not performed, so it is possible to create NDEF Records that conform to section 3.2.6 but fail other more strict NDEF specification requirements. For example, the payload may be invalid given the tnf and type. </para> <para>To omit a type, id or payload field, set the parameter to an empty byte array or null.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(S[B[B[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(S[B[B[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public NdefRecord(short tnf, sbyte[] type, sbyte[] id, sbyte[] payload) /* MethodBuilder.Create */ 
 				{
 				}
@@ -277,7 +277,7 @@ namespace Android.Nfc
 				/// <summary>
 				///  <para>Construct an NDEF Record from its component fields.</para> <para>Recommend to use helpers such as {createUri} or {createExternal where possible, since they perform stricter validation that the record is correctly formatted as per NDEF specifications. However if you know what you are doing then this constructor offers the most flexibility.</para> <para>An NdefRecord represents a logical (complete) record, and cannot represent NDEF Record chunks.</para> <para>Basic validation of the tnf, type, id and payload is performed as per the following rules:  <ul> <li> <para>The tnf paramter must be a 3-bit value. </para></li> <li> <para>Records with a tnf of TNF_EMPTY cannot have a type, id or payload. </para></li> <li> <para>Records with a tnf of TNF_UNKNOWN or { 0x07} cannot have a type. </para></li> <li> <para>Records with a tnf of TNF_UNCHANGED are not allowed since this class only represents complete (unchunked) records. </para></li></ul>This minimal validation is specified by NFCForum-TS-NDEF_1.0 section 3.2.6 (Type Name Format).</para> <para>If any of the above validation steps fail then IllegalArgumentException is thrown.</para> <para>Deep inspection of the type, id and payload fields is not performed, so it is possible to create NDEF Records that conform to section 3.2.6 but fail other more strict NDEF specification requirements. For example, the payload may be invalid given the tnf and type. </para> <para>To omit a type, id or payload field, set the parameter to an empty byte array or null.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(S[B[B[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(S[B[B[B)V", AccessFlags = 1)]
 				public NdefRecord(short tnf, byte[] type, byte[] id, byte[] payload) /* MethodBuilder.Create */ 
 				{
 				}
@@ -285,7 +285,7 @@ namespace Android.Nfc
 				/// <summary>
 				///  <para>Construct an NDEF Record from raw bytes.</para> <para>This method is deprecated, use NdefMessage#NdefMessage(byte[]) instead. This is because it does not make sense to parse a record: the NDEF binary format is only defined for a message, and the record flags MB and ME do not make sense outside of the context of an entire message.</para> <para>This implementation will attempt to parse a single record by ignoring the MB and ME flags, and otherwise following the rules of NdefMessage#NdefMessage(byte[]).</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>use NdefMessage#NdefMessage(byte[]) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public NdefRecord(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -293,7 +293,7 @@ namespace Android.Nfc
 				/// <summary>
 				///  <para>Construct an NDEF Record from raw bytes.</para> <para>This method is deprecated, use NdefMessage#NdefMessage(byte[]) instead. This is because it does not make sense to parse a record: the NDEF binary format is only defined for a message, and the record flags MB and ME do not make sense outside of the context of an entire message.</para> <para>This implementation will attempt to parse a single record by ignoring the MB and ME flags, and otherwise following the rules of NdefMessage#NdefMessage(byte[]).</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>use NdefMessage#NdefMessage(byte[]) instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public NdefRecord(byte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -304,7 +304,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// getType
 				/// </java-name>
-				[Dot42.DexImport("getType", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getType", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetType() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -316,7 +316,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetId() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -328,7 +328,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// getPayload
 				/// </java-name>
-				[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetPayload() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -385,7 +385,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -397,7 +397,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
 				public byte[] ToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -430,7 +430,7 @@ namespace Android.Nfc
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NdefRecord() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NdefRecord() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -454,7 +454,7 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Type
 				{
-						[Dot42.DexImport("getType", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getType", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -466,7 +466,7 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Id
 				{
-						[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getId", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -478,7 +478,7 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Payload
 				{
-						[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getPayload", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -823,7 +823,7 @@ namespace Android.Nfc
 				/// <java-name>
 				/// getId
 				/// </java-name>
-				[Dot42.DexImport("getId", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetId() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -878,7 +878,7 @@ namespace Android.Nfc
 				/// </java-name>
 				public byte[] Id
 				{
-						[Dot42.DexImport("getId", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getId", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

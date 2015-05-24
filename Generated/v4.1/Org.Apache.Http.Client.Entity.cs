@@ -19,7 +19,7 @@ namespace Org.Apache.Http.Client.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UrlEncodedFormEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UrlEncodedFormEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

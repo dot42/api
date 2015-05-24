@@ -197,7 +197,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicHeader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicHeader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -302,7 +302,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicHeaderElement() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicHeaderElement() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -388,7 +388,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicHeaderElementIterator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicHeaderElementIterator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -475,7 +475,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicHeaderIterator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicHeaderIterator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -821,7 +821,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicHttpEntityEnclosingRequest() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicHttpEntityEnclosingRequest() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -958,7 +958,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicHttpRequest() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicHttpRequest() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1132,7 +1132,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicHttpResponse() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicHttpResponse() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1636,7 +1636,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicListHeaderIterator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicListHeaderIterator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1700,7 +1700,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicNameValuePair() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicNameValuePair() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1755,7 +1755,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicRequestLine() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicRequestLine() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1819,7 +1819,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicStatusLine() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicStatusLine() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1997,7 +1997,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicTokenIterator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicTokenIterator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2043,7 +2043,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BufferedHeader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BufferedHeader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2430,7 +2430,7 @@ namespace Org.Apache.Http.Message
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ParserCursor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ParserCursor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

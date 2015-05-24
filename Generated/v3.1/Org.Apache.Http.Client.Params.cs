@@ -131,7 +131,7 @@ namespace Org.Apache.Http.Client.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ClientParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ClientParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

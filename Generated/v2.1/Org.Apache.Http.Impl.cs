@@ -626,7 +626,7 @@ namespace Org.Apache.Http.Impl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpConnectionMetricsImpl() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpConnectionMetricsImpl() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

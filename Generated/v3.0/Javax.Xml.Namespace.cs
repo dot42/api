@@ -153,7 +153,7 @@ namespace Javax.Xml.Namespace
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal QName() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal QName() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

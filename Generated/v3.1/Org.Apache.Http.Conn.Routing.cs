@@ -136,7 +136,7 @@ namespace Org.Apache.Http.Conn.Routing
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpRoute() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpRoute() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -589,7 +589,7 @@ namespace Org.Apache.Http.Conn.Routing
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RouteTracker() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RouteTracker() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

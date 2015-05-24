@@ -28,7 +28,7 @@ namespace Javax.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ConnectionEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ConnectionEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -353,13 +353,13 @@ namespace Javax.Sql
 				/// setByte
 				/// </java-name>
 				[Dot42.DexImport("setByte", "(IB)V", AccessFlags = 1025)]
-				void SetByte(int int32, sbyte sByte) /* MethodBuilder.Create */ ;
+				void SetByte(int int32, byte @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setBytes
 				/// </java-name>
 				[Dot42.DexImport("setBytes", "(I[B)V", AccessFlags = 1025)]
-				void SetBytes(int int32, sbyte[] sByte) /* MethodBuilder.Create */ ;
+				void SetBytes(int int32, byte[] @byte) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Sets the value of the specified parameter in the <c>RowSet </c> command to the sequence of Unicode characters carried by the supplied <c>java.io.Reader </c> .</para> <para></para>        
@@ -1087,7 +1087,7 @@ namespace Javax.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RowSetEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RowSetEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

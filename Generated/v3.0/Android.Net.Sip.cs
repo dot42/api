@@ -213,7 +213,7 @@ namespace Android.Net.Sip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SipAudioCall() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SipAudioCall() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1263,7 +1263,7 @@ namespace Android.Net.Sip
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

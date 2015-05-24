@@ -479,7 +479,7 @@ namespace Java.Nio.Channels
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DatagramChannel() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DatagramChannel() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -970,7 +970,7 @@ namespace Java.Nio.Channels
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileLock() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FileLock() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1457,7 +1457,7 @@ namespace Java.Nio.Channels
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal SourceChannel() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal SourceChannel() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1523,7 +1523,7 @@ namespace Java.Nio.Channels
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal SinkChannel() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal SinkChannel() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2150,7 +2150,7 @@ namespace Java.Nio.Channels
 				public abstract global::Java.Nio.Channels.SocketChannel Accept() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ServerSocketChannel() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ServerSocketChannel() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2346,7 +2346,7 @@ namespace Java.Nio.Channels
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SocketChannel() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SocketChannel() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -30,7 +30,7 @@ namespace Org.Apache.Http.Cookie.Params
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CookieSpecParamBean() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CookieSpecParamBean() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

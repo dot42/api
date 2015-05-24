@@ -661,7 +661,7 @@ namespace Android.Text.Method
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CharacterPickerDialog() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CharacterPickerDialog() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1617,7 +1617,7 @@ namespace Android.Text.Method
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MultiTapKeyListener() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MultiTapKeyListener() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1837,7 +1837,7 @@ namespace Android.Text.Method
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal QwertyKeyListener() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal QwertyKeyListener() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2308,7 +2308,7 @@ namespace Android.Text.Method
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextKeyListener() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextKeyListener() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -2031,7 +2031,7 @@ namespace Javax.Microedition.Khronos.Opengles
 				/// glColor4ub
 				/// </java-name>
 				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 1025)]
-				void GlColor4ub(sbyte red, sbyte green, sbyte blue, sbyte alpha) /* MethodBuilder.Create */ ;
+				void GlColor4ub(byte red, byte green, byte blue, byte alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColorPointer

@@ -689,7 +689,7 @@ namespace Java.Util.Logging
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Level() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Level() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1118,7 +1118,7 @@ namespace Java.Util.Logging
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Logger() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Logger() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1292,7 +1292,7 @@ namespace Java.Util.Logging
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LoggingPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LoggingPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1515,7 +1515,7 @@ namespace Java.Util.Logging
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LogRecord() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LogRecord() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -33,7 +33,7 @@ namespace Android.Speech.Tts
 				/// audioAvailable
 				/// </java-name>
 				[Dot42.DexImport("audioAvailable", "([BII)I", AccessFlags = 1025)]
-				int AudioAvailable(sbyte[] buffer, int offset, int length) /* MethodBuilder.Create */ ;
+				int AudioAvailable(byte[] buffer, int offset, int length) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>The service should call this method when all the synthesized audio for a request has been passed to audioAvailable.</para> <para>This method should only be called on the synthesis thread, while in TextToSpeechService#onSynthesizeText.</para> <para>This method has to be called if start was called.</para> <para></para>        
@@ -89,7 +89,7 @@ namespace Android.Speech.Tts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SynthesisRequest() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SynthesisRequest() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -575,7 +575,7 @@ namespace Android.Speech.Tts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextToSpeech() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextToSpeech() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -945,7 +945,7 @@ namespace Android.Speech.Tts
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Engine() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Engine() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

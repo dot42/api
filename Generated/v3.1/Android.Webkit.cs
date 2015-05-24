@@ -374,7 +374,7 @@ namespace Android.Webkit
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ConsoleMessage() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ConsoleMessage() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -792,7 +792,7 @@ namespace Android.Webkit
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DateSorter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DateSorter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1306,7 +1306,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "([B)[B", AccessFlags = 9)]
+				[Dot42.DexImport("decode", "([B)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] Decode(sbyte[] url) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1315,7 +1315,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "([B)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("decode", "([B)[B", AccessFlags = 9)]
 				public static byte[] Decode(byte[] url) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2175,7 +2175,7 @@ namespace Android.Webkit
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal WebResourceResponse() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal WebResourceResponse() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3657,7 +3657,7 @@ namespace Android.Webkit
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal WebSyncManager() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal WebSyncManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3982,7 +3982,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// postUrl
 				/// </java-name>
-				[Dot42.DexImport("postUrl", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("postUrl", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void PostUrl(string url, sbyte[] postData) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3993,7 +3993,7 @@ namespace Android.Webkit
 				/// <java-name>
 				/// postUrl
 				/// </java-name>
-				[Dot42.DexImport("postUrl", "(Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("postUrl", "(Ljava/lang/String;[B)V", AccessFlags = 1)]
 				public virtual void PostUrl(string url, byte[] postData) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4870,7 +4870,7 @@ namespace Android.Webkit
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal WebView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal WebView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5232,7 +5232,7 @@ namespace Android.Webkit
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal HitTestResult() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal HitTestResult() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5310,7 +5310,7 @@ namespace Android.Webkit
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal WebViewTransport() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal WebViewTransport() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

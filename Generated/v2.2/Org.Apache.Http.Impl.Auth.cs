@@ -351,7 +351,7 @@ namespace Org.Apache.Http.Impl.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NTLMScheme() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NTLMScheme() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

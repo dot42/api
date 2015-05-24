@@ -668,7 +668,7 @@ namespace Org.W3c.Dom.Ls
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LSException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LSException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

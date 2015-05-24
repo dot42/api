@@ -70,7 +70,7 @@ namespace Android.Net.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SslCertificate() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SslCertificate() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -170,7 +170,7 @@ namespace Android.Net.Http
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal DName() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal DName() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

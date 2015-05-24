@@ -135,7 +135,7 @@ namespace Android.Appwidget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AppWidgetHost() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AppWidgetHost() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -235,7 +235,7 @@ namespace Android.Appwidget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AppWidgetHostView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AppWidgetHostView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

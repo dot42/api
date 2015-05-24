@@ -35,7 +35,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Annotation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Annotation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -171,7 +171,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AttributedString() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AttributedString() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -245,7 +245,7 @@ namespace Java.Text
 				/// <summary>
 				///  <para>Creates a <c>Bidi </c> object.</para> <para> <para>DIRECTION_LEFT_TO_RIGHT </para> <para>DIRECTION_RIGHT_TO_LEFT </para> <para>DIRECTION_DEFAULT_RIGHT_TO_LEFT </para> <para>DIRECTION_DEFAULT_LEFT_TO_RIGHT </para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([CI[BIII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([CI[BIII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public Bidi(char[] text, int textStart, sbyte[] embeddings, int embStart, int paragraphLength, int flags) /* MethodBuilder.Create */ 
 				{
 				}
@@ -253,7 +253,7 @@ namespace Java.Text
 				/// <summary>
 				///  <para>Creates a <c>Bidi </c> object.</para> <para> <para>DIRECTION_LEFT_TO_RIGHT </para> <para>DIRECTION_RIGHT_TO_LEFT </para> <para>DIRECTION_DEFAULT_RIGHT_TO_LEFT </para> <para>DIRECTION_DEFAULT_LEFT_TO_RIGHT </para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([CI[BIII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([CI[BIII)V", AccessFlags = 1)]
 				public Bidi(char[] text, int textStart, byte[] embeddings, int embStart, int paragraphLength, int flags) /* MethodBuilder.Create */ 
 				{
 				}
@@ -362,7 +362,7 @@ namespace Java.Text
 				/// <java-name>
 				/// reorderVisually
 				/// </java-name>
-				[Dot42.DexImport("reorderVisually", "([BI[Ljava/lang/Object;II)V", AccessFlags = 9)]
+				[Dot42.DexImport("reorderVisually", "([BI[Ljava/lang/Object;II)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void ReorderVisually(sbyte[] levels, int levelStart, object[] objects, int objectStart, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -373,7 +373,7 @@ namespace Java.Text
 				/// <java-name>
 				/// reorderVisually
 				/// </java-name>
-				[Dot42.DexImport("reorderVisually", "([BI[Ljava/lang/Object;II)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("reorderVisually", "([BI[Ljava/lang/Object;II)V", AccessFlags = 9)]
 				public static void ReorderVisually(byte[] levels, int levelStart, object[] objects, int objectStart, int count) /* MethodBuilder.Create */ 
 				{
 				}
@@ -403,7 +403,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Bidi() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Bidi() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1072,7 +1072,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ChoiceFormat() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ChoiceFormat() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1338,18 +1338,6 @@ namespace Java.Text
 				/// toByteArray
 				/// </java-name>
 				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaToByteArray() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns this collation key as a byte array.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>an array of bytes. </para>
-				/// </returns>
-				/// <java-name>
-				/// toByteArray
-				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract byte[] ToByteArray() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1368,7 +1356,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CollationKey() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CollationKey() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2399,7 +2387,7 @@ namespace Java.Text
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Field() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Field() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3569,7 +3557,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FieldPosition() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FieldPosition() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3758,7 +3746,7 @@ namespace Java.Text
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Field() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Field() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3999,7 +3987,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IAttributedCharacterIterator_Attribute() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IAttributedCharacterIterator_Attribute() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4472,7 +4460,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MessageFormat() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MessageFormat() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4560,7 +4548,7 @@ namespace Java.Text
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Field() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Field() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5225,7 +5213,7 @@ namespace Java.Text
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Field() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Field() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5252,7 +5240,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ParseException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ParseException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5331,7 +5319,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ParsePosition() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ParsePosition() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5534,7 +5522,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RuleBasedCollator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RuleBasedCollator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5968,7 +5956,7 @@ namespace Java.Text
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringCharacterIterator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StringCharacterIterator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -158,7 +158,7 @@ namespace Javax.Crypto.Interfaces
 				/// </java-name>
 				byte[] Salt
 				{
-						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSalt", "()[B", AccessFlags = 1025)]
 						get;
 				}
 

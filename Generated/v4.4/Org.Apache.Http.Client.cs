@@ -67,7 +67,7 @@ namespace Org.Apache.Http.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpResponseException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpResponseException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

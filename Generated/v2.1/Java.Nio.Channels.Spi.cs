@@ -196,7 +196,7 @@ namespace Java.Nio.Channels.Spi
 				protected internal abstract void ImplConfigureBlocking(bool blocking) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractSelectableChannel() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractSelectableChannel() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -384,7 +384,7 @@ namespace Java.Nio.Channels.Spi
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractSelector() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractSelector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

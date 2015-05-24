@@ -48,7 +48,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AccessControlContext() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AccessControlContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -90,7 +90,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AccessControlException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AccessControlException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -335,7 +335,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AlgorithmParameterGenerator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AlgorithmParameterGenerator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -490,7 +490,7 @@ namespace Java.Security
 				/// <java-name>
 				/// init
 				/// </java-name>
-				[Dot42.DexImport("init", "([B)V", AccessFlags = 17)]
+				[Dot42.DexImport("init", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Init(sbyte[] paramSpec) /* MethodBuilder.Create */ 
 				{
 				}
@@ -501,7 +501,7 @@ namespace Java.Security
 				/// <java-name>
 				/// init
 				/// </java-name>
-				[Dot42.DexImport("init", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("init", "([B)V", AccessFlags = 17)]
 				public void Init(byte[] paramSpec) /* MethodBuilder.Create */ 
 				{
 				}
@@ -512,7 +512,7 @@ namespace Java.Security
 				/// <java-name>
 				/// init
 				/// </java-name>
-				[Dot42.DexImport("init", "([BLjava/lang/String;)V", AccessFlags = 17)]
+				[Dot42.DexImport("init", "([BLjava/lang/String;)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Init(sbyte[] @params, string format) /* MethodBuilder.Create */ 
 				{
 				}
@@ -523,7 +523,7 @@ namespace Java.Security
 				/// <java-name>
 				/// init
 				/// </java-name>
-				[Dot42.DexImport("init", "([BLjava/lang/String;)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("init", "([BLjava/lang/String;)V", AccessFlags = 17)]
 				public void Init(byte[] @params, string format) /* MethodBuilder.Create */ 
 				{
 				}
@@ -552,7 +552,7 @@ namespace Java.Security
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -567,7 +567,7 @@ namespace Java.Security
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "(Ljava/lang/String;)[B", AccessFlags = 17)]
+				[Dot42.DexImport("getEncoded", "(Ljava/lang/String;)[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaGetEncoded(string format) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -582,7 +582,7 @@ namespace Java.Security
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "(Ljava/lang/String;)[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("getEncoded", "(Ljava/lang/String;)[B", AccessFlags = 17)]
 				public byte[] GetEncoded(string format) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -604,7 +604,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AlgorithmParameters() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AlgorithmParameters() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -649,7 +649,7 @@ namespace Java.Security
 				/// </java-name>
 				public byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 17)]
 						get{ return default(byte[]); }
 				}
 
@@ -686,15 +686,6 @@ namespace Java.Security
 				/// engineInit
 				/// </java-name>
 				[Dot42.DexImport("engineInit", "([B)V", AccessFlags = 1028)]
-				protected internal abstract void EngineInit(sbyte[] paramSpec) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Initializes this <c>AlgorithmParametersSpi </c> with the specified  <c>AlgorithmParameterSpec </c> .</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineInit
-				/// </java-name>
-				[Dot42.DexImport("engineInit", "([B)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineInit(byte[] paramSpec) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -704,15 +695,6 @@ namespace Java.Security
 				/// engineInit
 				/// </java-name>
 				[Dot42.DexImport("engineInit", "([BLjava/lang/String;)V", AccessFlags = 1028)]
-				protected internal abstract void EngineInit(sbyte[] @params, string format) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Initializes this <c>AlgorithmParametersSpi </c> with the specified  <c>byte[] </c> using the specified decoding format.</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineInit
-				/// </java-name>
-				[Dot42.DexImport("engineInit", "([BLjava/lang/String;)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineInit(byte[] @params, string format) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -737,18 +719,6 @@ namespace Java.Security
 				/// engineGetEncoded
 				/// </java-name>
 				[Dot42.DexImport("engineGetEncoded", "()[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineGetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the parameters in their default encoding format. The default encoding format is ASN.1.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the encoded parameters. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGetEncoded
-				/// </java-name>
-				[Dot42.DexImport("engineGetEncoded", "()[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineGetEncoded() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -761,18 +731,6 @@ namespace Java.Security
 				/// engineGetEncoded
 				/// </java-name>
 				[Dot42.DexImport("engineGetEncoded", "(Ljava/lang/String;)[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineGetEncoded(string format) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the parameters in the specified encoding format.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the encoded parameters. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGetEncoded
-				/// </java-name>
-				[Dot42.DexImport("engineGetEncoded", "(Ljava/lang/String;)[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineGetEncoded(string format) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -890,7 +848,7 @@ namespace Java.Security
 				public abstract void SetCallbackHandler(global::Javax.Security.Auth.Callback.ICallbackHandler handler) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AuthProvider() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AuthProvider() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -953,7 +911,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1032,7 +990,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CodeSigner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CodeSigner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1125,7 +1083,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CodeSource() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CodeSource() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1243,7 +1201,7 @@ namespace Java.Security
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1255,7 +1213,7 @@ namespace Java.Security
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1288,7 +1246,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DigestInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DigestInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1354,7 +1312,7 @@ namespace Java.Security
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1365,7 +1323,7 @@ namespace Java.Security
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1397,7 +1355,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DigestOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DigestOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1477,7 +1435,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GuardedObject() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GuardedObject() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2067,7 +2025,7 @@ namespace Java.Security
 				/// </java-name>
 				byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -2510,7 +2468,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2668,7 +2626,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyPair() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyPair() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2830,7 +2788,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyPairGenerator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyPairGenerator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2931,7 +2889,7 @@ namespace Java.Security
 				/// <summary>
 				///  <para>Constructs a new instance of <c>KeyRep </c> with the specified arguments. The arguments should be obtained from the <c>Key </c> object that has to be serialized.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/security/KeyRep$Type;Ljava/lang/String;Ljava/lang/String;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljava/security/KeyRep$Type;Ljava/lang/String;Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public KeyRep(global::Java.Security.KeyRep.Type type, string algorithm, string format, sbyte[] encoded) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2939,7 +2897,7 @@ namespace Java.Security
 				/// <summary>
 				///  <para>Constructs a new instance of <c>KeyRep </c> with the specified arguments. The arguments should be obtained from the <c>Key </c> object that has to be serialized.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/security/KeyRep$Type;Ljava/lang/String;Ljava/lang/String;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/security/KeyRep$Type;Ljava/lang/String;Ljava/lang/String;[B)V", AccessFlags = 1)]
 				public KeyRep(global::Java.Security.KeyRep.Type type, string algorithm, string format, byte[] encoded) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2960,7 +2918,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyRep() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyRep() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3140,7 +3098,7 @@ namespace Java.Security
 				/// <java-name>
 				/// setKeyEntry
 				/// </java-name>
-				[Dot42.DexImport("setKeyEntry", "(Ljava/lang/String;[B[Ljava/security/cert/Certificate;)V", AccessFlags = 17)]
+				[Dot42.DexImport("setKeyEntry", "(Ljava/lang/String;[B[Ljava/security/cert/Certificate;)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void SetKeyEntry(string alias, sbyte[] key, global::Java.Security.Cert.Certificate[] chain) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3151,7 +3109,7 @@ namespace Java.Security
 				/// <java-name>
 				/// setKeyEntry
 				/// </java-name>
-				[Dot42.DexImport("setKeyEntry", "(Ljava/lang/String;[B[Ljava/security/cert/Certificate;)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("setKeyEntry", "(Ljava/lang/String;[B[Ljava/security/cert/Certificate;)V", AccessFlags = 17)]
 				public void SetKeyEntry(string alias, byte[] key, global::Java.Security.Cert.Certificate[] chain) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3356,7 +3314,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyStore() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyStore() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3436,7 +3394,7 @@ namespace Java.Security
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal TrustedCertificateEntry() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal TrustedCertificateEntry() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3488,7 +3446,7 @@ namespace Java.Security
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal SecretKeyEntry() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal SecretKeyEntry() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3540,7 +3498,7 @@ namespace Java.Security
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal PrivateKeyEntry() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal PrivateKeyEntry() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3630,7 +3588,7 @@ namespace Java.Security
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal PasswordProtection() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal PasswordProtection() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3721,7 +3679,7 @@ namespace Java.Security
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal CallbackHandlerProtection() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal CallbackHandlerProtection() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3953,15 +3911,6 @@ namespace Java.Security
 				/// engineSetKeyEntry
 				/// </java-name>
 				[Dot42.DexImport("engineSetKeyEntry", "(Ljava/lang/String;[B[Ljava/security/cert/Certificate;)V", AccessFlags = 1025)]
-				public abstract void EngineSetKeyEntry(string alias, sbyte[] key, global::Java.Security.Cert.Certificate[] chain) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Associates the given alias with a key and a certificate chain. </para> <para>If the specified alias already exists, it will be reassigned.</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineSetKeyEntry
-				/// </java-name>
-				[Dot42.DexImport("engineSetKeyEntry", "(Ljava/lang/String;[B[Ljava/security/cert/Certificate;)V", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract void EngineSetKeyEntry(string alias, byte[] key, global::Java.Security.Cert.Certificate[] chain) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -4215,7 +4164,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "(B)V", AccessFlags = 1)]
+				[Dot42.DexImport("update", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Update(sbyte input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4226,7 +4175,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "(B)V", AccessFlags = 1)]
 				public virtual void Update(byte input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4237,7 +4186,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Update(sbyte[] input, int offset, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4248,7 +4197,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1)]
 				public virtual void Update(byte[] input, int offset, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4259,7 +4208,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Update(sbyte[] input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4270,7 +4219,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 1)]
 				public virtual void Update(byte[] input) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4284,7 +4233,7 @@ namespace Java.Security
 				/// <java-name>
 				/// digest
 				/// </java-name>
-				[Dot42.DexImport("digest", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("digest", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaDigest() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -4299,7 +4248,7 @@ namespace Java.Security
 				/// <java-name>
 				/// digest
 				/// </java-name>
-				[Dot42.DexImport("digest", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("digest", "()[B", AccessFlags = 1)]
 				public virtual byte[] Digest() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -4314,7 +4263,7 @@ namespace Java.Security
 				/// <java-name>
 				/// digest
 				/// </java-name>
-				[Dot42.DexImport("digest", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("digest", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Digest(sbyte[] buf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4329,7 +4278,7 @@ namespace Java.Security
 				/// <java-name>
 				/// digest
 				/// </java-name>
-				[Dot42.DexImport("digest", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("digest", "([BII)I", AccessFlags = 1)]
 				public virtual int Digest(byte[] buf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4344,7 +4293,7 @@ namespace Java.Security
 				/// <java-name>
 				/// digest
 				/// </java-name>
-				[Dot42.DexImport("digest", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("digest", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] Digest(sbyte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -4359,7 +4308,7 @@ namespace Java.Security
 				/// <java-name>
 				/// digest
 				/// </java-name>
-				[Dot42.DexImport("digest", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("digest", "([B)[B", AccessFlags = 1)]
 				public virtual byte[] Digest(byte[] input) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -4389,7 +4338,7 @@ namespace Java.Security
 				/// <java-name>
 				/// isEqual
 				/// </java-name>
-				[Dot42.DexImport("isEqual", "([B[B)Z", AccessFlags = 9)]
+				[Dot42.DexImport("isEqual", "([B[B)Z", AccessFlags = 9, IgnoreFromJava = true)]
 				public static bool IsEqual(sbyte[] digesta, sbyte[] digestb) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -4404,7 +4353,7 @@ namespace Java.Security
 				/// <java-name>
 				/// isEqual
 				/// </java-name>
-				[Dot42.DexImport("isEqual", "([B[B)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("isEqual", "([B[B)Z", AccessFlags = 9)]
 				public static bool IsEqual(byte[] digesta, byte[] digestb) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -4431,7 +4380,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MessageDigest() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MessageDigest() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4519,15 +4468,6 @@ namespace Java.Security
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "(B)V", AccessFlags = 1028)]
-				protected internal abstract void EngineUpdate(sbyte input) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Updates this <c>MessageDigestSpi </c> using the given <c>input </c> .</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "(B)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineUpdate(byte input) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -4537,15 +4477,6 @@ namespace Java.Security
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "([BII)V", AccessFlags = 1028)]
-				protected internal abstract void EngineUpdate(sbyte[] input, int offset, int len) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Updates this <c>MessageDigestSpi </c> using the given <c>byte[] </c> .</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "([BII)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineUpdate(byte[] input, int offset, int len) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -4569,18 +4500,6 @@ namespace Java.Security
 				/// engineDigest
 				/// </java-name>
 				[Dot42.DexImport("engineDigest", "()[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineDigest() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Computes and returns the final hash value for this MessageDigestSpi. After the digest is computed the receiver is reset.</para> <para> <para>engineReset() </para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the computed one way hash value. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineDigest
-				/// </java-name>
-				[Dot42.DexImport("engineDigest", "()[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineDigest() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -4592,7 +4511,7 @@ namespace Java.Security
 				/// <java-name>
 				/// engineDigest
 				/// </java-name>
-				[Dot42.DexImport("engineDigest", "([BII)I", AccessFlags = 4)]
+				[Dot42.DexImport("engineDigest", "([BII)I", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual int EngineDigest(sbyte[] buf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4607,7 +4526,7 @@ namespace Java.Security
 				/// <java-name>
 				/// engineDigest
 				/// </java-name>
-				[Dot42.DexImport("engineDigest", "([BII)I", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("engineDigest", "([BII)I", AccessFlags = 4)]
 				protected internal virtual int EngineDigest(byte[] buf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -4768,7 +4687,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Permission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Permission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5133,7 +5052,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrivilegedActionException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrivilegedActionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5197,7 +5116,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProtectionDomain() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProtectionDomain() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5397,7 +5316,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Provider() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Provider() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5540,7 +5459,7 @@ namespace Java.Security
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Service() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Service() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5696,7 +5615,7 @@ namespace Java.Security
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(string name, sbyte[] b, int off, int len, global::Java.Security.CodeSource cs) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -5711,7 +5630,7 @@ namespace Java.Security
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(string name, byte[] b, int off, int len, global::Java.Security.CodeSource cs) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -5759,7 +5678,7 @@ namespace Java.Security
 				/// <summary>
 				///  <para>Constructs a new seeded <c>SecureRandom </c> that uses the default algorithm. . </para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public SecureRandom(sbyte[] seed) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5767,7 +5686,7 @@ namespace Java.Security
 				/// <summary>
 				///  <para>Constructs a new seeded <c>SecureRandom </c> that uses the default algorithm. . </para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public SecureRandom(byte[] seed) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5816,7 +5735,7 @@ namespace Java.Security
 				/// <java-name>
 				/// setSeed
 				/// </java-name>
-				[Dot42.DexImport("setSeed", "([B)V", AccessFlags = 33)]
+				[Dot42.DexImport("setSeed", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual void SetSeed(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5824,7 +5743,7 @@ namespace Java.Security
 				/// <java-name>
 				/// setSeed
 				/// </java-name>
-				[Dot42.DexImport("setSeed", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setSeed", "([B)V", AccessFlags = 33)]
 				public virtual void SetSeed(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5843,7 +5762,7 @@ namespace Java.Security
 				/// <java-name>
 				/// nextBytes
 				/// </java-name>
-				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 33)]
+				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public override void NextBytes(sbyte[] bytes) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5854,7 +5773,7 @@ namespace Java.Security
 				/// <java-name>
 				/// nextBytes
 				/// </java-name>
-				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("nextBytes", "([B)V", AccessFlags = 33)]
 				public override void NextBytes(byte[] bytes) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5883,7 +5802,7 @@ namespace Java.Security
 				/// <java-name>
 				/// getSeed
 				/// </java-name>
-				[Dot42.DexImport("getSeed", "(I)[B", AccessFlags = 9)]
+				[Dot42.DexImport("getSeed", "(I)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] JavaGetSeed(int numBytes) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -5898,7 +5817,7 @@ namespace Java.Security
 				/// <java-name>
 				/// getSeed
 				/// </java-name>
-				[Dot42.DexImport("getSeed", "(I)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getSeed", "(I)[B", AccessFlags = 9)]
 				public static byte[] GetSeed(int numBytes) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -5913,7 +5832,7 @@ namespace Java.Security
 				/// <java-name>
 				/// generateSeed
 				/// </java-name>
-				[Dot42.DexImport("generateSeed", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("generateSeed", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGenerateSeed(int numBytes) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -5928,7 +5847,7 @@ namespace Java.Security
 				/// <java-name>
 				/// generateSeed
 				/// </java-name>
-				[Dot42.DexImport("generateSeed", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("generateSeed", "(I)[B", AccessFlags = 1)]
 				public virtual byte[] GenerateSeed(int numBytes) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -5988,15 +5907,6 @@ namespace Java.Security
 				/// engineSetSeed
 				/// </java-name>
 				[Dot42.DexImport("engineSetSeed", "([B)V", AccessFlags = 1028)]
-				protected internal abstract void EngineSetSeed(sbyte[] seed) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Reseeds this <c>SecureRandomSpi </c> instance with the specified <c>seed </c> . The seed of this <c>SecureRandomSpi </c> instance is supplemented, not replaced.</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineSetSeed
-				/// </java-name>
-				[Dot42.DexImport("engineSetSeed", "([B)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineSetSeed(byte[] seed) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -6006,15 +5916,6 @@ namespace Java.Security
 				/// engineNextBytes
 				/// </java-name>
 				[Dot42.DexImport("engineNextBytes", "([B)V", AccessFlags = 1028)]
-				protected internal abstract void EngineNextBytes(sbyte[] bytes) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Generates and stores random bytes in the given <c>byte[] </c> for each array element.</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineNextBytes
-				/// </java-name>
-				[Dot42.DexImport("engineNextBytes", "([B)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineNextBytes(byte[] bytes) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -6027,18 +5928,6 @@ namespace Java.Security
 				/// engineGenerateSeed
 				/// </java-name>
 				[Dot42.DexImport("engineGenerateSeed", "(I)[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineGenerateSeed(int numBytes) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Generates and returns the specified number of seed bytes, computed using the seed generation algorithm used by this <c>SecureRandomSpi </c> .</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the seed bytes </para>
-				/// </returns>
-				/// <java-name>
-				/// engineGenerateSeed
-				/// </java-name>
-				[Dot42.DexImport("engineGenerateSeed", "(I)[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineGenerateSeed(int numBytes) /* MethodBuilder.Create */ ;
 
 		}
@@ -6241,7 +6130,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SecurityPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SecurityPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6383,7 +6272,7 @@ namespace Java.Security
 				/// <java-name>
 				/// sign
 				/// </java-name>
-				[Dot42.DexImport("sign", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("sign", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaSign() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -6398,7 +6287,7 @@ namespace Java.Security
 				/// <java-name>
 				/// sign
 				/// </java-name>
-				[Dot42.DexImport("sign", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("sign", "()[B", AccessFlags = 17)]
 				public byte[] Sign() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -6413,7 +6302,7 @@ namespace Java.Security
 				/// <java-name>
 				/// sign
 				/// </java-name>
-				[Dot42.DexImport("sign", "([BII)I", AccessFlags = 17)]
+				[Dot42.DexImport("sign", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
 				public int Sign(sbyte[] outbuf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -6428,7 +6317,7 @@ namespace Java.Security
 				/// <java-name>
 				/// sign
 				/// </java-name>
-				[Dot42.DexImport("sign", "([BII)I", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("sign", "([BII)I", AccessFlags = 17)]
 				public int Sign(byte[] outbuf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -6443,7 +6332,7 @@ namespace Java.Security
 				/// <java-name>
 				/// verify
 				/// </java-name>
-				[Dot42.DexImport("verify", "([B)Z", AccessFlags = 17)]
+				[Dot42.DexImport("verify", "([B)Z", AccessFlags = 17, IgnoreFromJava = true)]
 				public bool Verify(sbyte[] signature) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -6458,7 +6347,7 @@ namespace Java.Security
 				/// <java-name>
 				/// verify
 				/// </java-name>
-				[Dot42.DexImport("verify", "([B)Z", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("verify", "([B)Z", AccessFlags = 17)]
 				public bool Verify(byte[] signature) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -6473,7 +6362,7 @@ namespace Java.Security
 				/// <java-name>
 				/// verify
 				/// </java-name>
-				[Dot42.DexImport("verify", "([BII)Z", AccessFlags = 17)]
+				[Dot42.DexImport("verify", "([BII)Z", AccessFlags = 17, IgnoreFromJava = true)]
 				public bool Verify(sbyte[] signature, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -6488,7 +6377,7 @@ namespace Java.Security
 				/// <java-name>
 				/// verify
 				/// </java-name>
-				[Dot42.DexImport("verify", "([BII)Z", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("verify", "([BII)Z", AccessFlags = 17)]
 				public bool Verify(byte[] signature, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -6500,7 +6389,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "(B)V", AccessFlags = 17)]
+				[Dot42.DexImport("update", "(B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Update(sbyte data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6511,7 +6400,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "(B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "(B)V", AccessFlags = 17)]
 				public void Update(byte data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6522,7 +6411,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Update(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6533,7 +6422,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 17)]
 				public void Update(byte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6544,7 +6433,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void Update(sbyte[] data, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6555,7 +6444,7 @@ namespace Java.Security
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 17)]
 				public void Update(byte[] data, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6633,7 +6522,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Signature() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Signature() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6781,15 +6670,6 @@ namespace Java.Security
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "(B)V", AccessFlags = 1028)]
-				protected internal abstract void EngineUpdate(sbyte input) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Updates the data to be verified or to be signed, using the specified  <c>ByteBuffer </c> .</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "(B)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineUpdate(byte input) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -6799,15 +6679,6 @@ namespace Java.Security
 				/// engineUpdate
 				/// </java-name>
 				[Dot42.DexImport("engineUpdate", "([BII)V", AccessFlags = 1028)]
-				protected internal abstract void EngineUpdate(sbyte[] b, int off, int len) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Updates the data to be verified or to be signed, using the given <c>byte[] </c> , starting form the specified index for the specified length.</para> <para></para>        
-				/// </summary>
-				/// <java-name>
-				/// engineUpdate
-				/// </java-name>
-				[Dot42.DexImport("engineUpdate", "([BII)V", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract void EngineUpdate(byte[] b, int off, int len) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -6831,18 +6702,6 @@ namespace Java.Security
 				/// engineSign
 				/// </java-name>
 				[Dot42.DexImport("engineSign", "()[B", AccessFlags = 1028)]
-				protected internal abstract sbyte[] JavaEngineSign() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Generates and returns the signature of all updated data. </para> <para>This <c>SignatureSpi </c> instance is reset to the state of its last initialization for signing and thus can be used for another signature from the same identity.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the signature of all updated data. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineSign
-				/// </java-name>
-				[Dot42.DexImport("engineSign", "()[B", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract byte[] EngineSign() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -6854,7 +6713,7 @@ namespace Java.Security
 				/// <java-name>
 				/// engineSign
 				/// </java-name>
-				[Dot42.DexImport("engineSign", "([BII)I", AccessFlags = 4)]
+				[Dot42.DexImport("engineSign", "([BII)I", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual int EngineSign(sbyte[] outbuf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -6869,7 +6728,7 @@ namespace Java.Security
 				/// <java-name>
 				/// engineSign
 				/// </java-name>
-				[Dot42.DexImport("engineSign", "([BII)I", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("engineSign", "([BII)I", AccessFlags = 4)]
 				protected internal virtual int EngineSign(byte[] outbuf, int offset, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -6885,18 +6744,6 @@ namespace Java.Security
 				/// engineVerify
 				/// </java-name>
 				[Dot42.DexImport("engineVerify", "([B)Z", AccessFlags = 1028)]
-				protected internal abstract bool EngineVerify(sbyte[] sigBytes) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Indicates whether the given <c>sigBytes </c> can be verified using the public key or a certificate of the signer. </para> <para>This <c>SignatureSpi </c> instance is reset to the state of its last initialization for verifying and thus can be used to verify another signature of the same signer.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para> <c>true </c> if the signature was verified, <c>false </c> otherwise. </para>
-				/// </returns>
-				/// <java-name>
-				/// engineVerify
-				/// </java-name>
-				[Dot42.DexImport("engineVerify", "([B)Z", AccessFlags = 1028, IgnoreFromJava = true)]
 				protected internal abstract bool EngineVerify(byte[] sigBytes) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -6908,7 +6755,7 @@ namespace Java.Security
 				/// <java-name>
 				/// engineVerify
 				/// </java-name>
-				[Dot42.DexImport("engineVerify", "([BII)Z", AccessFlags = 4)]
+				[Dot42.DexImport("engineVerify", "([BII)Z", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual bool EngineVerify(sbyte[] sigBytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -6923,7 +6770,7 @@ namespace Java.Security
 				/// <java-name>
 				/// engineVerify
 				/// </java-name>
-				[Dot42.DexImport("engineVerify", "([BII)Z", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("engineVerify", "([BII)Z", AccessFlags = 4)]
 				protected internal virtual bool EngineVerify(byte[] sigBytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -7014,7 +6861,7 @@ namespace Java.Security
 				/// <java-name>
 				/// getSignature
 				/// </java-name>
-				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetSignature() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -7036,7 +6883,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SignedObject() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SignedObject() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7066,7 +6913,7 @@ namespace Java.Security
 				/// </java-name>
 				public byte[] Signature
 				{
-						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSignature", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -7240,7 +7087,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Timestamp() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Timestamp() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7379,7 +7226,7 @@ namespace Java.Security
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnresolvedPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UnresolvedPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

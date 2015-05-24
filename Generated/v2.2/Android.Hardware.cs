@@ -168,7 +168,7 @@ namespace Android.Hardware
 				/// <java-name>
 				/// addCallbackBuffer
 				/// </java-name>
-				[Dot42.DexImport("addCallbackBuffer", "([B)V", AccessFlags = 273)]
+				[Dot42.DexImport("addCallbackBuffer", "([B)V", AccessFlags = 273, IgnoreFromJava = true)]
 				public void AddCallbackBuffer(sbyte[] callbackBuffer) /* MethodBuilder.Create */ 
 				{
 				}
@@ -179,7 +179,7 @@ namespace Android.Hardware
 				/// <java-name>
 				/// addCallbackBuffer
 				/// </java-name>
-				[Dot42.DexImport("addCallbackBuffer", "([B)V", AccessFlags = 273, IgnoreFromJava = true)]
+				[Dot42.DexImport("addCallbackBuffer", "([B)V", AccessFlags = 273)]
 				public void AddCallbackBuffer(byte[] callbackBuffer) /* MethodBuilder.Create */ 
 				{
 				}
@@ -871,7 +871,7 @@ namespace Android.Hardware
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Parameters() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Parameters() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1534,7 +1534,7 @@ namespace Android.Hardware
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Size() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Size() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1599,7 +1599,7 @@ namespace Android.Hardware
 						/// onPictureTaken
 						/// </java-name>
 						[Dot42.DexImport("onPictureTaken", "([BLandroid/hardware/Camera;)V", AccessFlags = 1025)]
-						void OnPictureTaken(sbyte[] data, global::Android.Hardware.Camera camera) /* MethodBuilder.Create */ ;
+						void OnPictureTaken(byte[] data, global::Android.Hardware.Camera camera) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -1662,7 +1662,7 @@ namespace Android.Hardware
 						/// onPreviewFrame
 						/// </java-name>
 						[Dot42.DexImport("onPreviewFrame", "([BLandroid/hardware/Camera;)V", AccessFlags = 1025)]
-						void OnPreviewFrame(sbyte[] data, global::Android.Hardware.Camera camera) /* MethodBuilder.Create */ ;
+						void OnPreviewFrame(byte[] data, global::Android.Hardware.Camera camera) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -1687,7 +1687,7 @@ namespace Android.Hardware
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GeomagneticField() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GeomagneticField() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

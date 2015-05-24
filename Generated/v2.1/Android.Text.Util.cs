@@ -275,7 +275,7 @@ namespace Android.Text.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Rfc822Token() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Rfc822Token() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

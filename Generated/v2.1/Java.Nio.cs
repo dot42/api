@@ -307,7 +307,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("wrap", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 9)]
+				[Dot42.DexImport("wrap", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Java.Nio.ByteBuffer Wrap(sbyte[] array) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -322,7 +322,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("wrap", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("wrap", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 9)]
 				public static global::Java.Nio.ByteBuffer Wrap(byte[] array) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -337,7 +337,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("wrap", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 9)]
+				[Dot42.DexImport("wrap", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Java.Nio.ByteBuffer Wrap(sbyte[] array, int start, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -352,7 +352,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// wrap
 				/// </java-name>
-				[Dot42.DexImport("wrap", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("wrap", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 9)]
 				public static global::Java.Nio.ByteBuffer Wrap(byte[] array, int start, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -515,18 +515,6 @@ namespace Java.Nio
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "()B", AccessFlags = 1025)]
-				public abstract sbyte JavaGet() /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the byte at the current position and increases the position by 1.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the byte at the current position. </para>
-				/// </returns>
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "()B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract byte Get() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -538,7 +526,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 1)]
+				[Dot42.DexImport("get", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual global::Java.Nio.ByteBuffer Get(sbyte[] index) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -553,7 +541,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("get", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 1)]
 				public virtual global::Java.Nio.ByteBuffer Get(byte[] index) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -568,7 +556,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1)]
+				[Dot42.DexImport("get", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual global::Java.Nio.ByteBuffer Get(sbyte[] dst, int dstOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -583,7 +571,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// get
 				/// </java-name>
-				[Dot42.DexImport("get", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("get", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1)]
 				public virtual global::Java.Nio.ByteBuffer Get(byte[] dst, int dstOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -599,18 +587,6 @@ namespace Java.Nio
 				/// get
 				/// </java-name>
 				[Dot42.DexImport("get", "(I)B", AccessFlags = 1025)]
-				public abstract sbyte JavaGet(int index) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the byte at the specified index and does not change the position.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the byte at the specified index. </para>
-				/// </returns>
-				/// <java-name>
-				/// get
-				/// </java-name>
-				[Dot42.DexImport("get", "(I)B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract byte Get(int index) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -812,18 +788,6 @@ namespace Java.Nio
 				/// put
 				/// </java-name>
 				[Dot42.DexImport("put", "(B)Ljava/nio/ByteBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ByteBuffer Put(sbyte src) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Writes all the remaining bytes of the <c>src </c> byte buffer to this buffer's current position, and increases both buffers' position by the number of bytes copied.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para> <c>this </c> </para>
-				/// </returns>
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(B)Ljava/nio/ByteBuffer;", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract global::Java.Nio.ByteBuffer Put(byte src) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -835,7 +799,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// put
 				/// </java-name>
-				[Dot42.DexImport("put", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 17)]
+				[Dot42.DexImport("put", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 17, IgnoreFromJava = true)]
 				public global::Java.Nio.ByteBuffer Put(sbyte[] src) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -850,7 +814,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// put
 				/// </java-name>
-				[Dot42.DexImport("put", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("put", "([B)Ljava/nio/ByteBuffer;", AccessFlags = 17)]
 				public global::Java.Nio.ByteBuffer Put(byte[] src) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -865,7 +829,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// put
 				/// </java-name>
-				[Dot42.DexImport("put", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1)]
+				[Dot42.DexImport("put", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual global::Java.Nio.ByteBuffer Put(sbyte[] src, int srcOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -880,7 +844,7 @@ namespace Java.Nio
 				/// <java-name>
 				/// put
 				/// </java-name>
-				[Dot42.DexImport("put", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("put", "([BII)Ljava/nio/ByteBuffer;", AccessFlags = 1)]
 				public virtual global::Java.Nio.ByteBuffer Put(byte[] src, int srcOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.ByteBuffer);
@@ -911,18 +875,6 @@ namespace Java.Nio
 				/// put
 				/// </java-name>
 				[Dot42.DexImport("put", "(IB)Ljava/nio/ByteBuffer;", AccessFlags = 1025)]
-				public abstract global::Java.Nio.ByteBuffer Put(int index, sbyte b) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Write a byte to the specified index of this buffer without changing the position.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para> <c>this </c> </para>
-				/// </returns>
-				/// <java-name>
-				/// put
-				/// </java-name>
-				[Dot42.DexImport("put", "(IB)Ljava/nio/ByteBuffer;", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract global::Java.Nio.ByteBuffer Put(int index, byte b) /* MethodBuilder.Create */ ;
 
 				/// <summary>

@@ -1006,7 +1006,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1021,7 +1021,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
 				public virtual byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1290,7 +1290,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// updateBlob
 				/// </java-name>
-				[Dot42.DexImport("updateBlob", "(I[B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("updateBlob", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool UpdateBlob(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -1299,7 +1299,7 @@ namespace Android.Test.Mock
 				/// <java-name>
 				/// updateBlob
 				/// </java-name>
-				[Dot42.DexImport("updateBlob", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("updateBlob", "(I[B)Z", AccessFlags = 1)]
 				public virtual bool UpdateBlob(int int32, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(bool);

@@ -810,7 +810,7 @@ namespace Java.Util.Regex
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PatternSyntaxException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PatternSyntaxException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

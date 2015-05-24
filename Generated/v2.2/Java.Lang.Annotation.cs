@@ -36,7 +36,7 @@ namespace Java.Lang.Annotation
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AnnotationFormatError() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AnnotationFormatError() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -91,7 +91,7 @@ namespace Java.Lang.Annotation
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AnnotationTypeMismatchException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AnnotationTypeMismatchException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -301,7 +301,7 @@ namespace Java.Lang.Annotation
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IncompleteAnnotationException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IncompleteAnnotationException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -14,7 +14,7 @@ namespace Org.Apache.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ConnectionClosedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ConnectionClosedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -151,7 +151,7 @@ namespace Org.Apache.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpHost() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpHost() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -226,7 +226,7 @@ namespace Org.Apache.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpVersion() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpVersion() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1477,7 +1477,7 @@ namespace Org.Apache.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MethodNotSupportedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MethodNotSupportedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1496,7 +1496,7 @@ namespace Org.Apache.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NoHttpResponseException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NoHttpResponseException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1654,7 +1654,7 @@ namespace Org.Apache.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProtocolVersion() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProtocolVersion() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

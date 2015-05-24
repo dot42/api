@@ -384,7 +384,7 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractHttpClient() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractHttpClient() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -790,7 +790,7 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ClientParamsStack() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ClientParamsStack() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1295,7 +1295,7 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DefaultRequestDirector() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DefaultRequestDirector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1380,7 +1380,7 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EntityEnclosingRequestWrapper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EntityEnclosingRequestWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1604,7 +1604,7 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RequestWrapper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RequestWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1791,7 +1791,7 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RoutedRequest() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RoutedRequest() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1828,7 +1828,7 @@ namespace Org.Apache.Http.Impl.Client
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TunnelRefusedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TunnelRefusedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

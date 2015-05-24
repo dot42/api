@@ -250,7 +250,7 @@ namespace Android.Transition
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Scene() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Scene() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -35,7 +35,7 @@ namespace Java.Lang.Ref
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PhantomReference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PhantomReference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -206,7 +206,7 @@ namespace Java.Lang.Ref
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SoftReference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SoftReference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -239,7 +239,7 @@ namespace Java.Lang.Ref
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal WeakReference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal WeakReference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

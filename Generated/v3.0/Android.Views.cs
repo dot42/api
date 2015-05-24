@@ -64,7 +64,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbsSavedState() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbsSavedState() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -843,7 +843,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5054,7 +5054,7 @@ namespace Android.Views
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal UnavailableException() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal UnavailableException() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -7239,7 +7239,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7968,7 +7968,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LayoutInflater() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LayoutInflater() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8129,7 +8129,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MenuInflater() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MenuInflater() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9364,7 +9364,7 @@ namespace Android.Views
 				public abstract void OnOrientationChanged(int orientation) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal OrientationEventListener() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal OrientationEventListener() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9467,7 +9467,7 @@ namespace Android.Views
 				public abstract void OnOrientationChanged(int orientation) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal OrientationListener() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal OrientationListener() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9508,7 +9508,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScaleGestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ScaleGestureDetector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10315,7 +10315,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10411,7 +10411,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TouchDelegate() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TouchDelegate() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13329,7 +13329,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal View() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal View() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -15202,7 +15202,7 @@ namespace Android.Views
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal BaseSavedState() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal BaseSavedState() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -17703,7 +17703,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ViewGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ViewGroup() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18042,7 +18042,7 @@ namespace Android.Views
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal MarginLayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal MarginLayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -18133,7 +18133,7 @@ namespace Android.Views
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -18267,7 +18267,7 @@ namespace Android.Views
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ViewStub() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ViewStub() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -19272,7 +19272,7 @@ namespace Android.Views
 				public abstract bool IsShortcutKey(int keyCode, global::Android.Views.KeyEvent @event) /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Window() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Window() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

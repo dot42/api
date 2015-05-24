@@ -367,7 +367,7 @@ namespace Android.Views.Textservice
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SpellCheckerSubtype() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SpellCheckerSubtype() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -531,7 +531,7 @@ namespace Android.Views.Textservice
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SuggestionsInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SuggestionsInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -657,7 +657,7 @@ namespace Android.Views.Textservice
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

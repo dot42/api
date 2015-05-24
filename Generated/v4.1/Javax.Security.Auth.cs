@@ -31,7 +31,7 @@ namespace Javax.Security.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AuthPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AuthPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -135,7 +135,7 @@ namespace Javax.Security.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrivateCredentialPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrivateCredentialPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -473,7 +473,7 @@ namespace Javax.Security.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SubjectDomainCombiner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SubjectDomainCombiner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

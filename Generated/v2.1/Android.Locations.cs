@@ -105,7 +105,7 @@ namespace Android.Locations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Address() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Address() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -646,7 +646,7 @@ namespace Android.Locations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Geocoder() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Geocoder() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1185,7 +1185,7 @@ namespace Android.Locations
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Location() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Location() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -28,7 +28,7 @@ namespace Android.Graphics.Drawables.Shapes
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ArcShape() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ArcShape() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -106,7 +106,7 @@ namespace Android.Graphics.Drawables.Shapes
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PathShape() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PathShape() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -213,7 +213,7 @@ namespace Android.Graphics.Drawables.Shapes
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RoundRectShape() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RoundRectShape() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

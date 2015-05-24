@@ -191,7 +191,7 @@ namespace Android.InputMethodServices
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AbstractInputMethodSessionImpl() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AbstractInputMethodSessionImpl() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -317,7 +317,7 @@ namespace Android.InputMethodServices
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AbstractInputMethodImpl() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AbstractInputMethodImpl() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -455,7 +455,7 @@ namespace Android.InputMethodServices
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExtractEditText() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ExtractEditText() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1590,7 +1590,7 @@ namespace Android.InputMethodServices
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal InputMethodSessionImpl() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal InputMethodSessionImpl() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1698,7 +1698,7 @@ namespace Android.InputMethodServices
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal InputMethodImpl() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal InputMethodImpl() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1855,7 +1855,7 @@ namespace Android.InputMethodServices
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Keyboard() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Keyboard() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2181,7 +2181,7 @@ namespace Android.InputMethodServices
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Key() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Key() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2272,7 +2272,7 @@ namespace Android.InputMethodServices
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Row() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Row() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2495,7 +2495,7 @@ namespace Android.InputMethodServices
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal KeyboardView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal KeyboardView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -245,7 +245,7 @@ namespace Org.Apache.Http.Impl.Cookie
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicClientCookie() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicClientCookie() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -405,7 +405,7 @@ namespace Org.Apache.Http.Impl.Cookie
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicClientCookie2() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicClientCookie2() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -603,7 +603,7 @@ namespace Org.Apache.Http.Impl.Cookie
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicExpiresHandler() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicExpiresHandler() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

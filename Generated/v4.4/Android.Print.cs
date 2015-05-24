@@ -86,7 +86,7 @@ namespace Android.Print
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PageRange() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PageRange() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -413,7 +413,7 @@ namespace Android.Print
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Margins() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Margins() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -522,7 +522,7 @@ namespace Android.Print
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Resolution() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Resolution() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1340,7 +1340,7 @@ namespace Android.Print
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal MediaSize() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal MediaSize() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1822,7 +1822,7 @@ namespace Android.Print
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2072,7 +2072,7 @@ namespace Android.Print
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2438,7 +2438,7 @@ namespace Android.Print
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3003,7 +3003,7 @@ namespace Android.Print
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

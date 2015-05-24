@@ -142,7 +142,7 @@ namespace Org.W3c.Dom
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DOMException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DOMException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

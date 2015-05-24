@@ -1017,7 +1017,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LogPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LogPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1144,7 +1144,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MonthDisplayHelper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MonthDisplayHelper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1296,7 +1296,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Pair() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Pair() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1332,7 +1332,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrintStreamPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrintStreamPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1368,7 +1368,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrintWriterPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrintWriterPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1975,7 +1975,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringBuilderPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StringBuilderPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2114,7 +2114,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TimingLogger() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TimingLogger() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

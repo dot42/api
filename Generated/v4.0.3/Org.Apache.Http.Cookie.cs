@@ -53,7 +53,7 @@ namespace Org.Apache.Http.Cookie
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CookieOrigin() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CookieOrigin() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -68,7 +68,7 @@ namespace Dalvik.System
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BaseDexClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BaseDexClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -87,7 +87,7 @@ namespace Dalvik.System
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DexClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DexClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -161,7 +161,7 @@ namespace Dalvik.System
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DexFile() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DexFile() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -194,7 +194,7 @@ namespace Dalvik.System
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PathClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PathClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

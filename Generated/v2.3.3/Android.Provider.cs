@@ -2537,7 +2537,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// setPhotoData
 						/// </java-name>
-						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9)]
+						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
 						public static void SetPhotoData(global::Android.Content.ContentResolver cr, global::Android.Net.Uri person, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -2548,7 +2548,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// setPhotoData
 						/// </java-name>
-						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
+						[Dot42.DexImport("setPhotoData", "(Landroid/content/ContentResolver;Landroid/net/Uri;[B)V", AccessFlags = 9)]
 						public static void SetPhotoData(global::Android.Content.ContentResolver cr, global::Android.Net.Uri person, byte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -7148,7 +7148,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// get
 						/// </java-name>
-						[Dot42.DexImport("get", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;)[B", AccessFlags = 9)]
+						[Dot42.DexImport("get", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;)[B", AccessFlags = 9, IgnoreFromJava = true)]
 						public static sbyte[] JavaGet(global::Android.Content.ContentProviderClient provider, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
@@ -7160,7 +7160,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// get
 						/// </java-name>
-						[Dot42.DexImport("get", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+						[Dot42.DexImport("get", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;)[B", AccessFlags = 9)]
 						public static byte[] Get(global::Android.Content.ContentProviderClient provider, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
 						{
 								return default(byte[]);
@@ -7186,7 +7186,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// set
 						/// </java-name>
-						[Dot42.DexImport("set", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;[B)V", AccessFlags = 9)]
+						[Dot42.DexImport("set", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
 						public static void Set(global::Android.Content.ContentProviderClient provider, global::Android.Accounts.Account account, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -7197,7 +7197,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// set
 						/// </java-name>
-						[Dot42.DexImport("set", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
+						[Dot42.DexImport("set", "(Landroid/content/ContentProviderClient;Landroid/accounts/Account;[B)V", AccessFlags = 9)]
 						public static void Set(global::Android.Content.ContentProviderClient provider, global::Android.Accounts.Account account, byte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -7208,7 +7208,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// newSetOperation
 						/// </java-name>
-						[Dot42.DexImport("newSetOperation", "(Landroid/accounts/Account;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9)]
+						[Dot42.DexImport("newSetOperation", "(Landroid/accounts/Account;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9, IgnoreFromJava = true)]
 						public static global::Android.Content.ContentProviderOperation NewSetOperation(global::Android.Accounts.Account account, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Content.ContentProviderOperation);
@@ -7220,7 +7220,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// newSetOperation
 						/// </java-name>
-						[Dot42.DexImport("newSetOperation", "(Landroid/accounts/Account;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9, IgnoreFromJava = true)]
+						[Dot42.DexImport("newSetOperation", "(Landroid/accounts/Account;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9)]
 						public static global::Android.Content.ContentProviderOperation NewSetOperation(global::Android.Accounts.Account account, byte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Content.ContentProviderOperation);
@@ -9666,7 +9666,7 @@ namespace Android.Provider
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SearchRecentSuggestions() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SearchRecentSuggestions() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11739,7 +11739,7 @@ namespace Android.Provider
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal SettingNotFoundException() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal SettingNotFoundException() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11784,7 +11784,7 @@ namespace Android.Provider
 						/// get
 						/// </java-name>
 						[Dot42.DexImport("get", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/accounts/Accoun" +
-    "t;)[B", AccessFlags = 9)]
+    "t;)[B", AccessFlags = 9, IgnoreFromJava = true)]
 						public static sbyte[] JavaGet(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
@@ -11800,7 +11800,7 @@ namespace Android.Provider
 						/// get
 						/// </java-name>
 						[Dot42.DexImport("get", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/accounts/Accoun" +
-    "t;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+    "t;)[B", AccessFlags = 9)]
 						public static byte[] Get(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, global::Android.Accounts.Account account) /* MethodBuilder.Create */ 
 						{
 								return default(byte[]);
@@ -11813,7 +11813,7 @@ namespace Android.Provider
 						/// set
 						/// </java-name>
 						[Dot42.DexImport("set", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/accounts/Accoun" +
-    "t;[B)V", AccessFlags = 9)]
+    "t;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
 						public static void Set(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, global::Android.Accounts.Account account, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -11825,7 +11825,7 @@ namespace Android.Provider
 						/// set
 						/// </java-name>
 						[Dot42.DexImport("set", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/accounts/Accoun" +
-    "t;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
+    "t;[B)V", AccessFlags = 9)]
 						public static void Set(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, global::Android.Accounts.Account account, byte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -11834,7 +11834,7 @@ namespace Android.Provider
 						/// insert
 						/// </java-name>
 						[Dot42.DexImport("insert", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/accounts/Accoun" +
-    "t;[B)Landroid/net/Uri;", AccessFlags = 9)]
+    "t;[B)Landroid/net/Uri;", AccessFlags = 9, IgnoreFromJava = true)]
 						public static global::Android.Net.Uri Insert(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, global::Android.Accounts.Account account, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Net.Uri);
@@ -11844,7 +11844,7 @@ namespace Android.Provider
 						/// insert
 						/// </java-name>
 						[Dot42.DexImport("insert", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/accounts/Accoun" +
-    "t;[B)Landroid/net/Uri;", AccessFlags = 9, IgnoreFromJava = true)]
+    "t;[B)Landroid/net/Uri;", AccessFlags = 9)]
 						public static global::Android.Net.Uri Insert(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, global::Android.Accounts.Account account, byte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Net.Uri);
@@ -11853,7 +11853,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// update
 						/// </java-name>
-						[Dot42.DexImport("update", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;[B)V", AccessFlags = 9)]
+						[Dot42.DexImport("update", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
 						public static void Update(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -11861,7 +11861,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// update
 						/// </java-name>
-						[Dot42.DexImport("update", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;[B)V", AccessFlags = 9, IgnoreFromJava = true)]
+						[Dot42.DexImport("update", "(Landroid/content/ContentProviderClient;Landroid/net/Uri;[B)V", AccessFlags = 9)]
 						public static void Update(global::Android.Content.ContentProviderClient provider, global::Android.Net.Uri uri, byte[] data) /* MethodBuilder.Create */ 
 						{
 						}
@@ -11887,7 +11887,7 @@ namespace Android.Provider
 						/// newSetOperation
 						/// </java-name>
 						[Dot42.DexImport("newSetOperation", "(Landroid/net/Uri;Landroid/accounts/Account;[B)Landroid/content/ContentProviderOp" +
-    "eration;", AccessFlags = 9)]
+    "eration;", AccessFlags = 9, IgnoreFromJava = true)]
 						public static global::Android.Content.ContentProviderOperation NewSetOperation(global::Android.Net.Uri uri, global::Android.Accounts.Account account, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Content.ContentProviderOperation);
@@ -11903,7 +11903,7 @@ namespace Android.Provider
 						/// newSetOperation
 						/// </java-name>
 						[Dot42.DexImport("newSetOperation", "(Landroid/net/Uri;Landroid/accounts/Account;[B)Landroid/content/ContentProviderOp" +
-    "eration;", AccessFlags = 9, IgnoreFromJava = true)]
+    "eration;", AccessFlags = 9)]
 						public static global::Android.Content.ContentProviderOperation NewSetOperation(global::Android.Net.Uri uri, global::Android.Accounts.Account account, byte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Content.ContentProviderOperation);
@@ -11918,7 +11918,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// newUpdateOperation
 						/// </java-name>
-						[Dot42.DexImport("newUpdateOperation", "(Landroid/net/Uri;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9)]
+						[Dot42.DexImport("newUpdateOperation", "(Landroid/net/Uri;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9, IgnoreFromJava = true)]
 						public static global::Android.Content.ContentProviderOperation NewUpdateOperation(global::Android.Net.Uri uri, sbyte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Content.ContentProviderOperation);
@@ -11933,7 +11933,7 @@ namespace Android.Provider
 						/// <java-name>
 						/// newUpdateOperation
 						/// </java-name>
-						[Dot42.DexImport("newUpdateOperation", "(Landroid/net/Uri;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9, IgnoreFromJava = true)]
+						[Dot42.DexImport("newUpdateOperation", "(Landroid/net/Uri;[B)Landroid/content/ContentProviderOperation;", AccessFlags = 9)]
 						public static global::Android.Content.ContentProviderOperation NewUpdateOperation(global::Android.Net.Uri uri, byte[] data) /* MethodBuilder.Create */ 
 						{
 								return default(global::Android.Content.ContentProviderOperation);

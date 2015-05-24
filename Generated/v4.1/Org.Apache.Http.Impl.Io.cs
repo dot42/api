@@ -45,7 +45,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractMessageParser() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractMessageParser() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -94,7 +94,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractMessageWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractMessageWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -141,7 +141,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -150,7 +150,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public virtual int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -159,7 +159,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -168,7 +168,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public virtual int Read(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -257,7 +257,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -265,7 +265,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public virtual void Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -273,7 +273,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -281,7 +281,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public virtual void Write(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -345,7 +345,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -354,7 +354,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -363,7 +363,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -372,7 +372,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -387,7 +387,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ChunkedInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ChunkedInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -430,7 +430,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// flushCacheWithAppend
 				/// </java-name>
-				[Dot42.DexImport("flushCacheWithAppend", "([BII)V", AccessFlags = 4)]
+				[Dot42.DexImport("flushCacheWithAppend", "([BII)V", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual void FlushCacheWithAppend(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -438,7 +438,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// flushCacheWithAppend
 				/// </java-name>
-				[Dot42.DexImport("flushCacheWithAppend", "([BII)V", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("flushCacheWithAppend", "([BII)V", AccessFlags = 4)]
 				protected internal virtual void FlushCacheWithAppend(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -470,7 +470,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -478,7 +478,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public override void Write(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -486,7 +486,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -494,7 +494,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -516,7 +516,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ChunkedOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ChunkedOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -554,7 +554,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -563,7 +563,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -572,7 +572,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -581,7 +581,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -597,7 +597,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ContentLengthInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ContentLengthInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -634,7 +634,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -642,7 +642,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -650,7 +650,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -658,7 +658,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public override void Write(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -672,7 +672,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ContentLengthOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ContentLengthOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -701,7 +701,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpRequestParser() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpRequestParser() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -729,7 +729,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpRequestWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpRequestWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -758,7 +758,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpResponseParser() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpResponseParser() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -786,7 +786,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpResponseWriter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpResponseWriter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -880,7 +880,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -889,14 +889,14 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IdentityInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IdentityInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -933,7 +933,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -941,7 +941,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -949,7 +949,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -957,7 +957,7 @@ namespace Org.Apache.Http.Impl.Io
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public override void Write(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -971,7 +971,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IdentityOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IdentityOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -999,7 +999,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SocketInputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SocketInputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1018,7 +1018,7 @@ namespace Org.Apache.Http.Impl.Io
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SocketOutputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SocketOutputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

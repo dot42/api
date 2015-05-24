@@ -274,7 +274,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Charset() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Charset() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -583,7 +583,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CharsetDecoder() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CharsetDecoder() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -640,7 +640,7 @@ namespace Java.Nio.Charset
 				/// <summary>
 				///  <para>Constructs a new  <code>CharsetEncoder</code> using the given  <code>Charset</code>, replacement byte array, average number and maximum number of bytes created by this encoder for one input character.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/nio/charset/Charset;FF[B)V", AccessFlags = 4)]
+				[Dot42.DexImport("<init>", "(Ljava/nio/charset/Charset;FF[B)V", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal CharsetEncoder(global::Java.Nio.Charset.Charset cs, float averageBytesPerChar, float maxBytesPerChar, sbyte[] replacement) /* MethodBuilder.Create */ 
 				{
 				}
@@ -648,7 +648,7 @@ namespace Java.Nio.Charset
 				/// <summary>
 				///  <para>Constructs a new  <code>CharsetEncoder</code> using the given  <code>Charset</code>, replacement byte array, average number and maximum number of bytes created by this encoder for one input character.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/nio/charset/Charset;FF[B)V", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/nio/charset/Charset;FF[B)V", AccessFlags = 4)]
 				protected internal CharsetEncoder(global::Java.Nio.Charset.Charset cs, float averageBytesPerChar, float maxBytesPerChar, byte[] replacement) /* MethodBuilder.Create */ 
 				{
 				}
@@ -795,7 +795,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// implReplaceWith
 				/// </java-name>
-				[Dot42.DexImport("implReplaceWith", "([B)V", AccessFlags = 4)]
+				[Dot42.DexImport("implReplaceWith", "([B)V", AccessFlags = 4, IgnoreFromJava = true)]
 				protected internal virtual void ImplReplaceWith(sbyte[] newReplacement) /* MethodBuilder.Create */ 
 				{
 				}
@@ -806,7 +806,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// implReplaceWith
 				/// </java-name>
-				[Dot42.DexImport("implReplaceWith", "([B)V", AccessFlags = 4, IgnoreFromJava = true)]
+				[Dot42.DexImport("implReplaceWith", "([B)V", AccessFlags = 4)]
 				protected internal virtual void ImplReplaceWith(byte[] newReplacement) /* MethodBuilder.Create */ 
 				{
 				}
@@ -828,7 +828,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// isLegalReplacement
 				/// </java-name>
-				[Dot42.DexImport("isLegalReplacement", "([B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("isLegalReplacement", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool IsLegalReplacement(sbyte[] replacement) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -840,7 +840,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// isLegalReplacement
 				/// </java-name>
-				[Dot42.DexImport("isLegalReplacement", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("isLegalReplacement", "([B)Z", AccessFlags = 1)]
 				public virtual bool IsLegalReplacement(byte[] replacement) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -906,7 +906,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// replacement
 				/// </java-name>
-				[Dot42.DexImport("replacement", "()[B", AccessFlags = 17)]
+				[Dot42.DexImport("replacement", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
 				public sbyte[] JavaReplacement() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -918,7 +918,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// replacement
 				/// </java-name>
-				[Dot42.DexImport("replacement", "()[B", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("replacement", "()[B", AccessFlags = 17)]
 				public byte[] Replacement() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -933,7 +933,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// replaceWith
 				/// </java-name>
-				[Dot42.DexImport("replaceWith", "([B)Ljava/nio/charset/CharsetEncoder;", AccessFlags = 17)]
+				[Dot42.DexImport("replaceWith", "([B)Ljava/nio/charset/CharsetEncoder;", AccessFlags = 17, IgnoreFromJava = true)]
 				public global::Java.Nio.Charset.CharsetEncoder ReplaceWith(sbyte[] replacement) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.Charset.CharsetEncoder);
@@ -948,7 +948,7 @@ namespace Java.Nio.Charset
 				/// <java-name>
 				/// replaceWith
 				/// </java-name>
-				[Dot42.DexImport("replaceWith", "([B)Ljava/nio/charset/CharsetEncoder;", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("replaceWith", "([B)Ljava/nio/charset/CharsetEncoder;", AccessFlags = 17)]
 				public global::Java.Nio.Charset.CharsetEncoder ReplaceWith(byte[] replacement) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Nio.Charset.CharsetEncoder);
@@ -979,7 +979,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CharsetEncoder() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CharsetEncoder() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1004,7 +1004,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CoderMalfunctionError() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CoderMalfunctionError() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1246,7 +1246,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IllegalCharsetNameException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IllegalCharsetNameException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1292,7 +1292,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MalformedInputException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MalformedInputException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1341,7 +1341,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnmappableCharacterException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UnmappableCharacterException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1378,7 +1378,7 @@ namespace Java.Nio.Charset
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnsupportedCharsetException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UnsupportedCharsetException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

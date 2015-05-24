@@ -268,7 +268,7 @@ namespace Android.Views.Inputmethod
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BaseInputConnection() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BaseInputConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -356,7 +356,7 @@ namespace Android.Views.Inputmethod
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CompletionInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CompletionInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1490,7 +1490,7 @@ namespace Android.Views.Inputmethod
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InputBinding() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InputBinding() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1839,7 +1839,7 @@ namespace Android.Views.Inputmethod
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InputConnectionWrapper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InputConnectionWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1963,7 +1963,7 @@ namespace Android.Views.Inputmethod
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InputMethodInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InputMethodInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

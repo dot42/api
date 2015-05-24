@@ -254,7 +254,7 @@ namespace Android.Telephony.Gsm
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 17)]
+    "endingIntent;)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, sbyte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
@@ -266,7 +266,7 @@ namespace Android.Telephony.Gsm
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 17, IgnoreFromJava = true)]
+    "endingIntent;)V", AccessFlags = 17)]
 				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, byte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
@@ -368,7 +368,7 @@ namespace Android.Telephony.Gsm
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
-				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/gsm/SmsMessage;", AccessFlags = 9)]
+				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/gsm/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Telephony.Gsm.SmsMessage CreateFromPdu(sbyte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.Gsm.SmsMessage);
@@ -380,7 +380,7 @@ namespace Android.Telephony.Gsm
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
-				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/gsm/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/gsm/SmsMessage;", AccessFlags = 9)]
 				public static global::Android.Telephony.Gsm.SmsMessage CreateFromPdu(byte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.Gsm.SmsMessage);
@@ -436,7 +436,7 @@ namespace Android.Telephony.Gsm
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/gsm/SmsMessage$Submi" +
-    "tPdu;", AccessFlags = 9)]
+    "tPdu;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Telephony.Gsm.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, sbyte[] sByte, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.Gsm.SmsMessage.SubmitPdu);
@@ -446,7 +446,7 @@ namespace Android.Telephony.Gsm
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/gsm/SmsMessage$Submi" +
-    "tPdu;", AccessFlags = 9, IgnoreFromJava = true)]
+    "tPdu;", AccessFlags = 9)]
 				public static global::Android.Telephony.Gsm.SmsMessage.SubmitPdu GetSubmitPdu(string @string, string string1, short int16, byte[] @byte, bool boolean) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.Gsm.SmsMessage.SubmitPdu);
@@ -470,7 +470,7 @@ namespace Android.Telephony.Gsm
 				/// <java-name>
 				/// getUserData
 				/// </java-name>
-				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetUserData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -485,7 +485,7 @@ namespace Android.Telephony.Gsm
 				/// <java-name>
 				/// getPdu
 				/// </java-name>
-				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetPdu() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -706,7 +706,7 @@ namespace Android.Telephony.Gsm
 				/// </java-name>
 				public virtual byte[] UserData
 				{
-						[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -721,7 +721,7 @@ namespace Android.Telephony.Gsm
 				/// </java-name>
 				public virtual byte[] Pdu
 				{
-						[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

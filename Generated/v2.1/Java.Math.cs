@@ -651,7 +651,7 @@ namespace Java.Math
 				/// <java-name>
 				/// byteValueExact
 				/// </java-name>
-				[Dot42.DexImport("byteValueExact", "()B", AccessFlags = 1)]
+				[Dot42.DexImport("byteValueExact", "()B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte JavaByteValueExact() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -660,7 +660,7 @@ namespace Java.Math
 				/// <java-name>
 				/// byteValueExact
 				/// </java-name>
-				[Dot42.DexImport("byteValueExact", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("byteValueExact", "()B", AccessFlags = 1)]
 				public virtual byte ByteValueExact() /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -694,7 +694,7 @@ namespace Java.Math
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BigDecimal() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BigDecimal() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -767,7 +767,7 @@ namespace Java.Math
 				/// <summary>
 				///  <para>Constructs a random non-negative <c>BigInteger </c> instance in the range  <c>[0, pow(2, numBits)-1] </c> .</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public BigInteger(int numBits, sbyte[] random) /* MethodBuilder.Create */ 
 				{
 				}
@@ -775,17 +775,17 @@ namespace Java.Math
 				/// <summary>
 				///  <para>Constructs a random non-negative <c>BigInteger </c> instance in the range  <c>[0, pow(2, numBits)-1] </c> .</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(I[B)V", AccessFlags = 1)]
 				public BigInteger(int numBits, byte[] random) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public BigInteger(sbyte[] bigInt) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public BigInteger(byte[] bigInt) /* MethodBuilder.Create */ 
 				{
 				}
@@ -808,7 +808,7 @@ namespace Java.Math
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -820,7 +820,7 @@ namespace Java.Math
 				/// <java-name>
 				/// toByteArray
 				/// </java-name>
-				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("toByteArray", "()[B", AccessFlags = 1)]
 				public virtual byte[] ToByteArray() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1340,7 +1340,7 @@ namespace Java.Math
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BigInteger() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BigInteger() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1470,7 +1470,7 @@ namespace Java.Math
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MathContext() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MathContext() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

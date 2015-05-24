@@ -20,7 +20,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AvoidXfermode() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AvoidXfermode() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -267,7 +267,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getNinePatchChunk
 				/// </java-name>
-				[Dot42.DexImport("getNinePatchChunk", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getNinePatchChunk", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetNinePatchChunk() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -584,7 +584,7 @@ namespace Android.Graphics
 				/// </java-name>
 				public byte[] NinePatchChunk
 				{
-						[Dot42.DexImport("getNinePatchChunk", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getNinePatchChunk", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -892,7 +892,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// decodeByteArray
 				/// </java-name>
-				[Dot42.DexImport("decodeByteArray", "([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
+				[Dot42.DexImport("decodeByteArray", "([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Graphics.Bitmap DecodeByteArray(sbyte[] data, int offset, int length, global::Android.Graphics.BitmapFactory.Options opts) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
@@ -907,7 +907,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// decodeByteArray
 				/// </java-name>
-				[Dot42.DexImport("decodeByteArray", "([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("decodeByteArray", "([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;", AccessFlags = 9)]
 				public static global::Android.Graphics.Bitmap DecodeByteArray(byte[] data, int offset, int length, global::Android.Graphics.BitmapFactory.Options opts) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
@@ -922,7 +922,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// decodeByteArray
 				/// </java-name>
-				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Bitmap;", AccessFlags = 9)]
+				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Bitmap;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Graphics.Bitmap DecodeByteArray(sbyte[] data, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
@@ -937,7 +937,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// decodeByteArray
 				/// </java-name>
-				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Bitmap;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Bitmap;", AccessFlags = 9)]
 				public static global::Android.Graphics.Bitmap DecodeByteArray(byte[] data, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Bitmap);
@@ -1200,7 +1200,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// newInstance
 				/// </java-name>
-				[Dot42.DexImport("newInstance", "([BIIZ)Landroid/graphics/BitmapRegionDecoder;", AccessFlags = 9)]
+				[Dot42.DexImport("newInstance", "([BIIZ)Landroid/graphics/BitmapRegionDecoder;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Graphics.BitmapRegionDecoder NewInstance(sbyte[] data, int offset, int length, bool isShareable) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.BitmapRegionDecoder);
@@ -1215,7 +1215,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// newInstance
 				/// </java-name>
-				[Dot42.DexImport("newInstance", "([BIIZ)Landroid/graphics/BitmapRegionDecoder;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("newInstance", "([BIIZ)Landroid/graphics/BitmapRegionDecoder;", AccessFlags = 9)]
 				public static global::Android.Graphics.BitmapRegionDecoder NewInstance(byte[] data, int offset, int length, bool isShareable) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.BitmapRegionDecoder);
@@ -1342,7 +1342,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BitmapShader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BitmapShader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1370,7 +1370,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BlurMaskFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BlurMaskFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3158,7 +3158,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ColorMatrixColorFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ColorMatrixColorFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3180,7 +3180,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ComposePathEffect() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ComposePathEffect() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3214,7 +3214,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ComposeShader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ComposeShader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3236,7 +3236,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CornerPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CornerPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3258,7 +3258,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DashPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DashPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3280,7 +3280,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DiscretePathEffect() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DiscretePathEffect() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3328,7 +3328,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EmbossMaskFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EmbossMaskFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3527,7 +3527,7 @@ namespace Android.Graphics
 				extern ~Interpolator() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Interpolator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Interpolator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3646,7 +3646,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LightingColorFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LightingColorFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3670,7 +3670,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LinearGradient() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LinearGradient() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4457,7 +4457,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// decodeByteArray
 				/// </java-name>
-				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Movie;", AccessFlags = 265)]
+				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Movie;", AccessFlags = 265, IgnoreFromJava = true)]
 				public static global::Android.Graphics.Movie DecodeByteArray(sbyte[] data, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Movie);
@@ -4466,7 +4466,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// decodeByteArray
 				/// </java-name>
-				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Movie;", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("decodeByteArray", "([BII)Landroid/graphics/Movie;", AccessFlags = 265)]
 				public static global::Android.Graphics.Movie DecodeByteArray(byte[] data, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Graphics.Movie);
@@ -4511,7 +4511,7 @@ namespace Android.Graphics
 				/// <summary>
 				///  <para>Create a drawable projection from a bitmap to nine patches.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLjava/lang/String;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public NinePatch(global::Android.Graphics.Bitmap bitmap, sbyte[] chunk, string srcName) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4519,7 +4519,7 @@ namespace Android.Graphics
 				/// <summary>
 				///  <para>Create a drawable projection from a bitmap to nine patches.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Landroid/graphics/Bitmap;[BLjava/lang/String;)V", AccessFlags = 1)]
 				public NinePatch(global::Android.Graphics.Bitmap bitmap, byte[] chunk, string srcName) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4592,7 +4592,7 @@ namespace Android.Graphics
 				/// <java-name>
 				/// isNinePatchChunk
 				/// </java-name>
-				[Dot42.DexImport("isNinePatchChunk", "([B)Z", AccessFlags = 265)]
+				[Dot42.DexImport("isNinePatchChunk", "([B)Z", AccessFlags = 265, IgnoreFromJava = true)]
 				public static bool IsNinePatchChunk(sbyte[] chunk) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -4607,14 +4607,14 @@ namespace Android.Graphics
 				/// <java-name>
 				/// isNinePatchChunk
 				/// </java-name>
-				[Dot42.DexImport("isNinePatchChunk", "([B)Z", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("isNinePatchChunk", "([B)Z", AccessFlags = 265)]
 				public static bool IsNinePatchChunk(byte[] chunk) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NinePatch() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NinePatch() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6020,7 +6020,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PaintFlagsDrawFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PaintFlagsDrawFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6591,7 +6591,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PathDashPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PathDashPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7076,7 +7076,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PixelXorXfermode() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PixelXorXfermode() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7531,7 +7531,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PorterDuffColorFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PorterDuffColorFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7553,7 +7553,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PorterDuffXfermode() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PorterDuffXfermode() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7577,7 +7577,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RadialGradient() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RadialGradient() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9059,7 +9059,7 @@ namespace Android.Graphics
 				extern ~RegionIterator() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RegionIterator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RegionIterator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9176,7 +9176,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SumPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SumPathEffect() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9284,7 +9284,7 @@ namespace Android.Graphics
 				extern ~SurfaceTexture() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SurfaceTexture() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SurfaceTexture() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9360,7 +9360,7 @@ namespace Android.Graphics
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SweepGradient() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SweepGradient() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9630,7 +9630,7 @@ namespace Android.Graphics
 				/// <summary>
 				///  <para>Construct an YuvImage.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIII[I)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BIII[I)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public YuvImage(sbyte[] yuv, int format, int width, int height, int[] strides) /* MethodBuilder.Create */ 
 				{
 				}
@@ -9638,7 +9638,7 @@ namespace Android.Graphics
 				/// <summary>
 				///  <para>Construct an YuvImage.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIII[I)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BIII[I)V", AccessFlags = 1)]
 				public YuvImage(byte[] yuv, int format, int width, int height, int[] strides) /* MethodBuilder.Create */ 
 				{
 				}
@@ -9667,14 +9667,14 @@ namespace Android.Graphics
 				/// <java-name>
 				/// getYuvData
 				/// </java-name>
-				[Dot42.DexImport("getYuvData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getYuvData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetYuvData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal YuvImage() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal YuvImage() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9689,7 +9689,7 @@ namespace Android.Graphics
 				/// </java-name>
 				public virtual byte[] YuvData
 				{
-						[Dot42.DexImport("getYuvData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getYuvData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

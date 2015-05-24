@@ -51,7 +51,7 @@ namespace Org.Apache.Http.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicEofSensorWatcher() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicEofSensorWatcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -147,7 +147,7 @@ namespace Org.Apache.Http.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicManagedEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicManagedEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -238,7 +238,7 @@ namespace Org.Apache.Http.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -247,7 +247,7 @@ namespace Org.Apache.Http.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -256,7 +256,7 @@ namespace Org.Apache.Http.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -265,7 +265,7 @@ namespace Org.Apache.Http.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public override int Read(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -329,7 +329,7 @@ namespace Org.Apache.Http.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EofSensorInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EofSensorInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -357,7 +357,7 @@ namespace Org.Apache.Http.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpHostConnectException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpHostConnectException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -793,7 +793,7 @@ namespace Java.Awt.Font
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextAttribute() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextAttribute() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

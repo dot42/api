@@ -565,7 +565,7 @@ namespace Java.Util.Concurrent.Locks
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ConditionObject() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ConditionObject() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1309,7 +1309,7 @@ namespace Java.Util.Concurrent.Locks
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ConditionObject() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ConditionObject() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2815,7 +2815,7 @@ namespace Java.Util.Concurrent.Locks
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal JavaWriteLock() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal JavaWriteLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2965,7 +2965,7 @@ namespace Java.Util.Concurrent.Locks
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal JavaReadLock() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal JavaReadLock() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

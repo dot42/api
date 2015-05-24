@@ -168,7 +168,7 @@ namespace Android.Service.Notification
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StatusBarNotification() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StatusBarNotification() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

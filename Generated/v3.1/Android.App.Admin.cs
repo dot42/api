@@ -187,7 +187,7 @@ namespace Android.App.Admin
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DeviceAdminInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DeviceAdminInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

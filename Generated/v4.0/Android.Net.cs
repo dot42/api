@@ -299,7 +299,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Credentials() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Credentials() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -469,7 +469,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LocalServerSocket() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LocalServerSocket() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -827,7 +827,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LocalSocketAddress() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LocalSocketAddress() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1704,7 +1704,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLCertificateSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLCertificateSocketFactory() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1755,7 +1755,7 @@ namespace Android.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SSLSessionCache() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SSLSessionCache() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3516,7 +3516,7 @@ namespace Android.Net
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal IllegalCharacterValueSanitizer() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal IllegalCharacterValueSanitizer() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3583,7 +3583,7 @@ namespace Android.Net
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ParameterValuePair() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ParameterValuePair() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3856,7 +3856,7 @@ namespace Android.Net
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Builder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

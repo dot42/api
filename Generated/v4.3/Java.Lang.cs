@@ -574,7 +574,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "([BII)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "([BII)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(sbyte[] classRep, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -589,7 +589,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "([BII)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "([BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "([BII)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(byte[] classRep, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -604,7 +604,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(string className, sbyte[] classRep, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -619,7 +619,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BII)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BII)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(string className, byte[] classRep, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -634,7 +634,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(string className, sbyte[] classRep, int offset, int length, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -649,7 +649,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// defineClass
 				/// </java-name>
-				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, IgnoreFromJava = true, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
+				[Dot42.DexImport("defineClass", "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", AccessFlags = 20, Signature = "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class<*>;")]
 				protected internal global::System.Type DefineClass(string className, byte[] classRep, int offset, int length, global::Java.Security.ProtectionDomain protectionDomain) /* MethodBuilder.Create */ 
 				{
 						return default(global::System.Type);
@@ -1303,7 +1303,7 @@ namespace Java.Lang
 				extern ~Enum() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Enum() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Enum() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1373,7 +1373,7 @@ namespace Java.Lang
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EnumConstantNotPresentException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EnumConstantNotPresentException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2922,7 +2922,7 @@ namespace Java.Lang
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProcessBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProcessBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3283,7 +3283,7 @@ namespace Java.Lang
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RuntimePermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RuntimePermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3475,7 +3475,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// checkMulticast
 				/// </java-name>
-				[Dot42.DexImport("checkMulticast", "(Ljava/net/InetAddress;B)V", AccessFlags = 1)]
+				[Dot42.DexImport("checkMulticast", "(Ljava/net/InetAddress;B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void CheckMulticast(global::Java.Net.InetAddress maddr, sbyte ttl) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3486,7 +3486,7 @@ namespace Java.Lang
 				/// <java-name>
 				/// checkMulticast
 				/// </java-name>
-				[Dot42.DexImport("checkMulticast", "(Ljava/net/InetAddress;B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("checkMulticast", "(Ljava/net/InetAddress;B)V", AccessFlags = 1)]
 				public virtual void CheckMulticast(global::Java.Net.InetAddress maddr, byte ttl) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3796,7 +3796,7 @@ namespace Java.Lang
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StackTraceElement() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StackTraceElement() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6006,7 +6006,7 @@ namespace Java.Lang
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ThreadGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ThreadGroup() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6197,7 +6197,7 @@ namespace Java.Lang
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TypeNotPresentException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TypeNotPresentException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

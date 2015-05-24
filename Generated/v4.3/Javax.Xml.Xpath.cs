@@ -356,7 +356,7 @@ namespace Javax.Xml.Xpath
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XPathException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal XPathException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -392,7 +392,7 @@ namespace Javax.Xml.Xpath
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XPathExpressionException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal XPathExpressionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -570,7 +570,7 @@ namespace Javax.Xml.Xpath
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XPathFactoryConfigurationException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal XPathFactoryConfigurationException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -597,7 +597,7 @@ namespace Javax.Xml.Xpath
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XPathFunctionException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal XPathFunctionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -226,7 +226,7 @@ namespace Android.Service.Wallpaper
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Engine() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Engine() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

@@ -585,7 +585,7 @@ namespace Java.Util.Concurrent.Atomic
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicIntegerArray() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AtomicIntegerArray() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1248,7 +1248,7 @@ namespace Java.Util.Concurrent.Atomic
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicLongArray() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AtomicLongArray() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1531,7 +1531,7 @@ namespace Java.Util.Concurrent.Atomic
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicMarkableReference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AtomicMarkableReference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1809,7 +1809,7 @@ namespace Java.Util.Concurrent.Atomic
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicReferenceArray() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AtomicReferenceArray() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2031,7 +2031,7 @@ namespace Java.Util.Concurrent.Atomic
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AtomicStampedReference() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AtomicStampedReference() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

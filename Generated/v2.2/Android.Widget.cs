@@ -579,7 +579,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbsListView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbsListView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -912,7 +912,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1067,7 +1067,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbsoluteLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbsoluteLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1122,7 +1122,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1229,7 +1229,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbsSeekBar() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbsSeekBar() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1383,7 +1383,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbsSpinner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbsSpinner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1663,7 +1663,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AdapterView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AdapterView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1918,7 +1918,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AdapterContextMenuInfo() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AdapterContextMenuInfo() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -2110,7 +2110,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AlphabetIndexer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AlphabetIndexer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2197,7 +2197,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AnalogClock() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AnalogClock() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2438,7 +2438,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ArrayAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ArrayAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2791,7 +2791,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AutoCompleteTextView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AutoCompleteTextView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3590,7 +3590,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Button() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Button() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3631,7 +3631,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CheckBox() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CheckBox() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3738,7 +3738,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CheckedTextView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CheckedTextView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3834,7 +3834,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Chronometer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Chronometer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4045,7 +4045,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CompoundButton() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CompoundButton() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4265,7 +4265,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CursorAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CursorAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4643,7 +4643,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CursorTreeAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CursorTreeAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4793,7 +4793,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DatePicker() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DatePicker() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5043,7 +5043,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DialerFilter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DialerFilter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5133,7 +5133,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DigitalClock() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DigitalClock() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5226,7 +5226,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EditText() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EditText() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5633,7 +5633,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExpandableListView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ExpandableListView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5748,7 +5748,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ExpandableListContextMenuInfo() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ExpandableListContextMenuInfo() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6123,7 +6123,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FrameLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FrameLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6203,7 +6203,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6541,7 +6541,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Gallery() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Gallery() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6580,7 +6580,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6806,7 +6806,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GridView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GridView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6981,7 +6981,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HeaderViewListAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HeaderViewListAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7417,7 +7417,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HorizontalScrollView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HorizontalScrollView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8106,7 +8106,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ImageButton() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ImageButton() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8154,7 +8154,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ImageSwitcher() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ImageSwitcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8428,7 +8428,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ImageView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ImageView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8771,7 +8771,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LinearLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LinearLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8913,7 +8913,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9271,7 +9271,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ListView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ListView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9492,7 +9492,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal FixedViewInfo() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal FixedViewInfo() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9621,7 +9621,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaController() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaController() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9840,7 +9840,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MultiAutoCompleteTextView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MultiAutoCompleteTextView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10641,7 +10641,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProgressBar() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProgressBar() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10869,7 +10869,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal QuickContactBadge() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal QuickContactBadge() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10912,7 +10912,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RadioButton() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RadioButton() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11023,7 +11023,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RadioGroup() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RadioGroup() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11110,7 +11110,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11163,7 +11163,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RatingBar() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RatingBar() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11554,7 +11554,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RelativeLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RelativeLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11637,7 +11637,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal LayoutParams() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11832,7 +11832,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// setByte
 				/// </java-name>
-				[Dot42.DexImport("setByte", "(ILjava/lang/String;B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setByte", "(ILjava/lang/String;B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetByte(int viewId, string methodName, sbyte value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -11843,7 +11843,7 @@ namespace Android.Widget
 				/// <java-name>
 				/// setByte
 				/// </java-name>
-				[Dot42.DexImport("setByte", "(ILjava/lang/String;B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setByte", "(ILjava/lang/String;B)V", AccessFlags = 1)]
 				public virtual void SetByte(int viewId, string methodName, byte value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -12037,7 +12037,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RemoteViews() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RemoteViews() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12086,7 +12086,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ActionException() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ActionException() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -12178,7 +12178,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ResourceCursorAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ResourceCursorAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12239,7 +12239,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ResourceCursorTreeAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ResourceCursorTreeAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12380,7 +12380,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Scroller() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Scroller() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12832,7 +12832,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScrollView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ScrollView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12942,7 +12942,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SeekBar() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SeekBar() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13102,7 +13102,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SimpleAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SimpleAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13262,7 +13262,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SimpleCursorAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SimpleCursorAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13443,7 +13443,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SimpleCursorTreeAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SimpleCursorTreeAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13684,7 +13684,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SimpleExpandableListAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SimpleExpandableListAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13940,7 +13940,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SlidingDrawer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SlidingDrawer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14163,7 +14163,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Spinner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Spinner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14350,7 +14350,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TabHost() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TabHost() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14507,7 +14507,7 @@ namespace Android.Widget
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal TabSpec() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal TabSpec() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -14778,7 +14778,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TableLayout() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TableLayout() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14971,7 +14971,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TableRow() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TableRow() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -15241,7 +15241,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TabWidget() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TabWidget() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -15345,7 +15345,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextSwitcher() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextSwitcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -16520,7 +16520,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -17466,7 +17466,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TimePicker() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TimePicker() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -17685,7 +17685,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Toast() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Toast() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -17829,7 +17829,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ToggleButton() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ToggleButton() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -17915,7 +17915,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TwoLineListItem() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TwoLineListItem() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18132,7 +18132,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal VideoView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal VideoView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18333,7 +18333,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ViewAnimator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ViewAnimator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18489,7 +18489,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ViewFlipper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ViewFlipper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18581,7 +18581,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ViewSwitcher() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ViewSwitcher() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18705,7 +18705,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZoomButton() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZoomButton() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18806,7 +18806,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZoomButtonsController() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZoomButtonsController() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -18992,7 +18992,7 @@ namespace Android.Widget
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZoomControls() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZoomControls() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

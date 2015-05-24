@@ -710,7 +710,7 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// getRawDescriptors
 				/// </java-name>
-				[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetRawDescriptors() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -755,7 +755,7 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// controlTransfer
 				/// </java-name>
-				[Dot42.DexImport("controlTransfer", "(IIII[BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("controlTransfer", "(IIII[BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int ControlTransfer(int requestType, int request, int value, int index, sbyte[] buffer, int length, int timeout) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -770,7 +770,7 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// controlTransfer
 				/// </java-name>
-				[Dot42.DexImport("controlTransfer", "(IIII[BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("controlTransfer", "(IIII[BII)I", AccessFlags = 1)]
 				public virtual int ControlTransfer(int requestType, int request, int value, int index, byte[] buffer, int length, int timeout) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -785,7 +785,7 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// bulkTransfer
 				/// </java-name>
-				[Dot42.DexImport("bulkTransfer", "(Landroid/hardware/usb/UsbEndpoint;[BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("bulkTransfer", "(Landroid/hardware/usb/UsbEndpoint;[BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int BulkTransfer(global::Android.Hardware.Usb.UsbEndpoint endpoint, sbyte[] buffer, int length, int timeout) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -800,7 +800,7 @@ namespace Android.Hardware.Usb
 				/// <java-name>
 				/// bulkTransfer
 				/// </java-name>
-				[Dot42.DexImport("bulkTransfer", "(Landroid/hardware/usb/UsbEndpoint;[BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("bulkTransfer", "(Landroid/hardware/usb/UsbEndpoint;[BII)I", AccessFlags = 1)]
 				public virtual int BulkTransfer(global::Android.Hardware.Usb.UsbEndpoint endpoint, byte[] buffer, int length, int timeout) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -847,7 +847,7 @@ namespace Android.Hardware.Usb
 				/// </java-name>
 				public virtual byte[] RawDescriptors
 				{
-						[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getRawDescriptors", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

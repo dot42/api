@@ -421,7 +421,7 @@ namespace Android.Database.Sqlite
 				extern ~SQLiteCursor() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SQLiteCursor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SQLiteCursor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1690,7 +1690,7 @@ namespace Android.Database.Sqlite
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SQLiteOpenHelper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SQLiteOpenHelper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1861,7 +1861,7 @@ namespace Android.Database.Sqlite
 				/// <java-name>
 				/// bindBlob
 				/// </java-name>
-				[Dot42.DexImport("bindBlob", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("bindBlob", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void BindBlob(int index, sbyte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1872,7 +1872,7 @@ namespace Android.Database.Sqlite
 				/// <java-name>
 				/// bindBlob
 				/// </java-name>
-				[Dot42.DexImport("bindBlob", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("bindBlob", "(I[B)V", AccessFlags = 1)]
 				public virtual void BindBlob(int index, byte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1958,7 +1958,7 @@ namespace Android.Database.Sqlite
 				/// <java-name>
 				/// native_bind_blob
 				/// </java-name>
-				[Dot42.DexImport("native_bind_blob", "(I[B)V", AccessFlags = 276)]
+				[Dot42.DexImport("native_bind_blob", "(I[B)V", AccessFlags = 276, IgnoreFromJava = true)]
 				protected internal void Native_bind_blob(int int32, sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1966,7 +1966,7 @@ namespace Android.Database.Sqlite
 				/// <java-name>
 				/// native_bind_blob
 				/// </java-name>
-				[Dot42.DexImport("native_bind_blob", "(I[B)V", AccessFlags = 276, IgnoreFromJava = true)]
+				[Dot42.DexImport("native_bind_blob", "(I[B)V", AccessFlags = 276)]
 				protected internal void Native_bind_blob(int int32, byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}

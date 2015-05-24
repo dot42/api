@@ -160,7 +160,7 @@ namespace Junit.Framework
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;BB)V", AccessFlags = 9)]
+				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;BB)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void AssertEquals(string @string, sbyte sByte, sbyte sByte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -168,7 +168,7 @@ namespace Junit.Framework
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;BB)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("assertEquals", "(Ljava/lang/String;BB)V", AccessFlags = 9)]
 				public static void AssertEquals(string @string, byte @byte, byte byte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -176,7 +176,7 @@ namespace Junit.Framework
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "(BB)V", AccessFlags = 9)]
+				[Dot42.DexImport("assertEquals", "(BB)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void AssertEquals(sbyte sByte, sbyte sByte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -184,7 +184,7 @@ namespace Junit.Framework
 				/// <java-name>
 				/// assertEquals
 				/// </java-name>
-				[Dot42.DexImport("assertEquals", "(BB)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("assertEquals", "(BB)V", AccessFlags = 9)]
 				public static void AssertEquals(byte @byte, byte byte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -344,7 +344,7 @@ namespace Junit.Framework
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ComparisonFailure() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -593,7 +593,7 @@ namespace Junit.Framework
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TestFailure() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TestFailure() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

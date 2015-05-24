@@ -66,13 +66,13 @@ namespace Org.Apache.Http.Io
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1025)]
-				int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ ;
+				int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// read
 				/// </java-name>
 				[Dot42.DexImport("read", "([B)I", AccessFlags = 1025)]
-				int Read(sbyte[] sByte) /* MethodBuilder.Create */ ;
+				int Read(byte[] @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// read
@@ -120,13 +120,13 @@ namespace Org.Apache.Http.Io
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1025)]
-				void Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ ;
+				void Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// write
 				/// </java-name>
 				[Dot42.DexImport("write", "([B)V", AccessFlags = 1025)]
-				void Write(sbyte[] sByte) /* MethodBuilder.Create */ ;
+				void Write(byte[] @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// write

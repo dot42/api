@@ -473,7 +473,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ArrayBlockingQueue() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ArrayBlockingQueue() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2122,7 +2122,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CountDownLatch() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CountDownLatch() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2293,7 +2293,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CyclicBarrier() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CyclicBarrier() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3025,7 +3025,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExecutorCompletionService() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ExecutorCompletionService() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3473,7 +3473,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FutureTask() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FutureTask() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5558,7 +5558,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScheduledThreadPoolExecutor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ScheduledThreadPoolExecutor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5953,7 +5953,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Semaphore() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Semaphore() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6717,7 +6717,7 @@ namespace Java.Util.Concurrent
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ThreadPoolExecutor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ThreadPoolExecutor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

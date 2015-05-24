@@ -184,7 +184,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -199,7 +199,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
 				public virtual byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -764,7 +764,7 @@ namespace Android.Database
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal SelfContentObserver() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal SelfContentObserver() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -804,7 +804,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public override sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -819,7 +819,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
 				public override byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1086,7 +1086,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CharArrayBuffer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CharArrayBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1195,7 +1195,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ContentObserver() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ContentObserver() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1222,7 +1222,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CursorIndexOutOfBoundsException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CursorIndexOutOfBoundsException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1299,7 +1299,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CursorJoiner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CursorJoiner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1551,7 +1551,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(II)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(II)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetBlob(int row, int column) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1566,7 +1566,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(II)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(II)[B", AccessFlags = 1)]
 				public virtual byte[] GetBlob(int row, int column) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1682,7 +1682,7 @@ namespace Android.Database
 				/// <java-name>
 				/// putBlob
 				/// </java-name>
-				[Dot42.DexImport("putBlob", "([BII)Z", AccessFlags = 1)]
+				[Dot42.DexImport("putBlob", "([BII)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool PutBlob(sbyte[] value, int row, int column) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -1697,7 +1697,7 @@ namespace Android.Database
 				/// <java-name>
 				/// putBlob
 				/// </java-name>
-				[Dot42.DexImport("putBlob", "([BII)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("putBlob", "([BII)Z", AccessFlags = 1)]
 				public virtual bool PutBlob(byte[] value, int row, int column) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -1816,7 +1816,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CursorWindow() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CursorWindow() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2064,7 +2064,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2079,7 +2079,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
 				public virtual byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2276,7 +2276,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CursorWrapper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CursorWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3234,7 +3234,7 @@ namespace Android.Database
 						/// <java-name>
 						/// bind
 						/// </java-name>
-						[Dot42.DexImport("bind", "(I[B)V", AccessFlags = 1)]
+						[Dot42.DexImport("bind", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 						public virtual void Bind(int index, sbyte[] value) /* MethodBuilder.Create */ 
 						{
 						}
@@ -3245,7 +3245,7 @@ namespace Android.Database
 						/// <java-name>
 						/// bind
 						/// </java-name>
-						[Dot42.DexImport("bind", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("bind", "(I[B)V", AccessFlags = 1)]
 						public virtual void Bind(int index, byte[] value) /* MethodBuilder.Create */ 
 						{
 						}
@@ -3340,7 +3340,7 @@ namespace Android.Database
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal InsertHelper() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal InsertHelper() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3629,7 +3629,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1025)]
 				byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -4220,7 +4220,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public override sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -4235,7 +4235,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
 				public override byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -4272,7 +4272,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MatrixCursor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MatrixCursor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4342,7 +4342,7 @@ namespace Android.Database
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal RowBuilder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal RowBuilder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -4509,7 +4509,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public override sbyte[] JavaGetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -4524,7 +4524,7 @@ namespace Android.Database
 				/// <java-name>
 				/// getBlob
 				/// </java-name>
-				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBlob", "(I)[B", AccessFlags = 1)]
 				public override byte[] GetBlob(int columnIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -4612,7 +4612,7 @@ namespace Android.Database
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MergeCursor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MergeCursor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -1094,7 +1094,7 @@ namespace Android.Net.Wifi.P2p
 						/// onServiceAvailable
 						/// </java-name>
 						[Dot42.DexImport("onServiceAvailable", "(I[BLandroid/net/wifi/p2p/WifiP2pDevice;)V", AccessFlags = 1025)]
-						void OnServiceAvailable(int protocolType, sbyte[] responseData, global::Android.Net.Wifi.P2p.WifiP2pDevice srcDevice) /* MethodBuilder.Create */ ;
+						void OnServiceAvailable(int protocolType, byte[] responseData, global::Android.Net.Wifi.P2p.WifiP2pDevice srcDevice) /* MethodBuilder.Create */ ;
 
 				}
 

@@ -44,7 +44,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Update(sbyte[] i) /* MethodBuilder.Create */ 
 				{
 				}
@@ -55,7 +55,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 1)]
 				public virtual void Update(byte[] i) /* MethodBuilder.Create */ 
 				{
 				}
@@ -66,7 +66,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Update(sbyte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -77,7 +77,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1)]
 				public virtual void Update(byte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -138,7 +138,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -150,7 +150,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -172,7 +172,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CheckedInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CheckedInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -225,7 +225,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buf, int off, int nbytes) /* MethodBuilder.Create */ 
 				{
 				}
@@ -236,13 +236,13 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buf, int off, int nbytes) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal CheckedOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal CheckedOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -306,7 +306,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Update(sbyte[] val) /* MethodBuilder.Create */ 
 				{
 				}
@@ -317,7 +317,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([B)V", AccessFlags = 1)]
 				public virtual void Update(byte[] val) /* MethodBuilder.Create */ 
 				{
 				}
@@ -328,7 +328,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Update(sbyte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -339,7 +339,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// update
 				/// </java-name>
-				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1)]
 				public virtual void Update(byte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -506,7 +506,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// deflate
 				/// </java-name>
-				[Dot42.DexImport("deflate", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("deflate", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Deflate(sbyte[] buf) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -521,7 +521,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// deflate
 				/// </java-name>
-				[Dot42.DexImport("deflate", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("deflate", "([B)I", AccessFlags = 1)]
 				public virtual int Deflate(byte[] buf) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -536,7 +536,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// deflate
 				/// </java-name>
-				[Dot42.DexImport("deflate", "([BII)I", AccessFlags = 33)]
+				[Dot42.DexImport("deflate", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual int Deflate(sbyte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -551,7 +551,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// deflate
 				/// </java-name>
-				[Dot42.DexImport("deflate", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("deflate", "([BII)I", AccessFlags = 33)]
 				public virtual int Deflate(byte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -626,7 +626,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetDictionary(sbyte[] dictionary) /* MethodBuilder.Create */ 
 				{
 				}
@@ -637,7 +637,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 1)]
 				public virtual void SetDictionary(byte[] dictionary) /* MethodBuilder.Create */ 
 				{
 				}
@@ -648,7 +648,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33)]
+				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual void SetDictionary(sbyte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -659,7 +659,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33)]
 				public virtual void SetDictionary(byte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -670,7 +670,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetInput(sbyte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -681,7 +681,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 1)]
 				public virtual void SetInput(byte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -692,7 +692,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33)]
+				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual void SetInput(sbyte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -703,7 +703,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33)]
 				public virtual void SetInput(byte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -868,7 +868,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -880,7 +880,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -948,7 +948,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DeflaterInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DeflaterInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1051,7 +1051,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1062,7 +1062,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1079,7 +1079,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DeflaterOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DeflaterOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1158,7 +1158,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1167,14 +1167,14 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GZIPInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GZIPInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1240,7 +1240,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int off, int nbytes) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1251,13 +1251,13 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int off, int nbytes) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GZIPOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GZIPOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1289,7 +1289,7 @@ namespace Java.Util.Zip
 				/// update
 				/// </java-name>
 				[Dot42.DexImport("update", "([BII)V", AccessFlags = 1025)]
-				void Update(sbyte[] buf, int off, int nbytes) /* MethodBuilder.Create */ ;
+				void Update(byte[] buf, int off, int nbytes) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Updates the checksum value with the given byte.</para> <para></para>        
@@ -1394,7 +1394,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// inflate
 				/// </java-name>
-				[Dot42.DexImport("inflate", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("inflate", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Inflate(sbyte[] buf) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1409,7 +1409,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// inflate
 				/// </java-name>
-				[Dot42.DexImport("inflate", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("inflate", "([B)I", AccessFlags = 1)]
 				public virtual int Inflate(byte[] buf) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1424,7 +1424,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// inflate
 				/// </java-name>
-				[Dot42.DexImport("inflate", "([BII)I", AccessFlags = 33)]
+				[Dot42.DexImport("inflate", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual int Inflate(sbyte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1439,7 +1439,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// inflate
 				/// </java-name>
-				[Dot42.DexImport("inflate", "([BII)I", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("inflate", "([BII)I", AccessFlags = 33)]
 				public virtual int Inflate(byte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1486,7 +1486,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 33)]
+				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual void SetDictionary(sbyte[] dictionary) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1497,7 +1497,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setDictionary", "([B)V", AccessFlags = 33)]
 				public virtual void SetDictionary(byte[] dictionary) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1508,7 +1508,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33)]
+				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual void SetDictionary(sbyte[] dictionary, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1519,7 +1519,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setDictionary
 				/// </java-name>
-				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setDictionary", "([BII)V", AccessFlags = 33)]
 				public virtual void SetDictionary(byte[] dictionary, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1530,7 +1530,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 33)]
+				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual void SetInput(sbyte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1541,7 +1541,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setInput", "([B)V", AccessFlags = 33)]
 				public virtual void SetInput(byte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1552,7 +1552,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33)]
+				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public virtual void SetInput(sbyte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1563,7 +1563,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setInput
 				/// </java-name>
-				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setInput", "([BII)V", AccessFlags = 33)]
 				public virtual void SetInput(byte[] buf, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1721,7 +1721,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1733,7 +1733,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1829,7 +1829,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InflaterInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InflaterInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1929,7 +1929,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] bytes, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1940,13 +1940,13 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] bytes, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InflaterOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InflaterOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2003,7 +2003,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// getExtra
 				/// </java-name>
-				[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetExtra() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2015,7 +2015,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// setExtra
 				/// </java-name>
-				[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetExtra(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2063,7 +2063,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZipEntry() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZipEntry() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2126,9 +2126,9 @@ namespace Java.Util.Zip
 				/// </java-name>
 				public virtual byte[] Extra
 				{
-						[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getExtra", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
-						[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("setExtra", "([B)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -2234,7 +2234,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZipError() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZipError() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2390,7 +2390,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZipFile() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZipFile() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2476,7 +2476,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2488,7 +2488,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] buffer, int byteOffset, int byteCount) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2519,7 +2519,7 @@ namespace Java.Util.Zip
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZipInputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZipInputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2669,7 +2669,7 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] buffer, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2680,13 +2680,13 @@ namespace Java.Util.Zip
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] buffer, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ZipOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ZipOutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

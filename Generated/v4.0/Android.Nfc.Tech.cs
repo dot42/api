@@ -91,7 +91,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getHistoricalBytes
 				/// </java-name>
-				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetHistoricalBytes() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -106,7 +106,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getHiLayerResponse
 				/// </java-name>
-				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetHiLayerResponse() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -121,7 +121,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] Transceive(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -136,7 +136,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
 				public byte[] Transceive(byte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -186,7 +186,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] HistoricalBytes
 				{
-						[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getHistoricalBytes", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -201,7 +201,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] HiLayerResponse
 				{
-						[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getHiLayerResponse", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -480,7 +480,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// authenticateSectorWithKeyA
 				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public bool AuthenticateSectorWithKeyA(int sectorIndex, sbyte[] key) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -495,7 +495,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// authenticateSectorWithKeyA
 				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("authenticateSectorWithKeyA", "(I[B)Z", AccessFlags = 1)]
 				public bool AuthenticateSectorWithKeyA(int sectorIndex, byte[] key) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -510,7 +510,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// authenticateSectorWithKeyB
 				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public bool AuthenticateSectorWithKeyB(int sectorIndex, sbyte[] key) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -525,7 +525,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// authenticateSectorWithKeyB
 				/// </java-name>
-				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("authenticateSectorWithKeyB", "(I[B)Z", AccessFlags = 1)]
 				public bool AuthenticateSectorWithKeyB(int sectorIndex, byte[] key) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -540,7 +540,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// readBlock
 				/// </java-name>
-				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaReadBlock(int blockIndex) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -555,7 +555,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// readBlock
 				/// </java-name>
-				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("readBlock", "(I)[B", AccessFlags = 1)]
 				public byte[] ReadBlock(int blockIndex) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -567,7 +567,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// writeBlock
 				/// </java-name>
-				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public void WriteBlock(int blockIndex, sbyte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -578,7 +578,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// writeBlock
 				/// </java-name>
-				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("writeBlock", "(I[B)V", AccessFlags = 1)]
 				public void WriteBlock(int blockIndex, byte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -633,7 +633,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] Transceive(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -645,7 +645,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
 				public byte[] Transceive(byte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -850,7 +850,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// readPages
 				/// </java-name>
-				[Dot42.DexImport("readPages", "(I)[B", AccessFlags = 1)]
+				[Dot42.DexImport("readPages", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaReadPages(int pageOffset) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -865,7 +865,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// readPages
 				/// </java-name>
-				[Dot42.DexImport("readPages", "(I)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("readPages", "(I)[B", AccessFlags = 1)]
 				public byte[] ReadPages(int pageOffset) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -877,7 +877,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// writePage
 				/// </java-name>
-				[Dot42.DexImport("writePage", "(I[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("writePage", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public void WritePage(int pageOffset, sbyte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -888,7 +888,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// writePage
 				/// </java-name>
-				[Dot42.DexImport("writePage", "(I[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("writePage", "(I[B)V", AccessFlags = 1)]
 				public void WritePage(int pageOffset, byte[] data) /* MethodBuilder.Create */ 
 				{
 				}
@@ -899,7 +899,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] Transceive(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -911,7 +911,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
 				public byte[] Transceive(byte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1349,7 +1349,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getAtqa
 				/// </java-name>
-				[Dot42.DexImport("getAtqa", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getAtqa", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetAtqa() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1364,7 +1364,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] Transceive(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1379,7 +1379,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
 				public byte[] Transceive(byte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1412,7 +1412,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] Atqa
 				{
-						[Dot42.DexImport("getAtqa", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getAtqa", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1522,7 +1522,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getApplicationData
 				/// </java-name>
-				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetApplicationData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1537,7 +1537,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getProtocolInfo
 				/// </java-name>
-				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetProtocolInfo() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1552,7 +1552,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] Transceive(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1567,7 +1567,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
 				public byte[] Transceive(byte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1600,7 +1600,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] ApplicationData
 				{
-						[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getApplicationData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1615,7 +1615,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] ProtocolInfo
 				{
-						[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getProtocolInfo", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1693,7 +1693,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getSystemCode
 				/// </java-name>
-				[Dot42.DexImport("getSystemCode", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getSystemCode", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetSystemCode() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1708,7 +1708,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getManufacturer
 				/// </java-name>
-				[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetManufacturer() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1723,7 +1723,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] Transceive(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1738,7 +1738,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
 				public byte[] Transceive(byte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1771,7 +1771,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] SystemCode
 				{
-						[Dot42.DexImport("getSystemCode", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSystemCode", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1786,7 +1786,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte[] Manufacturer
 				{
-						[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getManufacturer", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1881,7 +1881,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getResponseFlags
 				/// </java-name>
-				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1)]
+				[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte JavaGetResponseFlags() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -1896,7 +1896,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// getDsfId
 				/// </java-name>
-				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1)]
+				[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte JavaGetDsfId() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -1911,7 +1911,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] Transceive(sbyte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1926,7 +1926,7 @@ namespace Android.Nfc.Tech
 				/// <java-name>
 				/// transceive
 				/// </java-name>
-				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("transceive", "([B)[B", AccessFlags = 1)]
 				public byte[] Transceive(byte[] data) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -1959,7 +1959,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte ResponseFlags
 				{
-						[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getResponseFlags", "()B", AccessFlags = 1)]
 						get{ return default(byte); }
 				}
 
@@ -1974,7 +1974,7 @@ namespace Android.Nfc.Tech
 				/// </java-name>
 				public byte DsfId
 				{
-						[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getDsfId", "()B", AccessFlags = 1)]
 						get{ return default(byte); }
 				}
 

@@ -1626,7 +1626,7 @@ namespace Java.Util
 				/// <java-name>
 				/// binarySearch
 				/// </java-name>
-				[Dot42.DexImport("binarySearch", "([BB)I", AccessFlags = 9)]
+				[Dot42.DexImport("binarySearch", "([BB)I", AccessFlags = 9, IgnoreFromJava = true)]
 				public static int BinarySearch(sbyte[] sByte, sbyte sByte1) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1635,7 +1635,7 @@ namespace Java.Util
 				/// <java-name>
 				/// binarySearch
 				/// </java-name>
-				[Dot42.DexImport("binarySearch", "([BB)I", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("binarySearch", "([BB)I", AccessFlags = 9)]
 				public static int BinarySearch(byte[] @byte, byte byte1) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1722,7 +1722,7 @@ namespace Java.Util
 				/// <java-name>
 				/// fill
 				/// </java-name>
-				[Dot42.DexImport("fill", "([BB)V", AccessFlags = 9)]
+				[Dot42.DexImport("fill", "([BB)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void Fill(sbyte[] sByte, sbyte sByte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1730,7 +1730,7 @@ namespace Java.Util
 				/// <java-name>
 				/// fill
 				/// </java-name>
-				[Dot42.DexImport("fill", "([BB)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("fill", "([BB)V", AccessFlags = 9)]
 				public static void Fill(byte[] @byte, byte byte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1738,7 +1738,7 @@ namespace Java.Util
 				/// <java-name>
 				/// fill
 				/// </java-name>
-				[Dot42.DexImport("fill", "([BIIB)V", AccessFlags = 9)]
+				[Dot42.DexImport("fill", "([BIIB)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void Fill(sbyte[] sByte, int int32, int int321, sbyte sByte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1746,7 +1746,7 @@ namespace Java.Util
 				/// <java-name>
 				/// fill
 				/// </java-name>
-				[Dot42.DexImport("fill", "([BIIB)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("fill", "([BIIB)V", AccessFlags = 9)]
 				public static void Fill(byte[] @byte, int int32, int int321, byte byte1) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1918,7 +1918,7 @@ namespace Java.Util
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
-				[Dot42.DexImport("hashCode", "([B)I", AccessFlags = 9)]
+				[Dot42.DexImport("hashCode", "([B)I", AccessFlags = 9, IgnoreFromJava = true)]
 				public static int GetHashCode(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1927,7 +1927,7 @@ namespace Java.Util
 				/// <java-name>
 				/// hashCode
 				/// </java-name>
-				[Dot42.DexImport("hashCode", "([B)I", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("hashCode", "([B)I", AccessFlags = 9)]
 				public static int GetHashCode(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1987,7 +1987,7 @@ namespace Java.Util
 				/// <java-name>
 				/// equals
 				/// </java-name>
-				[Dot42.DexImport("equals", "([B[B)Z", AccessFlags = 9)]
+				[Dot42.DexImport("equals", "([B[B)Z", AccessFlags = 9, IgnoreFromJava = true)]
 				public static bool Equals(sbyte[] sByte, sbyte[] sByte1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -1996,7 +1996,7 @@ namespace Java.Util
 				/// <java-name>
 				/// equals
 				/// </java-name>
-				[Dot42.DexImport("equals", "([B[B)Z", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("equals", "([B[B)Z", AccessFlags = 9)]
 				public static bool Equals(byte[] @byte, byte[] byte1) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -2092,7 +2092,7 @@ namespace Java.Util
 				/// <java-name>
 				/// sort
 				/// </java-name>
-				[Dot42.DexImport("sort", "([B)V", AccessFlags = 9)]
+				[Dot42.DexImport("sort", "([B)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void Sort(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2100,7 +2100,7 @@ namespace Java.Util
 				/// <java-name>
 				/// sort
 				/// </java-name>
-				[Dot42.DexImport("sort", "([B)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("sort", "([B)V", AccessFlags = 9)]
 				public static void Sort(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2108,7 +2108,7 @@ namespace Java.Util
 				/// <java-name>
 				/// sort
 				/// </java-name>
-				[Dot42.DexImport("sort", "([BII)V", AccessFlags = 9)]
+				[Dot42.DexImport("sort", "([BII)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void Sort(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2116,7 +2116,7 @@ namespace Java.Util
 				/// <java-name>
 				/// sort
 				/// </java-name>
-				[Dot42.DexImport("sort", "([BII)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("sort", "([BII)V", AccessFlags = 9)]
 				public static void Sort(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2267,7 +2267,7 @@ namespace Java.Util
 				/// <java-name>
 				/// toString
 				/// </java-name>
-				[Dot42.DexImport("toString", "([B)Ljava/lang/String;", AccessFlags = 9)]
+				[Dot42.DexImport("toString", "([B)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static string ToString(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -2276,7 +2276,7 @@ namespace Java.Util
 				/// <java-name>
 				/// toString
 				/// </java-name>
-				[Dot42.DexImport("toString", "([B)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("toString", "([B)Ljava/lang/String;", AccessFlags = 9)]
 				public static string ToString(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -4940,7 +4940,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DuplicateFormatFlagsException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DuplicateFormatFlagsException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5204,7 +5204,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EnumMap() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EnumMap() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5444,7 +5444,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EventListenerProxy() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EventListenerProxy() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5501,7 +5501,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EventObject() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EventObject() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5547,7 +5547,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FormatFlagsConversionMismatchException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FormatFlagsConversionMismatchException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8705,7 +8705,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IllegalFormatCodePointException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IllegalFormatCodePointException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8754,7 +8754,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IllegalFormatConversionException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IllegalFormatConversionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8835,7 +8835,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IllegalFormatFlagsException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IllegalFormatFlagsException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8884,7 +8884,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IllegalFormatPrecisionException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IllegalFormatPrecisionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -8933,7 +8933,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IllegalFormatWidthException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IllegalFormatWidthException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9258,7 +9258,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InvalidPropertiesFormatException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InvalidPropertiesFormatException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10784,7 +10784,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Locale() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Locale() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10976,7 +10976,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MissingFormatArgumentException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MissingFormatArgumentException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11025,7 +11025,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MissingFormatWidthException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MissingFormatWidthException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11065,7 +11065,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MissingResourceException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MissingResourceException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11683,7 +11683,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PropertyPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PropertyPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11726,7 +11726,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PropertyResourceBundle() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PropertyResourceBundle() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12383,7 +12383,7 @@ namespace Java.Util
 				/// <java-name>
 				/// nextByte
 				/// </java-name>
-				[Dot42.DexImport("nextByte", "()B", AccessFlags = 1)]
+				[Dot42.DexImport("nextByte", "()B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte JavaNextByte() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -12395,7 +12395,7 @@ namespace Java.Util
 				/// <java-name>
 				/// nextByte
 				/// </java-name>
-				[Dot42.DexImport("nextByte", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("nextByte", "()B", AccessFlags = 1)]
 				public byte NextByte() /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -12410,7 +12410,7 @@ namespace Java.Util
 				/// <java-name>
 				/// nextByte
 				/// </java-name>
-				[Dot42.DexImport("nextByte", "(I)B", AccessFlags = 1)]
+				[Dot42.DexImport("nextByte", "(I)B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte JavaNextByte(int radix) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -12425,7 +12425,7 @@ namespace Java.Util
 				/// <java-name>
 				/// nextByte
 				/// </java-name>
-				[Dot42.DexImport("nextByte", "(I)B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("nextByte", "(I)B", AccessFlags = 1)]
 				public byte NextByte(int radix) /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -12689,7 +12689,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Scanner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Scanner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13042,7 +13042,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SimpleTimeZone() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SimpleTimeZone() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -13267,7 +13267,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringTokenizer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StringTokenizer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14397,7 +14397,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnknownFormatConversionException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UnknownFormatConversionException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14446,7 +14446,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnknownFormatFlagsException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UnknownFormatFlagsException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14509,7 +14509,7 @@ namespace Java.Util
 				/// <java-name>
 				/// nameUUIDFromBytes
 				/// </java-name>
-				[Dot42.DexImport("nameUUIDFromBytes", "([B)Ljava/util/UUID;", AccessFlags = 9)]
+				[Dot42.DexImport("nameUUIDFromBytes", "([B)Ljava/util/UUID;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Java.Util.UUID NameUUIDFromBytes(sbyte[] name) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.UUID);
@@ -14524,7 +14524,7 @@ namespace Java.Util
 				/// <java-name>
 				/// nameUUIDFromBytes
 				/// </java-name>
-				[Dot42.DexImport("nameUUIDFromBytes", "([B)Ljava/util/UUID;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("nameUUIDFromBytes", "([B)Ljava/util/UUID;", AccessFlags = 9)]
 				public static global::Java.Util.UUID NameUUIDFromBytes(byte[] name) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.UUID);
@@ -14697,7 +14697,7 @@ namespace Java.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UUID() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UUID() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

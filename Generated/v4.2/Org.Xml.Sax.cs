@@ -1386,7 +1386,7 @@ namespace Org.Xml.Sax
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SAXParseException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SAXParseException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

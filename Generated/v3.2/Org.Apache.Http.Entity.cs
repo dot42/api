@@ -237,7 +237,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BufferedHttpEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BufferedHttpEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -300,12 +300,12 @@ namespace Org.Apache.Http.Entity
 				/// </java-name>
 				[Dot42.DexImport("content", "[B", AccessFlags = 20)]
 				protected internal readonly sbyte[] @content;
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public ByteArrayEntity(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public ByteArrayEntity(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -328,7 +328,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ByteArrayEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ByteArrayEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -399,7 +399,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EntityTemplate() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EntityTemplate() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -476,7 +476,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FileEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FileEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -552,7 +552,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpEntityWrapper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpEntityWrapper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -699,7 +699,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InputStreamEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InputStreamEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -762,7 +762,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SerializableEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SerializableEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -844,7 +844,7 @@ namespace Org.Apache.Http.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringEntity() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StringEntity() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

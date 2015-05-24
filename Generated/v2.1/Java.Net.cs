@@ -512,7 +512,7 @@ namespace Java.Net
 				/// <summary>
 				///  <para>Constructs a new <c>DatagramPacket </c> object to receive data up to  <c>length </c> bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DatagramPacket(sbyte[] data, int length) /* MethodBuilder.Create */ 
 				{
 				}
@@ -520,17 +520,17 @@ namespace Java.Net
 				/// <summary>
 				///  <para>Constructs a new <c>DatagramPacket </c> object to receive data up to  <c>length </c> bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BI)V", AccessFlags = 1)]
 				public DatagramPacket(byte[] data, int length) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DatagramPacket(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BII)V", AccessFlags = 1)]
 				public DatagramPacket(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -538,7 +538,7 @@ namespace Java.Net
 				/// <summary>
 				///  <para>Constructs a new <c>DatagramPacket </c> object to send data to the port  <c>aPort </c> of the address <c>host </c> . The <c>length </c> must be lesser than or equal to the size of <c>data </c> . The first <c>length </c> bytes from the byte array position <c>offset </c> are sent.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/net/InetAddress;I)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BIILjava/net/InetAddress;I)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DatagramPacket(sbyte[] data, int offset, int length, global::Java.Net.InetAddress host, int aPort) /* MethodBuilder.Create */ 
 				{
 				}
@@ -546,37 +546,37 @@ namespace Java.Net
 				/// <summary>
 				///  <para>Constructs a new <c>DatagramPacket </c> object to send data to the port  <c>aPort </c> of the address <c>host </c> . The <c>length </c> must be lesser than or equal to the size of <c>data </c> . The first <c>length </c> bytes from the byte array position <c>offset </c> are sent.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([BIILjava/net/InetAddress;I)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BIILjava/net/InetAddress;I)V", AccessFlags = 1)]
 				public DatagramPacket(byte[] data, int offset, int length, global::Java.Net.InetAddress host, int aPort) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BILjava/net/InetAddress;I)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BILjava/net/InetAddress;I)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DatagramPacket(sbyte[] sByte, int int32, global::Java.Net.InetAddress inetAddress, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BILjava/net/InetAddress;I)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BILjava/net/InetAddress;I)V", AccessFlags = 1)]
 				public DatagramPacket(byte[] @byte, int int32, global::Java.Net.InetAddress inetAddress, int int321) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BILjava/net/SocketAddress;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BILjava/net/SocketAddress;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DatagramPacket(sbyte[] sByte, int int32, global::Java.Net.SocketAddress socketAddress) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BILjava/net/SocketAddress;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BILjava/net/SocketAddress;)V", AccessFlags = 1)]
 				public DatagramPacket(byte[] @byte, int int32, global::Java.Net.SocketAddress socketAddress) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BIILjava/net/SocketAddress;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([BIILjava/net/SocketAddress;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DatagramPacket(sbyte[] sByte, int int32, int int321, global::Java.Net.SocketAddress socketAddress) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "([BIILjava/net/SocketAddress;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([BIILjava/net/SocketAddress;)V", AccessFlags = 1)]
 				public DatagramPacket(byte[] @byte, int int32, int int321, global::Java.Net.SocketAddress socketAddress) /* MethodBuilder.Create */ 
 				{
 				}
@@ -590,7 +590,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 33)]
+				[Dot42.DexImport("getData", "()[B", AccessFlags = 33, IgnoreFromJava = true)]
 				public sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -602,7 +602,7 @@ namespace Java.Net
 				/// <java-name>
 				/// setData
 				/// </java-name>
-				[Dot42.DexImport("setData", "([BII)V", AccessFlags = 33)]
+				[Dot42.DexImport("setData", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public void SetData(sbyte[] data, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -613,7 +613,7 @@ namespace Java.Net
 				/// <java-name>
 				/// setData
 				/// </java-name>
-				[Dot42.DexImport("setData", "([BII)V", AccessFlags = 33, IgnoreFromJava = true)]
+				[Dot42.DexImport("setData", "([BII)V", AccessFlags = 33)]
 				public void SetData(byte[] data, int offset, int byteCount) /* MethodBuilder.Create */ 
 				{
 				}
@@ -624,13 +624,13 @@ namespace Java.Net
 				/// <java-name>
 				/// setData
 				/// </java-name>
-				[Dot42.DexImport("setData", "([B)V", AccessFlags = 33)]
+				[Dot42.DexImport("setData", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
 				public void SetData(sbyte[] buf) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DatagramPacket() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DatagramPacket() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -662,9 +662,9 @@ namespace Java.Net
 				/// </java-name>
 				public byte[] Data
 				{
-						[Dot42.DexImport("getData", "()[B", AccessFlags = 33, IgnoreFromJava = true)]
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 33)]
 						get{ return default(byte[]); }
-						[Dot42.DexImport("setData", "([B)V", AccessFlags = 33, IgnoreFromJava = true)]
+						[Dot42.DexImport("setData", "([B)V", AccessFlags = 33)]
 						set{ }
 				}
 
@@ -1169,18 +1169,6 @@ namespace Java.Net
 				}
 
 				/// <summary>
-				///  <para>Gets the time-to-live (TTL) for multicast packets sent on this socket.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use getTimeToLive instead.  <para>getTimeToLive() </para></para></xrefdescription></xrefsect></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the time-to-live option as a byte value. </para>
-				/// </returns>
-				/// <java-name>
-				/// getTTL
-				/// </java-name>
-				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1028)]
-				protected internal abstract sbyte JavaGetTTL() /* MethodBuilder.Create */ ;
-
-				/// <summary>
 				///  <para>Adds this socket to the multicast group <c>addr </c> . A socket must join a group before being able to receive data. Further, a socket may be a member of multiple groups but may join any group only once.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
@@ -1255,15 +1243,6 @@ namespace Java.Net
 				}
 
 				/// <summary>
-				///  <para>Sets the time-to-live (TTL) option for multicast packets sent on this socket.</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use setTimeToLive instead.  <para>setTimeToLive(int) </para></para></xrefdescription></xrefsect></para>        
-				/// </summary>
-				/// <java-name>
-				/// setTTL
-				/// </java-name>
-				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1028)]
-				protected internal abstract void SetTTL(sbyte ttl) /* MethodBuilder.Create */ ;
-
-				/// <summary>
 				///  <para>Connects this socket to the specified remote address and port.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
@@ -1335,9 +1314,9 @@ namespace Java.Net
 				/// </java-name>
 				protected internal abstract byte TTL
 				{
-						[Dot42.DexImport("getTTL", "()B", AccessFlags = 1028, IgnoreFromJava = true)]
+						[Dot42.DexImport("getTTL", "()B", AccessFlags = 1028)]
 						get;
-						[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1028, IgnoreFromJava = true)]
+						[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1028)]
 						set;
 				}
 
@@ -1402,7 +1381,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpRetryException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpRetryException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1951,7 +1930,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal HttpURLConnection() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal HttpURLConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2262,7 +2241,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BI)Ljava/net/Inet6Address;", AccessFlags = 9)]
+				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BI)Ljava/net/Inet6Address;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Java.Net.Inet6Address GetByAddress(string @string, sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.Inet6Address);
@@ -2271,7 +2250,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BI)Ljava/net/Inet6Address;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BI)Ljava/net/Inet6Address;", AccessFlags = 9)]
 				public static global::Java.Net.Inet6Address GetByAddress(string @string, byte[] @byte, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.Inet6Address);
@@ -2280,7 +2259,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BLjava/net/NetworkInterface;)Ljava/net/Inet6Address;", AccessFlags = 9)]
+				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BLjava/net/NetworkInterface;)Ljava/net/Inet6Address;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Java.Net.Inet6Address GetByAddress(string @string, sbyte[] sByte, global::Java.Net.NetworkInterface networkInterface) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.Inet6Address);
@@ -2289,7 +2268,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BLjava/net/NetworkInterface;)Ljava/net/Inet6Address;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[BLjava/net/NetworkInterface;)Ljava/net/Inet6Address;", AccessFlags = 9)]
 				public static global::Java.Net.Inet6Address GetByAddress(string @string, byte[] @byte, global::Java.Net.NetworkInterface networkInterface) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.Inet6Address);
@@ -2485,7 +2464,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getAddress
 				/// </java-name>
-				[Dot42.DexImport("getAddress", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetAddress() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2578,7 +2557,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "([B)Ljava/net/InetAddress;", AccessFlags = 9)]
+				[Dot42.DexImport("getByAddress", "([B)Ljava/net/InetAddress;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Java.Net.InetAddress GetByAddress(sbyte[] ipAddress) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.InetAddress);
@@ -2590,7 +2569,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "([B)Ljava/net/InetAddress;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByAddress", "([B)Ljava/net/InetAddress;", AccessFlags = 9)]
 				public static global::Java.Net.InetAddress GetByAddress(byte[] ipAddress) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.InetAddress);
@@ -2602,7 +2581,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[B)Ljava/net/InetAddress;", AccessFlags = 9)]
+				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[B)Ljava/net/InetAddress;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Java.Net.InetAddress GetByAddress(string hostName, sbyte[] ipAddress) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.InetAddress);
@@ -2614,7 +2593,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getByAddress
 				/// </java-name>
-				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[B)Ljava/net/InetAddress;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByAddress", "(Ljava/lang/String;[B)Ljava/net/InetAddress;", AccessFlags = 9)]
 				public static global::Java.Net.InetAddress GetByAddress(string hostName, byte[] ipAddress) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Net.InetAddress);
@@ -2631,7 +2610,7 @@ namespace Java.Net
 				/// </java-name>
 				public virtual byte[] Address
 				{
-						[Dot42.DexImport("getAddress", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getAddress", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -2897,7 +2876,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal InetSocketAddress() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal InetSocketAddress() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3186,7 +3165,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JarURLConnection() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal JarURLConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3380,7 +3359,7 @@ namespace Java.Net
 				/// <java-name>
 				/// getTTL
 				/// </java-name>
-				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1)]
+				[Dot42.DexImport("getTTL", "()B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte JavaGetTTL() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -3436,7 +3415,7 @@ namespace Java.Net
 				/// <java-name>
 				/// send
 				/// </java-name>
-				[Dot42.DexImport("send", "(Ljava/net/DatagramPacket;B)V", AccessFlags = 1)]
+				[Dot42.DexImport("send", "(Ljava/net/DatagramPacket;B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Send(global::Java.Net.DatagramPacket packet, sbyte ttl) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3447,7 +3426,7 @@ namespace Java.Net
 				/// <java-name>
 				/// send
 				/// </java-name>
-				[Dot42.DexImport("send", "(Ljava/net/DatagramPacket;B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("send", "(Ljava/net/DatagramPacket;B)V", AccessFlags = 1)]
 				public virtual void Send(global::Java.Net.DatagramPacket packet, byte ttl) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3458,7 +3437,7 @@ namespace Java.Net
 				/// <java-name>
 				/// setTTL
 				/// </java-name>
-				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void SetTTL(sbyte ttl) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3513,9 +3492,9 @@ namespace Java.Net
 				/// </java-name>
 				public virtual byte TTL
 				{
-						[Dot42.DexImport("getTTL", "()B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getTTL", "()B", AccessFlags = 1)]
 						get{ return default(byte); }
-						[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("setTTL", "(B)V", AccessFlags = 1)]
 						set{ }
 				}
 
@@ -3556,7 +3535,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NetPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NetPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3740,7 +3719,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PasswordAuthentication() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PasswordAuthentication() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3934,7 +3913,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Proxy() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Proxy() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5386,7 +5365,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SocketPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SocketPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5524,7 +5503,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal URISyntaxException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal URISyntaxException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5780,7 +5759,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal URL() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal URL() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6066,7 +6045,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal URLClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal URLClassLoader() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6393,7 +6372,7 @@ namespace Java.Net
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal URLConnection() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal URLConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

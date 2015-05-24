@@ -162,7 +162,7 @@ namespace Java.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DataTruncation() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DataTruncation() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -300,7 +300,7 @@ namespace Java.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Date() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Date() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -604,7 +604,7 @@ namespace Java.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DriverPropertyInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DriverPropertyInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -794,7 +794,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(JI)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(JI)[B", AccessFlags = 1025)]
 				byte[] GetBytes(long pos, int length) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -819,7 +819,7 @@ namespace Java.Sql
 				/// position
 				/// </java-name>
 				[Dot42.DexImport("position", "([BJ)J", AccessFlags = 1025)]
-				long Position(sbyte[] sByte, long int64) /* MethodBuilder.Create */ ;
+				long Position(byte[] @byte, long int64) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Gets a stream that can be used to write binary data to this <c>Blob </c> .</para> <para></para>        
@@ -843,7 +843,7 @@ namespace Java.Sql
 				/// setBytes
 				/// </java-name>
 				[Dot42.DexImport("setBytes", "(J[B)I", AccessFlags = 1025)]
-				int SetBytes(long pos, sbyte[] theBytes) /* MethodBuilder.Create */ ;
+				int SetBytes(long pos, byte[] theBytes) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Writes a portion of a specified byte array to this <c>Blob </c> . Returns the number of bytes written.</para> <para></para>        
@@ -855,7 +855,7 @@ namespace Java.Sql
 				/// setBytes
 				/// </java-name>
 				[Dot42.DexImport("setBytes", "(J[BII)I", AccessFlags = 1025)]
-				int SetBytes(long pos, sbyte[] theBytes, int offset, int len) /* MethodBuilder.Create */ ;
+				int SetBytes(long pos, byte[] theBytes, int offset, int len) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Truncate the value of this <c>Blob </c> object to a specified length in bytes.</para> <para></para>        
@@ -1019,7 +1019,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(I)B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByte", "(I)B", AccessFlags = 1025)]
 				byte GetByte(int parameterIndex) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1031,7 +1031,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(Ljava/lang/String;)B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByte", "(Ljava/lang/String;)B", AccessFlags = 1025)]
 				byte GetByte(string parameterIndex) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1043,7 +1043,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(I)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(I)[B", AccessFlags = 1025)]
 				byte[] GetBytes(int parameterIndex) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1055,7 +1055,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1025)]
 				byte[] GetBytes(string parameterIndex) /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -1558,7 +1558,7 @@ namespace Java.Sql
 				/// setByte
 				/// </java-name>
 				[Dot42.DexImport("setByte", "(Ljava/lang/String;B)V", AccessFlags = 1025)]
-				void SetByte(string parameterName, sbyte theByte) /* MethodBuilder.Create */ ;
+				void SetByte(string parameterName, byte theByte) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Sets the value of a specified parameter to a supplied array of bytes. The array is mapped to <c>VARBINARY </c> or else <c>LONGVARBINARY </c> in the connected database.</para> <para></para>        
@@ -1567,7 +1567,7 @@ namespace Java.Sql
 				/// setBytes
 				/// </java-name>
 				[Dot42.DexImport("setBytes", "(Ljava/lang/String;[B)V", AccessFlags = 1025)]
-				void SetBytes(string parameterName, sbyte[] theBytes) /* MethodBuilder.Create */ ;
+				void SetBytes(string parameterName, byte[] theBytes) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// setCharacterStream
@@ -5853,7 +5853,7 @@ namespace Java.Sql
 				/// setByte
 				/// </java-name>
 				[Dot42.DexImport("setByte", "(IB)V", AccessFlags = 1025)]
-				void SetByte(int parameterIndex, sbyte theByte) /* MethodBuilder.Create */ ;
+				void SetByte(int parameterIndex, byte theByte) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Sets the value of a specified parameter to a supplied array of bytes. The array is mapped to a <c>VARBINARY </c> or <c>LONGVARBINARY </c> in the database.</para> <para></para>        
@@ -5862,7 +5862,7 @@ namespace Java.Sql
 				/// setBytes
 				/// </java-name>
 				[Dot42.DexImport("setBytes", "(I[B)V", AccessFlags = 1025)]
-				void SetBytes(int parameterIndex, sbyte[] theBytes) /* MethodBuilder.Create */ ;
+				void SetBytes(int parameterIndex, byte[] theBytes) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Sets the value of a specified parameter to the character content of a  <c>Reader </c> object, with the specified length of character data. </para> <para>Data is read from the <c>Reader </c> until end-of-file is reached or the specified number of characters are copied.</para> <para></para>        
@@ -6460,25 +6460,25 @@ namespace Java.Sql
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(I)B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByte", "(I)B", AccessFlags = 1025)]
 				byte GetByte(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(Ljava/lang/String;)B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByte", "(Ljava/lang/String;)B", AccessFlags = 1025)]
 				byte GetByte(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(I)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(I)[B", AccessFlags = 1025)]
 				byte[] GetBytes(int int32) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// getBytes
 				/// </java-name>
-				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("getBytes", "(Ljava/lang/String;)[B", AccessFlags = 1025)]
 				byte[] GetBytes(string @string) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
@@ -6852,25 +6852,25 @@ namespace Java.Sql
 				/// updateByte
 				/// </java-name>
 				[Dot42.DexImport("updateByte", "(IB)V", AccessFlags = 1025)]
-				void UpdateByte(int int32, sbyte sByte) /* MethodBuilder.Create */ ;
+				void UpdateByte(int int32, byte @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// updateByte
 				/// </java-name>
 				[Dot42.DexImport("updateByte", "(Ljava/lang/String;B)V", AccessFlags = 1025)]
-				void UpdateByte(string @string, sbyte sByte) /* MethodBuilder.Create */ ;
+				void UpdateByte(string @string, byte @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// updateBytes
 				/// </java-name>
 				[Dot42.DexImport("updateBytes", "(I[B)V", AccessFlags = 1025)]
-				void UpdateBytes(int int32, sbyte[] sByte) /* MethodBuilder.Create */ ;
+				void UpdateBytes(int int32, byte[] @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// updateBytes
 				/// </java-name>
 				[Dot42.DexImport("updateBytes", "(Ljava/lang/String;[B)V", AccessFlags = 1025)]
-				void UpdateBytes(string @string, sbyte[] sByte) /* MethodBuilder.Create */ ;
+				void UpdateBytes(string @string, byte[] @byte) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// updateCharacterStream
@@ -7879,7 +7879,7 @@ namespace Java.Sql
 				/// </java-name>
 				byte[] Bytes
 				{
-						[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getBytes", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -8015,7 +8015,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// readByte
 				/// </java-name>
-				[Dot42.DexImport("readByte", "()B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("readByte", "()B", AccessFlags = 1025)]
 				byte ReadByte() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -8099,7 +8099,7 @@ namespace Java.Sql
 				/// <java-name>
 				/// readBytes
 				/// </java-name>
-				[Dot42.DexImport("readBytes", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+				[Dot42.DexImport("readBytes", "()[B", AccessFlags = 1025)]
 				byte[] ReadBytes() /* MethodBuilder.Create */ ;
 
 				/// <summary>
@@ -8343,7 +8343,7 @@ namespace Java.Sql
 				/// writeByte
 				/// </java-name>
 				[Dot42.DexImport("writeByte", "(B)V", AccessFlags = 1025)]
-				void WriteByte(sbyte theByte) /* MethodBuilder.Create */ ;
+				void WriteByte(byte theByte) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Write a <c>short </c> value into the output stream.</para> <para></para>        
@@ -8406,7 +8406,7 @@ namespace Java.Sql
 				/// writeBytes
 				/// </java-name>
 				[Dot42.DexImport("writeBytes", "([B)V", AccessFlags = 1025)]
-				void WriteBytes(sbyte[] theBytes) /* MethodBuilder.Create */ ;
+				void WriteBytes(byte[] theBytes) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Write a <c>java.sql.Date </c> value into the output stream.</para> <para> <para>Date </para></para>        
@@ -9870,7 +9870,7 @@ namespace Java.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SQLPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SQLPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10378,7 +10378,7 @@ namespace Java.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Time() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Time() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -10580,7 +10580,7 @@ namespace Java.Sql
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Timestamp() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Timestamp() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -364,7 +364,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getRemoteDevice
 				/// </java-name>
-				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
+				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1, IgnoreFromJava = true)]
 				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Bluetooth.BluetoothDevice);
@@ -373,7 +373,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getRemoteDevice
 				/// </java-name>
-				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getRemoteDevice", "([B)Landroid/bluetooth/BluetoothDevice;", AccessFlags = 1)]
 				public global::Android.Bluetooth.BluetoothDevice GetRemoteDevice(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Bluetooth.BluetoothDevice);
@@ -722,7 +722,7 @@ namespace Android.Bluetooth
 						/// onLeScan
 						/// </java-name>
 						[Dot42.DexImport("onLeScan", "(Landroid/bluetooth/BluetoothDevice;I[B)V", AccessFlags = 1025)]
-						void OnLeScan(global::Android.Bluetooth.BluetoothDevice device, int rssi, sbyte[] scanRecord) /* MethodBuilder.Create */ ;
+						void OnLeScan(global::Android.Bluetooth.BluetoothDevice device, int rssi, byte[] scanRecord) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -2743,7 +2743,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// setPin
 				/// </java-name>
-				[Dot42.DexImport("setPin", "([B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("setPin", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public bool SetPin(sbyte[] pin) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -2758,7 +2758,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// setPin
 				/// </java-name>
-				[Dot42.DexImport("setPin", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setPin", "([B)Z", AccessFlags = 1)]
 				public bool SetPin(byte[] pin) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3678,7 +3678,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getValue
 				/// </java-name>
-				[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetValue() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3732,7 +3732,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// setValue
 				/// </java-name>
-				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool SetValue(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3741,7 +3741,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// setValue
 				/// </java-name>
-				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1)]
 				public virtual bool SetValue(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3787,7 +3787,7 @@ namespace Android.Bluetooth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BluetoothGattCharacteristic() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BluetoothGattCharacteristic() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3909,7 +3909,7 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public virtual byte[] Value
 				{
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -4030,7 +4030,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// getValue
 				/// </java-name>
-				[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetValue() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -4045,7 +4045,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// setValue
 				/// </java-name>
-				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool SetValue(sbyte[] value) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -4060,14 +4060,14 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// setValue
 				/// </java-name>
-				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setValue", "([B)Z", AccessFlags = 1)]
 				public virtual bool SetValue(byte[] value) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BluetoothGattDescriptor() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BluetoothGattDescriptor() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -4127,7 +4127,7 @@ namespace Android.Bluetooth
 				/// </java-name>
 				public virtual byte[] Value
 				{
-						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getValue", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -4191,7 +4191,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// sendResponse
 				/// </java-name>
-				[Dot42.DexImport("sendResponse", "(Landroid/bluetooth/BluetoothDevice;III[B)Z", AccessFlags = 1)]
+				[Dot42.DexImport("sendResponse", "(Landroid/bluetooth/BluetoothDevice;III[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public bool SendResponse(global::Android.Bluetooth.BluetoothDevice device, int requestId, int status, int offset, sbyte[] value) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -4203,7 +4203,7 @@ namespace Android.Bluetooth
 				/// <java-name>
 				/// sendResponse
 				/// </java-name>
-				[Dot42.DexImport("sendResponse", "(Landroid/bluetooth/BluetoothDevice;III[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("sendResponse", "(Landroid/bluetooth/BluetoothDevice;III[B)Z", AccessFlags = 1)]
 				public bool SendResponse(global::Android.Bluetooth.BluetoothDevice device, int requestId, int status, int offset, byte[] value) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -4390,7 +4390,7 @@ namespace Android.Bluetooth
 				/// onCharacteristicWriteRequest
 				/// </java-name>
 				[Dot42.DexImport("onCharacteristicWriteRequest", "(Landroid/bluetooth/BluetoothDevice;ILandroid/bluetooth/BluetoothGattCharacterist" +
-    "ic;ZZI[B)V", AccessFlags = 1)]
+    "ic;ZZI[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void OnCharacteristicWriteRequest(global::Android.Bluetooth.BluetoothDevice device, int requestId, global::Android.Bluetooth.BluetoothGattCharacteristic characteristic, bool preparedWrite, bool responseNeeded, int offset, sbyte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4402,7 +4402,7 @@ namespace Android.Bluetooth
 				/// onCharacteristicWriteRequest
 				/// </java-name>
 				[Dot42.DexImport("onCharacteristicWriteRequest", "(Landroid/bluetooth/BluetoothDevice;ILandroid/bluetooth/BluetoothGattCharacterist" +
-    "ic;ZZI[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+    "ic;ZZI[B)V", AccessFlags = 1)]
 				public virtual void OnCharacteristicWriteRequest(global::Android.Bluetooth.BluetoothDevice device, int requestId, global::Android.Bluetooth.BluetoothGattCharacteristic characteristic, bool preparedWrite, bool responseNeeded, int offset, byte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4426,7 +4426,7 @@ namespace Android.Bluetooth
 				/// onDescriptorWriteRequest
 				/// </java-name>
 				[Dot42.DexImport("onDescriptorWriteRequest", "(Landroid/bluetooth/BluetoothDevice;ILandroid/bluetooth/BluetoothGattDescriptor;Z" +
-    "ZI[B)V", AccessFlags = 1)]
+    "ZI[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void OnDescriptorWriteRequest(global::Android.Bluetooth.BluetoothDevice device, int requestId, global::Android.Bluetooth.BluetoothGattDescriptor descriptor, bool preparedWrite, bool responseNeeded, int offset, sbyte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4438,7 +4438,7 @@ namespace Android.Bluetooth
 				/// onDescriptorWriteRequest
 				/// </java-name>
 				[Dot42.DexImport("onDescriptorWriteRequest", "(Landroid/bluetooth/BluetoothDevice;ILandroid/bluetooth/BluetoothGattDescriptor;Z" +
-    "ZI[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+    "ZI[B)V", AccessFlags = 1)]
 				public virtual void OnDescriptorWriteRequest(global::Android.Bluetooth.BluetoothDevice device, int requestId, global::Android.Bluetooth.BluetoothGattDescriptor descriptor, bool preparedWrite, bool responseNeeded, int offset, byte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4552,7 +4552,7 @@ namespace Android.Bluetooth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BluetoothGattService() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BluetoothGattService() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -1908,7 +1908,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// calledPartyBCDToString
 				/// </java-name>
-				[Dot42.DexImport("calledPartyBCDToString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
+				[Dot42.DexImport("calledPartyBCDToString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static string CalledPartyBCDToString(sbyte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -1923,7 +1923,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// calledPartyBCDToString
 				/// </java-name>
-				[Dot42.DexImport("calledPartyBCDToString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("calledPartyBCDToString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
 				public static string CalledPartyBCDToString(byte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -1935,7 +1935,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// calledPartyBCDFragmentToString
 				/// </java-name>
-				[Dot42.DexImport("calledPartyBCDFragmentToString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
+				[Dot42.DexImport("calledPartyBCDFragmentToString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static string CalledPartyBCDFragmentToString(sbyte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -1947,7 +1947,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// calledPartyBCDFragmentToString
 				/// </java-name>
-				[Dot42.DexImport("calledPartyBCDFragmentToString", "([BII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("calledPartyBCDFragmentToString", "([BII)Ljava/lang/String;", AccessFlags = 9)]
 				public static string CalledPartyBCDFragmentToString(byte[] bytes, int offset, int length) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -1980,7 +1980,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// networkPortionToCalledPartyBCD
 				/// </java-name>
-				[Dot42.DexImport("networkPortionToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9)]
+				[Dot42.DexImport("networkPortionToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] JavaNetworkPortionToCalledPartyBCD(string s) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -1992,7 +1992,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// networkPortionToCalledPartyBCD
 				/// </java-name>
-				[Dot42.DexImport("networkPortionToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("networkPortionToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9)]
 				public static byte[] NetworkPortionToCalledPartyBCD(string s) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2004,7 +2004,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// networkPortionToCalledPartyBCDWithLength
 				/// </java-name>
-				[Dot42.DexImport("networkPortionToCalledPartyBCDWithLength", "(Ljava/lang/String;)[B", AccessFlags = 9)]
+				[Dot42.DexImport("networkPortionToCalledPartyBCDWithLength", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] JavaNetworkPortionToCalledPartyBCDWithLength(string s) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2016,7 +2016,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// networkPortionToCalledPartyBCDWithLength
 				/// </java-name>
-				[Dot42.DexImport("networkPortionToCalledPartyBCDWithLength", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("networkPortionToCalledPartyBCDWithLength", "(Ljava/lang/String;)[B", AccessFlags = 9)]
 				public static byte[] NetworkPortionToCalledPartyBCDWithLength(string s) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2031,7 +2031,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// numberToCalledPartyBCD
 				/// </java-name>
-				[Dot42.DexImport("numberToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9)]
+				[Dot42.DexImport("numberToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] JavaNumberToCalledPartyBCD(string number) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2046,7 +2046,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// numberToCalledPartyBCD
 				/// </java-name>
-				[Dot42.DexImport("numberToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("numberToCalledPartyBCD", "(Ljava/lang/String;)[B", AccessFlags = 9)]
 				public static byte[] NumberToCalledPartyBCD(string number) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -2946,7 +2946,7 @@ namespace Android.Telephony
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 1)]
+    "endingIntent;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, sbyte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2958,7 +2958,7 @@ namespace Android.Telephony
 				/// sendDataMessage
 				/// </java-name>
 				[Dot42.DexImport("sendDataMessage", "(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/P" +
-    "endingIntent;)V", AccessFlags = 1, IgnoreFromJava = true)]
+    "endingIntent;)V", AccessFlags = 1)]
 				public void SendDataMessage(string destinationAddress, string scAddress, short destinationPort, byte[] data, global::Android.App.PendingIntent sentIntent, global::Android.App.PendingIntent deliveryIntent) /* MethodBuilder.Create */ 
 				{
 				}
@@ -3056,7 +3056,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
-				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9)]
+				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Telephony.SmsMessage CreateFromPdu(sbyte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage);
@@ -3068,7 +3068,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// createFromPdu
 				/// </java-name>
-				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("createFromPdu", "([B)Landroid/telephony/SmsMessage;", AccessFlags = 9)]
 				public static global::Android.Telephony.SmsMessage CreateFromPdu(byte[] pdu) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage);
@@ -3130,7 +3130,7 @@ namespace Android.Telephony
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
-    ";", AccessFlags = 9)]
+    ";", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string scAddress, string destinationAddress, short destinationPort, sbyte[] data, bool statusReportRequested) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
@@ -3146,7 +3146,7 @@ namespace Android.Telephony
 				/// getSubmitPdu
 				/// </java-name>
 				[Dot42.DexImport("getSubmitPdu", "(Ljava/lang/String;Ljava/lang/String;S[BZ)Landroid/telephony/SmsMessage$SubmitPdu" +
-    ";", AccessFlags = 9, IgnoreFromJava = true)]
+    ";", AccessFlags = 9)]
 				public static global::Android.Telephony.SmsMessage.SubmitPdu GetSubmitPdu(string scAddress, string destinationAddress, short destinationPort, byte[] data, bool statusReportRequested) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Telephony.SmsMessage.SubmitPdu);
@@ -3170,7 +3170,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// getUserData
 				/// </java-name>
-				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetUserData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3185,7 +3185,7 @@ namespace Android.Telephony
 				/// <java-name>
 				/// getPdu
 				/// </java-name>
-				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetPdu() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3406,7 +3406,7 @@ namespace Android.Telephony
 				/// </java-name>
 				public virtual byte[] UserData
 				{
-						[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getUserData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -3421,7 +3421,7 @@ namespace Android.Telephony
 				/// </java-name>
 				public virtual byte[] Pdu
 				{
-						[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getPdu", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

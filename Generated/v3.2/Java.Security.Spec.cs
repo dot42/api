@@ -20,7 +20,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DSAParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DSAParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -91,7 +91,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DSAPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DSAPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -177,7 +177,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DSAPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DSAPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -308,7 +308,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ECFieldF2m() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ECFieldF2m() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -423,7 +423,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ECFieldFp() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ECFieldFp() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -478,7 +478,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ECGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ECGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -519,7 +519,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ECParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ECParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -642,7 +642,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ECPoint() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ECPoint() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -697,7 +697,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ECPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ECPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -752,7 +752,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ECPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ECPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -801,7 +801,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>EllipticCurve </c> with the specified field, coefficients and seed.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECField;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECField;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public EllipticCurve(global::Java.Security.Spec.IECField field, global::Java.Math.BigInteger a, global::Java.Math.BigInteger b, sbyte[] seed) /* MethodBuilder.Create */ 
 				{
 				}
@@ -809,7 +809,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>EllipticCurve </c> with the specified field, coefficients and seed.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECField;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/security/spec/ECField;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V", AccessFlags = 1)]
 				public EllipticCurve(global::Java.Security.Spec.IECField field, global::Java.Math.BigInteger a, global::Java.Math.BigInteger b, byte[] seed) /* MethodBuilder.Create */ 
 				{
 				}
@@ -831,7 +831,7 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getSeed
 				/// </java-name>
-				[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetSeed() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -868,7 +868,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EllipticCurve() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EllipticCurve() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -928,7 +928,7 @@ namespace Java.Security.Spec
 				/// </java-name>
 				public virtual byte[] Seed
 				{
-						[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSeed", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -947,7 +947,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public EncodedKeySpec(sbyte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
@@ -955,7 +955,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public EncodedKeySpec(byte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
@@ -969,14 +969,14 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -991,7 +991,7 @@ namespace Java.Security.Spec
 				/// </java-name>
 				public virtual byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1180,7 +1180,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MGF1ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MGF1ParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1214,7 +1214,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>PKCS8EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public PKCS8EncodedKeySpec(sbyte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1222,7 +1222,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>PKCS8EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public PKCS8EncodedKeySpec(byte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1236,14 +1236,14 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public override sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PKCS8EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PKCS8EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1258,7 +1258,7 @@ namespace Java.Security.Spec
 				/// </java-name>
 				public override byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1315,7 +1315,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PSSParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PSSParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1431,7 +1431,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSAKeyGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSAKeyGenParameterSpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1488,7 +1488,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSAMultiPrimePrivateCrtKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSAMultiPrimePrivateCrtKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1618,7 +1618,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSAOtherPrimeInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSAOtherPrimeInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1690,7 +1690,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSAPrivateCrtKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSAPrivateCrtKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1805,7 +1805,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSAPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSAPrivateKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1860,7 +1860,7 @@ namespace Java.Security.Spec
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RSAPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RSAPublicKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1909,7 +1909,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>X509EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public X509EncodedKeySpec(sbyte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1917,7 +1917,7 @@ namespace Java.Security.Spec
 				/// <summary>
 				///  <para>Creates a new <c>X509EncodedKeySpec </c> with the specified encoded key bytes.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public X509EncodedKeySpec(byte[] encodedKey) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1931,14 +1931,14 @@ namespace Java.Security.Spec
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public override sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal X509EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal X509EncodedKeySpec() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1953,7 +1953,7 @@ namespace Java.Security.Spec
 				/// </java-name>
 				public override byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

@@ -994,7 +994,7 @@ namespace Android.Opengl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EGLObjectHandle() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EGLObjectHandle() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1302,7 +1302,7 @@ namespace Android.Opengl
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ETC1Texture() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ETC1Texture() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -4325,7 +4325,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glColor4ub
 				/// </java-name>
-				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265)]
+				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlColor4ub(sbyte red, sbyte green, sbyte blue, sbyte alpha) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4333,7 +4333,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glColor4ub
 				/// </java-name>
-				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265)]
 				public static void GlColor4ub(byte red, byte green, byte blue, byte alpha) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8378,7 +8378,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveAttrib
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveAttrib", "(III[II[II[II[BI)V", AccessFlags = 265)]
+				[Dot42.DexImport("glGetActiveAttrib", "(III[II[II[II[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlGetActiveAttrib(int program, int index, int bufsize, int[] length, int lengthOffset, int[] size, int sizeOffset, int[] type, int typeOffset, sbyte[] name, int nameOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8386,7 +8386,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveAttrib
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveAttrib", "(III[II[II[II[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glGetActiveAttrib", "(III[II[II[II[BI)V", AccessFlags = 265)]
 				public static void GlGetActiveAttrib(int program, int index, int bufsize, int[] length, int lengthOffset, int[] size, int sizeOffset, int[] type, int typeOffset, byte[] name, int nameOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8394,7 +8394,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveAttrib
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveAttrib", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265)]
+				[Dot42.DexImport("glGetActiveAttrib", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlGetActiveAttrib(int program, int index, int bufsize, global::Java.Nio.IntBuffer length, global::Java.Nio.IntBuffer size, global::Java.Nio.IntBuffer type, sbyte name) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8402,7 +8402,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveAttrib
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveAttrib", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glGetActiveAttrib", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265)]
 				public static void GlGetActiveAttrib(int program, int index, int bufsize, global::Java.Nio.IntBuffer length, global::Java.Nio.IntBuffer size, global::Java.Nio.IntBuffer type, byte name) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8428,7 +8428,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveUniform
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveUniform", "(III[II[II[II[BI)V", AccessFlags = 265)]
+				[Dot42.DexImport("glGetActiveUniform", "(III[II[II[II[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlGetActiveUniform(int program, int index, int bufsize, int[] length, int lengthOffset, int[] size, int sizeOffset, int[] type, int typeOffset, sbyte[] name, int nameOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8436,7 +8436,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveUniform
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveUniform", "(III[II[II[II[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glGetActiveUniform", "(III[II[II[II[BI)V", AccessFlags = 265)]
 				public static void GlGetActiveUniform(int program, int index, int bufsize, int[] length, int lengthOffset, int[] size, int sizeOffset, int[] type, int typeOffset, byte[] name, int nameOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8444,7 +8444,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveUniform
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveUniform", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265)]
+				[Dot42.DexImport("glGetActiveUniform", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlGetActiveUniform(int program, int index, int bufsize, global::Java.Nio.IntBuffer length, global::Java.Nio.IntBuffer size, global::Java.Nio.IntBuffer type, sbyte name) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8452,7 +8452,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetActiveUniform
 				/// </java-name>
-				[Dot42.DexImport("glGetActiveUniform", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glGetActiveUniform", "(IIILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;B)V", AccessFlags = 265)]
 				public static void GlGetActiveUniform(int program, int index, int bufsize, global::Java.Nio.IntBuffer length, global::Java.Nio.IntBuffer size, global::Java.Nio.IntBuffer type, byte name) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8674,7 +8674,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetShaderSource
 				/// </java-name>
-				[Dot42.DexImport("glGetShaderSource", "(II[II[BI)V", AccessFlags = 265)]
+				[Dot42.DexImport("glGetShaderSource", "(II[II[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlGetShaderSource(int shader, int bufsize, int[] length, int lengthOffset, sbyte[] source, int sourceOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8682,7 +8682,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetShaderSource
 				/// </java-name>
-				[Dot42.DexImport("glGetShaderSource", "(II[II[BI)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glGetShaderSource", "(II[II[BI)V", AccessFlags = 265)]
 				public static void GlGetShaderSource(int shader, int bufsize, int[] length, int lengthOffset, byte[] source, int sourceOffset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8690,7 +8690,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetShaderSource
 				/// </java-name>
-				[Dot42.DexImport("glGetShaderSource", "(IILjava/nio/IntBuffer;B)V", AccessFlags = 265)]
+				[Dot42.DexImport("glGetShaderSource", "(IILjava/nio/IntBuffer;B)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlGetShaderSource(int shader, int bufsize, global::Java.Nio.IntBuffer length, sbyte source) /* MethodBuilder.Create */ 
 				{
 				}
@@ -8698,7 +8698,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glGetShaderSource
 				/// </java-name>
-				[Dot42.DexImport("glGetShaderSource", "(IILjava/nio/IntBuffer;B)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glGetShaderSource", "(IILjava/nio/IntBuffer;B)V", AccessFlags = 265)]
 				public static void GlGetShaderSource(int shader, int bufsize, global::Java.Nio.IntBuffer length, byte source) /* MethodBuilder.Create */ 
 				{
 				}
@@ -9504,7 +9504,7 @@ namespace Android.Opengl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GLException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GLException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9785,7 +9785,7 @@ namespace Android.Opengl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GLSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GLSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

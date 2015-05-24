@@ -38,7 +38,7 @@ namespace Javax.Security.Auth.X500
 				/// <summary>
 				///  <para>Creates a new X500Principal from a given ASN.1 DER encoding of a distinguished name.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public X500Principal(sbyte[] @in) /* MethodBuilder.Create */ 
 				{
 				}
@@ -46,7 +46,7 @@ namespace Javax.Security.Auth.X500
 				/// <summary>
 				///  <para>Creates a new X500Principal from a given ASN.1 DER encoding of a distinguished name.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "([B)V", AccessFlags = 1)]
 				public X500Principal(byte[] @in) /* MethodBuilder.Create */ 
 				{
 				}
@@ -96,7 +96,7 @@ namespace Javax.Security.Auth.X500
 				/// <java-name>
 				/// getEncoded
 				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -158,7 +158,7 @@ namespace Javax.Security.Auth.X500
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal X500Principal() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal X500Principal() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -173,7 +173,7 @@ namespace Javax.Security.Auth.X500
 				/// </java-name>
 				public byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

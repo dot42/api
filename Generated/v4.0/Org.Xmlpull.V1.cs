@@ -996,7 +996,7 @@ namespace Org.Xmlpull.V1
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal XmlPullParserException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal XmlPullParserException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

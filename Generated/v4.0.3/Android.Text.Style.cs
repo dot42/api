@@ -75,7 +75,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbsoluteSizeSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbsoluteSizeSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -163,7 +163,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BackgroundColorSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BackgroundColorSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -426,7 +426,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrawableMarginSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrawableMarginSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -628,7 +628,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ForegroundColorSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ForegroundColorSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -717,7 +717,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IAlignmentSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IAlignmentSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -797,7 +797,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IconMarginSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IconMarginSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -940,7 +940,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ILeadingMarginSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ILeadingMarginSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1109,7 +1109,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ImageSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ImageSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1191,7 +1191,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ITabStopSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ITabStopSpan_Standard() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1266,7 +1266,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MaskFilterSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MaskFilterSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1435,7 +1435,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RasterizerSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RasterizerSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1510,7 +1510,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RelativeSizeSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RelativeSizeSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1647,7 +1647,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ScaleXSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ScaleXSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1808,7 +1808,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StyleSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StyleSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2053,7 +2053,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SuggestionSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SuggestionSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2268,7 +2268,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TextAppearanceSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TextAppearanceSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2409,7 +2409,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TypefaceSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TypefaceSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2556,7 +2556,7 @@ namespace Android.Text.Style
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal URLSpan() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal URLSpan() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -2971,7 +2971,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glColor4ub
 				/// </java-name>
-				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265)]
+				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265, IgnoreFromJava = true)]
 				public static void GlColor4ub(sbyte red, sbyte green, sbyte blue, sbyte alpha) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2979,7 +2979,7 @@ namespace Android.Opengl
 				/// <java-name>
 				/// glColor4ub
 				/// </java-name>
-				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265, IgnoreFromJava = true)]
+				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 265)]
 				public static void GlColor4ub(byte red, byte green, byte blue, byte alpha) /* MethodBuilder.Create */ 
 				{
 				}
@@ -4990,7 +4990,7 @@ namespace Android.Opengl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GLException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GLException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5237,7 +5237,7 @@ namespace Android.Opengl
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal GLSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal GLSurfaceView() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -49,7 +49,7 @@ namespace Android.Print.Pdf
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrintedPdfDocument() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrintedPdfDocument() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

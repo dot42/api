@@ -50,18 +50,6 @@ namespace Javax.Security.Cert
 				}
 
 				/// <summary>
-				///  <para>Returns the encoded representation for this certificate.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the encoded representation for this certificate. </para>
-				/// </returns>
-				/// <java-name>
-				/// getEncoded
-				/// </java-name>
-				[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetEncoded() /* MethodBuilder.Create */ ;
-
-				/// <summary>
 				///  <para>Verifies that this certificate was signed with the given public key.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
@@ -105,7 +93,7 @@ namespace Javax.Security.Cert
 				/// </java-name>
 				public abstract byte[] Encoded
 				{
-						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEncoded", "()[B", AccessFlags = 1025)]
 						get;
 				}
 
@@ -308,7 +296,7 @@ namespace Javax.Security.Cert
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "([B)Ljavax/security/cert/X509Certificate;", AccessFlags = 25)]
+				[Dot42.DexImport("getInstance", "([B)Ljavax/security/cert/X509Certificate;", AccessFlags = 25, IgnoreFromJava = true)]
 				public static global::Javax.Security.Cert.X509Certificate GetInstance(sbyte[] inStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Security.Cert.X509Certificate);
@@ -323,7 +311,7 @@ namespace Javax.Security.Cert
 				/// <java-name>
 				/// getInstance
 				/// </java-name>
-				[Dot42.DexImport("getInstance", "([B)Ljavax/security/cert/X509Certificate;", AccessFlags = 25, IgnoreFromJava = true)]
+				[Dot42.DexImport("getInstance", "([B)Ljavax/security/cert/X509Certificate;", AccessFlags = 25)]
 				public static global::Javax.Security.Cert.X509Certificate GetInstance(byte[] inStream) /* MethodBuilder.Create */ 
 				{
 						return default(global::Javax.Security.Cert.X509Certificate);
@@ -352,18 +340,6 @@ namespace Javax.Security.Cert
 				/// </java-name>
 				[Dot42.DexImport("checkValidity", "(Ljava/util/Date;)V", AccessFlags = 1025)]
 				public abstract void CheckValidity(global::Java.Util.Date date) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>Returns the parameters of the signature algorithm in DER-encoded format.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>the parameters of the signature algorithm, or null if none are used. </para>
-				/// </returns>
-				/// <java-name>
-				/// getSigAlgParams
-				/// </java-name>
-				[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
-				public abstract sbyte[] JavaGetSigAlgParams() /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Returns the certificates <c>version </c> (version number). </para> <para>The version defined is ASN.1:</para> <para> <pre>
@@ -510,7 +486,7 @@ namespace Javax.Security.Cert
 				/// </java-name>
 				public abstract byte[] SigAlgParams
 				{
-						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025, IgnoreFromJava = true)]
+						[Dot42.DexImport("getSigAlgParams", "()[B", AccessFlags = 1025)]
 						get;
 				}
 

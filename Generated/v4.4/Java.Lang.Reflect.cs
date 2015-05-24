@@ -154,7 +154,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(Ljava/lang/Object;I)B", AccessFlags = 9)]
+				[Dot42.DexImport("getByte", "(Ljava/lang/Object;I)B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte JavaGetByte(object array, int index) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -166,7 +166,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(Ljava/lang/Object;I)B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByte", "(Ljava/lang/Object;I)B", AccessFlags = 9)]
 				public static byte GetByte(object array, int index) /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -308,7 +308,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// setByte
 				/// </java-name>
-				[Dot42.DexImport("setByte", "(Ljava/lang/Object;IB)V", AccessFlags = 9)]
+				[Dot42.DexImport("setByte", "(Ljava/lang/Object;IB)V", AccessFlags = 9, IgnoreFromJava = true)]
 				public static void SetByte(object array, int index, sbyte value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -319,7 +319,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// setByte
 				/// </java-name>
-				[Dot42.DexImport("setByte", "(Ljava/lang/Object;IB)V", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("setByte", "(Ljava/lang/Object;IB)V", AccessFlags = 9)]
 				public static void SetByte(object array, int index, byte value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -815,7 +815,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(Ljava/lang/Object;)B", AccessFlags = 1)]
+				[Dot42.DexImport("getByte", "(Ljava/lang/Object;)B", AccessFlags = 1, IgnoreFromJava = true)]
 				public sbyte JavaGetByte(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte);
@@ -830,7 +830,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// getByte
 				/// </java-name>
-				[Dot42.DexImport("getByte", "(Ljava/lang/Object;)B", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getByte", "(Ljava/lang/Object;)B", AccessFlags = 1)]
 				public byte GetByte(object @object) /* MethodBuilder.Create */ 
 				{
 						return default(byte);
@@ -969,7 +969,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// setByte
 				/// </java-name>
-				[Dot42.DexImport("setByte", "(Ljava/lang/Object;B)V", AccessFlags = 1)]
+				[Dot42.DexImport("setByte", "(Ljava/lang/Object;B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public void SetByte(object @object, sbyte value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -980,7 +980,7 @@ namespace Java.Lang.Reflect
 				/// <java-name>
 				/// setByte
 				/// </java-name>
-				[Dot42.DexImport("setByte", "(Ljava/lang/Object;B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("setByte", "(Ljava/lang/Object;B)V", AccessFlags = 1)]
 				public void SetByte(object @object, byte value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -2404,7 +2404,7 @@ namespace Java.Lang.Reflect
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Proxy() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Proxy() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2440,7 +2440,7 @@ namespace Java.Lang.Reflect
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ReflectPermission() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ReflectPermission() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2482,7 +2482,7 @@ namespace Java.Lang.Reflect
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UndeclaredThrowableException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UndeclaredThrowableException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

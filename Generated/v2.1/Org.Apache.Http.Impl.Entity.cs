@@ -34,7 +34,7 @@ namespace Org.Apache.Http.Impl.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EntityDeserializer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EntityDeserializer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -72,7 +72,7 @@ namespace Org.Apache.Http.Impl.Entity
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal EntitySerializer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal EntitySerializer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -638,7 +638,7 @@ namespace Javax.Xml.Transform
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TransformerException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TransformerException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

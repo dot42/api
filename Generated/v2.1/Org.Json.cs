@@ -555,7 +555,7 @@ namespace Org.Json
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JSONException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal JSONException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1426,7 +1426,7 @@ namespace Org.Json
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal JSONTokener() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal JSONTokener() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

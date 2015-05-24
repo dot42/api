@@ -217,7 +217,7 @@ namespace Android.Nfc.Cardemulation
 				/// <java-name>
 				/// sendResponseApdu
 				/// </java-name>
-				[Dot42.DexImport("sendResponseApdu", "([B)V", AccessFlags = 17)]
+				[Dot42.DexImport("sendResponseApdu", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
 				public void SendResponseApdu(sbyte[] responseApdu) /* MethodBuilder.Create */ 
 				{
 				}
@@ -228,7 +228,7 @@ namespace Android.Nfc.Cardemulation
 				/// <java-name>
 				/// sendResponseApdu
 				/// </java-name>
-				[Dot42.DexImport("sendResponseApdu", "([B)V", AccessFlags = 17, IgnoreFromJava = true)]
+				[Dot42.DexImport("sendResponseApdu", "([B)V", AccessFlags = 17)]
 				public void SendResponseApdu(byte[] responseApdu) /* MethodBuilder.Create */ 
 				{
 				}
@@ -254,18 +254,6 @@ namespace Android.Nfc.Cardemulation
 				/// processCommandApdu
 				/// </java-name>
 				[Dot42.DexImport("processCommandApdu", "([BLandroid/os/Bundle;)[B", AccessFlags = 1025)]
-				public abstract sbyte[] ProcessCommandApdu(sbyte[] commandApdu, global::Android.OS.Bundle extras) /* MethodBuilder.Create */ ;
-
-				/// <summary>
-				///  <para>This method will be called when a command APDU has been received from a remote device. A response APDU can be provided directly by returning a byte-array in this method. Note that in general response APDUs must be sent as quickly as possible, given the fact that the user is likely holding his device over an NFC reader when this method is called.</para> <para>If there are multiple services that have registered for the same AIDs in their meta-data entry, you will only get called if the user has explicitly selected your service, either as a default or just for the next tap.</para> <para>This method is running on the main thread of your application. If you cannot return a response APDU immediately, return null and use the sendResponseApdu(byte[]) method later.</para> <para></para>        
-				/// </summary>
-				/// <returns>
-				///  <para>a byte-array containing the response APDU, or null if no response APDU can be sent at this point. </para>
-				/// </returns>
-				/// <java-name>
-				/// processCommandApdu
-				/// </java-name>
-				[Dot42.DexImport("processCommandApdu", "([BLandroid/os/Bundle;)[B", AccessFlags = 1025, IgnoreFromJava = true)]
 				public abstract byte[] ProcessCommandApdu(byte[] commandApdu, global::Android.OS.Bundle extras) /* MethodBuilder.Create */ ;
 
 				/// <summary>

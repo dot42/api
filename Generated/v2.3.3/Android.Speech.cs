@@ -45,7 +45,7 @@ namespace Android.Speech
 				/// onBufferReceived
 				/// </java-name>
 				[Dot42.DexImport("onBufferReceived", "([B)V", AccessFlags = 1025)]
-				void OnBufferReceived(sbyte[] buffer) /* MethodBuilder.Create */ ;
+				void OnBufferReceived(byte[] buffer) /* MethodBuilder.Create */ ;
 
 				/// <summary>
 				///  <para>Called after the user stops speaking. </para>        
@@ -206,7 +206,7 @@ namespace Android.Speech
 						/// <java-name>
 						/// bufferReceived
 						/// </java-name>
-						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1)]
+						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 						public virtual void BufferReceived(sbyte[] buffer) /* MethodBuilder.Create */ 
 						{
 						}
@@ -217,7 +217,7 @@ namespace Android.Speech
 						/// <java-name>
 						/// bufferReceived
 						/// </java-name>
-						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("bufferReceived", "([B)V", AccessFlags = 1)]
 						public virtual void BufferReceived(byte[] buffer) /* MethodBuilder.Create */ 
 						{
 						}
@@ -289,7 +289,7 @@ namespace Android.Speech
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Callback() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Callback() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 

@@ -151,7 +151,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicPooledConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicPooledConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -190,7 +190,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicPoolEntry() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicPoolEntry() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -238,7 +238,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicPoolEntryRef() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicPoolEntryRef() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -457,7 +457,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ConnPoolByRoute() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ConnPoolByRoute() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -555,7 +555,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RefQueueWorker() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RefQueueWorker() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -666,7 +666,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RouteSpecificPool() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RouteSpecificPool() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -833,7 +833,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ThreadSafeClientConnManager() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ThreadSafeClientConnManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -896,7 +896,7 @@ namespace Org.Apache.Http.Impl.Conn.Tsccm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal WaitingThread() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal WaitingThread() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

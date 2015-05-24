@@ -20,7 +20,7 @@ namespace Java.Beans
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal IndexedPropertyChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal IndexedPropertyChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -78,7 +78,7 @@ namespace Java.Beans
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PropertyChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PropertyChangeEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -176,7 +176,7 @@ namespace Java.Beans
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PropertyChangeListenerProxy() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PropertyChangeListenerProxy() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -346,7 +346,7 @@ namespace Java.Beans
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PropertyChangeSupport() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PropertyChangeSupport() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -205,7 +205,7 @@ namespace Org.Apache.Http.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AuthScope() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AuthScope() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -360,7 +360,7 @@ namespace Org.Apache.Http.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal BasicUserPrincipal() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal BasicUserPrincipal() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -574,7 +574,7 @@ namespace Org.Apache.Http.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NTCredentials() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NTCredentials() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -665,7 +665,7 @@ namespace Org.Apache.Http.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NTUserPrincipal() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NTUserPrincipal() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -743,7 +743,7 @@ namespace Org.Apache.Http.Auth
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UsernamePasswordCredentials() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UsernamePasswordCredentials() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

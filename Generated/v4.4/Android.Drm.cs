@@ -62,7 +62,7 @@ namespace Android.Drm
 				/// <summary>
 				///  <para>Creates a  <code>DrmConvertedStatus</code> object with the specified parameters.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DrmConvertedStatus(int statusCode, sbyte[] convertedData, int offset) /* MethodBuilder.Create */ 
 				{
 				}
@@ -70,13 +70,13 @@ namespace Android.Drm
 				/// <summary>
 				///  <para>Creates a  <code>DrmConvertedStatus</code> object with the specified parameters.</para> <para></para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(I[BI)V", AccessFlags = 1)]
 				public DrmConvertedStatus(int statusCode, byte[] convertedData, int offset) /* MethodBuilder.Create */ 
 				{
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmConvertedStatus() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmConvertedStatus() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -173,7 +173,7 @@ namespace Android.Drm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmErrorEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmErrorEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -253,7 +253,7 @@ namespace Android.Drm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -314,12 +314,12 @@ namespace Android.Drm
 		public partial class DrmInfo
  /* scope: __dot42__ */ 
 		{
-				[Dot42.DexImport("<init>", "(I[BLjava/lang/String;)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(I[BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public DrmInfo(int int32, sbyte[] sByte, string @string) /* MethodBuilder.Create */ 
 				{
 				}
 
-				[Dot42.DexImport("<init>", "(I[BLjava/lang/String;)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(I[BLjava/lang/String;)V", AccessFlags = 1)]
 				public DrmInfo(int int32, byte[] @byte, string @string) /* MethodBuilder.Create */ 
 				{
 				}
@@ -394,14 +394,14 @@ namespace Android.Drm
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmInfo() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmInfo() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -416,7 +416,7 @@ namespace Android.Drm
 				/// </java-name>
 				public virtual byte[] Data
 				{
-						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -527,7 +527,7 @@ namespace Android.Drm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmInfoEvent() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmInfoEvent() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -656,7 +656,7 @@ namespace Android.Drm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmInfoRequest() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmInfoRequest() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -759,7 +759,7 @@ namespace Android.Drm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmInfoStatus() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmInfoStatus() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1164,7 +1164,7 @@ namespace Android.Drm
 				/// <java-name>
 				/// convertData
 				/// </java-name>
-				[Dot42.DexImport("convertData", "(I[B)Landroid/drm/DrmConvertedStatus;", AccessFlags = 1)]
+				[Dot42.DexImport("convertData", "(I[B)Landroid/drm/DrmConvertedStatus;", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual global::Android.Drm.DrmConvertedStatus ConvertData(int convertId, sbyte[] inputData) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Drm.DrmConvertedStatus);
@@ -1179,7 +1179,7 @@ namespace Android.Drm
 				/// <java-name>
 				/// convertData
 				/// </java-name>
-				[Dot42.DexImport("convertData", "(I[B)Landroid/drm/DrmConvertedStatus;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("convertData", "(I[B)Landroid/drm/DrmConvertedStatus;", AccessFlags = 1)]
 				public virtual global::Android.Drm.DrmConvertedStatus ConvertData(int convertId, byte[] inputData) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Drm.DrmConvertedStatus);
@@ -1201,7 +1201,7 @@ namespace Android.Drm
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmManagerClient() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmManagerClient() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1335,14 +1335,14 @@ namespace Android.Drm
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DrmRights() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DrmRights() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1357,7 +1357,7 @@ namespace Android.Drm
 				/// </java-name>
 				public virtual byte[] Data
 				{
-						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -1880,7 +1880,7 @@ namespace Android.Drm
 				/// <java-name>
 				/// getExtendedMetadataParser
 				/// </java-name>
-				[Dot42.DexImport("getExtendedMetadataParser", "([B)Landroid/drm/DrmUtils$ExtendedMetadataParser;", AccessFlags = 9)]
+				[Dot42.DexImport("getExtendedMetadataParser", "([B)Landroid/drm/DrmUtils$ExtendedMetadataParser;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static global::Android.Drm.DrmUtils.ExtendedMetadataParser GetExtendedMetadataParser(sbyte[] extendedMetadata) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Drm.DrmUtils.ExtendedMetadataParser);
@@ -1892,7 +1892,7 @@ namespace Android.Drm
 				/// <java-name>
 				/// getExtendedMetadataParser
 				/// </java-name>
-				[Dot42.DexImport("getExtendedMetadataParser", "([B)Landroid/drm/DrmUtils$ExtendedMetadataParser;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("getExtendedMetadataParser", "([B)Landroid/drm/DrmUtils$ExtendedMetadataParser;", AccessFlags = 9)]
 				public static global::Android.Drm.DrmUtils.ExtendedMetadataParser GetExtendedMetadataParser(byte[] extendedMetadata) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Drm.DrmUtils.ExtendedMetadataParser);
@@ -1986,7 +1986,7 @@ namespace Android.Drm
 				/// <java-name>
 				/// getData
 				/// </java-name>
-				[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -2003,7 +2003,7 @@ namespace Android.Drm
 				/// </java-name>
 				public virtual byte[] Data
 				{
-						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 

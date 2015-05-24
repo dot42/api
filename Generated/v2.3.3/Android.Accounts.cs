@@ -150,7 +150,7 @@ namespace Android.Accounts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractAccountAuthenticator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractAccountAuthenticator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -260,7 +260,7 @@ namespace Android.Accounts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Account() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Account() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -389,7 +389,7 @@ namespace Android.Accounts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AccountAuthenticatorResponse() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AccountAuthenticatorResponse() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1112,7 +1112,7 @@ namespace Android.Accounts
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AuthenticatorDescription() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AuthenticatorDescription() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

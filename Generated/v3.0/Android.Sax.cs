@@ -263,7 +263,7 @@ namespace Android.Sax
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RootElement() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RootElement() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -121,7 +121,7 @@ namespace Android.Util
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "(Ljava/lang/String;I)[B", AccessFlags = 9)]
+				[Dot42.DexImport("decode", "(Ljava/lang/String;I)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] JavaDecode(string @string, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -130,7 +130,7 @@ namespace Android.Util
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "(Ljava/lang/String;I)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("decode", "(Ljava/lang/String;I)[B", AccessFlags = 9)]
 				public static byte[] Decode(string @string, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -139,7 +139,7 @@ namespace Android.Util
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "([BI)[B", AccessFlags = 9)]
+				[Dot42.DexImport("decode", "([BI)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] Decode(sbyte[] sByte, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -148,7 +148,7 @@ namespace Android.Util
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "([BI)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("decode", "([BI)[B", AccessFlags = 9)]
 				public static byte[] Decode(byte[] @byte, int int32) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -160,7 +160,7 @@ namespace Android.Util
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "([BIII)[B", AccessFlags = 9)]
+				[Dot42.DexImport("decode", "([BIII)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] Decode(sbyte[] input, int offset, int len, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -172,7 +172,7 @@ namespace Android.Util
 				/// <java-name>
 				/// decode
 				/// </java-name>
-				[Dot42.DexImport("decode", "([BIII)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("decode", "([BIII)[B", AccessFlags = 9)]
 				public static byte[] Decode(byte[] input, int offset, int len, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -184,7 +184,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encodeToString
 				/// </java-name>
-				[Dot42.DexImport("encodeToString", "([BI)Ljava/lang/String;", AccessFlags = 9)]
+				[Dot42.DexImport("encodeToString", "([BI)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static string EncodeToString(sbyte[] input, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -196,7 +196,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encodeToString
 				/// </java-name>
-				[Dot42.DexImport("encodeToString", "([BI)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("encodeToString", "([BI)Ljava/lang/String;", AccessFlags = 9)]
 				public static string EncodeToString(byte[] input, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -208,7 +208,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encodeToString
 				/// </java-name>
-				[Dot42.DexImport("encodeToString", "([BIII)Ljava/lang/String;", AccessFlags = 9)]
+				[Dot42.DexImport("encodeToString", "([BIII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
 				public static string EncodeToString(sbyte[] input, int offset, int len, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -220,7 +220,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encodeToString
 				/// </java-name>
-				[Dot42.DexImport("encodeToString", "([BIII)Ljava/lang/String;", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("encodeToString", "([BIII)Ljava/lang/String;", AccessFlags = 9)]
 				public static string EncodeToString(byte[] input, int offset, int len, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(string);
@@ -232,7 +232,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encode
 				/// </java-name>
-				[Dot42.DexImport("encode", "([BI)[B", AccessFlags = 9)]
+				[Dot42.DexImport("encode", "([BI)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] Encode(sbyte[] input, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -244,7 +244,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encode
 				/// </java-name>
-				[Dot42.DexImport("encode", "([BI)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("encode", "([BI)[B", AccessFlags = 9)]
 				public static byte[] Encode(byte[] input, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -256,7 +256,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encode
 				/// </java-name>
-				[Dot42.DexImport("encode", "([BIII)[B", AccessFlags = 9)]
+				[Dot42.DexImport("encode", "([BIII)[B", AccessFlags = 9, IgnoreFromJava = true)]
 				public static sbyte[] Encode(sbyte[] input, int offset, int len, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -268,7 +268,7 @@ namespace Android.Util
 				/// <java-name>
 				/// encode
 				/// </java-name>
-				[Dot42.DexImport("encode", "([BIII)[B", AccessFlags = 9, IgnoreFromJava = true)]
+				[Dot42.DexImport("encode", "([BIII)[B", AccessFlags = 9)]
 				public static byte[] Encode(byte[] input, int offset, int len, int flags) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -360,7 +360,7 @@ namespace Android.Util
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public override int Read(sbyte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -369,14 +369,14 @@ namespace Android.Util
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public override int Read(byte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Base64InputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Base64InputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -411,7 +411,7 @@ namespace Android.Util
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public override void Write(sbyte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -419,7 +419,7 @@ namespace Android.Util
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public override void Write(byte[] b, int off, int len) /* MethodBuilder.Create */ 
 				{
 				}
@@ -436,7 +436,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Base64OutputStream() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Base64OutputStream() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1644,7 +1644,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LogPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LogPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1771,7 +1771,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MonthDisplayHelper() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MonthDisplayHelper() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1923,7 +1923,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Pair() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Pair() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2072,7 +2072,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrintStreamPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrintStreamPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2108,7 +2108,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal PrintWriterPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal PrintWriterPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2715,7 +2715,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal StringBuilderPrinter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal StringBuilderPrinter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2854,7 +2854,7 @@ namespace Android.Util
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal TimingLogger() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal TimingLogger() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

@@ -42,7 +42,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AsyncPlayer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AsyncPlayer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1629,7 +1629,7 @@ namespace Android.Media
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1638,7 +1638,7 @@ namespace Android.Media
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public virtual int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -1722,7 +1722,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AudioRecord() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AudioRecord() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2266,7 +2266,7 @@ namespace Android.Media
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2275,7 +2275,7 @@ namespace Android.Media
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)I", AccessFlags = 1)]
 				public virtual int Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -2336,7 +2336,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AudioTrack() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AudioTrack() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -2928,7 +2928,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DeniedByServerException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DeniedByServerException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3239,7 +3239,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getThumbnail
 				/// </java-name>
-				[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetThumbnail() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -3270,7 +3270,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ExifInterface() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ExifInterface() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3294,7 +3294,7 @@ namespace Android.Media
 				/// </java-name>
 				public virtual byte[] Thumbnail
 				{
-						[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getThumbnail", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -3340,7 +3340,7 @@ namespace Android.Media
 				extern ~FaceDetector() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal FaceDetector() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal FaceDetector() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -3447,7 +3447,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal Face() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal Face() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -3925,7 +3925,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegment
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1)]
+				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool QueueJetSegment(int segmentNum, int libNum, int repeatCount, int transpose, int muteFlags, sbyte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3940,7 +3940,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegment
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("queueJetSegment", "(IIIIIB)Z", AccessFlags = 1)]
 				public virtual bool QueueJetSegment(int segmentNum, int libNum, int repeatCount, int transpose, int muteFlags, byte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3955,7 +3955,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegmentMuteArray
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1)]
+				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual bool QueueJetSegmentMuteArray(int segmentNum, int libNum, int repeatCount, int transpose, bool[] muteArray, sbyte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -3970,7 +3970,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queueJetSegmentMuteArray
 				/// </java-name>
-				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("queueJetSegmentMuteArray", "(IIII[ZB)Z", AccessFlags = 1)]
 				public virtual bool QueueJetSegmentMuteArray(int segmentNum, int libNum, int repeatCount, int transpose, bool[] muteArray, byte userID) /* MethodBuilder.Create */ 
 				{
 						return default(bool);
@@ -4102,7 +4102,7 @@ namespace Android.Media
 						/// onJetEvent
 						/// </java-name>
 						[Dot42.DexImport("onJetEvent", "(Landroid/media/JetPlayer;SBBBB)V", AccessFlags = 1025)]
-						void OnJetEvent(global::Android.Media.JetPlayer player, short segment, sbyte track, sbyte channel, sbyte controller, sbyte value) /* MethodBuilder.Create */ ;
+						void OnJetEvent(global::Android.Media.JetPlayer player, short segment, byte track, byte channel, byte controller, byte value) /* MethodBuilder.Create */ ;
 
 						/// <summary>
 						///  <para>Callback for when JET's currently playing segment's userID is updated.</para> <para></para>        
@@ -4694,7 +4694,7 @@ namespace Android.Media
 						/// <java-name>
 						/// set
 						/// </java-name>
-						[Dot42.DexImport("set", "(I[I[I[B[BI)V", AccessFlags = 1)]
+						[Dot42.DexImport("set", "(I[I[I[B[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
 						public void Set(int newNumSubSamples, int[] newNumBytesOfClearData, int[] newNumBytesOfEncryptedData, sbyte[] newKey, sbyte[] newIV, int newMode) /* MethodBuilder.Create */ 
 						{
 						}
@@ -4702,7 +4702,7 @@ namespace Android.Media
 						/// <java-name>
 						/// set
 						/// </java-name>
-						[Dot42.DexImport("set", "(I[I[I[B[BI)V", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("set", "(I[I[I[B[BI)V", AccessFlags = 1)]
 						public void Set(int newNumSubSamples, int[] newNumBytesOfClearData, int[] newNumBytesOfEncryptedData, byte[] newKey, byte[] newIV, int newMode) /* MethodBuilder.Create */ 
 						{
 						}
@@ -4758,7 +4758,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal CryptoException() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal CryptoException() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -5661,7 +5661,7 @@ namespace Android.Media
 				/// <summary>
 				///  <para>Instantiate a MediaCrypto object using opaque, crypto scheme specific data. </para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/util/UUID;[B)V", AccessFlags = 1)]
+				[Dot42.DexImport("<init>", "(Ljava/util/UUID;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public MediaCrypto(global::Java.Util.UUID uuid, sbyte[] initData) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5669,7 +5669,7 @@ namespace Android.Media
 				/// <summary>
 				///  <para>Instantiate a MediaCrypto object using opaque, crypto scheme specific data. </para>        
 				/// </summary>
-				[Dot42.DexImport("<init>", "(Ljava/util/UUID;[B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("<init>", "(Ljava/util/UUID;[B)V", AccessFlags = 1)]
 				public MediaCrypto(global::Java.Util.UUID uuid, byte[] initData) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5713,7 +5713,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaCrypto() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaCrypto() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5735,7 +5735,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaCryptoException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaCryptoException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -5896,7 +5896,7 @@ namespace Android.Media
 				/// <java-name>
 				/// openSession
 				/// </java-name>
-				[Dot42.DexImport("openSession", "()[B", AccessFlags = 257)]
+				[Dot42.DexImport("openSession", "()[B", AccessFlags = 257, IgnoreFromJava = true)]
 				public sbyte[] JavaOpenSession() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -5908,7 +5908,7 @@ namespace Android.Media
 				/// <java-name>
 				/// openSession
 				/// </java-name>
-				[Dot42.DexImport("openSession", "()[B", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("openSession", "()[B", AccessFlags = 257)]
 				public byte[] OpenSession() /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -5920,7 +5920,7 @@ namespace Android.Media
 				/// <java-name>
 				/// closeSession
 				/// </java-name>
-				[Dot42.DexImport("closeSession", "([B)V", AccessFlags = 257)]
+				[Dot42.DexImport("closeSession", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
 				public void CloseSession(sbyte[] sessionId) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5931,7 +5931,7 @@ namespace Android.Media
 				/// <java-name>
 				/// closeSession
 				/// </java-name>
-				[Dot42.DexImport("closeSession", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("closeSession", "([B)V", AccessFlags = 257)]
 				public void CloseSession(byte[] sessionId) /* MethodBuilder.Create */ 
 				{
 				}
@@ -5942,7 +5942,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getKeyRequest
 				/// </java-name>
-				[Dot42.DexImport("getKeyRequest", "([B[BLjava/lang/String;ILjava/util/HashMap;)Landroid/media/MediaDrm$KeyRequest;", AccessFlags = 257, Signature = "([B[BLjava/lang/String;ILjava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;" +
+				[Dot42.DexImport("getKeyRequest", "([B[BLjava/lang/String;ILjava/util/HashMap;)Landroid/media/MediaDrm$KeyRequest;", AccessFlags = 257, IgnoreFromJava = true, Signature = "([B[BLjava/lang/String;ILjava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;" +
     ")Landroid/media/MediaDrm$KeyRequest;")]
 				public global::Android.Media.MediaDrm.KeyRequest GetKeyRequest(sbyte[] scope, sbyte[] init, string mimeType, int keyType, global::Java.Util.HashMap<string, string> optionalParameters) /* MethodBuilder.Create */ 
 				{
@@ -5955,7 +5955,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getKeyRequest
 				/// </java-name>
-				[Dot42.DexImport("getKeyRequest", "([B[BLjava/lang/String;ILjava/util/HashMap;)Landroid/media/MediaDrm$KeyRequest;", AccessFlags = 257, IgnoreFromJava = true, Signature = "([B[BLjava/lang/String;ILjava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;" +
+				[Dot42.DexImport("getKeyRequest", "([B[BLjava/lang/String;ILjava/util/HashMap;)Landroid/media/MediaDrm$KeyRequest;", AccessFlags = 257, Signature = "([B[BLjava/lang/String;ILjava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;" +
     ")Landroid/media/MediaDrm$KeyRequest;")]
 				public global::Android.Media.MediaDrm.KeyRequest GetKeyRequest(byte[] scope, byte[] init, string mimeType, int keyType, global::Java.Util.HashMap<string, string> optionalParameters) /* MethodBuilder.Create */ 
 				{
@@ -5968,7 +5968,7 @@ namespace Android.Media
 				/// <java-name>
 				/// provideKeyResponse
 				/// </java-name>
-				[Dot42.DexImport("provideKeyResponse", "([B[B)[B", AccessFlags = 257)]
+				[Dot42.DexImport("provideKeyResponse", "([B[B)[B", AccessFlags = 257, IgnoreFromJava = true)]
 				public sbyte[] ProvideKeyResponse(sbyte[] scope, sbyte[] response) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -5980,7 +5980,7 @@ namespace Android.Media
 				/// <java-name>
 				/// provideKeyResponse
 				/// </java-name>
-				[Dot42.DexImport("provideKeyResponse", "([B[B)[B", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("provideKeyResponse", "([B[B)[B", AccessFlags = 257)]
 				public byte[] ProvideKeyResponse(byte[] scope, byte[] response) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -5992,7 +5992,7 @@ namespace Android.Media
 				/// <java-name>
 				/// restoreKeys
 				/// </java-name>
-				[Dot42.DexImport("restoreKeys", "([B[B)V", AccessFlags = 257)]
+				[Dot42.DexImport("restoreKeys", "([B[B)V", AccessFlags = 257, IgnoreFromJava = true)]
 				public void RestoreKeys(sbyte[] sessionId, sbyte[] keySetId) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6003,7 +6003,7 @@ namespace Android.Media
 				/// <java-name>
 				/// restoreKeys
 				/// </java-name>
-				[Dot42.DexImport("restoreKeys", "([B[B)V", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("restoreKeys", "([B[B)V", AccessFlags = 257)]
 				public void RestoreKeys(byte[] sessionId, byte[] keySetId) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6014,7 +6014,7 @@ namespace Android.Media
 				/// <java-name>
 				/// removeKeys
 				/// </java-name>
-				[Dot42.DexImport("removeKeys", "([B)V", AccessFlags = 257)]
+				[Dot42.DexImport("removeKeys", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
 				public void RemoveKeys(sbyte[] sessionId) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6025,7 +6025,7 @@ namespace Android.Media
 				/// <java-name>
 				/// removeKeys
 				/// </java-name>
-				[Dot42.DexImport("removeKeys", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("removeKeys", "([B)V", AccessFlags = 257)]
 				public void RemoveKeys(byte[] sessionId) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6036,7 +6036,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queryKeyStatus
 				/// </java-name>
-				[Dot42.DexImport("queryKeyStatus", "([B)Ljava/util/HashMap;", AccessFlags = 257, Signature = "([B)Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;")]
+				[Dot42.DexImport("queryKeyStatus", "([B)Ljava/util/HashMap;", AccessFlags = 257, IgnoreFromJava = true, Signature = "([B)Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;")]
 				public global::Java.Util.HashMap<string, string> QueryKeyStatus(sbyte[] sessionId) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.HashMap<string, string>);
@@ -6048,7 +6048,7 @@ namespace Android.Media
 				/// <java-name>
 				/// queryKeyStatus
 				/// </java-name>
-				[Dot42.DexImport("queryKeyStatus", "([B)Ljava/util/HashMap;", AccessFlags = 257, IgnoreFromJava = true, Signature = "([B)Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;")]
+				[Dot42.DexImport("queryKeyStatus", "([B)Ljava/util/HashMap;", AccessFlags = 257, Signature = "([B)Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;")]
 				public global::Java.Util.HashMap<string, string> QueryKeyStatus(byte[] sessionId) /* MethodBuilder.Create */ 
 				{
 						return default(global::Java.Util.HashMap<string, string>);
@@ -6072,7 +6072,7 @@ namespace Android.Media
 				/// <java-name>
 				/// provideProvisionResponse
 				/// </java-name>
-				[Dot42.DexImport("provideProvisionResponse", "([B)V", AccessFlags = 257)]
+				[Dot42.DexImport("provideProvisionResponse", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
 				public void ProvideProvisionResponse(sbyte[] response) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6083,7 +6083,7 @@ namespace Android.Media
 				/// <java-name>
 				/// provideProvisionResponse
 				/// </java-name>
-				[Dot42.DexImport("provideProvisionResponse", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("provideProvisionResponse", "([B)V", AccessFlags = 257)]
 				public void ProvideProvisionResponse(byte[] response) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6094,7 +6094,7 @@ namespace Android.Media
 				/// <java-name>
 				/// releaseSecureStops
 				/// </java-name>
-				[Dot42.DexImport("releaseSecureStops", "([B)V", AccessFlags = 257)]
+				[Dot42.DexImport("releaseSecureStops", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
 				public void ReleaseSecureStops(sbyte[] ssRelease) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6105,7 +6105,7 @@ namespace Android.Media
 				/// <java-name>
 				/// releaseSecureStops
 				/// </java-name>
-				[Dot42.DexImport("releaseSecureStops", "([B)V", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("releaseSecureStops", "([B)V", AccessFlags = 257)]
 				public void ReleaseSecureStops(byte[] ssRelease) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6128,7 +6128,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getPropertyByteArray
 				/// </java-name>
-				[Dot42.DexImport("getPropertyByteArray", "(Ljava/lang/String;)[B", AccessFlags = 257)]
+				[Dot42.DexImport("getPropertyByteArray", "(Ljava/lang/String;)[B", AccessFlags = 257, IgnoreFromJava = true)]
 				public sbyte[] JavaGetPropertyByteArray(string propertyName) /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -6140,7 +6140,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getPropertyByteArray
 				/// </java-name>
-				[Dot42.DexImport("getPropertyByteArray", "(Ljava/lang/String;)[B", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("getPropertyByteArray", "(Ljava/lang/String;)[B", AccessFlags = 257)]
 				public byte[] GetPropertyByteArray(string propertyName) /* MethodBuilder.Create */ 
 				{
 						return default(byte[]);
@@ -6163,7 +6163,7 @@ namespace Android.Media
 				/// <java-name>
 				/// setPropertyByteArray
 				/// </java-name>
-				[Dot42.DexImport("setPropertyByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 257)]
+				[Dot42.DexImport("setPropertyByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 257, IgnoreFromJava = true)]
 				public void SetPropertyByteArray(string propertyName, sbyte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6174,7 +6174,7 @@ namespace Android.Media
 				/// <java-name>
 				/// setPropertyByteArray
 				/// </java-name>
-				[Dot42.DexImport("setPropertyByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 257, IgnoreFromJava = true)]
+				[Dot42.DexImport("setPropertyByteArray", "(Ljava/lang/String;[B)V", AccessFlags = 257)]
 				public void SetPropertyByteArray(string propertyName, byte[] value) /* MethodBuilder.Create */ 
 				{
 				}
@@ -6185,7 +6185,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getCryptoSession
 				/// </java-name>
-				[Dot42.DexImport("getCryptoSession", "([BLjava/lang/String;Ljava/lang/String;)Landroid/media/MediaDrm$CryptoSession;", AccessFlags = 1)]
+				[Dot42.DexImport("getCryptoSession", "([BLjava/lang/String;Ljava/lang/String;)Landroid/media/MediaDrm$CryptoSession;", AccessFlags = 1, IgnoreFromJava = true)]
 				public global::Android.Media.MediaDrm.CryptoSession GetCryptoSession(sbyte[] sessionId, string cipherAlgorithm, string macAlgorithm) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Media.MediaDrm.CryptoSession);
@@ -6197,7 +6197,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getCryptoSession
 				/// </java-name>
-				[Dot42.DexImport("getCryptoSession", "([BLjava/lang/String;Ljava/lang/String;)Landroid/media/MediaDrm$CryptoSession;", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("getCryptoSession", "([BLjava/lang/String;Ljava/lang/String;)Landroid/media/MediaDrm$CryptoSession;", AccessFlags = 1)]
 				public global::Android.Media.MediaDrm.CryptoSession GetCryptoSession(byte[] sessionId, string cipherAlgorithm, string macAlgorithm) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Media.MediaDrm.CryptoSession);
@@ -6218,7 +6218,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaDrm() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaDrm() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -6260,7 +6260,7 @@ namespace Android.Media
 						/// <java-name>
 						/// encrypt
 						/// </java-name>
-						[Dot42.DexImport("encrypt", "([B[B[B)[B", AccessFlags = 1)]
+						[Dot42.DexImport("encrypt", "([B[B[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 						public sbyte[] Encrypt(sbyte[] keyid, sbyte[] input, sbyte[] iv) /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
@@ -6272,7 +6272,7 @@ namespace Android.Media
 						/// <java-name>
 						/// encrypt
 						/// </java-name>
-						[Dot42.DexImport("encrypt", "([B[B[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("encrypt", "([B[B[B)[B", AccessFlags = 1)]
 						public byte[] Encrypt(byte[] keyid, byte[] input, byte[] iv) /* MethodBuilder.Create */ 
 						{
 								return default(byte[]);
@@ -6284,7 +6284,7 @@ namespace Android.Media
 						/// <java-name>
 						/// decrypt
 						/// </java-name>
-						[Dot42.DexImport("decrypt", "([B[B[B)[B", AccessFlags = 1)]
+						[Dot42.DexImport("decrypt", "([B[B[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 						public sbyte[] Decrypt(sbyte[] keyid, sbyte[] input, sbyte[] iv) /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
@@ -6296,7 +6296,7 @@ namespace Android.Media
 						/// <java-name>
 						/// decrypt
 						/// </java-name>
-						[Dot42.DexImport("decrypt", "([B[B[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("decrypt", "([B[B[B)[B", AccessFlags = 1)]
 						public byte[] Decrypt(byte[] keyid, byte[] input, byte[] iv) /* MethodBuilder.Create */ 
 						{
 								return default(byte[]);
@@ -6308,7 +6308,7 @@ namespace Android.Media
 						/// <java-name>
 						/// sign
 						/// </java-name>
-						[Dot42.DexImport("sign", "([B[B)[B", AccessFlags = 1)]
+						[Dot42.DexImport("sign", "([B[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
 						public sbyte[] Sign(sbyte[] keyid, sbyte[] message) /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
@@ -6320,7 +6320,7 @@ namespace Android.Media
 						/// <java-name>
 						/// sign
 						/// </java-name>
-						[Dot42.DexImport("sign", "([B[B)[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("sign", "([B[B)[B", AccessFlags = 1)]
 						public byte[] Sign(byte[] keyid, byte[] message) /* MethodBuilder.Create */ 
 						{
 								return default(byte[]);
@@ -6332,7 +6332,7 @@ namespace Android.Media
 						/// <java-name>
 						/// verify
 						/// </java-name>
-						[Dot42.DexImport("verify", "([B[B[B)Z", AccessFlags = 1)]
+						[Dot42.DexImport("verify", "([B[B[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
 						public bool Verify(sbyte[] keyid, sbyte[] message, sbyte[] signature) /* MethodBuilder.Create */ 
 						{
 								return default(bool);
@@ -6344,14 +6344,14 @@ namespace Android.Media
 						/// <java-name>
 						/// verify
 						/// </java-name>
-						[Dot42.DexImport("verify", "([B[B[B)Z", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("verify", "([B[B[B)Z", AccessFlags = 1)]
 						public bool Verify(byte[] keyid, byte[] message, byte[] signature) /* MethodBuilder.Create */ 
 						{
 								return default(bool);
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal CryptoSession() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal CryptoSession() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -6378,7 +6378,7 @@ namespace Android.Media
 						/// <java-name>
 						/// getData
 						/// </java-name>
-						[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 						public sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
@@ -6392,7 +6392,7 @@ namespace Android.Media
 						/// </java-name>
 						public byte[] Data
 						{
-								[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+								[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
 								get{ return default(byte[]); }
 						}
 
@@ -6431,7 +6431,7 @@ namespace Android.Media
 						/// <java-name>
 						/// getData
 						/// </java-name>
-						[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
+						[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 						public sbyte[] JavaGetData() /* MethodBuilder.Create */ 
 						{
 								return default(sbyte[]);
@@ -6445,7 +6445,7 @@ namespace Android.Media
 						/// </java-name>
 						public byte[] Data
 						{
-								[Dot42.DexImport("getData", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+								[Dot42.DexImport("getData", "()[B", AccessFlags = 1)]
 								get{ return default(byte[]); }
 						}
 
@@ -6480,7 +6480,7 @@ namespace Android.Media
 						/// onEvent
 						/// </java-name>
 						[Dot42.DexImport("onEvent", "(Landroid/media/MediaDrm;[BII[B)V", AccessFlags = 1025)]
-						void OnEvent(global::Android.Media.MediaDrm md, sbyte[] sessionId, int @event, int extra, sbyte[] data) /* MethodBuilder.Create */ ;
+						void OnEvent(global::Android.Media.MediaDrm md, byte[] sessionId, int @event, int extra, byte[] data) /* MethodBuilder.Create */ ;
 
 				}
 
@@ -6502,7 +6502,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaDrmException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaDrmException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -7762,7 +7762,7 @@ namespace Android.Media
 				/// <java-name>
 				/// getEmbeddedPicture
 				/// </java-name>
-				[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1)]
+				[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual sbyte[] JavaGetEmbeddedPicture() /* MethodBuilder.Create */ 
 				{
 						return default(sbyte[]);
@@ -7811,7 +7811,7 @@ namespace Android.Media
 				/// </java-name>
 				public virtual byte[] EmbeddedPicture
 				{
-						[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1, IgnoreFromJava = true)]
+						[Dot42.DexImport("getEmbeddedPicture", "()[B", AccessFlags = 1)]
 						get{ return default(byte[]); }
 				}
 
@@ -7947,7 +7947,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaMuxer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaMuxer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -9508,7 +9508,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal VideoEncoder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal VideoEncoder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9580,7 +9580,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AudioEncoder() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AudioEncoder() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9660,7 +9660,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal OutputFormat() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal OutputFormat() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9700,7 +9700,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal VideoSource() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal VideoSource() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -9799,7 +9799,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal AudioSource() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal AudioSource() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -11119,7 +11119,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal MediaScannerConnection() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal MediaScannerConnection() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11300,7 +11300,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal NotProvisionedException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal NotProvisionedException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -11836,7 +11836,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RemoteControlClient() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RemoteControlClient() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12002,7 +12002,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal MetadataEditor() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal MetadataEditor() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -12145,7 +12145,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RemoteController() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RemoteController() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12196,7 +12196,7 @@ namespace Android.Media
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal MetadataEditor() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal MetadataEditor() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -12277,7 +12277,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ResourceBusyException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ResourceBusyException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12727,7 +12727,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal RingtoneManager() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal RingtoneManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -12998,7 +12998,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SoundPool() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SoundPool() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14009,7 +14009,7 @@ namespace Android.Media
 				extern ~ToneGenerator() /* MethodBuilder.Create */ ;
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ToneGenerator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ToneGenerator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -14046,7 +14046,7 @@ namespace Android.Media
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal UnsupportedSchemeException() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal UnsupportedSchemeException() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 

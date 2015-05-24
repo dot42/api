@@ -129,7 +129,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractClientConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractClientConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -383,7 +383,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractPooledConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractPooledConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -489,7 +489,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal AbstractPoolEntry() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal AbstractPoolEntry() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -761,7 +761,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DefaultClientConnectionOperator() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DefaultClientConnectionOperator() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -795,7 +795,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DefaultHttpRoutePlanner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DefaultHttpRoutePlanner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -824,7 +824,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal DefaultResponseParser() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal DefaultResponseParser() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -909,7 +909,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -918,7 +918,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([BII)I", AccessFlags = 1)]
 				public virtual int Read(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -936,7 +936,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual int Read(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -945,7 +945,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// read
 				/// </java-name>
-				[Dot42.DexImport("read", "([B)I", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("read", "([B)I", AccessFlags = 1)]
 				public virtual int Read(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 						return default(int);
@@ -970,7 +970,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LoggingSessionInputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LoggingSessionInputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1000,7 +1000,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1008,7 +1008,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([BII)V", AccessFlags = 1)]
 				public virtual void Write(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1024,7 +1024,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Write(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1032,7 +1032,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// write
 				/// </java-name>
-				[Dot42.DexImport("write", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("write", "([B)V", AccessFlags = 1)]
 				public virtual void Write(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1062,7 +1062,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal LoggingSessionOutputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal LoggingSessionOutputBuffer() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1140,7 +1140,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal ProxySelectorRoutePlanner() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal ProxySelectorRoutePlanner() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1302,7 +1302,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SingleClientConnManager() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SingleClientConnManager() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
@@ -1334,7 +1334,7 @@ namespace Org.Apache.Http.Impl.Conn
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal ConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal ConnAdapter() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1374,7 +1374,7 @@ namespace Org.Apache.Http.Impl.Conn
 						}
 
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal PoolEntry() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal PoolEntry() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
@@ -1422,7 +1422,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// output
 				/// </java-name>
-				[Dot42.DexImport("output", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("output", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Output(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1430,7 +1430,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// output
 				/// </java-name>
-				[Dot42.DexImport("output", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("output", "([BII)V", AccessFlags = 1)]
 				public virtual void Output(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1438,7 +1438,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// input
 				/// </java-name>
-				[Dot42.DexImport("input", "([BII)V", AccessFlags = 1)]
+				[Dot42.DexImport("input", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Input(sbyte[] sByte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1446,7 +1446,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// input
 				/// </java-name>
-				[Dot42.DexImport("input", "([BII)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("input", "([BII)V", AccessFlags = 1)]
 				public virtual void Input(byte[] @byte, int int32, int int321) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1454,7 +1454,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// output
 				/// </java-name>
-				[Dot42.DexImport("output", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("output", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Output(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1462,7 +1462,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// output
 				/// </java-name>
-				[Dot42.DexImport("output", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("output", "([B)V", AccessFlags = 1)]
 				public virtual void Output(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1470,7 +1470,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// input
 				/// </java-name>
-				[Dot42.DexImport("input", "([B)V", AccessFlags = 1)]
+				[Dot42.DexImport("input", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
 				public virtual void Input(sbyte[] sByte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1478,7 +1478,7 @@ namespace Org.Apache.Http.Impl.Conn
 				/// <java-name>
 				/// input
 				/// </java-name>
-				[Dot42.DexImport("input", "([B)V", AccessFlags = 1, IgnoreFromJava = true)]
+				[Dot42.DexImport("input", "([B)V", AccessFlags = 1)]
 				public virtual void Input(byte[] @byte) /* MethodBuilder.Create */ 
 				{
 				}
@@ -1516,7 +1516,7 @@ namespace Org.Apache.Http.Impl.Conn
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal Wire() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal Wire() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
