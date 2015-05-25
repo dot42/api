@@ -13,20 +13,24 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
+using System.Net;
 using System.Text;
+using Dot42.Internal;
 
 namespace System
 {
     // Summary:
     //     Represents a time interval.
     [Serializable]
-    public struct TimeSpan : IComparable, IComparable<TimeSpan>, IEquatable<TimeSpan> //, IFormattable
+    public struct TimeSpan : IComparable, IComparable<TimeSpan>, IEquatable<TimeSpan>, IFormattable
     {
         public const long TicksPerDay = 864000000000;
         public const long TicksPerHour = 36000000000;
-        public const long TicksPerMillisecond = 10000;
-        public const long TicksPerMinute = 600000000;
-        public const long TicksPerSecond = 10000000;
+        public const long TicksPerMillisecond = 10000L;
+        public const long TicksPerMinute = 600000000L;
+        public const long TicksPerSecond = 10000000L;
 
         public static readonly TimeSpan MaxValue = new TimeSpan(long.MaxValue);
         public static readonly TimeSpan MinValue = new TimeSpan(long.MinValue);
@@ -969,6 +973,11 @@ namespace System
         //     The string representation of the current System.TimeSpan value.
         public override string ToString()
         {
+            return ToString(null);
+        }
+
+        public string ToString(IFormatProvider formatProvider)
+        {
             StringBuilder sb = new StringBuilder(14);
 
             if (ticks < 0)
@@ -980,11 +989,11 @@ namespace System
                 sb.Append('.');
             }
 
-            sb.Append(Math.Abs(Hours).ToString("D2"));
+            sb.Append(Math.Abs(Hours).ToString("D2", formatProvider));
             sb.Append(':');
-            sb.Append(Math.Abs(Minutes).ToString("D2"));
+            sb.Append(Math.Abs(Minutes).ToString("D2", formatProvider));
             sb.Append(':');
-            sb.Append(Math.Abs(Seconds).ToString("D2"));
+            sb.Append(Math.Abs(Seconds).ToString("D2", formatProvider));
 
             int fractional = (int)Math.Abs(ticks % TicksPerSecond);
             if (fractional != 0)
@@ -993,6 +1002,91 @@ namespace System
                 sb.Append(fractional.ToString("D7"));
             }
 
+            return sb.ToString();
+            
+        }
+
+        private static readonly string[] Zeros = { "", "D1", "D2", "D3", "D4", "D5", "D6", "D7" };
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            if (format == null || format.IsEmpty || format == "g")
+                return ToString(formatProvider);
+
+            if (format == "c")
+            {
+                return ToString(CultureInfo.InvariantCulture);
+            }
+
+            StringBuilder sb = new StringBuilder(14);
+
+            if (format == "G")
+            {
+                if (ticks < 0)
+                    sb.Append('-');
+                format = "dd':'hh':'mm':'ss'.'fffffff";
+            }
+
+            var ts = this;
+
+            DateTimeFormatting.TokenizeFormatString(format, (val, isQuote) =>
+            {
+                if (isQuote)
+                {
+                    sb.Append(val);
+                }
+                else
+                {
+                    //if (val[0] == '-')
+                    //{
+                    //    if (ts.ticks < 0)
+                    //        sb.Append('-');
+                    //    return;
+                    //}
+
+                    if (val[0] == 'f')
+                    {
+                        int fractional = (int) Math.Abs(ts.ticks%TicksPerSecond);
+                        sb.Append(Math.Abs(fractional).ToString("D7", formatProvider).Substring(0, val.Length));
+                        return;
+                    }
+                    if (val[0] == 'F')
+                    {
+                        int fractional = (int) Math.Abs(ts.ticks%TicksPerSecond);
+                        if (fractional != 0)
+                            sb.Append(Math.Abs(fractional).ToString("D7", formatProvider).Substring(0, val.Length));
+                        return;
+                    }
+
+                    if (val[0] == 'd')
+                    {
+                        var zeroes = val.Length > Zeros.Length ? Zeros[val.Length - 1] : Zeros[val.Length];
+                        sb.Append(Math.Abs(ts.Days).ToString(zeroes, formatProvider));
+                        return;
+                    }
+
+                    if(val.Length > 2)
+                        throw new FormatException();
+
+                    if (val[0] == 'h')
+                    {
+                        sb.Append(Math.Abs(ts.Hours).ToString(Zeros[val.Length], formatProvider));
+                        return;
+                    }
+                    if (val[0] == 'm')
+                    {
+                        sb.Append(Math.Abs(ts.Minutes).ToString(Zeros[val.Length], formatProvider));
+                        return;
+                    }
+                    if (val[0] == 's')
+                    {
+                        sb.Append(Math.Abs(ts.Seconds).ToString(Zeros[val.Length], formatProvider));
+                        return;
+                    }
+
+                    throw new FormatException();
+                }
+            });
             return sb.ToString();
         }
 

@@ -157,24 +157,91 @@ namespace System
         /// </summary>
         public static int IndexOf(Array array, object value)
         {
-            // TODO: i don't think we can assume that the array is in order.
-            var byteArr = array as sbyte[];
-            if (byteArr != null) return Arrays.BinarySearch(byteArr, (sbyte) value);
-            var boolArr = array as bool[];
-            if (boolArr != null) return Arrays.BinarySearch(boolArr, (bool) value);
-            var charArr = array as char[];
-            if (charArr != null) return Arrays.BinarySearch(charArr, (char) value);
-            var shortArr = array as short[];
-            if (shortArr != null) return Arrays.BinarySearch(shortArr, (short) value);
-            var intArr = array as int[];
-            if (intArr != null) return Arrays.BinarySearch(intArr, (int)value);
-            var longArr = array as long[];
-            if (longArr != null) return Arrays.BinarySearch(longArr, (long)value);
-            var floatArr = array as float[];
-            if (floatArr != null) return Arrays.BinarySearch(floatArr, (float)value);
-            var doubleArr = array as double[];
-            if (doubleArr != null) return Arrays.BinarySearch(doubleArr, (double)value);
-            return Arrays.BinarySearch((object[])array, value);
+            var type = array.GetType();
+
+            if (type == typeof(sbyte[]))
+            {
+                var val = (sbyte)value;
+                var arr = (sbyte[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(char[]))
+            {
+                var val = (char)value;
+                var arr = (char[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(short[]))
+            {
+                var val = (short)value;
+                var arr = (short[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(int[]))
+            {
+                var val = (int)value; 
+                var arr = (int[]) array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i) 
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(long[]))
+            {
+                var val = (long)value;
+                var arr = (long[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(float[]))
+            {
+                var val = (float)value;
+                var arr = (float[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(double[]))
+            {
+                var val = (double)value;
+                var arr = (double[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(bool[]))
+            {
+                var val = (bool)value;
+                var arr = (bool[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+
+            {
+                var arr = (object[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                {
+                    if (Equals(arr[i], value))
+                        return i;
+                }
+                return -1;
+            }
         }
 
         /// <summary>

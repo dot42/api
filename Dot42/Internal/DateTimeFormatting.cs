@@ -98,6 +98,7 @@ namespace Dot42.Internal
         
         private static string ConvertFormatStringNetToJava(string format, DateTimeKind kind, out bool foundDateTimeKind)
         {
+            // TODO: use the Tokenize method below for simpler code.
             foundDateTimeKind = false;
 
             StringBuilder b = new StringBuilder(format.Length + 6);
@@ -205,6 +206,78 @@ namespace Dot42.Internal
 
             format = b.ToString();
             return format;
+        }
+
+        /// <summary>
+        /// Will call 'token' for every found token/specifier. 
+        /// First argument is the substring, second argument is true if this is a literal.
+        /// </summary>
+        public static void TokenizeFormatString(string format, Action<string, bool> token)
+        {
+            if (string.IsNullOrEmpty(format))
+                return;
+
+            bool isQuote = false;
+            int  idx     = 0;
+            int  idxStart = 0;
+            char currentChar = '\0';
+
+            for (; idx < format.Length; ++idx)
+            {
+                char c = format[idx];
+
+                if (idx != idxStart)
+                {
+                    bool needsFlush = (!isQuote && (c != currentChar || c == '%')) || c == '\'' || c == '\\' ;
+
+                    if (needsFlush)
+                    {
+                        string s = format.Substring(idxStart, idx - idxStart);
+                        token(s, isQuote);
+                        idxStart = idx;
+                    }
+                }
+
+                if (c == '\'')
+                {
+                    isQuote = !isQuote;
+                    idxStart = idx + 1;
+                    continue;
+                }
+
+                if (c == '\\')
+                {
+                    if(idx == format.Length - 1)
+                        throw new FormatException();
+                    token(format.Substring(idx + 1, 1), true);
+                    idx += 1;
+                    idxStart = idx + 1;
+                    continue;
+                }
+
+                if (!isQuote && c == '%')
+                {
+                    if (idx == format.Length - 1)
+                        throw new FormatException();
+                    string s = format.Substring(idx + 1, 1);
+                    token(s, false);
+
+                    idx += 1;
+                    idxStart = idx + 1;
+                    continue;
+                }
+
+                currentChar = c;
+            }
+
+            if(isQuote)
+                throw new FormatException();
+
+            if (idxStart != idx)
+            {
+                string s = format.Substring(idxStart, idx - idxStart);
+                token(s, false);
+            }
         }
 
         //Mono code (DateTimeUtils.cs):
