@@ -46,38 +46,132 @@ namespace Dot42.Internal
 
         internal static string Format(string format, int value, IFormatProvider provider)
         {
-            if (null == format)
+            if (null == format || format == "G" || format == "g")
                 return GetDecimalFormat("0", provider).Format((long)value);
-            return GetFormat(format, provider).Format((long)value);
+            return GetFormat(format, provider, typeof(int)).Format((long)value);
         }
 
         internal static string Format(string format, long value, IFormatProvider provider)
         {
-            if (null == format)
+            if (null == format || format == "G" || format == "g")
                 return GetDecimalFormat("0", provider).Format(value);
-            return GetFormat(format, provider).Format(value);
+            return GetFormat(format, provider, typeof(long)).Format(value);
         }
 
         internal static string Format(string format, float value, IFormatProvider provider)
         {
-            if (null == format)
-                return GetDecimalFormat("0.#########", provider).Format((double)value);
-            return GetFormat(format, provider).Format((double)value);
+            NumberFormat f;
+
+            var dbl = (double)value;
+
+            if (format == null || format.StartsWith("G") || format.StartsWith("g"))
+            {
+#if ANDROID_10P
+                f = GetGFormat(format, provider, Math.GetExponent(value), 7);
+#else
+                f = GetFormat(format, provider, typeof(float));
+#endif
+            }
+            else if (format.StartsWith("R") || format.StartsWith("r"))
+            {
+#if ANDROID_10P
+                f = GetGFormat(format, provider, Math.GetExponent(value), 7);
+                var tmp = f.Format((double)value);
+                if (f.Parse(tmp).FloatValue() == value)
+                    return tmp;
+                f = GetGFormat(format, provider, Math.GetExponent(value), 9);
+#else
+                var locale = provider.ToLocale();
+                f = new ScientificFormat("0.#######", locale);
+                var tmp = f.Format((float)value);
+                if (f.Parse(tmp).FloatValue() == value)
+                    return tmp;
+                f = new ScientificFormat("0.#########", locale); 
+#endif
+            }
+            else
+            {
+                f = GetFormat(format, provider, typeof (float));
+            }
+            return f.Format(dbl);
         }
 
         internal static string Format(string format, double value, IFormatProvider provider)
         {
-            if (null == format)
-                return GetDecimalFormat("0.################", provider).Format(value);
-            return GetFormat(format, provider).Format(value);
+            NumberFormat f;
+
+            if (format == null || format.StartsWith("G") || format.StartsWith("g"))
+            {
+#if ANDROID_10P
+                f = GetGFormat(format, provider, Math.GetExponent(value), 15);
+#else
+                f = GetFormat(format, provider, typeof(float));
+#endif
+            }
+            else if (format.StartsWith("R") || format.StartsWith("r"))
+            {
+#if ANDROID_10P
+                f = GetGFormat(format, provider, Math.GetExponent(value), 15);
+                var tmp = f.Format(value);
+                if (f.Parse(tmp).DoubleValue() == value)
+                    return tmp;
+                f = GetGFormat(format, provider, Math.GetExponent(value), 17);
+#else
+                var locale = provider.ToLocale();
+                f = new ScientificFormat("0.###############", locale);
+                var tmp = f.Format(value);
+                if (f.Parse(tmp).DoubleValue() == value)
+                    return tmp;
+                f = new ScientificFormat("0.#################", locale); 
+#endif
+            }
+            else
+            {
+                f = GetFormat(format, provider, typeof (double));
+            }
+            return f.Format(value);
         }
 
-	    private static NumberFormat GetFormat(string format, IFormatProvider provider)
+	    private static NumberFormat GetGFormat(string format, IFormatProvider provider, int exp, int maxPrecision)
+	    {
+	        int decimalCount;
+	        if (format == null || !int.TryParse(format.JavaSubstring(1), out decimalCount))
+	            decimalCount = maxPrecision;
+
+	        bool isLowerCase = format != null && format[0] == 'g';
+
+	        if (exp > -5 && exp < 15)
+	        {
+	            if (decimalCount == 0)
+	                return GetDecimalFormat("0", provider);
+                if (decimalCount == 7)
+                    return GetDecimalFormat("0.#######", provider);
+                if (decimalCount == 9)
+                    return GetDecimalFormat("0.#########", provider);
+                if (decimalCount == 15)
+                    return GetDecimalFormat("0.###############", provider);
+                if (decimalCount == 17)
+                    return GetDecimalFormat("0.#################", provider);
+                return GetDecimalFormat("0." + new string('#', decimalCount), provider);
+	        }
+            
+            if (decimalCount == 0)
+                return new ScientificFormat(isLowerCase ? "0e0" : "0E0", provider.ToLocale());
+            if (decimalCount == 7)
+                return new ScientificFormat(isLowerCase ? "0.#######e0" : "0.#######E0", provider.ToLocale());
+            if (decimalCount == 15)
+                return new ScientificFormat(isLowerCase ? "0.###############e0" : "0.###############E0", provider.ToLocale());
+
+            return new ScientificFormat("0." + new string('#', decimalCount) + (isLowerCase ? "e0" : "E0"), provider.ToLocale());
+	    }
+
+	    private static NumberFormat GetFormat(string format, IFormatProvider provider, Type type)
 	    {
 	        if (format == null)
-	            return provider.ToJavaNumberFormat();
+	            format = "G";
 
             var locale = provider.ToLocale();
+	        DecimalFormat decf;
 
             if (format.Length >= 1)
             {
@@ -149,6 +243,8 @@ namespace Dot42.Internal
                             }
                         }
                         break;
+                    case 'G':
+                    case 'g':
                     case 'F':
                     case 'P':
                         {
@@ -183,12 +279,10 @@ namespace Dot42.Internal
 
                             return GetDecimalFormat(javaFormat, provider);
                         }
-                    case 'G':
                     case 'R':
                         {
                         return GetDecimalFormat("0.################################", provider);
                         }
-                        
                     case 'N':
                         {
                             if (format.Length == 1)
@@ -215,7 +309,7 @@ namespace Dot42.Internal
                 }
             }
 
-            var decf = (DecimalFormat)NumberFormat.GetNumberInstance(locale);
+            decf = (DecimalFormat)NumberFormat.GetNumberInstance(locale);
             decf.ApplyLocalizedPattern(format);
             return decf;
         }

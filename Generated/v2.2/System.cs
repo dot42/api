@@ -5119,7 +5119,7 @@ namespace System
 				/// abs
 				/// </java-name>
 				[Dot42.DexImport("abs", "(D)D", AccessFlags = 9)]
-				public static double Abs(double d) /* MethodBuilder.Create */ 
+				public static double JavaAbs(double d) /* MethodBuilder.Create */ 
 				{
 						return default(double);
 				}
@@ -5131,7 +5131,7 @@ namespace System
 				/// abs
 				/// </java-name>
 				[Dot42.DexImport("abs", "(F)F", AccessFlags = 9)]
-				public static float Abs(float d) /* MethodBuilder.Create */ 
+				public static float JavaAbs(float d) /* MethodBuilder.Create */ 
 				{
 						return default(float);
 				}
@@ -5143,7 +5143,7 @@ namespace System
 				/// abs
 				/// </java-name>
 				[Dot42.DexImport("abs", "(I)I", AccessFlags = 9)]
-				public static int Abs(int d) /* MethodBuilder.Create */ 
+				public static int JavaAbs(int d) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}
@@ -5155,7 +5155,7 @@ namespace System
 				/// abs
 				/// </java-name>
 				[Dot42.DexImport("abs", "(J)J", AccessFlags = 9)]
-				public static long Abs(long d) /* MethodBuilder.Create */ 
+				public static long JavaAbs(long d) /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
@@ -5344,7 +5344,7 @@ namespace System
 				/// IEEEremainder
 				/// </java-name>
 				[Dot42.DexImport("IEEEremainder", "(DD)D", AccessFlags = 265)]
-				public static double IEEEremainder(double x, double y) /* MethodBuilder.Create */ 
+				public static double IEEERemainder(double x, double y) /* MethodBuilder.Create */ 
 				{
 						return default(double);
 				}
@@ -5500,7 +5500,7 @@ namespace System
 				/// pow
 				/// </java-name>
 				[Dot42.DexImport("pow", "(DD)D", AccessFlags = 265)]
-				public static double Pow(double x, double y) /* MethodBuilder.Create */ 
+				public static double JavaPow(double x, double y) /* MethodBuilder.Create */ 
 				{
 						return default(double);
 				}
@@ -5530,7 +5530,7 @@ namespace System
 				/// round
 				/// </java-name>
 				[Dot42.DexImport("round", "(D)J", AccessFlags = 9)]
-				public static long Round(double d) /* MethodBuilder.Create */ 
+				public static long JavaRound(double d) /* MethodBuilder.Create */ 
 				{
 						return default(long);
 				}
@@ -5545,7 +5545,7 @@ namespace System
 				/// round
 				/// </java-name>
 				[Dot42.DexImport("round", "(F)I", AccessFlags = 9)]
-				public static int Round(float d) /* MethodBuilder.Create */ 
+				public static int JavaRound(float d) /* MethodBuilder.Create */ 
 				{
 						return default(int);
 				}

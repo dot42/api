@@ -421,18 +421,31 @@ namespace System
 
 		public static Decimal Multiply (Decimal d1, Decimal d2)
 		{
-		    return d1.Val.Multiply(d1.Val, MathContext.DECIMAL128);
+		    return d1.Val.Multiply(d2.Val, MathContext.DECIMAL128);
 		}
 
 		public static Decimal Divide (Decimal d1, Decimal d2)
 		{
-		    return d1.Val.Divide(d1, MathContext.DECIMAL128);
+		    return d1.Val.Divide(d2, MathContext.DECIMAL128);
 		}
 
 		public static Decimal Remainder (Decimal d1, Decimal d2)
 		{
 		    return d1.Val.Remainder(d2.Val);
 		}
+
+        internal int Sign()
+        {
+            if (_val == null) return 0;
+            return _val.Signum();
+        }
+
+        internal decimal Abs()
+        {
+            if (_val == null) return this;
+            return _val.Abs();
+        }
+
 
 		//[ReliabilityContractAttribute (Consistency.WillNotCorruptState, Cer.Success)]
 		public static int Compare (Decimal d1, Decimal d2)
@@ -463,7 +476,8 @@ namespace System
 
 		public static Decimal Ceiling (Decimal d)
 		{
-			return Math.Ceiling (d);
+		    if (d._val == null) return d;
+		    return d._val.SetScale(0, RoundingMode.CEILING);
 		}
 
 		public static Decimal Parse (string s) 
@@ -1009,7 +1023,7 @@ namespace System
 
 		    string s;
 
-            var val = Val.Plus();
+            var val = Val.Abs();
 
             bool group = false;
             string decimalDigit = ni.NumberDecimalSeparator;
@@ -1080,36 +1094,36 @@ namespace System
 
             StringBuilder b = new StringBuilder(s.Length + 10);
 
-                if (this < Zero)
-                    b.Append(ni.NegativeSign);
+            if (this < Zero)
+                b.Append(ni.NegativeSign);
 
-                if (decimalDigit != ".")
-		        {
-		            s = s.Replace(".", decimalDigit);
-		        }
+            if (decimalDigit != ".")
+		    {
+		        s = s.Replace(".", decimalDigit);
+		    }
 
-		        if (group)
-		        {
-		            // todo: find the decimal separator, split the string and assemble everything again.
-		        }
+		    if (group)
+		    {
+		        // todo: find the decimal separator, split the string and assemble everything again.
+		    }
 
-                if (covertEToLower)
-		        {
-		            s = s.Replace('E', 'e');
-		        }
+            if (covertEToLower)
+		    {
+		        s = s.Replace('E', 'e');
+		    }
 
-		        b.Append(s);
+		    b.Append(s);
 
-		        if (formatChar == 'P')
-		        {
-		            b.Append(" ");
-		            b.Append(ni.PercentSymbol);
-		        }
-		        else if (formatChar == 'C')
-		        {
-		            b.Append(" ");
-		            b.Append(ni.CurrencySymbol);
-		        }
+		    if (formatChar == 'P')
+		    {
+		        b.Append(" ");
+		        b.Append(ni.PercentSymbol);
+		    }
+		    else if (formatChar == 'C')
+		    {
+		        b.Append(" ");
+		        b.Append(ni.CurrencySymbol);
+		    }
 
 		    return b.ToString();
 		}
@@ -1166,7 +1180,7 @@ namespace System
 	    {
 	        return new BigDecimal(s);
 	    }
-		
+
 	}
 }
 

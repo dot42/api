@@ -242,7 +242,7 @@ namespace System.Text
         {
             if (charCount < 0)
                 throw new ArgumentOutOfRangeException("charCount");
-            return Math.Round(charSet.NewEncoder().MaxBytesPerChar() * charCount);
+            return Math.JavaRound(charSet.NewEncoder().MaxBytesPerChar() * charCount);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace System.Text
         {
             if (byteCount < 0)
                 throw new ArgumentOutOfRangeException("byteCount");
-            return Math.Round(charSet.NewDecoder().MaxCharsPerByte() * byteCount);
+            return Math.JavaRound(charSet.NewDecoder().MaxCharsPerByte() * byteCount);
         }
 
         /// <summary>

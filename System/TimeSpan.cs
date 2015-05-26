@@ -1010,7 +1010,7 @@ namespace System
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            if (format == null || format.IsEmpty || format == "g")
+            if (string.IsNullOrEmpty(format) || format == "g")
                 return ToString(formatProvider);
 
             if (format == "c")
