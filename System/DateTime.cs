@@ -410,7 +410,7 @@ namespace System
         //     A 32-bit signed integer hash code.
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return ticks.GetHashCode();
         }
 
         public static bool operator ==(DateTime d1, DateTime d2)

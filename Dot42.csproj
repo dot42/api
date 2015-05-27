@@ -87,6 +87,7 @@
     <Compile Include="Dot42\Internal\Application.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
+    <Compile Include="Dot42\Internal\NumberFormatFactory.cs" />
     <Compile Include="Dot42\Internal\ReflectionInfo\FrameworkPropertyInfoProvider.cs" />
     <Compile Include="Dot42\Internal\IAssemblyType.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
@@ -913,6 +914,9 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->

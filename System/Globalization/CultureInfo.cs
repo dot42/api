@@ -104,6 +104,11 @@ namespace System.Globalization
 
         public bool IsReadOnly { get { return true; } }
 
+        public override string ToString()
+        {
+            return _locale.ToString(); //.Replace('_', '-');
+        }
+
         /// <summary>
         /// Returns an object that provides formatting services for the specified type.
         /// </summary>

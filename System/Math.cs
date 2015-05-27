@@ -165,10 +165,7 @@ namespace System
             return Round(value, 0, MidpointRounding.ToEven);
         }
 
-	    private static double[] RoundPower10Double;
-        //private static int fastPath, slowPath;
-        
-	    public static double Round(double value, int decimals, MidpointRounding midpointRounding)
+        public static double Round(double value, int decimals, MidpointRounding midpointRounding)
 	    {
 	        if (decimals < 0 && decimals > 17)
 	            throw new ArgumentException();
@@ -191,33 +188,32 @@ namespace System
             if (floor == value)
                 return value;
 
-            double round = RoundDoubleQuick(value, decimals, midpointRounding);
+            double round = TryRoundDoubleQuick(value, decimals, midpointRounding);
 
 	        if (!double.IsNaN(round))
 	        {
-                //++fastPath;
-                //if (round != RoundDoubleFallback(value, decimals, midpointRounding))
-                //{
-                //    global::Android.Util.Log.Error("dot42", "FastPath: {0} != SlowPath: {1} for value {2}", round, RoundDoubleFallback(value, decimals, midpointRounding), value);
-                //}
 	            return round;
 	        }
 	        
-            //++slowPath;
-            //if((slowPath&0xFF) == 0)
-            //    global::Android.Util.Log.Warn("dot42", "FastPath: {0}; SlowPath: {1}; Value: {2:R}; decimals: {3}; roundingMode={4}", fastPath, slowPath, value, decimals, midpointRounding);
-
-	        // use the fallback for corner cases.
-            return RoundDoubleFallback(value, decimals, midpointRounding);
+	        // Use the fallback for corner cases.
+            return SlowAndPainfulRoundDoubleFallback(value, decimals, midpointRounding);
 	    }
 
         private const double RoundSafetyFactor = 2d;
-	    private static double RoundDoubleQuick(double value, int decimals, MidpointRounding midpointRounding)
+        private static double[] RoundPower10Double;
+
+	    private static double TryRoundDoubleQuick(double value, int decimals, MidpointRounding midpointRounding)
 	    {
-            // Try a fast way based on ideas from: http://www.coderanch.com/t/582520/java/java/fast-method
-	        if (RoundPower10Double == null)
-	            RoundPower10Double = new[]
-	            {1E0, 1E1, 1E2, 1E3, 1E4, 1E5, 1E6, 1E7, 1E8, 1E9, 1E10, 1E11, 1E12, 1E13, 1E14, 1E15};
+            // Try a fast round based on ideas from: http://www.coderanch.com/t/582520/java/java/fast-method.
+
+            // The problem is that when we multiply by a power of ten we might - due to inherent double
+            // inaccuaracy - end up with a value that rounds differently to what we expect.
+            // Therefore we round two values just slighly larger/smaller that the value
+            // we try to round. If the results are equal, we're done. If they are not, 
+            // we fail with double.NaN.
+
+	        if (RoundPower10Double == null) // can't use static initializer in a framework extension class.
+	            RoundPower10Double = new[] {1E0, 1E1, 1E2, 1E3, 1E4, 1E5, 1E6, 1E7, 1E8, 1E9, 1E10, 1E11, 1E12, 1E13, 1E14, 1E15};
 
 	        var factor = RoundPower10Double[decimals];
 	        double y = value*factor;
@@ -225,12 +221,7 @@ namespace System
 
 	        double d1, d2;
 
-	        if (midpointRounding != MidpointRounding.AwayFromZero)
-	        {
-                d1 = Math.Rint(y + threshold);
-                d2 = Math.Rint(y - threshold);
-	        }
-	        else
+	        if (midpointRounding == MidpointRounding.AwayFromZero)
 	        {
 	            if (y < 0)
 	            {
@@ -245,6 +236,11 @@ namespace System
 	                d2 = Math.Floor(y - threshold);
 	            }
 	        }
+	        else
+	        {
+	            d1 = Math.Rint(y + threshold);
+	            d2 = Math.Rint(y - threshold);
+	        }
 
 	        if (d1 == d2)
 	        {
@@ -258,11 +254,12 @@ namespace System
 	    private static DecimalFormat[] RoundDoubleDecimalFormatsCeiling;
         private static DecimalFormat[] RoundDoubleDecimalFormatsEven;
 	    
-        private static double RoundDoubleFallback(double value, int decimals, MidpointRounding midpointRounding)
+        private static double SlowAndPainfulRoundDoubleFallback(double value, int decimals, MidpointRounding midpointRounding)
 	    {
 	        DecimalFormat df;
 	        if (midpointRounding == MidpointRounding.AwayFromZero)
 	        {
+                // can't use static initializer in a framework extension class.
                 if (RoundDoubleDecimalFormatsCeiling == null) RoundDoubleDecimalFormatsCeiling = new DecimalFormat[17];
 	            df = RoundDoubleDecimalFormatsCeiling[decimals];
 	            if (df == null)
@@ -274,6 +271,7 @@ namespace System
 	        }
 	        else
 	        {
+                // can't use static initializer in a framework extension class.
                 if(RoundDoubleDecimalFormatsEven == null) RoundDoubleDecimalFormatsEven = new DecimalFormat[17];
 	            df = RoundDoubleDecimalFormatsEven[decimals];
 	            if (df == null)
@@ -287,7 +285,7 @@ namespace System
 	        return df.Parse(df.Format(value)).DoubleValue();
 	    }
 #else   // TODO: I believe this might not 100% the .NET equivalent. Check with MathTest_Mono.cs again.
-        public static double RoundDoubleFallback(double value, int decimals, MidpointRounding midpointRounding)
+        public static double SlowAndPainfulRoundDoubleFallback(double value, int decimals, MidpointRounding midpointRounding)
         {
             var roundingMode = Java.Math.RoundingMode.UNNECESSARY;
             switch (midpointRounding)
@@ -301,7 +299,7 @@ namespace System
                     break;
             }
 
-            var bigDecimal = new Java.Math.BigDecimal(value);
+            var bigDecimal = new Java.Math.BigDecimal(value); // <-- this line might be problematic, as rounding errors may occur when not using the string constructor.
             bigDecimal = bigDecimal.SetScale(decimals, roundingMode);
 
             return bigDecimal.DoubleValue();
@@ -320,6 +318,7 @@ namespace System
         [Dot42.DexImport("pow", "(DD)D", AccessFlags = 265, IgnoreFromJava = true)]
         public static double Pow(double x, double y) 
         {
+            // TODO: make compatible with .NET semantics for the corner cases (infinitiy et al.)
             return default(double);
         }
 
