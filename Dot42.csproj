@@ -537,6 +537,7 @@
     <Compile Include="System\UriFormatException.cs" />
     <Compile Include="System\UriTemplate.cs" />
     <Compile Include="System\ValueType.cs" />
+    <Compile Include="System\WeakReference`1.cs" />
     <Compile Include="System\WeakReference.cs" />
     <Compile Include="System\Windows.Input\ICommand.cs" />
     <Compile Include="System\Xml\Linq\Extensions.cs" />
