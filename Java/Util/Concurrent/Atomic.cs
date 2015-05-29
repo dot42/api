@@ -8,12 +8,19 @@ namespace Java.Util.Concurrent.Atomic
     {
         public long CompareExchange(T obj, long value, long comparand)
         {
-            long currentVal = Get(obj);
-            if (CompareAndSet(obj, comparand, value))
-                return comparand;
-            // Note that currentVal might not be the same as the one CompareAndSet compared
-            // to. This is unobservable to the caller though.
-            return currentVal;
+            while (true)
+            {
+                if (CompareAndSet(obj, comparand, value))
+                    return comparand;
+
+                // Note that previousVal might not be the same as the one CompareAndSet 
+                // compared to. As long as they differ, this is unobservable to the 
+                // caller: no action has been taken; CompareAndSet could
+                // have been called at the same time as 'Get' with the same result.
+                long previousVal = Get(obj);
+                if (previousVal != comparand)
+                    return previousVal;
+            }
         }
     }
 
@@ -22,12 +29,20 @@ namespace Java.Util.Concurrent.Atomic
     {
         public int CompareExchange(T obj, int value, int comparand)
         {
-            int currentVal = Get(obj);
-            if (CompareAndSet(obj, comparand, value))
-                return comparand;
-            // Note that currentVal might not be the same as the one CompareAndSet compared
-            // to. This is unobservable to the caller though.
-            return currentVal;
+            while (true)
+            {
+                
+                if (CompareAndSet(obj, comparand, value))
+                    return comparand;
+
+                // Note that previousVal might not be the same as the one CompareAndSet 
+                // compared to. As long as they differ, this is unobservable to the 
+                // caller: no action has been taken; CompareAndSet could
+                // have been called at the same time as 'Get' with the same result.
+                int previousVal = Get(obj);
+                if (previousVal != comparand)
+                    return previousVal;
+            }
         }
     }
 
@@ -36,12 +51,20 @@ namespace Java.Util.Concurrent.Atomic
     {
         public V CompareExchange(T obj, V value, V comparand)
         {
-            V currentVal = Get(obj);
-            if (CompareAndSet(obj, comparand, value))
-                return comparand;
-            // Note that currentVal might not be the same as the one CompareAndSet compared
-            // to. This is unobservable to the caller though.
-            return currentVal;
+            while (true)
+            {
+                
+                if (CompareAndSet(obj, comparand, value))
+                    return comparand;
+
+                // Note that previousVal might not be the same as the one CompareAndSet 
+                // compared to. As long as they differ, this is unobservable to the 
+                // caller: no action has been taken; CompareAndSet could
+                // have been called at the same time as 'Get' with the same result.
+                V previousVal = Get(obj);
+                if(!ReferenceEquals(previousVal, comparand))
+                    return previousVal;
+            }
         }
     }
 }
