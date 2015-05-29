@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using System.Reflection;
+using Android.Database.Sqlite;
 using Dot42.Internal;
 
 namespace System
@@ -38,6 +39,7 @@ namespace System
         public static Delegate Remove(Delegate source, Delegate value)
         {
             if (value == null) return source;
+            if (source == null) return null;
             return source.Remove(value);
         }
 
