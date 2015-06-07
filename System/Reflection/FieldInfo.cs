@@ -22,6 +22,8 @@ namespace System.Reflection
 {
     public class FieldInfo : JavaMemberInfo
     {
+        internal static readonly FieldInfo None = new FieldInfo(null, null);
+
         private readonly Field _field;
         private readonly Type _declaringType;
         private Type _type;

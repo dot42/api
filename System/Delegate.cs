@@ -17,11 +17,16 @@
 using System.Reflection;
 using Android.Database.Sqlite;
 using Dot42.Internal;
+using Java.Util.Concurrent;
+using Java.Util.Concurrent.Atomic;
 
 namespace System
 {
 	public abstract partial class Delegate
 	{
+        private static readonly ConcurrentHashMap<Type, FieldInfo> InstanceFieldCache = new ConcurrentHashMap<Type, FieldInfo>();
+        private static readonly ConcurrentHashMap<Type, MethodInfo> TargetMethodCache = new ConcurrentHashMap<Type, MethodInfo>();
+
         /// <summary>
         /// Concatenates an invocation list of 2 delegates.
         /// </summary>
@@ -29,8 +34,7 @@ namespace System
         {
             if (a == null) return b;
             if (b == null) return a;
-            a.Add(b);
-            return a;
+            return a.CombineImpl(b);
         }
 
         /// <summary>
@@ -40,44 +44,25 @@ namespace System
         {
             if (value == null) return source;
             if (source == null) return null;
-            return source.Remove(value);
+            return source.RemoveImpl(value);
         }
 
         /// <summary>
         /// Add the given delegate to the end of my invocation list.
         /// </summary>
-	    protected abstract void Add(Delegate other);
+	    protected abstract Delegate CombineImpl(Delegate other);
 
         /// <summary>
         /// Remove the given delegate from my invocation list.
         /// </summary>
-        protected abstract Delegate Remove(Delegate other);
+        protected abstract Delegate RemoveImpl(Delegate other);
 
 	    /// <summary>
 	    /// return the class instance or null, if this is a static delegate.
 	    /// </summary>
-	    public object Target
-	    {
-	        get
-	        {
-                // don't care about performance 
-	            var field = GetType().GetField("instance", BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic);
-	            if (field == null) return null;
-	            return field.GetValue(this);
-	        }
-	    }
+	    public abstract object Target { get; }
 
-	    internal MethodInfo Method
-	    {
-	        get
-	        {
-	            var annotation = GetType().GetAnnotation<IDelegateMethod>(typeof (IDelegateMethod));
-                if(annotation == null)
-                    throw new NotImplementedException("delegate annotation missing.");
-
-	            return new MethodInfo(annotation.Method(), this.GetType());
-	        }
-	    }
+	    internal abstract MethodInfo Method { get; }
 
         /// <summary>
         /// returns the invocation list
@@ -87,7 +72,7 @@ namespace System
 	        return new [] { this };
 	    }
 
-	    public static bool operator ==(Delegate d1, Delegate d2)
+	    public static bool operator == (Delegate d1, Delegate d2)
 	    {
 	        if (ReferenceEquals(d1, null))
 	            return ReferenceEquals(d2, null);
@@ -98,6 +83,39 @@ namespace System
 	    {
 	        return !(d1 == d2);
 	    }
+
+        protected FieldInfo GetInstanceField()
+        {
+            var ret = InstanceFieldCache.Get(this.GetType());
+            
+            if (ReferenceEquals(ret, FieldInfo.None))
+                return null;
+            if (ret != null)
+                return ret;
+
+            ret = GetType().GetField("instance", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+            ret = ret ?? FieldInfo.None;
+            ret = InstanceFieldCache.PutIfAbsent(this.GetType(), ret) ?? ret;
+
+            if (ReferenceEquals(ret, FieldInfo.None))
+                return null;
+            return ret;
+        }
+
+        protected MethodInfo GetMethodInfo()
+        {
+            var ret = TargetMethodCache.Get(this.GetType());
+            if (ret != null)
+                return ret;
+
+            var annotation = GetType().GetAnnotation<IDelegateMethod>(typeof(IDelegateMethod));
+            if (annotation == null)
+                throw new NotImplementedException("delegate annotation missing.");
+         
+            ret = new MethodInfo(annotation.Method(), this.GetType());
+
+            return TargetMethodCache.PutIfAbsent(this.GetType(), ret) ?? ret;
+        }
 	}
 }
 
