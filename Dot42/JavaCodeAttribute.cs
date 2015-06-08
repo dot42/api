@@ -25,7 +25,7 @@ namespace Dot42
     [Ignore]
     public sealed class JavaCodeAttribute : Attribute
     {
-		public JavaCodeAttribute(string resourceName) { }
+		public JavaCodeAttribute(string resourceName, string jarFileName) { }
     }
 }
 
