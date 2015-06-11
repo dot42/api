@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
 using Dot42;
@@ -131,9 +132,10 @@ namespace System
 
             if (newNumDelegates == 1)
             {
-                if (idx == 0)
-                    return WithoutInvocationList();
-                return InvocationList[idx - 1];
+                if (idx == 0) 
+                    return InvocationList[invListLen - 1]; // keep the last delegate
+                Debug.Assert(idx == 1);
+                return WithoutInvocationList();            // keep the first delegate
             }
 
             int newInvListLen = newNumDelegates - 1;
