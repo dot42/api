@@ -10,60 +10,99 @@ namespace Dot42.Internal
     /// </summary>
     internal static class AssemblyTypes
     {
-        private static ConcurrentHashMap<Type, Assembly> _typesPerAssembly = null;
-        private static Assembly _entryAssembly;
-        public static readonly Assembly DefaultAssembly = Assembly.DefaultAssembly;
+        // This field is initialized by the compiler.
+        private static readonly string   EntryAssembly;
+
+        public static readonly Assembly DefaultAssembly;
+
+        private static volatile HashMap<Type, Assembly> _typesPerAssembly = null;
+        private static volatile Assembly _entryAssembly;
 
         public static Assembly GetEntryAssembly()
         {
-            // load assembly data
-            GetAssemblyFromType(typeof (AssemblyTypes));
-            return _entryAssembly;
+            return _entryAssembly ?? DefaultAssembly;
         }
+
 
         public static Assembly GetAssemblyFromType(Type type)
         {
-            if (_typesPerAssembly != null)
-                return _typesPerAssembly.Get(type) ?? DefaultAssembly;
-            
-            lock(typeof(AssemblyTypes))
-            {
-                if (_typesPerAssembly != null)
-                    return _typesPerAssembly.Get(type) ?? DefaultAssembly;
-
-                _typesPerAssembly = new ConcurrentHashMap<Type, Assembly>();
-
-                HashMap<string, Assembly> assemblies = new HashMap<string, Assembly>();
-
-                var annos = typeof (AssemblyTypes).GetAnnotation<IAssemblyTypes>(typeof (IAssemblyTypes));
-                
-                if (annos != null)
-                {
-                    string entryAssemblyName = annos.EntryAssemblyName();
-
-                    foreach (var anno in annos.Types())
-                    {
-                        var assemblyName = anno.AssemblyName();
-                        var assembly = assemblies.Get(assemblyName);
-
-                        if (assembly == null)
-                        {
-                            assemblies.Put(assemblyName, assembly = new Assembly(assemblyName));
-                            if (assemblyName == entryAssemblyName)
-                                _entryAssembly = assembly;
-                        }
-
-                        assembly.AddType(anno.Type());
-                        _typesPerAssembly.Put(anno.Type(), assembly);
-                    }
-                }
-            }
-
-            if (_entryAssembly == null)
-                _entryAssembly = DefaultAssembly;
+            if (_typesPerAssembly == null)
+                return DefaultAssembly;
 
             return _typesPerAssembly.Get(type) ?? DefaultAssembly;
         }
 
+        static AssemblyTypes()
+        {
+            DefaultAssembly = Assembly.DefaultAssembly;
+
+            var types = GetAssemblyTypeList();
+
+            if (types == null)
+            { 
+                _entryAssembly = DefaultAssembly;
+                return;
+            }
+            
+            _typesPerAssembly = new HashMap<Type, Assembly>();
+
+            int len = types.Length;
+            string curAssemblyName = null;
+
+            ArrayList<Type> curTypes = new ArrayList<Type>();
+
+            for (int i = 0; i < len; i++)
+            {
+                var val = types[i];
+
+                if (val is string)
+                {
+                    FinializeAssembly(curAssemblyName, curTypes);
+                    curAssemblyName = (string) val;
+                    continue;
+                }
+
+                curTypes.Add((Type) val);
+            }
+
+            FinializeAssembly(curAssemblyName, curTypes);
+
+            if (_entryAssembly == null)
+                _entryAssembly = DefaultAssembly;
+        }
+
+        // This method is created by the compiler.
+        private static object[] GetAssemblyTypeList()
+        {
+            return null;
+        }
+
+        private static void FinializeAssembly(string curAssemblyName, ArrayList<Type> curTypes)
+        {
+            if (curTypes.Count == 0)
+                return;
+            
+            // curAssemblyName == null is not used by the compiler at the moment, but could be.
+            var assm = curAssemblyName == null ? DefaultAssembly : new Assembly(curAssemblyName);
+
+            if (curAssemblyName == EntryAssembly)
+                _entryAssembly = assm;
+
+            if (curAssemblyName == null)
+            {
+                foreach (var type in curTypes.AsEnumerable())
+                    DefaultAssembly.AddType(type);
+            }
+            else
+            {
+                foreach (var type in curTypes.AsEnumerable())
+                {
+                    assm.AddType(type);
+                    _typesPerAssembly.Put(type, assm);
+                }
+            }
+
+            curTypes.Clear();
+        }
     }
 }

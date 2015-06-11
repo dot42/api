@@ -14,7 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Java.Util;
 
 namespace Dot42
 {
@@ -23,16 +22,14 @@ namespace Dot42
     /// </summary>
 	internal class EventHandlerListener
 	{
-	    private ArrayList<EventHandler> list;
+	    private EventHandler invoke;
 
         /// <summary>
         /// Add the given handler to this list.
         /// </summary>
         internal void Add(EventHandler handler)
         {
-            if (list == null)
-                list = new ArrayList<EventHandler>();
-            list.Add(handler);
+            invoke += handler;
         }
 
         /// <summary>
@@ -40,8 +37,7 @@ namespace Dot42
         /// </summary>
         internal void Remove(EventHandler handler)
         {
-            if (list != null)
-                list.Remove(handler);
+            invoke -= handler;
         }
 
         /// <summary>
@@ -49,14 +45,9 @@ namespace Dot42
         /// </summary>
         internal void Invoke(object sender, EventArgs args)
         {
-            if (list != null)
-            {
-                var count = list.Size();
-                for (var i = 0; i < count; i++)
-                {
-                    list.Get(i)(sender, args);
-                }
-            }
+            var h = invoke;
+            if (h != null)
+                h(sender, args);
         }
     }
 
@@ -66,16 +57,14 @@ namespace Dot42
     internal class EventHandlerListener<T>
         where T : EventArgs
     {
-        private ArrayList<EventHandler<T>> list;
+        private EventHandler<T> invoke;
 
         /// <summary>
         /// Add the given handler to this list.
         /// </summary>
         internal void Add(EventHandler<T> handler)
         {
-            if (list == null)
-                list = new ArrayList<EventHandler<T>>();
-            list.Add(handler);
+            invoke += handler;
         }
 
         /// <summary>
@@ -83,8 +72,7 @@ namespace Dot42
         /// </summary>
         internal void Remove(EventHandler<T> handler)
         {
-            if (list != null)
-                list.Remove(handler);
+            invoke -= handler;
         }
 
         /// <summary>
@@ -92,14 +80,9 @@ namespace Dot42
         /// </summary>
         internal void Invoke(object sender, T args)
         {
-            if (list != null)
-            {
-                var count = list.Size();
-                for (var i = 0; i < count; i++)
-                {
-                    list.Get(i)(sender, args);
-                }
-            }
+            var h = invoke;
+            if(h != null)
+                h(sender, args);
         }
     }
 }
