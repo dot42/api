@@ -52,6 +52,46 @@ namespace Dot42.Manifest
         /// <see cref="Android.Content.Intent"/>.
         /// </summary>
         public string[] Categories { get; set; }
+
+        /// <summary>
+        /// A MIME media type, such as image/jpeg or audio/mpeg4-generic. The subtype can be the asterisk wildcard (*) to indicate that any subtype matches.
+        /// <para>
+        /// It's common for an intent filter to declare a &lt;data&gt; that includes only the android:mimeType attribute.
+        /// </para><para>
+        /// Note: MIME type matching in the Android framework is case-sensitive, unlike formal RFC MIME types. As a result, you should always specify MIME types using lowercase letters.
+        /// </para>
+        /// </summary>
+        public string DataMimeType { get; set; }
+
+        /// <summary>
+        /// The scheme part of a URI. This is the minimal essential attribute for specifying a URI; at least one scheme attribute must be set for the filter, or none of the other URI attributes are meaningful.
+        /// <para>
+        /// A scheme is specified without the trailing colon (for example, http, rather than http:).
+        /// </para><para>
+        /// If the filter has a data type set (the mimeType attribute) but no scheme, the content: and file: schemes are assumed.
+        /// </para>
+        /// Note: Scheme matching in the Android framework is case-sensitive, unlike the RFC. As a result, you should always specify schemes using lowercase letters.
+        /// </summary>
+        public string DataScheme { get; set; }
+
+        /// <summary>
+        /// The host part of a URI authority. This attribute is meaningless unless a scheme attribute is also specified for the filter.
+        /// <para>
+        /// Note: host name matching in the Android framework is case-sensitive, unlike the formal RFC. As a result, you should always specify host names using lowercase letters.
+        /// </para>
+        /// </summary>
+        public string DataHost { get; set; }
+
+        /// <summary>
+        /// The port part of a URI authority. This attribute is meaningful only if the scheme and host attributes are also specified for the filter.
+        /// </summary>
+        public string DataPort { get; set; }
+
+        public string DataPath { get; set; }
+        public string DataPathPattern { get; set; }
+        public string DataPathPrefix { get; set; }
+
+
     }
 }
 
