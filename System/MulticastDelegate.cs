@@ -15,8 +15,8 @@
 // limitations under the License.
 
 using System.Reflection;
+using System.Threading;
 using Dot42;
-using Java.Util.Concurrent.Atomic;
 
 namespace System
 {
@@ -42,11 +42,14 @@ namespace System
         protected int InvocationListLength;
 
         [Include]
-	    protected AtomicReferenceArray<MulticastDelegate> InvocationList;
+	    protected MulticastDelegate[] InvocationList;
+
+        [Include]
+        private int ownsInvocationList;
 
         protected abstract bool EqualsWithoutInvocationList(object other);
         [DexName("CloneWithNewInvocationList")]
-        protected abstract MulticastDelegate CloneWithNewInvocationList(AtomicReferenceArray<MulticastDelegate> invocationList, int invocationListLength);
+        protected abstract MulticastDelegate CloneWithNewInvocationList(MulticastDelegate[] invocationList, int invocationListLength);
 
         protected override sealed Delegate CombineImpl(Delegate other)
         {
@@ -58,28 +61,26 @@ namespace System
             var oInvList = o.InvocationList;
             var oInvLen = o.InvocationListLength;
 
-            o = o.StripInvocationList(); // we flatten the list. 
+            o = o.WithoutInvocationList(); // we flatten the list. 
 
             var newInvList = InvocationList;
-            int newInvLen = InvocationListLength + 1 + oInvLen;
+            var curInvLen = InvocationListLength;
+            int newInvLen = curInvLen + 1 + oInvLen;
+            
 
-            bool needNewList = newInvList == null || newInvList.Length() < newInvLen;
+            bool needNewList = newInvList == null || newInvList.Length < newInvLen;
 
             // try appending to the current list.
             if (!needNewList)
             {
-                if (!newInvList.CompareAndSet(InvocationListLength, null, o))
+                if (Interlocked.CompareExchange(ref ownsInvocationList, 0, 1) == 0)
                     needNewList = true;
                 else
                 {
+                    newInvList[curInvLen] = o;
                     for (int i = 0; i < oInvLen; ++i)
                     {
-                        if (!newInvList.CompareAndSet(InvocationListLength + i + 1, null, oInvList.Get(i)))
-                        {
-                            // can this even happen when the first set succeeded?
-                            needNewList = true;
-                            break;
-                        }
+                        newInvList[curInvLen + i + 1] = oInvList[i];
                     }
                 }
             }
@@ -87,24 +88,27 @@ namespace System
             if (needNewList)
             {
                 // start by 4, duplicate size.
-                int len = newInvList == null ? 4 : newInvList.Length();
+                int len = newInvList == null ? 4 : newInvList.Length;
                 while (len < newInvLen)
                     len *= 2;
 
                 MulticastDelegate[] list = new MulticastDelegate[len];
 
-                for(int i = 0; i < InvocationListLength; ++i)
-                    list[i] = InvocationList.Get(i);
-                
-                list[InvocationListLength] = o;
+                var curInvList = InvocationList;
+                for(int i = 0; i < curInvLen; ++i)
+                    list[i] = curInvList[i];
+
+                list[curInvLen] = o;
                 
                 for (int i = 0; i < oInvLen; ++i)
-                    list[InvocationListLength + 1 + i] = oInvList.Get(i);
+                    list[curInvLen + 1 + i] = oInvList[i];
 
-                newInvList = new AtomicReferenceArray<MulticastDelegate>(list);
+                newInvList = list;
             }
 
-            return CloneWithNewInvocationList(newInvList, newInvLen);
+            var ret = this.CloneWithNewInvocationList(newInvList, newInvLen);
+            ret.ownsInvocationList = 1;
+            return ret;
         }
 
         protected override sealed Delegate RemoveImpl(Delegate other)
@@ -119,7 +123,8 @@ namespace System
             if (idx == -1)
                 return this;
 
-            var newNumDelegates = InvocationListLength - o.InvocationListLength;
+            var invListLen = InvocationListLength;
+            var newNumDelegates = invListLen - o.InvocationListLength;
 
             if (newNumDelegates == 0)
                 return null;
@@ -127,38 +132,43 @@ namespace System
             if (newNumDelegates == 1)
             {
                 if (idx == 0)
-                    return StripInvocationList();
-                return InvocationList.Get(idx - 1);
+                    return WithoutInvocationList();
+                return InvocationList[idx - 1];
             }
 
             int newInvListLen = newNumDelegates - 1;
-            AtomicReferenceArray<MulticastDelegate> newInvList;
+            MulticastDelegate[] newInvList;
             MulticastDelegate head;
+
+            var invList = InvocationList;
 
             if (idx == 0)
             {
-                head = InvocationList.Get(o.InvocationListLength);
-                newInvList = RemoveSliceFromInvocationList(0, o.InvocationListLength + 1);
+                head = invList[o.InvocationListLength];
+                newInvList = RemoveSliceFromInvocationList(invList, invListLen, 0, o.InvocationListLength + 1);
             }
             else
             {
                 head = this;
-                newInvList = RemoveSliceFromInvocationList(idx - 1, o.InvocationListLength + 1);    
+                newInvList = RemoveSliceFromInvocationList(invList, invListLen, idx - 1, o.InvocationListLength + 1);    
             }
 
-            return head.CloneWithNewInvocationList(newInvList, newInvListLen);
+            var ret = head.CloneWithNewInvocationList(newInvList, newInvListLen);
+            if (newInvList != null && !ReferenceEquals(newInvList, InvocationList))
+                ret.ownsInvocationList = 1;
+            return ret;
         }
 
         public override Delegate[] GetInvocationList()
         {
             Delegate[] ret = new Delegate[1 + InvocationListLength];
-            ret[0] = this.StripInvocationList();
+            ret[0] = this.WithoutInvocationList();
             for (int i = 1; i <= InvocationListLength; ++i)
-                ret[i] = InvocationList.Get(i - 1);
+                ret[i] = InvocationList[i - 1];
             return ret;
         }
 
-        private MulticastDelegate StripInvocationList()
+        private MulticastDelegate WithoutInvocationList()
         {
             if (InvocationListLength == 0)
                 return this;
@@ -176,7 +186,7 @@ namespace System
                 // we need to return the last Target from our invocation list.
                 if (InvocationListLength > 0)
 	            {
-                    var del = InvocationList.Get(InvocationListLength - 1);
+                    var del = InvocationList[InvocationListLength - 1];
 	                field = del.GetInstanceField();
 	                return field == null ? null : field.GetValue(del);
 	            }
@@ -192,7 +202,7 @@ namespace System
             {
                 // we need to return the last Method from our invocation list.
                 if(InvocationListLength > 0)
-                    return InvocationList.Get(InvocationListLength-1).GetMethodInfo();
+                    return InvocationList[InvocationListLength-1].GetMethodInfo();
                 return GetMethodInfo();
             }
         }
@@ -205,16 +215,19 @@ namespace System
             if (o == null)
                 return false;
 
+            var invListLen = InvocationListLength;
+            if (invListLen != o.InvocationListLength)
+                return false;
+
             if (!EqualsWithoutInvocationList(o))
                 return false;
 
-            if (InvocationListLength != o.InvocationListLength)
-                return false;
-
             var oInvList = o.InvocationList;
-            for(int i = 0; i < InvocationListLength; ++i)
+            var invList = InvocationList;
+
+            for (int i = 0; i < invListLen; ++i)
             {
-                if (!InvocationList.Get(i).EqualsWithoutInvocationList(oInvList.Get(i)))
+                if (!invList[i].EqualsWithoutInvocationList(oInvList[i]))
                     return false;
             }
             return true;
@@ -226,13 +239,10 @@ namespace System
             return GetType().GetHashCode() * 33 + InvocationListLength;
         }
 
-        private AtomicReferenceArray<MulticastDelegate> RemoveSliceFromInvocationList(int idx, int length)
+        private static MulticastDelegate[] RemoveSliceFromInvocationList(MulticastDelegate[] invList, int invListLen, int idx, int length)
         {
-            var invList = InvocationList;
-            int invListLen = InvocationListLength;
-
             int newInvLen = invListLen - length;
-            int trueInvListLen = invList.Length();
+            int trueInvListLen = invList.Length;
 
             bool canKeepList = newInvLen == idx && (trueInvListLen <= 4 || trueInvListLen/2 <= newInvLen);
 
@@ -246,11 +256,11 @@ namespace System
             MulticastDelegate[] newList = new MulticastDelegate[trueInvListLen];
 
             for (int i = 0; i < idx; ++i)
-                newList[i] = invList.Get(i);
+                newList[i] = invList[i];
             for (int i = idx + length, j = idx; j < newInvLen; ++i, ++j)
-                newList[j] = invList.Get(i);
+                newList[j] = invList[i];
 
-            return new AtomicReferenceArray<MulticastDelegate>(newList);
+            return newList;
         }
 
         /// <summary>
@@ -260,34 +270,34 @@ namespace System
         {
             int oInvLen = o.InvocationListLength;
             var oInvList = o.InvocationList;
+            var invList = InvocationList;
 
             // We need to start comparing from the end.
 
             // Mono's implementation uses the KMP algorithm, but at a first
-            // glance this seems to be overkill for an invocation list...
+            // glance this seems to be overkill for an invocation list. In the
+            // typical usage scenario, 'o' will have no invocation list at all.
             // We stick to the naive implementation for now.
-            for (int i = InvocationListLength - oInvLen - 1; i >= -1; --i) // -1 = this.
+            for (int i = InvocationListLength - oInvLen; i >= 0; --i) 
             {
-                // compare o itself
-                if (i == -1)
+                // 0 = this
+                if (i == 0)
                 {
-                    if (!this.EqualsWithoutInvocationList(o))
-                        return -1;
+                    // compare o itself
+                    return this.EqualsWithoutInvocationList(o) ? 0 : -1;
                 }
-                else
-                {
-                    if (!InvocationList.Get(i).EqualsWithoutInvocationList(o))
-                        continue;
-                }
+                
+                if (!invList[i - 1].EqualsWithoutInvocationList(o))
+                    continue;
 
                 for (int j = 0; j < oInvLen; ++j)
                 {
-                    if (!InvocationList.Get(i + 1 + j).EqualsWithoutInvocationList(oInvList.Get(j)))
+                    if (!invList[i + j].EqualsWithoutInvocationList(oInvList[j]))
                         goto next_iteration;
                 }
 
                 // found it!
-                return i + 1;
+                return i;
 
             next_iteration: ;
             }
