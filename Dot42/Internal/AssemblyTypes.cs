@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using Java.Util;
-using Java.Util.Concurrent;
 
 namespace Dot42.Internal
 {
@@ -22,7 +21,6 @@ namespace Dot42.Internal
         {
             return _entryAssembly ?? DefaultAssembly;
         }
-
 
         public static Assembly GetAssemblyFromType(Type type)
         {
@@ -71,10 +69,10 @@ namespace Dot42.Internal
                 _entryAssembly = DefaultAssembly;
         }
 
-        // This method is created by the compiler.
         private static object[] GetAssemblyTypeList()
         {
-            return null;
+            var anno = typeof(AssemblyTypes).GetAnnotation<IAssemblyTypes>(typeof(IAssemblyTypes));
+            return anno != null ? anno.AssemblyTypeList() : null;
         }
 
         private static void FinializeAssembly(string curAssemblyName, ArrayList<Type> curTypes)

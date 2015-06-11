@@ -87,6 +87,7 @@
     <Compile Include="Dot42\Internal\Application.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
+    <Compile Include="Dot42\Internal\IAssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\NumberFormatFactory.cs" />
     <Compile Include="Dot42\Internal\ReflectionInfo\FrameworkPropertyInfoProvider.cs" />
     <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
