@@ -26,73 +26,53 @@
 //
 //
 
-
-using System;
-using System.Threading;
-using System.Collections.Generic;
-using System.Collections.Concurrent;
 using Java.Util.Concurrent;
 
 namespace System.Threading.Tasks
 {
 	internal class TaskCompletionQueue<TCompletion> where TCompletion : class
 	{
-		TCompletion single;
-        ConcurrentLinkedQueue<TCompletion> completed; 
+		private TCompletion single;
+        private ConcurrentLinkedQueue<TCompletion> completed; 
 
 		public void Add (TCompletion continuation)
 		{
-		    if (single == null)
-		    {
-		        single = continuation;
+		    if (Interlocked.CompareExchange(ref single, continuation, null) == null)
 		        return;
-		    }
 
             if (completed == null)
-            {
-                completed = new ConcurrentLinkedQueue<TCompletion>();
-            }
+                Interlocked.CompareExchange(ref completed, new ConcurrentLinkedQueue<TCompletion>(), null);
 
 		    completed.Add (continuation);
 		}
 
 		public bool Remove (TCompletion continuation)
 		{
-			TCompletion temp = single;
-			if (temp != null && temp == continuation)
-			{
-			    single = null;
-			    return true;
-			}
-				
-			if (completed != null) return completed.Remove (continuation);
+		    if (Interlocked.CompareExchange(ref single, null, continuation) == continuation)
+		        return true;
+
+			if (completed != null) 
+                return completed.Remove (continuation);
+
 			return false;
 		}
 
-		public bool HasElements {
-			get {
+		public bool HasElements 
+        {
+			get 
+            {
 				return single != null || (completed != null && completed.Count != 0);
 			}
 		}
 
-		public bool TryGetNextCompletion (out TCompletion continuation)
+		public TCompletion PollCompletion()
 		{
-			continuation = null;
+		    var continuation = Interlocked.Exchange(ref single, null);
+            
+            if (continuation == null && completed != null)
+                continuation = completed.Poll();
 
-		    if (single != null)
-		    {
-		        continuation = single;
-		        single = null;
-		    }
-		    else
-		    {
-                if (completed != null)
-                {
-                    continuation = completed.Poll();
-                }
-		    }
-
-		    return continuation != null;
+		    return continuation;
 		}
 	}
 }

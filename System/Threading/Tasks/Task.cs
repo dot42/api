@@ -544,12 +544,9 @@ namespace System.Threading.Tasks
             if (continuations.HasElements)
             {
                 IContinuation continuation;
-                while (continuations.TryGetNextCompletion(out continuation))
+                while ((continuation = continuations.PollCompletion()) != null)
                 {
-                    //TODO: remove line below if case 828 has been solved
-                    if (continuation == null) break;
-                    
-                    continuation.Execute();
+                    continuation.Execute(this);
                 }
             }
         }
@@ -853,7 +850,7 @@ namespace System.Threading.Tasks
         {
             if (IsCompleted)
             {
-                continuation.Execute();
+                continuation.Execute(this);
                 return;
             }
 
@@ -861,7 +858,7 @@ namespace System.Threading.Tasks
 
             // Retry in case completion was achieved but event adding was too late
             if (IsCompleted && continuations.Remove(continuation))
-                continuation.Execute();
+                continuation.Execute(this);
         }
 
         public Task ContinueWith(Action<Task> continuation)

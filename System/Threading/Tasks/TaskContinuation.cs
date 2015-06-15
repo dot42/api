@@ -28,6 +28,8 @@
 //
 
 using System.Collections.Generic;
+using System.Linq;
+using Dot42;
 using Java.Util.Concurrent;
 
 using Dot42.Internal;
@@ -42,7 +44,7 @@ namespace System.Threading.Tasks
 
 	interface IContinuation
 	{
-        void Execute();
+        void Execute(Task completedTask);
 	}
 
 	class TaskContinuation : IContinuation
@@ -99,7 +101,7 @@ namespace System.Threading.Tasks
 			return true;
 		}
 
-        public void Execute()
+        public void Execute(Task completedTask)
 		{
 			if (!ContinuationStatusCheck (continuationOptions)) {
 				task.CancelReal ();
@@ -127,7 +129,7 @@ namespace System.Threading.Tasks
 			this.action = action;
 		}
 
-        public void Execute()
+        public void Execute(Task completedTask)
 		{
 			action ();
 		}
@@ -148,7 +150,7 @@ namespace System.Threading.Tasks
             this.thisSetter = thisSetter;
 		}
 
-        public void Execute()
+        public void Execute(Task completedTask)
         {
             var activityCtx = ctx as InstanceSynchronizationContext;
             if (activityCtx != null && instanceReference != null)
@@ -171,46 +173,44 @@ namespace System.Threading.Tasks
 	sealed class WhenAllContinuation : IContinuation
 	{
         readonly TaskCompletionSource<object> owner;
-		readonly IList<Task> tasks;
 	    private int counter;
+	    private bool canceled;
+        private ConcurrentLinkedQueue<Exception> exceptions = null;
 
 		public WhenAllContinuation (TaskCompletionSource<object> owner, IList<Task> tasks)
 		{
 			this.owner = owner;
-			this.counter = tasks.Count;
-			this.tasks = tasks;
-
+            
+            tasks = tasks.Distinct().ToList();
+			counter = tasks.Count;
+			
             foreach (var t in tasks)
                 t.ContinueWith(this);
 		}
 
-		public void Execute ()
-		{
-			if (Interlocked.Decrement(ref counter) != 0)
-				return;
+        public void Execute(Task completedTask)
+        {
+            completedTask.RemoveContinuation(this);
 
-			bool canceled = false;
-			List<Exception> exceptions = null;
-			foreach (var task in tasks) {
-				if (task.IsFaulted) {
-					if (exceptions == null)
-						exceptions = new List<Exception> ();
+            if (completedTask.IsFaulted)
+            {
+                if (exceptions == null)
+                    Interlocked.CompareExchange(ref exceptions, new ConcurrentLinkedQueue<Exception>(), null);
+                exceptions.Add(completedTask.Exception);
+            }
+            else if (completedTask.IsCanceled)
+            {
+                canceled = true;
+            }
 
-					exceptions.AddRange (task.Exception.InnerExceptions);
-					continue;
-				}
+            bool isComplete = Interlocked.Decrement(ref counter) == 0;
 
-				if (task.IsCanceled) 
-                {
-					canceled = true;
-				}
-
-                task.RemoveContinuation(this);
-			}
+            if (!isComplete)
+                return;
 
 			if (exceptions != null) 
             {
-				owner.SetException (exceptions);
+				owner.SetException(exceptions.AsEnumerable());
 				return;
 			}
 
@@ -227,129 +227,29 @@ namespace System.Threading.Tasks
     sealed class WhenAnyContinuation : IContinuation
     {
         readonly TaskCompletionSource<Task> owner;
-        readonly IList<Task> tasks;
-
+        private int hasResult;
+        private IList<Task> tasks;
         public WhenAnyContinuation(TaskCompletionSource<Task> owner, IList<Task> tasks)
         {
             this.owner = owner;
             this.tasks = tasks;
+
             foreach (var t in tasks)
                 t.ContinueWith(this);
         }
 
-        public void Execute()
+        public void Execute(Task completedTask)
         {
-            bool hasResult = false;
-            foreach (var task in tasks)
-            {
-                if(!hasResult && task.IsCompleted)
-                {
-                    owner.SetResult(task);
-                    hasResult = true;
-                }
-                task.RemoveContinuation(this);
-            }
+            if (Interlocked.CompareExchange(ref hasResult, 1, 0) != 0)
+                return;
+
+            foreach (var t in tasks)
+                t.RemoveContinuation(this);
+            tasks = null;
+
+            owner.SetResult(completedTask);
         }
     }
-
-    /*
-	sealed class WhenAllContinuation<TResult> : IContinuation
-	{
-		readonly Task<TResult[]> owner;
-		readonly IList<Task<TResult>> tasks;
-		int counter;
-
-		public WhenAllContinuation (Task<TResult[]> owner, IList<Task<TResult>> tasks)
-		{
-			this.owner = owner;
-			this.counter = tasks.Count;
-			this.tasks = tasks;
-		}
-
-		public void Execute ()
-		{
-			if (Interlocked.Decrement (ref counter) != 0)
-				return;
-
-			bool canceled = false;
-			List<Exception> exceptions = null;
-			TResult[] results = null;
-			for (int i = 0; i < tasks.Count; ++i) {
-				var task = tasks [i];
-				if (task.IsFaulted) {
-					if (exceptions == null)
-						exceptions = new List<Exception> ();
-
-					exceptions.AddRange (task.Exception.InnerExceptions);
-					continue;
-				}
-
-				if (task.IsCanceled) {
-					canceled = true;
-					continue;
-				}
-
-				if (results == null) {
-					if (canceled || exceptions != null)
-						continue;
-
-					results = new TResult[tasks.Count];
-				}
-
-				results[i] = task.Result;
-			}
-
-			if (exceptions != null) {
-				owner.TrySetException (new AggregateException (exceptions));
-				return;
-			}
-
-			if (canceled) {
-				owner.CancelReal ();
-				return;
-			}
-
-			owner.TrySetResult (results);
-		}
-	}
-    */
-
-    /*
-	sealed class WhenAnyContinuation<T> : IContinuation where T : Task
-	{
-		readonly Task<T> owner;
-		readonly IList<T> tasks;
-		AtomicBooleanValue executed;
-
-		public WhenAnyContinuation (Task<T> owner, IList<T> tasks)
-		{
-			this.owner = owner;
-			this.tasks = tasks;
-			executed = new AtomicBooleanValue ();
-		}
-
-		public void Execute ()
-		{
-			if (!executed.TryRelaxedSet ())
-				return;
-
-			bool owner_notified = false;
-			for (int i = 0; i < tasks.Count; ++i) {
-				var task = tasks[i];
-				if (!task.IsCompleted) {
-					task.RemoveContinuation (this);
-					continue;
-				}
-
-				if (owner_notified)
-					continue;
-
-				owner.TrySetResult (task);
-				owner_notified = true;
-			}
-		}
-	}
-    */
 
     sealed class ManualResetContinuation : IContinuation, IDisposable, IWaitable
 	{
@@ -376,7 +276,7 @@ namespace System.Threading.Tasks
 		    }
 		}
 
-        public void Execute()
+        public void Execute(Task completedTask)
         {
             lock (this)
             {
@@ -440,7 +340,7 @@ namespace System.Threading.Tasks
 		    }
 		}
 
-        public void Execute()
+        public void Execute(Task completedTask)
 		{
             lock (this)
             {
