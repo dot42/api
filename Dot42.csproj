@@ -86,6 +86,7 @@
     <Compile Include="Dot42\Collections\IJavaCollectionWrapper.cs" />
     <Compile Include="Dot42\Internal\Application.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
+    <Compile Include="Dot42\Internal\DateFormatFactory.cs" />
     <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
     <Compile Include="Dot42\Internal\IAssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\NumberFormatFactory.cs" />

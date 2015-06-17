@@ -1065,20 +1065,11 @@ namespace System
         //     used by provider.
         public string ToString(string format, IFormatProvider provider)
         {
-            bool useInvariant;bool foundK;
-            string javaFormat = DateTimeFormatting.ToJavaFormatString(format, provider, Kind, out useInvariant, out foundK);
-
-            var locale = useInvariant ? CultureInfo.InvariantCulture.Locale
-                                      : provider.ToLocale();
-
-            var sdf = new Java.Text.SimpleDateFormat(javaFormat, locale);
-            
-            if(Kind == DateTimeKind.Utc)
-                sdf.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
-            else 
-                sdf.TimeZone = Java.Util.TimeZone.Default;
-
-            return sdf.Format(ToDate());
+            var f = DateFormatFactory.GetFormat(format, Kind, provider);
+            f.Format.TimeZone = Kind == DateTimeKind.Utc 
+                                ? Java.Util.TimeZone.GetTimeZone("UTC") 
+                                : Java.Util.TimeZone.Default;
+            return f.Format.Format(ToDate());
         }
 
         public override string ToString()

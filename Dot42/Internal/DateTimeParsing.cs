@@ -11,11 +11,11 @@ namespace Dot42.Internal
         /// <summary>
         /// Convert from java based date to DateTime.
         /// </summary>
-        private static DateTime FromParsedDate(Date value, string originalString, DateTimeStyles style, DateFormat formatter)
+        private static DateTime FromParsedDate(Date value, string originalString, DateTimeStyles style, DateFormat formatter, bool forceRoundtripKind)
         {
             bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
             bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
-            bool roundtripKind = (style & DateTimeStyles.RoundtripKind) != 0;
+            bool roundtripKind = forceRoundtripKind || (style & DateTimeStyles.RoundtripKind) != 0;
 
             var millis = value.Time;
             var ticks = (millis + DateTime.EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
@@ -78,23 +78,14 @@ namespace Dot42.Internal
             if ((style & DateTimeStyles.AllowWhiteSpaces) != 0)
                 s = s.Trim();
 
-            bool useInvariant, foundK;
-            var javaFormat = DateTimeFormatting.ToJavaFormatString(format, provider, DateTimeKind.Unspecified, out useInvariant, out foundK);
-            if (foundK) style |= DateTimeStyles.RoundtripKind;
-
-            Java.Util.Locale locale = useInvariant ? CultureInfo.InvariantCulture.Locale : provider.ToLocale();
-
             try
             {
-                DateFormat formatter = new SimpleDateFormat(javaFormat, locale)
-                {
-                    IsLenient = false,
-                    TimeZone = TimeZone.GetTimeZone("UTC")
-                };
+                var formatter = DateFormatFactory.GetFormat(format, DateTimeKind.Unspecified, provider);
+                formatter.Format.TimeZone = TimeZone.GetTimeZone("UTC"); // reset mutable value
 
-                Date parsed = formatter.Parse(s);
+                Date parsed = formatter.Format.Parse(s);
 
-                var result = FromParsedDate(parsed, s, style, formatter);
+                var result = FromParsedDate(parsed, s, style, formatter.Format, formatter.ContainsK);
                 return result;
             }
             catch (ArgumentException ex)
@@ -131,36 +122,26 @@ namespace Dot42.Internal
                 ci.DateTimeFormat.ShortTimePattern
             };
 
-            var locale = provider.ToLocale();
-            var invariantLocale = CultureInfo.InvariantCulture.Locale;
-            var timeZone = TimeZone.GetTimeZone("UTC");
+            var utc = TimeZone.GetTimeZone("UTC");
 
-            // Note: This could be optimized to cache previously computes values, but I'm not 
-            //       sure this whole approach is the best anyway. Exception handling
+            // Note: I'm not sure this whole approach is the best anyway. Exception handling
             //       for control flow, a loop to tests all formats and such.
             //       It would probably better to use jodatime or nodatime. Maybe the parsing
             //       routine can be ripped off nodatime, so we don't have to include the whole
             //       library.
+
             foreach (var pattern in formats)
             {
-                bool useInvariant, foundK;
-                var javaFormat = DateTimeFormatting.ToJavaFormatString(pattern, provider,
-                                                DateTimeKind.Unspecified, out useInvariant, out foundK);
-                if (foundK) style |= DateTimeStyles.RoundtripKind;
-
                 try
                 {
-                    DateFormat formatter = new SimpleDateFormat(javaFormat, useInvariant ? invariantLocale : locale)
-                    {
-                        IsLenient = false,
-                        TimeZone = timeZone
-                    };
+                    var formatter = DateFormatFactory.GetFormat(pattern, DateTimeKind.Unspecified, provider);
+                    formatter.Format.TimeZone = utc; // reset mutable value
 
-
-                    var result = FromParsedDate(formatter.Parse(s), s, style, formatter);
+                    Date parsed = formatter.Format.Parse(s);
+                    var result = FromParsedDate(parsed, s, style, formatter.Format, formatter.ContainsK);
                     return result;
                 }
-                catch (ParseException ex)
+                catch (ParseException)
                 {
                 }
             }

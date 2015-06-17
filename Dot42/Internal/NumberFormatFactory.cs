@@ -13,7 +13,8 @@ namespace Dot42.Internal
     /// </summary>
     public static class NumberFormatFactory
     {
-        private const int CacheSize = 40;
+        private const int CacheSize = 40; // TODO: maybe this should scale with the number of threads.
+
         private static readonly NumberFormatCache Cache = new NumberFormatCache();
 
         private const int FormatNormal     = 0;
