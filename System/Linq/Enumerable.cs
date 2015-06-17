@@ -877,10 +877,14 @@ namespace System.Linq
 
         static IEnumerable<TSource> CreateDistinctIterator<TSource>(IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)
 		{
-			var items = new Collections.Generic.HashSet<TSource> (comparer);
-			foreach (var element in source) {
-				if (! items.Contains (element)) {
-					items.Add (element);
+            // TODO: once hashset supports the IComparer interface, we should switch back to it.
+            var items = new Collections.Generic.Dictionary<TSource, object>(comparer);
+            object any = PredicateOf<object>.Always;
+			foreach (var element in source) 
+            {
+				if (!items.ContainsKey(element)) 
+                {
+					items.Add(element, any);
 					yield return element;
 				}
 			}
