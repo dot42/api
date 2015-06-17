@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading;
 using Android.Util;
 using Dot42.Collections;
 using Java.Lang;
@@ -553,7 +552,7 @@ namespace Dot42.Internal.Generics
                     // type parameters into account; for this to work, GetMethods() would have to determine
                     // the correct parameter types, similar to whats done with getters/setters.
 
-                    // Note that this will stop working when/if generic contrains are used to specialize
+                    // Note that this will stop working when/if generic constrains are used to specialize
                     // generic parameters.
                     if (possibleGenericMatch == null && methodParamType == typeof (object))
                     {

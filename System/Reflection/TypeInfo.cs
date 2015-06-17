@@ -22,22 +22,22 @@ namespace System.Reflection
 
         public IEnumerable<ConstructorInfo> DeclaredConstructors
         {
-            get { return _type.GetConstructors(Type.AllMembersBindingFlags); }
+            get { return _type.GetConstructors(Type.BindFlags.AllMembers); }
         }
 
         public IEnumerable<PropertyInfo> DeclaredProperties
         {
-            get { return _type.GetProperties(Type.DeclaredMembersBindingFlags); }
+            get { return _type.GetProperties(Type.BindFlags.DeclaredMembers); }
         }
 
         public IEnumerable<MethodInfo> DeclaredMethods
         {
-            get { return GenericsReflection.GetMethods(_type, Type.DeclaredMembersBindingFlags); }
+            get { return GenericsReflection.GetMethods(_type, Type.BindFlags.DeclaredMembers); }
         }
 
         public IEnumerable<FieldInfo> DeclaredFields
         {
-            get { return _type.GetFields(Type.DeclaredMembersBindingFlags); }
+            get { return _type.GetFields(Type.BindFlags.DeclaredMembers); }
         }
 
         public IEnumerable<Attribute> GetCustomAttributes(Type attributeType, bool inherit)

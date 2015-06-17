@@ -26,29 +26,37 @@ using Java.Lang.Reflect;
 
 namespace System
 {
-	/*abstract*/ partial class Type // : ICustomAttributeProvider // can't implement a new interface on a DexImport class, as long as this is not specially handled by the compiler. This one is not.
-	{
-        internal const BindingFlags AllMembersBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
-        internal const BindingFlags PublicMembersBindingFlags = BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance;
-        internal const BindingFlags DeclaredMembersBindingFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+    /*abstract*/
+    partial class Type // : ICustomAttributeProvider // can't implement a new interface on a DexImport class, as long as this is not specially handled by the compiler. This one is not.
+    {
+        internal static class BindFlags
+        { 
+            // these are static readonly for performance reasons, and in an inner class since Dot42 would not initialize
+            // static fields that end up in the __generated class.
+            internal static readonly BindingFlags AllMembers      = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+            internal static readonly BindingFlags PublicMembers   = BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance;
+            internal static readonly BindingFlags DeclaredMembers = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance;
+            internal static readonly BindingFlags DeclaredPublicMembers = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance;
+            internal static readonly BindingFlags PublicInstance  = BindingFlags.Public | BindingFlags.Instance;
+        }
 
         /// <summary>
         /// Gets the assembly-qualified name of the Type, which includes the name of the assembly from which the Type was loaded.
         /// 
         /// returns FullName
         /// </summary>
-	    public string AssemblyQualifiedName
-	    {
+        public string AssemblyQualifiedName
+        {
             get { return FullName; }
-	    }
+        }
 
         /// <summary>
         /// Gets the type name and namespace.
         /// </summary>
-	    public string FullName
-	    {
+        public string FullName
+        {
             get { return GenericsReflection.GetFullName(this); }
-	    }
+        }
 
         /// <summary>
         /// Gets the type name without namespace.
@@ -72,10 +80,10 @@ namespace System
         /// <summary>
         /// Is the given type a value type.
         /// </summary>
-	    public bool IsValueType
-	    {
+        public bool IsValueType
+        {
             get { return IsPrimitive || typeof(ValueType).JavaIsAssignableFrom(GenericsReflection.EnsureTypeDef(this)); }
-	    }
+        }
 
         public bool IsPublic { get { return Modifier.IsPublic(EnsureTypeDef().GetModifiers()); } }
 
@@ -87,31 +95,31 @@ namespace System
             get
             {
                 // java has some quirks regarding enums: http://stackoverflow.com/questions/4166488/checking-if-a-class-is-java-lang-enum
-                return !IsPrimitive && !NullableReflection.TreatAsSystemNullableT(this) 
+                return !IsPrimitive && !NullableReflection.TreatAsSystemNullableT(this)
                                     && typeof(Java.Lang.Enum<>).JavaIsAssignableFrom(this);
             }
         }
 
-	    public bool IsGenericType
-	    {
-	        get
-	        {
-	            return GenericsReflection.IsGenericType(this);
-	        }
-	    }
+        public bool IsGenericType
+        {
+            get
+            {
+                return GenericsReflection.IsGenericType(this);
+            }
+        }
 
         public bool IsInterface
         {
             get { return EnsureTypeDef().JavaIsInterface(); }
         }
 
-	    public bool IsClass
-	    {
-	        get
-	        {
-	            return !IsPrimitive && !IsInterface && !IsEnum;
-	        }
-	    }
+        public bool IsClass
+        {
+            get
+            {
+                return !IsPrimitive && !IsInterface && !IsEnum;
+            }
+        }
 
         public Type BaseType
         {
@@ -123,32 +131,32 @@ namespace System
             get { return Modifier.IsAbstract(GenericsReflection.EnsureTypeDef(this).GetModifiers()); }
         }
 
-	    public bool IsVisible
-	    {
-	        get
-	        {
-	            Type t = this;
-	            while (Modifier.IsPublic(GetModifiers())
+        public bool IsVisible
+        {
+            get
+            {
+                Type t = this;
+                while (Modifier.IsPublic(GetModifiers())
                     && (t = t.GetEnclosingClass()) != null)
-	            {
-	            }
-	            return t == null;
-	        }
-	    }
+                {
+                }
+                return t == null;
+            }
+        }
 
         /// <summary>
         /// Is this a serializable type?
         /// </summary>
         /// <remarks>Not implemented, always returns false.</remarks>
-	    public bool IsSerializable
-	    {
+        public bool IsSerializable
+        {
             get { return false; }
-	    }
+        }
 
-	    public bool IsSealed
-	    {
+        public bool IsSealed
+        {
             get { return Modifier.IsFinal(EnsureTypeDef().GetModifiers()); }
-	    }
+        }
 
         public Type[] GetInterfaces()
         {
@@ -160,23 +168,23 @@ namespace System
             return GenericsReflection.GetGenericTypeDefinition(this);
         }
 
-	    public Type GetNestedType(string name)
-	    {
+        public Type GetNestedType(string name)
+        {
             // TODO: make this work for generic classes as well.
-	        var def = EnsureTypeDef();
-	        var nested = def.GetDeclaredClasses();
-            
-	        for (int i = 0; i < nested.Length; ++i)
-	        {
+            var def = EnsureTypeDef();
+            var nested = def.GetDeclaredClasses();
+
+            for (int i = 0; i < nested.Length; ++i)
+            {
                 // TODO: emulate the visibility. here we should only return public classes.
                 //Log.I("dot42", string.Format("GetNestedType on {0}: {1}", Name, nested[i].Name));
-	            string nestedName = nested[i].Name;
-	            if (nestedName == name)
-	                return nested[i];
-	        }
+                string nestedName = nested[i].Name;
+                if (nestedName == name)
+                    return nested[i];
+            }
 
-	        return null;
-	    }
+            return null;
+        }
 
         /// <summary>
         /// will return the correct count. For nullable types, 
@@ -218,16 +226,16 @@ namespace System
             }
         }
 
-	    /// <summary>
-	    /// Returns true if this is a generic type definition
-	    /// </summary>
-	    public bool IsGenericTypeDefinition
-	    {
-	        get
-	        {
-	            return GenericsReflection.IsGenericTypeDefinition(this);
-	        }
-	    }
+        /// <summary>
+        /// Returns true if this is a generic type definition
+        /// </summary>
+        public bool IsGenericTypeDefinition
+        {
+            get
+            {
+                return GenericsReflection.IsGenericTypeDefinition(this);
+            }
+        }
 
         public bool IsConstructedGenericType
         {
@@ -241,11 +249,11 @@ namespace System
         public bool IsGenericParameter { get { return false; } }
 
         public Assembly Assembly
-	    {
+        {
             get { return Assembly.GetAssembly(this); }
-	    }
+        }
 
-	    /// <summary>
+        /// <summary>
         /// Returns an array of all attributes defined on this member.
         /// Returns an empty array if no attributes are defined on this member.
         /// </summary>
@@ -280,7 +288,7 @@ namespace System
         /// </summary>
         public ConstructorInfo[] GetConstructors()
         {
-            return GetConstructors(BindingFlags.Public | BindingFlags.Instance);
+            return GetConstructors(BindFlags.PublicInstance);
         }
 
         /// <summary>
@@ -293,20 +301,19 @@ namespace System
             // GetConstructors never searches base classes.
             return GenericsReflection.GetConstructors(this, flags)
                    ?? JavaGetDeclaredConstructors()
-                        .Select(ctor => new ConstructorInfo(ctor))
-                        .Where(ctor => IsMatch(ctor, flags))
-                        .ToArray();
+                       .Select(ctor => new ConstructorInfo(ctor))
+                       .Where(ctor => IsMatch(ctor, flags));
         }
 
-	    public ConstructorInfo GetConstructor(Type[] parameters)
-	    {
+        public ConstructorInfo GetConstructor(Type[] parameters)
+        {
             var ci = GenericsReflection.GetConstructor(this, parameters);
 
-            if(ci != null) return ci;
+            if (ci != null) return ci;
 
-	        var typeDefParams = new Type[parameters.Length];
-	        for (int i = 0; i < parameters.Length; ++i)
-	            typeDefParams[i] = parameters[i].EnsureTypeDef();
+            var typeDefParams = new Type[parameters.Length];
+            for (int i = 0; i < parameters.Length; ++i)
+                typeDefParams[i] = parameters[i].EnsureTypeDef();
 
             try
             {
@@ -316,40 +323,40 @@ namespace System
             {
                 return null;
             }
-	    }
-	
+        }
+
         /// <summary>
         /// Gets all public fields of this type.
         /// </summary>
         public FieldInfo[] GetFields()
         {
-            return GenericsReflection.GetFields(this, PublicMembersBindingFlags);
+            return GenericsReflection.GetFields(this, BindFlags.PublicMembers);
         }
 
         public FieldInfo GetField(string name)
         {
-            return GenericsReflection.GetField(this, name, PublicMembersBindingFlags);
+            return GenericsReflection.GetField(this, name, BindFlags.PublicMembers);
         }
 
         public FieldInfo GetField(string name, BindingFlags flags)
         {
             return GenericsReflection.GetField(this, name, flags);
-	    }
+        }
 
         /// <summary>
         /// Gets all fields of this type that match the given binding flags.
         /// </summary>
         public FieldInfo[] GetFields(BindingFlags flags)
-	    {
+        {
             return GenericsReflection.GetFields(this, flags);
-	    }
+        }
 
-	    /// <summary>
+        /// <summary>
         /// Gets all public methods of this type.
         /// </summary>
         public MethodInfo[] GetMethods()
-	    {
-            return GenericsReflection.GetMethods(this, PublicMembersBindingFlags)
+        {
+            return GenericsReflection.GetMethods(this, BindFlags.PublicMembers)
                                      .ToArray();
         }
 
@@ -364,83 +371,38 @@ namespace System
 
         public MethodInfo GetMethod(string name)
         {
-            return GenericsReflection.GetMethod(this, name, PublicMembersBindingFlags, null);
+            return GenericsReflection.GetMethod(this, name, BindFlags.PublicMembers, null);
 
         }
 
-	    public MethodInfo GetMethod(string name, Type[] parameters)
-	    {
-            return GenericsReflection.GetMethod(this, name, PublicMembersBindingFlags, parameters);
-	    }
+        public MethodInfo GetMethod(string name, Type[] parameters)
+        {
+            return GenericsReflection.GetMethod(this, name, BindFlags.PublicMembers, parameters);
+        }
 
         public PropertyInfo[] GetDeclaredProperties()
         {
             return PropertyInfoProvider.GetProperties(GenericsReflection.EnsureTypeDef(this), this);
         }
 
-	    public PropertyInfo[] GetProperties()
-	    {
-	        return GetProperties(PublicMembersBindingFlags);
-	    }
+        public PropertyInfo[] GetProperties()
+        {
+            return ReflectionHelper.GetProperties(this, BindFlags.PublicMembers);
+        }
 
         public PropertyInfo[] GetProperties(BindingFlags flags)
         {
-            List<PropertyInfo> ret = new List<PropertyInfo>();
-
-            Type type = this;
-
-            var isDeclaredOnly = (flags & BindingFlags.DeclaredOnly) != 0;
-            bool isBase = false;
-            Java.Util.HashSet<string> lookedAt = isDeclaredOnly? null : new Java.Util.HashSet<string>();
-            
-            // we have to walk all the way up.
-            while (type != null)
-            {
-                foreach (var prop in type.GetDeclaredProperties())
-                {
-                    if (IsMatch(prop, flags))
-                    {
-                        // make sure we don't return overriden properties.
-                        if (!isDeclaredOnly)
-                        {
-                            string getterName = prop.GetMethod != null ? prop.GetMethod.Name : null;
-                            string setterName = prop.SetMethod != null ? prop.SetMethod.Name : null;
-                            if (isBase)
-                            {
-                                if (getterName != null && lookedAt.Contains(getterName))
-                                    continue;
-                                if (setterName != null && lookedAt.Contains(setterName))
-                                    continue;
-                            }
-
-                            if (getterName != null)
-                                lookedAt.Add(getterName);
-                            if (setterName != null)
-                                lookedAt.Add(setterName);
-                        }
-
-                        ret.Add(prop);
-                    }
-                }
-
-
-                if (isDeclaredOnly)
-                    break;
-
-                type = type.BaseType;
-                isBase = true;
-            }
-            return ret.ToArray();
+            return ReflectionHelper.GetProperties(this, flags);
         }
 
         public PropertyInfo GetProperty(string name)
         {
-            return GetProperty(name, PublicMembersBindingFlags);
+            return GetProperty(name, BindFlags.PublicMembers);
         }
 
         public PropertyInfo GetProperty(string name, BindingFlags flags)
         {
-            var props = GetProperties(flags).Where(p => p.Name == name);
+            var props = ReflectionHelper.GetProperties(this, name, flags);
 
             if (props.Length > 1)
                 throw new AmbiguousMatchException("not unique: " + name);
@@ -450,7 +412,7 @@ namespace System
 
         public EventInfo GetEvent(string name)
         {
-            return GetEvents(PublicMembersBindingFlags)
+            return GetEvents(BindFlags.PublicMembers)
                             .FirstOrDefault(p => p.Name == name);
         }
 
@@ -484,47 +446,67 @@ namespace System
 
         public static bool IsMatch(JavaMemberInfo memberInfo, BindingFlags flags)
         {
-            bool incPublic =    (flags & BindingFlags.Public) == BindingFlags.Public;
-            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
-            bool incStatic =    (flags & BindingFlags.Static) == BindingFlags.Static;
-            bool incInstance =  (flags & BindingFlags.Instance) == BindingFlags.Instance;
+            // this methods is heavily used during reflection, so we have traded
+            // readablility for performance.
 
-            return ((incPublic    && memberInfo.IsPublic)
-                 || (incNonPublic && !memberInfo.IsPublic))
-                && ((incStatic    && memberInfo.IsStatic)
-                 || (incInstance  && !memberInfo.IsStatic));
-        }
+            if (flags == BindFlags.AllMembers || flags == BindFlags.DeclaredMembers)
+                return true;
 
-        private static bool IsMatch(PropertyInfo propertyInfo, BindingFlags flags)
-        {
-            bool incPublic = (flags & BindingFlags.Public) == BindingFlags.Public;
-            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
-            bool incStatic = (flags & BindingFlags.Static) == BindingFlags.Static;
+            bool incStatic   = (flags & BindingFlags.Static)   == BindingFlags.Static;
             bool incInstance = (flags & BindingFlags.Instance) == BindingFlags.Instance;
 
-            var get = propertyInfo.GetGetMethod();
-            var set = propertyInfo.GetSetMethod();
+            if (incInstance == incStatic && !incInstance)
+                return false;
 
-            return    ((incPublic    && ((get != null && get.IsPublic)  || (set != null && set.IsPublic)))
-                    || (incNonPublic && ((get != null && !get.IsPublic) || (set != null && !set.IsPublic))))
-                &&    ((incStatic    && ((get != null && get.IsStatic)  || (set != null && set.IsStatic)))
-                    || (incInstance  && ((get != null && !get.IsStatic) || (set != null && !set.IsStatic))));
+            if (incInstance != incStatic)
+            {
+                bool isStatic = memberInfo.IsStatic;
+
+                if (!((incStatic && isStatic) || (incInstance && !isStatic)))
+                    return false;
+            }
+
+            bool incPublic    = (flags & BindingFlags.Public)    == BindingFlags.Public;
+            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
+
+            if (incPublic == incNonPublic)
+                return incPublic;
+
+            bool isPublic = memberInfo.IsPublic;
+            return (incPublic && isPublic) || (incNonPublic && !isPublic);
         }
 
         private static bool IsMatch(EventInfo eventInfo, BindingFlags flags)
         {
-            bool incPublic = (flags & BindingFlags.Public) == BindingFlags.Public;
-            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
-            bool incStatic = (flags & BindingFlags.Static) == BindingFlags.Static;
+            var mainMethod = eventInfo.GetAddMethod() ?? eventInfo.GetRemoveMethod();
+
+            if (mainMethod == null)
+                return false;
+
+            if (flags == BindFlags.AllMembers || flags == BindFlags.DeclaredMembers)
+                return true;
+
+            bool incStatic   = (flags & BindingFlags.Static)   == BindingFlags.Static;
             bool incInstance = (flags & BindingFlags.Instance) == BindingFlags.Instance;
 
-            var add = eventInfo.GetAddMethod();
-            var rem = eventInfo.GetRemoveMethod();
+            if (incInstance == incStatic && !incInstance)
+                return false;
 
-            return ((incPublic && ((add != null && add.IsPublic) || (rem != null && rem.IsPublic)))
-                    || (incNonPublic && ((add != null && !add.IsPublic) || (rem != null && !rem.IsPublic))))
-                && ((incStatic && ((add != null && add.IsStatic) || (rem != null && rem.IsStatic)))
-                    || (incInstance && ((add != null && !add.IsStatic) || (rem != null && !rem.IsStatic))));
+            if (incInstance != incStatic)
+            {
+                bool isStatic = mainMethod.IsStatic;
+                if (!((incStatic && isStatic) || (incInstance && !isStatic)))
+                    return false;
+            }
+
+            bool incPublic = (flags & BindingFlags.Public) == BindingFlags.Public;
+            bool incNonPublic = (flags & BindingFlags.NonPublic) == BindingFlags.NonPublic;
+
+            if (incPublic == incNonPublic)
+                return incPublic;
+
+            bool isPublic = mainMethod.IsPublic;
+            return (incPublic && isPublic) || (incNonPublic && !isPublic);
         }
 
         public MemberInfo[] GetMember(string memberName, BindingFlags flags)
@@ -532,10 +514,10 @@ namespace System
             List<MemberInfo> ret = new List<MemberInfo>();
             if (memberName == ".cctor")
                 ret.AddRange(GetConstructors(flags));
-            ret.AddRange(GetFields(flags).Where(f => f.Name == memberName));
-            ret.AddRange(GetMethods(flags).Where(f => f.Name == memberName));
+            ret.AddRange(GetFields(flags)    .Where(f => f.Name == memberName));
+            ret.AddRange(GetMethods(flags)   .Where(f => f.Name == memberName));
             ret.AddRange(GetProperties(flags).Where(f => f.Name == memberName));
-            ret.AddRange(GetEvents(flags).Where(f => f.Name == memberName));
+            ret.AddRange(GetEvents(flags)    .Where(f => f.Name == memberName));
             return ret.ToArray();
         }
 
@@ -554,7 +536,7 @@ namespace System
             return GenericsReflection.IsAssignableFrom(this, other);
         }
 
-        [Include,Inline] // used by "x is T" in generic methods.
+        [Include, Inline] // used by "x is T" in generic methods.
         public /*virtual*/ bool IsInstanceOfType(Object o)
         {
             if (o == null) return false;
@@ -578,7 +560,6 @@ namespace System
         // TODO: check if this still holds true.
         public Type GetElementType()
         {
-            
             var type = JavaGetComponentType();
             if (type == null) return null;
             if (type == TypeHelper.BooleanType())
@@ -605,12 +586,12 @@ namespace System
         /// TODO: find out how to retrieve the rank of our multidimensional arrays.
         /// </summary>
         /// <returns></returns>
-	    public int GetArrayRank()
-	    {
-	        if(!IsArray)
+        public int GetArrayRank()
+        {
+            if (!IsArray)
                 throw new InvalidOperationException("not an array");
-	        return 1;
-	    }
+            return 1;
+        }
 
         private Type EnsureTypeDef()
         {
@@ -629,11 +610,11 @@ namespace System
             throw new NotImplementedException("System.Type.GetTypeCode");
         }
 
-	    public static Type GetType(string typeName)
-	    {
+        public static Type GetType(string typeName)
+        {
             // TODO: implement for generics, with parsing of "[,]" syntax.
-	        return ForName(typeName.Replace('`', GenericsReflection.GenericTickChar));
-	    }
+            return ForName(typeName.Replace('`', GenericsReflection.GenericTickChar));
+        }
 
         /// <summary>
         /// note that ignoreCase is ignored.
@@ -642,6 +623,6 @@ namespace System
         {
             return GetType(typeName);
         }
-	}
+    }
 }
 

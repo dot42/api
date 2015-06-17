@@ -59,7 +59,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return type.GetEvents(Type.AllMembersBindingFlags);
+            return type.GetEvents(Type.BindFlags.AllMembers);
         }
 
         public static FieldInfo GetRuntimeField(this Type type, string name)
@@ -73,13 +73,13 @@ namespace System.Reflection
 		public static IEnumerable<FieldInfo> GetDeclaredFields (this Type type)
 		{
 			if (type == null) throw new ArgumentNullException ("type");
-            return type.GetFields(Type.DeclaredMembersBindingFlags);
+            return type.GetFields(Type.BindFlags.DeclaredMembers);
 		}
 
         public static FieldInfo GetDeclaredField(this Type type, string name)
         {
             if (type == null) throw new ArgumentNullException("type");
-            return type.GetField(name, Type.DeclaredMembersBindingFlags);
+            return type.GetField(name, Type.BindFlags.DeclaredMembers);
         }
 
         public static IEnumerable<FieldInfo> GetRuntimeFields(this Type type)
@@ -87,7 +87,7 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return type.GetFields(Type.AllMembersBindingFlags);
+            return type.GetFields(Type.BindFlags.AllMembers);
         }
 
         //public static InterfaceMapping GetRuntimeInterfaceMap (this TypeInfo typeInfo, Type interfaceType)
@@ -111,13 +111,13 @@ namespace System.Reflection
 			if (type == null)
 				throw new ArgumentNullException ("type");
 
-			return GenericsReflection.GetMethods(type, Type.AllMembersBindingFlags);
+            return GenericsReflection.GetMethods(type, Type.BindFlags.AllMembers);
 		}
 
 	    public static IEnumerable<PropertyInfo> GetRuntimeProperties (this Type type)
 		{
 			if (type == null) throw new ArgumentNullException ("type");
-			return type.GetProperties(Type.AllMembersBindingFlags);
+			return type.GetProperties(Type.BindFlags.AllMembers);
 		}
 
 		public static PropertyInfo GetRuntimeProperty (this Type type, string name)
@@ -139,14 +139,14 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return GenericsReflection.GetMethod(type, name, Type.DeclaredMembersBindingFlags, parameters);
+            return GenericsReflection.GetMethod(type, name, Type.BindFlags.DeclaredMembers, parameters);
         }
 
         public static IEnumerable<MethodInfo> GetDeclaredMethods(this Type type)
         {
             if (type == null) throw new ArgumentNullException("type");
 
-            return type.GetMethods(Type.DeclaredMembersBindingFlags);
+            return type.GetMethods(Type.BindFlags.DeclaredMembers);
         }
 
         public static IEnumerable<PropertyInfo> GetDeclaredProperties(this Type type)
@@ -154,14 +154,14 @@ namespace System.Reflection
             if (type == null)
                 throw new ArgumentNullException("type");
 
-            return type.GetProperties(Type.DeclaredMembersBindingFlags);
+            return type.GetProperties(Type.BindFlags.DeclaredMembers);
         }
 
         public static PropertyInfo GetDeclaredProperty(this Type type, string name)
         {
             if (type == null)
                 throw new ArgumentNullException("type");
-            return type.GetProperty(name, BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static );
+            return type.GetProperty(name, Type.BindFlags.DeclaredPublicMembers);
         }
 
         public static PropertyInfo GetDeclaredProperty(this Type type, string name, BindingFlags flags)

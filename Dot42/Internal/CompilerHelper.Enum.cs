@@ -11,8 +11,10 @@ namespace Dot42.Internal
                 || format == "G" || format == "g"
                 || format == "f" || format == "F")
                 return e.ToString();
+            
+            var internalEnum = ((object)e) as Enum;
 
-            int val = e.Ordinal();
+            long val = internalEnum == null ? (long)e.Ordinal() : internalEnum.LongValue();
 
             if (format == "X")
                 return val.ToString("X8");

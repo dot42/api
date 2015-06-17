@@ -100,7 +100,7 @@ namespace Dot42.Internal.ReflectionInfo
             if (count == 0)
                 return Empty;
 
-            var declTypeMethods = declaringType.GetMethods(Type.AllMembersBindingFlags);
+            var declTypeMethods = declaringType.GetMethods(Type.BindFlags.AllMembers);
             // Build PropertyInfo structures
             var infos = new PropertyInfo[count];
             for (var i = 0; i < count; i++)
