@@ -29,15 +29,8 @@ namespace Dot42.Internal
             var retArray = softRef == null ? null : (PropertyInfo[])softRef.Get();
             if (retArray != null)
             {
-                //var trueVals = GetPropertiesImpl(type, flags);
-                //if (!Equals(trueVals, retArray))
-                //{
-                //    Debug.WriteLine("cached result not same: {0} flags {1:X}; lencache={2}, lencalc={3}", type, flags, trueVals.Length, retArray.Length);
-                //    return trueVals;
-                //}
                 return retArray;
             }
-                
 
             retArray = GetPropertiesImpl(type, flags);
 

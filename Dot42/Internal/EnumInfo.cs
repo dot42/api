@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
+using Dot42.Collections.Specialized;
 using Java.Util;
 using Java.Util.Concurrent;
 
@@ -30,20 +31,20 @@ namespace Dot42.Internal
     [Include(TypeCondition = typeof(System.Enum))]
     internal abstract class EnumInfo 
 	{
-        private static ConcurrentHashMap<Type, EnumInfo> enumInfo = new ConcurrentHashMap<Type, EnumInfo>();
+        private static readonly ConcurrentHashMap<Type, EnumInfo> enumInfo = new ConcurrentHashMap<Type, EnumInfo>();
 
         private Enum defaultValue;
         public readonly Type Underlying;
 
         private class ValuesByUnderlying
         {
-            public long[]   LongValues;
-            public int[]    IntValues;
-            public Enum[]   EnumValues;
+            public IntIntMap IntMap;
+            public LongIntMap LongMap;
+            public Enum[] CreatedEnums;
         }
 
         private ValuesByUnderlying valuesByUnderlying;
-        
+
         private readonly ArrayList<Enum> values = new ArrayList<Enum>();
         private readonly HashMap<string, Enum> valuesByName = new HashMap<string, Enum>();
         private HashMap<string, Enum> valuesByUpperCase;
@@ -96,30 +97,37 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         public Enum GetValue(int value)
         {
+            if (value == 0 && defaultValue != null)
+            {
+                return defaultValue;
+            }
+
             if (Underlying == typeof(long))
                 return GetValue((long)value);
 
-            // we set up our own data structure, to make sure 
-            // there is no boxing on this possibly heavy used path.
-            // even better might be an int-based hashmap instead of
-            // the binary search.
-
             if (valuesByUnderlying == null)
-                InitializeIntLookup();
+            {
+                var lookup = InitializeIntLookup();
+                Interlocked.CompareExchange(ref valuesByUnderlying, lookup, null);
+            }
 
+            // to keep this scalable, we use a lock-free implementation
             while (true)
             {
                 var vals = valuesByUnderlying;
+                int idx = vals.IntMap.Get(value);
 
-                int idx = Arrays.BinarySearch(vals.IntValues, value);
-                if (idx >= 0)
-                    return vals.EnumValues[idx];
+                if (idx != IntIntMap.NO_VALUE)
+                {
+                    if (idx >= 0)
+                        return values[idx];
+                    return vals.CreatedEnums[-idx - 1];
+                }
 
                 // insert a new value into a new instance
-                int newIdx = -(idx + 1);
                 var newEnum = Create(value);
 
-                if (!InsertNewIntEnum(vals, newIdx, newEnum)) 
+                if (!AddNewIntEnum(vals, value, newEnum)) 
                     continue;
 
                 return newEnum;
@@ -132,6 +140,11 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Enum))]
         public Enum GetValue(long value)
         {
+            if (value == 0 && defaultValue != null)
+            {
+                return defaultValue;
+            }
+
             if(Underlying != typeof(long))
                 return GetValue((int)value);
 
@@ -141,21 +154,28 @@ namespace Dot42.Internal
             // the binary search.
 
             if (valuesByUnderlying == null)
-                InitializeLongLookup();
+            {
+                var lookup = InitializeLongLookup();
+                Interlocked.CompareExchange(ref valuesByUnderlying, lookup, null);
+            }
 
+            // to keep this scalable, we use a lock-free implementation
             while (true)
             {
                 var vals = valuesByUnderlying;
+                int idx = vals.LongMap.Get(value);
 
-                int idx = Arrays.BinarySearch(vals.LongValues, value);
-                if (idx >= 0)
-                    return vals.EnumValues[idx];
+                if (idx != IntIntMap.NO_VALUE)
+                {
+                    if (idx >= 0)
+                        return values[idx];
+                    return vals.CreatedEnums[-idx - 1];
+                }
 
                 // insert a new value into a new instance
-                int newIdx = -(idx + 1);
                 var newEnum = Create(value);
 
-                if (!InsertNewLongEnum(vals, newIdx, newEnum))
+                if (!AddNewLongEnum(vals, value, newEnum))
                     continue;
 
                 return newEnum;
@@ -239,120 +259,94 @@ namespace Dot42.Internal
             return info;
         }
 
-        private void InitializeIntLookup()
+        private ValuesByUnderlying InitializeIntLookup()
         {
-            // initialize our binary search structure.
-            var vals = new ValuesByUnderlying();
+            var vals = new IntIntMap(values.Count + 1, 0.75f);
 
-            var sortedValues = values.AsEnumerable()
-                .Distinct(new EnumIntValueEqualityComparer())
-                .OrderBy(e => e.IntValue())
-                .ToList();
+            for (int i = 0; i < values.Count; ++i)
+            {
+                var value = values[i].IntValue();
+                if (vals.Get(value) == IntIntMap.NO_VALUE)
+                    vals.Put(value, i);
+            }
 
-            int len = sortedValues.Count;
-
-            vals.EnumValues = values.ToArray(new Enum[len]);
-            vals.IntValues = vals.EnumValues.Select(p => p.IntValue());
-
-            Interlocked.CompareExchange(ref valuesByUnderlying, vals, null);
+            return new ValuesByUnderlying {IntMap = vals};
         }
 
-        private bool InsertNewIntEnum(ValuesByUnderlying vals, int newIdx, Enum newEnum)
+        private bool AddNewIntEnum(ValuesByUnderlying vals, int enumValue, Enum newEnum)
         {
-            int i;
-            var newLen = vals.IntValues.Length + 1;
-            var newVals = new ValuesByUnderlying
-            {
-                IntValues = new int[newLen],
-                EnumValues = new Enum[newLen]
-            };
+            // create new data structure
+            var lookup = InitializeIntLookup();
+            var map = lookup.IntMap;
 
-            for (i = 0; i < newIdx; ++i)
+            var prevEnums = vals.CreatedEnums;
+            int prevLen;
+            if (prevEnums == null)
             {
-                newVals.IntValues[i] = vals.IntValues[i];
-                newVals.EnumValues[i] = vals.EnumValues[i];
+                prevLen = 0;
+                lookup.CreatedEnums = new[] {newEnum};
             }
-            newVals.IntValues[newIdx] = newEnum.IntValue();
-            newVals.EnumValues[newIdx] = newEnum;
-            for (i = newIdx + 1; i < newLen; ++i)
+            else
             {
-                newVals.IntValues[i]  = vals.IntValues[i - 1];
-                newVals.EnumValues[i] = vals.EnumValues[i - 1];
+                prevLen = prevEnums.Length;
+                lookup.CreatedEnums = Arrays.CopyOf(prevEnums, prevLen + 1);
+                lookup.CreatedEnums[prevLen] = newEnum;
+
+                for (int i = 0; i < prevLen; ++i)
+                {
+                    map.Put(prevEnums[i].IntValue(), -i - 1);
+                }
             }
+
+            map.Put(enumValue, -prevLen - 1);
 
             // only update if no one else was faster.
-            return Interlocked.CompareExchange(ref valuesByUnderlying, newVals, vals) == vals;
+            return Interlocked.CompareExchange(ref valuesByUnderlying, lookup, vals) == vals;
         }
 
-        private void InitializeLongLookup()
+        private ValuesByUnderlying InitializeLongLookup()
         {
-            // initialize our binary search structure.
-            var vals = new ValuesByUnderlying();
+            var vals = new LongIntMap(values.Count + 1, 0.75f);
 
-            var sortedValues = values.AsEnumerable()
-                                     .Distinct(new EnumIntValueEqualityComparer())
-                                     .OrderBy(e => e.LongValue())
-                                     .ToList();
+            for (int i = 0; i < values.Count; ++i)
+            {
+                var value = values[i].LongValue();
+                if (vals.Get(value) == LongIntMap.NO_VALUE)
+                    vals.Put(value, i);
+            }
 
-            int len = sortedValues.Count;
-
-            vals.EnumValues = values.ToArray(new Enum[len]);
-            vals.LongValues = vals.EnumValues.Select(p => p.LongValue());
-
-            Interlocked.CompareExchange(ref valuesByUnderlying, vals, null);
+            return new ValuesByUnderlying { LongMap = vals };
         }
 
-        private bool InsertNewLongEnum(ValuesByUnderlying vals, int newIdx, Enum newEnum)
+        private bool AddNewLongEnum(ValuesByUnderlying vals, long enumValue, Enum newEnum)
         {
-            int i;
-            var newLen = vals.LongValues.Length + 1;
-            var newVals = new ValuesByUnderlying
-            {
-                LongValues = new long[newLen],
-                EnumValues = new Enum[newLen]
-            };
+            // create new data structure
+            var lookup = InitializeLongLookup();
+            var map = lookup.LongMap;
 
-            for (i = 0; i < newIdx; ++i)
+            var prevEnums = vals.CreatedEnums;
+            int prevLen;
+            if (prevEnums == null)
             {
-                newVals.LongValues[i] = vals.LongValues[i];
-                newVals.EnumValues[i] = vals.EnumValues[i];
+                prevLen = 0;
+                lookup.CreatedEnums = new[] { newEnum };
             }
-            newVals.LongValues[newIdx] = newEnum.LongValue();
-            newVals.EnumValues[newIdx] = newEnum;
-            for (i = newIdx + 1; i < newLen; ++i)
+            else
             {
-                newVals.LongValues[i] = vals.LongValues[i - 1];
-                newVals.EnumValues[i] = vals.EnumValues[i - 1];
+                prevLen = prevEnums.Length;
+                lookup.CreatedEnums = Arrays.CopyOf(prevEnums, prevLen + 1);
+                lookup.CreatedEnums[prevLen] = newEnum;
+
+                for (int i = 0; i < prevLen; ++i)
+                {
+                    map.Put(prevEnums[i].LongValue(), -i - 1);
+                }
             }
+
+            map.Put(enumValue, -prevLen - 1);
 
             // only update if no one else was faster.
-            return Interlocked.CompareExchange(ref valuesByUnderlying, newVals, vals) == vals;
-        }
-
-        private class EnumIntValueEqualityComparer : IEqualityComparer<Enum>
-        {
-            public bool Equals(Enum x, Enum y)
-            {
-                return x.IntValue() == y.IntValue();
-            }
-
-            public int GetHashCode(Enum obj)
-            {
-                return obj.IntValue();
-            }
-        }
-
-        private class EnumLongValueEqualityComparer : IEqualityComparer<Enum>
-        {
-            public bool Equals(Enum x, Enum y)
-            {
-                return x.LongValue() == y.LongValue();
-            }
-
-            public int GetHashCode(Enum obj)
-            {
-                return (int)obj.LongValue();
-            }
+            return Interlocked.CompareExchange(ref valuesByUnderlying, lookup, vals) == vals;
         }
     }
 }
