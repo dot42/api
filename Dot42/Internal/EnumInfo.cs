@@ -117,7 +117,7 @@ namespace Dot42.Internal
                 var vals = valuesByUnderlying;
                 int idx = vals.IntMap.Get(value);
 
-                if (idx != IntIntMap.NO_VALUE)
+                if (idx != IntIntMap.NoValue)
                 {
                     if (idx >= 0)
                         return values[idx];
@@ -165,7 +165,7 @@ namespace Dot42.Internal
                 var vals = valuesByUnderlying;
                 int idx = vals.LongMap.Get(value);
 
-                if (idx != IntIntMap.NO_VALUE)
+                if (idx != IntIntMap.NoValue)
                 {
                     if (idx >= 0)
                         return values[idx];
@@ -266,7 +266,7 @@ namespace Dot42.Internal
             for (int i = 0; i < values.Count; ++i)
             {
                 var value = values[i].IntValue();
-                if (vals.Get(value) == IntIntMap.NO_VALUE)
+                if (vals.Get(value) == IntIntMap.NoValue)
                     vals.Put(value, i);
             }
 
@@ -311,7 +311,7 @@ namespace Dot42.Internal
             for (int i = 0; i < values.Count; ++i)
             {
                 var value = values[i].LongValue();
-                if (vals.Get(value) == LongIntMap.NO_VALUE)
+                if (vals.Get(value) == LongIntMap.NoValue)
                     vals.Put(value, i);
             }
 

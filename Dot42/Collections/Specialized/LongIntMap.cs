@@ -7,9 +7,8 @@ namespace Dot42.Collections.Specialized
     /// </summary>
     public class LongIntMap 
     {
-        private const long FREE_KEY = 0L;
-
-        public const int NO_VALUE = int.MinValue;
+        private const long FreeKey = 0L;
+        public const int NoValue = int.MinValue;
 
         /// <summary>
         /// Keys and values </summary>
@@ -60,16 +59,16 @@ namespace Dot42.Collections.Specialized
         {
             int ptr = (Tools.PhiMix(key) & m_mask) << 1;
 
-            if (key == FREE_KEY)
+            if (key == FreeKey)
             {
-                return m_hasFreeKey ? m_freeValue : NO_VALUE;
+                return m_hasFreeKey ? m_freeValue : NoValue;
             }
 
             long k = m_data[ptr];
 
-            if (k == FREE_KEY)
+            if (k == FreeKey)
             {
-                return NO_VALUE; //end of chain already
+                return NoValue; //end of chain already
             }
             if (k == key) //we check FREE prior to this call
             {
@@ -80,9 +79,9 @@ namespace Dot42.Collections.Specialized
             {
                 ptr = (ptr + 2) & m_mask2; //that's next index
                 k = m_data[ptr];
-                if (k == FREE_KEY)
+                if (k == FreeKey)
                 {
-                    return NO_VALUE;
+                    return NoValue;
                 }
                 if (k == key)
                 {
@@ -93,7 +92,7 @@ namespace Dot42.Collections.Specialized
 
         public int Put(long key, int value)
         {
-            if (key == FREE_KEY)
+            if (key == FreeKey)
             {
                 int ret = m_freeValue;
                 if (!m_hasFreeKey)
@@ -107,7 +106,7 @@ namespace Dot42.Collections.Specialized
 
             int ptr = (Tools.PhiMix(key) & m_mask) << 1;
             long k = m_data[ptr];
-            if (k == FREE_KEY) //end of chain already
+            if (k == FreeKey) //end of chain already
             {
                 m_data[ptr] = key;
                 m_data[ptr + 1] = (long)value;
@@ -119,7 +118,7 @@ namespace Dot42.Collections.Specialized
                 {
                     ++m_size;
                 }
-                return NO_VALUE;
+                return NoValue;
             }
             else if (k == key) //we check FREE prior to this call
             {
@@ -132,7 +131,7 @@ namespace Dot42.Collections.Specialized
             {
                 ptr = (ptr + 2) & m_mask2; //that's next index calculation
                 k = m_data[ptr];
-                if (k == FREE_KEY)
+                if (k == FreeKey)
                 {
                     m_data[ptr] = key;
                     m_data[ptr + 1] = (long)value;
@@ -144,7 +143,7 @@ namespace Dot42.Collections.Specialized
                     {
                         ++m_size;
                     }
-                    return NO_VALUE;
+                    return NoValue;
                 }
                 else if (k == key)
                 {
@@ -157,11 +156,11 @@ namespace Dot42.Collections.Specialized
 
         public int Remove(int key)
         {
-            if (key == FREE_KEY)
+            if (key == FreeKey)
             {
                 if (!m_hasFreeKey)
                 {
-                    return NO_VALUE;
+                    return NoValue;
                 }
                 m_hasFreeKey = false;
                 --m_size;
@@ -177,9 +176,9 @@ namespace Dot42.Collections.Specialized
                 --m_size;
                 return res;
             }
-            else if (k == FREE_KEY)
+            else if (k == FreeKey)
             {
-                return NO_VALUE; //end of chain already
+                return NoValue; //end of chain already
             }
             while (true)
             {
@@ -192,9 +191,9 @@ namespace Dot42.Collections.Specialized
                     --m_size;
                     return res;
                 }
-                else if (k == FREE_KEY)
+                else if (k == FreeKey)
                 {
-                    return NO_VALUE;
+                    return NoValue;
                 }
             }
         }
@@ -210,9 +209,9 @@ namespace Dot42.Collections.Specialized
                 pos = ((last = pos) + 2) & m_mask2;
                 while (true)
                 {
-                    if ((k = data[pos]) == FREE_KEY)
+                    if ((k = data[pos]) == FreeKey)
                     {
-                        data[last] = FREE_KEY;
+                        data[last] = FreeKey;
                         return last;
                     }
                     slot = (Tools.PhiMix(k) & m_mask) << 1; //calculate the starting slot for the current key
@@ -245,7 +244,7 @@ namespace Dot42.Collections.Specialized
             for (int i = 0; i < oldCapacity; i += 2)
             {
                 long oldKey = oldData[i];
-                if (oldKey != FREE_KEY)
+                if (oldKey != FreeKey)
                 {
                     Put(oldKey, (int)oldData[i + 1]);
                 }
