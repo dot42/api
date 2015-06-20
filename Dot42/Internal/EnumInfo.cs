@@ -261,7 +261,7 @@ namespace Dot42.Internal
 
         private ValuesByUnderlying InitializeIntLookup()
         {
-            var vals = new IntIntMap(values.Count + 1, 0.75f);
+            var vals = new IntIntMap(values.Count + 1, 0.55f);
 
             for (int i = 0; i < values.Count; ++i)
             {
@@ -306,7 +306,7 @@ namespace Dot42.Internal
 
         private ValuesByUnderlying InitializeLongLookup()
         {
-            var vals = new LongIntMap(values.Count + 1, 0.75f);
+            var vals = new LongIntMap(values.Count + 1, 0.55f);
 
             for (int i = 0; i < values.Count; ++i)
             {

@@ -59,6 +59,17 @@ namespace Dot42.Internal
             return GetOrCreate(entry);
         }
 
+        static NumberFormatFactory()
+        {
+            Application.ReleaseCaches += (s, e) =>
+            {
+#if !ANDROID_12P
+            lock (Cache)
+#endif
+                Cache.EvictAll();
+            };
+        }
+
         private static NumberFormat GetOrCreate(Entry entry)
         {
 #if !ANDROID_12P

@@ -402,6 +402,7 @@ namespace System
 
         public PropertyInfo GetProperty(string name, BindingFlags flags)
         {
+            
             var props = ReflectionHelper.GetProperties(this, name, flags);
 
             if (props.Length > 1)

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Dot42.Collections.Specialized;
 using Java.Lang.Reflect;
-using Java.Nio.Channels;
-using Java.Util.Concurrent;
 
 namespace Dot42.Internal.Generics
 {
@@ -13,8 +12,9 @@ namespace Dot42.Internal.Generics
     /// </summary>
     internal static class GenericInstanceFactory
     {
-        private static readonly ConcurrentHashMap<GenericTypeInfo, Type> TypeInfoToProxyType = new ConcurrentHashMap<GenericTypeInfo, Type>();
-        private static readonly ConcurrentHashMap<Type, GenericTypeInfo> ProxyTypeToTypeInfo = new ConcurrentHashMap<Type, GenericTypeInfo>();
+        // These maps have ID charachter, and must be kept. (Weak References would of course be possible)
+        private static readonly FastConcurrentHashMap<GenericTypeInfo, Type> TypeInfoToProxyType = new FastConcurrentHashMap<GenericTypeInfo, Type>();
+        private static readonly ConcurrentTypeHashMap<GenericTypeInfo> ProxyTypeToTypeInfo = new ConcurrentTypeHashMap<GenericTypeInfo>();
 
         private static readonly IEnumerator<IEnumerable<Type>> InterfacePermutations;
 
@@ -95,7 +95,7 @@ namespace Dot42.Internal.Generics
 
         public static bool IsGenericInstanceType(Type type)
         {
-            return ProxyTypeToTypeInfo.ContainsKey(type);
+            return ProxyTypeToTypeInfo.Get(type) != null;
         }
 
         private static Type CreateUniqueType(Type baseType, Type[] genericParameters)
@@ -128,6 +128,12 @@ namespace Dot42.Internal.Generics
                     yield return ret;
                 }
             }
+        }
+
+        private static void ClearCaches(object sender, EventArgs e)
+        {
+            ProxyTypeToTypeInfo.Clear();
+            TypeInfoToProxyType.Clear();
         }
 
         internal interface IGenericMarker0 { }

@@ -818,8 +818,9 @@ namespace System
         [Inline]
         public static bool Equals(string a, string b)
         {
+            if (ReferenceEquals(a, b)) return true;
             if (a == null) return b == null;
-            return a.Equals(b);
+            return a.Equals((object)b);
         }
 
         [Inline]
@@ -957,6 +958,7 @@ namespace System
         /// </summary>
         public static bool operator !=(string a, string b)
         {
+            if (ReferenceEquals(a, b)) return false;
             return !Equals(a, b);
         }
     }

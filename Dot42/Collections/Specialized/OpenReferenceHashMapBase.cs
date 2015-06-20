@@ -6,18 +6,20 @@ using Java.Util;
 namespace Dot42.Collections.Specialized
 {
     /// <summary>
-    /// used as base class for FastWeakReferenceHashMap/FastSoftReferenceHashMap
+    /// used as base class for OpenWeakReferenceHashMap/OpenSoftReferenceHashMap
+    /// Not used at the moment.
     /// </summary>
-    public abstract class FastReferenceHashMapBase<K, V> : IFastHashMap<K, V>
+    internal abstract class OpenReferenceHashMapBase<K, V> : IOpenHashMap<K, V>
     {
-        public const float DefaultFillFactor = 0.75f;
+        public const float DefaultFillFactor = 0.55f;
+        public const int DefaultSize = 16;
 
         protected static readonly object FreeKey = new object();
         protected static readonly object RemovedKey = new object();
 
         protected ReferenceQueue<K> m_queue = new ReferenceQueue<K>();
 
-        public abstract IFastHashMap<K, V> Clone(int newSize);
+        public abstract IOpenHashMap<K, V> Clone(int newSize);
         protected abstract Reference<K> CreateReference(K key);
 
         /// <summary>
@@ -43,7 +45,7 @@ namespace Dot42.Collections.Specialized
         private bool _containsStaleEntries;
         public bool ContainsStaleEntries { get { return _containsStaleEntries; } }
 
-        public FastReferenceHashMapBase(int size, float fillFactor = DefaultFillFactor)
+        public OpenReferenceHashMapBase(int size, float fillFactor = DefaultFillFactor)
         {
             if (fillFactor <= 0 || fillFactor >= 1)
             {
@@ -54,38 +56,53 @@ namespace Dot42.Collections.Specialized
                 throw new ArgumentException("Size must be positive!");
             }
 
-            int capacity = Tools.ArraySize(size, fillFactor);
-            m_mask = capacity - 1;
-            m_mask2 = capacity * 2 - 1;
             m_fillFactor = fillFactor;
-
-            m_data = new object[capacity * 2];
-            Arrays.Fill(m_data, FreeKey);
-
-            m_threshold = (int)(capacity * fillFactor);
+            InitializeEmpty(size);
         }
 
         /// <summary>
         /// Clones the hash map.
         /// </summary>
-        protected FastReferenceHashMapBase(FastReferenceHashMapBase<K, V> other, int newSize)
-            : this(newSize > 0 ? newSize : other.m_size, other.m_fillFactor)
+        protected OpenReferenceHashMapBase(OpenReferenceHashMapBase<K, V> other, int newSize)
         {
-            if (newSize <= 0)
+            m_fillFactor = other.m_fillFactor;
+
+            if (newSize < 0)
+            {
+                InitializeEmpty(DefaultSize);
+                return;
+            }
+
+            if (newSize < other.m_size)
                 newSize = other.m_size;
+
+            if (newSize < DefaultSize)
+                newSize = DefaultSize;
 
             m_mask = other.m_mask;
             m_mask2 = other.m_mask2;
-            m_fillFactor = other.m_fillFactor;
             m_threshold = other.m_threshold;
-            m_data = other.m_data;
 
             // we need new references, to keep our referencequeue up to date.
+            m_data = other.m_data;
             int newCapacity = Tools.ArraySize(newSize, other.m_fillFactor) * 2;
             Rehash(newCapacity);
         }
 
         public int Size { get { return m_size; } }
+
+        private void InitializeEmpty(int size)
+        {
+            int capacity = Tools.ArraySize(size, m_fillFactor);
+            m_mask = capacity - 1;
+            m_mask2 = capacity * 2 - 1;
+
+
+            m_data = new object[capacity * 2];
+            Arrays.Fill(m_data, FreeKey);
+
+            m_threshold = (int)(capacity * m_fillFactor);
+        }
 
         protected void Rehash(int newCapacity)
         {
@@ -317,7 +334,8 @@ namespace Dot42.Collections.Specialized
         [Inline]
         private int GetHashCode(K key)
         {
-            return Java.Lang.System.IdentityHashCode(key);
+            int hashCode = Java.Lang.System.IdentityHashCode(key);
+            return hashCode ^ (hashCode >> 16); // spread
         }
 
         [Inline]

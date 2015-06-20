@@ -15,10 +15,13 @@ namespace Dot42.Internal.Generics
 
         protected bool Equals(GenericTypeInfo other)
         {
-            if(TypeDefinition != other.TypeDefinition) return false;
-            if(Arguments.Length != other.Arguments.Length) return false;
+            if(TypeDefinition != other.TypeDefinition) 
+                return false;
+            if(Arguments.Length != other.Arguments.Length) 
+                return false;
             for(int i = 0; i < Arguments.Length; ++i)
-                if(Arguments[i] !=other.Arguments[i]) return false;
+                if(Arguments[i] != other.Arguments[i]) 
+                    return false;
             return true;
         }
 
@@ -26,7 +29,8 @@ namespace Dot42.Internal.Generics
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.JavaGetClass() != JavaGetClass()) return false;
+            if (obj.JavaGetClass() != JavaGetClass()) 
+                return false;
             return Equals((GenericTypeInfo) obj);
         }
 

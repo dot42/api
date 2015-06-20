@@ -38,7 +38,7 @@ namespace System.Collections.Generic {
     {
         [SuppressMessage("dot42", "StaticFieldInGenericType")]
         //private static readonly FastImmutableHashMap<Type, Reference<object>> Comparers = new FastImmutableHashMap<Type, Reference<object>>(new FastWeakReferenceHashMap<Type, Reference<object>>(16));
-        private static readonly FastImmutableHashMap<Type, object> Comparers = new FastImmutableHashMap<Type, object>(new FastReferenceEqualityHashMap<Type, object>(16));
+        private static readonly ConcurrentTypeHashMap<object> Comparers = new ConcurrentTypeHashMap<object>();
 		
 	    public abstract int GetHashCode (T obj);
 		public abstract bool Equals (T x, T y);

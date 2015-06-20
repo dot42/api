@@ -80,7 +80,7 @@ namespace Dot42.Collections.Specialized
         }
 
         //taken from FastUtil
-        private const int INT_PHI = unchecked((int)0x9E3779B9);
+        internal const int INT_PHI = unchecked((int)0x9E3779B9);
 
         [Inline]
         public static int PhiMix(int x)

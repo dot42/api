@@ -29,6 +29,7 @@
 //
 
 using System.Diagnostics.CodeAnalysis;
+using Dot42.Collections.Specialized;
 using Java.Util.Concurrent;
 
 namespace System.Collections.Generic {
@@ -36,7 +37,7 @@ namespace System.Collections.Generic {
 	public abstract class Comparer<T> : IComparer<T>, IComparer
 	{
         [SuppressMessage("dot42", "StaticFieldInGenericType")]
-        private static readonly ConcurrentHashMap<Type, object> _comparers = new ConcurrentHashMap<Type, object>();
+        private static readonly ConcurrentTypeHashMap<object> Comparers = new ConcurrentTypeHashMap<object>();
 
 		public abstract int Compare (T x, T y);
 	
@@ -45,9 +46,11 @@ namespace System.Collections.Generic {
 			get 
             {
                 object previous = null;
-                object comparer = _comparers.Get(typeof(T));
+                var type = typeof(T);
+
+                object comparer = Comparers.Get(type);
                 if (comparer == null)
-                    previous = _comparers.PutIfAbsent(typeof(T), comparer = CreateComparer(typeof(T)));
+                    previous = Comparers.PutIfAbsent(type, comparer = CreateComparer(type));
 
                 return (Comparer<T>)(previous ?? comparer);
 

@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text;
 using Android.Util;
 using Dot42.Collections;
+using Dot42.Collections.Specialized;
 using Java.Lang;
 using Java.Lang.Reflect;
 using Java.Util;
@@ -24,9 +25,14 @@ namespace Dot42.Internal.Generics
             public int GenericArgumentCount;
             public Field GenericInstanceField;
         }
-        private static readonly ConcurrentHashMap<Type, TypeInfo> TypeInfoCache = new ConcurrentHashMap<Type, TypeInfo>();
-        
-        
+        //private static readonly ConcurrentTypeCacheMap<TypeInfo> TypeInfoCache = new ConcurrentTypeCacheMap<TypeInfo>();
+        private static readonly ConcurrentHashMap<Type,TypeInfo> TypeInfoCache = new ConcurrentHashMap<Type, TypeInfo>();
+
+        static GenericsReflection()
+        {
+            Application.ReleaseCaches += (s, e) => TypeInfoCache.Clear();
+        }
+
         public const char GenericTickChar = '\x2b9'; // (ʹ)
 
         public static int GetGenericArgumentCount(Type type)

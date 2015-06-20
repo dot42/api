@@ -1,30 +1,58 @@
 ﻿// based upon http://java-performance.info/implementing-world-fastest-java-int-to-int-hash-map/
-
-using System.Collections.Generic;
+//#define DUMP_PERFORMANCE
+using Android.Util;
 
 namespace Dot42.Collections.Specialized
 {
+    using System.Collections.Generic;
+
     /// <summary>
     /// Object-2-object map based on IntIntMap4a
     /// </summary>
-    public class FastComparingHashMap<K, V> : FastHashMapBase<K,V> 
+    internal class OpenEqualityComparerHashMap<K, V> : OpenHashMapBase<K, V> 
     {
-        private readonly IEqualityComparer<K> _comparer;
+        private IEqualityComparer<K> _comparer;
 
-        public FastComparingHashMap(IEqualityComparer<K> comparer, int size = DefaultSize, float fillFactor = DefaultFillFactor)
+        public OpenEqualityComparerHashMap(IEqualityComparer<K> comparer, int size = DefaultSize, float fillFactor = DefaultFillFactor)
                 : base(size, fillFactor)
         {
             _comparer = comparer;
         }
 
-        private FastComparingHashMap(FastComparingHashMap<K, V> other, int newSize)
-            : base(other, newSize)
+        protected OpenEqualityComparerHashMap(OpenEqualityComparerHashMap<K, V> other, int newSize)
+            : base(other, newSize, false)
         {
             _comparer = other._comparer;
         }
 
+        protected override void Rehash(int newCapacity, OpenHashMapBase<K, V> source)
+        {
+            var other = source as OpenEqualityComparerHashMap<K, V>;
+            if (_comparer == null && other != null)
+                _comparer = other._comparer;
+            base.Rehash(newCapacity, source);
+        }
+
+        #region Copied Code // As we are aiming for high speed, we copy/paste this part of the code.
+        // the variable parts are then inlined by the compiler.
+
+#if DUMP_PERFORMANCE
+        protected int m_totalGets;
+        protected int m_totalAccesses;
+#endif
+
         public override V Get(K key)
         {
+#if DUMP_PERFORMANCE
+            if (m_totalGets != 0)
+            {
+                Log.Info("dot42", "fast hash map<{6},{7}>@{0} get performance: {1}/{2}={3:F1}: size {4} capacity {5}", GetHashCode(), m_totalAccesses, m_totalGets, (float)m_totalAccesses / m_totalGets, m_size, m_data.Length/2, typeof(K).JavaGetName(), typeof(V).JavaGetName());
+            }
+
+            ++m_totalGets;
+            ++m_totalAccesses;
+#endif
+
             if (key == null)
             {
                 return (V)m_nullValue; //we null it on remove, so safe not to check a flag here
@@ -37,13 +65,16 @@ namespace Dot42.Collections.Specialized
             {
                 return default(V); //end of chain already
             }
-            if (AreEqual(k, key)) //we check FREE and REMOVED prior to this call
+            if (AreEqual(k, key)) // we implicit check RemovedKey here
             {
                 return (V)m_data[ptr + 1];
             }
 
             while (true)
             {
+#if DUMP_PERFORMANCE
+                ++m_totalAccesses;
+#endif
                 ptr = (ptr + 2) & m_mask2; //that's next index
                 k = m_data[ptr];
                 if (k == FreeKey)
@@ -57,12 +88,60 @@ namespace Dot42.Collections.Specialized
             }
         }
 
-        protected override V Put(K key, V value, bool onlyIfAbsent)
+        public override bool Contains(K key)
+        {
+#if DUMP_PERFORMANCE
+            if (m_totalGets != 0)
+            {
+                Log.Info("dot42", "fast hash map<{6},{7}>@{0} contains performance: {1}/{2}={3:F1}: size {4} capacity {5}", GetHashCode(), m_totalAccesses, m_totalGets, (float)m_totalAccesses / m_totalGets, m_size, m_data.Length/2, typeof(K).JavaGetName(), typeof(V).JavaGetName());
+            }
+
+            ++m_totalGets;
+            ++m_totalAccesses;
+#endif
+
+            if (key == null)
+            {
+                return m_hasNull; 
+            }
+
+            int ptr = (GetHashCode(key) & m_mask) << 1;
+            object k = m_data[ptr];
+
+            if (k == FreeKey)
+            {
+                return false; //end of chain already
+            }
+            if (AreEqual(k, key)) // we implicit check RemovedKey here
+            {
+                return true;
+            }
+
+            while (true)
+            {
+#if DUMP_PERFORMANCE
+                ++m_totalAccesses;
+#endif
+                ptr = (ptr + 2) & m_mask2; //that's next index
+                k = m_data[ptr];
+                if (k == FreeKey)
+                {
+                    return false;
+                }
+                if (AreEqual(k, key))
+                {
+                    return true;
+                }
+            }
+        }
+
+        protected internal override V Put(K key, V value, bool onlyIfAbsent)
         {
             if (key == null)
             {
                 return InsertNullKey(value);
             }
+
             int ptr = (GetHashCode(key) & m_mask) << 1;
             object k = m_data[ptr];
 
@@ -72,15 +151,17 @@ namespace Dot42.Collections.Specialized
                 m_data[ptr + 1] = value;
                 if (m_size >= m_threshold)
                 {
-                    Rehash(m_data.Length * 2); //size is set inside
+                    Rehash(m_data.Length, this); //size is set inside
                 }
                 else
                 {
                     ++m_size;
                 }
+
                 return default(V);
             }
-            if (AreEqual(k, key)) //we check FREE and REMOVED prior to this call
+
+            if (AreEqual(k, key)) // we implicit check RemovedKey here
             {
                 object ret = m_data[ptr + 1];
                 if (!onlyIfAbsent)
@@ -108,7 +189,7 @@ namespace Dot42.Collections.Specialized
                     m_data[ptr + 1] = value;
                     if (m_size >= m_threshold)
                     {
-                        Rehash(m_data.Length * 2); //size is set inside
+                        Rehash(m_data.Length, this); //size is set inside
                     }
                     else
                     {
@@ -124,6 +205,7 @@ namespace Dot42.Collections.Specialized
                         m_data[ptr + 1] = value;
 
                     return (V)ret;
+
                 }
                 if (k == RemovedKey)
                 {
@@ -145,38 +227,16 @@ namespace Dot42.Collections.Specialized
             // hashcode
             int ptr = (GetHashCode(key) & m_mask) << 1;
 
-            object k = m_data[ptr];
-            if (k == FreeKey)
-            {
-                return default(V); //end of chain already
-            }
-            // equals
-            if (AreEqual(k, key)) //we check FREE and REMOVED prior to this call
-            {
-                --m_size;
-                if (m_data[(ptr + 2) & m_mask2] == FreeKey)
-                {
-                    m_data[ptr] = FreeKey;
-                }
-                else
-                {
-                    m_data[ptr] = RemovedKey;
-                }
-
-                V ret = (V)m_data[ptr + 1];
-                m_data[ptr + 1] = null;
-                return ret;
-            }
             while (true)
             {
-                ptr = (ptr + 2) & m_mask2; //that's next index calculation
-                k = m_data[ptr];
+                object k = m_data[ptr];
+
                 if (k == FreeKey)
                 {
-                    return default(V);
+                    return default(V); //end of chain already
                 }
-                // equals
-                if (AreEqual(k, key))
+
+                if (AreEqual(k, key)) // we implicit check RemovedKey here
                 {
                     --m_size;
                     if (m_data[(ptr + 2) & m_mask2] == FreeKey)
@@ -190,15 +250,20 @@ namespace Dot42.Collections.Specialized
 
                     V ret = (V)m_data[ptr + 1];
                     m_data[ptr + 1] = null;
+
                     return ret;
                 }
+
+                ptr = (ptr + 2) & m_mask2; //that's next index calculation
             }
         }
+        #endregion
 
         [Inline]
         private int GetHashCode(K key)
         {
-            return _comparer.GetHashCode(key);
+            int hashCode = _comparer.GetHashCode(key);
+            return hashCode ^ (hashCode >> 16); // spread
         }
 
         [Inline]
@@ -207,9 +272,9 @@ namespace Dot42.Collections.Specialized
             return _comparer.Equals((K) key1, (K) key2);
         }
 
-        public override IFastHashMap<K, V> Clone(int newSize)
+        public override IOpenHashMap<K, V> Clone(int newSize)
         {
-            return new FastComparingHashMap<K, V>(this, newSize);
+            return new OpenEqualityComparerHashMap<K, V>(this, newSize);
         }
     }
 

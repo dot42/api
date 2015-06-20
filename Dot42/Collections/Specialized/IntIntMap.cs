@@ -30,7 +30,7 @@ namespace Dot42.Collections.Specialized
     /// <summary>
     /// Same as IntIntMap4, but using interleaving int[] instead of long[]
     /// </summary>
-    public class IntIntMap 
+    public sealed class IntIntMap 
     {
         private const int FreeKey = 0;
         public const int NoValue = int.MinValue;
@@ -252,7 +252,7 @@ namespace Dot42.Collections.Specialized
         }
 
 
-        public virtual int Size { get { return m_size; } }
+        public int Size { get { return m_size; } }
 
         private void Rehash(int newCapacity)
         {

@@ -15,18 +15,24 @@
 // limitations under the License.
 
 using System.Reflection;
-using Android.Database.Sqlite;
+using Dot42.Collections.Specialized;
 using Dot42.Internal;
-using Java.Util.Concurrent;
-using Java.Util.Concurrent.Atomic;
 
 namespace System
 {
 	public abstract partial class Delegate
 	{
-        private static readonly ConcurrentHashMap<Type, FieldInfo> InstanceFieldCache = new ConcurrentHashMap<Type, FieldInfo>();
-        private static readonly ConcurrentHashMap<Type, MethodInfo> TargetMethodCache = new ConcurrentHashMap<Type, MethodInfo>();
+        private static readonly ConcurrentTypeHashMap<FieldInfo>  InstanceFieldCache = new ConcurrentTypeHashMap<FieldInfo>();
+        private static readonly ConcurrentTypeHashMap<MethodInfo> TargetMethodCache = new ConcurrentTypeHashMap<MethodInfo>();
 
+	    static Delegate()
+	    {
+	        Application.ReleaseCaches += (s, e) =>
+	        {
+	            InstanceFieldCache.Clear();
+	            TargetMethodCache.Clear();
+	        };
+	    }
         /// <summary>
         /// Concatenates an invocation list of 2 delegates.
         /// </summary>

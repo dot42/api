@@ -4,7 +4,6 @@ using System.Threading;
 using Android.Util;
 using Java.Text;
 using Java.Util;
-using TimeZone = Java.Util.TimeZone;
 
 namespace Dot42.Internal
 {
@@ -41,6 +40,17 @@ namespace Dot42.Internal
             DateFormat formatter = new SimpleDateFormat(javaFormat, locale);
 
             return new DateFormatResult(formatter, foundK);
+        }
+
+        static DateFormatFactory()
+        {
+            Application.ReleaseCaches += (s, e) =>
+            {
+#if !ANDROID_12P
+            lock (Cache)
+#endif
+                Cache.EvictAll();
+            };
         }
 
 
@@ -111,12 +121,12 @@ namespace Dot42.Internal
 #if !ANDROID_12P
         private class LruCache<K, V> : LinkedHashMap<K, V> 
         {
-          private int cacheSize;
+            private int cacheSize;
 
-          public LruCache(int cacheSize) : base(16, 0.75f, true)
-          {
+            public LruCache(int cacheSize) : base(16, 0.75f, true)
+            {
             this.cacheSize = cacheSize;
-          }
+            }
 
             protected internal override bool RemoveEldestEntry(IMap_IEntry<K, V> eldest)
             {

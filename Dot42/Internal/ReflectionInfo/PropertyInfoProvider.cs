@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Android.Util;
+using Dot42.Collections.Specialized;
 using Java.Util.Concurrent;
 using Exception = System.Exception;
 
@@ -33,7 +34,7 @@ namespace Dot42.Internal.ReflectionInfo
         internal static readonly PropertyInfo[] None = new PropertyInfo[0];
 
         private static readonly List<PropertyInfoProvider> Instances;
-        private static readonly ConcurrentHashMap<Type, PropertyInfo[]> loadedProperties = new ConcurrentHashMap<Type, PropertyInfo[]>();
+        private static readonly ConcurrentTypeHashMap<PropertyInfo[]> LoadedProperties = new ConcurrentTypeHashMap<PropertyInfo[]>();
 
         static PropertyInfoProvider()
         {
@@ -44,6 +45,8 @@ namespace Dot42.Internal.ReflectionInfo
             var fwProps = TryCreateClass<PropertyInfoProvider>("dot42.Internal.ReflectionInfo.FrameworkPropertyInfoProvider");
             if (fwProps != null)
                 Instances.Add(fwProps);
+
+            Application.ReleaseCaches += (s, e) => LoadedProperties.Clear();
         }
 
         /// <summary>
@@ -53,7 +56,7 @@ namespace Dot42.Internal.ReflectionInfo
         /// <param name="inherit">If true, look in base classes for inherited custom attributes.</param>
         public static PropertyInfo[] GetProperties(Type definingType, Type declaringType)
         {
-            var result = loadedProperties.Get(declaringType);
+            var result = LoadedProperties.Get(declaringType);
             if (result != null) 
                 return result;
 
@@ -76,7 +79,7 @@ namespace Dot42.Internal.ReflectionInfo
             }
 
             // Store in cache.
-            loadedProperties.Put(declaringType, result);
+            LoadedProperties.Put(declaringType, result);
 
             return result ;
         }

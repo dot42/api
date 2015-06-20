@@ -5,7 +5,7 @@ namespace Dot42.Collections.Specialized
     /// <summary>
     /// Similar to IntIntMap, but using interleaving long[]
     /// </summary>
-    public class LongIntMap 
+    public sealed class LongIntMap 
     {
         private const long FreeKey = 0L;
         public const int NoValue = int.MinValue;
@@ -227,7 +227,7 @@ namespace Dot42.Collections.Specialized
         }
 
 
-        public virtual int Size { get { return m_size; } }
+        public int Size { get { return m_size; } }
 
         private void Rehash(int newCapacity)
         {
