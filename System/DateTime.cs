@@ -246,7 +246,7 @@ namespace System
 	    public static int DaysInMonth(int year, int month)
 	    {
             // Create a calendar object and set year and month
-            Calendar mycal = new Java.Util.GregorianCalendar(year, month, 1);
+            Calendar mycal = new Java.Util.GregorianCalendar(year, month - MonthOffset, 1);
 
             // Get the number of days in that month
             return  mycal.GetActualMaximum(Calendar.DAY_OF_MONTH);         
