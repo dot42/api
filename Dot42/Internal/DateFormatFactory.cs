@@ -44,13 +44,12 @@ namespace Dot42.Internal
 
         static DateFormatFactory()
         {
+#if ANDROID_12P
             Application.ReleaseCaches += (s, e) =>
             {
-#if !ANDROID_12P
-            lock (Cache)
-#endif
                 Cache.EvictAll();
             };
+#endif
         }
 
 

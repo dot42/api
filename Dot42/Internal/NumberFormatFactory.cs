@@ -61,13 +61,12 @@ namespace Dot42.Internal
 
         static NumberFormatFactory()
         {
+#if ANDROID_12P
             Application.ReleaseCaches += (s, e) =>
             {
-#if !ANDROID_12P
-            lock (Cache)
-#endif
                 Cache.EvictAll();
             };
+#endif
         }
 
         private static NumberFormat GetOrCreate(Entry entry)

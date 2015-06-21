@@ -21,12 +21,15 @@ namespace Dot42.Internal
 
         public override void OnLowMemory()
         {
+#if ANDROID_14P
             if (Android.OS.Build.VERSION.SDK_INT < Android.OS.Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+#endif
                 FireReleaseCaches();
 
             base.OnLowMemory();
         }
 
+#if ANDROID_14P
         public override void OnTrimMemory(int level)
         {
             Debug.WriteLine("OnTrimMemory {0}", level);
@@ -36,6 +39,7 @@ namespace Dot42.Internal
 
             base.OnTrimMemory(level);
         }
+#endif
 
         private void FireReleaseCaches()
         {
