@@ -79,7 +79,7 @@ namespace Dot42.Collections.Specialized
         /// <summary>
         /// Clones the hash map.
         /// </summary>
-        protected OpenHashMapBase(OpenHashMapBase<K,V> other, int newSize, bool rehashImmediately = false)
+        protected OpenHashMapBase(OpenHashMapBase<K,V> other, int newSize)
         {
             m_fillFactor = other.m_fillFactor;
 
@@ -98,6 +98,9 @@ namespace Dot42.Collections.Specialized
             m_mask      = other.m_mask;
             m_mask2     = other.m_mask2;
             m_threshold = other.m_threshold;
+
+            m_hasNull   = other.m_hasNull;
+            m_nullValue = other.m_nullValue;
 
             int newCapacity = Tools.ArraySize(newSize, m_fillFactor);
 

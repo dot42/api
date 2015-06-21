@@ -20,7 +20,7 @@ namespace Dot42.Collections.Specialized
         }
 
         protected OpenEqualityComparerHashMap(OpenEqualityComparerHashMap<K, V> other, int newSize)
-            : base(other, newSize, false)
+            : base(other, newSize)
         {
             _comparer = other._comparer;
         }

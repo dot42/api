@@ -5,7 +5,7 @@ namespace Dot42.Collections.Specialized
     /// <summary>
     /// Similar to IntIntMap, but using interleaving long[]
     /// </summary>
-    public sealed class LongIntMap 
+    internal sealed class LongIntMap 
     {
         private const long FreeKey = 0L;
         public const int NoValue = int.MinValue;

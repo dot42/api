@@ -24,6 +24,10 @@
 // 
 // For more information, please refer to <http://unlicense.org> 
 
+using System;
+using System.Collections.Generic;
+using Java.Util;
+
 namespace Dot42.Collections.Specialized
 {
 
@@ -68,19 +72,67 @@ namespace Dot42.Collections.Specialized
         {
             if (fillFactor <= 0 || fillFactor >= 1)
             {
-                throw new System.ArgumentException("FillFactor must be in (0, 1)");
+                throw new ArgumentException("FillFactor must be in (0, 1)");
             }
             if (size <= 0)
             {
-                throw new System.ArgumentException("Size must be positive!");
+                throw new ArgumentException("Size must be positive!");
             }
-            int capacity = Tools.ArraySize(size, fillFactor);
-            m_mask = capacity - 1;
-            m_mask2 = capacity * 2 - 1;
+
+            if (size < DefaultSize)
+                size = DefaultSize;
+
             m_fillFactor = fillFactor;
 
-            m_data = new int[capacity * 2];
-            m_threshold = (int)(capacity * fillFactor);
+            InitializeEmpty(size);
+        }
+
+        public IntIntMap(IntIntMap other, int newSize = 0)
+        {
+            m_fillFactor = other.m_fillFactor;
+
+            if (newSize < 0)
+            {
+                InitializeEmpty(DefaultSize);
+                return;
+            }
+
+            if (newSize < other.m_size)
+                newSize = other.m_size;
+
+            if (newSize < DefaultSize)
+                newSize = DefaultSize;
+
+            m_mask = other.m_mask;
+            m_mask2 = other.m_mask2;
+            m_threshold = other.m_threshold;
+
+            m_hasFreeKey = other.m_hasFreeKey;
+            m_freeValue = other.m_freeValue;
+
+            int newCapacity = Tools.ArraySize(newSize, m_fillFactor);
+
+            if (2 * newCapacity == other.m_data.Length)
+            {
+                m_data = Arrays.CopyOf(other.m_data, other.m_data.Length);
+                m_size = other.m_size;
+            }
+            else
+            {
+                Rehash(newCapacity, other);
+            }
+        }
+
+        private void InitializeEmpty(int size)
+        {
+            int capacity = Tools.ArraySize(size, m_fillFactor);
+            m_threshold  = (int)(capacity * m_fillFactor);
+            m_mask       = capacity - 1;
+            m_mask2      = capacity * 2 - 1;
+            m_hasFreeKey = false;
+            m_freeValue  = 0;
+
+            m_data       = new int[capacity * 2];
         }
 
         public int Get(int key)
@@ -140,7 +192,7 @@ namespace Dot42.Collections.Specialized
                 m_data[ptr + 1] = value;
                 if (m_size >= m_threshold)
                 {
-                    Rehash(m_data.Length * 2); //size is set inside
+                    Rehash(m_data.Length * 2, this); //size is set inside
                 }
                 else
                 {
@@ -165,7 +217,7 @@ namespace Dot42.Collections.Specialized
                     m_data[ptr + 1] = value;
                     if (m_size >= m_threshold)
                     {
-                        Rehash(m_data.Length * 2); //size is set inside
+                        Rehash(m_data.Length * 2, this); //size is set inside
                     }
                     else
                     {
@@ -257,28 +309,50 @@ namespace Dot42.Collections.Specialized
 
         public int Size { get { return m_size; } }
 
-        private void Rehash(int newCapacity)
+        private void Rehash(int newCapacity, IntIntMap source)
         {
-            m_threshold = (int)(newCapacity / 2 * m_fillFactor);
-            m_mask = newCapacity / 2 - 1;
-            m_mask2 = newCapacity - 1;
+            m_threshold = (int)(newCapacity * m_fillFactor);
+            m_mask = newCapacity - 1;
+            m_mask2 = newCapacity * 2 - 1;
 
-            int oldCapacity = m_data.Length;
-            int[] oldData = m_data;
+            int[] sourceData = source.m_data;
+            int oldLength    = sourceData.Length;
 
-            m_data = new int[newCapacity];
+            m_data = new int[newCapacity * 2];
             m_size = m_hasFreeKey ? 1 : 0;
 
-            for (int i = 0; i < oldCapacity; i += 2)
+            for (int i = 0; i < oldLength; i += 2)
             {
-                int oldKey = oldData[i];
+                int oldKey = sourceData[i];
                 if (oldKey != FreeKey)
                 {
-                    Put(oldKey, oldData[i + 1]);
+                    Put(oldKey, sourceData[i + 1]);
                 }
             }
         }
 
+        public int[] Keys
+        {
+            get
+            {
+                int[] ret = new int[Size];
+                int idx = 0;
+
+                if (m_hasFreeKey)
+                    ret[idx++] = m_freeValue;
+
+                var data = m_data;
+                var length = data.Length;
+
+                for (int i = 0; i < length; ++i)
+                {
+                    int key = data[i];
+                    if(key != FreeKey)
+                        ret[idx++] = key;
+                }
+                return ret;
+            }
+        }
         //    private int getStartIdx( final int key )
         //    {
         //        return ( Tools.phiMix( key ) & m_mask) << 1;
