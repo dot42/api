@@ -84,13 +84,14 @@ namespace System
         /// throws MissingMethodsException atm, if a constructor could not be found.
         /// </summary>
 	    internal static Constructor GetBestMatchingConstructor(Type type, object[] args)
-	    {
-            List<Tuple<Constructor, int>> matches = new List<Tuple<Constructor, int>>();
+        {
+            Constructor bestMatch = null;
+            int bestMatchScore = int.MinValue;
         
             // this code does not take into account nullable structs.
             // this could be provided as well easily, if anybody ever cares...
 
-	        foreach (var c in type.JavaGetDeclaredConstructors())
+	        foreach (var c in ReflectionCache.JavaGetDeclaredConstructors(type))
 	        {
 	            var cargs = c.ParameterTypes;
                 if(cargs.Length != args.Length) 
@@ -117,15 +118,15 @@ namespace System
                     else
                         goto nomatch;
 	            }
-                
-                matches.Add(Tuple.Create(c, match));
+
+	            if (match > bestMatchScore)
+	            {
+	                bestMatchScore = match;
+	                bestMatch = c;
+	            }
                 
             nomatch:;
 	        }
-
-	        var bestMatch =  matches.OrderByDescending(p => p.Item2)
-                                    .Select(p => p.Item1)
-                                    .FirstOrDefault();
 
             if (bestMatch != null) 
                 return bestMatch;

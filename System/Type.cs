@@ -387,12 +387,12 @@ namespace System
 
         public PropertyInfo[] GetProperties()
         {
-            return ReflectionHelper.GetProperties(this, BindFlags.PublicMembers);
+            return ReflectionCache.GetProperties(this, BindFlags.PublicMembers);
         }
 
         public PropertyInfo[] GetProperties(BindingFlags flags)
         {
-            return ReflectionHelper.GetProperties(this, flags);
+            return ReflectionCache.GetProperties(this, flags);
         }
 
         public PropertyInfo GetProperty(string name)
@@ -403,7 +403,7 @@ namespace System
         public PropertyInfo GetProperty(string name, BindingFlags flags)
         {
             
-            var props = ReflectionHelper.GetProperties(this, name, flags);
+            var props = ReflectionCache.GetProperties(this, name, flags);
 
             if (props.Length > 1)
                 throw new AmbiguousMatchException("not unique: " + name);
