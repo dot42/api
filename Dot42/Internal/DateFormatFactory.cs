@@ -15,7 +15,7 @@ namespace Dot42.Internal
 
         public static DateFormatResult GetFormat(string format, DateTimeKind kind, IFormatProvider formatProvider)
         {
-            var key = new Key(Thread.CurrentThread.Id, format, kind, formatProvider);
+            var key = new Key(Thread.CurrentThread.Id, format ?? "G", kind, formatProvider);
 
 #if !ANDROID_12P
             lock (Cache)
@@ -32,26 +32,88 @@ namespace Dot42.Internal
 
         private static DateFormatResult CreateFormat(string format, IFormatProvider provider)
         {
-            bool useInvariant, foundK;
-            var javaFormat = DateTimeFormatting.ToJavaFormatString(format, provider, DateTimeKind.Unspecified, out useInvariant, out foundK);
+            if (format == null || format.Length == 1)
+            {
+                var ret = GetStandardFormat(format == null ? 'G' : format[0], provider);
+                if (ret != null)
+                    return ret;
+            }
+
+            bool useInvariant, foundK, useUtc;
+            string javaFormat = DateTimeFormatting.ToJavaFormatString(format, provider, DateTimeKind.Unspecified, false, out useInvariant, out foundK, out useUtc);
             
             Java.Util.Locale locale = useInvariant ? CultureInfo.InvariantCulture.Locale : provider.ToLocale();
 
             DateFormat formatter = new SimpleDateFormat(javaFormat, locale);
-
-            return new DateFormatResult(formatter, foundK);
+            return new DateFormatResult(formatter, foundK, useUtc);
         }
+
+        private static DateFormatResult GetStandardFormat(char c, IFormatProvider provider)
+        {
+            DateTimeFormatInfo dtfi = null;
+
+            if (provider != null)
+                dtfi = (DateTimeFormatInfo)provider.GetFormat(typeof(DateTimeFormatInfo));
+
+            if (dtfi == null)
+                dtfi = DateTimeFormatInfo.CurrentInfo;
+
+            DateFormat df = null;
+            bool useUtc = false;
+
+            switch (c)
+            {
+                case 'd':
+                    df = dtfi.CreateDateFormat(DateFormat.SHORT, -1);
+                    break;
+                case 'D':
+                    df = dtfi.CreateDateFormat(DateFormat.LONG, -1);
+                    break;
+                case 'f':
+                    df = dtfi.CreateDateFormat(DateFormat.LONG, DateFormat.SHORT);
+                    break;
+                case 'F':
+                    df = dtfi.CreateDateFormat(DateFormat.LONG, DateFormat.LONG);
+                    break;
+                case 'g':
+                    df = dtfi.CreateDateFormat(DateFormat.SHORT, DateFormat.SHORT);
+                    break;
+                case 'G':
+                    df = dtfi.CreateDateFormat(DateFormat.SHORT, DateFormat.LONG);
+                    break;
+                case 't':
+                    df = dtfi.CreateDateFormat(-1, DateFormat.SHORT);
+                    break;
+                case 'T':
+                    df = dtfi.CreateDateFormat(-1, DateFormat.LONG);
+                    break;
+                case 'U':
+                    df = dtfi.CreateDateFormat(DateFormat.LONG, DateFormat.LONG);
+                    useUtc = true;
+                    break;
+            }
+
+            if(df != null)
+                return new DateFormatResult(df, false, useUtc);
+            return null;
+        }
+
 
         static DateFormatFactory()
         {
-#if ANDROID_12P
-            Application.ReleaseCaches += (s, e) =>
-            {
-                Cache.EvictAll();
-            };
-#endif
+            Application.ReleaseCaches += ClearCache;
+            Application.LocaleChanged += ClearCache;
         }
 
+        private static void ClearCache(object sender, EventArgs e)
+        {
+#if ANDROID_12P
+            Cache.EvictAll();
+#else
+            lock(Cache)
+                Cache.Clear();
+#endif
+        }
 
         public sealed class Key
         {
@@ -99,11 +161,13 @@ namespace Dot42.Internal
 
         public class DateFormatResult
         {
+            public readonly bool UseUtc;
             public readonly DateFormat Format;
             public readonly bool ContainsK;
 
-            public DateFormatResult(DateFormat format, bool foundK)
+            public DateFormatResult(DateFormat format, bool foundK, bool useUtc)
             {
+                UseUtc = useUtc;
                 Format = format;
                 ContainsK = foundK;
             }

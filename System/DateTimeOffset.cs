@@ -643,8 +643,8 @@ namespace System {
         public String ToString(String format, IFormatProvider provider) {
             Contract.Ensures(Contract.Result<String>() != null);
             //return DateTimeFormat.Format(ClockDateTime, format, DateTimeFormatInfo.GetInstance(formatProvider), Offset);
-            bool useInvariant; bool foundK;
-            string javaFormat = DateTimeFormatting.ToJavaFormatString(format, provider, m_dateTime.Kind, out useInvariant, out foundK);
+            bool useInvariant; bool foundK; bool useUtc;
+            string javaFormat = DateTimeFormatting.ToJavaFormatString(format, provider, m_dateTime.Kind, true, out useInvariant, out foundK, out useUtc);
 
             var locale = useInvariant ? CultureInfo.InvariantCulture.Locale
                                       : provider.ToLocale();

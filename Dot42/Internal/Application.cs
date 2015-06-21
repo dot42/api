@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using Android.Content;
+using Android.Content.PM;
+using Android.Content.Res;
 
 namespace Dot42.Internal
 {
@@ -13,10 +15,19 @@ namespace Dot42.Internal
     internal class Application : Android.App.Application
     {
         public static event EventHandler ReleaseCaches;
- 
+        public static event EventHandler LocaleChanged;
+
         public Application()
         {
             Initialize(this);
+        }
+
+        public override void OnConfigurationChanged(Configuration newConfig)
+        {
+            // TODO: find out how to reliable detect locale changes.
+            FireLocaleChanged(); 
+            
+            base.OnConfigurationChanged(newConfig);
         }
 
         public override void OnLowMemory()
@@ -50,5 +61,10 @@ namespace Dot42.Internal
                 h(this, new EventArgs());
         }
 
+        private static void FireLocaleChanged()
+        {
+            var handler = LocaleChanged;
+            if (handler != null) handler(null, EventArgs.Empty);
+        }
     }
 }

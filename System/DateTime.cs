@@ -1066,10 +1066,14 @@ namespace System
         public string ToString(string format, IFormatProvider provider)
         {
             var f = DateFormatFactory.GetFormat(format, Kind, provider);
-            f.Format.TimeZone = Kind == DateTimeKind.Utc 
+
+            var date = f.UseUtc ? ToUniversalTime() : this;
+
+            f.Format.TimeZone = date.kind == DateTimeKind.Utc 
                                 ? Java.Util.TimeZone.GetTimeZone("UTC") 
                                 : Java.Util.TimeZone.Default;
-            return f.Format.Format(ToDate());
+
+            return f.Format.Format(date.ToDate());
         }
 
         public override string ToString()

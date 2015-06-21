@@ -14,7 +14,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Text;
 using Dot42;
+using Dot42.Internal;
 using Java.Text;
 using Locale = Java.Util.Locale;
 
@@ -22,8 +24,8 @@ namespace System.Globalization
 {
 	public sealed class DateTimeFormatInfo : IFormatProvider
 	{
+	    private readonly bool _isInvariant;
 	    public Locale Locale { get; set; }
-	    private readonly DateFormat dateFormat;
 
         private string amDesignator;
         private string pmDesignator;
@@ -37,19 +39,29 @@ namespace System.Globalization
         private string yearMonthPattern;
         private string fullDateTimePattern;
 
-	    internal DateTimeFormatInfo(DateFormat dateFormat, Java.Util.Locale locale)
-	    {
-	        Locale = locale;
-	        this.dateFormat = dateFormat;
+        private string javaShortDatePattern;
+        private string javaLongDatePattern;
+        private string javaShortTimePattern;
+        private string javaLongTimePattern;
+        private string javaFullDateTimePattern;
+        private string javaFullDateTimePattern2;
 
-            amDesignator = "AM";
-            pmDesignator = "PM";
+
+	    private const string InvariantJavaLongDatePattern = "EEEE, dd MMMM yyyy";
+        private const string InvariantJavaShortDatePattern = "MM/dd/yyyy";
+
+        private const string InvariantJavaLongTimePattern = "HH:mm:ss";
+        private const string InvariantJavaShortTimePattern = "HH:mm";
+
+	    internal DateTimeFormatInfo(Java.Util.Locale locale, bool isInvariant = false)
+	    {
+	        _isInvariant = isInvariant;
+	        Locale = locale;
+
+            // TODO how to get date and time separator?
             dateSeparator = "/";
             timeSeparator = ":";
-            shortDatePattern = "MM/dd/yyyy";
-            longDatePattern = "dddd, dd MMMM yyyy";
-            shortTimePattern = "HH:mm";
-            longTimePattern = "HH:mm:ss";
+
             monthDayPattern = "MMMM dd";
             yearMonthPattern = "yyyy MMMM";
 	    }
@@ -58,7 +70,8 @@ namespace System.Globalization
         {
             get
             {
-                return amDesignator;
+                if (amDesignator == null) InitializeSymbols();
+                return amDesignator ;
             }
             set
             {
@@ -68,10 +81,11 @@ namespace System.Globalization
             }
         }
 
-        public string PMDesignator
+	    public string PMDesignator
         {
             get
             {
+                if (pmDesignator == null) InitializeSymbols();
                 return pmDesignator;
             }
             set
@@ -86,6 +100,7 @@ namespace System.Globalization
         {
             get
             {
+                if (dateSeparator == null) InitializeSymbols();
                 return dateSeparator;
             }
             set
@@ -100,6 +115,7 @@ namespace System.Globalization
         {
             get
             {
+                if (timeSeparator == null) InitializeSymbols();
                 return timeSeparator;
             }
             set
@@ -124,7 +140,7 @@ namespace System.Globalization
             }
         }
 
-        public string ShortDatePattern
+	    public string ShortDatePattern
         {
             get
             {
@@ -135,20 +151,6 @@ namespace System.Globalization
                 //if (IsReadOnly) throw new InvalidOperationException(MSG_READONLY);
                 if (value == null) throw new ArgumentNullException();
                 shortDatePattern = value;
-            }
-        }
-
-        public string ShortTimePattern
-        {
-            get
-            {
-                return shortTimePattern;
-            }
-            set
-            {
-                //if (IsReadOnly) throw new InvalidOperationException(MSG_READONLY);
-                if (value == null) throw new ArgumentNullException();
-                shortTimePattern = value;
             }
         }
 
@@ -163,6 +165,20 @@ namespace System.Globalization
                 //if (IsReadOnly) throw new InvalidOperationException(MSG_READONLY);
                 if (value == null) throw new ArgumentNullException();
                 longTimePattern = value;
+            }
+        }
+
+        public string ShortTimePattern
+        {
+            get
+            {
+                return shortTimePattern;
+            }
+            set
+            {
+                //if (IsReadOnly) throw new InvalidOperationException(MSG_READONLY);
+                if (value == null) throw new ArgumentNullException();
+                shortTimePattern = value;
             }
         }
 
@@ -198,7 +214,7 @@ namespace System.Globalization
         {
             get
             {
-                return fullDateTimePattern ?? (longDatePattern + " " + longTimePattern);
+                return fullDateTimePattern;
             }
             set
             {
@@ -254,6 +270,73 @@ namespace System.Globalization
             {
                 return CultureInfo.CurrentCulture.DateTimeFormat;
             }
+        }
+
+        private string GetInvariantJavaPattern(int date, int time)
+        {
+            if (time == -1)
+                return date == DateFormat.SHORT ? InvariantJavaShortDatePattern : InvariantJavaLongDatePattern;
+            if (date == -1)
+                return time == DateFormat.SHORT ? InvariantJavaShortTimePattern : InvariantJavaLongTimePattern;
+
+            return (date == DateFormat.SHORT ? InvariantJavaShortDatePattern : InvariantJavaLongDatePattern)
+                 + " "
+                 + (time == DateFormat.SHORT ? InvariantJavaShortTimePattern : InvariantJavaLongTimePattern);
+        }
+
+        internal string GetJavaPattern(int date, int time)
+        {
+            if(_isInvariant)
+                return GetInvariantJavaPattern(date, time);
+
+            var dateFormat = CreateDateFormat(date, time);
+
+            var sdf = dateFormat as SimpleDateFormat;
+            if (sdf == null) 
+                return GetInvariantJavaPattern(date, time);
+
+            var pattern = sdf.ToPattern();
+            return pattern;
+        }
+
+	    internal DateFormat CreateDateFormat(int date, int time)
+        {
+            if (_isInvariant)
+                return new SimpleDateFormat(GetInvariantJavaPattern(date, time), Locale);
+
+            DateFormat f;
+            if (time == -1)
+                f = DateFormat.GetDateInstance(date, Locale);
+            else if (date == -1)
+                f = DateFormat.GetTimeInstance(time, Locale);
+            else
+                f = DateFormat.GetDateTimeInstance(date, time, Locale);
+
+	        if (date == DateFormat.SHORT)
+	        {
+	            // Java appears to default to two digits for the year where .NET defaults to four.
+                // We fall back to SimpleDateFormat if possible, and replace the pattern chars.
+                var sdf = f as SimpleDateFormat;
+                if (sdf != null) 
+                {
+                    string pattern = sdf.ToPattern();
+                    if (!pattern.Contains("yyy"))
+                    {
+                        pattern = pattern.Replace("yy", "yyyy");
+                        return new SimpleDateFormat(pattern, Locale);
+                    }
+                }
+	        }
+
+	        return f;
+        }
+
+        private void InitializeSymbols()
+        {
+            var f = DateFormatSymbols.GetInstance(Locale);
+            amDesignator = f.AmPmStrings[Java.Util.Calendar.AM];
+            pmDesignator = f.AmPmStrings[Java.Util.Calendar.PM];
+            // TODO how to get date and time separator?
         }
 
 	    /// <summary>

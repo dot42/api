@@ -11,10 +11,10 @@ namespace Dot42.Internal
         /// <summary>
         /// Convert from java based date to DateTime.
         /// </summary>
-        private static DateTime FromParsedDate(Date value, string originalString, DateTimeStyles style, DateFormat formatter, bool forceRoundtripKind)
+        private static DateTime FromParsedDate(Date value, string originalString, DateTimeStyles style, DateFormat formatter, bool forceRoundtripKind, bool useUtc)
         {
             bool assumeLocal = (style & DateTimeStyles.AssumeLocal) != 0;
-            bool assumeUtc = (style & DateTimeStyles.AssumeUniversal) != 0;
+            bool assumeUtc = useUtc || (style & DateTimeStyles.AssumeUniversal) != 0;
             bool roundtripKind = forceRoundtripKind || (style & DateTimeStyles.RoundtripKind) != 0;
 
             var millis = value.Time;
@@ -85,7 +85,7 @@ namespace Dot42.Internal
 
                 Date parsed = formatter.Format.Parse(s);
 
-                var result = FromParsedDate(parsed, s, style, formatter.Format, formatter.ContainsK);
+                var result = FromParsedDate(parsed, s, style, formatter.Format, formatter.ContainsK, formatter.UseUtc);
                 return result;
             }
             catch (ArgumentException ex)
@@ -138,7 +138,7 @@ namespace Dot42.Internal
                     formatter.Format.TimeZone = utc; // reset mutable value
 
                     Date parsed = formatter.Format.Parse(s);
-                    var result = FromParsedDate(parsed, s, style, formatter.Format, formatter.ContainsK);
+                    var result = FromParsedDate(parsed, s, style, formatter.Format, formatter.ContainsK, formatter.UseUtc);
                     return result;
                 }
                 catch (ParseException)

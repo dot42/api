@@ -30,7 +30,8 @@ namespace System.Globalization
         private readonly LazyAndWeak<DateTimeFormatInfo > _dateTimeFormat;
 
         private static readonly Lazy<CultureInfo> CachedInvariantCulture;
-        private static readonly Lazy<CultureInfo> CachedCurrentCulture;
+        private static Lazy<CultureInfo> _cachedCurrentCulture;
+        private static readonly CustomFormatter _customFormatter = new CustomFormatter();
 
         internal Locale Locale
         {
@@ -43,23 +44,26 @@ namespace System.Globalization
 
 #if ANDROID_9P
             invariantLocale = Locale.US; // US comes much closer to CultureInfo.InvariantCulture 
-                                         // than Locale.ROOT, when it comes to Date/Time formatting.
+                                         // than Locale.ROOT, when it comes to Date/Time formatting/parsing.
 #else
             // TODO: check if this actually exists. else change back to Locale.Default.
             invariantLocale = Locale.US;
 #endif
-            CachedInvariantCulture = new Lazy<CultureInfo>(() => new CultureInfo(invariantLocale));
-            CachedCurrentCulture = new Lazy<CultureInfo>(() => new CultureInfo(Locale.Default));
-            
+            CachedInvariantCulture = new Lazy<CultureInfo>(() => new CultureInfo(invariantLocale, true));
+            _cachedCurrentCulture = new Lazy<CultureInfo>(() => new CultureInfo(Locale.Default));
+
+            Application.LocaleChanged += OnLocaleChanged;
+
         }
+
         /// <summary>
         /// Default ctor
         /// </summary>
-        private CultureInfo(Locale locale)
+        private CultureInfo(Locale locale, bool isInvariant = false)
         {
             this._locale = locale;
             _numberFormat = new LazyAndWeak<NumberFormatInfo>(()=>new NumberFormatInfo(locale));
-            _dateTimeFormat = new LazyAndWeak<DateTimeFormatInfo>(() => new DateTimeFormatInfo(JavaDateFormat, locale));
+            _dateTimeFormat = new LazyAndWeak<DateTimeFormatInfo>(() => new DateTimeFormatInfo(locale, isInvariant));
 
         }
 
@@ -69,22 +73,17 @@ namespace System.Globalization
 
         public static CultureInfo CurrentCulture
         {
-            get { return CachedCurrentCulture.Value; } 
+            get { return _cachedCurrentCulture.Value; } 
         }
 
         public static CultureInfo CurrentUICulture
         {
-            get { return CachedCurrentCulture.Value; }
+            get { return _cachedCurrentCulture.Value; }
         }
 
         public static CultureInfo InvariantCulture
         {
             get { return CachedInvariantCulture.Value; } 
-        }
-
-        internal DateFormat JavaDateFormat
-        {
-            get { return DateFormat.GetDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, _locale); }
         }
 
         public virtual DateTimeFormatInfo DateTimeFormat
@@ -116,13 +115,12 @@ namespace System.Globalization
         {
             if (formatType == typeof(ICustomFormatter))
             {
-                return new CustomFormatter();
+                return _customFormatter;
             }
             if (formatType == typeof(NumberFormatInfo))
             {
                 return NumberFormat;
             }
-
             if (formatType == typeof(DateTimeFormatInfo))
             {
                 return DateTimeFormat;
@@ -132,13 +130,18 @@ namespace System.Globalization
             //throw new NotImplementedException("System.Globalization.CultureInfo.GetFormat: " + formatType.FullName);
         }
 
+        private static void OnLocaleChanged(object sender, EventArgs e)
+        {
+            _cachedCurrentCulture = new Lazy<CultureInfo>(() => new CultureInfo(Locale.Default));
+        }
+
         private class CustomFormatter : ICustomFormatter
         {
             public string Format(string format, object arg, IFormatProvider formatProvider)
             {
-                if (arg is int) return NumberFormatter.Format(format, (int)arg, formatProvider);
-                if (arg is long) return NumberFormatter.Format(format, (long)arg, formatProvider);
-                if (arg is float) return NumberFormatter.Format(format, (float)arg, formatProvider);
+                if (arg is int)    return NumberFormatter.Format(format, (int)arg, formatProvider);
+                if (arg is long)   return NumberFormatter.Format(format, (long)arg, formatProvider);
+                if (arg is float)  return NumberFormatter.Format(format, (float)arg, formatProvider);
                 if (arg is double) return NumberFormatter.Format(format, (double)arg, formatProvider);
                 if (arg is string) return null; //should be handled by caller.
 

@@ -8,9 +8,6 @@ using Java.Util;
 
 namespace Dot42.Internal
 {
-    /// <summary>
-    /// TODO: clear the cache when default locale is changed (or something)
-    /// </summary>
     public static class NumberFormatFactory
     {
         private const int CacheSize = 40; // TODO: maybe this should scale with the number of threads.
@@ -61,11 +58,17 @@ namespace Dot42.Internal
 
         static NumberFormatFactory()
         {
+            Application.ReleaseCaches += ClearCache;
+            Application.LocaleChanged += ClearCache;
+        }
+
+        private static void ClearCache(object sender, EventArgs e)
+        {
 #if ANDROID_12P
-            Application.ReleaseCaches += (s, e) =>
-            {
-                Cache.EvictAll();
-            };
+            Cache.EvictAll();
+#else
+            lock(Cache)
+                Cache.Clear();
 #endif
         }
 

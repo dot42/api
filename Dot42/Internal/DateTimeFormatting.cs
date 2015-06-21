@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
+using System.Net;
 using System.Text;
+using Java.Text;
 using Java.Util;
 
 namespace Dot42.Internal
@@ -59,12 +61,12 @@ namespace Dot42.Internal
             conv.Put("z", "Z");
             conv.Put("zz", "ZZ");
             conv.Put("zzz", "ZZZ");
-            conv.Put("%", "");
+            //conv.Put("%", "");
 
             Conversion = conv;
         }
 
-        public static string ToJavaFormatString(string format, IFormatProvider provider, DateTimeKind kind, out bool useInvariant, out bool foundDateTimeKind)
+        public static string ToJavaFormatString(string format, IFormatProvider provider, DateTimeKind kind, bool dateTimeOffset, out bool useInvariant, out bool foundDateTimeKind, out bool useUtc)
         {
             if (string.IsNullOrEmpty(format))
                 format = "G";
@@ -77,132 +79,97 @@ namespace Dot42.Internal
             if (dtfi == null)
                 dtfi = DateTimeFormatInfo.CurrentInfo;
 
+            bool needsTranslation = true;
+
             if (format.Length == 1 && dtfi != null)
             {
-                bool useUtc;
-                format = GetStandardPattern(format[0], dtfi, out useInvariant, out useUtc, false);
+                format = GetStandardPattern(format[0], dtfi, dateTimeOffset, out useUtc, out useInvariant, out needsTranslation);
 
                 if (format == null)
                     throw new FormatException(
                         "format is not one of the format specifier characters defined for DateTimeFormatInfo");
             }
             else
+            {
                 useInvariant = false;
+                useUtc = false;
+            }
 
-            format = ConvertFormatStringNetToJava(format, kind, out foundDateTimeKind);
+            if (needsTranslation)
+                format = ConvertFormatStringNetToJava(format, kind, out foundDateTimeKind);
+            else
+                foundDateTimeKind = false;
+
             return format;
         }
 
         
         private static string ConvertFormatStringNetToJava(string format, DateTimeKind kind, out bool foundDateTimeKind)
         {
-            // TODO: use the Tokenize method below for simpler code.
-            foundDateTimeKind = false;
+            StringBuilder b = new StringBuilder(format.Length + 8);
+            
+            bool localFoundDateTimeKind = false;
+            bool isInQuote = false;
 
-            StringBuilder b = new StringBuilder(format.Length + 6);
-            bool isQuote = false;
-            bool isAutoQuote = false;
-
-            StringBuilder currentPart = new StringBuilder();
-
-
-            for (int i = 0; true; ++i)
+            TokenizeFormatString(format, (token, isQuote) =>
             {
-                char c = i >= format.Length ? '\0' : format[i];
-
-                if (currentPart.Length > 0 && c != currentPart[0])
-                {
-                    string part = currentPart.ToString();
-                    string conv = null;
-                    if (part == "K")
-                    {
-                        // special case.
-                        foundDateTimeKind = true;
-                        if (kind == DateTimeKind.Utc)
-                        {
-                            part = "Z";
-                        }
-                        else if (kind == DateTimeKind.Local)
-                        {
-                            // best we can do, even though not 100% accurate.
-                            conv = "Z";
-                        }
-                    }
-                    else
-                    {
-                        // append collected.
-                        conv = Conversion.Get(part);
-                    }
-                    if (conv == null)
-                    {
-                        // not in map.
-                        if (!isAutoQuote)
-                        {
-                            b.Append('\'');
-                            isAutoQuote = true;
-                        }
-                        b.Append(part);
-                    }
-                    else
-                    {
-                        if (isAutoQuote)
-                        {
-                            b.Append('\'');
-                            isAutoQuote = false;
-                        }
-                        b.Append(conv);
-                    }
-
-                    currentPart = new StringBuilder();
-                }
-
-                if (i >= format.Length)
-                    break;
-
-                if (c == '\'' || c == '\"')
-                {
-                    if (isAutoQuote)
-                        isAutoQuote = false;
-                    else
-                        b.Append('\'');
-                    isQuote = !isQuote;
-                    continue;
-                }
-
                 if (isQuote)
                 {
-                    b.Append(c);
-                    continue;
-                }
-
-                if (c == '\\')
-                {
-                    if (i < format.Length - 1)
+                    if (!isInQuote)
                     {
-                        if (!isAutoQuote)
-                        {
-                            isAutoQuote = true;
-                            b.Append('\'');
-                        }
-                        b.Append(format[i + 1]);
-
-                        ++i;
+                        b.Append('\'');
+                        isInQuote = true;
                     }
-                    continue;
+
+                    b.Append(token);
+                    
+                    return;
                 }
 
-                if (!char.IsLetter(c) && c != '%')
+                string conv = null;
+                if (token == "K")
                 {
-                    b.Append(c);
-                    continue;
+                    localFoundDateTimeKind = true;
+                    if (kind == DateTimeKind.Utc)
+                    {
+                        token = "Z";
+                    }
+                    else if (kind == DateTimeKind.Local)
+                    {
+                        // best we can do, even though not 100% accurate.
+                        conv = "Z";
+                    }
+                }
+                else
+                {
+                    conv = Conversion.Get(token);
                 }
 
-                currentPart.Append(c);
-            }
+                if (conv != null)
+                {
+                    if (isInQuote)
+                    {
+                        isInQuote = false;
+                        b.Append('\'');
+                    }
+                    b.Append(conv);
+                }
+                else
+                {
+                    if (!isInQuote)
+                    {
+                        b.Append('\'');
+                        isInQuote = true;
+                    }
+                    b.Append(token);
+                }
+            });
 
-            if (isAutoQuote) b.Append('\'');
+            if(isInQuote)
+                b.Append('\'');
 
             format = b.ToString();
+            foundDateTimeKind = localFoundDateTimeKind;
             return format;
         }
 
@@ -278,33 +245,71 @@ namespace Dot42.Internal
             }
         }
 
-        //Mono code (DateTimeUtils.cs):
-        public static string GetStandardPattern(char format, DateTimeFormatInfo dfi, out bool useutc, out bool use_invariant, bool date_time_offset)
+        public static string GetStandardPattern(char format, DateTimeFormatInfo dfi, bool forDateTimeOffset, out bool useutc, out bool use_invariant, out bool needsTranslation)
         {
             String pattern;
 
             useutc = false;
             use_invariant = false;
+            needsTranslation = true;
 
             switch (format)
             {
                 case 'd':
-                    pattern = dfi.ShortDatePattern;
+                    if(dfi.ShortDatePattern != null)
+                        pattern = dfi.ShortDatePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(DateFormat.SHORT, -1);
+                        needsTranslation = false;
+                    }
                     break;
                 case 'D':
-                    pattern = dfi.LongDatePattern;
+                    if (dfi.LongDatePattern != null)
+                        pattern = dfi.LongDatePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(DateFormat.FULL, -1);
+                        needsTranslation = false;
+                    }
                     break;
                 case 'f':
-                    pattern = dfi.LongDatePattern + " " + dfi.ShortTimePattern;
+                    if (dfi.LongDatePattern != null && dfi.ShortTimePattern != null)
+                        pattern = dfi.LongDatePattern + " " + dfi.ShortTimePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(DateFormat.FULL, DateFormat.SHORT);
+                        needsTranslation = false;
+                    }
                     break;
                 case 'F':
-                    pattern = dfi.FullDateTimePattern;
+                    if (dfi.FullDateTimePattern != null)
+                        pattern = dfi.FullDateTimePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(DateFormat.FULL, DateFormat.MEDIUM);
+                        needsTranslation = false;
+                    }
                     break;
                 case 'g':
-                    pattern = dfi.ShortDatePattern + " " + dfi.ShortTimePattern;
+                    if (dfi.ShortDatePattern != null && dfi.ShortTimePattern != null)
+                        pattern = dfi.ShortDatePattern + " " + dfi.ShortTimePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(DateFormat.SHORT, DateFormat.SHORT);
+                        needsTranslation = false;
+                        
+                    }
                     break;
                 case 'G':
-                    pattern = dfi.ShortDatePattern + " " + dfi.LongTimePattern;
+                    if (dfi.ShortDatePattern != null && dfi.LongTimePattern != null)
+                        pattern = dfi.ShortDatePattern + " " + dfi.LongTimePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(DateFormat.SHORT, DateFormat.MEDIUM);
+                        needsTranslation = false;
+                        
+                    }
                     break;
                 case 'm':
                 case 'M':
@@ -318,7 +323,7 @@ namespace Dot42.Internal
                 case 'r':
                 case 'R':
                     pattern = dfi.RFC1123Pattern;
-                    if (date_time_offset)
+                    if (forDateTimeOffset)
                         useutc = true;
                     use_invariant = true;
                     break;
@@ -327,23 +332,41 @@ namespace Dot42.Internal
                     use_invariant = true;
                     break;
                 case 't':
-                    pattern = dfi.ShortTimePattern;
+                    if (dfi.ShortTimePattern != null)
+                        pattern = dfi.ShortTimePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(-1, DateFormat.SHORT);
+                        needsTranslation = false;
+                    }
                     break;
                 case 'T':
-                    pattern = dfi.LongTimePattern;
+                    if (dfi.LongTimePattern != null)
+                        pattern = dfi.LongTimePattern;
+                    else
+                    {
+                        pattern = dfi.GetJavaPattern(-1, DateFormat.MEDIUM);
+                        needsTranslation = false;
+                    }
                     break;
                 case 'u':
                     pattern = dfi.UniversalSortableDateTimePattern;
-                    if (date_time_offset)
+                    if (forDateTimeOffset)
                         useutc = true;
                     use_invariant = true;
                     break;
                 case 'U':
-                    if (date_time_offset)
+                    if (forDateTimeOffset)
                         pattern = null;
                     else
                     {
-                        pattern = dfi.FullDateTimePattern;
+                        if (dfi.FullDateTimePattern != null)
+                            pattern = dfi.FullDateTimePattern;
+                        else
+                        {
+                            pattern = dfi.GetJavaPattern(DateFormat.FULL, DateFormat.MEDIUM);
+                            needsTranslation = false;
+                        }
                         useutc = true;
                     }
                     break;
