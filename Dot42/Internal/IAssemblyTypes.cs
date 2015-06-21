@@ -24,7 +24,7 @@ namespace Dot42.Internal
 	internal interface IAssemblyTypes : IAnnotation
     {
         /// <summary>
-        /// Contains strings an 'Type's, each type belonging to
+        /// Contains strings and 'Type's, each type belonging to
         /// the assembly denoted by the last string.
         /// </summary>
         [Include]

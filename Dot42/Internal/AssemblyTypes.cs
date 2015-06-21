@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using Dot42.Collections.Specialized;
 using Java.Util;
 
 namespace Dot42.Internal
@@ -14,8 +15,12 @@ namespace Dot42.Internal
 
         public static readonly Assembly DefaultAssembly;
 
-        private static volatile HashMap<Type, Assembly> _typesPerAssembly = null;
-        private static volatile Assembly _entryAssembly;
+        // TODO: Think about not holding strong references to the types.
+        //       To make this effective, this would have to be extended 
+        //       to the assemblies as well. We could just hold the type
+        //       names instead.
+        private static readonly OpenIdentityHashMap<Type, Assembly> TypesPerAssembly = null;
+        private static Assembly _entryAssembly;
 
         public static Assembly GetEntryAssembly()
         {
@@ -24,10 +29,10 @@ namespace Dot42.Internal
 
         public static Assembly GetAssemblyFromType(Type type)
         {
-            if (_typesPerAssembly == null)
+            if (TypesPerAssembly == null)
                 return DefaultAssembly;
 
-            return _typesPerAssembly.Get(type) ?? DefaultAssembly;
+            return TypesPerAssembly.Get(type) ?? DefaultAssembly;
         }
 
         static AssemblyTypes()
@@ -42,7 +47,7 @@ namespace Dot42.Internal
                 return;
             }
             
-            _typesPerAssembly = new HashMap<Type, Assembly>();
+            TypesPerAssembly = new OpenIdentityHashMap<Type, Assembly>();
 
             int len = types.Length;
             string curAssemblyName = null;
@@ -96,7 +101,7 @@ namespace Dot42.Internal
                 foreach (var type in curTypes.AsEnumerable())
                 {
                     assm.AddType(type);
-                    _typesPerAssembly.Put(type, assm);
+                    TypesPerAssembly.Put(type, assm);
                 }
             }
 

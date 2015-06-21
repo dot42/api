@@ -22,8 +22,8 @@ namespace Dot42.Collections.Specialized
         // the variable parts are then inlined by the compiler.
 
 #if DUMP_PERFORMANCE
-        protected int m_totalGets;
-        protected int m_totalAccesses;
+        private int m_totalGets;
+        private int m_totalAccesses;
 #endif
 
         public override V Get(K key)
@@ -37,39 +37,69 @@ namespace Dot42.Collections.Specialized
             ++m_totalGets;
             ++m_totalAccesses;
 #endif
-
             if (key == null)
             {
-                return (V)m_nullValue; //we null it on remove, so safe not to check a flag here
+                return (V)m_nullValue; // we null it on remove, so safe not to check a flag here
             }
 
             int ptr = (GetHashCode(key) & m_mask) << 1;
-            object k = m_data[ptr];
-
-            if (k == FreeKey)
-            {
-                return default(V); //end of chain already
-            }
-            if (AreEqual(k, key)) // we implicit check RemovedKey here
-            {
-                return (V)m_data[ptr + 1];
-            }
 
             while (true)
             {
+                var k = m_data[ptr];
+                if (k == FreeKey)
+                {
+                    return default(V); //end of chain already
+                }
+                if (AreEqual(k, key)) // we implicit check RemovedKey here
+                {
+                    return (V)m_data[ptr + 1];
+                }
+
 #if DUMP_PERFORMANCE
                 ++m_totalAccesses;
 #endif
                 ptr = (ptr + 2) & m_mask2; //that's next index
-                k = m_data[ptr];
+            }
+        }
+
+        public override bool TryGetValue(K key, out V value)
+        {
+#if DUMP_PERFORMANCE
+            if (m_totalGets != 0)
+            {
+                Log.Info("dot42", "fast hash map<{6},{7}>@{0} get performance: {1}/{2}={3:F1}: size {4} capacity {5}", GetHashCode(), m_totalAccesses, m_totalGets, (float)m_totalAccesses / m_totalGets, m_size, m_data.Length/2, typeof(K).JavaGetName(), typeof(V).JavaGetName());
+            }
+
+            ++m_totalGets;
+            ++m_totalAccesses;
+#endif
+            if (key == null)
+            {
+                value = (V)m_nullValue;
+                return m_hasNull;
+            }
+
+            int ptr = (GetHashCode(key) & m_mask) << 1;
+
+            while (true)
+            {
+                var k = m_data[ptr];
                 if (k == FreeKey)
                 {
-                    return default(V);
+                    value = default(V); //end of chain already
+                    return false;
                 }
-                if (AreEqual(k, key))
+                if (AreEqual(k, key)) // we implicit check RemovedKey here
                 {
-                    return (V)m_data[ptr + 1];
+                    value = (V)m_data[ptr + 1];
+                    return true;
                 }
+
+#if DUMP_PERFORMANCE
+                ++m_totalAccesses;
+#endif
+                ptr = (ptr + 2) & m_mask2; //that's next index
             }
         }
 
@@ -78,45 +108,35 @@ namespace Dot42.Collections.Specialized
 #if DUMP_PERFORMANCE
             if (m_totalGets != 0)
             {
-                Log.Info("dot42", "fast hash map<{6},{7}>@{0} contains performance: {1}/{2}={3:F1}: size {4} capacity {5}", GetHashCode(), m_totalAccesses, m_totalGets, (float)m_totalAccesses / m_totalGets, m_size, m_data.Length/2, typeof(K).JavaGetName(), typeof(V).JavaGetName());
+                Log.Info("dot42", "fast hash map<{6},{7}>@{0} get performance: {1}/{2}={3:F1}: size {4} capacity {5}", GetHashCode(), m_totalAccesses, m_totalGets, (float)m_totalAccesses / m_totalGets, m_size, m_data.Length/2, typeof(K).JavaGetName(), typeof(V).JavaGetName());
             }
 
             ++m_totalGets;
             ++m_totalAccesses;
 #endif
-
             if (key == null)
             {
-                return m_hasNull; //we null it on remove, so safe not to check a flag here
+                return m_hasNull;
             }
 
             int ptr = (GetHashCode(key) & m_mask) << 1;
-            object k = m_data[ptr];
-
-            if (k == FreeKey)
-            {
-                return false; //end of chain already
-            }
-            if (AreEqual(k, key)) // we implicit check RemovedKey here
-            {
-                return true;
-            }
 
             while (true)
             {
-#if DUMP_PERFORMANCE
-                ++m_totalAccesses;
-#endif
-                ptr = (ptr + 2) & m_mask2; //that's next index
-                k = m_data[ptr];
+                var k = m_data[ptr];
                 if (k == FreeKey)
                 {
                     return false;
                 }
-                if (AreEqual(k, key))
+                if (AreEqual(k, key)) // we implicit check RemovedKey here
                 {
                     return true;
                 }
+
+#if DUMP_PERFORMANCE
+                ++m_totalAccesses;
+#endif
+                ptr = (ptr + 2) & m_mask2; //that's next index
             }
         }
 
@@ -202,7 +222,7 @@ namespace Dot42.Collections.Specialized
             }
         }
 
-        public override V Remove(K key)
+        public override /*V*/ bool Remove(K key)
         {
             if (key == null)
             {
@@ -218,7 +238,7 @@ namespace Dot42.Collections.Specialized
 
                 if (k == FreeKey)
                 {
-                    return default(V); //end of chain already
+                    return false; //default(V); //end of chain already
                 }
 
                 if (AreEqual(k, key)) // we implicit check RemovedKey here
@@ -233,15 +253,16 @@ namespace Dot42.Collections.Specialized
                         m_data[ptr] = RemovedKey;
                     }
 
-                    V ret = (V)m_data[ptr + 1];
+                    //V ret = (V)m_data[ptr + 1];
                     m_data[ptr + 1] = null;
 
-                    return ret;
+                    return true; //ret;
                 }
 
                 ptr = (ptr + 2) & m_mask2; //that's next index calculation
             }
         }
+
         #endregion
 
         [Inline]

@@ -142,7 +142,7 @@ namespace System.Collections.Generic {
         }
 
 		[Serializable]
-		sealed class DefaultComparer : EqualityComparer<T> 
+		internal sealed class DefaultComparer : EqualityComparer<T> 
         {
 	
 			public override int GetHashCode (T obj)

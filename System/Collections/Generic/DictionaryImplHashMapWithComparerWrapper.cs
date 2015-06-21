@@ -61,10 +61,11 @@ namespace System.Collections.Generic
         {
             get
             {
-                TValue ret;
-                if(!TryGetValue(key, out ret))
+                var w = new KeyWrapper<TKey>(key, comparer);
+                var value = map.Get(w);
+                if(Equals(value, default(TValue)) && !map.ContainsKey(w))
                     throw new KeyNotFoundException();
-                return ret;
+                return value;
             }
             set
             {

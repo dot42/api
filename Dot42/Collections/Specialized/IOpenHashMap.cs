@@ -4,11 +4,13 @@ namespace Dot42.Collections.Specialized
     internal interface IOpenHashMap<K, V>
     {
         V Get(K key);
+        //bool TryGetValue(K key, out V value);
+        //bool Contains(K key);
 
         V Put(K key, V value);
         V PutIfAbsent(K key, V value);
 
-        V Remove(K key);
+        bool Remove(K key);
 
         int Size { get; }
 

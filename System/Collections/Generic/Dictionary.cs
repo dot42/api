@@ -47,7 +47,10 @@ namespace System.Collections.Generic
         /// </summary>
         public Dictionary()
         {
-            dict = new DictionaryImplHashMap<TKey, TValue>();
+            if(IsKeyIdentityType())
+                dict = new DictionaryImplOpenIdentityHashMap<TKey, TValue>();
+            else
+                dict = new DictionaryImplHashMap<TKey, TValue>();
         }
 
         /// <summary>
@@ -55,9 +58,11 @@ namespace System.Collections.Generic
         /// </summary>
         public Dictionary(int capacity)
         {
-            dict = new DictionaryImplHashMap<TKey, TValue>(capacity);
+            if (IsKeyIdentityType())
+                dict = new DictionaryImplOpenIdentityHashMap<TKey, TValue>(capacity);
+            else
+                dict = new DictionaryImplHashMap<TKey, TValue>(capacity);
         }
-
 
         /// <summary>
         /// Default ctor
@@ -71,13 +76,22 @@ namespace System.Collections.Generic
             }
             if (source.dict is DictionaryImplHashMapWithComparerWrapper<TKey, TValue>)
             {
-                dict = new DictionaryImplHashMapWithComparerWrapper<TKey, TValue>(
-                             (DictionaryImplHashMapWithComparerWrapper<TKey, TValue>) source.dict);
+                dict = new DictionaryImplHashMapWithComparerWrapper<TKey, TValue>((DictionaryImplHashMapWithComparerWrapper<TKey, TValue>) source.dict);
                 return;
             }
-            if (source.Comparer == null || source.Comparer == EqualityComparer<TKey>.Default)
+            if (source.dict is DictionaryImplOpenIdentityHashMap<TKey, TValue>)
             {
-                dict = new DictionaryImplHashMap<TKey, TValue>(source.Count);
+                dict = new DictionaryImplOpenIdentityHashMap<TKey, TValue>((DictionaryImplOpenIdentityHashMap<TKey, TValue>)source.dict);
+                return;
+            }
+
+            // can this even happen?
+            if (source.Comparer == null || source.Comparer is EqualityComparer<TKey>.DefaultComparer)
+            {
+                if(IsKeyIdentityType())
+                    dict = new DictionaryImplOpenIdentityHashMap<TKey, TValue>();
+               else
+                    dict = new DictionaryImplHashMap<TKey, TValue>();
             }
             else
             {
@@ -95,13 +109,22 @@ namespace System.Collections.Generic
         {
             Comparer = comparer;
 
-            if (comparer == null || comparer == EqualityComparer<TKey>.Default)
+            if (comparer == null || comparer is EqualityComparer<TKey>.DefaultComparer)
+            {
                 dict = new DictionaryImplHashMap<TKey, TValue>();
+            }
             else
             {
                 // have to use the key-wrapping dictionary.
                 dict = new DictionaryImplHashMapWithComparerWrapper<TKey, TValue>(comparer);
             }
+        }
+
+        private bool IsKeyIdentityType()
+        {
+            // TODO: we could use reflection to find out if the type or any of 
+            //       its ancestors overrides equals or getHashCode.
+            return typeof(TKey) == typeof(Type);
         }
 
         

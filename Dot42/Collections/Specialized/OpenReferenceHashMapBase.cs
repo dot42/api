@@ -285,7 +285,7 @@ namespace Dot42.Collections.Specialized
             }
         }
 
-        public V Remove(K key)
+        public bool Remove(K key)
         {
             if (_containsStaleEntries)
                 ExpungeStaleEntries(); 
@@ -302,7 +302,8 @@ namespace Dot42.Collections.Specialized
 
                 if (k == FreeKey)
                 {
-                    return default(V); //end of chain already
+                    //return default(V); //end of chain already
+                    return false;
                 }
 
                 k = ExtractKey(k);
@@ -320,11 +321,11 @@ namespace Dot42.Collections.Specialized
                         m_data[ptr] = RemovedKey;
                     }
 
-                    V ret = (V)m_data[ptr + 1];
+                    //V ret = (V)m_data[ptr + 1];
                     m_data[ptr + 1] = null;
 
                     if(k != null)
-                        return ret;
+                        return true /*ret*/;
                 }
 
                 ptr = (ptr + 2) & m_mask2; //that's next index calculation

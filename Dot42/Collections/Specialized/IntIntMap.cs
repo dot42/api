@@ -35,6 +35,9 @@ namespace Dot42.Collections.Specialized
         private const int FreeKey = 0;
         public const int NoValue = int.MinValue;
 
+        public const int DefaultSize = 16;
+        public const float DefaultFillFactor = 0.55f;
+
         /// <summary>
         /// Keys and values </summary>
         private int[] m_data;
@@ -61,7 +64,7 @@ namespace Dot42.Collections.Specialized
         private int m_mask;
         private int m_mask2;
 
-        public IntIntMap(int size, float fillFactor)
+        public IntIntMap(int size = DefaultSize, float fillFactor = DefaultFillFactor)
         {
             if (fillFactor <= 0 || fillFactor >= 1)
             {

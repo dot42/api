@@ -87,7 +87,7 @@ namespace Dot42.Collections.Specialized
             }
         }
 
-        public TVal Remove(TKey key)
+        public bool Remove(TKey key)
         {
             while (true)
             {

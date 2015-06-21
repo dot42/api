@@ -81,9 +81,10 @@ namespace System.Collections.Generic
         {
             get
             {
-                if (map.ContainsKey(key))
-                    return map.Get(key);
-                throw new KeyNotFoundException();
+                var ret = map.Get(key);
+                if (Equals(ret, default(TValue)) && !map.ContainsKey(key))
+                    throw new KeyNotFoundException();
+                return ret;
             }
             set { map.Put(key, value); }
         }
