@@ -57,7 +57,7 @@ namespace Dot42.Collections.Specialized
                 return (V)m_nullValue; // we null it on remove, so safe not to check a flag here
             }
 
-            int ptr = (GetHashCode(key) & m_mask) << 1;
+            int ptr = (GetHashCode(key) & m_mask) << EntryShift;
 
             while (true)
             {
@@ -74,7 +74,7 @@ namespace Dot42.Collections.Specialized
 #if DUMP_PERFORMANCE
                 ++m_totalAccesses;
 #endif
-                ptr = (ptr + 2) & m_mask2; //that's next index
+                ptr = (ptr + EntrySize) & m_mask2; //that's next index
             }
         }
 
@@ -95,7 +95,7 @@ namespace Dot42.Collections.Specialized
                 return m_hasNull;
             }
 
-            int ptr = (GetHashCode(key) & m_mask) << 1;
+            int ptr = (GetHashCode(key) & m_mask) << EntryShift;
 
             while (true)
             {
@@ -114,7 +114,7 @@ namespace Dot42.Collections.Specialized
 #if DUMP_PERFORMANCE
                 ++m_totalAccesses;
 #endif
-                ptr = (ptr + 2) & m_mask2; //that's next index
+                ptr = (ptr + EntrySize) & m_mask2; //that's next index
             }
         }
 
@@ -134,7 +134,7 @@ namespace Dot42.Collections.Specialized
                 return m_hasNull;
             }
 
-            int ptr = (GetHashCode(key) & m_mask) << 1;
+            int ptr = (GetHashCode(key) & m_mask) << EntryShift;
 
             while (true)
             {
@@ -151,7 +151,7 @@ namespace Dot42.Collections.Specialized
 #if DUMP_PERFORMANCE
                 ++m_totalAccesses;
 #endif
-                ptr = (ptr + 2) & m_mask2; //that's next index
+                ptr = (ptr + EntrySize) & m_mask2; //that's next index
             }
         }
 
@@ -162,7 +162,7 @@ namespace Dot42.Collections.Specialized
                 return InsertNullKey(value);
             }
 
-            int ptr = (GetHashCode(key) & m_mask) << 1;
+            int ptr = (GetHashCode(key) & m_mask) << EntryShift;
             object k = m_data[ptr];
 
             if (k == FreeKey) //end of chain already
@@ -197,7 +197,7 @@ namespace Dot42.Collections.Specialized
 
             while (true)
             {
-                ptr = (ptr + 2) & m_mask2; //that's next index calculation
+                ptr = (ptr + EntrySize) & m_mask2; //that's next index calculation
                 k = m_data[ptr];
                 if (k == FreeKey)
                 {
@@ -245,7 +245,7 @@ namespace Dot42.Collections.Specialized
             }
 
             // hashcode
-            int ptr = (GetHashCode(key) & m_mask) << 1;
+            int ptr = (GetHashCode(key) & m_mask) << EntryShift;
 
             while (true)
             {
@@ -259,7 +259,7 @@ namespace Dot42.Collections.Specialized
                 if (AreEqual(k, key)) // we implicit check RemovedKey here
                 {
                     --m_size;
-                    if (m_data[(ptr + 2) & m_mask2] == FreeKey)
+                    if (m_data[(ptr + EntrySize) & m_mask2] == FreeKey)
                     {
                         m_data[ptr] = FreeKey;
                     }
@@ -274,7 +274,7 @@ namespace Dot42.Collections.Specialized
                     return true; //ret;
                 }
 
-                ptr = (ptr + 2) & m_mask2; //that's next index calculation
+                ptr = (ptr + EntrySize) & m_mask2; //that's next index calculation
             }
         }
 

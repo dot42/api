@@ -25,15 +25,19 @@
 // For more information, please refer to <http://unlicense.org> 
 
 using System;
-using System.Collections.Generic;
 using Java.Util;
 
 namespace Dot42.Collections.Specialized
 {
 
     /// <summary>
-    /// Same as IntIntMap4, but using interleaving int[] instead of long[]
+    /// This is a Open Hash Map, specialized for Int to Int mapping. 
+    /// <para/> 
+    /// While you are welcome to use this map for performance critical
+    /// parts of your application, please note that the API of this 
+    /// class is considered beta and might change between releases.
     /// </summary>
+    // Same as IntIntMap4, but using interleaving int[] instead of long[]
     public sealed class IntIntMap 
     {
         private const int FreeKey = 0;
@@ -123,18 +127,13 @@ namespace Dot42.Collections.Specialized
             }
         }
 
-        private void InitializeEmpty(int size)
-        {
-            int capacity = Tools.ArraySize(size, m_fillFactor);
-            m_threshold  = (int)(capacity * m_fillFactor);
-            m_mask       = capacity - 1;
-            m_mask2      = capacity * 2 - 1;
-            m_hasFreeKey = false;
-            m_freeValue  = 0;
+        public int Size { get { return m_size; } }
 
-            m_data       = new int[capacity * 2];
-        }
-
+        /// <summary>
+        /// Get the value associated with 'key'
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns>the value, or 'NoValue' of not found.</returns>
         public int Get(int key)
         {
             int ptr = (Tools.PhiMix(key) & m_mask) << 1;
@@ -305,10 +304,7 @@ namespace Dot42.Collections.Specialized
                 data[last + 1] = data[pos + 1];
             }
         }
-
-
-        public int Size { get { return m_size; } }
-
+        
         private void Rehash(int newCapacity, IntIntMap source)
         {
             m_threshold = (int)(newCapacity * m_fillFactor);
@@ -331,6 +327,19 @@ namespace Dot42.Collections.Specialized
             }
         }
 
+        private void InitializeEmpty(int size)
+        {
+            int capacity = Tools.ArraySize(size, m_fillFactor);
+            m_threshold = (int)(capacity * m_fillFactor);
+            m_mask = capacity - 1;
+            m_mask2 = capacity * 2 - 1;
+            m_hasFreeKey = false;
+            m_freeValue = 0;
+
+            m_data = new int[capacity * 2];
+        }
+
+        // We could intead provide a specialized IIntEnumerator
         public int[] Keys
         {
             get
@@ -353,10 +362,6 @@ namespace Dot42.Collections.Specialized
                 return ret;
             }
         }
-        //    private int getStartIdx( final int key )
-        //    {
-        //        return ( Tools.phiMix( key ) & m_mask) << 1;
-        //    }
     }
 
 

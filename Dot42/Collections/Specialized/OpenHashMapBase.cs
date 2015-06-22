@@ -7,13 +7,17 @@ using Java.Util;
 namespace Dot42.Collections.Specialized
 {
     // based upon http://java-performance.info/implementing-world-fastest-java-int-to-int-hash-map/
-    [SuppressMessage("dot42", "StaticFieldInGenericType")]
     internal abstract class OpenHashMapBase<K, V> : IOpenHashMap<K, V>, IEnumerable<KeyValuePair<K, V>>
     {
         public const float DefaultFillFactor = 0.275f;
         public const int DefaultSize = 16;
+
+        protected const int EntrySize = 2;
+        protected const int EntryShift = 1;
         
         protected const object FreeKey = null;
+        
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
         protected static readonly object RemovedKey = new object();
 
         internal protected abstract V Put(K key, V v, bool onlyIfAbsent);
@@ -228,14 +232,17 @@ namespace Dot42.Collections.Specialized
 
         private abstract class EnumeratorBase
         {
+            private const int InitialPosition = -2;
+            protected const int NullPosition = -1;
+
             protected readonly OpenHashMapBase<K, V> m_map;
-            protected int m_position;
-            protected bool m_nullReturned = false;
+            protected int  m_position;
+            protected bool m_isOnNull = false;
 
             protected EnumeratorBase(OpenHashMapBase<K, V> map)
             {
                 m_map = map;
-                m_position = -2;  
+                m_position = InitialPosition;  
             }
 
             public void Dispose()
@@ -246,29 +253,36 @@ namespace Dot42.Collections.Specialized
             {
                 if (m_position < 0)
                 {
-                    m_position += 2;
-                    if (m_map.m_hasNull)
+                    if (m_position == InitialPosition && m_map.m_hasNull)
+                    {
+                        m_position = NullPosition;
                         return true;
+                    }
+                    m_position = InitialPosition;
                 }
-
+                
                 var data = m_map.m_data;
                 var length = data.Length;
+
+                m_position += EntrySize;
 
                 while (m_position < length)
                 {
                     object key = data[m_position];
+
                     if (key != FreeKey && key != RemovedKey)
-                        break;
-                    m_position += 2;
+                        return true;
+
+                    m_position += EntrySize;
                 }
 
-                return m_position < length;
+                return false;
             }
 
             public void Reset()
             {
-                m_position = -2;
-                m_nullReturned = false;
+                m_position = InitialPosition;
+                m_isOnNull = false;
             }
         }
 
@@ -285,15 +299,19 @@ namespace Dot42.Collections.Specialized
                 get
                 {
                     var data = m_map.m_data;
-                    if(m_position < 0 || m_position >= data.Length)
-                        throw new InvalidOperationException();
+                    var position = m_position;
 
-                    if (m_position == 0 && !m_nullReturned && m_map.m_hasNull)
+                    if (position < 0 || position >= data.Length)
                     {
-                        m_nullReturned = true;
-                        return new KeyValuePair<K, V>(default(K), (V)m_map.m_nullValue);
+                        if (position == NullPosition)
+                        {
+                            return new KeyValuePair<K, V>(default(K), (V)m_map.m_nullValue);    
+                        }
+
+                        throw new InvalidOperationException();
                     }
-                    return new KeyValuePair<K, V>((K)data[m_position], (V)data[m_position + 1]);
+
+                    return new KeyValuePair<K, V>((K)data[position], (V)data[position + 1]);
                 }
             }
 
@@ -386,15 +404,19 @@ namespace Dot42.Collections.Specialized
                     get
                     {
                         var data = m_map.m_data;
-                        if (m_position < 0 || m_position >= data.Length)
-                            throw new InvalidOperationException();
+                        var position = m_position;
 
-                        if (m_position == 0 && !m_nullReturned && m_map.m_hasNull)
+                        if (position < 0 || position >= data.Length)
                         {
-                            m_nullReturned = true;
-                            return default(K);
+                            if (position == NullPosition)
+                            {
+                                return default(K);
+                            }
+
+                            throw new InvalidOperationException();
                         }
-                        return (K)data[m_position];
+
+                        return (K)data[position];
                     }
                 }
             }
@@ -478,15 +500,19 @@ namespace Dot42.Collections.Specialized
                     get
                     {
                         var data = m_map.m_data;
-                        if (m_position < 0 || m_position >= data.Length)
-                            throw new InvalidOperationException();
+                        var position = m_position;
 
-                        if (m_position == 0 && !m_nullReturned && m_map.m_hasNull)
+                        if (position < 0 || position >= data.Length)
                         {
-                            m_nullReturned = true;
-                            return (V)m_map.m_nullValue;
+                            if (position == NullPosition)
+                            {
+                                return (V)m_map.m_nullValue;
+                            }
+
+                            throw new InvalidOperationException();
                         }
-                        return (V)data[m_position + 1];
+
+                        return (V)data[position + 1];
                     }
                 }
             }
