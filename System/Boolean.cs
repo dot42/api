@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Dot42;
 using Java.Lang;
 
 namespace System
@@ -57,6 +58,13 @@ namespace System
                 return false;
             }
         }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(bool other)
+        {
+            return other == this;
+        }
+
     }
 }
 

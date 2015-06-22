@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Globalization;
+using Dot42;
 using Dot42.Internal;
 
 namespace System
@@ -109,6 +110,12 @@ namespace System
         public TypeCode GetTypeCode()
         {
             return TypeCode.Double;
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(double other)
+        {
+            return other == this;
         }
     }
 }

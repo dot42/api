@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using System.Globalization;
+using Dot42;
 
 namespace System
 {
@@ -95,6 +96,13 @@ namespace System
         {
             return char.ToUpperCase(ch);
         }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(char other)
+        {
+            return other == this;
+        }
+
     }
 }
 

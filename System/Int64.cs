@@ -16,6 +16,7 @@
 
 using System.Globalization;
 using Android.Graphics;
+using Dot42;
 using Dot42.Internal;
 using Java.Lang;
 
@@ -77,6 +78,12 @@ namespace System
                 result = 0L;
                 return false;
             }
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(long other)
+        {
+            return other == this;
         }
     }
 }

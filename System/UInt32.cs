@@ -139,6 +139,12 @@ namespace System
             return default(int);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(uint other)
+        {
+            return other == this;
+        }
+
     }
 }
 

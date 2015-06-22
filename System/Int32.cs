@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Globalization;
+using Dot42;
 using Dot42.Internal;
 using Java.Lang;
 
@@ -103,6 +104,12 @@ namespace System
                 result = 0;
                 return false;
             }
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(int other)
+        {
+            return other == this;
         }
 
         /// <summary>

@@ -81,16 +81,19 @@ namespace System
 
         public string ToString(IFormatProvider provider)
         {
+            // Note: this obviously does not work for values with the highest bit set.
             return NumberFormatter.Format(LongValue(), provider);
         }
 
         public string ToString(string format)
         {
+            // Note: this obviously does not work for values with the highest bit set.
             return NumberFormatter.Format(format, LongValue(), null);
         }
 
         public string ToString(string format, IFormatProvider provider)
         {
+            // Note: this obviously does not work for values with the highest bit set.
             return NumberFormatter.Format(format, LongValue(), provider);
         }
 
@@ -111,6 +114,12 @@ namespace System
         public int GetHashCode() /* MethodBuilder.Create */
         {
             return default(int);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(ulong other)
+        {
+            return other == this;
         }
 
     }

@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using Java.Lang;
 
 namespace Dot42.Internal
 {
@@ -21,7 +22,7 @@ namespace Dot42.Internal
     /// Base class for enum implementations
     /// </summary>
     [Include(TypeCondition = typeof(System.Enum))]
-    internal abstract class Enum : Java.Lang.Enum<Enum>, IFormattable
+    internal abstract class Enum : Enum<Enum>, IFormattable
 	{
         /// <summary>
         /// Default ctor
@@ -51,7 +52,7 @@ namespace Dot42.Internal
         }
 
         [Include(TypeCondition = typeof(System.Enum))]
-        public static Enum Get(System.Type enumType, int value)
+        public static Enum Get(Type enumType, int value)
         {
             var info = EnumInfo.GetEnumInfo(enumType);
 
@@ -63,7 +64,7 @@ namespace Dot42.Internal
         }
 
         [Include(TypeCondition = typeof(System.Enum))]
-        public static Enum Get(System.Type enumType, long value)
+        public static Enum Get(Type enumType, long value)
         {
             var info = EnumInfo.GetEnumInfo(enumType);
 
@@ -80,7 +81,7 @@ namespace Dot42.Internal
         /// java.lang.Byte or another Enum type.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        public static Enum GetFromObject(System.Type enumType, object value)
+        public static Enum GetFromObject(Type enumType, object value)
         {
             var info = EnumInfo.GetEnumInfo(enumType);
 
@@ -117,18 +118,18 @@ namespace Dot42.Internal
                     return Get(enumType, ((Enum)value).IntValue());
             }
 
-            throw new ArgumentException(string.Format("type: {0}; val: {1}", value.GetType(), value.ToString()), "value");
+            throw new ArgumentException(String.Format("type: {0}; val: {1}", value.GetType(), value.ToString()), "value");
         }
 
         public string ToString(string format)
         {
-            return CompilerHelper.EnumToString((Java.Lang.Enum<object>)(object)this, format);
+            return CompilerHelper.EnumToString((Enum<object>)(object)this, format);
         }
 
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            return CompilerHelper.EnumToString((Java.Lang.Enum<object>)(object)this, format);
+            return CompilerHelper.EnumToString((Enum<object>)(object)this, format);
         }
 	}
 }

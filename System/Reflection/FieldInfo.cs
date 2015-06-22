@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using Dot42;
+using Dot42.Internal;
 using Dot42.Internal.Generics;
 using Java.Lang.Reflect;
 
@@ -54,7 +55,16 @@ namespace System.Reflection
         /// returns true only for enum fields.
         /// </summary>
         // return enum members as literals.
-        public bool IsLiteral { get { return IsFinal && DeclaringType.IsEnum; } }
+        public bool IsLiteral 
+        { 
+            get 
+            { 
+                if(!IsFinal || !IsStatic || !DeclaringType.IsEnum)
+                    return false;
+                var fieldName = _field.Name; // filter out special field names.
+                return fieldName != EnumInfo.EnumDefaultFieldName && fieldName != EnumInfo.EnumInfoFieldName; 
+            } 
+        }
 
         /// <summary>
         /// returns IsFinal

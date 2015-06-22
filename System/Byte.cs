@@ -122,6 +122,13 @@ namespace System
         {
             return default(int);
         }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(byte other)
+        {
+            return other == this;
+        }
+
     }
 }
 

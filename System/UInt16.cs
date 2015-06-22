@@ -95,6 +95,11 @@ namespace System
             return default(int);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(ushort other)
+        {
+            return other == this;
+        }
     }
 }
 

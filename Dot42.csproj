@@ -99,6 +99,7 @@
     <Compile Include="Dot42\Collections\Specialized\OpenReferenceHashMapBase.cs" />
     <Compile Include="Dot42\Internal\Application.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
+    <Compile Include="Dot42\Internal\CompilerHelper.Primitive.cs" />
     <Compile Include="Dot42\Internal\DateFormatFactory.cs" />
     <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
     <Compile Include="Dot42\Internal\IAssemblyTypes.cs" />

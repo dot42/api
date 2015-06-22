@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Dot42.Internal;
 using Java.Lang;
 
@@ -39,6 +41,13 @@ namespace System
         {
             return Parse(s);
         }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(short other)
+        {
+            return other == this;
+        }
+
 
         /// <summary>
         /// Try to parse the given string into a short value.

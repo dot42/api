@@ -15,9 +15,7 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading;
 using Dot42.Collections.Specialized;
 using Java.Util;
@@ -31,6 +29,9 @@ namespace Dot42.Internal
     [Include(TypeCondition = typeof(System.Enum))]
     internal abstract class EnumInfo 
 	{
+        internal const string EnumInfoFieldName = "info$";
+        internal const string EnumDefaultFieldName = "default$";
+
         private static readonly ConcurrentHashMap<Type, EnumInfo> enumInfo = new ConcurrentHashMap<Type, EnumInfo>();
 
         private Enum defaultValue;
@@ -251,7 +252,7 @@ namespace Dot42.Internal
             var info = enumInfo.Get(enumType);
             if (info == null)
             {
-                var infoField = enumType.JavaGetDeclaredField("info$");
+                var infoField = enumType.JavaGetDeclaredField(EnumInfoFieldName);
                 info = (EnumInfo) infoField.Get(null);
                 enumInfo.Put(enumType, info);
             }
