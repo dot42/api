@@ -22,19 +22,22 @@ namespace System
 {
 	partial struct Int16: IFormattable
 	{
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format((int)ShortValue(), provider);
+            return NumberFormatter.Format((int)this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, (int)ShortValue(), null);
+            return NumberFormatter.Format(format, (int)this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, (int)ShortValue(), provider);
+            return NumberFormatter.Format(format, (int)this, provider);
         }
 
         public static short Parse(string s, IFormatProvider provider)

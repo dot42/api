@@ -18,9 +18,9 @@ using Java.Text;
 
 namespace Dot42.Internal
 {
+    [IncludeType]
 	internal static class NumberFormatter
 	{
-
 	    internal static string Format(int value, IFormatProvider provider)
 	    {
 	        return Format(null, value, provider);
@@ -40,6 +40,20 @@ namespace Dot42.Internal
         {
             return Format(null, value, provider);
         }
+
+        // no sure why the renamer does not cover this case.
+        internal static string FormatULong(ulong value, IFormatProvider provider) 
+        {
+            // TODO: this does not work with values where the highest bit is set, except fox hex
+            return Format(null, (long)value, provider);
+        }
+
+        // no sure why the renamer does not cover this case.
+        internal static string FormatULong(string format, ulong value, IFormatProvider provider) 
+	    {
+            // TODO: this does not work with values where the highest bit is set, except fox hex
+            return Format(format, (long)value, provider);
+	    }
 
         internal static string Format(string format, int value, IFormatProvider provider)
         {

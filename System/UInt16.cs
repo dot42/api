@@ -68,14 +68,16 @@ namespace System
             return default(int);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return int.ToString(IntValue() & 0xFFFF);
+            return NumberFormatter.Format((int)this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, IntValue() & 0xFFFF, provider);
+            return NumberFormatter.Format(format, (int)this, provider);
         }
 
         public int CompareTo(ushort o)

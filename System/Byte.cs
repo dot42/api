@@ -45,19 +45,22 @@ namespace System
             return default(int);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(_IntValue() & 255, provider);
+            return NumberFormatter.Format((int)this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, _IntValue() & 255, null);
+            return NumberFormatter.Format(format, (int)this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, _IntValue() & 255, provider);
+            return NumberFormatter.Format(format, (int)this, provider);
         }
 
         public static byte Parse(string s)

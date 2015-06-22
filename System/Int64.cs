@@ -24,20 +24,22 @@ namespace System
 {
 	partial struct Int64: IFormattable
 	{
-
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(LongValue(), provider);
+            return NumberFormatter.Format(this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, LongValue(), null);
+            return NumberFormatter.Format(format, this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, LongValue(), provider);
+            return NumberFormatter.Format(format, this, provider);
         }
 
         public static long Parse(string s, IFormatProvider provider)

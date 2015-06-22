@@ -79,22 +79,22 @@ namespace System
             return default(long);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            // Note: this obviously does not work for values with the highest bit set.
-            return NumberFormatter.Format(LongValue(), provider);
+            return NumberFormatter.FormatULong(this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            // Note: this obviously does not work for values with the highest bit set.
-            return NumberFormatter.Format(format, LongValue(), null);
+            return NumberFormatter.FormatULong(format, this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            // Note: this obviously does not work for values with the highest bit set.
-            return NumberFormatter.Format(format, LongValue(), provider);
+            return NumberFormatter.FormatULong(format, this, provider);
         }
 
         public int CompareTo(ulong o)

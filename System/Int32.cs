@@ -56,19 +56,22 @@ namespace System
             return Parse(s);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(IntValue(), provider);
+            return NumberFormatter.Format(this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, IntValue(), null);
+            return NumberFormatter.Format(format, this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, IntValue(), provider);
+            return NumberFormatter.Format(format, this, provider);
         }
 
         /// <summary>
