@@ -47,8 +47,11 @@ namespace Dot42.Internal.Generics
         public static bool IsGenericType(Type type)
         {
             // Java generic type?
-            bool hasTypeParameters = type.GetTypeParameters().Length > 0;
-            if (hasTypeParameters) return true;
+            // this call makes Json.NET deserialization about 2.5 times as slow. 
+            // If Java generics have any meanings to us, we would need to cache the 
+            // return value.
+            //bool hasTypeParameters = type.GetTypeParameters().Length > 0;
+            //if (hasTypeParameters) return true;
             
             // Nullable<T>?
             if (NullableReflection.TreatAsSystemNullableT(type))
