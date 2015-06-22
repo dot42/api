@@ -53,14 +53,15 @@ namespace System.Globalization
         private const string InvariantJavaLongTimePattern = "HH:mm:ss";
         private const string InvariantJavaShortTimePattern = "HH:mm";
 
+        private const string DefaultAM = "AM";
+        private const string DefaultPM = "PM";
+        private const string DefaultDateSeparator = "/";
+        private const string DefaultTimeSeparator = ":";
+
 	    internal DateTimeFormatInfo(Java.Util.Locale locale, bool isInvariant = false)
 	    {
 	        _isInvariant = isInvariant;
 	        Locale = locale;
-
-            // TODO how to get date and time separator?
-            dateSeparator = "/";
-            timeSeparator = ":";
 
             monthDayPattern = "MMMM dd";
             yearMonthPattern = "yyyy MMMM";
@@ -333,10 +334,17 @@ namespace System.Globalization
 
         private void InitializeSymbols()
         {
+#if ANDROID_9P
             var f = DateFormatSymbols.GetInstance(Locale);
             amDesignator = f.AmPmStrings[Java.Util.Calendar.AM];
             pmDesignator = f.AmPmStrings[Java.Util.Calendar.PM];
-            // TODO how to get date and time separator?
+#else
+            amDesignator = DefaultAM;
+            pmDesignator = DefaultPM;
+#endif
+            // TODO how to get date and time separators?
+            dateSeparator = DefaultDateSeparator;
+            timeSeparator = DefaultTimeSeparator;
         }
 
 	    /// <summary>

@@ -50,7 +50,8 @@ namespace Dot42.Internal
                 int i, len;
 
                 len = 0;
-                for (i = 0; i < args.Length; ++i)
+                var argLength = args.Length;
+                for (i = 0; i < argLength; ++i)
                 {
                     string s = args[i] as string;
                     if (s != null)
