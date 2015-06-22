@@ -170,7 +170,12 @@ namespace System
 	        if (decimals < 0 && decimals > 17)
 	            throw new ArgumentException();
 
-	        if (double.IsNaN(value) || double.IsInfinity(value) || value == Double.MaxValue || value == Double.MinValue || value == 0)
+            // ReSharper disable once EqualExpressionComparison
+            if (value != value /* double.IsNaN(value): not a typo: avoids a method call overhead */ 
+                || value == 0 
+                || value == Double.MaxValue 
+                || value == Double.MinValue 
+                || double.IsInfinity(value))
 	            return value;
             
 	        if (decimals == 0)
