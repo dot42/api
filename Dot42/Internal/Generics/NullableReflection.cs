@@ -1,6 +1,6 @@
 ﻿using System;
+using Dot42.Collections.Specialized;
 using Java.Lang;
-using Java.Util.Concurrent;
 
 namespace Dot42.Internal.Generics
 {
@@ -8,14 +8,13 @@ namespace Dot42.Internal.Generics
     {
         private const string NullablePostfix = "__Nullable";
         
-        private static readonly ConcurrentHashMap<Type, Type> UnderlayingCache = new ConcurrentHashMap<Type, Type>();
+        private static readonly ConcurrentTypeHashMap<Type> UnderlyingCache = new ConcurrentTypeHashMap<Type>();
 
         internal static bool TreatAsSystemNullableT(Type type)
         {
-            return TypeHelper.IsBoxedType(type)
-                || (type.IsSynthetic && type.Name.EndsWith(NullablePostfix));
+            return TypeHelper.IsBoxedType(type) || IsNullableType(type);
         }
-
+        
         public static Type GetUnderlyingType(Type nullableType)
         {
             if (nullableType == null)
@@ -36,17 +35,17 @@ namespace Dot42.Internal.Generics
 
         public static Type GetUnderlyingTypeForMarked(Type nullableType)
         {
-            if (!nullableType.IsSynthetic || !nullableType.Name.EndsWith(NullablePostfix))
+            if (!IsNullableType(nullableType))
                 return null;
 
-            var underlying = UnderlayingCache.Get(nullableType);
+            var underlying = UnderlyingCache.Get(nullableType);
 
             if (underlying == null)
             {
                 // is an internal nullable.
                 var underlyingField = nullableType.JavaGetDeclaredField("underlying$");
                 underlying = (Type)underlyingField.Get(null);
-                UnderlayingCache.Put(nullableType, underlying);
+                UnderlyingCache.Put(nullableType, underlying);
             }
 
             return underlying;
@@ -62,13 +61,13 @@ namespace Dot42.Internal.Generics
             // this should not neccessary, but keep for safety,
             // and for not inadversely polluting our double-use 
             // underlying cache.
-            if (type.IsSynthetic && type.Name.EndsWith(NullablePostfix))
+            if (IsNullableType(type))
             {
                 return type;
             }
 
 
-            Type nullableMarker = UnderlayingCache.Get(type);
+            Type nullableMarker = UnderlyingCache.Get(type);
 
             if (nullableMarker != null)
                 return nullableMarker;
@@ -85,9 +84,15 @@ namespace Dot42.Internal.Generics
                 nullableMarker = null;
             }
 
-            UnderlayingCache.Put(type, nullableMarker);
+            UnderlyingCache.Put(type, nullableMarker);
 
             return nullableMarker;
+        }
+
+        [Inline]
+        private static bool IsNullableType(Type type)
+        {
+            return type.IsSynthetic && type.Name.EndsWith(NullablePostfix);
         }
     }
 }

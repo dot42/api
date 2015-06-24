@@ -1,108 +1,171 @@
-﻿using System.Threading;
+﻿using System;
 using Java.Util;
 
 namespace Dot42.Collections.Specialized
 {
-    /// <summary>
-    /// To accomplish concurrency this map will clone the underlying map on each write operation.
-    /// <para/>
-    /// This class is very similar to the FastConcurrentHashMap. The performance characteristics 
-    /// described there hold here as well. The underlying map is a Java.Util.HashMap. This implementation
-    /// map has a worse write performance compared tp FastConcurrentHashMap, but read performance
-    /// is comparable or even better (except when FastConcurrentHashMap is used with 
-    /// OpenReferenceEqualityHashMap which is the fastest combination).
-    /// </summary>
-    internal class FastConcurrentHashMap2<TKey, TVal> 
-    {
-        private IMap<TKey, TVal> _baseMap;
+    // This implementation yields a little bit less performance than FastConcurrentHashMap.
 
-        public FastConcurrentHashMap2()
-        {
-            _baseMap = new HashMap<TKey, TVal>();
-        }
+    ///// <summary>
+    ///// This concurrent Map is optimized for situations where read accesses by far outperform 
+    ///// write accesses, as it is typical for e.g. caching maps.
+    ///// <para>
+    ///// Write accesses will always use a lock. Read operations will only use a lock if values
+    ///// were recently written to the map, and the request is for one of the recently written 
+    ///// values or a non-existent value.
+    ///// </para>
+    ///// <para>
+    ///// If no values are written, request for existing values will result in exactly one volatile
+    ///// field access. Requests for non-existing values will result in two volatile field accesses.
+    ///// </para>
+    ///// </summary>
+    //internal class FastConcurrentHashMap2<TKey, TVal> /*: IFastHashMap<TKey, TVal>*/
+    //{
+    //    // We don't work with the IFastHashMap interface, because that adds another one or two 
+    //    // stub calls on each invocation. For usage with the FastWeakReferenceHashMap we probably 
+    //    // need to create another implementation.
 
-        public int Size
-        {
-            [Inline]
-            get { return _baseMap.Size(); }
-        }
+    //    private const int CopyWriteMapAfterThreshold = 10;
 
-        [Inline]
-        public TVal Get(TKey key)
-        {
-            return _baseMap.Get(key);
-        }
+    //    private volatile HashMap<TKey, TVal> _readMap;
 
-        public TVal Put(TKey key, TVal value)
-        {
-            while (true)
-            {
-                var current = _baseMap;
-                var clone = CloneMap(current, current.Size() + 1);
-                var ret = clone.Put(key, value);
+    //    private volatile HashMap<TKey, TVal> _writeMap;
+    //    private int _writeMapAccessCounter;
+    //    private readonly object _sync = new object();
 
-                if (Interlocked.CompareExchange(ref _baseMap, clone, current) != current)
-                    continue;
+    //    internal FastConcurrentHashMap2()
+    //    {
+    //        _readMap = new HashMap<TKey, TVal>();
+    //    }
 
-                return ret;
-            }
-        }
+    //    public int Size
+    //    {
+    //        [Inline]
+    //        get { return _readMap.Size(); }
+    //    }
 
-        public TVal PutIfAbsent(TKey key, TVal value)
-        {
-            while (true)
-            {
-                var current = _baseMap;
-                var clone = CloneMap(current,current.Size() + 1);
+    //    public TVal Get(TKey key)
+    //    {
+    //        // Try the fast path.
+    //        var ret = _readMap.Get(key);
 
-                TVal ret = default(TVal);
-                if(!clone.ContainsKey(key))
-                    ret = clone.Put(key, value);
+    //        if (ret != null)
+    //            return ret;
 
-                if (ret == null)
-                    if (Interlocked.CompareExchange(ref _baseMap, clone, current) != current)
-                        continue;
+    //        // This second volatile field access is not strictly required for a caching map,
+    //        // that will 'PutIfAbsent' or 'Put' if we return null anyway. For those types it
+    //        // would suffice if we always return null, or make the write map non-volatile.
+    //        // As a caching map will on the other hand hopefully most of the time have 
+    //        // cache-hits, this volatile access should not hurt too much.
+    //        if (_writeMap == null)
+    //            return default(TVal);
 
-                return ret;
-            }
-        }
+    //        // walk the slow path.
+    //        lock (_sync)
+    //        {
+    //            ++_writeMapAccessCounter;
 
-        public TVal Remove(TKey key)
-        {
-            while (true)
-            {
-                var current = _baseMap;
-                var clone = CloneMap(current, current.Size());
-                var ret = clone.Remove(key);
+    //            var map = _writeMap;
 
-                if(Interlocked.CompareExchange(ref _baseMap, clone, current) != current)
-                    continue;
+    //            if (++_writeMapAccessCounter > CopyWriteMapAfterThreshold)
+    //            {
+    //                // Set the read map after a number of servings from the write map.
+    //                _readMap = map;
+    //                _writeMap = null;
+    //                _writeMapAccessCounter = 0;
+    //            }
 
-                return ret;
-            }
-        }
+    //            return map.Get(key);
+    //        }
+    //    }
 
-        public void Clear()
-        {
-            var clone = CloneMap(_baseMap, -1);
+    //    public TVal Put(TKey key, TVal value)
+    //    {
+    //        if(value == null)
+    //            throw new ArgumentNullException();
 
-            while (true)
-            {
-                var current = _baseMap;
-                if (Interlocked.CompareExchange(ref _baseMap, clone, current) != current)
-                    continue;
-                return;
-            }
-        }
+    //        lock (_sync)
+    //        {
+    //            _writeMapAccessCounter = Math.Max(_writeMapAccessCounter - 1, 0);
+
+    //            var map = _writeMap;
+    //            if (map == null)
+    //            {
+    //                var baseMap = _readMap;
+    //                map = CloneMap(baseMap, 0);
+    //                _writeMap = map;
+    //            }
+
+    //            return map.Put(key, value);
+    //        }
+    //    }
+
+    //    public TVal PutIfAbsent(TKey key, TVal value)
+    //    {
+    //        if (value == null)
+    //            throw new ArgumentNullException();
+
+    //        lock (_sync)
+    //        {
+    //            _writeMapAccessCounter = Math.Max(_writeMapAccessCounter - 1, 0);
+
+    //            var map = _writeMap;
+    //            if (map == null)
+    //            {
+    //                var baseMap = _readMap;
+    //                map = CloneMap(baseMap, 0);
+    //                _writeMap = map;
+    //            }
+
+    //            if (map.ContainsKey(key))
+    //                return map.Get(key);
+    //            map.Put(key, value);
+    //            return default(TVal);
+    //        }
+    //    }
+
+    //    public bool Remove(TKey key)
+    //    {
+    //        lock (_sync)
+    //        {
+    //            var map = _writeMap;
+
+    //            if (map != null)
+    //            {
+    //                if (!_writeMap.ContainsKey(key))
+    //                    return false;
+    //                _writeMap.Remove(key);
+    //                _readMap = _writeMap;
+    //                _writeMap = null;
+    //                _writeMapAccessCounter = 0;
+    //                return true;
+    //            }
+
+    //            map = _readMap;
+    //            if (!_readMap.ContainsKey(key))
+    //                return false;
+    //            map = CloneMap(map, 0);
+    //            map.Remove(key);
+    //            _readMap = map;
+    //            return true;
+    //        }
+    //    }
+
+    //    public void Clear()
+    //    {
+    //        var empty = CloneMap(_readMap, -1);
+
+    //        lock (_sync)
+    //        {
+    //            _readMap = empty;
+    //            _writeMap = null;
+    //            _writeMapAccessCounter = 0;
+    //        }
+    //    }
         
-        [Inline]
-        private IMap<TKey, TVal> CloneMap(IMap<TKey, TVal> map, int newSize)
-        {
-            if (newSize < 0)
-            {
-                return new HashMap<TKey, TVal>();
-            }
-            return new HashMap<TKey, TVal>(map);
-        }
-    }
+    //    [Inline]
+    //    private static HashMap<TKey,TVal> CloneMap(HashMap<TKey, TVal> map, int newSize)
+    //    {
+    //        return new HashMap<TKey, TVal>(map);
+    //    }
+    //}
 }

@@ -354,7 +354,7 @@ namespace System
             if(isCultureSpecific)
                 throw new NotImplementedException("IndexOf with local culture not supported");
 
-            return ToLowerInvariant().IndexOf(value.ToLowerInvariant(), startIndex);
+            return ToUpperInvariant().IndexOf(value.ToUpperInvariant(), startIndex);
         }
 
         /// <summary>
@@ -373,9 +373,11 @@ namespace System
         {
             var length = Length;
             if (totalWidth <= length) return this;
-            var builder = new StringBuilder(this);
-            var padLength = totalWidth - length;
-            builder.Insert(0, new RepeatingCharSequence(paddingChar, padLength));
+            
+            var builder = new StringBuilder(totalWidth);
+            builder.Append(paddingChar, totalWidth - length);
+            builder.Append(this);
+            
             return builder.ToString();
         }
 
@@ -395,9 +397,10 @@ namespace System
         {
             var length = Length;
             if (totalWidth <= length) return this;
-            var builder = new StringBuilder(this);
-            var padLength = totalWidth - length;
-            builder.Append(new RepeatingCharSequence(paddingChar, padLength));
+
+            var builder = new StringBuilder(totalWidth);
+            builder.Append(this);
+            builder.Append(paddingChar,  totalWidth - length);
             return builder.ToString();
         }
 
@@ -579,10 +582,16 @@ namespace System
         /// <summary>
         /// Is the given string null or consists only of whitespace characters.
         /// </summary>
-        [Inline]
         public static bool IsNullOrWhiteSpace(string value)
         {
-            return (value == null) || (value.Trim().Length == 0);
+            if (value == null) return true;
+            int len = value.Length;
+            for (int i = 0; i < len; ++i)
+            {
+                if (!char.IsWhiteSpace(value[i]))
+                    return false;
+            }
+            return true;
         }
 
         /// <summary>
@@ -592,7 +601,7 @@ namespace System
         {
             if (array.Length == 0)
                 return "";
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in array)
             {
@@ -619,7 +628,7 @@ namespace System
         {
             if ((array.Length == 0) || (array[0] == null))
                 return "";
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in array)
             {
@@ -644,7 +653,7 @@ namespace System
         /// </summary>
         public static string Join(string separator, IEnumerable<string> strings)
         {
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in strings)
             {
@@ -669,7 +678,7 @@ namespace System
         /// </summary>
         public static string Join<T>(string separator, IEnumerable<T> objects)
         {
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in objects)
             {
@@ -702,9 +711,9 @@ namespace System
         /// </summary>
         public static string Concat(object v1, object v2)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            return Concat(v1.ToString(), v2.ToString());
+            var s1 = v1 == null ? null : v1.ToString();
+            var s2 = v2 == null ? null : v2.ToString();
+            return Concat(s1, s2);
         }
 
         /// <summary>
@@ -712,10 +721,10 @@ namespace System
         /// </summary>
         public static string Concat(object v1, object v2, object v3)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            return Concat(v1.ToString(), v2.ToString(), v3.ToString());
+            var s1 = v1 == null ? null : v1.ToString();
+            var s2 = v2 == null ? null : v2.ToString();
+            var s3 = v3 == null ? null : v3.ToString();
+            return Concat(s1, s2, s3);
         }
 
         /// <summary>
@@ -723,11 +732,11 @@ namespace System
         /// </summary>
         public static string Concat(object v1, object v2, object v3, object v4)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            v4 = v4 ?? string.Empty;
-            return Concat(v1.ToString(), v2.ToString(), v3.ToString(), v4.ToString());
+            var s1 = v1 == null ? null : v1.ToString();
+            var s2 = v2 == null ? null : v2.ToString();
+            var s3 = v3 == null ? null : v3.ToString();
+            var s4 = v4 == null ? null : v4.ToString();
+            return Concat(s1, s2, s3, s4);
         }
 
         /// <summary>
@@ -737,8 +746,11 @@ namespace System
         {
             if (args == null)
                 throw new ArgumentNullException("args");
-            var sb = new Java.Lang.StringBuffer();
-            for (var i = 0; i < args.Length; i++)
+
+            var length = args.Length;
+            var sb = new StringBuilder();
+            
+            for (var i = 0; i < length; i++)
             {
                 var arg = args[i];
                 if (arg != null)
@@ -768,10 +780,14 @@ namespace System
         /// </summary>
         public static string Concat(string v1, string v2, string v3)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            return v1.Concat(v2).Concat(v3);
+            var s1 = v1 ?? string.Empty;
+            var s2 = v2 ?? string.Empty;
+            var s3 = v3 ?? string.Empty;
+            StringBuilder b = new StringBuilder(s1.Length + s2.Length + s3.Length);
+            b.Append(s1);
+            b.Append(s2);
+            b.Append(s3);
+            return b.ToString();
         }
 
         /// <summary>
@@ -779,11 +795,16 @@ namespace System
         /// </summary>
         public static string Concat(string v1, string v2, string v3, string v4)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            v4 = v4 ?? string.Empty;
-            return v1.Concat(v2).Concat(v3).Concat(v4);
+            var s1 = v1 ?? string.Empty;
+            var s2 = v2 ?? string.Empty;
+            var s3 = v3 ?? string.Empty;
+            var s4 = v4 ?? string.Empty;
+            StringBuilder b = new StringBuilder(s1.Length + s2.Length + s3.Length + s4.Length);
+            b.Append(s1);
+            b.Append(s2);
+            b.Append(s3);
+            b.Append(s4);
+            return b.ToString();
         }
 
         /// <summary>
@@ -793,8 +814,9 @@ namespace System
         {
             if (args == null)
                 throw new ArgumentNullException("args");
-            var sb = new Java.Lang.StringBuffer();
-            for (var i = 0; i < args.Length; i++)
+            var sb = new StringBuilder();
+            var length = args.Length;
+            for (var i = 0; i < length; i++)
             {
                 var arg = args[i];
                 if (arg != null)
@@ -829,8 +851,6 @@ namespace System
             if (a == null) return b == null;
             return Compare(a, b, comparisonType) == 0;
 	    }
-
-
 
         /// <summary>
         /// Return a new string in which all occurrences of the given old value have been replaced with the given new value.

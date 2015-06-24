@@ -79,21 +79,37 @@ namespace Dot42.Collections.Specialized
             return (int)s;
         }
 
-        //taken from FastUtil
-        internal const int INT_PHI = unchecked((int)0x9E3779B9);
+        ////taken from FastUtil
+        //internal const int INT_PHI = unchecked((int)0x9E3779B9);
+        
+        //[Inline]
+        //public static int PhiMix(int x)
+        //{
+        //    int h = x * INT_PHI;
+        //    return h ^ (h >> 16);
+        //}
+
+        //[Inline]
+        //public static int PhiMix(long x)
+        //{
+        //    int h = ((int)x ^ (int)(x >> 32)) * INT_PHI;
+        //    return h ^ (h >> 16);
+        //}
+
+        internal const int IntPhi = unchecked((int)0x61c88647);
 
         [Inline]
         public static int PhiMix(int x)
         {
-            int h = x * INT_PHI;
-            return h ^ (h >> 16);
+            // for increasing integers the spreading code seems to do more 
+            // harm than good when using above constant.
+            return x * IntPhi; 
         }
 
         [Inline]
         public static int PhiMix(long x)
         {
-            int h = ((int)x ^ (int)(x >> 32)) * INT_PHI;
-            return h ^ (h >> 16);
+            return ((int)x ^ (int)(x >> 32)) * IntPhi;
         }
     }
 }

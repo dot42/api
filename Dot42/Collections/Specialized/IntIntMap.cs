@@ -143,29 +143,20 @@ namespace Dot42.Collections.Specialized
                 return m_hasFreeKey ? m_freeValue : NoValue;
             }
 
-            int k = m_data[ptr];
-
-            if (k == FreeKey)
-            {
-                return NoValue; //end of chain already
-            }
-            if (k == key) //we check FREE prior to this call
-            {
-                return m_data[ptr + 1];
-            }
-
+            var data = m_data;
+            
             while (true)
             {
-                ptr = (ptr + 2) & m_mask2; //that's next index
-                k = m_data[ptr];
+                var k = data[ptr];
                 if (k == FreeKey)
                 {
-                    return NoValue;
+                    return NoValue; //end of chain already
                 }
                 if (k == key)
                 {
-                    return m_data[ptr + 1];
+                    return data[ptr + 1];
                 }
+                ptr = (ptr + 2) & m_mask2; //that's next index
             }
         }
 

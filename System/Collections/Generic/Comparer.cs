@@ -38,6 +38,7 @@ namespace System.Collections.Generic {
 	{
         [SuppressMessage("dot42", "StaticFieldInGenericType")]
         private static readonly ConcurrentTypeHashMap<object> Comparers = new ConcurrentTypeHashMap<object>();
+        //private static readonly ConcurrentHashMap<Type, object> Comparers = new ConcurrentHashMap<Type, object>();
 
 		public abstract int Compare (T x, T y);
 	

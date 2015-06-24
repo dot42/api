@@ -17,13 +17,16 @@
 using System.Reflection;
 using Dot42.Collections.Specialized;
 using Dot42.Internal;
+using Java.Util.Concurrent;
 
 namespace System
 {
 	public abstract partial class Delegate
 	{
-        private static readonly ConcurrentTypeHashMap<FieldInfo>  InstanceFieldCache = new ConcurrentTypeHashMap<FieldInfo>();
+        private static readonly ConcurrentTypeHashMap<FieldInfo> InstanceFieldCache = new ConcurrentTypeHashMap<FieldInfo>();
         private static readonly ConcurrentTypeHashMap<MethodInfo> TargetMethodCache = new ConcurrentTypeHashMap<MethodInfo>();
+        //private static readonly ConcurrentHashMap<Type, FieldInfo> InstanceFieldCache = new ConcurrentHashMap<Type, FieldInfo>();
+        //private static readonly ConcurrentHashMap<Type, MethodInfo> TargetMethodCache = new ConcurrentHashMap<Type, MethodInfo>();
 
 	    static Delegate()
 	    {

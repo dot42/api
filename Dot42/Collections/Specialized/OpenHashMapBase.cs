@@ -1,4 +1,6 @@
-﻿using System;
+﻿//#define HASH_MAP_PERFORMANCE
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -9,16 +11,20 @@ namespace Dot42.Collections.Specialized
     // based upon http://java-performance.info/implementing-world-fastest-java-int-to-int-hash-map/
     internal abstract class OpenHashMapBase<K, V> : IOpenHashMap<K, V>, IEnumerable<KeyValuePair<K, V>>
     {
-        public const float DefaultFillFactor = 0.275f;
         public const int DefaultSize = 16;
+
+        public const float DefaultFillFactor = 0.275f;
+        public const float DefaultFillFactor2 = 0.75f;
+        public const int DefaultFillFactor2Threshold = 400;
 
         protected const int EntrySize = 2;
         protected const int EntryShift = 1;
         
         protected const object FreeKey = null;
-        
+
+        private class Removed { } // mainly for the debugger.
         [SuppressMessage("dot42", "StaticFieldInGenericType")]
-        protected static readonly object RemovedKey = new object();
+        protected static readonly object RemovedKey = new Removed();
 
         internal protected abstract V Put(K key, V v, bool onlyIfAbsent);
         public abstract V Get(K key);
@@ -45,8 +51,12 @@ namespace Dot42.Collections.Specialized
         protected bool m_hasNull;
 
         /// <summary>
-        /// Fill factor, must be between (0 and 1) </summary>
-        protected readonly float m_fillFactor;
+        /// Fill factor, must be between (0 and 1) 
+        /// </summary>
+        private readonly float m_fillFactor;
+        private readonly float m_fillFactor2;
+        private readonly int m_fillFactor2Threshold;
+
         /// <summary>
         /// We will resize a map once it reaches this size
         /// </summary>
@@ -63,9 +73,15 @@ namespace Dot42.Collections.Specialized
         ///  </summary>
         protected int m_mask2;
 
-        protected OpenHashMapBase(int size = DefaultSize, float fillFactor = DefaultFillFactor)
+#if HASH_MAP_PERFORMANCE
+        protected int m_totalGets;
+        protected int m_totalAccesses;
+
+        public float AverageComparisonsPerGet { get { return (float)m_totalAccesses/m_totalGets; } }
+#endif
+        protected OpenHashMapBase(int size, float fillFactor, int fillFactorThreshhold, float fillFactor2)
         {
-            if (fillFactor <= 0 || fillFactor >= 1)
+            if (fillFactor <= 0 || fillFactor >= 1 || fillFactor2 <= 0 || fillFactor2 >= 1)
             {
                 throw new ArgumentException("FillFactor must be in (0, 1)");
             }
@@ -76,7 +92,11 @@ namespace Dot42.Collections.Specialized
 
             if (size < DefaultSize)
                 size = DefaultSize;
+            
             m_fillFactor = fillFactor;
+            m_fillFactor2 = fillFactor2;
+            m_fillFactor2Threshold = fillFactorThreshhold;
+
             InitializeEmpty(size);
         }
 
@@ -86,6 +106,13 @@ namespace Dot42.Collections.Specialized
         protected OpenHashMapBase(OpenHashMapBase<K,V> other, int newSize)
         {
             m_fillFactor = other.m_fillFactor;
+            m_fillFactor2 = other.m_fillFactor2;
+            m_fillFactor2Threshold = other.m_fillFactor2Threshold;
+
+#if HASH_MAP_PERFORMANCE
+            m_totalAccesses = other.m_totalAccesses;
+            m_totalGets = other.m_totalGets;
+#endif
 
             if (newSize < 0)
             {
@@ -106,7 +133,7 @@ namespace Dot42.Collections.Specialized
             m_hasNull   = other.m_hasNull;
             m_nullValue = other.m_nullValue;
 
-            int newCapacity = Tools.ArraySize(newSize, m_fillFactor);
+            int newCapacity = Tools.ArraySize(newSize, FillFactorForSize(newSize));
 
             if (2 * newCapacity == other.m_data.Length)
             {
@@ -117,6 +144,14 @@ namespace Dot42.Collections.Specialized
             {
                 Rehash(newCapacity, other);
             }
+        }
+
+        [Inline]
+        private float FillFactorForSize(int size)
+        {
+            return m_fillFactor2Threshold <= 0 || size < m_fillFactor2Threshold 
+                    ? m_fillFactor 
+                    : m_fillFactor2;
         }
 
 
@@ -134,8 +169,9 @@ namespace Dot42.Collections.Specialized
 
         private void InitializeEmpty(int size)
         {
-            int capacity = Tools.ArraySize(size, m_fillFactor);
-            m_threshold = (int)(capacity * m_fillFactor);
+            var fillFactor = FillFactorForSize(size);
+            int capacity = Tools.ArraySize(size, fillFactor);
+            m_threshold = (int)(capacity * fillFactor);
             m_mask      = capacity - 1;
             m_mask2     = capacity * 2 - 1;
             m_hasNull   = false;
@@ -147,7 +183,8 @@ namespace Dot42.Collections.Specialized
 
         protected virtual void Rehash(int newCapacity, OpenHashMapBase<K, V> source)
         {
-            m_threshold = (int)(newCapacity * m_fillFactor);
+            var fillFactor = FillFactorForSize(m_size);
+            m_threshold = (int)(newCapacity * fillFactor);
             m_mask      = newCapacity  - 1;
             m_mask2     = newCapacity * 2 - 1;
 

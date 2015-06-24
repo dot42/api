@@ -39,6 +39,66 @@
             return ret;
         }
 
+        /// <summary>
+        /// This is the same as CompareExchange, except that it returns true if the new 
+        /// value was set, instead of the old value. It offers a tiny performance benefit
+        /// over CompareExchange.
+        /// </summary>
+        internal static bool CompareAndSet<T>(ref T location, T value, T comparand) where T : class
+        {
+            if (location == comparand)
+            {
+                location = value;
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// This is the same as CompareExchange, except that it returns true if the new 
+        /// value was set, instead of the old value. It offers a tiny performance benefit
+        /// over CompareExchange.
+        /// </summary>
+        internal static object CompareAndSet(ref object location, object value, object comparand)
+        {
+            if (location == comparand)
+            {
+                location = value;
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// This is the same as CompareExchange, except that it returns true if the new 
+        /// value was set, instead of the old value. It offers a tiny performance benefit
+        /// over CompareExchange.
+        /// </summary>
+        internal static bool CompareAndSet(ref int location, int value, int comparand)
+        {
+            if (location == comparand)
+            {
+                location = value;
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// This is the same as CompareExchange, except that it returns true if the new 
+        /// value was set, instead of the old value. It offers a tiny performance benefit
+        /// over CompareExchange.
+        /// </summary>
+        internal static bool CompareAndSet(ref long location, long value, long comparand)
+        {
+            if (location == comparand)
+            {
+                location = value;
+                return true;
+            }
+            return false;
+        }
+
         [Obsolete("The integrity of this call will be achieved through locking. Consider using an AtomicFloat instead.")]
         public static float CompareExchange(ref float location, float value, float comparand)
         {

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Dot42.Collections.Specialized;
 using Java.Lang.Reflect;
+using Java.Util.Concurrent;
 
 namespace Dot42.Internal
 {
@@ -23,6 +24,7 @@ namespace Dot42.Internal
         private static readonly FastConcurrentHashMap<ReflectionLookupKey, object> Cache 
                           = new FastConcurrentHashMap<ReflectionLookupKey, object>(new ReflectionLookupHashMap());
         private static readonly ConcurrentTypeHashMap<Constructor[]> JavaDeclaredConstructorsCache = new ConcurrentTypeHashMap<Constructor[]>();
+        //private static readonly ConcurrentHashMap<Type,Constructor[]> JavaDeclaredConstructorsCache = new ConcurrentHashMap<Type,Constructor[]>();
 
         static ReflectionCache()
         {
@@ -35,11 +37,14 @@ namespace Dot42.Internal
 
         public static PropertyInfo[] GetProperties(Type type, BindingFlags flags)
         {
-            var map = (ReflectionLookupHashMap) Cache.BaseMap;
+            var map = (ReflectionLookupHashMap) Cache.ReadMap;
             var retArray = (PropertyInfo[])map.Get(LookupTypeProperty, type, null, flags);
             if (retArray != null) return retArray;
 
+            // Try the ConcurrentMap again, with its special write handling
             var key = new ReflectionLookupKey(LookupTypeProperty, type, null, flags);
+            retArray = (PropertyInfo[])Cache.Get(key);
+            if (retArray != null) return retArray;
 
             retArray = ReflectionHelper.GetProperties(type, flags);
 
@@ -49,11 +54,14 @@ namespace Dot42.Internal
 
         public static PropertyInfo[] GetProperties(Type type, string name, BindingFlags flags)
         {
-            var map = (ReflectionLookupHashMap)Cache.BaseMap;
+            var map = (ReflectionLookupHashMap)Cache.ReadMap;
             var retArray = (PropertyInfo[])map.Get(LookupTypeProperty, type, name, flags);
             if (retArray != null) return retArray;
 
+            // Try the ConcurrentMap again, with its special write handling
             var key = new ReflectionLookupKey(LookupTypeProperty, type, name, flags);
+            retArray = (PropertyInfo[])Cache.Get(key);
+            if (retArray != null) return retArray;
 
             retArray = GetProperties(type, flags).Where(p => p.Name == name);
 
@@ -154,29 +162,15 @@ namespace Dot42.Internal
                 int baseHashCode = ReflectionLookupKey.GetHashCode(lookupType, type, memberName, bindingFlags);
                 // this is slightly hackish, as we rely on implementation 
                 // details of OpenEqualityComparerHashMap.GetHashCode
-                int hashCode = baseHashCode ^ (baseHashCode >> 16); // spread
+                int hashCode = baseHashCode * Tools.IntPhi;
+                hashCode = hashCode ^ (hashCode >> 16); // spread
 
-                int ptr = (hashCode & m_mask) << 1;
-                object k = m_data[ptr];
-
-                if (k == FreeKey)
-                {
-                    return null;
-                }
-
-                if (k != RemovedKey
-                    && ReflectionLookupKey.Equals((ReflectionLookupKey)k, lookupType, baseHashCode, type, memberName, bindingFlags))
-                {
-                    return m_data[ptr + 1];
-                }
-
+                int ptr = (hashCode & m_mask) << EntryShift;
+                var data = m_data;
+                
                 while (true)
                 {
-#if DUMP_PERFORMANCE
-                ++m_totalAccesses;
-#endif
-                    ptr = (ptr + 2) & m_mask2; //that's next index
-                    k = m_data[ptr];
+                    var k = data[ptr];
                     if (k == FreeKey)
                     {
                         return null;
@@ -184,8 +178,12 @@ namespace Dot42.Internal
                     if (k != RemovedKey
                         && ReflectionLookupKey.Equals((ReflectionLookupKey)k, lookupType, baseHashCode, type, memberName, bindingFlags))
                     {
-                        return m_data[ptr + 1];
+                        return data[ptr + 1];
                     }
+                    ptr = (ptr + 2) & m_mask2; //that's next index
+#if DUMP_PERFORMANCE
+                ++m_totalAccesses;
+#endif
                 }
             }
 

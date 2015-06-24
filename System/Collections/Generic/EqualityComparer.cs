@@ -31,14 +31,15 @@ using System.Diagnostics.CodeAnalysis;
 using Android.Widget;
 using Dot42.Collections.Specialized;
 using Java.Lang.Ref;
+using Java.Util.Concurrent;
 
 namespace System.Collections.Generic {
 	[Serializable]
 	public abstract class EqualityComparer <T> : IEqualityComparer, IEqualityComparer <T> 
     {
         [SuppressMessage("dot42", "StaticFieldInGenericType")]
-        //private static readonly FastImmutableHashMap<Type, Reference<object>> Comparers = new FastImmutableHashMap<Type, Reference<object>>(new FastWeakReferenceHashMap<Type, Reference<object>>(16));
         private static readonly ConcurrentTypeHashMap<object> Comparers = new ConcurrentTypeHashMap<object>();
+        //private static readonly ConcurrentHashMap<Type, object> Comparers = new ConcurrentHashMap<Type, object>();
 		
 	    public abstract int GetHashCode (T obj);
 		public abstract bool Equals (T x, T y);

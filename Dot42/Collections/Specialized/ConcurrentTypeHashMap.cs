@@ -8,8 +8,7 @@ namespace Dot42.Collections.Specialized
     /// <typeparam name="TValue"></typeparam>
     internal class ConcurrentTypeHashMap<TValue> : FastConcurrentHashMap<Type,TValue>
     {
-        public ConcurrentTypeHashMap()
-             :base(new OpenIdentityHashMap<Type, TValue>(16, 0.30f))
+        public ConcurrentTypeHashMap() : base(true)
         {
         }
     }

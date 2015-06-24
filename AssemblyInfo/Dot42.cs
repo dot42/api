@@ -21,3 +21,4 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("Dot42.dll")]
 
 [assembly: InternalsVisibleTo("FrameworkTests")]
+//[assembly: InternalsVisibleTo("dot42.CompilerBugTesting")]

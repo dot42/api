@@ -85,8 +85,8 @@
     <Compile Include="Dot42\Collections\EnumeratorWrapper.cs" />
     <Compile Include="Dot42\Collections\IJavaCollectionWrapper.cs" />
     <Compile Include="Dot42\Collections\Specialized\ConcurrentTypeHashMap.cs" />
-    <Compile Include="Dot42\Collections\Specialized\OpenEqualityComparerHashMap.cs" />
     <Compile Include="Dot42\Collections\Specialized\FastConcurrentHashMap2.cs" />
+    <Compile Include="Dot42\Collections\Specialized\OpenEqualityComparerHashMap.cs" />
     <Compile Include="Dot42\Collections\Specialized\OpenIdentityHashMap.cs" />
     <Compile Include="Dot42\Collections\Specialized\OpenHashMapBase.cs" />
     <Compile Include="Dot42\Collections\Specialized\OpenWeakReferenceHashMap.cs" />
@@ -298,7 +298,6 @@
     <Compile Include="Dot42\EventHandlerListener.cs" />
     <Compile Include="Dot42\FrameworkLibraryAttribute.cs" />
     <Compile Include="Dot42\Manifest\InstrumentationAttribute.cs" />
-    <Compile Include="Dot42\Internal\RepeatingCharSequence.cs" />
     <Compile Include="Dot42\DexImportAttribute.cs" />
     <Compile Include="Dot42\Locale.cs" />
     <Compile Include="Dot42\Manifest\UIOptions.cs" />

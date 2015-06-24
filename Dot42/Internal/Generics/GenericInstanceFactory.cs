@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Dot42.Collections.Specialized;
 using Java.Lang.Reflect;
+using Java.Util.Concurrent;
 
 namespace Dot42.Internal.Generics
 {
@@ -15,6 +16,8 @@ namespace Dot42.Internal.Generics
         // These maps have ID charachter, and must be kept. (Weak References would of course be possible)
         private static readonly FastConcurrentHashMap<GenericTypeInfo, Type> TypeInfoToProxyType = new FastConcurrentHashMap<GenericTypeInfo, Type>();
         private static readonly ConcurrentTypeHashMap<GenericTypeInfo> ProxyTypeToTypeInfo = new ConcurrentTypeHashMap<GenericTypeInfo>();
+        //private static readonly ConcurrentHashMap<GenericTypeInfo, Type> TypeInfoToProxyType = new ConcurrentHashMap<GenericTypeInfo, Type>();
+        //private static readonly ConcurrentHashMap<Type, GenericTypeInfo> ProxyTypeToTypeInfo = new ConcurrentHashMap<Type, GenericTypeInfo>();
 
         private static readonly IEnumerator<IEnumerable<Type>> InterfacePermutations;
 

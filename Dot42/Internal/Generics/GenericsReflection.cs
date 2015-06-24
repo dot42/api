@@ -25,8 +25,8 @@ namespace Dot42.Internal.Generics
             public int GenericArgumentCount;
             public Field GenericInstanceField;
         }
-        //private static readonly ConcurrentTypeCacheMap<TypeInfo> TypeInfoCache = new ConcurrentTypeCacheMap<TypeInfo>();
-        private static readonly ConcurrentHashMap<Type,TypeInfo> TypeInfoCache = new ConcurrentHashMap<Type, TypeInfo>();
+        private static readonly ConcurrentTypeHashMap<TypeInfo> TypeInfoCache = new ConcurrentTypeHashMap<TypeInfo>();
+        //private static readonly ConcurrentTypeHashMap<TypeInfo> TypeInfoCache = new ConcurrentTypeHashMap<TypeInfo>();
 
         static GenericsReflection()
         {

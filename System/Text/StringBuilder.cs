@@ -16,6 +16,7 @@
 using Dot42.Internal;
 using Java.Lang;
 using Java.Text;
+using Java.Util;
 
 namespace System.Text
 {
@@ -67,7 +68,9 @@ namespace System.Text
         /// </summary>
         public StringBuilder Append(char value, int repeatCount)
         {
-            Append(new RepeatingCharSequence(value, repeatCount));
+            char[] append = new char[repeatCount];
+            Arrays.Fill(append, value);
+            Append(append);
             return this;
         }
 

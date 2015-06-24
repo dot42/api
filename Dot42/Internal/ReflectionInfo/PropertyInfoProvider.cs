@@ -35,6 +35,7 @@ namespace Dot42.Internal.ReflectionInfo
 
         private static readonly List<PropertyInfoProvider> Instances;
         private static readonly ConcurrentTypeHashMap<PropertyInfo[]> LoadedProperties = new ConcurrentTypeHashMap<PropertyInfo[]>();
+        //private static readonly ConcurrentHashMap<Type, PropertyInfo[]> LoadedProperties = new ConcurrentHashMap<Type, PropertyInfo[]>();
 
         static PropertyInfoProvider()
         {
