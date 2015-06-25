@@ -32,7 +32,7 @@ namespace System
         {
             return (value == PositiveInfinity);
         }
-
+        // TODO: we get more than necessary boxing/unboxing on this call.
         public int CompareTo(double value)
         {
             if(IsNaN())  
@@ -49,7 +49,7 @@ namespace System
         {
             if (value == null) return +1;
             if(!(value is double)) throw new ArgumentException("value is not a double");
-
+            // TODO: here we unbox the value, only to have it boxed again shortly afterwards.
             return CompareTo((double)value);
         }
 

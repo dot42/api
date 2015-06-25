@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Text;
 using System.Threading;
 using Android.Util;
 using Java.Lang;
@@ -145,9 +146,9 @@ namespace Dot42.Internal
                 if (upperCase)
                     l_hex = l_hex.ToUpper();
                 int l_pad = numDigits - l_hex.Length;
-                l_pad = (0 < l_pad) ? l_pad : 0;
+                l_pad = (l_pad > 0) ? l_pad : 0;
 
-                var l_extended = new StringBuffer();
+                var l_extended = new StringBuffer(numDigits);
                 for (int i = 0; i < l_pad; i++)
                 {
                     l_extended.Append('0');
