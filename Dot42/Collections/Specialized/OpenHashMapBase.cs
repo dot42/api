@@ -8,7 +8,10 @@ using Java.Util;
 
 namespace Dot42.Collections.Specialized
 {
-    // based upon http://java-performance.info/implementing-world-fastest-java-int-to-int-hash-map/
+    // ideas based upon http://java-performance.info/implementing-world-fastest-java-int-to-int-hash-map/
+    // but heavily extended.
+    [SuppressMessage("dot42", "StaticFieldInGenericType")]
+    [SuppressMessage("dot42", "StaticConstructorUsesGenericParameter")]
     internal abstract class OpenHashMapBase<K, V> : IOpenHashMap<K, V>, IEnumerable<KeyValuePair<K, V>>
     {
         public const int DefaultSize = 16;
@@ -23,7 +26,7 @@ namespace Dot42.Collections.Specialized
         protected const object FreeKey = null;
 
         private class Removed { } // mainly for the debugger.
-        [SuppressMessage("dot42", "StaticFieldInGenericType")]
+    
         protected static readonly object RemovedKey = new Removed();
 
         internal protected abstract V Put(K key, V v, bool onlyIfAbsent);

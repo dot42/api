@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Dot42.Internal;
 using Java.Util.Concurrent.Atomic;
 
@@ -22,6 +23,7 @@ namespace System.Threading.Tasks
     /// <summary>
     /// This class handles the low-level work of queuing tasks onto threads.
     /// </summary>
+    [SuppressMessage("dot42", "InterlockedFallback", Justification="due to static events")]
 	public abstract class TaskScheduler
 	{
 	    private readonly int id;

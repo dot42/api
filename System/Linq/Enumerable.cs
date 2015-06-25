@@ -59,6 +59,7 @@ namespace System.Linq
 		}
 
         [SuppressMessage("dot42", "StaticFieldInGenericType")]
+        [SuppressMessage("dot42", "StaticConstructorUsesGenericParameter")]
 		static class Function<T> {
 			public static readonly Func<T, T> Identity = (t) => t;
 		}

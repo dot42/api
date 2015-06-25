@@ -26,10 +26,12 @@
 //
 //
 
+using System.Diagnostics.CodeAnalysis;
 using Java.Util.Concurrent;
 
 namespace System.Threading.Tasks
 {
+    [SuppressMessage("dot42", "StaticConstructorUsesGenericParameter", Justification = "the interlocked call initializes its atomic field updater (could be fixed in the compiler)")]
 	internal class TaskCompletionQueue<TCompletion> where TCompletion : class
 	{
 		private TCompletion single;

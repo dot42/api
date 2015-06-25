@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using Android.Content;
 using Android.Content.PM;
 using Android.Content.Res;
@@ -12,6 +13,7 @@ namespace Dot42.Internal
     /// do some initialization.
     /// </summary>
     [IncludeType]
+    [SuppressMessage("dot42", "InterlockedFallback", Justification="due to static events")]
     internal class Application : Android.App.Application
     {
         public static event EventHandler ReleaseCaches;
