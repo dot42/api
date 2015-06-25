@@ -24,11 +24,13 @@ namespace Dot42.Internal
 	internal interface IAssemblyTypes : IAnnotation
     {
         /// <summary>
-        /// Contains strings and 'Type's, each type belonging to
-        /// the assembly denoted by the last string.
+        /// Contains assembly names, identified by a starting '!', and type 'binary 
+        /// names' as per JLS.
+        /// All type names after an assembly name up to the next assembly name
+        /// belong to that assembly. The first entry is always an assembly name.
         /// </summary>
         [Include]
-        object[] AssemblyTypeList();
+        string[] AssemblyTypeList();
     }
 }
 

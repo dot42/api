@@ -17,7 +17,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Dot42.Internal;
-using Java.Util.Concurrent;
+using Java.Util;
 
 namespace System.Reflection
 {
@@ -26,7 +26,7 @@ namespace System.Reflection
         internal static Assembly DefaultAssembly = new Assembly(null);
 
         private readonly string _name;
-        private readonly ConcurrentHashMap<string, Type> _types = new ConcurrentHashMap<string, Type>();
+        private readonly ArrayList<string> _types = new ArrayList<string>();
 
 	    public string FullName { get { return _name ?? "classes.dex"; } }
 
@@ -35,28 +35,31 @@ namespace System.Reflection
             _name = name;
         }
 
-        internal void AddType(Type type)
+        // This is only called during the static initialization of 
+        // AssemblyTypes and therefore needs not be synchronized.
+        internal void AddType(string binaryName)
         {
-            _types.Put(type.FullName, type);
+            _types.Add(binaryName);
         }
 
         public Type GetType(string typeName)
         {
-            if (_name == null)
-            {
-                // use classloader...
-                var classloader = typeof (Assembly).GetClassLoader();
-                return classloader.LoadClass(typeName);
-            }
-
-            return _types.Get(typeName);
+            var classloader = typeof (Assembly).GetClassLoader();
+            return classloader.LoadClass(typeName);
         }
 
-        public IEnumerable<TypeInfo> DefinedTypes { get { return _types.Values().Select(t=>new TypeInfo(t)); } }
+	    public IEnumerable<TypeInfo> DefinedTypes
+	    {
+	        get
+	        {
+                var classloader = typeof(Assembly).GetClassLoader();
+                return _types.Select(soCalledBinaryName => new TypeInfo(classloader.LoadClass(soCalledBinaryName)));
+	        }
+	    }
 	    
 	    public override string ToString()
 	    {
-	        return "Assembly: " + FullName;
+	        return FullName;
 	    }
 
 	    /// <summary>

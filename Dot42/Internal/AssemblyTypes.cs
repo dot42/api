@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Reflection;
-using Dot42.Collections.Specialized;
 using Java.Util;
 
 namespace Dot42.Internal
@@ -11,15 +10,14 @@ namespace Dot42.Internal
     internal static class AssemblyTypes
     {
         // This field is initialized by the compiler.
-        private static readonly string   EntryAssembly;
+        private static readonly string  EntryAssembly;
 
         public static readonly Assembly DefaultAssembly;
 
-        // TODO: Think about not holding strong references to the types.
-        //       To make this effective, this would have to be extended 
-        //       to the assemblies as well. We could just hold the type
-        //       names instead.
-        private static readonly OpenIdentityHashMap<Type, Assembly> TypesPerAssembly = null;
+        // We only hold the (so called binary) type-names here. Holding the names
+        // instead of the types means we do not hold strong references to the 
+        // types. Additionaly, we do not need to load all classes at startup.
+        private static readonly HashMap<string, Assembly> TypesPerAssembly = null;
         private static Assembly _entryAssembly;
 
         public static Assembly GetEntryAssembly()
@@ -32,7 +30,7 @@ namespace Dot42.Internal
             if (TypesPerAssembly == null)
                 return DefaultAssembly;
 
-            return TypesPerAssembly.Get(type) ?? DefaultAssembly;
+            return TypesPerAssembly.Get(type.JavaGetName()) ?? DefaultAssembly;
         }
 
         static AssemblyTypes()
@@ -47,40 +45,40 @@ namespace Dot42.Internal
                 return;
             }
             
-            TypesPerAssembly = new OpenIdentityHashMap<Type, Assembly>();
+            TypesPerAssembly = new HashMap<string, Assembly>();
 
             int len = types.Length;
             string curAssemblyName = null;
 
-            ArrayList<Type> curTypes = new ArrayList<Type>();
+            ArrayList<string> curTypeNames = new ArrayList<string>();
 
             for (int i = 0; i < len; i++)
             {
                 var val = types[i];
 
-                if (val is string)
+                if (val[0] == '!')
                 {
-                    FinializeAssembly(curAssemblyName, curTypes);
-                    curAssemblyName = (string) val;
+                    FinializeAssembly(curAssemblyName, curTypeNames);
+                    curAssemblyName = val.Substring(1);
                     continue;
                 }
 
-                curTypes.Add((Type) val);
+                curTypeNames.Add(val);
             }
 
-            FinializeAssembly(curAssemblyName, curTypes);
+            FinializeAssembly(curAssemblyName, curTypeNames);
 
             if (_entryAssembly == null)
                 _entryAssembly = DefaultAssembly;
         }
 
-        private static object[] GetAssemblyTypeList()
+        private static string[] GetAssemblyTypeList()
         {
             var anno = typeof(AssemblyTypes).GetAnnotation<IAssemblyTypes>(typeof(IAssemblyTypes));
             return anno != null ? anno.AssemblyTypeList() : null;
         }
 
-        private static void FinializeAssembly(string curAssemblyName, ArrayList<Type> curTypes)
+        private static void FinializeAssembly(string curAssemblyName, ArrayList<string> curTypes)
         {
             if (curTypes.Count == 0)
                 return;
