@@ -213,9 +213,8 @@ namespace System
         [Inline]
         public static string Format(string format, object arg0)
         {
-            if (format == null)
-                throw new ArgumentNullException("format");
-            return Format(null, format, new[] { arg0 });
+            // TODO: think about getting rid of the allocation on this path.
+            return Format(null, format, new[] { arg0 }); 
         }
 
         /// <summary>
@@ -224,8 +223,7 @@ namespace System
         [Inline]
         public static string Format(string format, object arg0, object arg1)
         {
-            if (format == null)
-                throw new ArgumentNullException("format");
+            // TODO: think about getting rid of the allocation on this path.
             return Format(null, format, new[] { arg0, arg1 });
         }
 
@@ -235,8 +233,7 @@ namespace System
         [Inline]
         public static string Format(string format, object arg0, object arg1, object arg2)
         {
-            if (format == null)
-                throw new ArgumentNullException("format");
+            // TODO: think about getting rid of the allocation on this path.
             return Format(null, format, new[] { arg0, arg1, arg2 });
         }
 
@@ -252,7 +249,6 @@ namespace System
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
         public static string Format(IFormatProvider provider, string format, params object[] args)
         {
             var helper = new FormatHelper(null, provider, format, args);
@@ -407,7 +403,6 @@ namespace System
         /// <summary>
         /// Return a new instance which is this string with all characters from the given index on removed.
         /// </summary>
-        [Inline]
         public string Remove(int startIndex)
         {
             if ((startIndex < 0) || (startIndex >= Length))
@@ -465,7 +460,6 @@ namespace System
         /// <summary>
         /// Split this string into parts delimited by the given separators.
         /// </summary>
-        [Inline]
         public string[] Split(string[] separator, StringSplitOptions options)
         {
             // TODO: check if this a correct implementation.
@@ -562,7 +556,6 @@ namespace System
         /// <summary>
         /// Return a substring of this instance. 
         /// </summary>
-        [Inline]
         public string Substring(int startIndex, int length)
         {
             if (length < 0)

@@ -46,7 +46,7 @@ namespace Dot42.Internal
 
             if (this.result == null)
             {
-                /* Try to approximate the size of result to avoid reallocations */
+                // Try to approximate the size of result to avoid reallocations
                 int i, len;
 
                 len = 0;
@@ -59,10 +59,7 @@ namespace Dot42.Internal
                     else
                         break;
                 }
-                if (i == args.Length)
-                    this.result = new StringBuilder(len + format.Length);
-                else
-                    this.result = new StringBuilder();
+                this.result = new StringBuilder(len + format.Length);
             }
         }
 
