@@ -92,7 +92,8 @@ namespace Dot42.Internal.Generics
         [Inline]
         private static bool IsNullableType(Type type)
         {
-            return type.JavaGetName().EndsWith(NullablePostfix) && type.IsSynthetic;
+            return typeof (INullableMarker).JavaIsAssignableFrom(type)
+                && type.JavaGetName().EndsWith(NullablePostfix) /*&& type.IsSynthetic*/; // also check the postfix, as enums inherit from their nullable marker class.
         }
     }
 }

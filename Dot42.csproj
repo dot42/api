@@ -104,6 +104,7 @@
     <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
     <Compile Include="Dot42\Internal\IAssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\IGenericTypeDefinition.cs" />
+    <Compile Include="Dot42\Internal\INullableMarker.cs" />
     <Compile Include="Dot42\Internal\NumberFormatFactory.cs" />
     <Compile Include="Dot42\Internal\ReflectionCache.cs" />
     <Compile Include="Dot42\Internal\ReflectionHelper.cs" />
