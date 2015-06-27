@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Dot42.Collections.Specialized;
 using Java.Lang.Reflect;
-using Java.Util.Concurrent;
+using Java.Util;
 
 namespace Dot42.Internal.Generics
 {
@@ -13,7 +13,7 @@ namespace Dot42.Internal.Generics
     /// </summary>
     internal static class GenericInstanceFactory
     {
-        // These maps have ID charachter, and must be kept. (Weak References would of course be possible)
+        // These maps have ID charachter, and must be kept.
         private static readonly FastConcurrentHashMap<GenericTypeInfo, Type> TypeInfoToProxyType = new FastConcurrentHashMap<GenericTypeInfo, Type>();
         private static readonly ConcurrentTypeHashMap<GenericTypeInfo> ProxyTypeToTypeInfo = new ConcurrentTypeHashMap<GenericTypeInfo>();
         //private static readonly ConcurrentHashMap<GenericTypeInfo, Type> TypeInfoToProxyType = new ConcurrentHashMap<GenericTypeInfo, Type>();
@@ -32,76 +32,97 @@ namespace Dot42.Internal.Generics
             InterfacePermutations = Permutation(perm).GetEnumerator();
         }
 
+        public static Type GetOrMakeGenericInstanceType(Type baseType, Type gp1, Type gp2, Type gp3, Type gp4)
+        {
+            // TODO: make this work without an allocation.
+            Type[] arguments;
+
+            if      (gp2 == null)  arguments = new[] { gp1 };
+            else if (gp3 == null)  arguments = new[] { gp1, gp2 };
+            else if (gp4 == null)  arguments = new[] { gp1, gp2, gp3 };
+            else                   arguments = new[] { gp1, gp2, gp3, gp4 };
+
+            var typeId = new GenericTypeInfo(baseType, arguments);
+            return GetOrMakeGenericInstanceType(typeId);
+        }
+       
         public static Type GetOrMakeGenericInstanceType(Type baseType, Type[] genericParameters)
         {
-            var typeInfo = new GenericTypeInfo(baseType, genericParameters);
+            // TODO: make this work without an allocation.
+            var typeId = new GenericTypeInfo(baseType, genericParameters);
+            return GetOrMakeGenericInstanceType(typeId);
+        }
 
-            Type proxyType = TypeInfoToProxyType.Get(typeInfo);
+        private static Type GetOrMakeGenericInstanceType(GenericTypeInfo typeId)
+        {
+            Type proxyType = TypeInfoToProxyType.Get(typeId);
 
             Type previousProxyType = null;
 
             if (proxyType == null)
             {
-                proxyType = CreateUniqueType(baseType, genericParameters);
-                previousProxyType = TypeInfoToProxyType.PutIfAbsent(typeInfo, proxyType);
+                proxyType = CreateUniqueType();
+                previousProxyType = TypeInfoToProxyType.PutIfAbsent(typeId, proxyType);
 
                 // always put generic parameters, to avoid 
                 // possible race. the final instance doesn't matter.
-                ProxyTypeToTypeInfo.Put(proxyType, typeInfo);
+                ProxyTypeToTypeInfo.Put(proxyType, typeId);
             }
 
             return previousProxyType ?? proxyType;
         }
 
+        /// <summary>
+        /// returns null if 'proxyType' is not a proxy type.
+        /// </summary>
         public static object CreateGenericInstance(Type proxyType, params object[] arguments)
         {
+            // fast path to avoid the volatile access on the hash map.
+            if (!IsGenericInstanceType(proxyType)) 
+                // return null if not a generic instance.
+                return null; 
+
             var typeInfo = ProxyTypeToTypeInfo.Get(proxyType);
+            var newargs = typeInfo.AddOrGetGenericParameters(arguments);
 
-            if (typeInfo == null) // return null if not a generic instance.
-                return null;
-
-            var args = new List<object>(arguments) {typeInfo.Arguments}.ToArray();
-            var constructor = Activator.GetBestMatchingConstructor(typeInfo.TypeDefinition, args);
-            return constructor.NewInstance(args);
+            var constructor = Activator.GetBestMatchingConstructor(typeInfo.TypeDefinition, newargs);
+            return constructor.NewInstance(newargs);
         }
 
         /// <summary>
         /// returns null if not a generic proxy type.
         /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        public static Type GetGenericTypeDefinition(Type type)
+        public static Type GetGenericTypeDefinition(Type proxyType)
         {
-            var typeInfo = ProxyTypeToTypeInfo.Get(type);
+            // fast path to avoid the volatile access on the hash map.
+            if (!IsGenericInstanceType(proxyType)) return null;
+
+            var typeInfo = ProxyTypeToTypeInfo.Get(proxyType);
             if (typeInfo == null) 
                 return null;
 
             return typeInfo.TypeDefinition;
-
         }
 
         /// <summary>
         /// returns null if not a generic proxy type.
         /// </summary>
-        public static Type[] GetGenericArguments(Type type)
+        public static GenericTypeInfo GetGenericTypeInfo(Type proxyType)
         {
-            var typeInfo = ProxyTypeToTypeInfo.Get(type);
-            if (typeInfo == null)
-                return null;
-            return typeInfo.Arguments;
+            // fast path to avoid the volatile access on the hash map.
+            if (!IsGenericInstanceType(proxyType)) return null;
+
+            return ProxyTypeToTypeInfo.Get(proxyType);
         }
 
-        public static GenericTypeInfo GetGenericTypeInfo(Type type)
-        {
-            return ProxyTypeToTypeInfo.Get(type);
-        }
-
+        [Inline]
         public static bool IsGenericInstanceType(Type type)
         {
-            return ProxyTypeToTypeInfo.Get(type) != null;
+            // fast path to avoid the volatile access on the hash map.
+            return typeof (IGenericMarker0).JavaIsAssignableFrom(type);
         }
 
-        private static Type CreateUniqueType(Type baseType, Type[] genericParameters)
+        private static Type CreateUniqueType()
         {
             Type[] interfaces;
             lock (InterfacePermutations)
@@ -131,12 +152,6 @@ namespace Dot42.Internal.Generics
                     yield return ret;
                 }
             }
-        }
-
-        private static void ClearCaches(object sender, EventArgs e)
-        {
-            ProxyTypeToTypeInfo.Clear();
-            TypeInfoToProxyType.Clear();
         }
 
         internal interface IGenericMarker0 { }

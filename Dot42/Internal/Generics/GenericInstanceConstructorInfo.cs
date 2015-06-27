@@ -8,12 +8,12 @@ namespace Dot42.Internal.Generics
     internal class GenericInstanceConstructorInfo : ConstructorInfo
     {
         private readonly Type _declaringType;
-        private readonly Type[] _genericParameters;
+        private readonly GenericTypeInfo _genericType;
 
-        public GenericInstanceConstructorInfo(Constructor ctor, Type declaringType, Type[] genericParameters) : base(ctor)
+        public GenericInstanceConstructorInfo(Constructor ctor, Type declaringType, GenericTypeInfo genericType) : base(ctor)
         {
             _declaringType = declaringType;
-            _genericParameters = genericParameters;
+            _genericType = genericType;
         }
 
         public override Type DeclaringType { get { return _declaringType; } }
@@ -21,19 +21,12 @@ namespace Dot42.Internal.Generics
         protected override Type[] JavaGetParameterTypes()
         {
             var baseParameters = JavaConstructor.ParameterTypes;
-            return baseParameters.Take(baseParameters.Length - 1).ToArray();
+            return baseParameters.Take(baseParameters.Length - _genericType.NumberOfArguments);
         }
 
         public override object Invoke(object[] args)
         {
-            var numArgs = args == null? 0: args.Length;
-
-            object[] transformedArgs = new object[numArgs + 1];
-            if(numArgs > 0)
-                System.Array.Copy(args, transformedArgs, numArgs);
-
-            transformedArgs[numArgs] = _genericParameters;
-
+            object[] transformedArgs = _genericType.AddOrGetGenericParameters(args);
             return base.Invoke(transformedArgs);
         }
     }

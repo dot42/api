@@ -39,6 +39,10 @@ namespace System
         // invocation list between instances, if possible. Also, we only 
         // create an invocation list when required. 
 
+        // TODO: check if the interlocked access neccessary to share the invocation
+        //       list actually brings any performance benefit when compared to always 
+        //       creating a new list.
+
         [Include]
         protected int InvocationListLength;
 

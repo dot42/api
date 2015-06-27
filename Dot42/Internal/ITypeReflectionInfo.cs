@@ -24,10 +24,10 @@ namespace Dot42.Internal
 	internal interface ITypeReflectionInfo : IAnnotation
     {
         /// <summary>
-        /// Gets the fieldname that holds the type arguments.
+        /// Gets the fieldname(s) that hold the type arguments.
         /// </summary>
         [Include]
-        string GenericArgumentsField();
+        string[] GenericArgumentsFields();
 
         /// <summary>
         /// returns the number of generic arguments of this type

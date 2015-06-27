@@ -92,7 +92,7 @@ namespace Dot42.Internal.Generics
         [Inline]
         private static bool IsNullableType(Type type)
         {
-            return type.IsSynthetic && type.Name.EndsWith(NullablePostfix);
+            return type.JavaGetName().EndsWith(NullablePostfix) && type.IsSynthetic;
         }
     }
 }

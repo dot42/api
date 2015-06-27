@@ -71,8 +71,6 @@ namespace System
 	    {
             // We have to make sure we return the correct primitive type
             // if the object was boxed.
-            //
-
 	        var type = JavaGetClass();
 
 	        if (type == TypeHelper.BooleanType())

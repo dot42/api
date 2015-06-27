@@ -30,12 +30,13 @@ namespace Dot42.Internal
         {
             if (value == null) return false;
             var type = value.JavaGetClass();
-            return (type == TypeHelper.ByteType()) ||
-                   (type == TypeHelper.ShortType()) ||
+            return (type == TypeHelper.ByteType())    ||
+                   (type == TypeHelper.ShortType())   ||
                    (type == TypeHelper.IntegerType()) ||
-                   (type == TypeHelper.LongType()) ||
-                   (type == TypeHelper.FloatType()) ||
-                   (type == TypeHelper.DoubleType());
+                   (type == TypeHelper.LongType())    ||
+                   (type == TypeHelper.FloatType())   ||
+                   (type == TypeHelper.DoubleType()   ||
+                   (type == typeof(Type)));
         }
 
         /// <summary>
@@ -52,6 +53,7 @@ namespace Dot42.Internal
             if (type == TypeHelper.LongType()) return new FormattableLong((long) value);
             if (type == TypeHelper.FloatType()) return new FormattableFloat((float) value);
             if (type == TypeHelper.DoubleType()) return new FormattableDouble((double) value);
+            if (type == typeof(Type)) return new FormattableType((Type)value);
             return null;
         }
 
@@ -65,6 +67,15 @@ namespace Dot42.Internal
             var formattable = value as IFormattable;
             if (formattable == null) throw new InvalidCastException();
             return formattable;
+        }
+
+        /// <summary>
+        /// plain 'as IFormattable'  without any virtual formattables.
+        /// </summary>
+        [Include(TypeCondition = typeof(IFormattable))][DexNative]
+        public static IFormattable AsNativeFormattable(object value)
+        {
+            return null;
         }
 
         /// <summary>
@@ -196,6 +207,28 @@ namespace Dot42.Internal
             public string ToString(string format, IFormatProvider formatProvider)
             {
                 return value.ToString(format, formatProvider);
+            }
+        }
+
+        /// <summary>
+        /// Formattable for Type
+        /// </summary>
+        [Include(TypeCondition = typeof(IFormattable))]
+        private sealed class FormattableType : IFormattable
+        {
+            private readonly Type value;
+
+            /// <summary>
+            /// Default ctor
+            /// </summary>
+            public FormattableType(Type value)
+            {
+                this.value = value;
+            }
+
+            public string ToString(string format, IFormatProvider formatProvider)
+            {
+                return value.FullName;
             }
         }
     }

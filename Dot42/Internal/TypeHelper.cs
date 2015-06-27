@@ -126,10 +126,35 @@ namespace Dot42.Internal
         /// runtime class to map a primitive, a nullable marker type or a generic proxy.
         /// </summary>
         [Include][DebuggerHidden]
-        internal static Type GetGenericInstanceType(Type baseType, Type[] args)
+        internal static Type GetGenericInstanceType(Type baseType, Type[] genericParameters)
         {
-            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, args);
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, genericParameters);
         }
+
+        [Include][DebuggerHidden]
+        internal static Type GetGenericInstanceType(Type baseType, Type gp1)
+        {
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, gp1, null, null, null);
+        }
+
+        [Include][DebuggerHidden]
+        internal static Type GetGenericInstanceType(Type baseType, Type gp1, Type gp2)
+        {
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, gp1, gp2, null, null);
+        }
+
+        [Include][DebuggerHidden]
+        internal static Type GetGenericInstanceType(Type baseType, Type gp1, Type gp2, Type gp3)
+        {
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, gp1, gp2, gp3, null);
+        }
+
+        [Include][DebuggerHidden]
+        internal static Type GetGenericInstanceType(Type baseType, Type gp1, Type gp2, Type gp3, Type gp4)
+        {
+            return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, gp1, gp2, gp3, gp4);
+        }
+
 
         public static Type EnsurePrimitiveType(Type p)
         {
@@ -238,11 +263,11 @@ namespace Dot42.Internal
             // Exclude instance members?
             if (((flags & BindingFlags.Instance) == 0) && !Modifier.IsStatic(modifiers)) return false;
             // Exclude static members?
-            if (((flags & BindingFlags.Static) == 0) && Modifier.IsStatic(modifiers)) return false;
+            if (((flags & BindingFlags.Static)   == 0) && Modifier.IsStatic(modifiers))  return false;
             // Exclude public members?
-            if (((flags & BindingFlags.Public) == 0) && Modifier.IsPublic(modifiers)) return false;
+            if (((flags & BindingFlags.Public)   == 0) && Modifier.IsPublic(modifiers))  return false;
             // Exclude nonpublic members?
-            if (((flags & BindingFlags.NonPublic) == 0) && !Modifier.IsPublic(modifiers)) return false;
+            if (((flags & BindingFlags.NonPublic)== 0) && !Modifier.IsPublic(modifiers)) return false;
             return true;
         }
 	}

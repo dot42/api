@@ -613,7 +613,9 @@ namespace System
 
         public static Type GetType(string typeName)
         {
-            // TODO: implement for generics, with parsing of "[,]" syntax.
+            // TODO: implement for generics, with parsing of "[,]" syntax, e.g.
+            //       Type.GetType("System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]]");
+            //       Also: check if ForName throws an exception; GetType does not if the type does not exist.
             return ForName(typeName.Replace('`', GenericsReflection.GenericTickChar));
         }
 
