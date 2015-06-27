@@ -15,9 +15,10 @@
 // limitations under the License.
 
 using System.Runtime.InteropServices;
+using Dot42;
 using Dot42.Internal;
 using Java.Text;
-using Java.Util;
+using Locale = Java.Util.Locale;
 
 namespace System.Globalization
 {
@@ -29,9 +30,9 @@ namespace System.Globalization
         private readonly LazyAndWeak<NumberFormatInfo> _numberFormat;
         private readonly LazyAndWeak<DateTimeFormatInfo > _dateTimeFormat;
 
-        private static readonly Lazy<CultureInfo> CachedInvariantCulture;
-        private static Lazy<CultureInfo> _cachedCurrentCulture;
-        private static readonly CustomFormatter _customFormatter = new CustomFormatter();
+        private static readonly CultureInfo TheInvariantCulture;
+        private static volatile CultureInfo _currentCulture;
+        private static readonly CustomFormatter TheCustomFormatter = new CustomFormatter();
 
         internal Locale Locale
         {
@@ -40,17 +41,13 @@ namespace System.Globalization
 
         static CultureInfo ()
         {
-            Locale invariantLocale;
+            // US comes much closer to CultureInfo.InvariantCulture 
+            // than Locale.ROOT, when it comes to Date/Time formatting/parsing.
+            
+            // just fix this at startup,so that reads are non-volatile.
+            TheInvariantCulture = new CultureInfo(Locale.US, true); 
 
-#if ANDROID_9P
-            invariantLocale = Locale.US; // US comes much closer to CultureInfo.InvariantCulture 
-                                         // than Locale.ROOT, when it comes to Date/Time formatting/parsing.
-#else
-            // TODO: check if this actually exists. else change back to Locale.Default.
-            invariantLocale = Locale.US;
-#endif
-            CachedInvariantCulture = new Lazy<CultureInfo>(() => new CultureInfo(invariantLocale, true));
-            _cachedCurrentCulture = new Lazy<CultureInfo>(() => new CultureInfo(Locale.Default));
+            _currentCulture = new CultureInfo(Locale.Default);
 
             Application.LocaleChanged += OnLocaleChanged;
 
@@ -71,20 +68,10 @@ namespace System.Globalization
         {
         }
 
-        public static CultureInfo CurrentCulture
-        {
-            get { return _cachedCurrentCulture.Value; } 
-        }
+        public static CultureInfo CurrentCulture { get { return _currentCulture; }  }
+        public static CultureInfo CurrentUICulture { get { return _currentCulture; } }
 
-        public static CultureInfo CurrentUICulture
-        {
-            get { return _cachedCurrentCulture.Value; }
-        }
-
-        public static CultureInfo InvariantCulture
-        {
-            get { return CachedInvariantCulture.Value; } 
-        }
+        public static CultureInfo InvariantCulture { [Inline] get { return TheInvariantCulture; } }
 
         public virtual DateTimeFormatInfo DateTimeFormat
         {
@@ -115,7 +102,7 @@ namespace System.Globalization
         {
             if (formatType == typeof(ICustomFormatter))
             {
-                return _customFormatter;
+                return TheCustomFormatter;
             }
             if (formatType == typeof(NumberFormatInfo))
             {
@@ -132,7 +119,7 @@ namespace System.Globalization
 
         private static void OnLocaleChanged(object sender, EventArgs e)
         {
-            _cachedCurrentCulture = new Lazy<CultureInfo>(() => new CultureInfo(Locale.Default));
+            _currentCulture = new CultureInfo(Locale.Default);
         }
 
         private class CustomFormatter : ICustomFormatter

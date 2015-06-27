@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Globalization;
 using Java.Text;
 
 namespace Dot42.Internal
@@ -55,31 +56,45 @@ namespace Dot42.Internal
             return Format(format, (long)value, provider);
 	    }
 
+        [Inline]
+        private static bool IsDefaultFormat(string format)
+        {
+            return format == null || format.Length == 0 || (format.Length == 1 && (format[0]) == 'G' || format[0] == 'g');
+        }
+
         internal static string Format(string format, int value, IFormatProvider provider)
         {
+            bool isDefaultFormat = IsDefaultFormat(format);
+            if (isDefaultFormat/* && provider == CultureInfo.InvariantCulture*/)
+                return int.ToString(value);
+
              NumberFormat f;
 
-            if (null == format || format == "G" || format == "g")
-            {
-                f = NumberFormatFactory.GetFormat("0", provider);
-            }
-            else
+            //if (isDefaultFormat)
+            //{
+            //    f = NumberFormatFactory.GetFormat("0", provider);
+            //}
+            //else
             {
                 f = NetFormatStringToJavaNumberFormat(format, provider, typeof (int));
             }
                 
-            return f.Format(value);
+            return f.Format((long)value);
         }
 
         internal static string Format(string format, long value, IFormatProvider provider)
         {
+            bool isDefaultFormat = IsDefaultFormat(format);
+            if (isDefaultFormat/* && provider == CultureInfo.InvariantCulture*/) 
+                return long.ToString(value);
+
             NumberFormat f;
 
-            if (null == format || format == "G" || format == "g")
-            {
-                f = NumberFormatFactory.GetFormat("0", provider);
-            }
-            else
+            //if (isDefaultFormat)
+            //{
+            //    f = NumberFormatFactory.GetFormat("0", provider);
+            //}
+            //else
             {
                 f = NetFormatStringToJavaNumberFormat(format, provider, typeof (long));
             }
@@ -91,9 +106,13 @@ namespace Dot42.Internal
         {
             NumberFormat f;
 
+            bool isDefaultFormat = IsDefaultFormat(format);
+            //if (isDefaultFormat && provider == CultureInfo.InvariantCulture) // can't use the fast path, see below
+            //    return float.ToString(value);
+
             var dbl = (double)value;
 
-            if (format == null || format.StartsWith("G") || format.StartsWith("g"))
+            if (isDefaultFormat)
             {
 #if ANDROID_10P
                 f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 7);
@@ -126,9 +145,13 @@ namespace Dot42.Internal
 
         internal static string Format(string format, double value, IFormatProvider provider)
         {
+            bool isDefaultFormat = IsDefaultFormat(format);
+            //if (isDefaultFormat && provider == CultureInfo.InvariantCulture) // can't use the fast path, see below
+            //    return float.ToString(value);
+
             NumberFormat f;
 
-            if (format == null || format.StartsWith("G") || format.StartsWith("g"))
+            if (isDefaultFormat)
             {
 #if ANDROID_10P
                 f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 15);
