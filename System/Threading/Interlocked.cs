@@ -41,10 +41,14 @@
 
         /// <summary>
         /// This is the same as CompareExchange, except that it returns true if the new 
-        /// value was set, instead of the old value. It offers a tiny performance benefit
-        /// over CompareExchange.
+        /// value was set, instead of the old value. It can offer a performance benefit
+        /// over CompareExchange, though the Interlocked converter is able to automatically
+        /// transform the most common forms of CompareExchange to CompareAndSet. 
+        /// <para>
+        /// Note that comparand and value are swapped in comparison to CompareExchange.
+        /// </para>
         /// </summary>
-        internal static bool CompareAndSet<T>(ref T location, T value, T comparand) where T : class
+        internal static bool CompareAndSet<T>(ref T location, T comparand, T value) where T : class
         {
             if (location == comparand)
             {
@@ -56,8 +60,12 @@
 
         /// <summary>
         /// This is the same as CompareExchange, except that it returns true if the new 
-        /// value was set, instead of the old value. It offers a tiny performance benefit
-        /// over CompareExchange.
+        /// value was set, instead of the old value. It can offer a performance benefit
+        /// over CompareExchange, though the Interlocked converter is able to automatically
+        /// transform the most common forms of CompareExchange to CompareAndSet. 
+        /// <para>
+        /// Note that comparand and value are swapped in comparison to CompareExchange.
+        /// </para>
         /// </summary>
         internal static object CompareAndSet(ref object location, object value, object comparand)
         {
@@ -71,8 +79,12 @@
 
         /// <summary>
         /// This is the same as CompareExchange, except that it returns true if the new 
-        /// value was set, instead of the old value. It offers a tiny performance benefit
-        /// over CompareExchange.
+        /// value was set, instead of the old value. It can offer a performance benefit
+        /// over CompareExchange, though the Interlocked converter is able to automatically
+        /// transform the most common forms of CompareExchange to CompareAndSet. 
+        /// <para>
+        /// Note that comparand and value are swapped in comparison to CompareExchange.
+        /// </para>
         /// </summary>
         internal static bool CompareAndSet(ref int location, int value, int comparand)
         {
@@ -86,8 +98,12 @@
 
         /// <summary>
         /// This is the same as CompareExchange, except that it returns true if the new 
-        /// value was set, instead of the old value. It offers a tiny performance benefit
-        /// over CompareExchange.
+        /// value was set, instead of the old value. It can offer a performance benefit
+        /// over CompareExchange, though the Interlocked converter is able to automatically
+        /// transform the most common forms of CompareExchange to CompareAndSet. 
+        /// <para>
+        /// Note that comparand and value are swapped in comparison to CompareExchange.
+        /// </para>
         /// </summary>
         internal static bool CompareAndSet(ref long location, long value, long comparand)
         {

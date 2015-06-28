@@ -88,9 +88,8 @@ namespace Dot42.Internal.Threading
             if (_checkIncreaseThreadCount == null)
             {
                 var future = TaskMonitorService.GetService().Delay(30000L, CheckThreadCount);
-                var prevFuture = Interlocked.CompareExchange(ref _checkIncreaseThreadCount, future, null);
-
-                if (prevFuture != null)
+                bool setValue = Interlocked.CompareExchange(ref _checkIncreaseThreadCount, future, null) == null;
+                if (!setValue)
                     future.Cancel(false);
             }
         }
