@@ -15,27 +15,11 @@
 // limitations under the License.
 
 using System.Reflection;
-using Dot42.Collections.Specialized;
-using Dot42.Internal;
-using Java.Util.Concurrent;
 
 namespace System
 {
 	public abstract partial class Delegate
 	{
-        private static readonly ConcurrentTypeHashMap<FieldInfo> InstanceFieldCache = new ConcurrentTypeHashMap<FieldInfo>();
-        private static readonly ConcurrentTypeHashMap<MethodInfo> TargetMethodCache = new ConcurrentTypeHashMap<MethodInfo>();
-        //private static readonly ConcurrentHashMap<Type, FieldInfo> InstanceFieldCache = new ConcurrentHashMap<Type, FieldInfo>();
-        //private static readonly ConcurrentHashMap<Type, MethodInfo> TargetMethodCache = new ConcurrentHashMap<Type, MethodInfo>();
-
-	    static Delegate()
-	    {
-	        Application.ReleaseCaches += (s, e) =>
-	        {
-	            InstanceFieldCache.Clear();
-	            TargetMethodCache.Clear();
-	        };
-	    }
         /// <summary>
         /// Concatenates an invocation list of 2 delegates.
         /// </summary>
@@ -90,41 +74,9 @@ namespace System
 
 	    public static bool operator !=(Delegate d1, Delegate d2)
 	    {
+	        // ReSharper disable once NegativeEqualityExpression
 	        return !(d1 == d2);
 	    }
-
-        protected FieldInfo GetInstanceField()
-        {
-            var ret = InstanceFieldCache.Get(this.GetType());
-            
-            if (ReferenceEquals(ret, FieldInfo.None))
-                return null;
-            if (ret != null)
-                return ret;
-
-            ret = GetType().GetField("instance", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-            ret = ret ?? FieldInfo.None;
-            ret = InstanceFieldCache.PutIfAbsent(this.GetType(), ret) ?? ret;
-
-            if (ReferenceEquals(ret, FieldInfo.None))
-                return null;
-            return ret;
-        }
-
-        protected MethodInfo GetMethodInfo()
-        {
-            var ret = TargetMethodCache.Get(this.GetType());
-            if (ret != null)
-                return ret;
-
-            var annotation = GetType().GetAnnotation<IDelegateMethod>(typeof(IDelegateMethod));
-            if (annotation == null)
-                throw new NotImplementedException("delegate annotation missing.");
-         
-            ret = new MethodInfo(annotation.Method(), this.GetType());
-
-            return TargetMethodCache.PutIfAbsent(this.GetType(), ret) ?? ret;
-        }
-	}
+    }
 }
 

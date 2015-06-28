@@ -35,26 +35,27 @@ namespace System
         // The invocation list will only contain delegates that 
         // do not have an invocation list on their own, i.e. we always have
         // a flat invocation list.
-        // We try to minimize the number of new allocations by sharing the 
-        // invocation list between instances, if possible. Also, we only 
-        // create an invocation list when required. 
+        // We only create an invocation list when required. When required,
+        // we try to minimize the number of new allocations by sharing the 
+        // invocation list between instances, if possible. Following typical
+        // usage patterns, a newly combined delegate takes ownership of the
+        // invocation list from the current delegate, if the current delegate 
+        // owns it.
 
-        // TODO: check if the interlocked access neccessary to share the invocation
-        //       list actually brings any performance benefit when compared to always 
-        //       creating a new list.
-
-        [Include]
         protected int InvocationListLength;
-
-        [Include]
 	    protected MulticastDelegate[] InvocationList;
+        private int lostInvocationList; 
 
         [Include]
-        private int ownsInvocationList;
+        protected abstract bool EqualsWithoutInvocationList(MulticastDelegate other);
 
-        protected abstract bool EqualsWithoutInvocationList(object other);
-        [DexName("CloneWithNewInvocationList")]
+        [Include]
+        protected virtual int GetHashCodeWithoutInvocationList() { return GetType().GetHashCode(); }
+        [Include, DexName("CloneWithNewInvocationList")]
         protected abstract MulticastDelegate CloneWithNewInvocationList(MulticastDelegate[] invocationList, int invocationListLength);
+
+        protected virtual object GetTargetImpl() { return null;}
+        protected abstract MethodInfo GetMethodInfoImpl();
 
         protected override sealed Delegate CombineImpl(Delegate other)
         {
@@ -63,24 +64,33 @@ namespace System
 
             MulticastDelegate o = (MulticastDelegate) other;
 
+
             var oInvList = o.InvocationList;
-            var oInvLen = o.InvocationListLength;
+            var oInvLen  = o.InvocationListLength;
 
             o = o.WithoutInvocationList(); // we flatten the list. 
 
             var newInvList = InvocationList;
             var curInvLen = InvocationListLength;
             int newInvLen = curInvLen + 1 + oInvLen;
-            
 
             bool needNewList = newInvList == null || newInvList.Length < newInvLen;
 
             // try appending to the current list.
             if (!needNewList)
             {
-                if (Interlocked.CompareExchange(ref ownsInvocationList, 0, 1) == 0)
-                    needNewList = true;
-                else
+                //if (Interlocked.CompareExchange(ref lostInvocationList, 1, 0) != 0 /*!TakeInvokationListOwnership()*/)
+                // The locking might acually be faster than forcing a field of the class to be volatile,
+                // but more measurements are needed.
+                lock (InvocationList)
+                {
+                    if (lostInvocationList != 0)
+                        needNewList = true;
+                    else
+                        lostInvocationList = 1;
+                }
+
+                if(!needNewList)
                 {
                     newInvList[curInvLen] = o;
                     for (int i = 0; i < oInvLen; ++i)
@@ -111,9 +121,7 @@ namespace System
                 newInvList = list;
             }
 
-            var ret = this.CloneWithNewInvocationList(newInvList, newInvLen);
-            ret.ownsInvocationList = 1;
-            return ret;
+            return this.CloneWithNewInvocationList(newInvList, newInvLen);
         }
 
         protected override sealed Delegate RemoveImpl(Delegate other)
@@ -160,8 +168,15 @@ namespace System
             }
 
             var ret = head.CloneWithNewInvocationList(newInvList, newInvListLen);
-            if (newInvList != null && !ReferenceEquals(newInvList, InvocationList))
-                ret.ownsInvocationList = 1;
+
+            if (newInvList != null && ReferenceEquals(newInvList, InvocationList))
+            {
+                // we cannot take ownerhip of the invocation list here as we 
+                // would overwrite existing extries at the next invocation of
+                // CombineImpl
+                ret.lostInvocationList = 1;
+            }
+                
             return ret;
         }
 
@@ -174,13 +189,6 @@ namespace System
             return ret;
         }
 
-        private MulticastDelegate WithoutInvocationList()
-        {
-            if (InvocationListLength == 0)
-                return this;
-            return CloneWithNewInvocationList(null, 0);
-        }
-
         /// <summary>
 	    /// return the class instance or null, if this is a static delegate.
 	    /// </summary>
@@ -188,17 +196,14 @@ namespace System
 	    {
 	        get
 	        {
-	            FieldInfo field;
                 // we need to return the last Target from our invocation list.
                 if (InvocationListLength > 0)
 	            {
                     var del = InvocationList[InvocationListLength - 1];
-	                field = del.GetInstanceField();
-	                return field == null ? null : field.GetValue(del);
+	                return del.GetTargetImpl();
 	            }
 
-                field = this.GetInstanceField();
-                return field == null ? null : field.GetValue(this);
+	            return GetTargetImpl();
             }
 	    }
 
@@ -208,8 +213,8 @@ namespace System
             {
                 // we need to return the last Method from our invocation list.
                 if(InvocationListLength > 0)
-                    return InvocationList[InvocationListLength-1].GetMethodInfo();
-                return GetMethodInfo();
+                    return InvocationList[InvocationListLength - 1].GetMethodInfoImpl();
+                return GetMethodInfoImpl();
             }
         }
 
@@ -225,7 +230,7 @@ namespace System
             if (invListLen != o.InvocationListLength)
                 return false;
 
-            if (!EqualsWithoutInvocationList(o))
+            if (!EqualsWithoutInvocationList(o)) 
                 return false;
 
             var oInvList = o.InvocationList;
@@ -233,7 +238,7 @@ namespace System
 
             for (int i = 0; i < invListLen; ++i)
             {
-                if (!invList[i].EqualsWithoutInvocationList(oInvList[i]))
+                if(!invList[i].EqualsWithoutInvocationList(oInvList[i]))
                     return false;
             }
             return true;
@@ -241,8 +246,7 @@ namespace System
 
         public override int GetHashCode()
         {
-            // GetType() maps to the called method.
-            return GetType().GetHashCode() * 33 + InvocationListLength;
+            return GetHashCodeWithoutInvocationList() * 33 ^ InvocationListLength;
         }
 
         private static MulticastDelegate[] RemoveSliceFromInvocationList(MulticastDelegate[] invList, int invListLen, int idx, int length)
@@ -284,31 +288,45 @@ namespace System
             // glance this seems to be overkill for an invocation list. In the
             // typical usage scenario, 'o' will have no invocation list at all.
             // We stick to the naive implementation for now.
-            for (int i = InvocationListLength - oInvLen; i >= 0; --i) 
+            int i = InvocationListLength - oInvLen;
+
+            if (oInvLen == 0)
             {
-                // 0 = this
-                if (i == 0)
+                for(; i > 0; --i)
                 {
-                    // compare o itself
-                    return this.EqualsWithoutInvocationList(o) ? 0 : -1;
+                    if (o.EqualsWithoutInvocationList(invList[i - 1]))
+                        return i;
                 }
-                
-                if (!invList[i - 1].EqualsWithoutInvocationList(o))
-                    continue;
-
-                for (int j = 0; j < oInvLen; ++j)
+            }
+            else
+            {
+                for (; i > 0; --i)
                 {
-                    if (!invList[i + j].EqualsWithoutInvocationList(oInvList[j]))
-                        goto next_iteration;
+                    if (!o.EqualsWithoutInvocationList(invList[i - 1]))
+                        continue;
+
+                    for (int j = 0; j < oInvLen; ++j)
+                    {
+                        if (!invList[i + j].EqualsWithoutInvocationList(oInvList[j]))
+                            goto next_iteration;
+                    }
+
+                    // found it!
+                    return i;
+
+                    next_iteration:;
                 }
-
-                // found it!
-                return i;
-
-            next_iteration: ;
             }
 
-            return -1;
+            // 0 = this
+            return i < 0 || !o.EqualsWithoutInvocationList(this) ? -1 : 0;
+        }
+
+        [Inline, DexNative]
+        private MulticastDelegate WithoutInvocationList()
+        {
+            if (InvocationListLength == 0) return this;
+            return CloneWithNewInvocationList(null, 0);
         }
     }
 }

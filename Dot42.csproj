@@ -109,7 +109,6 @@
     <Compile Include="Dot42\Internal\ReflectionCache.cs" />
     <Compile Include="Dot42\Internal\ReflectionHelper.cs" />
     <Compile Include="Dot42\Internal\ReflectionInfo\FrameworkPropertyInfoProvider.cs" />
-    <Compile Include="Dot42\Internal\IDelegateMethod.cs" />
     <Compile Include="Dot42\Internal\ReflectionInfo\EventInfoProvider.cs" />
     <Compile Include="Dot42\IncludeFrameworkProperties.cs" />
     <Compile Include="Dot42\Internal\IReflectionInfo.cs" />

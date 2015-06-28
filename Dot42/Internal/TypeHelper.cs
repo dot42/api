@@ -155,6 +155,24 @@ namespace Dot42.Internal
             return GenericInstanceFactory.GetOrMakeGenericInstanceType(baseType, gp1, gp2, gp3, gp4);
         }
 
+        /// <summary>
+        /// Construct a MethodInfo for the given method.
+        /// </summary>
+        /// <param name="declaringType">The declaring type. For generic classes, this is not the proxy type.</param>
+        /// <param name="methodName"></param>
+        /// <param name="parameters">this includes all generic parameters.</param>
+        /// <param name="genericInstanceTypeParameters"></param>
+        /// <param name="genericMethodParameters"></param>
+        /// <returns></returns>
+        [Include(TypeCondition = typeof(MulticastDelegate))]
+        internal static MethodInfo GetMethodInfo(Type declaringType, string methodName, Type[] parameters, Type[] genericInstanceTypeParameters, Type[] genericMethodParameters)
+        {
+            // TODO: make this correctly work with methods taking generic parameters as well.
+            var javaMethod = declaringType.JavaGetDeclaredMethod(methodName, parameters);
+            string possibleExplicitInterfacePrefix = declaringType.JavaIsInterface() ? declaringType.GetSimpleName() + "_" : null;
+            return new MethodInfo(javaMethod, declaringType, possibleExplicitInterfacePrefix);
+        }
+
 
         public static Type EnsurePrimitiveType(Type p)
         {

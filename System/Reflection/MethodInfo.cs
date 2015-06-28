@@ -14,10 +14,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Dot42;
 using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
+    [Include(TypeCondition = typeof(MulticastDelegate))]
     public class MethodInfo : MethodBase
     {
         private readonly Method _method;
