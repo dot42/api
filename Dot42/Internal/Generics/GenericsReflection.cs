@@ -28,6 +28,9 @@ namespace Dot42.Internal.Generics
             public Field[] GenericInstanceFields;
             public bool GenericInstanceFieldIsTypeArray;
         }
+
+        private class NullBaseType { }
+
         private static readonly ConcurrentTypeHashMap<InheritanceInfo> InheritanceCache = new ConcurrentTypeHashMap<InheritanceInfo>();
         private static readonly ConcurrentTypeHashMap<GenericsInfo> GenericInfoCache = new ConcurrentTypeHashMap<GenericsInfo>();
         private static readonly ConcurrentTypeHashMap<Type> BaseTypeCache = new ConcurrentTypeHashMap<Type>();
@@ -84,6 +87,9 @@ namespace Dot42.Internal.Generics
         /// <returns></returns>
         public static Type GetBaseType(Type type)
         {
+            if (type == typeof (object))
+                return null;
+
             var genericTypeInfo = GenericInstanceFactory.GetGenericTypeInfo(type);
             if (genericTypeInfo == null)
             {
@@ -91,8 +97,9 @@ namespace Dot42.Internal.Generics
             }
 
             var baseType = BaseTypeCache.Get(type);
+
             if (baseType != null)
-                return baseType;
+                return baseType == typeof(NullBaseType) ? null : baseType;
             
             var typeDef = genericTypeInfo.TypeDefinition;
             baseType = typeDef.GetSuperclass();
@@ -109,7 +116,7 @@ namespace Dot42.Internal.Generics
                     
             }
 
-            BaseTypeCache.PutIfAbsent(type, baseType);
+            BaseTypeCache.PutIfAbsent(type, baseType ?? typeof(NullBaseType));
             return baseType;
         }
 
