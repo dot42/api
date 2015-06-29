@@ -21,6 +21,8 @@ namespace Dot42.Internal
         private const int FormatScientific = 3;
         private const int FormatCurrency   = 4;
 
+        private static readonly string[] JavaDecimalFormats;
+
         public static NumberFormat GetFormat(string javaPattern, IFormatProvider formatProvider)
         {
             var entry = new Entry(Thread.CurrentThread.Id, FormatNormal, formatProvider, javaPattern, 0, false);
@@ -36,6 +38,12 @@ namespace Dot42.Internal
         public static NumberFormat GetDecimalFormat(string javaPattern, IFormatProvider formatProvider)
         {
             var entry = new Entry(Thread.CurrentThread.Id, FormatDecimal, formatProvider, javaPattern, 0, false);
+            return GetOrCreate(entry);
+        }
+
+        public static NumberFormat GetDecimalFormat(int digits, IFormatProvider formatProvider)
+        {
+            var entry = new Entry(Thread.CurrentThread.Id, FormatDecimal, formatProvider, null, digits, false);
             return GetOrCreate(entry);
         }
 
@@ -57,10 +65,28 @@ namespace Dot42.Internal
             return GetOrCreate(entry);
         }
 
+        public static NumberFormat GetScientificFormat(int digits, bool isUpperCase, IFormatProvider formatProvider)
+        {
+            var entry = new Entry(Thread.CurrentThread.Id, FormatScientific, formatProvider, null, digits, isUpperCase);
+            return GetOrCreate(entry);
+        }
+
         static NumberFormatFactory()
         {
             Application.ReleaseCaches += ClearCache;
             Application.LocaleChanged += ClearCache;
+
+
+            const int length = 17;
+            JavaDecimalFormats = new string[length];
+            JavaDecimalFormats[0] = "0";
+
+            StringBuilder sb = new StringBuilder("0.");
+            for (int i = 1; i < length; ++i)
+            {
+                sb.Append('#');
+                JavaDecimalFormats[i] = sb.ToString();
+            }
         }
 
         private static void ClearCache(object sender, EventArgs e)
@@ -93,15 +119,21 @@ namespace Dot42.Internal
             var locale = type.FormatProvider.ToLocale();
 
             if(type.FormatType == FormatHex)
-                return new HexFormat(type.HexDigits, type.IsUpperCase);
+                return new HexFormat(type.Digits, type.IsUpperCase);
 
-            if(type.FormatType == FormatScientific)
-                return new ScientificFormat(type.Pattern, locale);
-
+            if (type.FormatType == FormatScientific)
+            {
+                var pattern = type.Pattern;
+                if (pattern == null)
+                    pattern = GetPatternByDigits(type.Digits) + (type.IsUpperCase ? "E0" : "e0");
+                return new ScientificFormat(pattern, locale);
+            }
+                
             if (type.FormatType == FormatDecimal)
             {
                 DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale) { Infinity = "Infinity" };
-                return new DecimalFormat(type.Pattern, symbols);
+                string pattern = type.Pattern ?? GetPatternByDigits(type.Digits);
+                return new DecimalFormat(pattern, symbols);
             }
 
             if (type.FormatType == FormatCurrency)
@@ -122,6 +154,13 @@ namespace Dot42.Internal
             }
 
             return format;
+        }
+
+        private static string GetPatternByDigits(int digits)
+        {
+            if (digits < JavaDecimalFormats.Length)
+                return JavaDecimalFormats[digits];
+            return "0." + new string('#', digits);
         }
 
         private class HexFormat : NumberFormat
@@ -212,16 +251,16 @@ namespace Dot42.Internal
             public readonly int FormatType;
             public readonly IFormatProvider FormatProvider;
             
-            public readonly int HexDigits;
+            public readonly int Digits;
             public readonly bool IsUpperCase;
 
             public readonly string Pattern;
-            public Entry(long threadId, int formatType, IFormatProvider formatProvider, string pattern, int hexDigits, bool isUpperCase)
+            public Entry(long threadId, int formatType, IFormatProvider formatProvider, string pattern, int digits, bool isUpperCase)
             {
                 FormatType = formatType;
                 Pattern = pattern;
                 FormatProvider = formatProvider;
-                HexDigits = hexDigits;
+                Digits = digits;
                 IsUpperCase = isUpperCase;
                 ThreadId = threadId;
             }
@@ -233,7 +272,7 @@ namespace Dot42.Internal
                     && FormatType == other.FormatType
                     && Equals(FormatProvider, other.FormatProvider) 
                     && Equals(Pattern, other.Pattern)
-                    && HexDigits == other.HexDigits 
+                    && Digits == other.Digits 
                     && IsUpperCase == other.IsUpperCase;
             }
 
@@ -253,7 +292,7 @@ namespace Dot42.Internal
                     hashCode = (hashCode*397) ^ (FormatProvider != null ? FormatProvider.GetHashCode() : 0);
                     hashCode = (hashCode*397) ^ FormatType;
                     hashCode = (hashCode*397) ^ ((int)(ThreadId & 0xFFFFFFFF) | (int)(ThreadId >> 32));
-                    hashCode = (hashCode*397) ^ HexDigits;
+                    hashCode = (hashCode*397) ^ Digits;
                     hashCode = (hashCode*397) ^ (IsUpperCase?1:0);
                     return hashCode;
                 }

@@ -15,7 +15,6 @@
 // limitations under the License.
 
 using System.Globalization;
-using System.Net;
 using System.Text;
 using Dot42.Internal;
 
@@ -971,71 +970,112 @@ namespace System
         //
         // Returns:
         //     The string representation of the current System.TimeSpan value.
+        private const char Null = '\0';
+
         public override string ToString()
         {
-            return ToString(null);
+            return ToStandardString(Null, null);
         }
 
         public string ToString(IFormatProvider formatProvider)
+        {
+            return ToStandardString(Null, formatProvider);
+        }
+
+        private string ToStandardString(char nullOrG, IFormatProvider formatProvider)
         {
             StringBuilder sb = new StringBuilder(14);
 
             if (ticks < 0)
                 sb.Append('-');
 
-            if (Days != 0)
+            int days = Math.Abs(Days);
+
+            if (days != 0 || nullOrG == 'G')
             {
-                sb.Append(Math.Abs(Days));
-                sb.Append('.');
+                sb.Append(days);
+                sb.Append(nullOrG == Null ? '.' : ':');
             }
 
-            sb.Append(Math.Abs(Hours).ToString("D2", formatProvider));
+            int hours = Math.Abs(Hours);
+            if (hours < 10) sb.Append("0");
+            sb.Append(hours);
             sb.Append(':');
-            sb.Append(Math.Abs(Minutes).ToString("D2", formatProvider));
+
+            int minutes = Math.Abs(Minutes);
+            if (minutes < 10) sb.Append("0");
+            sb.Append(minutes);
             sb.Append(':');
-            sb.Append(Math.Abs(Seconds).ToString("D2", formatProvider));
+
+            int seconds = Math.Abs(Seconds);
+            if (seconds < 10) sb.Append("0");
+            sb.Append(seconds);
 
             int fractional = (int)Math.Abs(ticks % TicksPerSecond);
-            if (fractional != 0)
+            if (fractional != 0 || nullOrG == 'G')
             {
-                sb.Append('.');
-                sb.Append(fractional.ToString("D7"));
+                if (nullOrG == Null || formatProvider == CultureInfo.InvariantCulture)
+                {
+                    sb.Append('.');
+                }
+                else
+                {
+                    var ni = formatProvider.ToNumberFormatInfo();
+                    sb.Append(ni.NumberDecimalSeparator);
+                }
+
+                AppendFractional(sb, nullOrG, fractional, 7);
             }
 
             return sb.ToString();
-            
         }
 
-        private static readonly string[] Zeros = { "", "D1", "D2", "D3", "D4", "D5", "D6", "D7" };
+        private static void AppendFractional(StringBuilder sb, char nullOrG, int fractional, int maxDigits)
+        {
+            int currentLength = sb.Length;
+            
+            // append the number.
+            FormatHelper.Append(sb, fractional, 7);
+            int fracLength = sb.Length - currentLength;
+
+            // trim to requested length.
+            if (fracLength > maxDigits) 
+                sb.Remove(currentLength + maxDigits, fracLength - maxDigits);
+
+            // auto-trim trialing zeroes if requested.
+            if (nullOrG == 'g')
+            {
+                // remove zeroes at the end.
+                int len = 0, idx;
+                for (idx = sb.Length - 1; idx > currentLength + 1; --idx, ++len)
+                    if (sb[idx] != '0') break;
+                if (len != 0) sb.Remove(idx, len);
+            }
+        }
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            if (string.IsNullOrEmpty(format) || format == "g")
-                return ToString(formatProvider);
+            bool isNullOEmpty = string.IsNullOrEmpty(format);
+
+            if (isNullOEmpty || format == "g" || format == "G")
+                return ToStandardString(isNullOEmpty ? Null : format[0], formatProvider);
 
             if (format == "c")
             {
-                return ToString(CultureInfo.InvariantCulture);
+                return ToStandardString(Null, CultureInfo.InvariantCulture);
             }
 
-            StringBuilder sb = new StringBuilder(14);
-
-            if (format == "G")
-            {
-                if (ticks < 0)
-                    sb.Append('-');
-                format = "dd':'hh':'mm':'ss'.'fffffff";
-            }
+            StringBuilder sb = new StringBuilder(format.Length + 5);
 
             var ts = this;
 
-            DateTimeFormatting.TokenizeFormatString(format, (val, isQuote) =>
+            DateTimeFormatting.TokenizeFormatString(format, (start, length, isQuote) =>
             {
                 if (isQuote)
                 {
-                    sb.Append(val);
+                    sb.Append(format, start, length);
                 }
-                else
+                else switch (format[start])
                 {
                     //if (val[0] == '-')
                     //{
@@ -1044,49 +1084,47 @@ namespace System
                     //    return;
                     //}
 
-                    if (val[0] == 'f')
+                    case 'd':
                     {
-                        int fractional = (int) Math.Abs(ts.ticks%TicksPerSecond);
-                        sb.Append(Math.Abs(fractional).ToString("D7", formatProvider).Substring(0, val.Length));
+                        FormatHelper.Append(sb, Math.Abs(ts.Days), length);
                         return;
                     }
-                    if (val[0] == 'F')
+                    case 'h':
                     {
-                        int fractional = (int) Math.Abs(ts.ticks%TicksPerSecond);
+                        if (length > 2) throw new FormatException();
+                        FormatHelper.Append(sb, Math.Abs(ts.Hours), length);
+                        return;
+                    }
+                    case 'm':
+                    {
+                        if (length > 2) throw new FormatException();
+                        FormatHelper.Append(sb, Math.Abs(ts.Minutes), length);
+                        return;
+                    }
+                    case 's':
+                    {
+                        if (length > 2) throw new FormatException();
+                        FormatHelper.Append(sb, Math.Abs(ts.Seconds), length);
+                        return;
+                    }
+                    case 'f':
+                    {
+                        int fractional = (int)Math.Abs(ts.ticks % TicksPerSecond);
+                        AppendFractional(sb, Null, fractional, length);
+                        break;
+                    }
+                    case 'F':
+                    {
+                        int fractional = (int)Math.Abs(ts.ticks % TicksPerSecond);
                         if (fractional != 0)
-                            sb.Append(Math.Abs(fractional).ToString("D7", formatProvider).Substring(0, val.Length));
-                        return;
+                            AppendFractional(sb, Null, fractional, length);
+                        break;
                     }
-
-                    if (val[0] == 'd')
-                    {
-                        var zeroes = val.Length > Zeros.Length ? Zeros[val.Length - 1] : Zeros[val.Length];
-                        sb.Append(Math.Abs(ts.Days).ToString(zeroes, formatProvider));
-                        return;
-                    }
-
-                    if(val.Length > 2)
+                    default:
                         throw new FormatException();
-
-                    if (val[0] == 'h')
-                    {
-                        sb.Append(Math.Abs(ts.Hours).ToString(Zeros[val.Length], formatProvider));
-                        return;
-                    }
-                    if (val[0] == 'm')
-                    {
-                        sb.Append(Math.Abs(ts.Minutes).ToString(Zeros[val.Length], formatProvider));
-                        return;
-                    }
-                    if (val[0] == 's')
-                    {
-                        sb.Append(Math.Abs(ts.Seconds).ToString(Zeros[val.Length], formatProvider));
-                        return;
-                    }
-
-                    throw new FormatException();
                 }
             });
+
             return sb.ToString();
         }
 

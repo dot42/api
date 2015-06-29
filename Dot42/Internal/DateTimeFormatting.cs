@@ -103,7 +103,6 @@ namespace Dot42.Internal
             return format;
         }
 
-        
         private static string ConvertFormatStringNetToJava(string format, DateTimeKind kind, out bool foundDateTimeKind)
         {
             StringBuilder b = new StringBuilder(format.Length + 8);
@@ -111,7 +110,8 @@ namespace Dot42.Internal
             bool localFoundDateTimeKind = false;
             bool isInQuote = false;
 
-            TokenizeFormatString(format, (token, isQuote) =>
+            var format1 = format;
+            TokenizeFormatString(format, (start, length, isQuote) =>
             {
                 if (isQuote)
                 {
@@ -121,13 +121,14 @@ namespace Dot42.Internal
                         isInQuote = true;
                     }
 
-                    b.Append(token);
+                    b.Append(format1, start, length);
                     
                     return;
                 }
+                string token = format1.Substring(start, length);
 
                 string conv = null;
-                if (token == "K")
+                if (length == 1 && token[0] == 'K')
                 {
                     localFoundDateTimeKind = true;
                     if (kind == DateTimeKind.Utc)
@@ -173,11 +174,13 @@ namespace Dot42.Internal
             return format;
         }
 
+        internal delegate void TokenDelegate(int start, int length, bool isQuoted);
+
         /// <summary>
         /// Will call 'token' for every found token/specifier. 
         /// First argument is the substring, second argument is true if this is a literal.
         /// </summary>
-        public static void TokenizeFormatString(string format, Action<string, bool> token)
+        public static void TokenizeFormatString(string format, TokenDelegate token)
         {
             if (string.IsNullOrEmpty(format))
                 return;
@@ -197,8 +200,7 @@ namespace Dot42.Internal
 
                     if (needsFlush)
                     {
-                        string s = format.Substring(idxStart, idx - idxStart);
-                        token(s, isQuote);
+                        token(idxStart, idx - idxStart, isQuote);
                         idxStart = idx;
                     }
                 }
@@ -214,7 +216,7 @@ namespace Dot42.Internal
                 {
                     if(idx == format.Length - 1)
                         throw new FormatException();
-                    token(format.Substring(idx + 1, 1), true);
+                    token(idx + 1, 1, true);
                     idx += 1;
                     idxStart = idx + 1;
                     continue;
@@ -224,8 +226,7 @@ namespace Dot42.Internal
                 {
                     if (idx == format.Length - 1)
                         throw new FormatException();
-                    string s = format.Substring(idx + 1, 1);
-                    token(s, false);
+                    token(idx + 1, 1, false);
 
                     idx += 1;
                     idxStart = idx + 1;
@@ -240,8 +241,7 @@ namespace Dot42.Internal
 
             if (idxStart != idx)
             {
-                string s = format.Substring(idxStart, idx - idxStart);
-                token(s, false);
+                token(idxStart, idx - idxStart, false);
             }
         }
 

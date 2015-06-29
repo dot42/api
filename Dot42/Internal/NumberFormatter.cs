@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using System.Globalization;
+using System.Text;
 using Java.Text;
 
 namespace Dot42.Internal
@@ -59,6 +59,7 @@ namespace Dot42.Internal
         [Inline]
         private static bool IsDefaultFormat(string format)
         {
+            // Dot42 has problems with double-inlinings, therefore we do not use string.IsNullOrEmpty
             return format == null || format.Length == 0 || (format.Length == 1 && (format[0]) == 'G' || format[0] == 'g');
         }
 
@@ -68,17 +69,7 @@ namespace Dot42.Internal
             if (isDefaultFormat/* && provider == CultureInfo.InvariantCulture*/)
                 return int.ToString(value);
 
-             NumberFormat f;
-
-            //if (isDefaultFormat)
-            //{
-            //    f = NumberFormatFactory.GetFormat("0", provider);
-            //}
-            //else
-            {
-                f = NetFormatStringToJavaNumberFormat(format, provider, typeof (int));
-            }
-                
+            NumberFormat f = NetFormatStringToJavaNumberFormat(format, provider, typeof (int));
             return f.Format((long)value);
         }
 
@@ -184,36 +175,22 @@ namespace Dot42.Internal
 
 	    private static NumberFormat Net_G_FormatStringToJavaNumberFormat(string format, IFormatProvider provider, int exp, int maxPrecision)
 	    {
-	        int decimalCount;
+	        int decimalCount = -1;
 
-	        if (format == null || !int.TryParse(format.JavaSubstring(1), out decimalCount))
-	            decimalCount = maxPrecision;
+	        bool isEmptyFormat = string.IsNullOrEmpty(format);
 
-	        bool isLowerCase = format != null && format[0] == 'g';
+	        if (!isEmptyFormat)     decimalCount = FormatHelper.ParseDecimal(format, 1, format.Length);
+            if(decimalCount == -1)  decimalCount = maxPrecision;
 
 	        if (exp > -5 && exp < 15)
 	        {
-	            if (decimalCount == 0)
-	                return NumberFormatFactory.GetDecimalFormat("0", provider);
-                if (decimalCount == 7)
-                    return NumberFormatFactory.GetDecimalFormat("0.#######", provider);
-                if (decimalCount == 9)
-                    return NumberFormatFactory.GetDecimalFormat("0.#########", provider);
-                if (decimalCount == 15)
-                    return NumberFormatFactory.GetDecimalFormat("0.###############", provider);
-                if (decimalCount == 17)
-                    return NumberFormatFactory.GetDecimalFormat("0.#################", provider);
-                return NumberFormatFactory.GetDecimalFormat("0." + new string('#', decimalCount), provider);
+                return NumberFormatFactory.GetDecimalFormat(decimalCount, provider);
 	        }
-            
-            if (decimalCount == 0)
-                return NumberFormatFactory.GetScientificFormat(isLowerCase ? "0e0" : "0E0", provider);
-            if (decimalCount == 7)
-                return NumberFormatFactory.GetScientificFormat(isLowerCase ? "0.#######e0" : "0.#######E0", provider);
-            if (decimalCount == 15)
-                return NumberFormatFactory.GetScientificFormat(isLowerCase ? "0.###############e0" : "0.###############E0", provider);
-
-            return NumberFormatFactory.GetScientificFormat("0." + new string('#', decimalCount) + (isLowerCase ? "e0" : "E0"), provider);
+	        else
+	        {
+                bool isUpperCase = isEmptyFormat || format[0] != 'g';
+                return NumberFormatFactory.GetScientificFormat(decimalCount, isUpperCase, provider);
+	        }
 	    }
 
 	    private static NumberFormat NetFormatStringToJavaNumberFormat(string format, IFormatProvider provider, Type type)
@@ -221,26 +198,32 @@ namespace Dot42.Internal
 	        if (format == null)
 	            format = "G";
 
+	        const int notSpecified = -2;
+            int precision = notSpecified;
+
+	        if (format.Length > 1)
+	            precision = FormatHelper.ParseDecimal(format, 1, format.Length);
+
             if (format.Length >= 1)
             {
-                switch (char.ToUpper(format[0]))
+                switch (format[0])
                 {
+                    case 'c':
                     case 'C':
                         {
                             string javaFormat;
                             NumberFormat nf = NumberFormatFactory.GetCurrencyFormat(provider);
-                            if (format.Length == 1)
+                            if (precision == notSpecified)
                             {
                                 javaFormat = "0.00";
                             }
                             else
                             {
-                                int decimalCount;
-                                if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                                if (precision == 0)
+                                    javaFormat = "0";
+                                else if (precision > 0)
                                 {
-                                    javaFormat = "0." + new string('0', decimalCount);
-                                    if (0 == decimalCount)
-                                        javaFormat = "0";
+                                    javaFormat = "0." + new string('0', precision);
                                 }
                                 else
                                 {
@@ -258,100 +241,99 @@ namespace Dot42.Internal
                             //f.ApplyPattern(javaFormat);
                             return f;
                         }
+                    case 'd':
                     case 'D':
                         {
-                            if (format.Length == 1)
+                            if (precision == notSpecified)
                             {
                                 return NumberFormatFactory.GetDecimalFormat("0", provider);
                             }
-                            
-                            int decimalCount;
-                            if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+
+                            if (precision >= 0)
                             {
-                                var javaFormat = 0 == decimalCount ? "0" : new string('0', decimalCount);
+                                var javaFormat = 0 == precision ? "0" : new string('0', precision);
                                 return NumberFormatFactory.GetDecimalFormat(javaFormat, provider);
                             }
                         }
                         break;
+                    case 'e':
                     case 'E':
                         {
-                            if (format.Length == 1)
+                            if (precision == notSpecified)
                                 return NumberFormatFactory.GetScientificFormat("0.000000E000", provider);
-                            int decimalCount;
-                            if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+
+                            if (precision >= 0)
                             {
-                                string javaFormat = "0." + new string('0', decimalCount);
-                                if (0 == decimalCount)
+                                string javaFormat = "0." + new string('0', precision);
+                                if (0 == precision)
                                     javaFormat = "0";
                                 return NumberFormatFactory.GetScientificFormat(javaFormat + "E000", provider);
                             }
                         }
                         break;
+                    case 'f':
                     case 'F':
+                    case 'p':
                     case 'P':
                         {
                             string javaFormat;
-                            if (format.Length == 1)
+                            if (precision == notSpecified)
                             {
                                 javaFormat = "0.00";
                             }
                             else
                             {
-                                int decimalCount;
-                                if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                                if (0 == precision)
+                                    javaFormat = "0";
+                                else if (precision > 0)
                                 {
-                                    javaFormat = "0." + new string('0', decimalCount);
-                                    if (0 == decimalCount)
-                                        javaFormat = "0";
+                                    javaFormat = "0." + new string('0', precision);
                                 }
                                 else
                                 {
-                                    if ('P' == char.ToUpper(format[0]))
+                                    if (format[0] == 'P')
                                         return NumberFormatFactory.GetFormat(format + " %", provider);
                                     else
                                         return NumberFormatFactory.GetFormat(format, provider);
                                 }
                             }
 
-                            if ('P' == char.ToUpper(format[0]))
+                            if (format[0] == 'P')
                                 return NumberFormatFactory.GetDecimalFormat(javaFormat + " %", provider);
 
                             return NumberFormatFactory.GetDecimalFormat(javaFormat, provider);
                         }
-
+                    case 'r':
                     case 'R':
                     {
                         return NumberFormatFactory.GetDecimalFormat("0.################################", provider);
                     }
-                    case 'G':
                     case 'g':
+                    case 'G':
                         return NumberFormatFactory.GetFormat(provider);
+                    case 'n':
                     case 'N':
                         {
-                            if (format.Length == 1)
+                            if (precision == notSpecified)
                                 return NumberFormatFactory.GetDecimalFormat("#,##0.00", provider);
-                            int decimalCount;
-                            if (int.TryParse(format.JavaSubstring(1), out decimalCount))
+                            if (precision >= 0)
                             {
-                                string javaFormat = "#,##0." + new string('0', decimalCount);
-                                if (0 == decimalCount)
+                                string javaFormat = "#,##0." + new string('0', precision);
+                                if (0 == precision)
                                     javaFormat = "#,##0";
                                 return NumberFormatFactory.GetDecimalFormat(javaFormat, provider);
                             }
                         }
                         break;
+                    case 'x':
                     case 'X':
-                        if (format.Length == 1)
-                            return NumberFormatFactory.GetHexFormat(8, char.IsUpper(format[0]));
-                        
-                            int numDigits;
-                        if (int.TryParse(format.JavaSubstring(1), out numDigits))
-                            return NumberFormatFactory.GetHexFormat(numDigits, char.IsUpper(format[0]));
-                        break;
+                        if (precision == notSpecified)
+                            precision = 8;
+                         return NumberFormatFactory.GetHexFormat(precision, isuppercase: format[0] == 'X');
                 }
             }
 
-            return NumberFormatFactory.GetFormat(format, provider);
+	        return NumberFormatFactory.GetFormat(format, provider);
         }
     }
 }

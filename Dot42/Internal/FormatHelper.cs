@@ -241,6 +241,120 @@ namespace Dot42.Internal
             ptr = p;
             return n;
         }
+
+        internal static int ParseDecimal(string str, int startIndex, int notIncludedEndIndex)
+        {
+            if (startIndex == notIncludedEndIndex)
+                return -1;
+
+            int n = 0;
+            while (startIndex < notIncludedEndIndex)
+            {
+                char c = str[startIndex];
+                if (c < '0' || c > '9')
+                    return -1;
+
+                n = n * 10 + c - '0';
+                ++startIndex;
+            }
+
+            return n;
+        }
+
+        internal static void Append(StringBuilder sb, int number, int minDigits)
+        {
+            switch (minDigits)
+            {
+                case 0:
+                case 1:
+                    break;
+                case 2:
+                    if (number < 10) goto pad1;
+                    break;
+                case 3:
+                    if (number < 10)  goto pad2;
+                    if (number < 100) goto pad1;
+                    break;
+                case 4:
+                    if (number < 10)   goto pad3;
+                    if (number < 100)  goto pad2;
+                    if (number < 1000) goto pad1;
+                    break;
+                case 5:
+                    if (number < 10)    goto pad4;
+                    if (number < 100)   goto pad3;
+                    if (number < 1000)  goto pad2;
+                    if (number < 10000) goto pad1;
+                    break;
+                case 6:
+                    if (number < 10)     goto pad5;
+                    if (number < 100)    goto pad4;
+                    if (number < 1000)   goto pad3;
+                    if (number < 10000)  goto pad2;
+                    if (number < 100000) goto pad1;
+                    break;
+                case 7:
+                    if (number < 10)      goto pad6;
+                    if (number < 100)     goto pad5;
+                    if (number < 1000)    goto pad4;
+                    if (number < 10000)   goto pad3;
+                    if (number < 100000)  goto pad2;
+                    if (number < 1000000) goto pad1;
+                    break;
+                default:
+                    // fallback: append number first
+                    int sbLength = sb.Length;
+                    sb.Append(number);
+                    int numDigits = sb.Length - sbLength;
+
+                    // now insert padding zeroes, if required.
+                    int add = minDigits - numDigits;
+                    if (add > 0)
+                    {
+                        string zeros = new string('0', add);
+                        sb.Insert(sbLength, zeros);
+                    }
+                    return;
+            }
+
+            sb.Append(number);
+            return;
+
+            pad1:
+            sb.Append('0');
+            sb.Append(number);
+            return;
+
+            pad2:
+            sb.Append("00");
+            sb.Append(number);
+            return;
+
+            pad3:
+            sb.Append("000");
+            sb.Append(number);
+            return;
+
+            pad4:
+            sb.Append("0000");
+            sb.Append(number);
+            return;
+
+            pad5:
+            sb.Append("00000");
+            sb.Append(number);
+            return;
+
+            pad6:
+            sb.Append("000000");
+            sb.Append(number);
+            return;
+
+            //pad7:
+            //sb.Append("0000000");
+            //sb.Append(number);
+            //return;
+        }
     }
 }
 
