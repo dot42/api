@@ -225,8 +225,8 @@ namespace Dot42.Internal.Generics
                     // (i.e. a bug)  when the user did not call GetTypeReflectionSafe() on an object, 
                     // or when requesting generics info not for an instance type, e.g. typeof(List<>). 
                     // As the second case can be difficult to debug, we emit a warning. TODO: we should 
-                    // probably not emit a warning in release mode.
-                    Log.W("dot42", string.Format("Unable to reconstruct generic type definition for type {0}, parent type {1}. Did you use obj.GetTypeReflectionSafe()?", perceivedType.FullName, parentType.FullName));
+                    // probably not emit a warning when the user code runs in release mode.
+                    Log.W("dot42", string.Format("Unable to reconstruct generic type definition for type {0}, parent type {1}. Did you use obj.GetTypeReflectionSafe()? If you are reflecting on an open generic type, i.e. typeof(List<>) you can ignore this warning.", perceivedType.FullName, parentType.FullName));
                     return genericTypeDef;
                 }
             }
@@ -371,11 +371,10 @@ namespace Dot42.Internal.Generics
             if (typeInfo == null)
                 return null;
 
-            Type[] trueParameters = new Type[parameters.Length+1];
-            
+            Type[] trueParameters = typeInfo.AddGenericParameterTypes(parameters);
+
             for (int i = 0; i < parameters.Length; ++i)
                 trueParameters[i] = EnsureTypeDef(parameters[i]);
-            trueParameters[parameters.Length] = typeof (Type[]);
 
             try
             {

@@ -21,7 +21,7 @@ namespace Dot42.Internal.Generics
         protected override Type[] JavaGetParameterTypes()
         {
             var baseParameters = JavaConstructor.ParameterTypes;
-            return baseParameters.Take(baseParameters.Length - _genericType.NumberOfArguments);
+            return baseParameters.Take(baseParameters.Length - _genericType.NumberOfAddedParameters);
         }
 
         public override object Invoke(object[] args)

@@ -11,7 +11,8 @@ namespace Dot42.Internal.Generics
         public readonly Type TypeDefinition;
         public readonly Type[] Arguments;
         public readonly int HashCode;
-        public readonly int NumberOfArguments;
+        public readonly int NumberOfGenericArguments;
+        public readonly int NumberOfAddedParameters;
         
         public GenericTypeInfo(Type typeDefinition, Type[] arguments)
         {
@@ -19,7 +20,9 @@ namespace Dot42.Internal.Generics
 
             // always normalize
             var length = arguments.Length;
-            NumberOfArguments = length;
+            NumberOfGenericArguments = length;
+
+            NumberOfAddedParameters = length > NumberOfInlinedArguments ? 1 : length;
             
             Arguments = arguments;
             HashCode = GetHashCode(typeDefinition, arguments);    
@@ -83,7 +86,7 @@ namespace Dot42.Internal.Generics
                 return false;
 
             var arglen = arguments.Length;
-            if (arglen != gti1.NumberOfArguments)
+            if (arglen != gti1.NumberOfGenericArguments)
                 return false;
             
             var gtiArgs = gti1.Arguments;
@@ -99,7 +102,7 @@ namespace Dot42.Internal.Generics
             if (gti1.TypeDefinition != typeDefinition)
                 return false;
             var gtiArgs = gti1.Arguments;
-            switch (gti1.NumberOfArguments)
+            switch (gti1.NumberOfGenericArguments)
             {
                 case 4: if (gtiArgs[3] != arg4) return false; goto case 3;
                 case 3: if (gtiArgs[2] != arg3) return false; goto case 2;
@@ -115,8 +118,8 @@ namespace Dot42.Internal.Generics
         {
             if (gti1.HashCode          != gti2.HashCode) return false;
             if (gti1.TypeDefinition    != gti2.TypeDefinition) return false;
-            var len = gti1.NumberOfArguments;
-            if (len != gti2.NumberOfArguments) return false;
+            var len = gti1.NumberOfGenericArguments;
+            if (len != gti2.NumberOfGenericArguments) return false;
 
             var args1 = gti1.Arguments;
             var args2 = gti2.Arguments;
@@ -145,28 +148,55 @@ namespace Dot42.Internal.Generics
 
             if (arguments != null)
             {
-                newLength = arguments.Length + NumberOfArguments;
+                newLength = arguments.Length + NumberOfAddedParameters;
                 newargs = Arrays.CopyOf(arguments, newLength);
             }
             else
             {
-                newLength = NumberOfArguments;
+                newLength = NumberOfAddedParameters;
                 newargs = createTypeArray ? new Type[newLength] : new object[newLength];
             }
 
-            if (NumberOfArguments > NumberOfInlinedArguments)
+            bool singleArg = NumberOfGenericArguments > NumberOfInlinedArguments;
+
+            if (singleArg)
             {
-                newargs[newargs.Length - 1] = Arguments;
+                newargs[newLength - 1] = Arguments;
             }
             else
             {
                 int idx = newLength - 1;
-                for (int i = NumberOfArguments - 1; i >= 0; --i, --idx)
+                for (int i = NumberOfGenericArguments - 1; i >= 0; --i, --idx)
                 {
                     newargs[idx] = Arguments[i];
                 }
             }
             return newargs;
+        }
+
+        /// <summary>
+        /// Adds the types of the generic parameters (i.e. typeof(Type) or typeof(Type[])
+        /// to a copy of the array.
+        /// </summary>
+        public Type[] AddGenericParameterTypes(Type[] parameters)
+        {
+            bool singleArg = NumberOfGenericArguments > NumberOfInlinedArguments;
+
+            var ret = Arrays.CopyOf(parameters, parameters.Length + NumberOfAddedParameters);
+
+            if (singleArg)
+            {
+                ret[ret.Length - 1] = typeof(Type[]);
+            }
+            else
+            {
+                int idx = ret.Length - 1;
+                for (int i = NumberOfGenericArguments - 1; i >= 0; --i, --idx)
+                {
+                    ret[idx] = typeof (Type);
+                }
+            }
+            return ret;
         }
 
         public string GetFullName()
