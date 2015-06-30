@@ -111,6 +111,12 @@ namespace System
         }
 
         [Inline, DexNative] // avoid boxing, do not generate actual method
+        public new string ToString()
+        {
+            return long.ToString((long)this);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
             return long.ToString((long)this);

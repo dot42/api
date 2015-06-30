@@ -210,40 +210,64 @@ namespace System
         /// <summary>
         /// Replaces format items in the given string with a string representation of the given argument.
         /// </summary>
-        [Inline]
         public static string Format(string format, object arg0)
         {
-            // TODO: think about getting rid of the allocation on this path.
-            return Format(null, format, new[] { arg0 }); 
+            var helper = new FormatHelper(null, null, format, arg0);
+            return helper.Format().ToString();
         }
 
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
         public static string Format(string format, object arg0, object arg1)
         {
-            // TODO: think about getting rid of the allocation on this path.
-            return Format(null, format, new[] { arg0, arg1 });
+            var helper = new FormatHelper(null, null, format, arg0, arg1);
+            return helper.Format().ToString();
         }
 
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
         public static string Format(string format, object arg0, object arg1, object arg2)
         {
-            // TODO: think about getting rid of the allocation on this path.
-            return Format(null, format, new[] { arg0, arg1, arg2 });
+            var helper = new FormatHelper(null, null, format, arg0, arg1, arg2);
+            return helper.Format().ToString();
         }
 
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
         public static string Format(string format, params object[] args)
         {
-            return Format(null, format, args);
+            var helper = new FormatHelper(null, null, format, args);
+            return helper.Format().ToString();
+        }
+
+        /// <summary>
+        /// Replaces format items in the given string with a string representation of the given argument.
+        /// </summary>
+        public static string Format(IFormatProvider provider, string format, object arg0)
+        {
+            var helper = new FormatHelper(null, provider, format, arg0);
+            return helper.Format().ToString();
+        }
+
+        /// <summary>
+        /// Replaces format items in the given string with a string representations of the given arguments.
+        /// </summary>
+        public static string Format(IFormatProvider provider, string format, object arg0, object arg1)
+        {
+            var helper = new FormatHelper(null, provider, format, arg0, arg1);
+            return helper.Format().ToString();
+        }
+
+        /// <summary>
+        /// Replaces format items in the given string with a string representations of the given arguments.
+        /// </summary>
+        public static string Format(IFormatProvider provider, string format, object arg0, object arg1, object arg2)
+        {
+            var helper = new FormatHelper(null, provider, format, arg0, arg1, arg2);
+            return helper.Format().ToString();
         }
 
         /// <summary>

@@ -15,6 +15,7 @@
 // limitations under the License.
 
 using System.Runtime.InteropServices;
+using System.Text;
 using Dot42;
 using Dot42.Internal;
 using Java.Text;
@@ -32,7 +33,7 @@ namespace System.Globalization
 
         private static readonly CultureInfo TheInvariantCulture;
         private static volatile CultureInfo _currentCulture;
-        private static readonly CustomFormatter TheCustomFormatter = new CustomFormatter();
+        internal static readonly ICustomFormatter DefaultCustomFormatter = new DefaultFormatter();
 
         internal Locale Locale
         {
@@ -102,7 +103,7 @@ namespace System.Globalization
         {
             if (formatType == typeof(ICustomFormatter))
             {
-                return TheCustomFormatter;
+                return DefaultCustomFormatter;
             }
             if (formatType == typeof(NumberFormatInfo))
             {
@@ -122,18 +123,25 @@ namespace System.Globalization
             _currentCulture = new CultureInfo(Locale.Default);
         }
 
-        private class CustomFormatter : ICustomFormatter
+        internal class DefaultFormatter : ICustomFormatter
         {
             public string Format(string format, object arg, IFormatProvider formatProvider)
             {
+                if (arg == null)   return string.Empty;
+                if (arg is byte)   return NumberFormatter.Format(format, (int)(byte)arg, formatProvider);
+                if (arg is short)  return NumberFormatter.Format(format, (int)(short)arg, formatProvider);
                 if (arg is int)    return NumberFormatter.Format(format, (int)arg, formatProvider);
                 if (arg is long)   return NumberFormatter.Format(format, (long)arg, formatProvider);
                 if (arg is float)  return NumberFormatter.Format(format, (float)arg, formatProvider);
                 if (arg is double) return NumberFormatter.Format(format, (double)arg, formatProvider);
-                if (arg is string) return null; //should be handled by caller.
+                if (arg is Type)   return ((Type) arg).FullName;
+                if (arg is string) return (string)arg;
 
-                return null; // should be handled by caller.
-                //throw new NotImplementedException("System.Globalization.CultureInfo.CustomFormatter.Format");
+                // default handling.
+                var formattable = CompilerHelper.AsNativeIFormattable(arg);
+                if (formattable != null)
+                    return formattable.ToString(format, formatProvider);
+                return arg.ToString();
             }
         }
 	}

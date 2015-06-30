@@ -25,6 +25,8 @@ namespace System.Reflection
     /// </summary>
     public class PropertyInfo : MemberInfo, IAttributesProvider
     {
+        private static readonly ParameterInfo[] EmptyParameterInfo = new ParameterInfo[0];
+
         private readonly string name;
         private readonly MethodInfo getter;
         private readonly MethodInfo setter;
@@ -84,7 +86,7 @@ namespace System.Reflection
         [NotImplemented]
         public ParameterInfo[] GetIndexParameters()
         {
-            return new ParameterInfo[0];
+            return EmptyParameterInfo;
         }
 
         /// <summary>

@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Dot42.Internal;
 using Java.Lang;
 using Java.Text;
@@ -68,6 +70,7 @@ namespace System.Text
         /// </summary>
         public StringBuilder Append(char value, int repeatCount)
         {
+            // TODO: check if the allocation is more expensive than a simple while loop
             char[] append = new char[repeatCount];
             Arrays.Fill(append, value);
             Append(append);
@@ -77,6 +80,7 @@ namespace System.Text
         /// <summary>
         /// Append a substring of the given string from into this builder.
         /// </summary>
+        [Inline]
         public StringBuilder Append(string value, int startIndex, int count)
         {
             JavaAppend(value, startIndex, startIndex + count);
@@ -128,6 +132,7 @@ namespace System.Text
         /// <summary>
         /// Remove length characters from this string builder, starting at the given start index.
         /// </summary>
+        [Inline]
         public StringBuilder Remove(int startIndex, int length)
         {
             JavaDelete(startIndex, startIndex + length);

@@ -14,7 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using System.Text;
 using Java.Text;
 
 namespace Dot42.Internal
@@ -106,7 +105,7 @@ namespace Dot42.Internal
             if (isDefaultFormat)
             {
 #if ANDROID_10P
-                f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 7);
+                f = Net_G_FormatStringToJavaNumberFormat(format, provider, GetExponent(value), 7);
 #else
                 f = NetFormatStringToJavaNumberFormat(format, provider, typeof(float));
 #endif
@@ -114,17 +113,19 @@ namespace Dot42.Internal
             else if (format.StartsWith("R") || format.StartsWith("r"))
             {
 #if ANDROID_10P
-                f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 7);
+                var exponent = GetExponent(value);
+                f = Net_G_FormatStringToJavaNumberFormat(format, provider, exponent, 7);
                 var tmp = f.Format((double)value);
                 if (f.Parse(tmp).FloatValue() == value)
                     return tmp;
-                f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 9);
+                f = Net_G_FormatStringToJavaNumberFormat(format, provider, exponent, 9);
 #else
-                f = NumberFormatFactory.GetScientificFormat("0.#######", provider);
+                bool isUpperCase = string.IsNullOrEmpty(format) || format[0] != 'g';
+                f = NumberFormatFactory.GetScientificFormat(7, isUpperCase, provider);
                 var tmp = f.Format(value);
                 if (f.Parse(tmp).FloatValue() == value)
                     return tmp;
-                f = NumberFormatFactory.GetScientificFormat("0.#########", provider);
+                f = NumberFormatFactory.GetScientificFormat(9, isUpperCase, provider);
 #endif
             }
             else
@@ -145,7 +146,7 @@ namespace Dot42.Internal
             if (isDefaultFormat)
             {
 #if ANDROID_10P
-                f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 15);
+                f = Net_G_FormatStringToJavaNumberFormat(format, provider, GetExponent(value), 15);
 #else
                 f = NetFormatStringToJavaNumberFormat(format, provider, typeof(double));
 #endif
@@ -153,17 +154,19 @@ namespace Dot42.Internal
             else if (format.StartsWith("R") || format.StartsWith("r"))
             {
 #if ANDROID_10P
-                f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 15);
+                int exponent = GetExponent(value);
+                f = Net_G_FormatStringToJavaNumberFormat(format, provider, exponent, 15);
                 var tmp = f.Format(value);
                 if (f.Parse(tmp).DoubleValue() == value)
                     return tmp;
-                f = Net_G_FormatStringToJavaNumberFormat(format, provider, Math.GetExponent(value), 17);
+                f = Net_G_FormatStringToJavaNumberFormat(format, provider, exponent, 17);
 #else
-                f = NumberFormatFactory.GetScientificFormat("0.###############", provider);
+                bool isUpperCase = string.IsNullOrEmpty(format) || format[0] != 'g';
+                f = NumberFormatFactory.GetScientificFormat(15, isUpperCase, provider);
                 var tmp = f.Format(value);
                 if (f.Parse(tmp).DoubleValue() == value)
                     return tmp;
-                f = NumberFormatFactory.GetScientificFormat("0.#################", provider);
+                f = NumberFormatFactory.GetScientificFormat(17, isUpperCase, provider);
 #endif
             }
             else
@@ -173,7 +176,20 @@ namespace Dot42.Internal
             return f.Format(value);
         }
 
-	    private static NumberFormat Net_G_FormatStringToJavaNumberFormat(string format, IFormatProvider provider, int exp, int maxPrecision)
+#if ANDROID_10P
+        [Inline]
+        private static int GetExponent(double value)
+        {
+            return value == 0 ? 0 : Math.GetExponent(value);
+        }
+        [Inline]
+        private static int GetExponent(float value)
+        {
+            return value == 0 ? 0 : Math.GetExponent(value);
+        }
+#endif
+
+        private static NumberFormat Net_G_FormatStringToJavaNumberFormat(string format, IFormatProvider provider, int exp, int maxPrecision)
 	    {
 	        int decimalCount = -1;
 

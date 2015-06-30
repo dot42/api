@@ -14,16 +14,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Threading;
-using Android.Views;
 using Dot42;
 using Java.Math;
 using Java.Text;
 
 namespace System
 {
-	partial class Math
-	{
+    partial class Math
+    {
+        [Inline]
         public static sbyte Abs(sbyte value)
         {
             if (value == sbyte.MinValue)
@@ -31,6 +30,7 @@ namespace System
             return (value < 0 ? (sbyte)-value : value);
         }
 
+        [Inline]
         public static short Abs(short value)
         {
             if (value == short.MinValue)
@@ -38,18 +38,20 @@ namespace System
             return (value < 0 ? (short)-value : value);
         }
 
+        [Inline]
         public static int Abs(int value)
         {
             if (value == int.MinValue)
                 throw new OverflowException();
-            return JavaAbs(value);
+            return (value < 0 ? -value : value);
         }
 
+        //[Inline]
         public static long Abs(long value)
         {
             if (value == long.MinValue)
                 throw new OverflowException();
-            return JavaAbs(value);
+            return (value < 0 ? -value : value);
         }
 
         [Inline]
@@ -85,39 +87,42 @@ namespace System
             return a > b ? a : b;
         }
 
-        [CLSCompliantAttribute(false)]
+        [CLSCompliant(false)]
         public static uint Max(uint val1, uint val2)
         {
             return val1 > val2 ? val1 : val2;
         }
 
-        [CLSCompliantAttribute(false)]
+        [CLSCompliant(false)]
         public static ulong Max(ulong val1, ulong val2)
         {
             return val1 > val2 ? val1 : val2;
         }
 
+        [Inline]
         public static byte Max(byte val1, byte val2)
         {
             return val1 > val2 ? val1 : val2;
         }
 
+        [Inline]
         public static decimal Min(decimal a, decimal b)
         {
             return a < b ? a : b;
         }
 
-        [CLSCompliantAttribute(false)]
+        [CLSCompliant(false)]
         public static uint Min(uint val1, uint val2)
         {
             return val1 < val2 ? val1 : val2;
         }
 
-        [CLSCompliantAttribute(false)]
+        [CLSCompliant(false)]
         public static ulong Min(ulong val1, ulong val2)
         {
             return val1 < val2 ? val1 : val2;
         }
+
         public static byte Min(byte val1, byte val2)
         {
             return val1 < val2 ? val1 : val2;
@@ -320,7 +325,7 @@ namespace System
         /// <java-name>
         /// pow
         /// </java-name>
-        [Dot42.DexImport("pow", "(DD)D", AccessFlags = 265, IgnoreFromJava = true)]
+        [DexImport("pow", "(DD)D", AccessFlags = 265, IgnoreFromJava = true)]
         public static double Pow(double x, double y) 
         {
             // TODO: make compatible with .NET semantics for the corner cases (infinitiy et al.)

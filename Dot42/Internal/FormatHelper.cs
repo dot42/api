@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Globalization;
 using System.Text;
 
 namespace Dot42.Internal
@@ -23,28 +24,29 @@ namespace Dot42.Internal
         private readonly StringBuilder result;
         private readonly IFormatProvider provider;
         private readonly string format;
-        private readonly object[] args;
+        private readonly int numberOfArguments;
         private int ptr;
         int n, width;
         bool left_align;
         string arg_format;
 
+        private readonly object[] args;
+        private readonly object arg0, arg1, arg2;
 
-        /// <summary>
-        /// Default ctor
-        /// </summary>
-        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, params object[] args)
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object[] args)
         {
-            this.result = result;
-            this.provider = provider;
-            this.format = format;
-            this.args = args;
             if (format == null)
                 throw new ArgumentNullException("format");
             if (args == null)
                 throw new ArgumentNullException("args");
+            
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.args = args;
+            this.numberOfArguments = args.Length;
 
-            if (this.result == null)
+            if (result == null)
             {
                 // Try to approximate the size of result to avoid reallocations
                 int i, len;
@@ -53,7 +55,7 @@ namespace Dot42.Internal
                 var argLength = args.Length;
                 for (i = 0; i < argLength; ++i)
                 {
-                    string s = args[i] as string;
+                    string s = GetArg(i) as string;
                     if (s != null)
                         len += s.Length;
                     else
@@ -61,6 +63,88 @@ namespace Dot42.Internal
                 }
                 this.result = new StringBuilder(len + format.Length);
             }
+        }
+
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object arg0)
+        {
+            if (format == null)
+                throw new ArgumentNullException("format");
+
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.arg0 = arg0;
+            this.numberOfArguments = 1 ;
+
+            if (result == null)
+            {
+                // Try to approximate the size of result to avoid reallocations
+                int len = format.Length;
+                if (arg0 is string)
+                    len += ((string) arg0).Length;
+                this.result = new StringBuilder(len + format.Length);
+            }
+        }
+
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object arg0, object arg1)
+        {
+            if (format == null)
+                throw new ArgumentNullException("format");
+
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+            this.numberOfArguments = 2;
+
+            if (result == null)
+            {
+                // Try to approximate the size of result to avoid reallocations
+                int len = format.Length;
+                if (arg0 is string)
+                    len += ((string)arg0).Length;
+                if (arg1 is string)
+                    len += ((string)arg1).Length;
+                this.result = new StringBuilder(len + format.Length);
+            }
+        }
+
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object arg0, object arg1, object arg2)
+        {
+            if (format == null)
+                throw new ArgumentNullException("format");
+
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+            this.arg2 = arg2;
+            this.numberOfArguments = 3;
+
+            if (result == null)
+            {
+                // Try to approximate the size of result to avoid reallocations
+                int len = format.Length;
+                if (arg0 is string)
+                    len += ((string)arg0).Length;
+                if (arg1 is string)
+                    len += ((string)arg1).Length;
+                if (arg2 is string)
+                    len += ((string)arg2).Length;
+                this.result = new StringBuilder(len + format.Length);
+            }
+        }
+
+        [Inline]
+        public object GetArg(int idx)
+        {
+            if (args != null)
+                return args[idx];
+            return idx == 0 ? arg0 
+                 : idx == 1 ? arg1 
+                 : arg2 ;
         }
 
         /// <summary>
@@ -90,29 +174,37 @@ namespace Dot42.Internal
                     }
 
                     // parse specifier
-
                     ParseFormatSpecifier(format);
-                    if (n >= args.Length)
+
+                    if (n >= numberOfArguments)
                         throw new FormatException("Index (zero based) must be greater than or equal to zero and less than the size of the argument list.");
 
                     // format argument
-
-                    object arg = args[n];
+                    object arg = GetArg(n);
 
                     string str;
                     if (arg == null)
-                        str = string.Empty;
-                    else if (formatter != null)
-                        str = formatter.Format(arg_format, arg, provider);
-                    else
-                        str = null;
-
-                    if (str == null)
                     {
-                        if (arg is IFormattable)
-                            str = ((IFormattable)arg).ToString(arg_format, provider);
+                        str = string.Empty;
+                    }
+                    else if (formatter != null)
+                    {
+                        str = formatter.Format(arg_format, arg, provider);
+                    }
+                    else
+                    {
+                        if (provider == null)
+                        {
+                            // take the allocation reducing shortcut.
+                            str = CultureInfo.DefaultCustomFormatter.Format(arg_format, arg, provider);
+                        }
                         else
-                            str = arg.ToString();
+                        {
+                            var formattable = arg as IFormattable;
+                            str = formattable != null
+                                ? formattable.ToString(arg_format, provider)
+                                : arg.ToString();
+                        }
                     }
 
                     if (str == null)

@@ -72,8 +72,9 @@ namespace Dot42.Internal
         /// <summary>
         /// plain 'as IFormattable'  without any virtual formattables.
         /// </summary>
-        [Include(TypeCondition = typeof(IFormattable))][DexNative]
-        public static IFormattable AsNativeFormattable(object value)
+        [Include(TypeCondition = typeof(IFormattable))]
+        [DexNative]
+        public static IFormattable AsNativeIFormattable(object value)
         {
             return null;
         }

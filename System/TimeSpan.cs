@@ -16,6 +16,7 @@
 
 using System.Globalization;
 using System.Text;
+using Dot42;
 using Dot42.Internal;
 
 namespace System
@@ -313,6 +314,9 @@ namespace System
         // Returns:
         //     The day component of this instance. The return value can be positive or negative.
         public int Days { get { return (int)(ticks / TicksPerDay); } }
+
+        [Inline, DexNative] 
+        private static int GetDays(long ticks) { return (int)(ticks / TicksPerDay); }
         //
         // Summary:
         //     Gets the hours component of the time interval represented by the current
@@ -322,6 +326,9 @@ namespace System
         //     The hour component of the current System.TimeSpan structure. The return value
         //     ranges from -23 through 23.
         public int Hours { get { return (int)(ticks % TicksPerDay / TicksPerHour); } }
+
+        [Inline,DexNative]
+        private static int GetHours(long ticks) { return (int)(ticks % TicksPerDay / TicksPerHour); }
         //
         // Summary:
         //     Gets the milliseconds component of the time interval represented by the current
@@ -331,6 +338,7 @@ namespace System
         //     The millisecond component of the current System.TimeSpan structure. The return
         //     value ranges from -999 through 999.
         public int Milliseconds { get { return (int)(ticks % TicksPerSecond / TicksPerMillisecond); } }
+
         //
         // Summary:
         //     Gets the minutes component of the time interval represented by the current
@@ -340,6 +348,9 @@ namespace System
         //     The minute component of the current System.TimeSpan structure. The return
         //     value ranges from -59 through 59.
         public int Minutes { get { return (int)(ticks % TicksPerHour / TicksPerMinute); } }
+
+        [Inline, DexNative]
+        public static int GetMinutes(long ticks) { return (int)(ticks % TicksPerHour / TicksPerMinute); }
         //
         // Summary:
         //     Gets the seconds component of the time interval represented by the current
@@ -349,6 +360,9 @@ namespace System
         //     The second component of the current System.TimeSpan structure. The return
         //     value ranges from -59 through 59.
         public int Seconds { get { return (int)(ticks % TicksPerMinute / TicksPerSecond); } }
+        
+        [Inline, DexNative]
+        public static int GetSeconds(long ticks) { return (int)(ticks % TicksPerMinute / TicksPerSecond); }
         //
         // Summary:
         //     Gets the number of ticks that represent the value of the current System.TimeSpan
@@ -986,10 +1000,18 @@ namespace System
         {
             StringBuilder sb = new StringBuilder(14);
 
-            if (ticks < 0)
+            long negTicks = this.ticks;
+            if (negTicks < 0)
+            {
                 sb.Append('-');
+            }
+            else
+            {
+                // we work with negative values, to avoid special handling of MinValue
+                negTicks = -negTicks;
+            }
 
-            int days = Math.Abs(Days);
+            int days = -GetDays(negTicks);
 
             if (days != 0 || nullOrG == 'G')
             {
@@ -997,21 +1019,21 @@ namespace System
                 sb.Append(nullOrG == Null ? '.' : ':');
             }
 
-            int hours = Math.Abs(Hours);
+            int hours = -GetHours(negTicks);
             if (hours < 10) sb.Append("0");
             sb.Append(hours);
             sb.Append(':');
 
-            int minutes = Math.Abs(Minutes);
+            int minutes = -GetMinutes(negTicks);
             if (minutes < 10) sb.Append("0");
             sb.Append(minutes);
             sb.Append(':');
 
-            int seconds = Math.Abs(Seconds);
+            int seconds = -GetSeconds(negTicks);
             if (seconds < 10) sb.Append("0");
             sb.Append(seconds);
 
-            int fractional = (int)Math.Abs(ticks % TicksPerSecond);
+            int fractional = (int)(negTicks % TicksPerSecond);
             if (fractional != 0 || nullOrG == 'G')
             {
                 if (nullOrG == Null || formatProvider == CultureInfo.InvariantCulture)
@@ -1024,7 +1046,7 @@ namespace System
                     sb.Append(ni.NumberDecimalSeparator);
                 }
 
-                AppendFractional(sb, nullOrG, fractional, 7);
+                AppendFractional(sb, nullOrG, -fractional, 7);
             }
 
             return sb.ToString();
@@ -1065,9 +1087,11 @@ namespace System
                 return ToStandardString(Null, CultureInfo.InvariantCulture);
             }
 
-            StringBuilder sb = new StringBuilder(format.Length + 5);
+            var negTicks = ticks;
+            if (negTicks > 0) // we work with negative values, to avoid special handling of MinValue
+                negTicks = -negTicks;
 
-            var ts = this;
+            StringBuilder sb = new StringBuilder(format.Length + 5);
 
             DateTimeFormatting.TokenizeFormatString(format, (start, length, isQuote) =>
             {
@@ -1086,39 +1110,39 @@ namespace System
 
                     case 'd':
                     {
-                        FormatHelper.Append(sb, Math.Abs(ts.Days), length);
+                        FormatHelper.Append(sb, -GetDays(negTicks), length);
                         return;
                     }
                     case 'h':
                     {
                         if (length > 2) throw new FormatException();
-                        FormatHelper.Append(sb, Math.Abs(ts.Hours), length);
+                        FormatHelper.Append(sb, -GetHours(negTicks), length);
                         return;
                     }
                     case 'm':
                     {
                         if (length > 2) throw new FormatException();
-                        FormatHelper.Append(sb, Math.Abs(ts.Minutes), length);
+                        FormatHelper.Append(sb, -GetMinutes(negTicks), length);
                         return;
                     }
                     case 's':
                     {
                         if (length > 2) throw new FormatException();
-                        FormatHelper.Append(sb, Math.Abs(ts.Seconds), length);
+                        FormatHelper.Append(sb, -GetSeconds(negTicks), length);
                         return;
                     }
                     case 'f':
                     {
-                        int fractional = (int)Math.Abs(ts.ticks % TicksPerSecond);
+                        int fractional = -(int)(negTicks % TicksPerSecond);
                         AppendFractional(sb, Null, fractional, length);
-                        break;
+                        return;
                     }
                     case 'F':
                     {
-                        int fractional = (int)Math.Abs(ts.ticks % TicksPerSecond);
+                        int fractional = -(int)(negTicks % TicksPerSecond);
                         if (fractional != 0)
                             AppendFractional(sb, Null, fractional, length);
-                        break;
+                        return;
                     }
                     default:
                         throw new FormatException();

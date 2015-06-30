@@ -13,7 +13,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Dot42.Internal;
 using Java.Text;
 using Java.Util;
 
@@ -150,7 +149,7 @@ namespace System.Globalization
 	    {
             if (formatType == typeof (ICustomFormatter))
             {
-                return new CustomFormatter();
+                return CultureInfo.DefaultCustomFormatter;
             }
             if (formatType == typeof(NumberFormatInfo))
             {
@@ -160,20 +159,6 @@ namespace System.Globalization
 	        return null; // let the caller handle everything.
             //throw new NotImplementedException("System.Globalization.NumberFormatInfo.GetFormat: " + formatType.FullName);
 	    }
-
-        private class CustomFormatter: ICustomFormatter
-        {
-            public string Format(string format, object arg, IFormatProvider formatProvider)
-            {
-                if (arg is int) return NumberFormatter.Format(format, (int)arg, formatProvider);
-                if (arg is long) return NumberFormatter.Format(format, (long)arg, formatProvider);
-                if (arg is float) return NumberFormatter.Format(format, (float)arg, formatProvider);
-                if (arg is double) return NumberFormatter.Format(format, (double)arg, formatProvider);
-
-                return null; // let the caller handle the formatting.
-                //throw new NotImplementedException("System.Globalization.NumberFormatInfo.CustomFormatter.Format");
-            }
-        }
 	}
 }
 

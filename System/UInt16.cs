@@ -69,6 +69,12 @@ namespace System
         }
 
         [Inline, DexNative] // avoid boxing, do not generate actual method
+        public new string ToString()
+        {
+            return NumberFormatter.Format((int)this, null);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
             return NumberFormatter.Format((int)this, provider);
