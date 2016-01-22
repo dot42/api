@@ -27,8 +27,6 @@ namespace Dot42.Internal
     /// </summary>
 	internal static class CustomAttributeProvider
 	{
-        private static readonly ConcurrentHashMap<IAttribute, Attribute> loadedAttributes = new ConcurrentHashMap<IAttribute, Attribute>();
-
         /// <summary>
         /// Returns an array of all attributes defined on this member.
         /// Returns an empty array if no attributes are defined on this member.
@@ -157,36 +155,42 @@ namespace Dot42.Internal
         }
 
         /// <summary>
-        /// Gets a custom attribute from cache or build it.
+        /// build a custom ttribute
         /// </summary>
         private static Attribute GetAttribute(IAttribute attr)
         {
+            // This code used to return a cached instance if available.
+            // While this might or might not provide a slight performance
+            // advantage, it breaks the attribute contract. Even though
+            // a caller might modify a returned attribute, each succeeding
+            // caller must get an unmodified instance of the attribute nonetheless.
+            
+            // I also believe that there is little to no measurable performance 
+            // benefit in caching, as the neccessary thread safety is not cheap anyway.
+            // Furthermore, everybody relying heavily on reflection does his own
+            // caching anyway.
+
+            Type attributeType = attr.AttributeType();
+            string factoryName = attr.FactoryMethod();
+
             Attribute result;
-
-            result = loadedAttributes.Get(attr);
-            if (result != null) return result;
-
-            // Not found, build it
-            var builder = attr.AttributeBuilder();
-
             try
             {
-                result = (Attribute)builder.Invoke(null, new[] { attr.Annotation() });
+                var factoryMethod = attributeType.JavaGetDeclaredMethod(factoryName);
+                result = (Attribute)factoryMethod.Invoke(null);
             }
             catch (TargetInvocationException ex)
             {
                 Log.E("dot42", string.Format("unable create attribute from annotation. build class '{0}' / method '{1}'",
-                                             builder.DeclaringClass.FullName, builder.Name), ex.InnerException);
+                                             attributeType.FullName, factoryName), ex.InnerException);
                 result = new Attribute();
             }
             catch (Exception ex)
             {
-                Log.E("dot42", string.Format("unable create attribute from annotation. build class '{0}' / method '{1}'", 
-                                             builder.DeclaringClass.FullName,builder.Name), ex);
+                Log.E("dot42", string.Format("unable create attribute from annotation. build class '{0}' / method '{1}'",
+                                             attributeType.FullName, factoryName), ex.InnerException);
                 result = new Attribute();
             }
-
-            loadedAttributes.Put(attr, result);
 
             return result;
         }

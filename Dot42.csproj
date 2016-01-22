@@ -262,7 +262,6 @@
     <Compile Include="Dot42\Internal\TypeHelper.cs" />
     <Compile Include="Dot42\Internal\IAttributes.cs" />
     <Compile Include="Dot42\Internal\CustomAttributeProvider.cs" />
-    <Compile Include="Dot42\Internal\IAnnotationType.cs" />
     <Compile Include="Dot42\Internal\IAttribute.cs" />
     <Compile Include="Dot42\Manifest\ActivityAttribute.cs" />
     <Compile Include="Dot42\Manifest\ApplicationAttribute.cs" />

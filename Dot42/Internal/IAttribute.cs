@@ -27,22 +27,18 @@ namespace Dot42.Internal
 	internal interface IAttribute : IAnnotation
     {
         /// <summary>
-        /// Gets the method to build an attribute from an annotation.
-        /// </summary>
-        [Include]
-        Method AttributeBuilder();
-
-        /// <summary>
         /// Gets the type of the attribute.
         /// </summary>
         [Include]
         Type AttributeType();
-
+        
         /// <summary>
-        /// Gets the annotation that stores the actual attribute values.
+        /// Gets the method name that created this particular instance.
+        /// the method is part of AttributeType
         /// </summary>
         [Include]
-        IAnnotation Annotation();
+        string FactoryMethod();
+
     }
 }
 
