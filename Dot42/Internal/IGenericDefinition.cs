@@ -68,7 +68,40 @@ namespace Dot42.Internal
         /// nested generic types.
         /// </summary>
         [Include]
-        object[] GenericArguments();
+        IGenericArgument[] GenericArguments();
+    }
+
+    /// <summary>
+    /// Contains an arguments for a generic type.
+    /// 
+    /// Can be either an ints as index into the 
+    /// generic arguments of the containing class, a
+    /// System.Type for fixed arguments or an 
+    /// IGenericDefinition for nested generic types.
+    /// </summary>
+    [Include]
+    internal interface IGenericArgument : IAnnotation
+    {
+        /// <summary>
+        /// will be -1 if not used
+        /// </summary>
+        /// <returns></returns>
+        [Include]
+        int ContainingTypeArgumentIndex();
+
+        /// <summary>
+        /// will be empty if not used
+        /// </summary>
+        /// <returns></returns>
+        [Include]
+        Type[] FixedType();
+
+        /// <summary>
+        /// will be empty if not used
+        /// </summary>
+        /// <returns></returns>
+        [Include]
+        IGenericDefinition[] NestedType();
     }
 }
 

@@ -142,7 +142,18 @@ namespace Dot42.Internal
         /// </summary>
         private static IAttributes GetAttributes(IAnnotatedElement member, bool inherit)
         {
-            return member.GetAnnotation<IAttributes>(typeof(IAttributes));
+            try
+            {
+                return member.GetAnnotation<IAttributes>(typeof(IAttributes));
+            }
+            catch (Exception ex)
+            {
+                Log.E("dot42", string.Format("unable to retrieve CustomAttributes for '{0}'",
+                             member), ex);
+
+                return null;
+            }
+            
         }
 
         /// <summary>

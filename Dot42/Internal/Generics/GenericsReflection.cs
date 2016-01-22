@@ -222,7 +222,7 @@ namespace Dot42.Internal.Generics
                 if (parentGenericArguments == null)
                 {
                     // Can either happen when the generics reflection annotations where not preserved 
-                    // (i.e. a bug)  when the user did not call GetTypeReflectionSafe() on an object, 
+                    // (i.e. a bug),  when the user did not call GetTypeReflectionSafe() on an object, 
                     // or when requesting generics info not for an instance type, e.g. typeof(List<>). 
                     // As the second case can be difficult to debug, we emit a warning. TODO: we should 
                     // probably not emit a warning when the user code runs in release mode.
@@ -244,22 +244,24 @@ namespace Dot42.Internal.Generics
 
                 for (int i = 0; i < genericArguments.Length; ++i)
                 {
-                    Type arg;
-                    var nestedGenDef = genericArguments[i] as IGenericDefinition;
-                    if (nestedGenDef != null)
+                    Type resolvedArg;
+                    var arg = genericArguments[i];
+                    if (arg.NestedType().Length > 0)
                     {
-                        arg = ToGenericInstanceType(typeof (object), parentType, nestedGenDef);
+                        resolvedArg = ToGenericInstanceType(typeof(object), parentType, arg.NestedType()[0]);
+                    }
+                    else if (arg.FixedType().Length > 0)
+                    {
+                        resolvedArg = arg.FixedType()[0];
                     }
                     else
                     {
-                        arg = genericArguments[i] as Type;
-                        if (arg == null)
-                        {
-                            // ReSharper disable once PossibleNullReferenceException
-                            arg = parentGenericArguments.GetGenericParameter((int) genericArguments[i]);
-                        }
+                        // must be an index
+                        // ReSharper disable once PossibleNullReferenceException
+                        resolvedArg = parentGenericArguments.GetGenericParameter(arg.ContainingTypeArgumentIndex());
                     }
-                    genericParameters[i] = arg;
+
+                    genericParameters[i] = resolvedArg;
                 }
 
                 return GenericInstanceFactory.GetOrMakeGenericInstanceType(genericTypeDef, genericParameters);
