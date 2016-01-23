@@ -186,9 +186,11 @@ using System.Runtime.CompilerServices;
 [assembly: TypeForwardedTo(typeof(System.Collections.Generic.LinkedList<>))]
 [assembly: TypeForwardedTo(typeof(System.Collections.Generic.LinkedListNode<>))]
 [assembly: TypeForwardedTo(typeof(System.Collections.Generic.List<>))]
-[assembly: TypeForwardedTo(typeof(System.Collections.Generic.Queue<>))]
 [assembly: TypeForwardedTo(typeof(System.Collections.Generic.SortedDictionary<,>))]
 [assembly: TypeForwardedTo(typeof(System.Collections.Generic.Stack<>))]
+#if ANDROID_10P
+[assembly: TypeForwardedTo(typeof(System.Collections.Generic.Queue<>))]
+#endif
 
 //[assembly: TypeForwardedTo(typeof(System.Collections.ObjectModel.ReadOnlyCollection<>))]
 [assembly: TypeForwardedTo(typeof(System.Collections.ObjectModel.Collection<>))]
