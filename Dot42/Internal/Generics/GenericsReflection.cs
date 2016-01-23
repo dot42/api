@@ -244,7 +244,7 @@ namespace Dot42.Internal.Generics
                 genericTypeDef = parentGenericArguments.GetGenericParameter(genericParameter);
             }
 
-            if (genericArguments.Length > 0)
+            if (genericArguments != null && genericArguments.Length > 0)
             {
                 Type[] genericParameters = new Type[genericArguments.Length];
 
