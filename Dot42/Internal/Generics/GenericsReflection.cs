@@ -108,10 +108,10 @@ namespace Dot42.Internal.Generics
 
             if (annotation != null)
             {
-                var def = annotation.GenericDefinitions();
+                var def = annotation.GenericDefinitions().Select(DefinitionParser.Parse);
                 if (def.Length > 0)
                 {
-                    baseType = ToMatchedGenericInstanceType(baseType, type, def);        
+                    baseType = ToMatchedGenericInstanceType(baseType, type, def);  
                 }
                     
             }
@@ -168,11 +168,11 @@ namespace Dot42.Internal.Generics
             throw new InvalidOperationException("not a generic type: " + type.FullName);
         }
 
-        private static Type ToMatchedGenericInstanceType(Type perceivedType, Type parentType, IGenericDefinition[] definitions)
+        private static Type ToMatchedGenericInstanceType(Type perceivedType, Type parentType, GenericDefinition[] definitions)
         {
             for (int i = 0; i < definitions.Length; ++i)
             {
-                if (definitions[i].GenericTypeDefinition() != perceivedType)
+                if (definitions[i].GenericTypeDefinition != perceivedType)
                     continue;
 
                 return ToGenericInstanceType(perceivedType, parentType, definitions[i]);
@@ -194,26 +194,32 @@ namespace Dot42.Internal.Generics
 
         public static Type ToGenericInstanceType(Type perceivedType, Type parentType, IGenericDefinition m)
         {
+            var def = DefinitionParser.Parse(m);
+            return ToGenericInstanceType(perceivedType, parentType, def);
+        }
+
+        public static Type ToGenericInstanceType(Type perceivedType, Type parentType, GenericDefinition m)
+        {
             // is a specialized type defined?
-            var genericInstanceType = m.GenericInstanceType();
-            if (genericInstanceType != typeof(object))
+            var genericInstanceType = m.GenericInstanceType;
+            if (genericInstanceType != null)
                 return genericInstanceType;
 
             int genericParameter = -1;
-            var genericArguments = m.GenericArguments();
+            var genericArguments = m.GenericArguments;
 
             // is a generic type definition class defined?
-            var genericTypeDef = m.GenericTypeDefinition();
-            if (genericTypeDef == typeof (object))
+            var genericTypeDef = m.GenericTypeDefinition;
+            if (genericTypeDef == null)
             {
                 genericTypeDef = perceivedType;
-                genericParameter = m.GenericParameter();
+                genericParameter = m.GenericParameter;
             }
 
             // retrieve generic parameters if required.
             GenericTypeInfo parentGenericArguments = null;
             bool needParentGenericArguments = genericParameter >= 0
-                                           || genericArguments.Any(a => !(a is Type));
+                                           || genericArguments.Any(a => a.FixedType == null);
 
             if (needParentGenericArguments)
             {
@@ -246,19 +252,19 @@ namespace Dot42.Internal.Generics
                 {
                     Type resolvedArg;
                     var arg = genericArguments[i];
-                    if (arg.NestedType().Length > 0)
+                    if (arg.NestedType != null)
                     {
-                        resolvedArg = ToGenericInstanceType(typeof(object), parentType, arg.NestedType()[0]);
+                        resolvedArg = ToGenericInstanceType(typeof(object), parentType, arg.NestedType);
                     }
-                    else if (arg.FixedType().Length > 0)
+                    else if (arg.FixedType != null)
                     {
-                        resolvedArg = arg.FixedType()[0];
+                        resolvedArg = arg.FixedType;
                     }
                     else
                     {
                         // must be an index
                         // ReSharper disable once PossibleNullReferenceException
-                        resolvedArg = parentGenericArguments.GetGenericParameter(arg.ContainingTypeArgumentIndex());
+                        resolvedArg = parentGenericArguments.GetGenericParameter(arg.ContainingTypeArgumentIndex);
                     }
 
                     genericParameters[i] = resolvedArg;
@@ -650,7 +656,7 @@ namespace Dot42.Internal.Generics
                     continue;
                 }
 
-                var def = genericInstanceClass.GenericDefinitions();
+                var def = genericInstanceClass.GenericDefinitions().Select(DefinitionParser.Parse);
 
                 if (def.Length == 0)
                 {

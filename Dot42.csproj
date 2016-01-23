@@ -102,6 +102,7 @@
     <Compile Include="Dot42\Internal\CompilerHelper.Primitive.cs" />
     <Compile Include="Dot42\Internal\DateFormatFactory.cs" />
     <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
+    <Compile Include="Dot42\Internal\Generics\DefinitionParser.cs" />
     <Compile Include="Dot42\Internal\IAssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\IGenericTypeDefinition.cs" />
     <Compile Include="Dot42\Internal\INullableMarker.cs" />
@@ -932,6 +933,9 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->
