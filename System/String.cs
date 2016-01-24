@@ -13,10 +13,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using System.Text.RegularExpressions;
 using Dot42;
 using Dot42.Internal;
 using Java.Lang;
@@ -24,7 +25,7 @@ using Java.Util;
 
 namespace System
 {
-	partial class String
+	partial class String : IEnumerable<char>
 	{
 	    public const string Empty = "";
 
@@ -998,6 +999,19 @@ namespace System
             if (ReferenceEquals(a, b)) return false;
             return !Equals(a, b);
         }
-    }
+
+	    IEnumerator<char> IEnumerable<char>.GetEnumerator()
+	    {
+            // The C# compiler will actually not call this method
+            // when using a string in foreach, but instead generate 
+            // optimized code.
+	        return new StringEnumerator(this);
+	    }
+
+	    IEnumerator IEnumerable.GetEnumerator()
+	    {
+	        return ((IEnumerable<char>)this).GetEnumerator();
+	    }
+	}
 }
 

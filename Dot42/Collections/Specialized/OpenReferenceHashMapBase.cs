@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using Java.Lang.Ref;
 using Java.Util;
 
@@ -14,7 +15,9 @@ namespace Dot42.Collections.Specialized
         public const float DefaultFillFactor = 0.55f;
         public const int DefaultSize = 16;
 
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
         protected static readonly object FreeKey = new object();
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
         protected static readonly object RemovedKey = new object();
 
         protected ReferenceQueue<K> m_queue = new ReferenceQueue<K>();

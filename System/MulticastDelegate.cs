@@ -44,18 +44,29 @@ namespace System
 
         protected int InvocationListLength;
 	    protected MulticastDelegate[] InvocationList;
-        private int lostInvocationList; 
+        private int lostInvocationList;
 
         [Include]
-        protected abstract bool EqualsWithoutInvocationList(MulticastDelegate other);
+        protected virtual bool EqualsWithoutInvocationList(MulticastDelegate other)
+        {
+            throw new NotImplementedException();
+        }
 
         [Include]
         protected virtual int GetHashCodeWithoutInvocationList() { return GetType().GetHashCode(); }
+
         [Include, DexName("CloneWithNewInvocationList")]
-        protected abstract MulticastDelegate CloneWithNewInvocationList(MulticastDelegate[] invocationList, int invocationListLength);
+        protected virtual MulticastDelegate CloneWithNewInvocationList(MulticastDelegate[] invocationList, int invocationListLength)
+        {
+            throw new NotImplementedException();
+        }
 
         protected virtual object GetTargetImpl() { return null;}
-        protected abstract MethodInfo GetMethodInfoImpl();
+
+        protected virtual MethodInfo GetMethodInfoImpl()
+        {
+            throw new NotImplementedException();
+        }
 
         protected override sealed Delegate CombineImpl(Delegate other)
         {

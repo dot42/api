@@ -26,12 +26,12 @@
     </AssemblyOriginatorKeyFile>
     <DelaySign>true</DelaySign>
     <FrameworksDirectory Condition=" '$(FrameworksDirectory)' == '' ">Generated</FrameworksDirectory>
-    <AndroidVersion Condition=" '$(AndroidVersion)' == '' ">v4.3</AndroidVersion>
+    <AndroidVersion Condition=" '$(AndroidVersion)' == '' ">v4.0.3</AndroidVersion>
     <TargetFrameworkDirectory>$(FrameworksDirectory)\$(AndroidVersion)</TargetFrameworkDirectory>
     <TargetFrameworkMoniker />
     <TargetFrameworkIdentifier>Dot42</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>$(AndroidVersion)</TargetFrameworkVersion>
-    <ApiLevel Condition=" '$(ApiLevel)' == '' ">18</ApiLevel>
+    <ApiLevel Condition=" '$(ApiLevel)' == '' ">15</ApiLevel>
     <NoCompilerStandardLib>true</NoCompilerStandardLib>
     <FrameworkPathOverride>$(FrameworksDirectory)</FrameworkPathOverride>
     <AndroidDefines Condition=" '$(ApiLevel)' &gt;= 3 ">ANDROID_3P;$(AndroidDefines)</AndroidDefines>
@@ -98,6 +98,7 @@
     <Compile Include="Dot42\Collections\Specialized\FastConcurrentHashMap.cs" />
     <Compile Include="Dot42\Collections\Specialized\OpenReferenceHashMapBase.cs" />
     <Compile Include="Dot42\Internal\Application.cs" />
+    <Compile Include="Dot42\Internal\StringEnumerator.cs" />
     <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
     <Compile Include="Dot42\Internal\CompilerHelper.Primitive.cs" />
     <Compile Include="Dot42\Internal\DateFormatFactory.cs" />
@@ -942,7 +943,7 @@
   <Target Name="GetReferenceAssemblyPaths" DependsOnTargets="$(GetReferenceAssemblyPathsDependsOn)">
   </Target>
   <PropertyGroup>
-    <PostBuildTargetDir>$(SolutionDir)Build\Application\Frameworks\$(AndroidVersion)\</PostBuildTargetDir>
-    <PostBuildEvent Condition=" '$(TargetDir)' != '$(PostBuildTargetDir)' ">xcopy /F /Y $(TargetDir)$(TargetName).* $(PostBuildTargetDir)</PostBuildEvent>
+    <PostBuildTargetDir>$(SolutionDir)..\..\Build\Application\Frameworks\$(AndroidVersion)\</PostBuildTargetDir>
+    <PostBuildEvent Condition=" '$(TargetDir)' != '$(PostBuildTargetDir)' ">xcopy /F /Y /I $(TargetDir)$(TargetName).* $(PostBuildTargetDir)</PostBuildEvent>
   </PropertyGroup>
 </Project>
