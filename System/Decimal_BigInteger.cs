@@ -64,19 +64,7 @@ namespace System
 		[CLSCompliant(false)][Obsolete("do not use", true)]
 		public Decimal (ulong value) 
 		{
-			unchecked 
-			{
-                // some bit-twiddeling to make it work.
-		        bool mustDouble = (value & 0x8000000000000000L) != (ulong)0;
-                
-                if(!mustDouble)
-                    _val = new BigDecimal ((long)value);
-                else
-                {
-		            value &= ~0x8000000000000000L;
-		            _val = new BigDecimal ((long)value).Multiply(new BigDecimal(2));
-                }
-			}
+			throw new NotImplementedException(); // but see implicit operator below.
 		}
 
         public Decimal (float value)
@@ -304,17 +292,21 @@ namespace System
 		[CLSCompliant(false)]
 		public static implicit operator Decimal (ulong value)
 		{
-            // some bit-twiddeling to make it work.
-            // some bit-twiddeling to make it work.
-            bool mustDouble = (value & 0x8000000000000000L) != (ulong)0;
+		    unchecked
+		    {
+		        bool mustTwiddle = (value & 0x8000000000000000L) != (ulong) 0;
 
-            if (!mustDouble)
-                return new BigDecimal((long)value);
-            else
-            {
-                value &= ~0x8000000000000000L;
-                return new BigDecimal((long)value).Multiply(new BigDecimal(2));
-            }
+		        if (!mustTwiddle)
+		            return new Decimal((long) value);
+
+		        // some bit-twiddeling to make it work.
+		        int add = ((int) value) & 1;
+		        value >>= 1;
+		        var ret = new BigDecimal((long) value).Multiply(new BigDecimal(2));
+		        if (add != 0)
+		            ret = ret.Add(BigDecimal.ONE);
+		        return new Decimal(ret);
+		    }
 		}
 
 		public static explicit operator Decimal (float value) 
