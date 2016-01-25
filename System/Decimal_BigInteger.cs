@@ -1,10 +1,7 @@
-
-
 using System.Globalization;
 using System.Text;
 using Dot42;
 using Java.Math;
-using Java.Text;
 
 namespace System
 {
@@ -49,21 +46,22 @@ namespace System
 			}
 		}
 
-#if NOT_IMLPLEMENTED // can't have this overload, as the constructor can not be renamed.
-        [CLSCompliant(false)]
-		public Decimal (uint value) 
+        // Note: we should have special redirection code to allow this overload that clashes with the one above
+        //       until then we keep this obsolete. This should keep Roslyn happy.
+        [CLSCompliant(false)][Obsolete("do not use", true)]
+        public Decimal (uint value) 
 		{
             _val = new BigDecimal((long)value);
 		}
-#endif
 
 		public Decimal (long value) 
 		{
             _val = new BigDecimal(value);
 		}
 
-#if NOT_IMLPLEMENTED // can't have this overload, as the constructor can not be renamed.
-		[CLSCompliant(false)]
+        // Note: we should have special redirection code to allow this overload that clashes with the one above
+        //       until then we keep this obsolete. This should keep Roslyn happy.
+		[CLSCompliant(false)][Obsolete("do not use", true)]
 		public Decimal (ulong value) 
 		{
 			unchecked 
@@ -80,8 +78,6 @@ namespace System
                 }
 			}
 		}
-#endif
-
 
         public Decimal (float value)
         {

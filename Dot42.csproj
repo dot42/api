@@ -51,6 +51,8 @@
     <AndroidDefines Condition=" '$(ApiLevel)' &gt;= 17 ">ANDROID_17P;$(AndroidDefines)</AndroidDefines>
     <AndroidDefines Condition=" '$(ApiLevel)' &gt;= 18 ">ANDROID_18P;$(AndroidDefines)</AndroidDefines>
     <AndroidDefines Condition=" '$(ApiLevel)' &gt;= 19 ">ANDROID_19P;$(AndroidDefines)</AndroidDefines>
+    <!--only on roslyn compiler: /runtimemetadataversion:v4.0.30319 -->
+    <CompilerResponseFile Condition="'$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' &gt; '12.0'">AssemblyInfo/dot42.rsp</CompilerResponseFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,7 +119,9 @@
     <Compile Include="Dot42\Internal\Threading\ThreadPoolImpl.cs" />
     <Compile Include="Dot42\SerializedParameterAttribute.cs" />
     <Compile Include="Dot42\SerializationMethodAttribute.cs" />
-    <Compile Include="Android\Appwidget\AppWidgetProvider.cs" />
+    <Compile Include="Android\Appwidget\AppWidgetProvider.cs">
+      <SubType>AppWidgetProvider</SubType>
+    </Compile>
     <Compile Include="Android\App\Activity.cs" />
     <Compile Include="Android\App\AlertDialog.Builder.cs" />
     <Compile Include="Android\App\Instrumentation.cs" />
@@ -598,6 +602,7 @@
     <Compile Include="System\Xml\Serialization\XmlAnyAttributeAttribute.cs" />
     <Compile Include="System\Xml\XmlConvert.cs" />
     <Compile Include="System\Xml\XmlNodeType.cs" />
+    <None Include="AssemblyInfo\dot42.rsp" />
     <None Include="ForwardAssemblies\corlib.cs" />
     <None Include="ForwardAssemblies\Microsoft.CSharp.cs" />
     <None Include="ForwardAssemblies\Microsoft.VisualBasic.cs" />
@@ -934,9 +939,6 @@
     <Compile Include="System\Version.cs" />
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->
