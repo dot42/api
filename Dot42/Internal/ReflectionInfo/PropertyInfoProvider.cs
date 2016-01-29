@@ -43,7 +43,7 @@ namespace Dot42.Internal.ReflectionInfo
          
             // Try to instantiate FrameworkPropertyInfoProvider.
             // Note that it is no failure if the provider is not available.
-            var fwProps = TryCreateClass<PropertyInfoProvider>("dot42.Internal.ReflectionInfo.FrameworkPropertyInfoProvider");
+            var fwProps = TryCreateClass<PropertyInfoProvider>(typeof(PropertyInfoProvider).Namespace + ".FrameworkPropertyInfoProvider");
             if (fwProps != null)
                 Instances.Add(fwProps);
 
@@ -143,7 +143,7 @@ namespace Dot42.Internal.ReflectionInfo
                     return default(T);
                 return Activator.CreateInstance(frameworkProps) as T;
             }
-            catch (Exception)
+            catch
             {
                 return default(T);
             }
