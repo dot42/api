@@ -22,7 +22,7 @@ namespace System
 		public const decimal MinusOne = -1m;
 		public const decimal One = 1m;
 		public const decimal Zero = 0m;
-        
+        private const decimal _0x8000000000000000 = (decimal)0x8000000000000000UL;
 
 	    private readonly BigDecimal _val;
 
@@ -294,18 +294,13 @@ namespace System
 		{
 		    unchecked
 		    {
-		        bool mustTwiddle = (value & 0x8000000000000000L) != (ulong) 0;
+		        ulong valWithoutHighestBit = (value & ~0x8000000000000000UL);
 
-		        if (!mustTwiddle)
-		            return new Decimal((long) value);
+                if(valWithoutHighestBit == value)
+                    return new Decimal((long) value);
 
-		        // some bit-twiddeling to make it work.
-		        int add = ((int) value) & 1;
-		        value >>= 1;
-		        var ret = new BigDecimal((long) value).Multiply(new BigDecimal(2));
-		        if (add != 0)
-		            ret = ret.Add(BigDecimal.ONE);
-		        return new Decimal(ret);
+		        // add value for highest bit to the value with removed highest bit.
+		        return new Decimal((long)valWithoutHighestBit) + (decimal) 0x8000000000000000UL;
 		    }
 		}
 
