@@ -945,7 +945,7 @@
   <Target Name="GetReferenceAssemblyPaths" DependsOnTargets="$(GetReferenceAssemblyPathsDependsOn)">
   </Target>
   <PropertyGroup>
-    <PostBuildTargetDir>$(SolutionDir)..\..\Build\Application\Frameworks\$(AndroidVersion)\</PostBuildTargetDir>
+    <PostBuildTargetDir>$([System.IO.Path]::GetFullPath('$(SolutionDir)..\..\Build\Application\Frameworks\$(AndroidVersion)\'))</PostBuildTargetDir>
     <PostBuildEvent Condition=" '$(TargetDir)' != '$(PostBuildTargetDir)' ">xcopy /F /Y /I $(TargetDir)$(TargetName).* $(PostBuildTargetDir)</PostBuildEvent>
   </PropertyGroup>
 </Project>
