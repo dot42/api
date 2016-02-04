@@ -13,7 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using JFile = Java.Io.File;
+using JFile = Java.IO.File;
 
 namespace System.IO
 {
@@ -25,7 +25,7 @@ namespace System.IO
         public static void Delete(string path)
         {
             var file = new JFile(path);
-            if (file.IsDirectory())
+            if (file.IsDirectory)
                 file.Delete();
         }
 
@@ -35,7 +35,7 @@ namespace System.IO
         public static void Delete(string path, bool recursive)
         {
             var file = new JFile(path);
-            if (file.IsDirectory())
+            if (file.IsDirectory)
             {
                 if (recursive)
                 {
@@ -43,8 +43,8 @@ namespace System.IO
                     foreach (var child in children)
                     {
                         var childFile = new JFile(child);
-                        if (childFile.IsFile()) childFile.Delete();
-                        if (childFile.IsDirectory()) Delete(child, recursive);
+                        if (childFile.IsFile) childFile.Delete();
+                        if (childFile.IsDirectory) Delete(child, recursive);
                     }
                 }
                 file.Delete();
@@ -57,7 +57,7 @@ namespace System.IO
         public static bool Exists(string path)
         {
             var file = new JFile(path);
-            return file.IsDirectory() && file.Exists();
+            return file.IsDirectory && file.Exists();
         }
 
         public static /*DirectoryInfo*/ void CreateDirectory(string path)

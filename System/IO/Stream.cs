@@ -13,9 +13,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Java.Io;
-using JInputStream = Java.Io.InputStream;
-using JOutputStream = Java.Io.OutputStream;
+using Java.IO;
+using JInputStream = Java.IO.InputStream;
+using JOutputStream = Java.IO.OutputStream;
 
 namespace System.IO
 {
@@ -134,6 +134,10 @@ namespace System.IO
         /// </summary>
         public abstract long Position { get; set; }
 
+        public virtual bool CanTimeout { get { return false; } }
+        public virtual int ReadTimeout { get { throw new InvalidOperationException(); } set { throw new InvalidOperationException(); } }
+        public virtual int WriteTimeout { get { throw new InvalidOperationException(); } set { throw new InvalidOperationException(); } }
+        
         /// <summary>
         /// Close this stream and any resources that it may hold.
         /// </summary>

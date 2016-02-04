@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using JSystem = Java.Lang.System;
 using JRuntime = Java.Lang.Runtime;
 
@@ -35,6 +37,7 @@ namespace System
         /// Instruct the system not to call the finalizer of the given object.
         /// </summary>
         /// <remarks>Not implemented</remarks>
+        [Obsolete("SuppressFinalize is not supported in Java, this method does nothing.")]
         public static void SuppressFinalize(object value)
         {
             if (value == null)

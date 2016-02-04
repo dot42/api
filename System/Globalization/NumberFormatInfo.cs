@@ -13,75 +13,88 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Dot42.Internal;
 using Java.Text;
+using Java.Util;
 
 namespace System.Globalization
 {
 	public sealed class NumberFormatInfo : IFormatProvider
 	{
-	    private readonly NumberFormat numberFormat;
-	    private int[] currencyGroupSizes;
-        private int[] numberGroupSizes;
-        private int[] percentGroupSizes;
+	    private readonly Locale _locale;
 
-        public NumberFormatInfo()
-            :this(CultureInfo.CurrentCulture.JavaNumberFormat)
+        private readonly NumberFormat _numbers;
+	    private readonly DecimalFormat _decimals;
+        private readonly DecimalFormat _currency;
+        private readonly DecimalFormat _percent;
+
+        private readonly DecimalFormatSymbols _symbols;
+
+	    public NumberFormatInfo() :this(CultureInfo.CurrentCulture.Locale)
         { 
         }
 
-	    internal NumberFormatInfo(NumberFormat numberFormat)
+	    internal NumberFormatInfo(Locale locale)
 	    {
-	        this.numberFormat = numberFormat;
-            currencyGroupSizes = new[] { 3 };
-            numberGroupSizes = new[] { 3 };
-            percentGroupSizes = new[] { 3 };
+	        _locale = locale;
+
+	        _numbers = NumberFormat.GetNumberInstance(locale);
+
+            _symbols = new DecimalFormatSymbols(locale) { Infinity = "Infinity" };
+	        
+            _decimals = _numbers as DecimalFormat ?? new DecimalFormat();
+            _decimals.DecimalFormatSymbols = _symbols;
+
+            _currency =  NumberFormat.GetCurrencyInstance(locale) as DecimalFormat ?? _decimals;
+            _percent = NumberFormat.GetPercentInstance(locale) as DecimalFormat ?? _decimals;
         }
+
+        internal NumberFormat JavaNumberFormat { get { return _numbers; } }
 
         public static NumberFormatInfo GetInstance(IFormatProvider provider)
         {
-            throw new NotImplementedException("System.Globalization.NumberFormatInfo.GetInstance");
+            return new NumberFormatInfo(provider.ToLocale());
         }
 
         public static NumberFormatInfo InvariantInfo
         {
-            get
-            {
-                return new NumberFormatInfo(CultureInfo.InvariantCulture.JavaNumberFormat);
-            }
+            get { return CultureInfo.InvariantCulture.NumberFormat; }
+        }
+
+        public static NumberFormatInfo CurrentInfo
+        {
+            get { return CultureInfo.CurrentCulture.NumberFormat; }
         }
 
 	    public string CurrencySymbol
 	    {
-            get { return numberFormat.Currency.GetSymbol(); }
+            get { return _symbols.CurrencySymbol; }
 	    }
 
 	    public string CurrencyDecimalSeparator
 	    {
-            get { return "."; }
-	        set { if(value != ".") throw new NotSupportedException(); }
+            get { return _symbols.MonetaryDecimalSeparator.ToString(); }
+            set { if (value != CurrencyDecimalSeparator) throw new NotSupportedException(); }
 	    }
 
 	    public string CurrencyGroupSeparator
 	    {
-            get { return ""; }
-            set { if (value != "") throw new NotSupportedException(); }
+            get { return _currency.DecimalFormatSymbols.GroupingSeparator.ToString(); }
+            set { if (value != CurrencyGroupSeparator) throw new NotSupportedException(); }
 	    }
 
         public string NumberDecimalSeparator
         {
-            get { return "."; }
-            set { if (value != ".") throw new NotSupportedException(); }
+            get { return _symbols.DecimalSeparator.ToString(); }
+            set { if (value != NumberDecimalSeparator) throw new NotSupportedException(); }
         }
 
         public string NumberGroupSeparator
         {
-            get { return ""; }
-            set { if (value != "") throw new NotSupportedException(); }
+            get { return _symbols.GroupingSeparator.ToString(); }
+            set { if (value != NumberGroupSeparator) throw new NotSupportedException(); }
         }
 
-        public int[] NumberGroupSizes { get { return numberGroupSizes; } }
-        internal int[] RawNumberGroupSizes { get { return numberGroupSizes; } }
+        public int[] NumberGroupSizes { get { return new [] {_decimals.GroupingSize}; } }
 
         public int NumberPositivePattern { get; set; }
         public int NumberNegativePattern { get; set; }
@@ -89,17 +102,16 @@ namespace System.Globalization
 
 	    public string PercentSymbol
 	    {
-            get { return "%"; }
+            get { return _symbols.Percent.ToString(); }
 	    }
 
         public string PercentGroupSeparator
-        {
-            get { return ""; }
-            set { if (value != "") throw new NotSupportedException(); }
-        }
+	    {
+            get { return _percent.DecimalFormatSymbols.GroupingSeparator.ToString(); }
+            set { if (value != PercentGroupSeparator) throw new NotSupportedException(); }
+	    }
 
-        public int[] PercentGroupSizes { get { return percentGroupSizes; } }
-        internal int[] RawPercentGroupSizes { get { return percentGroupSizes; } }
+        public int[] PercentGroupSizes { get { return new[] { _percent.GroupingSize } ; } }
 
         public int PercentPositivePattern { get; set; }
         public int PercentNegativePattern { get; set; }
@@ -107,27 +119,28 @@ namespace System.Globalization
 
         public string PercentDecimalSeparator
         {
-            get { return "."; }
+            get { return _percent.DecimalFormatSymbols.DecimalSeparator.ToString(); }
             set { if (value != ".") throw new NotSupportedException(); }
         }
 
         public int CurrencyPositivePattern { get; set; }
         public int CurrencyNegativePattern { get; set; }
-        public int CurrencyDecimalDigits { get { return 2; } }
+        public int CurrencyDecimalDigits { get { return _currency.Currency.DefaultFractionDigits; } }
 
-        public int[] CurrencyGroupSizes { get { return currencyGroupSizes; } }
-        internal int[] RawCurrencyGroupSizes { get { return currencyGroupSizes; } }
+        public int[] CurrencyGroupSizes { get { return new [] {_currency.GroupingSize }; } }
 
         public string NegativeSign { get { return "-"; } }
         public string PositiveSign { get { return string.Empty; } }
 
-        public string NaNSymbol { get { return "NaN"; } }
-        public string PositiveInfinitySymbol { get { return "+INF"; } }
-        public string NegativeInfinitySymbol { get { return "-INF"; } }
+        public string NaNSymbol { get { return _symbols.NaN; } }
+        public string PositiveInfinitySymbol { get { return "+" + _symbols.Infinity; } }
+        public string NegativeInfinitySymbol { get { return "-" + _symbols.Infinity; } }
 
-        public string PerMilleSymbol { get { return ""; } }
+        public string PerMilleSymbol { get { return _symbols.PerMill.ToString(); } }
 
         public bool IsReadOnly { get { return true; } }
+
+	    public Locale Locale { get { return _locale; } }
 
 	    /// <summary>
 	    /// Returns an object that provides formatting services for the specified type.
@@ -136,23 +149,16 @@ namespace System.Globalization
 	    {
             if (formatType == typeof (ICustomFormatter))
             {
-                return new CustomFormatter();
+                return CultureInfo.DefaultCustomFormatter;
             }
-
-            throw new NotImplementedException("System.Globalization.NumberFormatInfo.GetFormat: " + formatType.FullName);
-	    }
-
-        private class CustomFormatter: ICustomFormatter
-        {
-            public string Format(string format, object arg, IFormatProvider formatProvider)
+            if (formatType == typeof(NumberFormatInfo))
             {
-                if (arg is int) return NumberFormatter.Format(format, (int)arg, formatProvider);
-                if (arg is long) return NumberFormatter.Format(format, (long)arg, formatProvider);
-                if (arg is float) return NumberFormatter.Format(format, (float)arg, formatProvider);
-                if (arg is double) return NumberFormatter.Format(format, (double)arg, formatProvider);
-                throw new NotImplementedException("System.Globalization.NumberFormatInfo.CustomFormatter.Format");
+                return this;
             }
-        }
+
+	        return null; // let the caller handle everything.
+            //throw new NotImplementedException("System.Globalization.NumberFormatInfo.GetFormat: " + formatType.FullName);
+	    }
 	}
 }
 

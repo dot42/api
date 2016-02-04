@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Globalization;
+using Dot42;
 using Dot42.Internal;
 using Java.Lang;
 
@@ -29,9 +30,11 @@ namespace System
         public int CompareTo(object value)
         {
             if (value == null) return +1;
-            if (value.GetType() != TypeHelper.IntegerType()) throw new ArgumentException("value is not an Int32");
 
-            return CompareTo((int)value);
+            if (value.JavaGetClass() != TypeHelper.IntegerType()) 
+                throw new ArgumentException("value is not an Int32");
+
+            return CompareTo((int?)value); 
         }
 
         public static int Parse(string s, IFormatProvider provider)
@@ -41,22 +44,34 @@ namespace System
 
         public static int Parse(string s, NumberStyles style)
         {
+            if ((style & NumberStyles.AllowHexSpecifier) != 0)
+                return JavaParse(s, 16);
             return Parse(s);
         }
 
+        public static int Parse(string s, NumberStyles style, IFormatProvider provider)
+        {
+            if ((style & NumberStyles.AllowHexSpecifier) != 0)
+                return JavaParse(s, 16);
+            return Parse(s);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(IntValue(), provider);
+            return NumberFormatter.Format(this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, IntValue(), null);
+            return NumberFormatter.Format(format, this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, IntValue(), provider);
+            return NumberFormatter.Format(format, this, provider);
         }
 
         /// <summary>
@@ -76,15 +91,15 @@ namespace System
             return TryParse(s, NumberStyles.Any, null, out result);
         }
 
-         /// <summary>
-         /// Try to parse the given string into an integer value.
-         /// </summary>
-         /// <returns>True on success, false otherwise</returns>
+        /// <summary>
+        /// Try to parse the given string into an integer value.
+        /// </summary>
+        /// <returns>True on success, false otherwise</returns>
         public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out int result)
         {
             try
             {
-                result = Parse(s);
+                result = Parse(s, style);
                 return true;
             }
             catch
@@ -92,6 +107,12 @@ namespace System
                 result = 0;
                 return false;
             }
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(int other)
+        {
+            return other == this;
         }
 
         /// <summary>

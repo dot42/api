@@ -61,6 +61,11 @@ namespace System
             return new[] { (byte)(value ? 1 : 0) };
         }
 
+        public static byte[] GetBytes(byte value)
+        {
+            return new[] { value };
+        }
+
         public static byte[] GetBytes(char value)
         {
             var buf = ByteBuffer.Allocate(2).Order(ByteOrder.NativeOrder());

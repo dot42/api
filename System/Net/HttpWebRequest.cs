@@ -539,7 +539,7 @@ namespace System.Net
                                       ContentLength, _requestStream.Length));
 
                 _requestStream.Seek(0L, SeekOrigin.Begin);
-                entityRequest.SetEntity(new InputStreamEntity(_requestStream, ContentLength));
+                entityRequest.Entity = new InputStreamEntity(_requestStream, ContentLength);
             }
 
             if (Headers != null)
@@ -557,7 +557,7 @@ namespace System.Net
             try
             {
                 client = AndroidHttpClient.NewInstance(UserAgent);
-                HttpClientParams.SetRedirecting(client.GetParams(), this.AllowAutoRedirect);
+                HttpClientParams.SetRedirecting(client.Params, this.AllowAutoRedirect);
                 var response = client.Execute(_request);
 
                 if (response == null)
@@ -566,7 +566,7 @@ namespace System.Net
                 }
 
                 var header = response.GetFirstHeader(WebHeaderCollection.HeaderToString(HttpResponseHeader.Location));
-                var uri = header != null ? header.GetValue() : null;
+                var uri = header != null ? header.Value : null;
                 _address = new Uri(!string.IsNullOrEmpty(uri) ? uri : _requestUri.ToString());
 
                 var result = new HttpWebResponse(this, response, client);

@@ -1,23 +1,8 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: Android.Text.Format.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace Android.Text.Format
 {
 		/// <summary>
-		/// <para>Utility class for producing strings with formatted date/time.</para><para>Most callers should avoid supplying their own format strings to this class' <c> format </c> methods and rely on the correctly localized ones supplied by the system. This class' factory methods return appropriately-localized java.text.DateFormat instances, suitable for both formatting and parsing dates. For the canonical documentation of format strings, see java.text.SimpleDateFormat.</para><para>In cases where the system does not provide a suitable pattern, this class offers the getBestDateTimePattern method.</para><para>The <c> format </c> methods in this class implement a subset of Unicode  patterns. The subset currently supported by this class includes the following format characters: <c> acdEHhLKkLMmsyz </c> . Up to API level 17, only <c> adEhkMmszy </c> were supported. Note that this class incorrectly implements <c> k </c> as if it were <c> H </c> for backwards compatibility.</para><para>See java.text.SimpleDateFormat for more documentation about patterns, or if you need a more complete or correct implementation. Note that the non-<c> format </c> methods in this class are implemented by <c> SimpleDateFormat </c> . </para>    
+		///  <para>Utility class for producing strings with formatted date/time.</para> <para>Most callers should avoid supplying their own format strings to this class' <c>format </c> methods and rely on the correctly localized ones supplied by the system. This class' factory methods return appropriately-localized java.text.DateFormat instances, suitable for both formatting and parsing dates. For the canonical documentation of format strings, see java.text.SimpleDateFormat.</para> <para>In cases where the system does not provide a suitable pattern, this class offers the getBestDateTimePattern method.</para> <para>The <c>format </c> methods in this class implement a subset of Unicode  patterns. The subset currently supported by this class includes the following format characters:  <c>acdEHhLKkLMmsyz </c> . Up to API level 17, only <c>adEhkMmszy </c> were supported. Note that this class incorrectly implements <c>k </c> as if it were <c>H </c> for backwards compatibility.</para> <para>See java.text.SimpleDateFormat for more documentation about patterns, or if you need a more complete or correct implementation. Note that the non- <c>format </c> methods in this class are implemented by  <c>SimpleDateFormat </c> . </para>    
 		/// </summary>
 		/// <java-name>
 		/// android/text/format/DateFormat
@@ -27,7 +12,7 @@ namespace Android.Text.Format
  /* scope: __dot42__ */ 
 		{
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> ' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// QUOTE
@@ -35,7 +20,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("QUOTE", "C", AccessFlags = 25)]
 				public const char QUOTE = '\'';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'a' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'a' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// AM_PM
@@ -43,7 +28,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("AM_PM", "C", AccessFlags = 25)]
 				public const char AM_PM = 'a';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'a' </c> instead; 'A' was always equivalent to 'a'. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'a' </c> instead; 'A' was always equivalent to 'a'. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// CAPITAL_AM_PM
@@ -51,7 +36,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("CAPITAL_AM_PM", "C", AccessFlags = 25)]
 				public const char CAPITAL_AM_PM = 'A';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'd' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'d' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// DATE
@@ -59,7 +44,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("DATE", "C", AccessFlags = 25)]
 				public const char DATE = 'd';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'E' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'E' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// DAY
@@ -67,7 +52,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("DAY", "C", AccessFlags = 25)]
 				public const char DAY = 'E';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'h' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'h' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// HOUR
@@ -75,7 +60,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("HOUR", "C", AccessFlags = 25)]
 				public const char HOUR = 'h';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'H' </c> (for compatibility with SimpleDateFormat and Unicode) or <c> 'k' </c> (for compatibility with Android releases up to and including Jelly Bean MR-1) instead. Note that the two are incompatible. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'H' </c> (for compatibility with SimpleDateFormat and Unicode) or <c>'k' </c> (for compatibility with Android releases up to and including Jelly Bean MR-1) instead. Note that the two are incompatible. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// HOUR_OF_DAY
@@ -83,7 +68,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("HOUR_OF_DAY", "C", AccessFlags = 25)]
 				public const char HOUR_OF_DAY = 'k';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'm' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'m' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// MINUTE
@@ -91,7 +76,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("MINUTE", "C", AccessFlags = 25)]
 				public const char MINUTE = 'm';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'M' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'M' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// MONTH
@@ -99,7 +84,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("MONTH", "C", AccessFlags = 25)]
 				public const char MONTH = 'M';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 's' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'s' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// SECONDS
@@ -107,7 +92,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("SECONDS", "C", AccessFlags = 25)]
 				public const char SECONDS = 's';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'z' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'z' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// TIME_ZONE
@@ -115,7 +100,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("TIME_ZONE", "C", AccessFlags = 25)]
 				public const char TIME_ZONE = 'z';
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use a literal</para></xrefdescription></xrefsect><c> 'y' </c> instead. </para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use a literal <c>'y' </c> instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// YEAR
@@ -128,10 +113,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns true if user preference is set to 24-hour format. </para>        
+				///  <para>Returns true if user preference is set to 24-hour format. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if 24 hour time format is selected, false otherwise. </para>
+				///  <para>true if 24 hour time format is selected, false otherwise. </para>
 				/// </returns>
 				/// <java-name>
 				/// is24HourFormat
@@ -143,10 +128,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns a java.text.DateFormat object that can format the time according to the current locale and the user's 12-/24-hour clock preference. </para>        
+				///  <para>Returns a java.text.DateFormat object that can format the time according to the current locale and the user's 12-/24-hour clock preference. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the java.text.DateFormat object that properly formats the time. </para>
+				///  <para>the java.text.DateFormat object that properly formats the time. </para>
 				/// </returns>
 				/// <java-name>
 				/// getTimeFormat
@@ -158,10 +143,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns a java.text.DateFormat object that can format the date in short form (such as 12/31/1999) according to the current locale and the user's date-order preference. </para>        
+				///  <para>Returns a java.text.DateFormat object that can format the date in short form (such as 12/31/1999) according to the current locale and the user's date-order preference. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the java.text.DateFormat object that properly formats the date. </para>
+				///  <para>the java.text.DateFormat object that properly formats the date. </para>
 				/// </returns>
 				/// <java-name>
 				/// getDateFormat
@@ -173,10 +158,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns a java.text.DateFormat object that can format the date in long form (such as <c> Monday, January 3, 2000 </c> ) for the current locale. </para>        
+				///  <para>Returns a java.text.DateFormat object that can format the date in long form (such as <c>Monday, January 3, 2000 </c> ) for the current locale. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the java.text.DateFormat object that formats the date in long form. </para>
+				///  <para>the java.text.DateFormat object that formats the date in long form. </para>
 				/// </returns>
 				/// <java-name>
 				/// getLongDateFormat
@@ -188,10 +173,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns a java.text.DateFormat object that can format the date in medium form (such as <c> Jan 3, 2000 </c> ) for the current locale. </para>        
+				///  <para>Returns a java.text.DateFormat object that can format the date in medium form (such as <c>Jan 3, 2000 </c> ) for the current locale. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the java.text.DateFormat object that formats the date in long form. </para>
+				///  <para>the java.text.DateFormat object that formats the date in long form. </para>
 				/// </returns>
 				/// <java-name>
 				/// getMediumDateFormat
@@ -203,7 +188,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Gets the current date format stored as a char array. The array will contain 3 elements (DATE, MONTH, and YEAR) in the order specified by the user's format preference. Note that this order is <b>only</b> appropriate for all-numeric dates; spelled-out (MEDIUM and LONG) dates will generally contain other punctuation, spaces, or words, not just the day, month, and year, and not necessarily in the same order returned here. </para>        
+				///  <para>Gets the current date format stored as a char array. The array will contain 3 elements (DATE, MONTH, and YEAR) in the order specified by the user's format preference. Note that this order is  <b>only</b> appropriate for all-numeric dates; spelled-out (MEDIUM and LONG) dates will generally contain other punctuation, spaces, or words, not just the day, month, and year, and not necessarily in the same order returned here. </para>        
 				/// </summary>
 				/// <java-name>
 				/// getDateFormatOrder
@@ -244,7 +229,7 @@ namespace Android.Text.Format
 		}
 
 		/// <summary>
-		/// <para>This class contains various date-related utilities for creating text for things like elapsed time and date ranges, strings for days of the week and months, and AM/PM text etc. </para>    
+		///  <para>This class contains various date-related utilities for creating text for things like elapsed time and date ranges, strings for days of the week and months, and AM/PM text etc. </para>    
 		/// </summary>
 		/// <java-name>
 		/// android/text/format/DateUtils
@@ -279,7 +264,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("WEEK_IN_MILLIS", "J", AccessFlags = 25)]
 				public const long WEEK_IN_MILLIS = 604800000;
 				/// <summary>
-				/// <para>This constant is actually the length of 364 days, not of a year! </para>        
+				///  <para>This constant is actually the length of 364 days, not of a year! </para>        
 				/// </summary>
 				/// <java-name>
 				/// YEAR_IN_MILLIS
@@ -352,7 +337,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("FORMAT_CAP_MIDNIGHT", "I", AccessFlags = 25)]
 				public const int FORMAT_CAP_MIDNIGHT = 4096;
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use formatDateRange and pass in Time.TIMEZONE_UTC for the timeZone instead. </para></xrefdescription></xrefsect></para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use formatDateRange and pass in Time.TIMEZONE_UTC for the timeZone instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// FORMAT_UTC
@@ -400,7 +385,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("FORMAT_NO_NOON_MIDNIGHT", "I", AccessFlags = 25)]
 				public const int FORMAT_NO_NOON_MIDNIGHT = 2560;
 				/// <summary>
-				/// <para>This is not actually the preferred 24-hour date format in all locales. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>This is not actually the preferred 24-hour date format in all locales.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// HOUR_MINUTE_24
@@ -413,7 +398,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("MONTH_FORMAT", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string MONTH_FORMAT = "%B";
 				/// <summary>
-				/// <para>This is not actually a useful month name in all locales. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>This is not actually a useful month name in all locales.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// ABBREV_MONTH_FORMAT
@@ -451,7 +436,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("ABBREV_WEEKDAY_FORMAT", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string ABBREV_WEEKDAY_FORMAT = "%a";
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not use. </para></xrefdescription></xrefsect></para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Do not use. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// sameYearTable
@@ -459,7 +444,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("sameYearTable", "[I", AccessFlags = 25)]
 				public static readonly int[] SameYearTable;
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not use. </para></xrefdescription></xrefsect></para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Do not use. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// sameMonthTable
@@ -467,7 +452,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("sameMonthTable", "[I", AccessFlags = 25)]
 				public static readonly int[] SameMonthTable;
 				/// <summary>
-				/// <para>Request the full spelled-out name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.</para><para>e.g. "Sunday" or "January" <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Request the full spelled-out name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.</para> <para>e.g. "Sunday" or "January"  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// LENGTH_LONG
@@ -475,7 +460,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("LENGTH_LONG", "I", AccessFlags = 25)]
 				public const int LENGTH_LONG = 10;
 				/// <summary>
-				/// <para>Request an abbreviated version of the name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.</para><para>e.g. "Sun" or "Jan" <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Request an abbreviated version of the name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.</para> <para>e.g. "Sun" or "Jan"  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// LENGTH_MEDIUM
@@ -483,7 +468,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("LENGTH_MEDIUM", "I", AccessFlags = 25)]
 				public const int LENGTH_MEDIUM = 20;
 				/// <summary>
-				/// <para>Request a shorter abbreviated version of the name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.  </para><para>e.g. "Su" or "Jan" </para><para>In most languages, the results returned for LENGTH_SHORT will be the same as the results returned for LENGTH_MEDIUM. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Request a shorter abbreviated version of the name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.  </para> <para>e.g. "Su" or "Jan" </para> <para>In most languages, the results returned for LENGTH_SHORT will be the same as the results returned for LENGTH_MEDIUM.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// LENGTH_SHORT
@@ -491,7 +476,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("LENGTH_SHORT", "I", AccessFlags = 25)]
 				public const int LENGTH_SHORT = 30;
 				/// <summary>
-				/// <para>Request an even shorter abbreviated version of the name. Do not use this. Currently this will always return the same result as LENGTH_SHORT. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Request an even shorter abbreviated version of the name. Do not use this. Currently this will always return the same result as LENGTH_SHORT.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// LENGTH_SHORTER
@@ -499,7 +484,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("LENGTH_SHORTER", "I", AccessFlags = 25)]
 				public const int LENGTH_SHORTER = 40;
 				/// <summary>
-				/// <para>Request an even shorter abbreviated version of the name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.  </para><para>e.g. "S", "T", "T" or "J" </para><para>In some languages, the results returned for LENGTH_SHORTEST will be the same as the results returned for LENGTH_SHORT. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Request an even shorter abbreviated version of the name. For use with the 'abbrev' parameter of getDayOfWeekString and getMonthString.  </para> <para>e.g. "S", "T", "T" or "J" </para> <para>In some languages, the results returned for LENGTH_SHORTEST will be the same as the results returned for LENGTH_SHORT.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// LENGTH_SHORTEST
@@ -512,7 +497,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Return a string for the day of the week. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Return a string for the day of the week.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// getDayOfWeekString
@@ -524,10 +509,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Return a localized string for AM or PM. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Return a localized string for AM or PM.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Localized version of "AM" or "PM". </para>
+				///  <para>Localized version of "AM" or "PM". </para>
 				/// </returns>
 				/// <java-name>
 				/// getAMPMString
@@ -539,10 +524,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Return a localized string for the month of the year. <xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
+				///  <para>Return a localized string for the month of the year.  <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.text.SimpleDateFormat instead. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Localized month of the year. </para>
+				///  <para>Localized month of the year. </para>
 				/// </returns>
 				/// <java-name>
 				/// getMonthString
@@ -554,10 +539,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns a string describing the elapsed time since startTime. <para>getRelativeTimeSpanString(long, long, long) </para></para>        
+				///  <para>Returns a string describing the elapsed time since startTime.  <para>getRelativeTimeSpanString(long, long, long) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a String object containing the elapsed time. </para>
+				///  <para>a String object containing the elapsed time. </para>
 				/// </returns>
 				/// <java-name>
 				/// getRelativeTimeSpanString
@@ -578,7 +563,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns a string describing 'time' as a time relative to 'now'. </para><para>Time spans in the past are formatted like "42 minutes ago". Time spans in the future are formatted like "in 42 minutes". </para><para>Can use FORMAT_ABBREV_RELATIVE flag to use abbreviated relative times, like "42 mins ago".</para><para></para>        
+				///  <para>Returns a string describing 'time' as a time relative to 'now'. </para> <para>Time spans in the past are formatted like "42 minutes ago". Time spans in the future are formatted like "in 42 minutes". </para> <para>Can use FORMAT_ABBREV_RELATIVE flag to use abbreviated relative times, like "42 mins ago".</para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// getRelativeTimeSpanString
@@ -590,7 +575,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Return string describing the elapsed time since startTime formatted like "[relative time/date], [time]". </para><para>Example output strings for the US date format. <ul><li><para>3 mins ago, 10:15 AM </para></li><li><para>yesterday, 12:20 PM </para></li><li><para>Dec 12, 4:12 AM </para></li><li><para>11/14/2007, 8:20 AM </para></li></ul></para><para></para>        
+				///  <para>Return string describing the elapsed time since startTime formatted like "[relative time/date], [time]". </para> <para>Example output strings for the US date format.  <ul> <li> <para>3 mins ago, 10:15 AM </para></li> <li> <para>yesterday, 12:20 PM </para></li> <li> <para>Dec 12, 4:12 AM </para></li> <li> <para>11/14/2007, 8:20 AM </para></li></ul></para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// getRelativeDateTimeString
@@ -602,7 +587,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Formats an elapsed time in the form "MM:SS" or "H:MM:SS" for display on the call-in-progress screen. </para>        
+				///  <para>Formats an elapsed time in the form "MM:SS" or "H:MM:SS" for display on the call-in-progress screen. </para>        
 				/// </summary>
 				/// <java-name>
 				/// formatElapsedTime
@@ -614,7 +599,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Formats an elapsed time in a format like "MM:SS" or "H:MM:SS" (using a form suited to the current locale), similar to that used on the call-in-progress screen.</para><para></para>        
+				///  <para>Formats an elapsed time in a format like "MM:SS" or "H:MM:SS" (using a form suited to the current locale), similar to that used on the call-in-progress screen.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// formatElapsedTime
@@ -626,7 +611,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Format a date / time such that if the then is on the same day as now, it shows just the time and if it's a different day, it shows just the date.</para><para>The parameters dateFormat and timeFormat should each be one of java.text.DateFormat#DEFAULT, java.text.DateFormat#FULL, java.text.DateFormat#LONG, java.text.DateFormat#MEDIUM or java.text.DateFormat#SHORT</para><para></para>        
+				///  <para>Format a date / time such that if the then is on the same day as now, it shows just the time and if it's a different day, it shows just the date.</para> <para>The parameters dateFormat and timeFormat should each be one of java.text.DateFormat#DEFAULT, java.text.DateFormat#FULL, java.text.DateFormat#LONG, java.text.DateFormat#MEDIUM or java.text.DateFormat#SHORT</para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// formatSameDayTime
@@ -638,10 +623,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para></para>        
+				///  <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if the supplied when is today else false </para>
+				///  <para>true if the supplied when is today else false </para>
 				/// </returns>
 				/// <java-name>
 				/// isToday
@@ -653,10 +638,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Formats a date or a time range according to the local conventions. </para><para>Note that this is a convenience method. Using it involves creating an internal java.util.Formatter instance on-the-fly, which is somewhat costly in terms of memory and time. This is probably acceptable if you use the method only rarely, but if you rely on it for formatting a large number of dates, consider creating and reusing your own java.util.Formatter instance and use the version of formatDateRange that takes a java.util.Formatter.</para><para></para>        
+				///  <para>Formats a date or a time range according to the local conventions. </para> <para>Note that this is a convenience method. Using it involves creating an internal java.util.Formatter instance on-the-fly, which is somewhat costly in terms of memory and time. This is probably acceptable if you use the method only rarely, but if you rely on it for formatting a large number of dates, consider creating and reusing your own java.util.Formatter instance and use the version of formatDateRange that takes a java.util.Formatter.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a string containing the formatted date/time range. </para>
+				///  <para>a string containing the formatted date/time range. </para>
 				/// </returns>
 				/// <java-name>
 				/// formatDateRange
@@ -668,10 +653,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Formats a date or a time range according to the local conventions. </para><para>Note that this is a convenience method for formatting the date or time range in the local time zone. If you want to specify the time zone please use formatDateRange.</para><para></para>        
+				///  <para>Formats a date or a time range according to the local conventions. </para> <para>Note that this is a convenience method for formatting the date or time range in the local time zone. If you want to specify the time zone please use formatDateRange.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a string containing the formatted date/time range. </para>
+				///  <para>a string containing the formatted date/time range. </para>
 				/// </returns>
 				/// <java-name>
 				/// formatDateRange
@@ -683,10 +668,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Formats a date or a time according to the local conventions. There are lots of options that allow the caller to control, for example, if the time is shown, if the day of the week is shown, if the month name is abbreviated, if noon is shown instead of 12pm, and so on. For the complete list of options, see the documentation for formatDateRange. </para><para>Example output strings (date formats in these examples are shown using the US date format convention but that may change depending on the local settings): <ul><li><para>10:15am </para></li><li><para>3:00pm </para></li><li><para>3pm </para></li><li><para>3PM </para></li><li><para>08:00 </para></li><li><para>17:00 </para></li><li><para>noon </para></li><li><para>Noon </para></li><li><para>midnight </para></li><li><para>Midnight </para></li><li><para>Oct 31 </para></li><li><para>Oct 31, 2007 </para></li><li><para>October 31, 2007 </para></li><li><para>10am, Oct 31 </para></li><li><para>17:00, Oct 31 </para></li><li><para>Wed </para></li><li><para>Wednesday </para></li><li><para>10am, Wed, Oct 31 </para></li><li><para>Wed, Oct 31 </para></li><li><para>Wednesday, Oct 31 </para></li><li><para>Wed, Oct 31, 2007 </para></li><li><para>Wed, October 31 </para></li><li><para>10/31/2007 </para></li></ul></para><para></para>        
+				///  <para>Formats a date or a time according to the local conventions. There are lots of options that allow the caller to control, for example, if the time is shown, if the day of the week is shown, if the month name is abbreviated, if noon is shown instead of 12pm, and so on. For the complete list of options, see the documentation for formatDateRange. </para> <para>Example output strings (date formats in these examples are shown using the US date format convention but that may change depending on the local settings):  <ul> <li> <para>10:15am </para></li> <li> <para>3:00pm </para></li> <li> <para>3pm </para></li> <li> <para>3PM </para></li> <li> <para>08:00 </para></li> <li> <para>17:00 </para></li> <li> <para>noon </para></li> <li> <para>Noon </para></li> <li> <para>midnight </para></li> <li> <para>Midnight </para></li> <li> <para>Oct 31 </para></li> <li> <para>Oct 31, 2007 </para></li> <li> <para>October 31, 2007 </para></li> <li> <para>10am, Oct 31 </para></li> <li> <para>17:00, Oct 31 </para></li> <li> <para>Wed </para></li> <li> <para>Wednesday </para></li> <li> <para>10am, Wed, Oct 31 </para></li> <li> <para>Wed, Oct 31 </para></li> <li> <para>Wednesday, Oct 31 </para></li> <li> <para>Wed, Oct 31, 2007 </para></li> <li> <para>Wed, October 31 </para></li> <li> <para>10/31/2007 </para></li></ul></para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a string containing the formatted date/time. </para>
+				///  <para>a string containing the formatted date/time. </para>
 				/// </returns>
 				/// <java-name>
 				/// formatDateTime
@@ -707,10 +692,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Convenience function to return relative time string without preposition. <para>getRelativeTimeSpanString(Context, long, boolean) </para></para>        
+				///  <para>Convenience function to return relative time string without preposition.  <para>getRelativeTimeSpanString(Context, long, boolean) </para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>CharSequence containing relative time. </para>
+				///  <para>CharSequence containing relative time. </para>
 				/// </returns>
 				/// <java-name>
 				/// getRelativeTimeSpanString
@@ -724,7 +709,7 @@ namespace Android.Text.Format
 		}
 
 		/// <summary>
-		/// <para>Utility class to aid in formatting common values that are not covered by the java.util.Formatter class in java.util </para>    
+		///  <para>Utility class to aid in formatting common values that are not covered by the java.util.Formatter class in java.util </para>    
 		/// </summary>
 		/// <java-name>
 		/// android/text/format/Formatter
@@ -739,10 +724,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Formats a content size to be in the form of bytes, kilobytes, megabytes, etc</para><para></para>        
+				///  <para>Formats a content size to be in the form of bytes, kilobytes, megabytes, etc</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>formatted string with the number </para>
+				///  <para>formatted string with the number </para>
 				/// </returns>
 				/// <java-name>
 				/// formatFileSize
@@ -754,7 +739,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Like formatFileSize, but trying to generate shorter numbers (showing fewer digits of precision). </para>        
+				///  <para>Like formatFileSize, but trying to generate shorter numbers (showing fewer digits of precision). </para>        
 				/// </summary>
 				/// <java-name>
 				/// formatShortFileSize
@@ -766,7 +751,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns a string in the canonical IPv4 format ###.###.###.### from a packed integer containing the IP address. The IPv4 address is expected to be in little-endian format (LSB first). That is, 0x01020304 will return "4.3.2.1".</para><para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use java.net.InetAddress#getHostAddress(), which supports both IPv4 and IPv6 addresses. This method does not support IPv6 addresses. </para></xrefdescription></xrefsect></para>        
+				///  <para>Returns a string in the canonical IPv4 format ###.###.###.### from a packed integer containing the IP address. The IPv4 address is expected to be in little-endian format (LSB first). That is, 0x01020304 will return "4.3.2.1".</para> <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use java.net.InetAddress#getHostAddress(), which supports both IPv4 and IPv6 addresses. This method does not support IPv6 addresses. </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <java-name>
 				/// formatIpAddress
@@ -780,7 +765,7 @@ namespace Android.Text.Format
 		}
 
 		/// <summary>
-		/// <para>An alternative to the java.util.Calendar and java.util.GregorianCalendar classes. An instance of the Time class represents a moment in time, specified with second precision. It is modelled after struct tm, and in fact, uses struct tm to implement most of the functionality. </para>    
+		///  <para>An alternative to the java.util.Calendar and java.util.GregorianCalendar classes. An instance of the Time class represents a moment in time, specified with second precision. It is modelled after struct tm, and in fact, uses struct tm to implement most of the functionality. </para>    
 		/// </summary>
 		/// <java-name>
 		/// android/text/format/Time
@@ -795,7 +780,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("TIMEZONE_UTC", "Ljava/lang/String;", AccessFlags = 25)]
 				public const string TIMEZONE_UTC = "UTC";
 				/// <summary>
-				/// <para>The Julian day of the epoch, that is, January 1, 1970 on the Gregorian calendar. </para>        
+				///  <para>The Julian day of the epoch, that is, January 1, 1970 on the Gregorian calendar. </para>        
 				/// </summary>
 				/// <java-name>
 				/// EPOCH_JULIAN_DAY
@@ -803,7 +788,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("EPOCH_JULIAN_DAY", "I", AccessFlags = 25)]
 				public const int EPOCH_JULIAN_DAY = 2440588;
 				/// <summary>
-				/// <para>True if this is an allDay event. The hour, minute, second fields are all zero, and the date is displayed the same in all time zones. </para>        
+				///  <para>True if this is an allDay event. The hour, minute, second fields are all zero, and the date is displayed the same in all time zones. </para>        
 				/// </summary>
 				/// <java-name>
 				/// allDay
@@ -811,7 +796,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("allDay", "Z", AccessFlags = 1)]
 				public bool AllDay;
 				/// <summary>
-				/// <para>Seconds [0-61] (2 leap seconds allowed) </para>        
+				///  <para>Seconds [0-61] (2 leap seconds allowed) </para>        
 				/// </summary>
 				/// <java-name>
 				/// second
@@ -819,7 +804,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("second", "I", AccessFlags = 1)]
 				public int Second;
 				/// <summary>
-				/// <para>Minute [0-59] </para>        
+				///  <para>Minute [0-59] </para>        
 				/// </summary>
 				/// <java-name>
 				/// minute
@@ -827,7 +812,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("minute", "I", AccessFlags = 1)]
 				public int Minute;
 				/// <summary>
-				/// <para>Hour of day [0-23] </para>        
+				///  <para>Hour of day [0-23] </para>        
 				/// </summary>
 				/// <java-name>
 				/// hour
@@ -835,7 +820,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("hour", "I", AccessFlags = 1)]
 				public int Hour;
 				/// <summary>
-				/// <para>Day of month [1-31] </para>        
+				///  <para>Day of month [1-31] </para>        
 				/// </summary>
 				/// <java-name>
 				/// monthDay
@@ -843,7 +828,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("monthDay", "I", AccessFlags = 1)]
 				public int MonthDay;
 				/// <summary>
-				/// <para>Month [0-11] </para>        
+				///  <para>Month [0-11] </para>        
 				/// </summary>
 				/// <java-name>
 				/// month
@@ -851,7 +836,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("month", "I", AccessFlags = 1)]
 				public int Month;
 				/// <summary>
-				/// <para>Year. For example, 1970. </para>        
+				///  <para>Year. For example, 1970. </para>        
 				/// </summary>
 				/// <java-name>
 				/// year
@@ -859,7 +844,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("year", "I", AccessFlags = 1)]
 				public int Year;
 				/// <summary>
-				/// <para>Day of week [0-6] </para>        
+				///  <para>Day of week [0-6] </para>        
 				/// </summary>
 				/// <java-name>
 				/// weekDay
@@ -867,7 +852,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("weekDay", "I", AccessFlags = 1)]
 				public int WeekDay;
 				/// <summary>
-				/// <para>Day of year [0-365] </para>        
+				///  <para>Day of year [0-365] </para>        
 				/// </summary>
 				/// <java-name>
 				/// yearDay
@@ -875,7 +860,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("yearDay", "I", AccessFlags = 1)]
 				public int YearDay;
 				/// <summary>
-				/// <para>This time is in daylight savings time. One of: <ul><li><para><b>positive</b> - in dst </para></li><li><para><b>0</b> - not in dst </para></li><li><para><b>negative</b> - unknown </para></li></ul></para>        
+				///  <para>This time is in daylight savings time. One of:  <ul> <li> <para> <b>positive</b> - in dst </para></li> <li> <para> <b>0</b> - not in dst </para></li> <li> <para> <b>negative</b> - unknown </para></li></ul></para>        
 				/// </summary>
 				/// <java-name>
 				/// isDst
@@ -883,7 +868,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("isDst", "I", AccessFlags = 1)]
 				public int IsDst;
 				/// <summary>
-				/// <para>Offset from UTC (in seconds). </para>        
+				///  <para>Offset from UTC (in seconds). </para>        
 				/// </summary>
 				/// <java-name>
 				/// gmtoff
@@ -891,7 +876,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("gmtoff", "J", AccessFlags = 1)]
 				public long Gmtoff;
 				/// <summary>
-				/// <para>The timezone for this Time. Should not be null. </para>        
+				///  <para>The timezone for this Time. Should not be null. </para>        
 				/// </summary>
 				/// <java-name>
 				/// timezone
@@ -979,7 +964,7 @@ namespace Android.Text.Format
 				[Dot42.DexImport("SATURDAY", "I", AccessFlags = 25)]
 				public const int SATURDAY = 6;
 				/// <summary>
-				/// <para>A copy constructor. Construct a Time object by copying the given Time object. No normalization occurs.</para><para></para>        
+				///  <para>A copy constructor. Construct a Time object by copying the given Time object. No normalization occurs.</para> <para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/lang/String;)V", AccessFlags = 1)]
 				public Time(string other) /* MethodBuilder.Create */ 
@@ -987,7 +972,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Construct a Time object in the default timezone. The time is initialized to Jan 1, 1970. </para>        
+				///  <para>Construct a Time object in the default timezone. The time is initialized to Jan 1, 1970. </para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
 				public Time() /* MethodBuilder.Create */ 
@@ -995,7 +980,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>A copy constructor. Construct a Time object by copying the given Time object. No normalization occurs.</para><para></para>        
+				///  <para>A copy constructor. Construct a Time object by copying the given Time object. No normalization occurs.</para> <para></para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Landroid/text/format/Time;)V", AccessFlags = 1)]
 				public Time(global::Android.Text.Format.Time other) /* MethodBuilder.Create */ 
@@ -1003,10 +988,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Ensures the values in each field are in range. For example if the current value of this calendar is March 32, normalize() will convert it to April 1. It also fills in weekDay, yearDay, isDst and gmtoff.</para><para>If "ignoreDst" is true, then this method sets the "isDst" field to -1 (the "unknown" value) before normalizing. It then computes the correct value for "isDst".</para><para>See toMillis(boolean) for more information about when to use <code>true</code> or <code>false</code> for "ignoreDst".</para><para></para>        
+				///  <para>Ensures the values in each field are in range. For example if the current value of this calendar is March 32, normalize() will convert it to April 1. It also fills in weekDay, yearDay, isDst and gmtoff.</para> <para>If "ignoreDst" is true, then this method sets the "isDst" field to -1 (the "unknown" value) before normalizing. It then computes the correct value for "isDst".</para> <para>See toMillis(boolean) for more information about when to use  <code>true</code> or  <code>false</code> for "ignoreDst".</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the UTC milliseconds since the epoch </para>
+				///  <para>the UTC milliseconds since the epoch </para>
 				/// </returns>
 				/// <java-name>
 				/// normalize
@@ -1018,7 +1003,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Convert this time object so the time represented remains the same, but is instead located in a different timezone. This method automatically calls normalize() in some cases </para>        
+				///  <para>Convert this time object so the time represented remains the same, but is instead located in a different timezone. This method automatically calls normalize() in some cases </para>        
 				/// </summary>
 				/// <java-name>
 				/// switchTimezone
@@ -1029,10 +1014,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Return the maximum possible value for the given field given the value of the other fields. Requires that it be normalized for MONTH_DAY and YEAR_DAY. </para>        
+				///  <para>Return the maximum possible value for the given field given the value of the other fields. Requires that it be normalized for MONTH_DAY and YEAR_DAY. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the maximum value for the field. </para>
+				///  <para>the maximum value for the field. </para>
 				/// </returns>
 				/// <java-name>
 				/// getActualMaximum
@@ -1044,7 +1029,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Clears all values, setting the timezone to the given timezone. Sets isDst to a negative value to mean "unknown". </para>        
+				///  <para>Clears all values, setting the timezone to the given timezone. Sets isDst to a negative value to mean "unknown". </para>        
 				/// </summary>
 				/// <java-name>
 				/// clear
@@ -1055,10 +1040,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Compare two <c> Time </c> objects and return a negative number if <c>       a </c> is less than <c> b </c> , a positive number if <c> a </c> is greater than <c> b </c> , or 0 if they are equal.</para><para></para>        
+				///  <para>Compare two <c>Time </c> objects and return a negative number if <c>a </c> is less than <c>b </c> , a positive number if <c>a </c> is greater than  <c>b </c> , or 0 if they are equal.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a negative result if <c> a </c> is earlier, a positive result if <c> a </c> is earlier, or 0 if they are equal. </para>
+				///  <para>a negative result if <c>a </c> is earlier, a positive result if  <c>a </c> is earlier, or 0 if they are equal. </para>
 				/// </returns>
 				/// <java-name>
 				/// compare
@@ -1070,10 +1055,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Print the current value given the format string provided. See man strftime for what means what. The final string must be less than 256 characters. </para>        
+				///  <para>Print the current value given the format string provided. See man strftime for what means what. The final string must be less than 256 characters. </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>a String containing the current time expressed in the current locale. </para>
+				///  <para>a String containing the current time expressed in the current locale. </para>
 				/// </returns>
 				/// <java-name>
 				/// format
@@ -1085,7 +1070,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Return the current time in YYYYMMDDTHHMMSS&lt;tz&gt; format </para>        
+				///  <para>Return the current time in YYYYMMDDTHHMMSS&lt;tz&gt; format </para>        
 				/// </summary>
 				/// <java-name>
 				/// toString
@@ -1097,15 +1082,15 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Parses a date-time string in either the RFC 2445 format or an abbreviated format that does not include the "time" field. For example, all of the following strings are valid:</para><para><ul><li><para>"20081013T160000Z" </para></li><li><para>"20081013T160000" </para></li><li><para>"20081013" </para></li></ul></para><para>Returns whether or not the time is in UTC (ends with Z). If the string ends with "Z" then the timezone is set to UTC. If the date-time string included only a date and no time field, then the <code>allDay</code> field of this Time class is set to true and the <code>hour</code>, <code>minute</code>, and <code>second</code> fields are set to zero; otherwise (a time field was included in the date-time string) <code>allDay</code> is set to false. The fields <code>weekDay</code>, <code>yearDay</code>, and <code>gmtoff</code> are always set to zero, and the field <code>isDst</code> is set to -1 (unknown). To set those fields, call normalize(boolean) after parsing.</para><para>To parse a date-time string and convert it to UTC milliseconds, do something like this:</para><para><pre>
-				///          Time time = new Time();
-				///          String date = "20081013T160000Z";
-				///          time.parse(date);
-				///          long millis = time.normalize(false);
-				///        </pre></para><para></para>        
+				///  <para>Parses a date-time string in either the RFC 2445 format or an abbreviated format that does not include the "time" field. For example, all of the following strings are valid:</para> <para> <ul> <li> <para>"20081013T160000Z" </para></li> <li> <para>"20081013T160000" </para></li> <li> <para>"20081013" </para></li></ul></para> <para>Returns whether or not the time is in UTC (ends with Z). If the string ends with "Z" then the timezone is set to UTC. If the date-time string included only a date and no time field, then the  <code>allDay</code> field of this Time class is set to true and the  <code>hour</code>,  <code>minute</code>, and  <code>second</code> fields are set to zero; otherwise (a time field was included in the date-time string)  <code>allDay</code> is set to false. The fields  <code>weekDay</code>,  <code>yearDay</code>, and  <code>gmtoff</code> are always set to zero, and the field  <code>isDst</code> is set to -1 (unknown). To set those fields, call normalize(boolean) after parsing.</para> <para>To parse a date-time string and convert it to UTC milliseconds, do something like this:</para> <para> <pre>
+				///   Time time = new Time();
+				///   String date = "20081013T160000Z";
+				///   time.parse(date);
+				///   long millis = time.normalize(false);
+				/// </pre></para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if the resulting time value is in UTC time </para>
+				///  <para>true if the resulting time value is in UTC time </para>
 				/// </returns>
 				/// <java-name>
 				/// parse
@@ -1117,10 +1102,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Parse a time in RFC 3339 format. This method also parses simple dates (that is, strings that contain no time or time offset). For example, all of the following strings are valid:</para><para><ul><li><para>"2008-10-13T16:00:00.000Z" </para></li><li><para>"2008-10-13T16:00:00.000+07:00" </para></li><li><para>"2008-10-13T16:00:00.000-07:00" </para></li><li><para>"2008-10-13" </para></li></ul></para><para>If the string contains a time and time offset, then the time offset will be used to convert the time value to UTC. </para><para>If the given string contains just a date (with no time field), then the allDay field is set to true and the hour, minute, and second fields are set to zero. </para><para>Returns true if the resulting time value is in UTC time. </para><para></para>        
+				///  <para>Parse a time in RFC 3339 format. This method also parses simple dates (that is, strings that contain no time or time offset). For example, all of the following strings are valid:</para> <para> <ul> <li> <para>"2008-10-13T16:00:00.000Z" </para></li> <li> <para>"2008-10-13T16:00:00.000+07:00" </para></li> <li> <para>"2008-10-13T16:00:00.000-07:00" </para></li> <li> <para>"2008-10-13" </para></li></ul></para> <para>If the string contains a time and time offset, then the time offset will be used to convert the time value to UTC. </para> <para>If the given string contains just a date (with no time field), then the allDay field is set to true and the hour, minute, and second fields are set to zero. </para> <para>Returns true if the resulting time value is in UTC time. </para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if the resulting time value is in UTC time </para>
+				///  <para>true if the resulting time value is in UTC time </para>
 				/// </returns>
 				/// <java-name>
 				/// parse3339
@@ -1132,19 +1117,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns the timezone string that is currently set for the device. </para>        
-				/// </summary>
-				/// <java-name>
-				/// getCurrentTimezone
-				/// </java-name>
-				[Dot42.DexImport("getCurrentTimezone", "()Ljava/lang/String;", AccessFlags = 9)]
-				public static string GetCurrentTimezone() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <summary>
-				/// <para>Sets the time of the given Time object to the current time. </para>        
+				///  <para>Sets the time of the given Time object to the current time. </para>        
 				/// </summary>
 				/// <java-name>
 				/// setToNow
@@ -1155,14 +1128,14 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Converts this time to milliseconds. Suitable for interacting with the standard java libraries. The time is in UTC milliseconds since the epoch. This does an implicit normalization to compute the milliseconds but does <b>not</b> change any of the fields in this Time object. If you want to normalize the fields in this Time object and also get the milliseconds then use normalize(boolean).</para><para>If "ignoreDst" is false, then this method uses the current setting of the "isDst" field and will adjust the returned time if the "isDst" field is wrong for the given time. See the sample code below for an example of this.</para><para>If "ignoreDst" is true, then this method ignores the current setting of the "isDst" field in this Time object and will instead figure out the correct value of "isDst" (as best it can) from the fields in this Time object. The only case where this method cannot figure out the correct value of the "isDst" field is when the time is inherently ambiguous because it falls in the hour that is repeated when switching from Daylight-Saving Time to Standard Time.</para><para>Here is an example where <code>toMillis(true)</code> adjusts the time, assuming that DST changes at 2am on Sunday, Nov 4, 2007.</para><para><pre>
-				///        Time time = new Time();
-				///        time.set(4, 10, 2007);  // set the date to Nov 4, 2007, 12am
-				///        time.normalize();       // this sets isDst = 1
-				///        time.monthDay += 1;     // changes the date to Nov 5, 2007, 12am
-				///        millis = time.toMillis(false);   // millis is Nov 4, 2007, 11pm
-				///        millis = time.toMillis(true);    // millis is Nov 5, 2007, 12am
-				///        </pre></para><para>To avoid this problem, use <code>toMillis(true)</code> after adding or subtracting days or explicitly setting the "monthDay" field. On the other hand, if you are adding or subtracting hours or minutes, then you should use <code>toMillis(false)</code>.</para><para>You should also use <code>toMillis(false)</code> if you want to read back the same milliseconds that you set with set(long) or set(Time) or after parsing a date string. </para>        
+				///  <para>Converts this time to milliseconds. Suitable for interacting with the standard java libraries. The time is in UTC milliseconds since the epoch. This does an implicit normalization to compute the milliseconds but does  <b>not</b> change any of the fields in this Time object. If you want to normalize the fields in this Time object and also get the milliseconds then use normalize(boolean).</para> <para>If "ignoreDst" is false, then this method uses the current setting of the "isDst" field and will adjust the returned time if the "isDst" field is wrong for the given time. See the sample code below for an example of this.</para> <para>If "ignoreDst" is true, then this method ignores the current setting of the "isDst" field in this Time object and will instead figure out the correct value of "isDst" (as best it can) from the fields in this Time object. The only case where this method cannot figure out the correct value of the "isDst" field is when the time is inherently ambiguous because it falls in the hour that is repeated when switching from Daylight-Saving Time to Standard Time.</para> <para>Here is an example where  <code>toMillis(true)</code> adjusts the time, assuming that DST changes at 2am on Sunday, Nov 4, 2007.</para> <para> <pre>
+				/// Time time = new Time();
+				/// time.set(4, 10, 2007);  // set the date to Nov 4, 2007, 12am
+				/// time.normalize();       // this sets isDst = 1
+				/// time.monthDay += 1;     // changes the date to Nov 5, 2007, 12am
+				/// millis = time.toMillis(false);   // millis is Nov 4, 2007, 11pm
+				/// millis = time.toMillis(true);    // millis is Nov 5, 2007, 12am
+				/// </pre></para> <para>To avoid this problem, use  <code>toMillis(true)</code> after adding or subtracting days or explicitly setting the "monthDay" field. On the other hand, if you are adding or subtracting hours or minutes, then you should use  <code>toMillis(false)</code>.</para> <para>You should also use  <code>toMillis(false)</code> if you want to read back the same milliseconds that you set with set(long) or set(Time) or after parsing a date string. </para>        
 				/// </summary>
 				/// <java-name>
 				/// toMillis
@@ -1174,7 +1147,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Copy the value of that to this Time object. No normalization happens. </para>        
+				///  <para>Copy the value of that to this Time object. No normalization happens. </para>        
 				/// </summary>
 				/// <java-name>
 				/// set
@@ -1185,7 +1158,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Format according to RFC 2445 DATETIME type.</para><para>The same as format("%Y%m%dT%H%M%S"). </para>        
+				///  <para>Format according to RFC 2445 DATETIME type.</para> <para>The same as format("%Y%m%dT%H%M%S"). </para>        
 				/// </summary>
 				/// <java-name>
 				/// format2445
@@ -1197,7 +1170,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Copy the value of that to this Time object. No normalization happens. </para>        
+				///  <para>Copy the value of that to this Time object. No normalization happens. </para>        
 				/// </summary>
 				/// <java-name>
 				/// set
@@ -1208,7 +1181,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Sets the fields. Sets weekDay, yearDay and gmtoff to 0, and isDst to -1. Call normalize(boolean) if you need those. </para>        
+				///  <para>Sets the fields. Sets weekDay, yearDay and gmtoff to 0, and isDst to -1. Call normalize(boolean) if you need those. </para>        
 				/// </summary>
 				/// <java-name>
 				/// set
@@ -1219,7 +1192,7 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Sets the date from the given fields. Also sets allDay to true. Sets weekDay, yearDay and gmtoff to 0, and isDst to -1. Call normalize(boolean) if you need those.</para><para></para>        
+				///  <para>Sets the date from the given fields. Also sets allDay to true. Sets weekDay, yearDay and gmtoff to 0, and isDst to -1. Call normalize(boolean) if you need those.</para> <para></para>        
 				/// </summary>
 				/// <java-name>
 				/// set
@@ -1230,10 +1203,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns true if the time represented by this Time object occurs before the given time.</para><para></para>        
+				///  <para>Returns true if the time represented by this Time object occurs before the given time.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if this time is less than the given time </para>
+				///  <para>true if this time is less than the given time </para>
 				/// </returns>
 				/// <java-name>
 				/// before
@@ -1245,10 +1218,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns true if the time represented by this Time object occurs after the given time.</para><para></para>        
+				///  <para>Returns true if the time represented by this Time object occurs after the given time.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if this time is greater than the given time </para>
+				///  <para>true if this time is greater than the given time </para>
 				/// </returns>
 				/// <java-name>
 				/// after
@@ -1260,25 +1233,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Computes the week number according to ISO 8601. The current Time object must already be normalized because this method uses the yearDay and weekDay fields.</para><para>In IS0 8601, weeks start on Monday. The first week of the year (week 1) is defined by ISO 8601 as the first week with four or more of its days in the starting year. Or equivalently, the week containing January 4. Or equivalently, the week with the year's first Thursday in it. </para><para>The week number can be calculated by counting Thursdays. Week N contains the Nth Thursday of the year. </para><para></para>        
+				///  <para>Return a string in the RFC 3339 format. </para> <para>If allDay is true, expresses the time as Y-M-D</para> <para>Otherwise, if the timezone is UTC, expresses the time as Y-M-D-T-H-M-S UTC</para> <para>Otherwise the time is expressed the time as Y-M-D-T-H-M-S +- GMT</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the ISO week number. </para>
-				/// </returns>
-				/// <java-name>
-				/// getWeekNumber
-				/// </java-name>
-				[Dot42.DexImport("getWeekNumber", "()I", AccessFlags = 1)]
-				public virtual int GetWeekNumber() /* MethodBuilder.Create */ 
-				{
-						return default(int);
-				}
-
-				/// <summary>
-				/// <para>Return a string in the RFC 3339 format. </para><para>If allDay is true, expresses the time as Y-M-D</para><para>Otherwise, if the timezone is UTC, expresses the time as Y-M-D-T-H-M-S UTC</para><para>Otherwise the time is expressed the time as Y-M-D-T-H-M-S +- GMT</para><para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>string in the RFC 3339 format. </para>
+				///  <para>string in the RFC 3339 format. </para>
 				/// </returns>
 				/// <java-name>
 				/// format3339
@@ -1290,10 +1248,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns true if the day of the given time is the epoch on the Julian Calendar (January 1, 1970 on the Gregorian calendar).</para><para></para>        
+				///  <para>Returns true if the day of the given time is the epoch on the Julian Calendar (January 1, 1970 on the Gregorian calendar).</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>true if epoch. </para>
+				///  <para>true if epoch. </para>
 				/// </returns>
 				/// <java-name>
 				/// isEpoch
@@ -1305,10 +1263,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Computes the Julian day number, given the UTC milliseconds and the offset (in seconds) from UTC. The Julian day for a given date will be the same for every timezone. For example, the Julian day for July 1, 2008 is 2454649. This is the same value no matter what timezone is being used. The Julian day is useful for testing if two events occur on the same day and for determining the relative time of an event from the present ("yesterday", "3 days ago", etc.).</para><para>Use toMillis(boolean) to get the milliseconds.</para><para></para>        
+				///  <para>Computes the Julian day number, given the UTC milliseconds and the offset (in seconds) from UTC. The Julian day for a given date will be the same for every timezone. For example, the Julian day for July 1, 2008 is 2454649. This is the same value no matter what timezone is being used. The Julian day is useful for testing if two events occur on the same day and for determining the relative time of an event from the present ("yesterday", "3 days ago", etc.).</para> <para>Use toMillis(boolean) to get the milliseconds.</para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the Julian day </para>
+				///  <para>the Julian day </para>
 				/// </returns>
 				/// <java-name>
 				/// getJulianDay
@@ -1320,10 +1278,10 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Sets the time from the given Julian day number, which must be based on the same timezone that is set in this Time object. The "gmtoff" field need not be initialized because the given Julian day may have a different GMT offset than whatever is currently stored in this Time object anyway. After this method returns all the fields will be normalized and the time will be set to 12am at the beginning of the given Julian day. </para><para>The only exception to this is if 12am does not exist for that day because of daylight saving time. For example, Cairo, Eqypt moves time ahead one hour at 12am on April 25, 2008 and there are a few other places that also change daylight saving time at 12am. In those cases, the time will be set to 1am. </para><para></para>        
+				///  <para>Sets the time from the given Julian day number, which must be based on the same timezone that is set in this Time object. The "gmtoff" field need not be initialized because the given Julian day may have a different GMT offset than whatever is currently stored in this Time object anyway. After this method returns all the fields will be normalized and the time will be set to 12am at the beginning of the given Julian day. </para> <para>The only exception to this is if 12am does not exist for that day because of daylight saving time. For example, Cairo, Eqypt moves time ahead one hour at 12am on April 25, 2008 and there are a few other places that also change daylight saving time at 12am. In those cases, the time will be set to 1am. </para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the UTC milliseconds for the beginning of the Julian day </para>
+				///  <para>the UTC milliseconds for the beginning of the Julian day </para>
 				/// </returns>
 				/// <java-name>
 				/// setJulianDay
@@ -1335,34 +1293,33 @@ namespace Android.Text.Format
 				}
 
 				/// <summary>
-				/// <para>Returns the timezone string that is currently set for the device. </para>        
+				///  <para>Returns the timezone string that is currently set for the device. </para>        
 				/// </summary>
 				/// <java-name>
 				/// getCurrentTimezone
 				/// </java-name>
 				public static string CurrentTimezone
 				{
-				[Dot42.DexImport("getCurrentTimezone", "()Ljava/lang/String;", AccessFlags = 9)]
-						get{ return GetCurrentTimezone(); }
+						[Dot42.DexImport("getCurrentTimezone", "()Ljava/lang/String;", AccessFlags = 9)]
+						get{ return default(string); }
 				}
 
 				/// <summary>
-				/// <para>Computes the week number according to ISO 8601. The current Time object must already be normalized because this method uses the yearDay and weekDay fields.</para><para>In IS0 8601, weeks start on Monday. The first week of the year (week 1) is defined by ISO 8601 as the first week with four or more of its days in the starting year. Or equivalently, the week containing January 4. Or equivalently, the week with the year's first Thursday in it. </para><para>The week number can be calculated by counting Thursdays. Week N contains the Nth Thursday of the year. </para><para></para>        
+				///  <para>Computes the week number according to ISO 8601. The current Time object must already be normalized because this method uses the yearDay and weekDay fields.</para> <para>In IS0 8601, weeks start on Monday. The first week of the year (week 1) is defined by ISO 8601 as the first week with four or more of its days in the starting year. Or equivalently, the week containing January 4. Or equivalently, the week with the year's first Thursday in it. </para> <para>The week number can be calculated by counting Thursdays. Week N contains the Nth Thursday of the year. </para> <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>the ISO week number. </para>
+				///  <para>the ISO week number. </para>
 				/// </returns>
 				/// <java-name>
 				/// getWeekNumber
 				/// </java-name>
-				public int WeekNumber
+				public virtual int WeekNumber
 				{
-				[Dot42.DexImport("getWeekNumber", "()I", AccessFlags = 1)]
-						get{ return GetWeekNumber(); }
+						[Dot42.DexImport("getWeekNumber", "()I", AccessFlags = 1)]
+						get{ return default(int); }
 				}
 
 		}
 
 }
-
 

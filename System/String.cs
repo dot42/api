@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -23,7 +25,7 @@ using Java.Util;
 
 namespace System
 {
-	partial class String
+	partial class String : IEnumerable<char>
 	{
 	    public const string Empty = "";
 
@@ -35,19 +37,31 @@ namespace System
         {
         }
 
+        /// <summary>
+        ///  Returns the char at index.
+        /// </summary>
+        [global::System.Runtime.CompilerServices.IndexerName("Chars")]
+        public char this[int index]
+        {
+            [Dot42.DexImport("charAt", "(I)C", AccessFlags = 257)]
+            get { return default(char); }
+        }
+       
+        /// <summary>
+        /// Returns the number of chars in this string. 
+        /// </summary>
+        public int Length
+        {
+            [Dot42.DexImport("length", "()I", AccessFlags = 257)]
+            get { return default(int); }
+        }
+
+
         private static char[] Constuct(char c, int count)
         {
             var result = new char[count];
             Arrays.Fill(result, c);
             return result;
-        }
-
-        /// <summary>
-        /// Gets the number of characters in the string
-        /// </summary>
-        int Java.Lang.ICharSequence.GetLength()
-        {
-            return Length;
         }
 
         /// <summary>
@@ -75,6 +89,19 @@ namespace System
         /// <summary>
         /// Compare strings
         /// </summary>
+        public static int Compare(string strA, string strB, bool ignoreCase, CultureInfo cutureInfo)
+        {
+            if (ReferenceEquals(strA, null) && ReferenceEquals(strB, null)) return 0;
+            if (ReferenceEquals(strA, null)) return 1;
+            if (ReferenceEquals(strB, null)) return -1;
+            if (ignoreCase)
+                return strA.CompareToIgnoreCase(strB);
+            return strA.CompareTo(strB);
+        }
+
+        /// <summary>
+        /// Compare strings
+        /// </summary>
         public static int Compare(string strA, string strB, StringComparison comparisonType)
         {
             var ignoreCase = (comparisonType == StringComparison.InvariantCultureIgnoreCase) ||
@@ -90,9 +117,11 @@ namespace System
         {
             var a = strA.JavaSubstring(indexA, indexA + length);
             var b = strB.JavaSubstring(indexB, indexB + length);
+            
             if (ignoreCase)
                 return a.CompareToIgnoreCase(b);
-            else return a.CompareTo(b);
+            else
+                return a.CompareTo(b);
         }
 
         /// <summary>
@@ -104,6 +133,47 @@ namespace System
             return Compare(strA, strB, StringComparison.Ordinal);
         }
 
+        /// <summary>
+        /// Compare strings
+        /// </summary>
+        public bool StartsWith(string other, StringComparison comparisonType)
+        {
+            if (Length < other.Length) 
+                return false;
+
+            var ignoreCase = (comparisonType == StringComparison.InvariantCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.CurrentCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.OrdinalIgnoreCase);
+            
+            if (!ignoreCase)
+                return StartsWith(other);
+            
+            var _this = this.JavaSubstring(0, other.Length);
+
+            return Compare(_this, other, ignoreCase) == 0;
+
+        }
+
+        /// <summary>
+        /// Compare strings
+        /// </summary>
+        public bool EndsWith(string other, StringComparison comparisonType)
+        {
+            if (Length < other.Length)
+                return false;
+
+            var ignoreCase = (comparisonType == StringComparison.InvariantCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.CurrentCultureIgnoreCase) ||
+                             (comparisonType == StringComparison.OrdinalIgnoreCase);
+
+            if (!ignoreCase)
+                return EndsWith(other);
+
+            var _this = this.JavaSubstring(Length-other.Length, Length);
+
+            return Compare(_this, other, ignoreCase) == 0;
+
+        }
 
         /// <summary>
         /// Does this string contain the given sub string?
@@ -141,49 +211,69 @@ namespace System
         /// <summary>
         /// Replaces format items in the given string with a string representation of the given argument.
         /// </summary>
-        [Inline]
         public static string Format(string format, object arg0)
         {
-            if (format == null)
-                throw new ArgumentNullException("format");
-            return Format(null, format, new[] { arg0 });
+            var helper = new FormatHelper(null, null, format, arg0);
+            return helper.Format().ToString();
         }
 
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
         public static string Format(string format, object arg0, object arg1)
         {
-            if (format == null)
-                throw new ArgumentNullException("format");
-            return Format(null, format, new[] { arg0, arg1 });
+            var helper = new FormatHelper(null, null, format, arg0, arg1);
+            return helper.Format().ToString();
         }
 
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
         public static string Format(string format, object arg0, object arg1, object arg2)
         {
-            if (format == null)
-                throw new ArgumentNullException("format");
-            return Format(null, format, new[] { arg0, arg1, arg2 });
+            var helper = new FormatHelper(null, null, format, arg0, arg1, arg2);
+            return helper.Format().ToString();
         }
 
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
         public static string Format(string format, params object[] args)
         {
-            return Format(null, format, args);
+            var helper = new FormatHelper(null, null, format, args);
+            return helper.Format().ToString();
+        }
+
+        /// <summary>
+        /// Replaces format items in the given string with a string representation of the given argument.
+        /// </summary>
+        public static string Format(IFormatProvider provider, string format, object arg0)
+        {
+            var helper = new FormatHelper(null, provider, format, arg0);
+            return helper.Format().ToString();
         }
 
         /// <summary>
         /// Replaces format items in the given string with a string representations of the given arguments.
         /// </summary>
-        [Inline]
+        public static string Format(IFormatProvider provider, string format, object arg0, object arg1)
+        {
+            var helper = new FormatHelper(null, provider, format, arg0, arg1);
+            return helper.Format().ToString();
+        }
+
+        /// <summary>
+        /// Replaces format items in the given string with a string representations of the given arguments.
+        /// </summary>
+        public static string Format(IFormatProvider provider, string format, object arg0, object arg1, object arg2)
+        {
+            var helper = new FormatHelper(null, provider, format, arg0, arg1, arg2);
+            return helper.Format().ToString();
+        }
+
+        /// <summary>
+        /// Replaces format items in the given string with a string representations of the given arguments.
+        /// </summary>
         public static string Format(IFormatProvider provider, string format, params object[] args)
         {
             var helper = new FormatHelper(null, provider, format, args);
@@ -218,7 +308,7 @@ namespace System
         [Inline]
         public int IndexOfAny(char[] array)
         {
-            return IndexOfAny(array, 0, GetLength());
+            return IndexOfAny(array, 0, Length);
         }
 
         /// <summary>
@@ -228,7 +318,7 @@ namespace System
         [Inline]
         public int IndexOfAny(char[] array, int startIndex)
         {
-            return IndexOfAny(array, startIndex, GetLength() - startIndex);
+            return IndexOfAny(array, startIndex, Length - startIndex);
         }
 
         /// <summary>
@@ -239,13 +329,13 @@ namespace System
         {
             if (startIndex < 0) throw new ArgumentOutOfRangeException("startIndex");
             if (count < 0) throw new ArgumentOutOfRangeException("count");
-            var length = GetLength();
+            var length = Length;
             if (startIndex + count > length) throw new ArgumentOutOfRangeException();
             var arrayLen = array.Length;
             var endIndex = startIndex + count;
             for (var i = startIndex; i < endIndex; i++)
             {
-                var ch = CharAt(i);
+                var ch = this[i];
                 for (var j = 0; j < arrayLen; j++)
                 {
                     if (array[j] == ch) return i;
@@ -269,6 +359,26 @@ namespace System
         }
 
         /// <summary>
+        /// Reports the zero-based index of the first occurrence of the specified string in this instance. The search starts at a specified character position and examines a specified number of character positions.
+        /// </summary>
+        public int IndexOf(string value, int startIndex, StringComparison comparison)
+        {
+            bool isCultureSpecific = comparison == StringComparison.CurrentCulture || comparison == StringComparison.CurrentCultureIgnoreCase;
+
+            bool isNormal = comparison == StringComparison.Ordinal 
+                         || comparison == StringComparison.InvariantCulture
+                         || comparison == StringComparison.CurrentCulture;
+
+            if (isNormal)
+                return IndexOf(value, startIndex);
+
+            if(isCultureSpecific)
+                throw new NotImplementedException("IndexOf with local culture not supported");
+
+            return ToUpperInvariant().IndexOf(value.ToUpperInvariant(), startIndex);
+        }
+
+        /// <summary>
         /// Returns a new string that right-aligns the characters in this string by padding them with spaces on the left, for a specified total length.
         /// </summary>
         [Inline]
@@ -284,9 +394,11 @@ namespace System
         {
             var length = Length;
             if (totalWidth <= length) return this;
-            var builder = new StringBuilder(this);
-            var padLength = totalWidth - length;
-            builder.Insert(0, new RepeatingCharSequence(paddingChar, padLength));
+            
+            var builder = new StringBuilder(totalWidth);
+            builder.Append(paddingChar, totalWidth - length);
+            builder.Append(this);
+            
             return builder.ToString();
         }
 
@@ -306,16 +418,16 @@ namespace System
         {
             var length = Length;
             if (totalWidth <= length) return this;
-            var builder = new StringBuilder(this);
-            var padLength = totalWidth - length;
-            builder.Append(new RepeatingCharSequence(paddingChar, padLength));
+
+            var builder = new StringBuilder(totalWidth);
+            builder.Append(this);
+            builder.Append(paddingChar,  totalWidth - length);
             return builder.ToString();
         }
 
         /// <summary>
         /// Return a new instance which is this string with all characters from the given index on removed.
         /// </summary>
-        [Inline]
         public string Remove(int startIndex)
         {
             if ((startIndex < 0) || (startIndex >= Length))
@@ -373,6 +485,23 @@ namespace System
         /// <summary>
         /// Split this string into parts delimited by the given separators.
         /// </summary>
+        public string[] Split(string[] separator, StringSplitOptions options)
+        {
+            // TODO: check if this a correct implementation.
+            if ((options != StringSplitOptions.None) && (options != StringSplitOptions.RemoveEmptyEntries))
+                throw new ArgumentException("Illegal enum value: " + options + ".");
+
+            string splitPattern = string.Join("|", separator.Select(Java.Util.Regex.Pattern.Quote));
+
+            if(options == StringSplitOptions.None)
+                return Split(splitPattern);
+            else
+                return Split(splitPattern).Where(s=>s.Length != 0);
+        }
+
+        /// <summary>
+        /// Split this string into parts delimited by the given separators.
+        /// </summary>
         public string[] Split(char[] separator, int count, StringSplitOptions options)
         {
             if (count < 0)
@@ -395,17 +524,22 @@ namespace System
             var index = 0;
             while (index < length)
             {
-                if (Contains(separator, CharAt(index)))
+                if (Contains(separator, this[index]))
                 {
                     // Split here
                     if ((!removeEmptyEntries) || (start != index))
                     {
                         list.Add(JavaSubstring(start, index));
                     }
+
                     index++;
                     start = index;
+
                     if (list.Count + 1 >= count)
+                    {
+                        index = length;
                         break;
+                    }
                 }
                 else
                 {
@@ -447,7 +581,6 @@ namespace System
         /// <summary>
         /// Return a substring of this instance. 
         /// </summary>
-        [Inline]
         public string Substring(int startIndex, int length)
         {
             if (length < 0)
@@ -467,10 +600,16 @@ namespace System
         /// <summary>
         /// Is the given string null or consists only of whitespace characters.
         /// </summary>
-        [Inline]
         public static bool IsNullOrWhiteSpace(string value)
         {
-            return (value == null) || (value.Trim().Length == 0);
+            if (value == null) return true;
+            int len = value.Length;
+            for (int i = 0; i < len; ++i)
+            {
+                if (!char.IsWhiteSpace(value[i]))
+                    return false;
+            }
+            return true;
         }
 
         /// <summary>
@@ -480,7 +619,7 @@ namespace System
         {
             if (array.Length == 0)
                 return "";
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in array)
             {
@@ -507,7 +646,7 @@ namespace System
         {
             if ((array.Length == 0) || (array[0] == null))
                 return "";
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in array)
             {
@@ -532,7 +671,7 @@ namespace System
         /// </summary>
         public static string Join(string separator, IEnumerable<string> strings)
         {
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in strings)
             {
@@ -557,7 +696,7 @@ namespace System
         /// </summary>
         public static string Join<T>(string separator, IEnumerable<T> objects)
         {
-            var sb = new StringBuffer();
+            var sb = new StringBuilder();
             var first = true;
             foreach (var element in objects)
             {
@@ -590,9 +729,9 @@ namespace System
         /// </summary>
         public static string Concat(object v1, object v2)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            return Concat(v1.ToString(), v2.ToString());
+            var s1 = v1 == null ? null : v1.ToString();
+            var s2 = v2 == null ? null : v2.ToString();
+            return Concat(s1, s2);
         }
 
         /// <summary>
@@ -600,10 +739,10 @@ namespace System
         /// </summary>
         public static string Concat(object v1, object v2, object v3)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            return Concat(v1.ToString(), v2.ToString(), v3.ToString());
+            var s1 = v1 == null ? null : v1.ToString();
+            var s2 = v2 == null ? null : v2.ToString();
+            var s3 = v3 == null ? null : v3.ToString();
+            return Concat(s1, s2, s3);
         }
 
         /// <summary>
@@ -611,11 +750,11 @@ namespace System
         /// </summary>
         public static string Concat(object v1, object v2, object v3, object v4)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            v4 = v4 ?? string.Empty;
-            return Concat(v1.ToString(), v2.ToString(), v3.ToString(), v4.ToString());
+            var s1 = v1 == null ? null : v1.ToString();
+            var s2 = v2 == null ? null : v2.ToString();
+            var s3 = v3 == null ? null : v3.ToString();
+            var s4 = v4 == null ? null : v4.ToString();
+            return Concat(s1, s2, s3, s4);
         }
 
         /// <summary>
@@ -625,8 +764,11 @@ namespace System
         {
             if (args == null)
                 throw new ArgumentNullException("args");
-            var sb = new Java.Lang.StringBuffer();
-            for (var i = 0; i < args.Length; i++)
+
+            var length = args.Length;
+            var sb = new StringBuilder();
+            
+            for (var i = 0; i < length; i++)
             {
                 var arg = args[i];
                 if (arg != null)
@@ -656,10 +798,14 @@ namespace System
         /// </summary>
         public static string Concat(string v1, string v2, string v3)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            return v1.Concat(v2).Concat(v3);
+            var s1 = v1 ?? string.Empty;
+            var s2 = v2 ?? string.Empty;
+            var s3 = v3 ?? string.Empty;
+            StringBuilder b = new StringBuilder(s1.Length + s2.Length + s3.Length);
+            b.Append(s1);
+            b.Append(s2);
+            b.Append(s3);
+            return b.ToString();
         }
 
         /// <summary>
@@ -667,11 +813,16 @@ namespace System
         /// </summary>
         public static string Concat(string v1, string v2, string v3, string v4)
         {
-            v1 = v1 ?? string.Empty;
-            v2 = v2 ?? string.Empty;
-            v3 = v3 ?? string.Empty;
-            v4 = v4 ?? string.Empty;
-            return v1.Concat(v2).Concat(v3).Concat(v4);
+            var s1 = v1 ?? string.Empty;
+            var s2 = v2 ?? string.Empty;
+            var s3 = v3 ?? string.Empty;
+            var s4 = v4 ?? string.Empty;
+            StringBuilder b = new StringBuilder(s1.Length + s2.Length + s3.Length + s4.Length);
+            b.Append(s1);
+            b.Append(s2);
+            b.Append(s3);
+            b.Append(s4);
+            return b.ToString();
         }
 
         /// <summary>
@@ -681,8 +832,9 @@ namespace System
         {
             if (args == null)
                 throw new ArgumentNullException("args");
-            var sb = new Java.Lang.StringBuffer();
-            for (var i = 0; i < args.Length; i++)
+            var sb = new StringBuilder();
+            var length = args.Length;
+            for (var i = 0; i < length; i++)
             {
                 var arg = args[i];
                 if (arg != null)
@@ -706,9 +858,17 @@ namespace System
         [Inline]
         public static bool Equals(string a, string b)
         {
+            if (ReferenceEquals(a, b)) return true;
             if (a == null) return b == null;
-            return a.Equals(b);
+            return a.Equals((object)b);
         }
+
+        [Inline]
+	    public static bool Equals(string a, string b, StringComparison comparisonType)
+	    {
+            if (a == null) return b == null;
+            return Compare(a, b, comparisonType) == 0;
+	    }
 
         /// <summary>
         /// Return a new string in which all occurrences of the given old value have been replaced with the given new value.
@@ -836,8 +996,22 @@ namespace System
         /// </summary>
         public static bool operator !=(string a, string b)
         {
+            if (ReferenceEquals(a, b)) return false;
             return !Equals(a, b);
         }
-    }
+
+	    IEnumerator<char> IEnumerable<char>.GetEnumerator()
+	    {
+            // The C# compiler will actually not call this method
+            // when using a string in foreach, but instead generate 
+            // optimized code.
+	        return new StringEnumerator(this);
+	    }
+
+	    IEnumerator IEnumerable.GetEnumerator()
+	    {
+	        return ((IEnumerable<char>)this).GetEnumerator();
+	    }
+	}
 }
 

@@ -14,11 +14,92 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 using Dot42;
 
 namespace Android.Widget
 {
+    [Dot42.DexImport("android/widget/AdapterView", Priority=1, IgnoreFromJava=true, AccessFlags = 1057, Signature = "<T::Landroid/widget/Adapter;>Landroid/view/ViewGroup;")]
+    public abstract class AdapterView : AdapterView<object>
+    {
+        /// <summary>
+        /// Event arguments for Item selected events.
+        /// </summary>
+        public class ItemSelectedEventArgs : EventArgs
+        {
+            /// <summary>
+            /// Default ctor
+            /// </summary>
+            public ItemSelectedEventArgs(AdapterView parent, View view, int position, long id)
+            {
+                Parent = parent;
+                Id = id;
+                Position = position;
+                View = view;
+            }
+
+            /// <summary>
+            /// The view that was selected (provided by the adapter)
+            /// </summary>
+            public View View { get; private set; }
+
+            /// <summary>
+            /// Position of the view within the adapter
+            /// </summary>
+            public int Position { get; private set; }
+
+            public AdapterView Parent { get; set; }
+
+            /// <summary>
+            /// Row id of the item that was selected
+            /// </summary>
+            public long Id { get; private set; }
+        }
+
+        /// <summary>
+        /// Event arguments for Item click events.
+        /// </summary>
+        public class ItemClickEventArgs : EventArgs
+        {
+            /// <summary>
+            /// Default ctor
+            /// </summary>
+            public ItemClickEventArgs(AdapterView parent, View view, int position, long id)
+            {
+                Parent = parent;
+                Id = id;
+                Position = position;
+                View = view;
+            }
+
+            /// <summary>
+            /// The view that was clicked (provided by the adapter)
+            /// </summary>
+            public View View { get; private set; }
+
+            /// <summary>
+            /// Position of the view within the adapter
+            /// </summary>
+            public int Position { get; private set; }
+
+            /// <summary>
+            /// The Adapter in which the click occured.
+            /// </summary>
+            public AdapterView Parent { get; set; }
+
+            /// <summary>
+            /// Row id of the item that was clicked
+            /// </summary>
+            public long Id { get; private set; }
+
+            /// <summary>
+            /// Set this property to true when the listenered has consumed the event.
+            /// </summary>
+            public bool IsHandled { get; set; }
+        }
+    }
+
+
     partial class AdapterView<T>
     {
 #region System resource ID's
@@ -38,7 +119,7 @@ namespace Android.Widget
         /// Fired when this view item is clicked on.
         /// </summary>
         [ListenerInterface("android/widget/AdapterView$OnItemClickListener")]
-        public event EventHandler<ItemClickEventArgs> ItemClick
+        public event EventHandler<AdapterView.ItemClickEventArgs> ItemClick
         {
             add
             {
@@ -47,7 +128,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemClickListener<T>();
                     SetTag(itemClickListenerKey, listener);
-                    SetOnItemClickListener(listener);
+                    OnItemClickListener = listener;
                 }
                 listener.Add(value);
             }
@@ -62,7 +143,7 @@ namespace Android.Widget
         /// Fired when this view item is clicked on long.
         /// </summary>
         [ListenerInterface("android/widget/AdapterView$OnItemLongClickListener")]
-        public event EventHandler<ItemClickEventArgs> ItemLongClick
+        public event EventHandler<AdapterView.ItemClickEventArgs> ItemLongClick
         {
             add
             {
@@ -71,7 +152,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemClickListener<T>();
                     SetTag(itemLongClickListenerKey, listener);
-                    SetOnItemLongClickListener(listener);
+                    OnItemLongClickListener = listener;
                 }
                 listener.Add(value);
             }
@@ -86,7 +167,7 @@ namespace Android.Widget
         /// Fired when an item in this view has been selected.
         /// </summary>
         [ListenerInterface("android/widget/AdapterView$OnItemSelectedListener")]
-        public event EventHandler<ItemSelectedEventArgs> ItemSelected
+        public event EventHandler<AdapterView.ItemSelectedEventArgs> ItemSelected
         {
             add
             {
@@ -95,7 +176,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemSelectedListener<T>();
                     SetTag(itemSelectedListenerKey, listener);
-                    SetOnItemSelectedListener(listener);
+                    OnItemSelectedListener = listener;
                 }
                 listener.ItemSelected.Add(value);
             }
@@ -119,7 +200,7 @@ namespace Android.Widget
                 {
                     listener = new AdapterViewOnItemSelectedListener<T>();
                     SetTag(itemSelectedListenerKey, listener);
-                    SetOnItemSelectedListener(listener);
+                    OnItemSelectedListener = listener;
                 }
                 listener.NothingSelected.Add(value);
             }
@@ -134,20 +215,20 @@ namespace Android.Widget
     /// <summary>
     /// Implementation of the <see cref="ItemClick"/> event.
     /// </summary>
-    internal sealed class AdapterViewOnItemClickListener<T> : Dot42.EventHandlerListener<ItemClickEventArgs>,
+    internal sealed class AdapterViewOnItemClickListener<T> : Dot42.EventHandlerListener<AdapterView.ItemClickEventArgs>,
         AdapterView<T>.IOnItemClickListener, AdapterView<T>.IOnItemLongClickListener
     {
         /// <summary>
         /// Invoke
         /// </summary>
-        public void OnItemClick(AdapterView<object> adapterView, View.View view, int position, long id)
+        public void OnItemClick(AdapterView<object> adapterView, View view, int position, long id)
         {
-            Invoke(adapterView, new ItemClickEventArgs(view, position, id));
+            Invoke(adapterView, new AdapterView.ItemClickEventArgs((AdapterView)adapterView, view, position, id));
         }
 
-        public bool OnItemLongClick(AdapterView<object> adapterView, View.View view, int position, long id)
+        public bool OnItemLongClick(AdapterView<object> adapterView, View view, int position, long id)
         {
-            var args = new ItemClickEventArgs(view, position, id);
+            var args = new AdapterView.ItemClickEventArgs((AdapterView)adapterView, view, position, id);
             Invoke(adapterView, args);
             return args.IsHandled;
         }
@@ -158,12 +239,12 @@ namespace Android.Widget
     /// </summary>
     internal sealed class AdapterViewOnItemSelectedListener<T> : AdapterView<T>.IOnItemSelectedListener
     {
-        internal readonly Dot42.EventHandlerListener<ItemSelectedEventArgs> ItemSelected = new EventHandlerListener<ItemSelectedEventArgs>();
+        internal readonly Dot42.EventHandlerListener<AdapterView.ItemSelectedEventArgs> ItemSelected = new EventHandlerListener<AdapterView.ItemSelectedEventArgs>();
         internal readonly Dot42.EventHandlerListener NothingSelected = new EventHandlerListener();
 
-        public void OnItemSelected(AdapterView<object> adapterView, View.View view, int position, long id)
+        public void OnItemSelected(AdapterView<object> adapterView, View view, int position, long id)
         {
-            ItemSelected.Invoke(adapterView, new ItemSelectedEventArgs(view, position, id));
+            ItemSelected.Invoke(adapterView, new AdapterView.ItemSelectedEventArgs((AdapterView)adapterView, view, position, id));
         }
 
         public void OnNothingSelected(AdapterView<object> adapterView)

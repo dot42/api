@@ -19,15 +19,15 @@ using System.Text;
 
 namespace System
 {
-	public class AggregateException : Exception
-	{
-	    private ReadOnlyCollection<Exception> innerExceptions;
+    public class AggregateException : Exception
+    {
+        private ReadOnlyCollection<Exception> innerExceptions;
 
         /// <summary>
         /// Default ctor
         /// </summary>
         public AggregateException()
-        {            
+        {
         }
 
         /// <summary>
@@ -56,37 +56,67 @@ namespace System
         /// <summary>
         /// Gets a read-only collection of the Exception instances that caused the current exception.
         /// </summary>
-        public ReadOnlyCollection<Exception> InnerExceptions 
-        {
-            get { return innerExceptions; }
-        }
+        public ReadOnlyCollection<Exception> InnerExceptions { get { return innerExceptions; } }
 
-        public override string GetMessage()
+        public override string Message
         {
-            if (innerExceptions.Count == 1)
+            get
             {
+                if (innerExceptions.Count == 1)
+                {
+                    foreach (Exception innerException in InnerExceptions)
+                    {
+                        return innerException.Message;
+                    }
+                }
+
+                var builder = new StringBuilder("AggregateExceptions: ");
                 foreach (Exception innerException in InnerExceptions)
                 {
-                    return innerException.Message;
+                    builder.Append("[");
+                    builder.Append(innerException.Message);
+                    builder.Append("]");
                 }
-            }
 
-            var builder = new StringBuilder("AggregateExceptions: ");
-            foreach (Exception innerException in InnerExceptions)
-            {
-                builder.Append("[");
-                builder.Append(innerException.Message);
-                builder.Append("]");
+                return builder.ToString();
             }
-
-            return builder.ToString();
         }
 
-        public override Exception GetCause()
+        public override Exception InnerException
         {
-            if (innerExceptions.Count > 0)
-                return innerExceptions[0];
-            return base.GetCause();
+            get
+            {
+                if (innerExceptions.Count > 0)
+                    return innerExceptions[0];
+                return base.InnerException;
+            }
+        }
+
+        /// <summary>
+        /// Note that in this implementation, not all exception information
+        /// will be retained upon flattening. The StackTrace will be lost.
+        /// </summary>
+        public AggregateException Flatten()
+        {
+            var ret = new List<Exception>();
+            Flatten(this, ret);
+            return new AggregateException(ret);
+        }
+
+        private void Flatten(AggregateException ex, List<Exception> target)
+        {
+            foreach (var inner in ex.innerExceptions)
+            {
+                var agex = inner as AggregateException;
+                if (agex != null)
+                {
+                    Flatten(agex, target);
+                }
+                else
+                {
+                    target.Add(inner);
+                }
+            }
         }
     }
 }

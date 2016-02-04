@@ -14,43 +14,123 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Collections.Generic;
-using Java.Util;
-using Dot42.Collections;
 
 namespace System.Collections.ObjectModel
 {
-	public class ReadOnlyCollection<T> : IEnumerable<T>
+	public class ReadOnlyCollection<T> : IList<T>, IList
 	{
-	    private readonly Java.Util.ArrayList<T> list;
+        private readonly IList<T> source;
 
-        public ReadOnlyCollection(Generic.IList<T> source)
+        public ReadOnlyCollection(IList<T> source)
         {
-            list = new ArrayList<T>(source.Count);
-            foreach (var item in source)
-            {
-                list.Add(item);
-            }
+            this.source = source;
         }
 
 	    public int Count
 	    {
-	        get { return list.Count; }
+	        get { return source.Count; }
+	    }
+
+        bool ICollection.IsSynchronized { get { return ((IList)source).IsSynchronized; } }
+        object ICollection.SyncRoot { get { return ((IList)source).SyncRoot; } }
+
+	    public void CopyTo(Array array, int index)
+	    {
+	        ((IList)source).CopyTo(array, index);
+	    }
+
+        public bool IsReadOnly { get { return true; } }
+
+        bool IList.IsFixedSize { get { return ((IList)source).IsFixedSize; } }
+
+	    object IList.this[int index]
+	    {
+	        get { return this[index]; } 
+            set { throw new NotImplementedException(); }
+	    }
+
+	    public void Add(T item)
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    int IList.Add(object element)
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    public void Clear()
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    bool IList.Contains(object element)
+	    {
+	        return Contains((T)element);
+	    }
+
+	    int IList.IndexOf(object element)
+	    {
+	        return IndexOf((T)element);
+	    }
+
+	    void IList.Insert(int index, object element)
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    void IList.Remove(object element)
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    public bool Contains(T item)
+	    {
+	        return source.Contains(item);
+	    }
+
+	    public bool Remove(T item)
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    public void CopyTo(T[] array, int index)
+	    {
+	        source.CopyTo(array, index);
 	    }
 
 	    public T this[int index]
 	    {
-            get { return list[index]; }
+            get { return source[index]; }
+            set { throw new NotImplementedException(); }
+	    }
+
+	    public int IndexOf(T element)
+	    {
+	        return source.IndexOf(element);
+	    }
+
+	    public void Insert(int index, T element)
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    public void RemoveAt(int index)
+	    {
+	        throw new NotImplementedException();
 	    }
 
 	    IEnumerator IEnumerable.GetEnumerator()
         {
-            return new IterableWrapper<T>(list).GetEnumerator();
+            return source.GetEnumerator();
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new IterableWrapper<T>(list).GetEnumerator();
+            return source.GetEnumerator();
         }
-    }
+
+	    
+	}
 }
 

@@ -41,9 +41,54 @@ namespace Dot42
                     list.Add(item);
                 }
             }
-            var elementType = array.GetType().GetElementType();
+            var elementType = array.GetType().JavaGetComponentType();
             if (list == null) return (T[])Array.NewInstance(elementType, 0);
             return list.ToArray((T[])Array.NewInstance(elementType, list.Count));
+        }
+
+        public static T FirstOrDefault<T>(this T[] array, Func<T, bool> predicate)
+        {
+            int len = array.Length;
+            for (int i = 0; i < len; ++i)
+            {
+                if (predicate(array[i]))
+                    return array[i];
+            }
+            return default(T);
+        }
+
+        public static T FirstOrDefault<T>(this T[] array)
+        {
+            int len = array.Length;
+            if (len == 0) return default(T);
+            return array[0];
+        }
+
+        public static T[] Take<T>(this T[] array, int count)
+        {
+            var len = Math.Min(count, array.Length);    
+            T[] ret = new T[len];
+            System.Array.Copy(array, ret, len);
+            return ret;
+        }
+
+        public static T Last<T>(this T[] array)
+        {
+            int len = array.Length;
+            return array[len-1];
+        }
+
+        public static TOut[] Select<TIn,TOut>(this TIn[] array, Func<TIn, TOut> select)
+        {
+            if ((array == null) || (array.Length == 0))
+                return new TOut[0];
+
+            var ret = new TOut[array.Length];
+
+            for (int i = 0; i < array.Length; ++i)
+                ret[i] = select(array[i]);
+
+            return ret;
         }
 	}
 }

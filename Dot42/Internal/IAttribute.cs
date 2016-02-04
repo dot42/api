@@ -16,31 +16,29 @@
 using System;
 using System.Reflection;
 using Java.Lang.Annotation;
+using Java.Lang.Reflect;
 
 namespace Dot42.Internal
 {
     /// <summary>
     /// Interface for annotations storing the values of custom attributes.
     /// </summary>
+    [Include]
 	internal interface IAttribute : IAnnotation
     {
-        /// <summary>
-        /// Gets the method to build an attribute from an annotation.
-        /// </summary>
-        [Include]
-        MethodInfo AttributeBuilder();
-
         /// <summary>
         /// Gets the type of the attribute.
         /// </summary>
         [Include]
         Type AttributeType();
-
+        
         /// <summary>
-        /// Gets the annotation that stores the actual attribute values.
+        /// Gets the method name that created this particular instance.
+        /// the method is part of AttributeType
         /// </summary>
         [Include]
-        IAnnotation Annotation();
+        string FactoryMethod();
+
     }
 }
 

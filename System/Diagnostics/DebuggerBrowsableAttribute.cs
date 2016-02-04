@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Runtime.InteropServices;
+using Dot42;
 
 namespace System.Diagnostics
 {
@@ -22,6 +23,7 @@ namespace System.Diagnostics
     /// </summary>
     [ComVisible(true)]
     [AttributeUsageAttribute(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
+    [Ignore("Not used by Dot42 debugger.")]
 	public sealed class DebuggerBrowsableAttribute : Attribute
 	{
         private DebuggerBrowsableState state;

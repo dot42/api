@@ -13,50 +13,86 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
+using Dot42.Internal;
+using Dot42.Internal.Generics;
 using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    partial class FieldInfo
+    public class FieldInfo : JavaMemberInfo
     {
-        /// <summary>
-        /// Gets the type that declares this member.
-        /// </summary>
-        public Type DeclaringType
+        internal static readonly FieldInfo None = new FieldInfo(null, null);
+
+        private readonly Field _field;
+        private readonly Type _declaringType;
+        private Type _type;
+
+        public FieldInfo(Field field, Type declaringType)  : base(field)
         {
-            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
-            get { return GetDeclaringClass(); }
+            _field = field;
+            _declaringType = declaringType;
+        }
+
+        public override MemberTypes MemberType { get { return MemberTypes.Field; } }
+        public override Type DeclaringType { get { return _declaringType; } }
+        public override string Name { get { return _field.Name; } }
+
+        public Type FieldType
+        {
+            get
+            {
+                if (_type == null)
+                    _type = GenericsReflection.GetMemberType(_field.Type, DeclaringType, _field);
+                return _type;
+            }
+        }
+
+        protected override int Modifiers { get { return _field.Modifiers; } }
+
+        /// <summary>
+        /// returns true only for enum fields.
+        /// </summary>
+        // return enum members as literals.
+        public bool IsLiteral 
+        { 
+            get 
+            { 
+                if(!IsFinal || !IsStatic || !DeclaringType.IsEnum)
+                    return false;
+                var fieldName = _field.Name; // filter out special field names.
+                return fieldName != EnumInfo.EnumDefaultFieldName && fieldName != EnumInfo.EnumInfoFieldName; 
+            } 
         }
 
         /// <summary>
-        /// Is this an abstract method?
+        /// returns IsFinal
         /// </summary>
-        public bool IsAbstract { get { return Modifier.IsAbstract(GetModifiers()); } }
+        public bool IsInitOnly { get { return IsFinal; } }
 
-        /// <summary>
-        /// Is this an final method?
-        /// </summary>
-        public bool IsFinal { get { return Modifier.IsFinal(GetModifiers()); } }
+        public void SetValue(object instance, object value)
+        {
+            // .NET doesn't have accessibility semantics
+            if (!_field.IsAccessible) _field.IsAccessible = true;
 
-        /// <summary>
-        /// Is this an private method?
-        /// </summary>
-        public bool IsPrivate { get { return Modifier.IsPrivate(GetModifiers()); } }
+            value = ConvertParameterIfRequired(FieldType, value);
 
-        /// <summary>
-        /// Is this an public method?
-        /// </summary>
-        public bool IsPublic { get { return Modifier.IsPublic(GetModifiers()); } }
+            _field.Set(instance, value);
+        }
 
-        /// <summary>
-        /// Is this a static method?
-        /// </summary>
-        public bool IsStatic { get { return Modifier.IsStatic(GetModifiers()); } }
+        public object GetValue(object instance)
+        {
+            // .NET doesn't have accessibility semantics
+            if (!_field.IsAccessible) _field.IsAccessible = true;
 
-        /// <summary>
-        /// Is this an virtual method?
-        /// </summary>
-        public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+            return _field.Get(instance);
+        }
+
+        public override string ToString()
+        {
+            return _declaringType.Name + " " + _field.Name;
+        }
 
     }
 }

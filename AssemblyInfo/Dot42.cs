@@ -14,8 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 [assembly: AssemblyDescription("Dot42.dll")]
 [assembly: AssemblyDefaultAlias("Dot42.dll")]
 [assembly: AssemblyTitle("Dot42.dll")]
 
+[assembly: InternalsVisibleTo("FrameworkTests")]
+//[assembly: InternalsVisibleTo("dot42.CompilerBugTesting")]

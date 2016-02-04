@@ -19,12 +19,12 @@ namespace Android.Widget
 {
 	public class MovedToScrapHeapEventArgs: EventArgs
 	{
-	    public MovedToScrapHeapEventArgs(View.View view)
+	    public MovedToScrapHeapEventArgs(Views.View view)
 	    {
 	        View = view;
 	    }
 
-	    public View.View View { get; private set; }
+	    public Views.View View { get; private set; }
     }
 }
 

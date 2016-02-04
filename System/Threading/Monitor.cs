@@ -35,6 +35,7 @@ namespace System.Threading
 	    /// Indicates whether the current thread has a monitor lock on the specified object.
 	    /// </summary>
         [DexImport("holdsLock", "(Ljava/lang/Object;)Z")]
+        // TODO: check if this shouln't be  java.lang.Thread.holdsLock() 
         public static bool IsEntered(object obj)
 	    {
 	        return default(bool);
@@ -47,7 +48,7 @@ namespace System.Threading
         {
             if (obj == null)
                 throw new ArgumentNullException();
-            obj.Notify();
+            obj.JavaNotify();
         }
 
         /// <summary>
@@ -57,7 +58,7 @@ namespace System.Threading
         {
             if (obj == null)
                 throw new ArgumentNullException();
-            obj.NotifyAll();
+            obj.JavaNotifyAll();
         }
 
         /// <summary>

@@ -24,13 +24,15 @@ namespace Dot42.Manifest
     [Ignore]
     public sealed class ActivityAttribute : ApplicationRootAttribute
     {
+        private bool _visibleInLauncher;
+
         /// <summary>
         /// Default ctor
         /// </summary>
         public ActivityAttribute()
         {
             Enabled = true;
-            VisibleInLauncher = true;
+            VisibleInLauncher = false;
             Exported = true;
         }
 
@@ -47,9 +49,14 @@ namespace Dot42.Manifest
 
         /// <summary>
         /// Is this activity visible in the launcher's list of activities?
-        /// True by default.
+        /// False by default.
         /// </summary>
-        public bool VisibleInLauncher { get; set; }
+        public bool VisibleInLauncher { get { return _visibleInLauncher ||MainLauncher; } set { _visibleInLauncher = value; } }
+
+        /// <summary>
+        /// Is this activity the main launcher for the application?
+        /// </summary>
+        public bool MainLauncher { get; set; }
 
         /// <summary>
         /// If set, this activity can move from the task that started it to the task it has an affinity for when that task is brought to the front.

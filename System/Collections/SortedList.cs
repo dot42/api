@@ -137,7 +137,7 @@ namespace System.Collections
         {
             foreach (var entry in new IterableWrapper<IMap_IEntry<object, object>>(map.EntrySet()))
             {
-                yield return new KeyValuePair<object, object>(entry.GetKey(), entry.GetValue());
+                yield return new KeyValuePair<object, object>(entry.Key, entry.Value);
             }
         }
 

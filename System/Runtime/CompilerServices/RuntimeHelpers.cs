@@ -27,6 +27,11 @@ namespace System.Runtime.CompilerServices
         /// </summary>
         [DexNative]
         public static extern void InitializeArray(Array array, RuntimeFieldHandle fldHandle);
+
+        public static int GetHashCode(Object o)
+        {
+            return Java.Lang.System.IdentityHashCode(o);
+        }
     }
 }
 

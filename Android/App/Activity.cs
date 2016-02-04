@@ -13,6 +13,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System;
+using Android.Content;
+
 namespace Android.App
 {
     partial class Activity
@@ -21,7 +25,7 @@ namespace Android.App
         /// Look for a child view with the given id. If this view has the given id, return this view.
         /// </summary>
         public T FindViewById<T>(int id)
-            where T : Android.View.View
+            where T : Android.Views.View
         {
             return (T) FindViewById(id);
         }
@@ -35,6 +39,23 @@ namespace Android.App
         [Dot42.DexImport("runOnUiThread", "(Ljava/lang/Runnable;)V", AccessFlags = 17, IgnoreFromJava = true)]
         public void RunOnUiThread(System.Action action)
         {
+        }
+
+        /// <summary>
+        /// Change the title associated with this activity. If this is a top-level activity, the title for its window will change. If it is an embedded activity, the parent can do whatever it wants with it. 
+        /// </summary>
+        public string Title
+        {
+            get { return (string)JavaGetTitle(); }
+            set { SetTitle(value);}
+        }
+
+        /// <summary>
+        ///  <para>Launch a new activity. You will not receive any information about when the activity exits.</para> <para>Note that if this method is being called from outside of an android.app.Activity Context, then the Intent must include the Intent#FLAG_ACTIVITY_NEW_TASK launch flag. This is because, without being started from an existing Activity, there is no existing task in which to place the new activity and thus it needs to be placed in its own separate task.</para> <para>This method throws ActivityNotFoundException if there was no Activity found to run the given Intent.</para> <para> <para>startActivity(Intent) </para> <para>PackageManager::resolveActivity </para></para>        
+        /// </summary>
+        public void StartActivityForResult(Type activityType, int requestCode)
+        {
+            StartActivityForResult(new Intent(this, activityType), requestCode);
         }
     }
 }

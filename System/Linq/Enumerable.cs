@@ -38,6 +38,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics.CodeAnalysis;
 using Dot42;
 using Java.Lang;
 using Java.Util;
@@ -51,10 +52,14 @@ namespace System.Linq
 			Throw
 		}
 
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
+        [SuppressMessage("dot42", "StaticConstructorUsesGenericParameter")]
 		static class PredicateOf<T> {
 			public static readonly Func<T, bool> Always = (t) => true;
 		}
 
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
+        [SuppressMessage("dot42", "StaticConstructorUsesGenericParameter")]
 		static class Function<T> {
 			public static readonly Func<T, T> Identity = (t) => t;
 		}
@@ -180,7 +185,7 @@ namespace System.Linq
 
             var collection = source as Java.Util.ICollection<TSource>;
             if (collection != null)
-                return collection.Count > 0;
+                return collection.Size() > 0;
 
             return source.AsEnumerable().Any();
         }
@@ -774,7 +779,7 @@ namespace System.Linq
 
             var collection = source as Java.Util.ICollection<TSource>;
             if (collection != null)
-                return collection.Count;
+                return collection.Size();
 
             return source.AsEnumerable().Count();
         }
@@ -873,10 +878,14 @@ namespace System.Linq
 
         static IEnumerable<TSource> CreateDistinctIterator<TSource>(IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)
 		{
-			var items = new Collections.Generic.HashSet<TSource> (comparer);
-			foreach (var element in source) {
-				if (! items.Contains (element)) {
-					items.Add (element);
+            // TODO: once hashset supports the IComparer interface, we should switch back to it.
+            var items = new Collections.Generic.Dictionary<TSource, object>(comparer);
+            object any = PredicateOf<object>.Always;
+			foreach (var element in source) 
+            {
+				if (!items.ContainsKey(element)) 
+                {
+					items.Add(element, any);
 					yield return element;
 				}
 			}
@@ -956,7 +965,7 @@ namespace System.Linq
 
             var list = source as Java.Util.IList<TSource>;
             if (list != null)
-                return index < list.Count ? list[index] : default(TSource);
+                return index < list.Size() ? list[index] : default(TSource);
 
             return source.AsEnumerable().ElementAt(index, Fallback.Default);
         }
@@ -985,14 +994,14 @@ namespace System.Linq
         }
 
         public static IEnumerable<TSource> Except<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer)
-		{
-			Check.FirstAndSecond (first, second);
+        {
+            Check.FirstAndSecond(first, second);
 
-			if (comparer == null)
-				comparer = EqualityComparer<TSource>.Default;
+            if (comparer == null)
+                comparer = EqualityComparer<TSource>.Default;
 
-			return CreateExceptIterator (first, second, comparer);
-		}
+            return CreateExceptIterator(first, second, comparer);
+        }
 
         public static IEnumerable<TSource> Except<TSource>(this IIterable<TSource> first, IIterable<TSource> second, IEqualityComparer<TSource> comparer)
         {
@@ -1005,13 +1014,14 @@ namespace System.Linq
         }
 
         static IEnumerable<TSource> CreateExceptIterator<TSource>(IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource> comparer)
-		{
-			var items = new Collections.Generic.HashSet<TSource> (second, comparer);
-			foreach (var element in first) {
-				if (items.Add (element))
-					yield return element;
-			}
-		}
+        {
+            var items = new Collections.Generic.HashSet<TSource>(second, comparer);
+            foreach (var element in first)
+            {
+                if (items.Add(element))
+                    yield return element;
+            }
+        }
 
 		#endregion
 
@@ -1103,16 +1113,16 @@ namespace System.Linq
 
 		#region GroupBy
 
-		private static List<T> ContainsGroup<K, T> (
-				Collections.Generic.Dictionary<K, List<T>> items, K key, IEqualityComparer<K> comparer)
-		{
-			IEqualityComparer<K> comparerInUse = (comparer ?? EqualityComparer<K>.Default);
-			foreach (KeyValuePair<K, List<T>> value in items) {
-				if (comparerInUse.Equals (value.Key, key))
-					return value.Value;
-			}
-			return null;
-		}
+        //private static List<T> ContainsGroup<K, T> (
+        //        LinkedHashMap<K, List<T>> items, K key, IEqualityComparer<K> comparer)
+        //{
+        //    IEqualityComparer<K> comparerInUse = (comparer ?? EqualityComparer<K>.Default);
+        //    foreach (KeyValuePair<K, List<T>> value in items) {
+        //        if (comparerInUse.Equals (value.Key, key))
+        //            return value.Value;
+        //    }
+        //    return null;
+        //}
 
 		public static IEnumerable<IGrouping<TKey, TSource>> GroupBy<TSource, TKey> (this IEnumerable<TSource> source,
 			Func<TSource, TKey> keySelector)
@@ -1143,47 +1153,50 @@ namespace System.Linq
         }
 
         static IEnumerable<IGrouping<TKey, TSource>> CreateGroupByIterator<TSource, TKey>(this IEnumerable<TSource> source,
-			Func<TSource, TKey> keySelector, IEqualityComparer<TKey> comparer)
+			                                                Func<TSource, TKey> keySelector, IEqualityComparer<TKey> comparer)
 		{
-			var groups = new Collections.Generic.Dictionary<TKey, List<TSource>> ();
-			var nullList = new List<TSource> ();
-			int counter = 0;
-			int nullCounter = -1;
+            List<TKey> groupOrder = new List<TKey>();
+            var groups = new Collections.Generic.Dictionary<TKey, List<TSource>>(comparer ?? EqualityComparer<TKey>.Default);
 
-			foreach (TSource element in source) {
+			var nullList = new List<TSource> ();
+            int nullListIdx = -1;
+
+			foreach (TSource element in source) 
+            {
 				TKey key = keySelector (element);
-				if (key == null) {
+
+				if (key == null)
+				{
+				    if (nullList.Count == 0)
+				        nullListIdx = groupOrder.Count;
 					nullList.Add (element);
-					if (nullCounter == -1) {
-						nullCounter = counter;
-						counter++;
-					}
-				} else {
-					List<TSource> group = ContainsGroup<TKey, TSource> (groups, key, comparer);
-					if (group == null) {
+				} 
+                else
+                {
+					List<TSource> group;
+				    if(!groups.TryGetValue(key, out group))
+                    { 
 						group = new List<TSource> ();
 						groups.Add (key, group);
-						counter++;
+                        groupOrder.Add(key);
 					}
 					group.Add (element);
 				}
 			}
 
-			counter = 0;
-			foreach (var group in groups) {
-				if (counter == nullCounter) {
-					yield return new Grouping<TKey, TSource> (default (TKey), nullList);
-					counter++;
-				}
+            int idx = 0;
+			foreach (var groupKey in groupOrder)
+            {
+                if(idx == nullListIdx)
+                    yield return new Grouping<TKey, TSource>(default(TKey), nullList);
 
-				yield return new Grouping<TKey, TSource> (group.Key, group.Value);
-				counter++;
-			}
+                yield return new Grouping<TKey, TSource> (groupKey, groups[groupKey]);
 
-			if (counter == nullCounter) {
-				yield return new Grouping<TKey, TSource> (default (TKey), nullList);
-				counter++;
-			}
+                ++idx;
+            }
+
+            if (idx == nullListIdx)
+                yield return new Grouping<TKey, TSource>(default(TKey), nullList);
 		}
 
 		public static IEnumerable<IGrouping<TKey, TElement>> GroupBy<TSource, TKey, TElement> (this IEnumerable<TSource> source,
@@ -1217,46 +1230,49 @@ namespace System.Linq
         static IEnumerable<IGrouping<TKey, TElement>> CreateGroupByIterator<TSource, TKey, TElement>(this IEnumerable<TSource> source,
 			Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey> comparer)
 		{
-			var groups = new Collections.Generic.Dictionary<TKey, List<TElement>> ();
-			var nullList = new List<TElement> ();
-			int counter = 0;
-			int nullCounter = -1;
+            List<TKey> groupOrder = new List<TKey>();
+            var groups = new Collections.Generic.Dictionary<TKey, List<TElement>>(comparer ?? EqualityComparer<TKey>.Default);
 
-			foreach (TSource item in source) {
-				TKey key = keySelector (item);
-				TElement element = elementSelector (item);
-				if (key == null) {
-					nullList.Add (element);
-					if (nullCounter == -1) {
-						nullCounter = counter;
-						counter++;
-					}
-				} else {
-					List<TElement> group = ContainsGroup<TKey, TElement> (groups, key, comparer);
-					if (group == null) {
-						group = new List<TElement> ();
-						groups.Add (key, group);
-						counter++;
-					}
-					group.Add (element);
-				}
-			}
+            var nullList = new List<TElement>();
+            int nullListIdx = -1;
 
-			counter = 0;
-			foreach (var group in groups) {
-				if (counter == nullCounter) {
-					yield return new Grouping<TKey, TElement> (default (TKey), nullList);
-					counter++;
-				}
+            foreach (TSource value in source)
+            {
+                TKey key = keySelector(value);
+                TElement element = elementSelector(value);
 
-				yield return new Grouping<TKey, TElement> (group.Key, group.Value);
-				counter++;
-			}
+                if (key == null)
+                {
+                    if (nullList.Count == 0)
+                        nullListIdx = groupOrder.Count;
+                    nullList.Add(element);
+                }
+                else
+                {
+                    List<TElement> group;
+                    if (!groups.TryGetValue(key, out group))
+                    {
+                        group = new List<TElement>();
+                        groups.Add(key, group);
+                        groupOrder.Add(key);
+                    }
+                    group.Add(element);
+                }
+            }
 
-			if (counter == nullCounter) {
-				yield return new Grouping<TKey, TElement> (default (TKey), nullList);
-				counter++;
-			}
+            int idx = 0;
+            foreach (var groupKey in groupOrder)
+            {
+                if (idx == nullListIdx)
+                    yield return new Grouping<TKey, TElement>(default(TKey), nullList);
+
+                yield return new Grouping<TKey, TElement>(groupKey, groups[groupKey]);
+
+                ++idx;
+            }
+
+            if (idx == nullListIdx)
+                yield return new Grouping<TKey, TElement>(default(TKey), nullList);
 		}
 
 		public static IEnumerable<TResult> GroupBy<TSource, TKey, TElement, TResult> (this IEnumerable<TSource> source,
@@ -3536,10 +3552,10 @@ namespace System.Linq
             var collection = source as Java.Util.ICollection<TSource>;
             if (collection != null)
             {
-                if (collection.Count == 0)
+                if (collection.Size() == 0)
                     return EmptyOf<TSource>.Instance();
 
-                array = new TSource[collection.Count];
+                array = new TSource[collection.Size()];
                 collection.ToArray(array);
                 return array;
             }
@@ -3549,7 +3565,7 @@ namespace System.Linq
             {
                 list.Add(element);
             }
-            return list.ToArray<TSource>(new TSource[list.Count]);
+            return list.ToArray<TSource>(new TSource[list.Size()]);
         }
 
         #endregion

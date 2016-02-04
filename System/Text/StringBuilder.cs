@@ -13,8 +13,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Dot42.Internal;
 using Java.Lang;
+using Java.Text;
+using Java.Util;
 
 namespace System.Text
 {
@@ -66,16 +70,29 @@ namespace System.Text
         /// </summary>
         public StringBuilder Append(char value, int repeatCount)
         {
-            Append(new RepeatingCharSequence(value, repeatCount));
+            // TODO: check if the allocation is more expensive than a simple while loop
+            char[] append = new char[repeatCount];
+            Arrays.Fill(append, value);
+            Append(append);
             return this;
         }
 
         /// <summary>
         /// Append a substring of the given string from into this builder.
         /// </summary>
+        [Inline]
         public StringBuilder Append(string value, int startIndex, int count)
         {
             JavaAppend(value, startIndex, startIndex + count);
+            return this;
+        }
+
+        /// <summary>
+        /// Append a substring of the given string from into this builder.
+        /// </summary>
+        public StringBuilder AppendFormat(string format, params object[] args)
+        {
+            Append(string.Format(format, args));
             return this;
         }
 
@@ -115,6 +132,7 @@ namespace System.Text
         /// <summary>
         /// Remove length characters from this string builder, starting at the given start index.
         /// </summary>
+        [Inline]
         public StringBuilder Remove(int startIndex, int length)
         {
             JavaDelete(startIndex, startIndex + length);
@@ -129,7 +147,7 @@ namespace System.Text
             var length = Length;
             for (var i = 0; i < length; i++)
             {
-                if (CharAt(i) == oldChar)
+                if (this[i] == oldChar)
                 {
                     SetCharAt(i, newChar);
                 }
@@ -150,7 +168,7 @@ namespace System.Text
                 throw new ArgumentOutOfRangeException("overflow");
             for (var i = 0; i < count; i++)
             {
-                if (CharAt(startIndex + i) == oldChar)
+                if (this[startIndex + i] == oldChar)
                 {
                     SetCharAt(startIndex + i, newChar);
                 }
@@ -237,17 +255,20 @@ namespace System.Text
         }
 
         /// <summary>
-        /// Gets the length of this sequence.
+        /// Returns the number of chars in this string. 
         /// </summary>
-        [Dot42.DexImport("length", "()I")]
-        int ICharSequence.GetLength()
-	    {
-	        return Length;
-	    }
+        public int Length
+        {
+            [Dot42.DexImport("length", "()I", AccessFlags = 257)]
+            get { return default(int); }
+            [Dot42.DexImport("setLength", "(I)V", AccessFlags = 1)]
+            set { }
+        }
 
-        /// <java-name>
-        /// charAt
-        /// </java-name>
+        /// <summary>
+        ///  Returns the char at index.
+        /// </summary>
+        [global::System.Runtime.CompilerServices.IndexerName("Chars")]
         public char this[int index]
         {
             [Dot42.DexImport("charAt", "(I)C", AccessFlags = 1)]

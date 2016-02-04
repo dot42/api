@@ -14,12 +14,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Globalization;
+using System.Text;
+using Dot42.Internal;
+using Java.Text;
 using Java.Util;
 using Calendar = Java.Util.Calendar;
 
 namespace System
 {
-	public struct DateTime
+    public struct DateTime : System.IComparable<DateTime>
 	{
         /// <summary>
         /// The value of this constant is equivalent to 23:59:59.9999999, December 31, 9999, exactly one 100-nanosecond tick before 00:00:00, January 1, 10000.
@@ -30,17 +33,28 @@ namespace System
         /// </summary>
         public static readonly DateTime MinValue = new DateTime(MinTicks);
 
-        private const long MinTicks = 0L;
-        private const long MaxTicks = 3155378975999999999L;
+        internal const long MinTicks = 0L;
+        internal const long MaxTicks = 3155378975999999999L;
 
         // milliseconds between 01.01.0001,00:00:00.000 (Microsoft baseline) and 01.01.1970,00:00:00.000 (Java baseline)
 	    internal const long EraDifferenceInMs = 62135596800000L;
+        internal const long MinValueJavaMillies = -62135769600000; // I have no idea why this is different from -EraDifferenceInMs. Who stole the two days?
+
 	    private const int MonthOffset = 1;
 	    private const int YearOffset = 1900;
 	    private const int MillisecondsPerMinute = 60000;
 
 	    private readonly long ticks;
 	    private readonly DateTimeKind kind;
+
+        // Implementation Note:
+        // Java's Date represents milliseconds from the epoch in GMT/UT time, it has no timezone attached.
+        // BLC's  DateTime represents (?) from the epoch either in UTC, localtime, or unspecified.
+        //
+        // A perfect emulation of BCL's DateTime with Java's pre-v8 Date/Calendar implementation 
+        // can not be achieved.
+
+
 
         public DateTime(long ticks)
             :this(ticks, DateTimeKind.Unspecified)
@@ -88,10 +102,20 @@ namespace System
 
         private DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, DateTimeKind kind, bool useSpecifiedKind)
         {
-            var dateTime = FromDate(new Java.Util.Date(year - YearOffset, month - MonthOffset, day, hour, minute, second));
-            this.ticks = dateTime.Ticks + TimeSpan.TicksPerMillisecond * millisecond;
-            CheckMinMaxTicks(ticks);
-            this.kind = useSpecifiedKind ? kind : dateTime.Kind;
+            //special handling for DateTime.MinValue, since it would produce an underflow (for some reason not entirely clear to me)
+            if (year == 1 && month == 1 && day == 1 && hour == 0 && minute == 0 && second == 0 && millisecond == 0)
+            {
+                this.ticks = 0L;
+                this.kind = kind;
+            }
+            else
+            {
+                // TODO: think about using Date.UTC when appropriate.
+                var dateTime = FromDate(new Java.Util.Date(year - YearOffset, month - MonthOffset, day, hour, minute, second), DateTimeKind.Unspecified);
+                this.ticks = dateTime.Ticks + TimeSpan.TicksPerMillisecond * millisecond;
+                CheckMinMaxTicks(ticks);
+                this.kind = useSpecifiedKind ? kind : dateTime.Kind;
+            }
         }
 
         //public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, Calendar calendar, DateTimeKind kind) { }
@@ -158,7 +182,7 @@ namespace System
 
         public int Month { get { return GetCalendar().Get(Calendar.MONTH) + MonthOffset; } }
        
-        public static DateTime Now { get { return FromDate(new Java.Util.Date()); } }
+        public static DateTime Now { get { return FromDate(new Java.Util.Date(), DateTimeKind.Local); } }
 
         public int Second { get { return GetCalendar().Get(Calendar.SECOND); } }
 
@@ -209,15 +233,24 @@ namespace System
         {
             var calender = GetCalendar();
             calender.Add(Calendar.YEAR, value);
-            return FromDate(calender.GetTime());
+            return FromDate(calender.Time, Kind);
         }
 
         public DateTime AddMonths(int months)
         {
             var calender = GetCalendar();
             calender.Add(Calendar.MONTH, months);
-            return FromDate(calender.GetTime());
+            return FromDate(calender.Time, Kind);
         }
+
+	    public static int DaysInMonth(int year, int month)
+	    {
+            // Create a calendar object and set year and month
+            Calendar mycal = new Java.Util.GregorianCalendar(year, month - MonthOffset, 1);
+
+            // Get the number of days in that month
+            return  mycal.GetActualMaximum(Calendar.DAY_OF_MONTH);         
+	    }
 
         //
         // Summary:
@@ -284,16 +317,16 @@ namespace System
         // Exceptions:
         //   System.ArgumentException:
         //     value is not a System.DateTime.
-        public int CompareTo(object value)
-        {
-            if (value == null)
-                return 1;
+        //public int CompareTo(object value)
+        //{
+        //    if (value == null)
+        //        return 1;
 
-            if (!(value is System.DateTime))
-                throw new ArgumentException("Value is not a System.DateTime");
+        //    if (!(value is System.DateTime))
+        //        throw new ArgumentException("Value is not a System.DateTime");
 
-            return Compare(this, (DateTime)value);
-        }
+        //    return Compare(this, (DateTime)value);
+        //}
         //
         // Summary:
         //     Returns the number of days in the specified month and year.
@@ -377,7 +410,7 @@ namespace System
         //     A 32-bit signed integer hash code.
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return ticks.GetHashCode();
         }
 
         public static bool operator ==(DateTime d1, DateTime d2)
@@ -607,10 +640,27 @@ namespace System
         /// <summary>
         /// Parse the given date/time string into a DateTime.
         /// </summary>
-        public static DateTime Parse(string s, IFormatProvider provider)
+        public static DateTime Parse(string value)
         {
-            return Parse(s);
+            return Parse(value, null, DateTimeStyles.None);
         }
+
+        /// <summary>
+        /// Parse the given date/time string into a DateTime.
+        /// </summary>
+        public static DateTime Parse(string value, IFormatProvider provider)
+        {
+            return Parse(value, provider, DateTimeStyles.None);
+        }
+
+        /// <summary>
+        /// Parse the given date/time string into a DateTime.
+        /// </summary>
+        public static DateTime Parse(string s, IFormatProvider provider, DateTimeStyles style)
+        {
+            return DateTimeParsing.Parse(s, provider, style);
+        }
+
         //
         // Summary:
         //     Converts the specified string representation of a date and time to its System.DateTime
@@ -676,8 +726,13 @@ namespace System
         //     the AM/PM designator in s do not agree.
         public static DateTime ParseExact(string s, string format, IFormatProvider provider)
         {
-            return Parse(s, provider);
+            return ParseExact(s, format, provider, DateTimeStyles.None);
         }
+
+	    public static DateTime ParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style)
+	    {
+	        return DateTimeParsing.ParseExact(s, format, provider, style);
+	    }
 
         //
         // Summary:
@@ -879,7 +934,8 @@ namespace System
             if (Kind == DateTimeKind.Local)
                 return this;
 
-            var utcOffset = GetUtcOffset();
+            var utcOffset = TimeZoneInfo.Local.GetUtcOffset(ticks);
+
             if (utcOffset.Ticks > 0)
             {
                 if (MaxValue - utcOffset < this)
@@ -891,7 +947,7 @@ namespace System
                     return SpecifyKind(MinValue, DateTimeKind.Local);
             }
 
-            return SpecifyKind(Add(utcOffset), DateTimeKind.Local);
+            return new DateTime(ticks + utcOffset.Ticks, DateTimeKind.Local);
         }
 
         //
@@ -979,7 +1035,7 @@ namespace System
         //     used by the current culture.
         public string ToString(string format)
         {
-            return ToString(format, DateTimeFormatInfo.InvariantInfo);
+            return ToString(format, DateTimeFormatInfo.CurrentInfo);
         }
         //
         // Summary:
@@ -1009,10 +1065,27 @@ namespace System
         //     used by provider.
         public string ToString(string format, IFormatProvider provider)
         {
-            var sdf = new Java.Text.SimpleDateFormat(GetJavaFormat(format, provider), Locale.Default);
-            sdf.TimeZone = TimeZone.GetTimeZone("UTC");
-            return sdf.Format(ToDate());
+            var f = DateFormatFactory.GetFormat(format, Kind, provider);
+
+            var date = f.UseUtc ? ToUniversalTime() : this;
+
+            f.Format.TimeZone = date.kind == DateTimeKind.Utc 
+                                ? Java.Util.TimeZone.GetTimeZone("UTC") 
+                                : Java.Util.TimeZone.Default;
+
+            return f.Format.Format(date.ToDate());
         }
+
+        public override string ToString()
+        {
+            return ToString("G", null);
+        }
+
+        public string ToString(IFormatProvider provider)
+        {
+            return ToString("G", provider);
+        }
+
         //
         // Summary:
         //     Converts the value of the current System.DateTime object to Coordinated Universal
@@ -1029,7 +1102,7 @@ namespace System
             if (Kind == DateTimeKind.Utc)
                 return this;
 
-            var offset = GetUtcOffset();
+            var offset = TimeZoneInfo.Local.GetUtcOffset(ticks);
 
             if (offset.Ticks < 0)
             {
@@ -1042,15 +1115,9 @@ namespace System
                     return SpecifyKind(MinValue, DateTimeKind.Utc);
             }
 
-            return SpecifyKind(Subtract(offset), DateTimeKind.Utc);
+            return new DateTime(ticks - offset.Ticks, DateTimeKind.Utc);
         }
 
-        internal static TimeSpan GetUtcOffset()
-        {
-            var offsetInMs = TimeZone.GetDefault().GetRawOffset();
-
-            return new TimeSpan(offsetInMs * TimeSpan.TicksPerMillisecond);
-        }
 
         //
         // Summary:
@@ -1077,17 +1144,31 @@ namespace System
         //     of range.
         public static bool TryParse(string s, out DateTime result)
         {
+            return TryParse(s, null, DateTimeStyles.None, out result);
+        }
+
+        public static bool TryParse(string s, IFormatProvider provider, DateTimeStyles style, out DateTime result)
+        {
             try
             {
-                result = Parse(s);
+                result = Parse(s, provider, style);
                 return true;
             }
-            catch 
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+            catch(FormatException)
+            {
+                throw;
+            }
+            catch(Exception)
             {
                 result = MinValue;
-                return false; 
+                return false;
             }
         }
+
         //
         // Summary:
         //     Converts the specified string representation of a date and time to its System.DateTime
@@ -1167,7 +1248,27 @@ namespace System
         //     styles is not a valid System.Globalization.DateTimeStyles value.-or-styles
         //     contains an invalid combination of System.Globalization.DateTimeStyles values
         //     (for example, both System.Globalization.DateTimeStyles.AssumeLocal and System.Globalization.DateTimeStyles.AssumeUniversal).
-        //public static bool TryParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style, out DateTime result);
+	    public static bool TryParseExact(string s, string format, IFormatProvider provider, DateTimeStyles style, out DateTime result)
+	    {
+            try
+            {
+                result = ParseExact(s, format, provider, style);
+                return true;
+            }
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+            catch (FormatException)
+            {
+                throw;
+            }
+            catch(Exception ex)
+            {
+                result = MinValue;
+                return false;
+            }
+	    }
         //
         // Summary:
         //     Converts the specified string representation of a date and time to its System.DateTime
@@ -1213,161 +1314,84 @@ namespace System
         /// </summary>
         public Java.Util.Date ToDate()
         {
-            var calendar = GetCalendar();
-            return calendar.GetTime();
+            long millis;
+
+            // special handling for DateTime.MinValue, to avoid incorrect calculations
+            // due to subtle differences in how dates are calculates in Java and C# (which
+            // I don't entirely understand)
+
+            if (ticks == 0)
+            {
+                millis = MinValueJavaMillies;
+            }
+            else
+            {
+                millis = (ticks/TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
+            }
+            long offsetInMs = (long)0;
+
+            if (kind != DateTimeKind.Utc)
+                offsetInMs = JavaGetOffsetInMs(millis);
+
+            return new Date(millis - offsetInMs);
         }
 
         private Java.Util.Calendar GetCalendar()
         {
-            var millis = (ticks / TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
-
             var calender = new Java.Util.GregorianCalendar();
-            if (Kind == DateTimeKind.Utc || Kind == DateTimeKind.Unspecified)
-            {
-                calender.SetTimeZone(TimeZone.GetTimeZone("UTC"));
-            }
-            calender.SetTimeInMillis(millis);
 
+            if (ticks == 0)
+            {
+                // always use UTC for DateTime.MinValue, is this correct?
+                calender.TimeZone = Java.Util.TimeZone.GetTimeZone("UTC");
+                calender.TimeInMillis = MinValueJavaMillies;
+            }
+            else
+            {
+                var millis = (ticks/TimeSpan.TicksPerMillisecond) - EraDifferenceInMs;
+                long offsetInMs = (long) 0;
+
+                if (kind != DateTimeKind.Utc)
+                {
+                    offsetInMs = JavaGetOffsetInMs(millis);
+                    calender.TimeZone = (Java.Util.TimeZone.Default);
+                }
+                else
+                {
+                    calender.TimeZone = (Java.Util.TimeZone.GetTimeZone("UTC"));
+                }
+
+                calender.TimeInMillis = (millis - offsetInMs);
+            }
             return calender;
+        }
+
+        private static long JavaGetOffsetInMs(long millies)
+        {
+            return (long)Java.Util.TimeZone.Default.GetOffset(millies);
         }
 
         /// <summary>
         /// Convert from java based date to DateTime.
         /// </summary>
-        public static DateTime FromDate(Java.Util.Date value)
+        public static DateTime FromDate(Date value, DateTimeKind kind)
         {
-            var timezoneOffsetInMinutes = value.GetTimezoneOffset();
-            var millis = value.GetTime();
-
-            return FromDate(millis - timezoneOffsetInMinutes * MillisecondsPerMinute);
+            return FromDate(value.Time, kind);
         }
 
         /// <summary>
         /// Convert from java based date to DateTime.
         /// </summary>value
         /// <param name="millis">milliseconds since Jan 1, 1970, midnight GMT</param>
-        public static DateTime FromDate(long millis)
+        public static DateTime FromDate(long millis, DateTimeKind kind)
         {
-            var ticks = (millis + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
-            return new DateTime(ticks);   
-        }
+            long offsetInMs = 0L;
 
+            if (kind != DateTimeKind.Utc)
+                offsetInMs = JavaGetOffsetInMs(millis);
 
-
-        /// <summary>
-        /// Parse the given date/time string into a DateTime.
-        /// </summary>
-        public static DateTime Parse(string value)
-        {
-            return FromDate(Java.Util.Date.Parse(value));
-        }
-
-        public string ToString()
-        {
-            return ToString("G", null);
-        }
-
-        public string ToString(IFormatProvider provider)
-        {
-            return ToString();
-        }
-
-        private string GetJavaFormat(string format, IFormatProvider provider)
-        {
-            if (string.IsNullOrEmpty(format))
-                format = "G";
-
-            if (format.Length == 1 && provider is DateTimeFormatInfo)
-            {
-                bool useInvariant, useUtc;
-                format = GetStandardPattern(format[0], provider as DateTimeFormatInfo, out useInvariant, out useUtc, false);
-
-                if (format == null)
-                    throw new FormatException("format is not one of the format specifier characters defined for DateTimeFormatInfo");
-            }
-
-            return format;
-        }
-
-        //Mono code (DateTimeUtils.cs):
-        public static string GetStandardPattern(char format, DateTimeFormatInfo dfi, out bool useutc, out bool use_invariant, bool date_time_offset)
-        {
-            String pattern;
-
-            useutc = false;
-            use_invariant = false;
-
-            switch (format)
-            {
-                case 'd':
-                    pattern = dfi.ShortDatePattern;
-                    break;
-                case 'D':
-                    pattern = dfi.LongDatePattern;
-                    break;
-                case 'f':
-                    pattern = dfi.LongDatePattern + " " + dfi.ShortTimePattern;
-                    break;
-                case 'F':
-                    pattern = dfi.FullDateTimePattern;
-                    break;
-                case 'g':
-                    pattern = dfi.ShortDatePattern + " " + dfi.ShortTimePattern;
-                    break;
-                case 'G':
-                    pattern = dfi.ShortDatePattern + " " + dfi.LongTimePattern;
-                    break;
-                case 'm':
-                case 'M':
-                    pattern = dfi.MonthDayPattern;
-                    break;
-                case 'o':
-                case 'O':
-                    pattern = dfi.RoundtripPattern;
-                    use_invariant = true;
-                    break;
-                case 'r':
-                case 'R':
-                    pattern = dfi.RFC1123Pattern;
-                    if (date_time_offset)
-                        useutc = true;
-                    use_invariant = true;
-                    break;
-                case 's':
-                    pattern = dfi.SortableDateTimePattern;
-                    use_invariant = true;
-                    break;
-                case 't':
-                    pattern = dfi.ShortTimePattern;
-                    break;
-                case 'T':
-                    pattern = dfi.LongTimePattern;
-                    break;
-                case 'u':
-                    pattern = dfi.UniversalSortableDateTimePattern;
-                    if (date_time_offset)
-                        useutc = true;
-                    use_invariant = true;
-                    break;
-                case 'U':
-                    if (date_time_offset)
-                        pattern = null;
-                    else
-                    {
-                        pattern = dfi.FullDateTimePattern;
-                        useutc = true;
-                    }
-                    break;
-                case 'y':
-                case 'Y':
-                    pattern = dfi.YearMonthPattern;
-                    break;
-                default:
-                    pattern = null;
-                    break;
-            }
-
-            return pattern;
+            var ticks = ((millis + offsetInMs) + EraDifferenceInMs) * TimeSpan.TicksPerMillisecond;
+            return new DateTime(ticks, kind);
         }
     }
 }

@@ -14,7 +14,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 [assembly: Dot42.FrameworkLibrary]
 [assembly: AssemblyFlags(AssemblyNameFlags.Retargetable)]
+
+//[assembly: TypeForwardedTo(typeof(System.Exception))] 
 

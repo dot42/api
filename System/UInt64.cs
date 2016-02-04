@@ -16,6 +16,7 @@
 using System.Globalization;
 using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -40,7 +41,36 @@ namespace System
 
         public static ulong Parse(string s, NumberStyles style)
         {
-            return Parse(s);
+            long value;
+
+            if ((style & NumberStyles.AllowHexSpecifier) != 0)
+                value = long.Parse(s, 16);
+            else
+                value = long.Parse(s);
+
+            if (value < 0L)
+                throw new OverflowException();
+
+            return (ulong)value;
+        }
+
+        public static bool TryParse(string s, out ulong result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
         }
 
         [DexImport("longValue", "()J", AccessFlags = 1)]
@@ -49,19 +79,53 @@ namespace System
             return default(long);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public new string ToString()
+        {
+            return NumberFormatter.FormatULong(this, null);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(LongValue(), provider);
+            return NumberFormatter.FormatULong(this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, LongValue(), null);
+            return NumberFormatter.FormatULong(format, this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, LongValue(), provider);
+            return NumberFormatter.FormatULong(format, this, provider);
+        }
+
+        public int CompareTo(ulong o)
+        {
+            return this < o ? -1
+                 : this > o ? 1
+                 : 0;
+        }
+
+        [Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+        public bool Equals(object @object) /* MethodBuilder.Create */
+        {
+            return default(bool);
+        }
+
+        [Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+        public int GetHashCode() /* MethodBuilder.Create */
+        {
+            return default(int);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(ulong other)
+        {
+            return other == this;
         }
 
     }

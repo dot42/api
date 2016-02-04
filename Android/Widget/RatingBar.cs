@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 using Dot42;
 
 namespace Android.Widget
@@ -36,7 +36,7 @@ namespace Android.Widget
         {
             add
             {
-                var listener = this.GetOrCreate<RatingBarListener>(ratingChangedListenerKey, true, SetOnRatingBarChangeListener);
+                var listener = this.GetOrCreate<RatingBarListener>(ratingChangedListenerKey, true, a => OnRatingBarChangeListener = a);
                 listener.RatingChanged.Add(value);
             }
             remove

@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System;
 using Dot42;
 
 namespace Android.Widget
@@ -30,7 +32,7 @@ namespace Android.Widget
         /// Fired when this button's checked state has changed.
         /// </summary>
         [ListenerInterface(typeof(IOnCheckedChangeListener))]
-        public event System.EventHandler<CheckedChangedEventArgs> CheckedChanged
+        public event System.EventHandler<CheckedChangeEventArgs> CheckedChange
         {
             add { GetOnCheckedChangedListener(true).Add(value); }
             remove
@@ -54,16 +56,34 @@ namespace Android.Widget
             }
             return listener;
         }
+
+        public class CheckedChangeEventArgs : EventArgs
+        {
+            private readonly bool @checked;
+
+            public CheckedChangeEventArgs(bool @checked)
+            {
+                this.@checked = @checked;
+            }
+
+            /// <summary>
+            /// Gets the checked state of the sender
+            /// </summary>
+            public bool IsChecked
+            {
+                get { return @checked; }
+            }
+        }
     }
 
     /// <summary>
     /// Implementation of the SeekBar events.
     /// </summary>
-    internal sealed class CompoundButtonCheckedChangedListener : Dot42.EventHandlerListener<CheckedChangedEventArgs>, CompoundButton.IOnCheckedChangeListener
+    internal sealed class CompoundButtonCheckedChangedListener : Dot42.EventHandlerListener<CompoundButton.CheckedChangeEventArgs>, CompoundButton.IOnCheckedChangeListener
     {
         public void OnCheckedChanged(CompoundButton sender, bool isChecked)
         {
-            Invoke(sender, new CheckedChangedEventArgs(isChecked));
+            Invoke(sender, new CompoundButton.CheckedChangeEventArgs(isChecked));
         }
     }
 }

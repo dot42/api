@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Collections.ObjectModel;
+using System.Linq;
 using Dot42;
 using Dot42.Collections;
 using Java.Lang;
@@ -21,7 +22,7 @@ using Java.Util;
 
 namespace System.Collections.Generic
 {
-	public class List<T> : IList<T>, IList
+	public class List<T> : IList<T>, IList, IJavaCollectionWrapper<T>
 	{
 	    private readonly ArrayList<T> list;
 
@@ -38,18 +39,20 @@ namespace System.Collections.Generic
         /// </summary>
         public List(IEnumerable<T> source)
         {
-            var colSource = source as Java.Util.ICollection<T>;
+            var colSource = source as Java.Util.ICollection<T>; // TODO: does this makes sense, or can we remove this case altogether?
             if (colSource != null)
             {
                 list = new ArrayList<T>(colSource);
             }
+            var colWrapper = source as IJavaCollectionWrapper<T>;
+            if (colWrapper != null)
+            {
+                list = new ArrayList<T>(colWrapper.Collection);
+            }
             else
             {
                 list = new ArrayList<T>();
-                foreach (var item in source)
-                {
-                    list.Add(item);
-                }
+                AddRange(source);
             }
         }
 
@@ -180,7 +183,7 @@ namespace System.Collections.Generic
 	    /// Add ths given element to the end of this list.
 	    /// </summary>
 	    /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
-	    public int Add(object element)
+        int IList.Add(object element)
 	    {
 	        var rc = list.Size();
 	        list.Add((T) element);
@@ -195,22 +198,31 @@ namespace System.Collections.Generic
 	        list.Add(item);
 	    }
 
-	    int IList<T>.Add(T element)
-	    {
-            var rc = list.Size();
-            list.Add(element);
-            return rc;
-        }
-
-        /// <summary>
+	    /// <summary>
         /// Adds the elements of the specified collection to the end of this List.
         /// </summary>
         public void AddRange(IEnumerable<T> collection)
-        {
-            foreach (var element in collection)
-            {
-                 list.Add(element);
-            }
+	    {
+	        var cWrapper = collection as IJavaCollectionWrapper<T>;
+
+	        if (cWrapper != null)
+	        {
+	            list.AddAll(cWrapper.Collection);
+	            return;
+	        }
+
+	        var c = collection as ICollection<T>;
+	        if (c != null)
+	        {
+	            list.AddAll(new CollectionToJavaWrapper<T>(c));
+	        }
+	        else
+	        {
+	            foreach (var e in collection)
+	            {
+	                list.Add(e);
+	            }
+	        }
         }
 
 	    /// <summary>
@@ -223,7 +235,7 @@ namespace System.Collections.Generic
 
 	    bool ICollection<T>.Remove(T item)
 	    {
-	        return list.Remove(item);
+            return list.Remove((object)item);
 	    }
 
 	    /// <summary>
@@ -231,16 +243,8 @@ namespace System.Collections.Generic
 	    /// </summary>
 	    public bool Remove(T element)
 	    {
-	        return list.Remove(element);
+	        return list.Remove((object)element);
 	    }
-
-        /// <summary>
-        /// Removes the first occurrance of the given element from this list.
-        /// </summary>
-        void IList<T>.Remove(T element)
-        {
-            list.Remove(element);
-        }
 
 	    public int IndexOf(T element)
 	    {
@@ -252,7 +256,33 @@ namespace System.Collections.Generic
 	        list.Add(index, element);
 	    }
 
-	    public void Clear()
+        public void InsertRange(int index, IEnumerable<T> collection)
+        {
+            var cWrapper = collection as IJavaCollectionWrapper<T>;
+
+            if (cWrapper != null)
+            {
+                list.AddAll(index, cWrapper.Collection);
+                return;
+            }
+
+            var c = collection as ICollection<T>;
+            
+            if (c != null)
+            {
+                list.AddAll(index, new CollectionToJavaWrapper<T>(c));
+            }
+            else
+            {
+                foreach (var e in collection)
+                {
+                    list.Add(index++, e);
+                }
+            }
+        }
+
+
+        public void Clear()
 	    {
 	        list.Clear();
 	    }
@@ -262,29 +292,49 @@ namespace System.Collections.Generic
 	        Dot42.Collections.Collections.CopyTo(list, array, index);
 	    }
 
-	    public bool Contains(object element)
+        
+        bool IList.Contains(object element)
 	    {
 	        return list.Contains(element);
 	    }
 
-	    public int IndexOf(object element)
+        int IList.IndexOf(object element)
 	    {
             return list.IndexOf(element);
         }
 
-	    public void Insert(int index, object element)
+        void IList.Insert(int index, object element)
 	    {
 	        list.Add(index, (T) element);
 	    }
 
-	    public void Remove(object element)
+        void IList.Remove(object element)
 	    {
 	        list.Remove(element);
 	    }
 
 	    public void RemoveAt(int index)
 	    {
-	        list.Remove(list.Get(index));
+	        list.Remove(index);
+	    }
+
+        public void RemoveAll(Predicate<T> predicate)
+        {
+            for (int i = list.Count - 1; i >= 0; ++i)
+            {
+                if (predicate(list.Get(i)))
+                    list.Remove(i);
+            }
+        }
+
+        public void RemoveRange(int index, int count)
+        {
+            list.SubList(index, index + count).Clear();
+        }
+
+	    public void Sort()
+	    {
+	        Java.Util.Collections.Sort(list);
 	    }
 
         /// <summary>
@@ -292,8 +342,16 @@ namespace System.Collections.Generic
         /// </summary>
         public T[] ToArray()
         {
-            var result = new T[list.Count];
+            var result = new T[list.Size()];
             return list.ToArray(result);
+        }
+
+        public int FindIndex(Predicate<T> predicate)
+        {
+            for (int i = 0; i < list.Size(); ++i)
+                if (predicate(list.Get(i)))
+                    return i;
+            return -1;
         }
 
         /// <summary>
@@ -312,6 +370,13 @@ namespace System.Collections.Generic
             {
             }
         }
-	}
+
+	    Java.Util.ICollection<T> IJavaCollectionWrapper<T>.Collection { get { return list; } }
+    
+        public static implicit operator ArrayList<T>(List<T> l)
+        {
+            return l.list;
+        }
+    }
 }
 

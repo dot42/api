@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 using Dot42;
 
 namespace Android.Widget
@@ -115,7 +115,7 @@ namespace Android.Widget
     {
         internal readonly Dot42.EventHandlerListener<MovedToScrapHeapEventArgs> MovedToScrapHeap = new EventHandlerListener<MovedToScrapHeapEventArgs>();
 
-        public void OnMovedToScrapHeap(View.View view)
+        public void OnMovedToScrapHeap(Views.View view)
         {
             MovedToScrapHeap.Invoke(null, new MovedToScrapHeapEventArgs(view));
         }

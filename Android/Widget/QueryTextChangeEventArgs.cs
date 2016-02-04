@@ -17,7 +17,7 @@ using System;
 
 namespace Android.Widget
 {
-	public class QueryTextChangeEventArgs : View.ViewEventArgs
+	public class QueryTextChangeEventArgs : Views.ViewEventArgs
 	{
 	    public QueryTextChangeEventArgs(string nexText)
 	    {

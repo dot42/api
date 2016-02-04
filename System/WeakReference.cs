@@ -13,7 +13,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Java.Lang.Ref;
 
 namespace System
 {
@@ -22,7 +21,7 @@ namespace System
     /// </summary>
 	public class WeakReference
 	{
-	    private SoftReference<object> softReference;
+	    private Java.Lang.Ref.WeakReference<object> weakReference;
         private bool trackResurrection;
 
         /// <summary>
@@ -42,7 +41,7 @@ namespace System
         /// <param name="trackResurrection">not used by Dot42</param>
         public WeakReference(object target, bool trackResurrection)
         {
-            softReference = new SoftReference<object>(target);
+            weakReference = new Java.Lang.Ref.WeakReference<object>(target);
             this.trackResurrection = trackResurrection;
         }
 
@@ -52,7 +51,7 @@ namespace System
         /// </summary>
         public virtual bool IsAlive
         {
-            get { return softReference.Get() != null; }
+            get { return weakReference.Get() != null; }
         }
 
         /// <summary>
@@ -66,11 +65,11 @@ namespace System
 
         public virtual object Target
         {
-            get { return softReference.Get(); }
+            get { return weakReference.Get(); }
             set
             {
                 if (value == null) throw new InvalidOperationException("Target may not be null");
-                softReference = new SoftReference<object>(value);
+                weakReference = new Java.Lang.Ref.WeakReference<object>(value);
             }
         }
 	}

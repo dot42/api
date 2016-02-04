@@ -13,11 +13,16 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Linq;
+using Dot42.Internal;
+using Java.Lang;
+using Java.Lang.Reflect;
 using Java.Util;
 
 namespace System
 {
-	public abstract partial class Enum 
+    public abstract partial class Enum
 	{
         /// <summary>
         /// Gets the name of the given enum constant or null if not found.
@@ -42,20 +47,13 @@ namespace System
         /// </summary>
         public static string[] GetNames(Type enumType)
         {
-            var fields = enumType.GetDeclaredFields();
-            var names = new ArrayList<string>();
-            foreach (var field in fields)
-            {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
-                {
-                    var name = field.Name;
-                    if (name[name.Length - 1] != '$')
-                    {
-                        names.Add(name);
-                    }
-                }
-            }
-            return names.ToArray(new string[names.Count]);
+            var values = (Enum<object>[])GetValues(enumType);
+            string[] ret = new string[values.Length];
+
+            for (int i = 0; i < ret.Length; ++i)
+                ret[i] = values[i].Name();
+
+            return ret;
         }
 
         /// <summary>
@@ -63,20 +61,31 @@ namespace System
         /// </summary>
         public static Array GetValues(Type enumType)
         {
-            var fields = enumType.GetDeclaredFields();
+            if (typeof (Dot42.Internal.Enum).JavaIsAssignableFrom(enumType))
+            {
+                var info = EnumInfo.GetEnumInfo(enumType);
+                return info.Values();
+            }
+
+            // Fallback for java enums (do we need this?)
+            var fields = enumType.JavaGetDeclaredFields();
             var values = new ArrayList<object>();
+
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
-                {
-                    var name = field.Name;
-                    if (name[name.Length - 1] != '$')
-                    {
-                        values.Add(field.GetValue(null));
-                    }
-                }
+                if (!IsEnumMember(field)) continue;
+                values.Add(field.Get(null));
             }
-            return values.ToArray();
+
+            return values.OrderBy(p => p).ToArray();
+        }
+
+        private static bool IsEnumMember(Field field)
+        {
+            return Modifier.IsStatic(field.Modifiers)
+                   &&  field.Type == field.DeclaringClass
+                   && !field.IsSynthetic
+                   && !field.Name.EndsWith("$");
         }
 
         /// <summary>
@@ -84,22 +93,7 @@ namespace System
         /// </summary>
         public static object Parse(Type enumType, string name)
         {
-            if (enumType == null)
-                throw new ArgumentNullException("enumType");
-            if (name == null)
-                throw new ArgumentNullException("name");
-            var fields = enumType.GetDeclaredFields();
-            foreach (var field in fields)
-            {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
-                {
-                    if (field.Name == name)
-                    {
-                        return field.GetValue(null);
-                    }
-                }
-            }
-            throw new ArgumentException("name");
+            return Parse(enumType, name, false);
         }
 
         /// <summary>
@@ -111,15 +105,21 @@ namespace System
                 throw new ArgumentNullException("enumType");
             if (name == null)
                 throw new ArgumentNullException("name");
-            var fields = enumType.GetDeclaredFields();
+
+            if (typeof(Dot42.Internal.Enum).JavaIsAssignableFrom(enumType))
+            {
+                var info = EnumInfo.GetEnumInfo(enumType);
+                return info.Parse(name, ignoreCase, true);
+            }
+
+            // fallback
+            var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (!IsEnumMember(field)) continue;
+                if ((!ignoreCase && field.Name == name) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                 {
-                    if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
-                    {
-                        return field.GetValue(null);
-                    }
+                    return field.Get(null);
                 }
             }
             throw new ArgumentException("name");
@@ -131,23 +131,7 @@ namespace System
         public static bool TryParse<TEnum>(string name, out TEnum result)
             where TEnum : struct 
         {
-            if (name == null)
-                throw new ArgumentNullException("name");
-            var enumType = typeof (TEnum);
-            var fields = enumType.GetDeclaredFields();
-            foreach (var field in fields)
-            {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
-                {
-                    if (field.Name == name)
-                    {
-                        result = (TEnum)field.GetValue(null);
-                        return true;
-                    }
-                }
-            }
-            result = default(TEnum);
-            return false;
+            return TryParse(name, false, out result);
         }
 
         /// <summary>
@@ -158,15 +142,31 @@ namespace System
         {
             if (name == null)
                 throw new ArgumentNullException("name");
+
             var enumType = typeof(TEnum);
-            var fields = enumType.GetDeclaredFields();
+            if (typeof(Dot42.Internal.Enum).JavaIsAssignableFrom(enumType))
+            {
+                var info = EnumInfo.GetEnumInfo(enumType);
+                var ret = info.Parse(name, ignoreCase, false);
+                if (ret != null)
+                {
+                    result = (TEnum)(object)ret;
+                    return true;
+                }
+                result = (TEnum)(object)info.DefaultValue();
+                return false;
+            }
+
+            // fallback.
+            var fields = enumType.JavaGetDeclaredFields();
             foreach (var field in fields)
             {
-                if (field.IsStatic && (field.GetType() == field.DeclaringType))
+                if (!IsEnumMember(field)) continue;
                 {
-                    if ((!ignoreCase && (field.Name == name)) || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
+                    if ((!ignoreCase && field.Name == name) 
+                      || (ignoreCase && field.Name.EqualsIgnoreCase(name)))
                     {
-                        result = (TEnum)field.GetValue(null);
+                        result = (TEnum)field.Get(null);
                         return true;
                     }
                 }
@@ -174,6 +174,50 @@ namespace System
             result = default(TEnum);
             return false;
         }
-    }
+
+        public static Type GetUnderlyingType(Type enumType)
+        {
+            if(!enumType.IsEnum)
+                throw new ArgumentException("enumType");
+
+            if (typeof(Dot42.Internal.Enum).JavaIsAssignableFrom(enumType))
+            {
+                var info = EnumInfo.GetEnumInfo(enumType);
+                return info.Underlying;
+            }
+
+            return typeof (int);
+        }
+
+        public static object ToObject(Type enumType, object value)
+        {
+            if (typeof (Dot42.Internal.Enum).IsAssignableFrom(enumType))
+            {
+                return Dot42.Internal.Enum.GetFromObject(enumType, value);
+            }
+
+            // Fallback for java enums.
+            var vals = GetValues(enumType);
+            int val = Convert.ToInt32(value);
+
+            for(int i = 0; i < vals.Length; ++i)
+            {
+                int e = ((Java.Lang.Enum<object>)vals[i]).Ordinal();
+                
+                if(val == e)
+                    return vals[i];
+            }
+
+            throw new InvalidOperationException("enum value not found: " + value);
+        }
+
+        // this will actually be redirected by the compiler, and never be called.
+        public string ToString(string format)
+        {
+            // keep the call though, so that the compiler knows he has to include the target method
+            return ((Dot42.Internal.Enum)(object)this).ToString(format);
+        }
+
+	}
 }
 

@@ -13,56 +13,85 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    partial class MethodInfo
+    [Include(TypeCondition = typeof(MulticastDelegate))]
+    public class MethodInfo : MethodBase
     {
-        /// <summary>
-        /// Gets the type that declares this member.
-        /// </summary>
-        public Type DeclaringType
+        private readonly Method _method;
+        private readonly Type _declaringType;
+        private readonly string _explicitInterfacePrefixIfAny;
+        private string _name;
+        public Method JavaMethod { get { return _method; } }
+
+        public MethodInfo(Method method, Type declaringType, string explicitInterfacePrefixIfAny=null) : base(method)
         {
-            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
-            get { return GetDeclaringClass(); }
+            _method = method;
+            _declaringType = declaringType;
+            _explicitInterfacePrefixIfAny = explicitInterfacePrefixIfAny;
         }
 
-        [Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;")]
-        global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
+        public override MemberTypes MemberType { get {return MemberTypes.Method; } }
+        public override Type DeclaringType { get { return _declaringType; } }
+
+        protected override int Modifiers { get { return _method.Modifiers; } }
+
+        protected override Type[] JavaGetParameterTypes()
         {
-            return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
+            return _method.ParameterTypes;
         }
 
-        /// <summary>
-        /// Is this an abstract method?
-        /// </summary>
-        public bool IsAbstract { get { return Modifier.IsAbstract(GetModifiers()); } }
+        public override string Name
+        {
+            get
+            {
+                if (_name != null) return _name;
+                var name = _method.Name;
+                
+                // remove possible explicit interface implementation prefix.
+                if (_explicitInterfacePrefixIfAny != null && name.StartsWith(_explicitInterfacePrefixIfAny))
+                {
+                    name = name.Substring(_explicitInterfacePrefixIfAny.Length);
+                }
 
-        /// <summary>
-        /// Is this an final method?
-        /// </summary>
-        public bool IsFinal { get { return Modifier.IsFinal(GetModifiers()); } }
+                // remove any compiler generated parts of the name.
+                var compilerGenIdx = name.IndexOf("$");
+                if (compilerGenIdx != -1)
+                    name = name.Substring(0, compilerGenIdx);
 
-        /// <summary>
-        /// Is this an private method?
-        /// </summary>
-        public bool IsPrivate { get { return Modifier.IsPrivate(GetModifiers()); } }
+                //Console.WriteLine("{1}: {2}: {3}: {0}", DeclaringType.FullName, name, _explicitInterfacePrefixIfAny, _method.Name);
 
-        /// <summary>
-        /// Is this an public method?
-        /// </summary>
-        public bool IsPublic { get { return Modifier.IsPublic(GetModifiers()); } }
+                return _name = name;
+            }
+        }
 
-        /// <summary>
-        /// Is this a static method?
-        /// </summary>
-        public bool IsStatic { get { return Modifier.IsStatic(GetModifiers()); } }
+        public override bool ContainsGenericParameters { get { return JavaMethod.GenericParameterTypes.Length > 0; } }
 
-        /// <summary>
-        /// Is this an virtual method?
-        /// </summary>
-        public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+        public Type ReturnType { get { return _method.ReturnType; } }
+
+        public MethodInfo GetBaseDefinition()
+        {
+            var b = _method.DeclaringClass;
+            if (b == this.DeclaringType) return this;
+            return b.GetMethod(_method.Name, _method.ParameterTypes);
+        }
+
+        public override object Invoke(object instance, object[] args)
+        {
+            // .NET doesn't have accessibility semantics
+            if (!_method.IsAccessible) _method.IsAccessible = true;
+
+            return _method.Invoke(instance, args);
+        }
+
+        public override string ToString()
+        {
+            return _method.DeclaringClass.JavaGetName() + "::" + _method.Name;
+        }
     }
 }
 

@@ -24,7 +24,7 @@ namespace System
     /// Base class for array.
     /// This will always map to java/lang/Object because there is no special base class for java array's.
     /// </summary>
-    [Dot42.DexImport("java/lang/Object", IgnoreFromJava = true)]
+    [Dot42.DexImport("java/lang/Object", IgnoreFromJava = true, Priority = 1)]
     public abstract class Array : IEnumerable, ICollection, IList
     {
         /// <summary>
@@ -44,12 +44,51 @@ namespace System
             return Java.Lang.Reflect.Array.Get(this, index);
         }
 
+        public object GetValue(int index1, int index2)
+        {
+            var a = (Array) Java.Lang.Reflect.Array.Get(this, index1);
+            return Java.Lang.Reflect.Array.Get(a, index2);
+        }
+
+        public object GetValue(int[] indices)
+        {
+            int i;
+            var a = this;
+            for (i = 0; i < indices.Length - 1; ++i)
+            {
+                a = (Array) Java.Lang.Reflect.Array.Get(a, indices[i]);
+            }
+            return Java.Lang.Reflect.Array.Get(a, indices[i]);
+        }
+
+
         /// <summary>
-        /// Gets the value of the array at the given index.
+        /// Sets the value of the array at the given index.
         /// </summary>
         public void SetValue(object value, int index)
         {
             Java.Lang.Reflect.Array.Set(this, index, value);
+        }
+
+        public void SetValue(object value, int index1, int index2)
+        {
+            var a = (Array)Java.Lang.Reflect.Array.Get(this, index1);
+            Java.Lang.Reflect.Array.Set(a, index2, value);
+
+        }
+
+        /// <summary>
+        /// Sets the value of the array at the given indices.
+        /// </summary>
+        public void SetValue(object value, int[] indices)
+        {
+            int i = 0;
+            var a = this;
+            for (; i < indices.Length - 1; ++ i)
+            {
+                a = (Array) Java.Lang.Reflect.Array.Get(a, indices[i]);
+            }
+            Java.Lang.Reflect.Array.Set(a, indices[i], value);
         }
 
         /// <summary>
@@ -118,23 +157,91 @@ namespace System
         /// </summary>
         public static int IndexOf(Array array, object value)
         {
-            var byteArr = array as sbyte[];
-            if (byteArr != null) return Arrays.BinarySearch(byteArr, (sbyte) value);
-            var boolArr = array as bool[];
-            if (boolArr != null) return Arrays.BinarySearch(boolArr, (bool) value);
-            var charArr = array as char[];
-            if (charArr != null) return Arrays.BinarySearch(charArr, (char) value);
-            var shortArr = array as short[];
-            if (shortArr != null) return Arrays.BinarySearch(shortArr, (short) value);
-            var intArr = array as int[];
-            if (intArr != null) return Arrays.BinarySearch(intArr, (int)value);
-            var longArr = array as long[];
-            if (longArr != null) return Arrays.BinarySearch(longArr, (long)value);
-            var floatArr = array as float[];
-            if (floatArr != null) return Arrays.BinarySearch(floatArr, (float)value);
-            var doubleArr = array as double[];
-            if (doubleArr != null) return Arrays.BinarySearch(doubleArr, (double)value);
-            return Arrays.BinarySearch((object[])array, value);
+            var type = array.GetType();
+
+            if (type == typeof(sbyte[]))
+            {
+                var val = (sbyte)value;
+                var arr = (sbyte[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(char[]))
+            {
+                var val = (char)value;
+                var arr = (char[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(short[]))
+            {
+                var val = (short)value;
+                var arr = (short[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(int[]))
+            {
+                var val = (int)value; 
+                var arr = (int[]) array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i) 
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(long[]))
+            {
+                var val = (long)value;
+                var arr = (long[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(float[]))
+            {
+                var val = (float)value;
+                var arr = (float[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(double[]))
+            {
+                var val = (double)value;
+                var arr = (double[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+            if (type == typeof(bool[]))
+            {
+                var val = (bool)value;
+                var arr = (bool[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                    if (arr[i] == val) return i;
+                return -1;
+            }
+
+            {
+                var arr = (object[])array;
+                int len = arr.Length;
+                for (int i = 0; i < len; ++i)
+                {
+                    if (Equals(arr[i], value))
+                        return i;
+                }
+                return -1;
+            }
         }
 
         /// <summary>
@@ -215,6 +322,138 @@ namespace System
             throw new NotSupportedException();
         }
 
+        public static void Reverse(int[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                int temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(byte[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                byte temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(sbyte[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                sbyte temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(bool[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                bool temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(char[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                char temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(short[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                short temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(ushort[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                ushort temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(long[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                long temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(ulong[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                ulong temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(float[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                float temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(double[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                double temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
+        public static void Reverse(object[] array)
+        {
+            var length = array.Length;
+            for (int i = 0; i < length / 2; i++)
+            {
+                object temp = array[i];
+                array[i] = array[length - i - 1];
+                array[length - i - 1] = temp;
+            }
+        }
+
         /// <summary>
         /// Sort the elements in the entire array.
         /// </summary>
@@ -235,7 +474,7 @@ namespace System
         /// <summary>
         /// Sort the elements in the entire array.
         /// </summary>
-        private void Sort(int index,int length, IComparer comparer)
+        private void Sort(int index, int length, IComparer comparer)
         {
             comparer = comparer ?? Comparer.Default;
             Java.Util.Arrays.Sort((object[])this, index, index + length, comparer);
@@ -309,7 +548,7 @@ namespace System
         {
             if (dimension == 0) return Length;
 
-            if (dimension >=1)
+            if (dimension >= 1)
             {
                 var array = GetValue(0) as Array;
                 if (array != null) return array.GetLength(dimension-1);
@@ -317,18 +556,44 @@ namespace System
 
             throw new NotImplementedException("System.Array.GetLength");
         }
-
-        /*
-        //Rank is missing, Java doesn't support multiple dimension arrays as far as I know like 
-        //var i = new int[1,2,3], however it does support
-        //var i = new int[1][2][3]
+       
+        // <summary>
+        // Tries to reconstruct the array rank.
+        // </summary>
         public int Rank
         {
-            get { return 1; }
+            get
+            {
+                int rank = 1;
+                var type = this.GetType();
+                while ((type = type.JavaGetComponentType()).IsArray)
+                    rank += 1;
+
+                return rank;
+            }
         }
-        */
 
+        public int GetLowerBound(int dimension)
+        {
+            return 0;
+        }
 
+        public int GetUpperBound(int dimension)
+        {
+            return GetLength(dimension) - 1;
+        }
+
+        public static Array CreateInstance(Type type, int length)
+        {
+            return (Array)Java.Lang.Reflect.Array.NewInstance(type, length);
+        }
+        /// <summary>
+        /// multidimensional arrays are not really supported.
+        /// </summary>
+        public static Array CreateInstance(Type type, int[] lengths)
+        {
+            return (Array)Java.Lang.Reflect.Array.NewInstance(type, lengths);
+        }
     }
 }
 

@@ -26,6 +26,7 @@ namespace System.Text.RegularExpressions
 	    private PatternConverter patternConverter;
 	    private RegexOptions options;
 	    private TimeSpan matchTimeout;
+        
 
 	    public Regex()
 	    {
@@ -54,6 +55,8 @@ namespace System.Text.RegularExpressions
 	    {
 	        get { return patternConverter; }
 	    }
+
+        public RegexOptions Options { get { return options; } }
 
 	    /// <summary>
         /// Searches the specified input string for the first occurrence of the regular expression specified in the Regex constructor.
@@ -154,6 +157,17 @@ namespace System.Text.RegularExpressions
             builder.Append(input.Substring(index));
 
             return input;
+        }
+
+        public string Replace(string input, string replacement)
+        {
+            if (input == null) throw new ArgumentNullException("input");
+            if (replacement == null) throw new ArgumentNullException("replacement");
+
+            var pattern = Pattern.Compile(patternConverter.JavaPattern, JavaFlags(options));
+            var matcher = pattern.Matcher(input);
+
+            return matcher.ReplaceAll(replacement);
         }
 
         public int GroupNumberFromName(string name)

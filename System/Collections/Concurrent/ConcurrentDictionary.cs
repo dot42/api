@@ -158,7 +158,7 @@ namespace System.Collections.Concurrent
         {
             foreach (var entry in new IterableWrapper<IMap_IEntry<TKey, TValue>>(map.EntrySet()))
             {
-                yield return new KeyValuePair<TKey, TValue>(entry.GetKey(), entry.GetValue());
+                yield return new KeyValuePair<TKey, TValue>(entry.Key, entry.Value);
             }
         }
 

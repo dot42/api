@@ -28,9 +28,9 @@ namespace Android.App
                          "(Ljava/lang/Runnable;Landroid/app/UiAutomation$AccessibilityEventFilter;J)Landroid/view/accessibility/AccessibilityEvent;",
                          AccessFlags = 1,
                          IgnoreFromJava = true)]                         
-        public global::Android.View.Accessibility.AccessibilityEvent ExecuteAndWaitForEvent(global::System.Action command, global::Android.App.UiAutomation.IAccessibilityEventFilter filter, long timeoutMillis) /* MethodBuilder.Create */
+        public global::Android.Views.Accessibility.AccessibilityEvent ExecuteAndWaitForEvent(global::System.Action command, global::Android.App.UiAutomation.IAccessibilityEventFilter filter, long timeoutMillis) /* MethodBuilder.Create */
         {
-            return default(global::Android.View.Accessibility.AccessibilityEvent);
+            return default(global::Android.Views.Accessibility.AccessibilityEvent);
         }
     }
 #endif

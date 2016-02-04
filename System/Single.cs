@@ -13,7 +13,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -36,20 +39,44 @@ namespace System
             return Parse(s);
         }
 
+        public static bool TryParse(string s, out float result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0f;
+                return false;
+            }
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(FloatValue(), provider);
+            return NumberFormatter.Format(this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, FloatValue(), null);
+            return NumberFormatter.Format(format, this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, FloatValue(), provider);
+            return NumberFormatter.Format(format, this, provider);
         }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(float other)
+        {
+            return other == this;
+        }
+
     }
 }
 

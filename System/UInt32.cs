@@ -13,8 +13,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
 using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -43,21 +46,113 @@ namespace System
             return Parse(s);
         }
 
+        public static uint Parse(string s, NumberStyles style, IFormatProvider provider)
+        {
+            long value;
+
+            if ((style & NumberStyles.AllowHexSpecifier) != 0)
+                value = long.Parse(s, 16);
+            else
+                value = long.Parse(s);
+
+            if ((value < MinValue) || (value > maxValue))
+                throw new OverflowException(string.Format("Value {0} should not be less than {1} and not larger than {2}.", value.ToString(), MinValue, maxValue));
+
+            return (uint)value;
+        }
+
+        public static uint Parse(string s, NumberStyles style)
+        {
+            return Parse(s, style, null);
+        }
+
+        public static bool TryParse(string s, out uint result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
+        }
+
+        public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out uint result)
+        {
+            try
+            {
+                result = Parse(s, style);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
+        }
+
         [DexImport("intValue", "()I", AccessFlags = 1)]
         internal int IntValue() /* Keep internal to avoid verify error */ 
         {
             return default(int);
         }
 
-        public string ToString(IFormatProvider provider)
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public new string ToString()
         {
-            return long.ToString(((long)IntValue()) & 0xFFFFFFFFL);
+            return long.ToString((long)this);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public string ToString(IFormatProvider provider)
+        {
+            return long.ToString((long)this);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            return NumberFormatter.Format(format, ((long)IntValue()) & 0xFFFFFFFFL, null);
+            return NumberFormatter.Format(format, (long)this, null);
         }
+
+        public int CompareTo(uint o)
+        {
+            return this < o ? -1
+                :  this > o ? 1
+                :  0;
+        }
+
+        [Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+        public bool Equals(object @object) /* MethodBuilder.Create */
+        {
+            return default(bool);
+        }
+
+        [Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+        public int GetHashCode() /* MethodBuilder.Create */
+        {
+            return default(int);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(uint other)
+        {
+            return other == this;
+        }
+
     }
 }
 

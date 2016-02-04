@@ -13,60 +13,55 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42.Internal;
 using Java.Lang.Reflect;
 
 namespace System.Reflection
 {
-    partial class ConstructorInfo 
+    public class ConstructorInfo : MethodBase
     {
-        /// <summary>
-        /// Gets the type that declares this member.
-        /// </summary>
-        public Type DeclaringType
+        private readonly Constructor _ctor;
+
+        public Constructor JavaConstructor { get { return _ctor; } }
+
+        public ConstructorInfo(Constructor ctor) : base(ctor)
         {
-            [Dot42.DexImport("getDeclaringClass", "()Ljava/lang/Class;")]
-            get { return GetDeclaringClass(); }
+            _ctor = ctor;
         }
 
-        /*
-        /// <summary>
-        /// Fix return type
-        /// </summary>
-        [Dot42.DexImport("getTypeParameters", "()[Ljava/lang/reflect/TypeVariable;")]
-        global::Java.Lang.Reflect.ITypeVariable<object>[] IGenericDeclaration.GetTypeParameters()
+        public override Type DeclaringType { get { return _ctor.DeclaringClass; } }
+        public override string Name { get { return _ctor.Name; } }
+        public override MemberTypes MemberType { get { return MemberTypes.Constructor; } }
+
+        public override bool ContainsGenericParameters { get { return _ctor.GenericParameterTypes.Length > 0; } }
+
+        protected override int Modifiers { get { return _ctor.Modifiers; } }
+
+        protected override Type[] JavaGetParameterTypes()
         {
-            return default(global::Java.Lang.Reflect.ITypeVariable<object>[]);
-        }*/
+            return _ctor.ParameterTypes;
+        }
 
-        /// <summary>
-        /// Is this an abstract method?
-        /// </summary>
-        public bool IsAbstract { get { return Modifier.IsAbstract(GetModifiers()); } }
+        public override string ToString()
+        {
+            return _ctor.DeclaringClass.JavaGetName() + "::" + _ctor.Name;
+        }
 
-        /// <summary>
-        /// Is this an final method?
-        /// </summary>
-        public bool IsFinal { get { return Modifier.IsFinal(GetModifiers()); } }
+        public virtual object Invoke(object[] args)
+        {
+            // .NET doesn't have accessibility semantics
+            if (!_ctor.IsAccessible) _ctor.IsAccessible = true;
 
-        /// <summary>
-        /// Is this an private method?
-        /// </summary>
-        public bool IsPrivate { get { return Modifier.IsPrivate(GetModifiers()); } }
+            return _ctor.NewInstance(args);
+        }
 
-        /// <summary>
-        /// Is this an public method?
-        /// </summary>
-        public bool IsPublic { get { return Modifier.IsPublic(GetModifiers()); } }
-
-        /// <summary>
-        /// Is this a static method?
-        /// </summary>
-        public bool IsStatic { get { return Modifier.IsStatic(GetModifiers()); } }
-
-        /// <summary>
-        /// Is this an virtual method?
-        /// </summary>
-        public bool IsVirtual { get { return !Modifier.IsFinal(GetModifiers()); } }
+        public override object Invoke(object instance, object[] args)
+        {
+            if (instance != null)
+                throw new InvalidOperationException("instance must be null");
+            return Invoke(args);
+        }
     }
 }
 

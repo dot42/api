@@ -14,11 +14,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Linq;
+using Dot42.Collections;
 using Java.Util;
 
 namespace System.Collections.Generic
 {
-	public class Stack<T>
+	public class Stack<T> : IJavaCollectionWrapper<T>
 	{
 	    private readonly ArrayList<T> list;
 
@@ -43,7 +44,7 @@ namespace System.Collections.Generic
         /// </summary>
 	    public virtual int Count
 	    {
-	        get { return list.Count; }
+	        get { return list.Size(); }
 	    }
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace System.Collections.Generic
         /// </summary>
         public virtual T Peek()
         {
-            return list[list.Count - 1];
+            return list[list.Size() - 1];
         }
 
         /// <summary>
@@ -67,7 +68,7 @@ namespace System.Collections.Generic
         /// </summary>
         public virtual T Pop()
         {
-            return list.Remove(list.Count - 1);
+            return list.Remove(list.Size() - 1);
         }
 
         /// <summary>
@@ -86,6 +87,8 @@ namespace System.Collections.Generic
         {
             return list.ToList().ToArray();
         }
+
+        Java.Util.ICollection<T> IJavaCollectionWrapper<T>.Collection { get { return list; } }
 	}
 }
 

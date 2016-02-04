@@ -76,7 +76,7 @@ namespace System.Xml
                 var simpleDateFormat = new SimpleDateFormat(ToJavaFormat(format), Locale.US);
                 var parsePosition = new ParsePosition(0);
                 var date = simpleDateFormat.Parse(s, parsePosition);
-                if (date != null && parsePosition.Index != 0) return DateTime.FromDate(date);
+                if (date != null && parsePosition.Index != 0) return DateTime.FromDate(date, DateTimeKind.Unspecified);
             }
 
             throw new ArgumentException(s + " cannot be parsed as DateTime");

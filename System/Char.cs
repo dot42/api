@@ -13,6 +13,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
+using Dot42;
+
 namespace System
 {
 	partial struct Char
@@ -70,7 +74,7 @@ namespace System
                 throw new ArgumentNullException("s");
             if (s.Length != 1)
                 throw new FormatException("Length not 1, but " + s.Length + " s=" + s);
-            return s.CharAt(0);
+            return s[0];
         }
 
         public static char ToLower(char ch)
@@ -92,6 +96,13 @@ namespace System
         {
             return char.ToUpperCase(ch);
         }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(char other)
+        {
+            return other == this;
+        }
+
     }
 }
 

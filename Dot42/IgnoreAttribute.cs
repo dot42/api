@@ -24,6 +24,13 @@ namespace Dot42
     [Ignore]
     public sealed class IgnoreAttribute : Attribute
     {
+        public IgnoreAttribute()
+        {
+        }
+
+        public IgnoreAttribute(string reason)
+        {
+        }
     }
 }
 

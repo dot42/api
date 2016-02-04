@@ -133,7 +133,7 @@ namespace System.Collections.Generic
         {
             foreach (var entry in new IterableWrapper<IMap_IEntry<TKey, TValue>>(map.EntrySet()))
             {
-                yield return new KeyValuePair<TKey, TValue>(entry.GetKey(), entry.GetValue());
+                yield return new KeyValuePair<TKey, TValue>(entry.Key, entry.Value);
             }
         }
 
@@ -224,7 +224,7 @@ namespace System.Collections.Generic
 
             public void CopyTo(TKey[] array, int index)
             {
-                throw new NotImplementedException("System.Collections.Generic.SortedDictionary<,>.KeyCollection.CopyTo");
+                Dot42.Collections.Collections.CopyTo(keys, array, index);
             }
 
 
@@ -240,7 +240,7 @@ namespace System.Collections.Generic
 
             public void CopyTo(Array array, int index)
             {
-                throw new NotImplementedException("System.Collections.Generic.SortedDictionary<,>.KeyCollection.CopyTo");
+                Dot42.Collections.Collections.CopyTo(keys, array, index);
             }
         }
 
@@ -306,7 +306,7 @@ namespace System.Collections.Generic
 
             public void CopyTo(TValue[] array, int index)
             {
-                throw new NotImplementedException("System.Collections.Generic.SortedDictionary<,>.ValueCollection.CopyTo");
+                Dot42.Collections.Collections.CopyTo(values, array, index);
             }
 
             public bool IsSynchronized
@@ -321,7 +321,7 @@ namespace System.Collections.Generic
 
             public void CopyTo(Array array, int index)
             {
-                throw new NotImplementedException("System.Collections.Generic.SortedDictionary<,>.ValueCollection.CopyTo");
+                Dot42.Collections.Collections.CopyTo(values, array, index);
             }
         }
     }

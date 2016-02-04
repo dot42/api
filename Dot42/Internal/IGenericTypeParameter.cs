@@ -20,6 +20,7 @@ namespace Dot42.Internal
     /// <summary>
     /// Interface for annotation that indicates a method parameter as the generic type information for the class.
     /// </summary>
+    [Include]
     internal interface IGenericTypeParameter : IAnnotation
     {
     }

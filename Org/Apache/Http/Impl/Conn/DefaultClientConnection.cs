@@ -19,10 +19,10 @@ namespace Org.Apache.Http.Impl.Conn
 {
 	partial class DefaultClientConnection
 	{
-        global::Java.Net.Socket IOperatedClientConnection.GetSocket()
-        {
-            return default(global::Java.Net.Socket);
-        }
+        //global::Java.Net.Socket IOperatedClientConnection.GetSocket()
+        //{
+        //    return default(global::Java.Net.Socket);
+        //}
 	}
 }
 

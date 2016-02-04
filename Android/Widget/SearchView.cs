@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 using Dot42;
 
 namespace Android.Widget
@@ -137,7 +137,7 @@ namespace Android.Widget
     /// </summary>
     internal sealed class SearchViewListener : SearchView.IOnCloseListener, SearchView.IOnQueryTextListener, SearchView.IOnSuggestionListener
     {
-        internal readonly Dot42.EventHandlerListener<View.ViewEventArgs> Close = new EventHandlerListener<ViewEventArgs>();
+        internal readonly Dot42.EventHandlerListener<Views.ViewEventArgs> Close = new EventHandlerListener<ViewEventArgs>();
         internal readonly Dot42.EventHandlerListener<QueryTextChangeEventArgs> QueryTextChange = new EventHandlerListener<QueryTextChangeEventArgs>();
         internal readonly Dot42.EventHandlerListener<QueryTextSubmitEventArgs> QueryTextSubmit = new EventHandlerListener<QueryTextSubmitEventArgs>();
         internal readonly Dot42.EventHandlerListener<SuggestionEventArgs> SuggestionClick = new EventHandlerListener<SuggestionEventArgs>();

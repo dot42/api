@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Globalization;
 using System.Text;
 
 namespace Dot42.Internal
@@ -23,46 +24,127 @@ namespace Dot42.Internal
         private readonly StringBuilder result;
         private readonly IFormatProvider provider;
         private readonly string format;
-        private readonly object[] args;
+        private readonly int numberOfArguments;
         private int ptr;
         int n, width;
         bool left_align;
         string arg_format;
 
+        private readonly object[] args;
+        private readonly object arg0, arg1, arg2;
 
-        /// <summary>
-        /// Default ctor
-        /// </summary>
-        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, params object[] args)
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object[] args)
         {
-            this.result = result;
-            this.provider = provider;
-            this.format = format;
-            this.args = args;
             if (format == null)
                 throw new ArgumentNullException("format");
             if (args == null)
                 throw new ArgumentNullException("args");
+            
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.args = args;
+            this.numberOfArguments = args.Length;
 
-            if (this.result == null)
+            if (result == null)
             {
-                /* Try to approximate the size of result to avoid reallocations */
+                // Try to approximate the size of result to avoid reallocations
                 int i, len;
 
                 len = 0;
-                for (i = 0; i < args.Length; ++i)
+                var argLength = args.Length;
+                for (i = 0; i < argLength; ++i)
                 {
-                    string s = args[i] as string;
+                    string s = GetArg(i) as string;
                     if (s != null)
                         len += s.Length;
                     else
                         break;
                 }
-                if (i == args.Length)
-                    this.result = new StringBuilder(len + format.Length);
-                else
-                    this.result = new StringBuilder();
+                this.result = new StringBuilder(len + format.Length);
             }
+        }
+
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object arg0)
+        {
+            if (format == null)
+                throw new ArgumentNullException("format");
+
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.arg0 = arg0;
+            this.numberOfArguments = 1 ;
+
+            if (result == null)
+            {
+                // Try to approximate the size of result to avoid reallocations
+                int len = format.Length;
+                if (arg0 is string)
+                    len += ((string) arg0).Length;
+                this.result = new StringBuilder(len + format.Length);
+            }
+        }
+
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object arg0, object arg1)
+        {
+            if (format == null)
+                throw new ArgumentNullException("format");
+
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+            this.numberOfArguments = 2;
+
+            if (result == null)
+            {
+                // Try to approximate the size of result to avoid reallocations
+                int len = format.Length;
+                if (arg0 is string)
+                    len += ((string)arg0).Length;
+                if (arg1 is string)
+                    len += ((string)arg1).Length;
+                this.result = new StringBuilder(len + format.Length);
+            }
+        }
+
+        internal FormatHelper(StringBuilder result, IFormatProvider provider, string format, object arg0, object arg1, object arg2)
+        {
+            if (format == null)
+                throw new ArgumentNullException("format");
+
+            this.result = result;
+            this.provider = provider;
+            this.format = format;
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+            this.arg2 = arg2;
+            this.numberOfArguments = 3;
+
+            if (result == null)
+            {
+                // Try to approximate the size of result to avoid reallocations
+                int len = format.Length;
+                if (arg0 is string)
+                    len += ((string)arg0).Length;
+                if (arg1 is string)
+                    len += ((string)arg1).Length;
+                if (arg2 is string)
+                    len += ((string)arg2).Length;
+                this.result = new StringBuilder(len + format.Length);
+            }
+        }
+
+        [Inline]
+        public object GetArg(int idx)
+        {
+            if (args != null)
+                return args[idx];
+            return idx == 0 ? arg0 
+                 : idx == 1 ? arg1 
+                 : arg2 ;
         }
 
         /// <summary>
@@ -92,29 +174,42 @@ namespace Dot42.Internal
                     }
 
                     // parse specifier
-
                     ParseFormatSpecifier(format);
-                    if (n >= args.Length)
+
+                    if (n >= numberOfArguments)
                         throw new FormatException("Index (zero based) must be greater than or equal to zero and less than the size of the argument list.");
 
                     // format argument
-
-                    object arg = args[n];
+                    object arg = GetArg(n);
 
                     string str;
                     if (arg == null)
+                    {
                         str = string.Empty;
+                    }
                     else if (formatter != null)
+                    {
                         str = formatter.Format(arg_format, arg, provider);
+                    }
                     else
-                        str = null;
+                    {
+                        if (provider == null)
+                        {
+                            // take the allocation reducing shortcut.
+                            str = CultureInfo.DefaultCustomFormatter.Format(arg_format, arg, provider);
+                        }
+                        else
+                        {
+                            var formattable = arg as IFormattable;
+                            str = formattable != null
+                                ? formattable.ToString(arg_format, provider)
+                                : arg.ToString();
+                        }
+                    }
 
                     if (str == null)
                     {
-                        if (arg is IFormattable)
-                            str = ((IFormattable)arg).ToString(arg_format, provider);
-                        else
-                            str = arg.ToString();
+                        str = String.Empty;
                     }
 
                     // pad formatted string and append to result
@@ -237,6 +332,120 @@ namespace Dot42.Internal
 
             ptr = p;
             return n;
+        }
+
+        internal static int ParseDecimal(string str, int startIndex, int notIncludedEndIndex)
+        {
+            if (startIndex == notIncludedEndIndex)
+                return -1;
+
+            int n = 0;
+            while (startIndex < notIncludedEndIndex)
+            {
+                char c = str[startIndex];
+                if (c < '0' || c > '9')
+                    return -1;
+
+                n = n * 10 + c - '0';
+                ++startIndex;
+            }
+
+            return n;
+        }
+
+        internal static void Append(StringBuilder sb, int number, int minDigits)
+        {
+            switch (minDigits)
+            {
+                case 0:
+                case 1:
+                    break;
+                case 2:
+                    if (number < 10) goto pad1;
+                    break;
+                case 3:
+                    if (number < 10)  goto pad2;
+                    if (number < 100) goto pad1;
+                    break;
+                case 4:
+                    if (number < 10)   goto pad3;
+                    if (number < 100)  goto pad2;
+                    if (number < 1000) goto pad1;
+                    break;
+                case 5:
+                    if (number < 10)    goto pad4;
+                    if (number < 100)   goto pad3;
+                    if (number < 1000)  goto pad2;
+                    if (number < 10000) goto pad1;
+                    break;
+                case 6:
+                    if (number < 10)     goto pad5;
+                    if (number < 100)    goto pad4;
+                    if (number < 1000)   goto pad3;
+                    if (number < 10000)  goto pad2;
+                    if (number < 100000) goto pad1;
+                    break;
+                case 7:
+                    if (number < 10)      goto pad6;
+                    if (number < 100)     goto pad5;
+                    if (number < 1000)    goto pad4;
+                    if (number < 10000)   goto pad3;
+                    if (number < 100000)  goto pad2;
+                    if (number < 1000000) goto pad1;
+                    break;
+                default:
+                    // fallback: append number first
+                    int sbLength = sb.Length;
+                    sb.Append(number);
+                    int numDigits = sb.Length - sbLength;
+
+                    // now insert padding zeroes, if required.
+                    int add = minDigits - numDigits;
+                    if (add > 0)
+                    {
+                        string zeros = new string('0', add);
+                        sb.Insert(sbLength, zeros);
+                    }
+                    return;
+            }
+
+            sb.Append(number);
+            return;
+
+            pad1:
+            sb.Append('0');
+            sb.Append(number);
+            return;
+
+            pad2:
+            sb.Append("00");
+            sb.Append(number);
+            return;
+
+            pad3:
+            sb.Append("000");
+            sb.Append(number);
+            return;
+
+            pad4:
+            sb.Append("0000");
+            sb.Append(number);
+            return;
+
+            pad5:
+            sb.Append("00000");
+            sb.Append(number);
+            return;
+
+            pad6:
+            sb.Append("000000");
+            sb.Append(number);
+            return;
+
+            //pad7:
+            //sb.Append("0000000");
+            //sb.Append(number);
+            //return;
         }
     }
 }

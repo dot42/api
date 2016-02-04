@@ -13,20 +13,24 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
 using System.Text;
+using Dot42;
+using Dot42.Internal;
 
 namespace System
 {
     // Summary:
     //     Represents a time interval.
     [Serializable]
-    public struct TimeSpan : IComparable, IComparable<TimeSpan>, IEquatable<TimeSpan> //, IFormattable
+    public struct TimeSpan : IComparable, IComparable<TimeSpan>, IEquatable<TimeSpan>, IFormattable
     {
         public const long TicksPerDay = 864000000000;
         public const long TicksPerHour = 36000000000;
-        public const long TicksPerMillisecond = 10000;
-        public const long TicksPerMinute = 600000000;
-        public const long TicksPerSecond = 10000000;
+        public const long TicksPerMillisecond = 10000L;
+        public const long TicksPerMinute = 600000000L;
+        public const long TicksPerSecond = 10000000L;
 
         public static readonly TimeSpan MaxValue = new TimeSpan(long.MaxValue);
         public static readonly TimeSpan MinValue = new TimeSpan(long.MinValue);
@@ -310,6 +314,9 @@ namespace System
         // Returns:
         //     The day component of this instance. The return value can be positive or negative.
         public int Days { get { return (int)(ticks / TicksPerDay); } }
+
+        [Inline, DexNative] 
+        private static int GetDays(long ticks) { return (int)(ticks / TicksPerDay); }
         //
         // Summary:
         //     Gets the hours component of the time interval represented by the current
@@ -319,6 +326,9 @@ namespace System
         //     The hour component of the current System.TimeSpan structure. The return value
         //     ranges from -23 through 23.
         public int Hours { get { return (int)(ticks % TicksPerDay / TicksPerHour); } }
+
+        [Inline,DexNative]
+        private static int GetHours(long ticks) { return (int)(ticks % TicksPerDay / TicksPerHour); }
         //
         // Summary:
         //     Gets the milliseconds component of the time interval represented by the current
@@ -328,6 +338,7 @@ namespace System
         //     The millisecond component of the current System.TimeSpan structure. The return
         //     value ranges from -999 through 999.
         public int Milliseconds { get { return (int)(ticks % TicksPerSecond / TicksPerMillisecond); } }
+
         //
         // Summary:
         //     Gets the minutes component of the time interval represented by the current
@@ -337,6 +348,9 @@ namespace System
         //     The minute component of the current System.TimeSpan structure. The return
         //     value ranges from -59 through 59.
         public int Minutes { get { return (int)(ticks % TicksPerHour / TicksPerMinute); } }
+
+        [Inline, DexNative]
+        public static int GetMinutes(long ticks) { return (int)(ticks % TicksPerHour / TicksPerMinute); }
         //
         // Summary:
         //     Gets the seconds component of the time interval represented by the current
@@ -346,6 +360,9 @@ namespace System
         //     The second component of the current System.TimeSpan structure. The return
         //     value ranges from -59 through 59.
         public int Seconds { get { return (int)(ticks % TicksPerMinute / TicksPerSecond); } }
+        
+        [Inline, DexNative]
+        public static int GetSeconds(long ticks) { return (int)(ticks % TicksPerMinute / TicksPerSecond); }
         //
         // Summary:
         //     Gets the number of ticks that represent the value of the current System.TimeSpan
@@ -967,31 +984,170 @@ namespace System
         //
         // Returns:
         //     The string representation of the current System.TimeSpan value.
+        private const char Null = '\0';
+
         public override string ToString()
+        {
+            return ToStandardString(Null, null);
+        }
+
+        public string ToString(IFormatProvider formatProvider)
+        {
+            return ToStandardString(Null, formatProvider);
+        }
+
+        private string ToStandardString(char nullOrG, IFormatProvider formatProvider)
         {
             StringBuilder sb = new StringBuilder(14);
 
-            if (ticks < 0)
+            long negTicks = this.ticks;
+            if (negTicks < 0)
+            {
                 sb.Append('-');
-
-            if (Days != 0)
+            }
+            else
             {
-                sb.Append(Math.Abs(Days));
-                sb.Append('.');
+                // we work with negative values, to avoid special handling of MinValue
+                negTicks = -negTicks;
             }
 
-            sb.Append(Math.Abs(Hours).ToString("D2"));
-            sb.Append(':');
-            sb.Append(Math.Abs(Minutes).ToString("D2"));
-            sb.Append(':');
-            sb.Append(Math.Abs(Seconds).ToString("D2"));
+            int days = -GetDays(negTicks);
 
-            int fractional = (int)Math.Abs(ticks % TicksPerSecond);
-            if (fractional != 0)
+            if (days != 0 || nullOrG == 'G')
             {
-                sb.Append('.');
-                sb.Append(fractional.ToString("D7"));
+                sb.Append(days);
+                sb.Append(nullOrG == Null ? '.' : ':');
             }
+
+            int hours = -GetHours(negTicks);
+            if (hours < 10) sb.Append("0");
+            sb.Append(hours);
+            sb.Append(':');
+
+            int minutes = -GetMinutes(negTicks);
+            if (minutes < 10) sb.Append("0");
+            sb.Append(minutes);
+            sb.Append(':');
+
+            int seconds = -GetSeconds(negTicks);
+            if (seconds < 10) sb.Append("0");
+            sb.Append(seconds);
+
+            int fractional = (int)(negTicks % TicksPerSecond);
+            if (fractional != 0 || nullOrG == 'G')
+            {
+                if (nullOrG == Null || formatProvider == CultureInfo.InvariantCulture)
+                {
+                    sb.Append('.');
+                }
+                else
+                {
+                    var ni = formatProvider.ToNumberFormatInfo();
+                    sb.Append(ni.NumberDecimalSeparator);
+                }
+
+                AppendFractional(sb, nullOrG, -fractional, 7);
+            }
+
+            return sb.ToString();
+        }
+
+        private static void AppendFractional(StringBuilder sb, char nullOrG, int fractional, int maxDigits)
+        {
+            int currentLength = sb.Length;
+            
+            // append the number.
+            FormatHelper.Append(sb, fractional, 7);
+            int fracLength = sb.Length - currentLength;
+
+            // trim to requested length.
+            if (fracLength > maxDigits) 
+                sb.Remove(currentLength + maxDigits, fracLength - maxDigits);
+
+            // auto-trim trialing zeroes if requested.
+            if (nullOrG == 'g')
+            {
+                // remove zeroes at the end.
+                int len = 0, idx;
+                for (idx = sb.Length - 1; idx > currentLength + 1; --idx, ++len)
+                    if (sb[idx] != '0') break;
+                if (len != 0) sb.Remove(idx, len);
+            }
+        }
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            bool isNullOEmpty = string.IsNullOrEmpty(format);
+
+            if (isNullOEmpty || format == "g" || format == "G")
+                return ToStandardString(isNullOEmpty ? Null : format[0], formatProvider);
+
+            if (format == "c")
+            {
+                return ToStandardString(Null, CultureInfo.InvariantCulture);
+            }
+
+            var negTicks = ticks;
+            if (negTicks > 0) // we work with negative values, to avoid special handling of MinValue
+                negTicks = -negTicks;
+
+            StringBuilder sb = new StringBuilder(format.Length + 5);
+
+            DateTimeFormatting.TokenizeFormatString(format, (start, length, isQuote) =>
+            {
+                if (isQuote)
+                {
+                    sb.Append(format, start, length);
+                }
+                else switch (format[start])
+                {
+                    //if (val[0] == '-')
+                    //{
+                    //    if (ts.ticks < 0)
+                    //        sb.Append('-');
+                    //    return;
+                    //}
+
+                    case 'd':
+                    {
+                        FormatHelper.Append(sb, -GetDays(negTicks), length);
+                        return;
+                    }
+                    case 'h':
+                    {
+                        if (length > 2) throw new FormatException();
+                        FormatHelper.Append(sb, -GetHours(negTicks), length);
+                        return;
+                    }
+                    case 'm':
+                    {
+                        if (length > 2) throw new FormatException();
+                        FormatHelper.Append(sb, -GetMinutes(negTicks), length);
+                        return;
+                    }
+                    case 's':
+                    {
+                        if (length > 2) throw new FormatException();
+                        FormatHelper.Append(sb, -GetSeconds(negTicks), length);
+                        return;
+                    }
+                    case 'f':
+                    {
+                        int fractional = -(int)(negTicks % TicksPerSecond);
+                        AppendFractional(sb, Null, fractional, length);
+                        return;
+                    }
+                    case 'F':
+                    {
+                        int fractional = -(int)(negTicks % TicksPerSecond);
+                        if (fractional != 0)
+                            AppendFractional(sb, Null, fractional, length);
+                        return;
+                    }
+                    default:
+                        throw new FormatException();
+                }
+            });
 
             return sb.ToString();
         }

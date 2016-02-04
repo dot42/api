@@ -29,13 +29,14 @@ namespace Dot42.Internal
         public static bool IsVirtualFormattable(object value)
         {
             if (value == null) return false;
-            var type = value.GetType();
-            return (type == TypeHelper.ByteType()) ||
-                   (type == TypeHelper.ShortType()) ||
+            var type = value.JavaGetClass();
+            return (type == TypeHelper.ByteType())    ||
+                   (type == TypeHelper.ShortType())   ||
                    (type == TypeHelper.IntegerType()) ||
-                   (type == TypeHelper.LongType()) ||
-                   (type == TypeHelper.FloatType()) ||
-                   (type == TypeHelper.DoubleType());
+                   (type == TypeHelper.LongType())    ||
+                   (type == TypeHelper.FloatType())   ||
+                   (type == TypeHelper.DoubleType()   ||
+                   (type == typeof(Type)));
         }
 
         /// <summary>
@@ -45,13 +46,14 @@ namespace Dot42.Internal
         public static IFormattable AsFormattable(object value)
         {
             if (value == null) return null;
-            var type = value.GetType();
+            var type = value.JavaGetClass();
             if (type == TypeHelper.ByteType()) return new FormattableByte((byte)value);
             if (type == TypeHelper.ShortType()) return new FormattableShort((short) value);
             if (type == TypeHelper.IntegerType()) return new FormattableInt((int) value);
             if (type == TypeHelper.LongType()) return new FormattableLong((long) value);
             if (type == TypeHelper.FloatType()) return new FormattableFloat((float) value);
             if (type == TypeHelper.DoubleType()) return new FormattableDouble((double) value);
+            if (type == typeof(Type)) return new FormattableType((Type)value);
             return null;
         }
 
@@ -65,6 +67,16 @@ namespace Dot42.Internal
             var formattable = value as IFormattable;
             if (formattable == null) throw new InvalidCastException();
             return formattable;
+        }
+
+        /// <summary>
+        /// plain 'as IFormattable'  without any virtual formattables.
+        /// </summary>
+        [Include(TypeCondition = typeof(IFormattable))]
+        [DexNative]
+        public static IFormattable AsNativeIFormattable(object value)
+        {
+            return null;
         }
 
         /// <summary>
@@ -196,6 +208,28 @@ namespace Dot42.Internal
             public string ToString(string format, IFormatProvider formatProvider)
             {
                 return value.ToString(format, formatProvider);
+            }
+        }
+
+        /// <summary>
+        /// Formattable for Type
+        /// </summary>
+        [Include(TypeCondition = typeof(IFormattable))]
+        private sealed class FormattableType : IFormattable
+        {
+            private readonly Type value;
+
+            /// <summary>
+            /// Default ctor
+            /// </summary>
+            public FormattableType(Type value)
+            {
+                this.value = value;
+            }
+
+            public string ToString(string format, IFormatProvider formatProvider)
+            {
+                return value.FullName;
             }
         }
     }

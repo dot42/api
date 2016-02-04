@@ -17,16 +17,16 @@ using Dot42;
 
 namespace Java.Util
 {
-	partial interface ICollection<E>
-	{
-	    /// <summary>
-	    /// Gets the number of elements.
-	    /// </summary>
-	    int Count
-	    {
-            [DexImport("size", "()I", IgnoreFromJava = true)]
-            get;
-	    }
-	}
+    //partial interface ICollection<E>
+    //{
+    //    /// <summary>
+    //    /// Gets the number of elements.
+    //    /// </summary>
+    //    int Count
+    //    {
+    //        [DexImport("size", "()I", IgnoreFromJava = true)]
+    //        get;
+    //    }
+    //}
 }
 

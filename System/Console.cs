@@ -15,7 +15,8 @@
 // limitations under the License.
 using System.Diagnostics;
 using System.IO;
-using Java.Io;
+using Java.IO;
+using JetBrains.Annotations;
 using JSystem = Java.Lang.System;
 
 namespace System
@@ -33,7 +34,13 @@ namespace System
 
         public static void WriteLine(object obj)
         {
-            WriteLine(obj.ToString());
+            WriteLine("" + obj);
+        }
+
+        [StringFormatMethod("format")]
+        public static void WriteLine(string format, params object[] parameter)
+        {
+            WriteLine(string.Format(format, parameter));
         }
 
 	    public static void WriteLine(string message)
@@ -48,7 +55,7 @@ namespace System
 	        else
 #endif
 	        {
-	            Debug.WriteLine(message);
+	            Debug.WriteLine(message??"");
 	        }
 	    }
 

@@ -34,7 +34,7 @@ namespace System.Diagnostics
             value = value ?? Null;
             Log.D(Tag, value.ToString());
         }
-
+#if false
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void Write(object value, string category)
@@ -42,21 +42,21 @@ namespace System.Diagnostics
             value = value ?? Null;
             Log.D(category, value.ToString());
         }
-
+#endif
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void Write(string message)
         {
             Log.D(Tag, message);
         }
-
+#if false
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void Write(string message, string category)
         {
             Log.D(category, message);
         }
-
+#endif
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void WriteLine(object value)
@@ -64,7 +64,7 @@ namespace System.Diagnostics
             value = value ?? Null;
             Log.D(Tag, value.ToString());
         }
-
+#if false
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void WriteLine(object value, string category)
@@ -72,21 +72,21 @@ namespace System.Diagnostics
             value = value ?? Null;
             Log.D(category, value.ToString());
         }
-
+#endif
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void WriteLine(string message)
         {
             Log.D(Tag, message);
         }
-
+#if false
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void WriteLine(string message, string category)
         {
             Log.D(category, message);
         }
-
+#endif
         [ConditionalAttribute("DEBUG")]
         [Inline]
         public static void WriteLine(string format, params object[] args)

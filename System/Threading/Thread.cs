@@ -33,7 +33,7 @@ namespace System.Threading
         /// </summary>
 	    public int ManagedThreadId
 	    {
-            get { return (int) this.GetId(); }
+            get { return (int) this.Id; }
 	    }
 
         /// <summary>
@@ -43,6 +43,11 @@ namespace System.Threading
         public static void Sleep(int millisecondsTimeout)
         {
             Sleep((long) millisecondsTimeout);
+        }
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.Synchronized)]
+        public static void MemoryBarrier()
+        {
         }
 	}
 }

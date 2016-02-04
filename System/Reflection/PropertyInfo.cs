@@ -13,7 +13,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Dot42.Internal;
+using Dot42.Internal.Generics;
 
 namespace System.Reflection
 {
@@ -22,26 +25,35 @@ namespace System.Reflection
     /// </summary>
     public class PropertyInfo : MemberInfo, IAttributesProvider
     {
+        private static readonly ParameterInfo[] EmptyParameterInfo = new ParameterInfo[0];
+
         private readonly string name;
         private readonly MethodInfo getter;
         private readonly MethodInfo setter;
-        private readonly IAttributes attributes;
+        private readonly IAttribute[] attributes;
+        private readonly Type declaringType;
+        private Type propertyType;
 
         /// <summary>
         /// Default ctor
         /// </summary>
-        internal PropertyInfo(string name, MethodInfo getter, MethodInfo setter, IAttributes attributes)
+        internal PropertyInfo(Type declaringType, string name, MethodInfo getter, MethodInfo setter, IAttribute[] attributes)
         {
+            this.declaringType = declaringType;
             this.name = name;
             this.getter = getter;
             this.setter = setter;
             this.attributes = attributes;
         }
 
+        public override Type DeclaringType { get { return declaringType; } }
+
         /// <summary>
         /// Gets the name of this property
         /// </summary>
-        public virtual string Name { get { return name; } }
+        public override string Name { get { return name; } }
+
+        public override MemberTypes MemberType { get { return MemberTypes.Property; } }
 
         /// <summary>
         /// Gets this property be read from?
@@ -56,12 +68,26 @@ namespace System.Reflection
         /// <summary>
         /// Gets the get accessor method.
         /// </summary>
+        public virtual MethodInfo GetGetMethod()  { return getter; }
         public virtual MethodInfo GetMethod { get { return getter; } }
+
+        public virtual MethodInfo GetGetMethod(bool nonPublic) { return getter!=null&&getter.IsPublic?getter:null; }
 
         /// <summary>
         /// Gets the set accessor method.
         /// </summary>
+        public virtual MethodInfo GetSetMethod() { return setter; }
         public virtual MethodInfo SetMethod { get { return setter; } }
+        public virtual MethodInfo GetSetMethod(bool nonPublic) { return setter != null && setter.IsPublic ? getter : null; }
+
+        /// <summary>
+        /// this is not supported and always returns an empty array.
+        /// </summary>
+        [NotImplemented]
+        public ParameterInfo[] GetIndexParameters()
+        {
+            return EmptyParameterInfo;
+        }
 
         /// <summary>
         /// Gets the type of this property
@@ -70,14 +96,30 @@ namespace System.Reflection
         {
             get
             {
-                if (getter != null)
-                    return getter.ReturnType;
-                if (setter != null)
+                if (propertyType == null)
                 {
-                    var paramTypes = setter.ParameterTypes;
-                    return paramTypes[paramTypes.Length - 1];
+                    if (getter != null)
+                    {
+                        propertyType = GenericsReflection.GetMemberType(getter.ReturnType, DeclaringType, getter.JavaMethod);
+                    }
+                    else if (setter != null)
+                    {
+                        var paramType = setter.JavaMethod.ParameterTypes.Last();
+                        var genericInfo = (IGenericDefinition)setter.JavaMethod.ParameterAnnotations
+                                                                .Last()
+                                                                .FirstOrDefault(x => x.AnnotationType() == typeof (IGenericDefinition));
+                        
+                        if (genericInfo != null)
+                        {
+                            propertyType = GenericsReflection.ToGenericInstanceType(paramType, DeclaringType, genericInfo);
+                        }
+                        else
+                        {
+                            propertyType = paramType;
+                        }
+                    }
                 }
-                throw new NotSupportedException("PropertyType");
+                return propertyType;
             }
         }
 
@@ -86,9 +128,38 @@ namespace System.Reflection
         /// </summary>
         public object GetValue(object instance)
         {
-            if (getter != null)
-                return getter.Invoke(instance);
-            return null;
+            if (getter == null)
+                throw new InvalidOperationException("property has no getter");
+            
+            return getter.Invoke(instance, null);
+        }
+
+        /// <summary>
+        /// Gets a value of the property for a given instance.
+        /// </summary>
+        public object GetValue(object instance, object[] index)
+        {
+            if (index != null && index.Length > 0)
+                throw new ArgumentException("index");
+            if (getter == null)
+                throw new InvalidOperationException("property has no getter");
+
+            return getter.Invoke(instance,null);
+        }
+
+        /// <summary>
+        /// Sets a value of the property for a given instance.
+        /// </summary>
+        public void SetValue(object instance, object value, object[] index)
+        {
+            if(index != null && index.Length > 0)
+                throw new ArgumentException("index");
+            if (setter == null)
+                throw new InvalidOperationException("property has no setter");
+
+            value = ConvertParameterIfRequired(PropertyType, value);
+
+            setter.Invoke(instance, new [] {value});
         }
 
         /// <summary>
@@ -96,8 +167,31 @@ namespace System.Reflection
         /// </summary>
         public void SetValue(object instance, object value)
         {
-            if (setter != null)
-                setter.Invoke(instance, value);
+            if (setter == null)
+                throw new ArgumentException("property has no setter");
+
+            value = ConvertParameterIfRequired(PropertyType, value);
+            setter.Invoke(instance, new[] { value });
+        }
+
+        public override object[] GetCustomAttributes(bool inherit)
+        {
+            return CustomAttributeProvider.GetCustomAttributes(this, inherit);
+        }
+
+        public override object[] GetCustomAttributes(Type attributeType, bool inherit)
+        {
+            return CustomAttributeProvider.GetCustomAttributes(this, attributeType, inherit);
+        }
+
+        public override bool IsDefined(Type attributeType, bool inherit)
+        {
+            return CustomAttributeProvider.IsDefined(this, attributeType, inherit);
+        }
+
+        public override string ToString()
+        {
+            return DeclaringType.Name + " " + Name;
         }
 
         /// <summary>
@@ -105,7 +199,28 @@ namespace System.Reflection
         /// </summary>
         IAttributes IAttributesProvider.Attributes()
         {
-            return attributes;
+            return new AttributesWrapper(attributes);
+        }
+
+        protected bool Equals(PropertyInfo other)
+        {
+            return declaringType == other.declaringType && Equals(name, other.name);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((PropertyInfo)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (declaringType.GetHashCode() * 397) ^ (name != null ? name.GetHashCode() : 0);
+            }
         }
     }
 }

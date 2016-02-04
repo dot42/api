@@ -77,7 +77,7 @@ namespace System.Xml.Linq
 	        {
 	            parent.Add(element);
 	        }
-	        var attrCount = atts.GetLength();
+	        var attrCount = atts.Length;
 	        for (var i = 0; i < attrCount; i++)
 	        {
 	            var name = XName.Get(atts.GetLocalName(i), atts.GetURI(i));

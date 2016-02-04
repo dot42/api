@@ -15,7 +15,7 @@
 // limitations under the License.
 using System.Text;
 using Dot42;
-using JFile = Java.Io.File;
+using JFile = Java.IO.File;
 
 namespace System.IO
 {
@@ -79,7 +79,7 @@ namespace System.IO
                 return part2;
             if (part2.Length == 0)
                 return part1;
-            return new JFile(part1, part2).GetPath();
+            return new JFile(part1, part2).Path;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace System.IO
         /// </summary>
         public static string GetDirectoryName(string path)
         {
-            return new JFile(path).GetParent();
+            return new JFile(path).Parent;
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace System.IO
         /// </summary>
         public static string GetFileName(string path)
         {
-            return new JFile(path).GetName();
+            return new JFile(path).Name;
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace System.IO
         /// </summary>
         public static string GetFileNameWithoutExtension(string path)
         {
-            var name = new JFile(path).GetName();
+            var name = new JFile(path).Name;
             var index = GetExtensionIndex(name);
             return (index >= 0) ? name.JavaSubstring(0, index) : name;
         }
@@ -145,7 +145,7 @@ namespace System.IO
         /// </summary>
         public static string GetFullPath(string path)
         {
-            return new JFile(path).GetAbsolutePath();            
+            return new JFile(path).AbsolutePath;
         }
 
         /// <summary>
@@ -202,7 +202,7 @@ namespace System.IO
         {
             var rndName = GetRandomFileName();
             var index = rndName.IndexOf('.');
-            return JFile.CreateTempFile(rndName.JavaSubstring(0, index), rndName.JavaSubstring(index)).GetAbsolutePath();
+            return JFile.CreateTempFile(rndName.JavaSubstring(0, index), rndName.JavaSubstring(index)).AbsolutePath;
         }
 
         /// <summary>

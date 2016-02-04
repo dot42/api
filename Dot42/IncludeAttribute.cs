@@ -46,6 +46,27 @@ namespace Dot42
         /// If set, all members of the type to which this attribute is attached will be included also.
         /// </summary>
         public bool ApplyToMembers { get; set; }
+
+        /// <summary>
+        /// If set, all types/members matching the pattern will be included. See the documenation
+        /// on what patterns are supported.
+        /// <para>
+        /// This property can only be used when this attribute is attached to an assembly.  
+        /// </para>
+        /// </summary>
+        public string Pattern { get; set; }
+
+        /// <summary>
+        /// If true, this conditional will be tried on all types in all assemblies. If false
+        /// (the default), only types in the assembly containing this attribute are tried.
+        /// <para>
+        /// Can be used with <see cref="Pattern"/>.
+        /// </para> 
+        /// <para>
+        /// This property can only be used when this attribute is attached to an assembly.  
+        /// </para>
+        /// </summary>
+        public bool IsGlobal { get; set; }
     }
 }
 

@@ -13,8 +13,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System.Globalization;
 using Dot42;
 using Dot42.Internal;
+using Java.Lang;
 
 namespace System
 {
@@ -40,20 +43,70 @@ namespace System
             return Parse(s);
         }
 
+        public static bool TryParse(string s, out ushort result)
+        {
+            try
+            {
+                result = Parse(s);
+                return true;
+            }
+            catch (OverflowException)
+            {
+                result = 0;
+                return false;
+            }
+            catch (NumberFormatException)
+            {
+                result = 0;
+                return false;
+            }
+        }
+
         [DexImport("intValue", "()I", AccessFlags = 1)]
         internal int IntValue() /* Keep internal to avoid verify error */ 
         {
             return default(int);
         }
 
-        public string ToString(IFormatProvider provider)
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public new string ToString()
         {
-            return int.ToString(IntValue() & 0xFFFF);
+            return NumberFormatter.Format((int)this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public string ToString(IFormatProvider provider)
+        {
+            return NumberFormatter.Format((int)this, provider);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, IntValue() & 0xFFFF, provider);
+            return NumberFormatter.Format(format, (int)this, provider);
+        }
+
+        public int CompareTo(ushort o)
+        {
+            return (IntValue() & 0xFFFF).CompareTo(o.IntValue() & 0xFFFF);
+        }
+
+        [Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+        public bool Equals(object @object) /* MethodBuilder.Create */
+        {
+            return default(bool);
+        }
+
+        [Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+        public int GetHashCode() /* MethodBuilder.Create */
+        {
+            return default(int);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(ushort other)
+        {
+            return other == this;
         }
     }
 }

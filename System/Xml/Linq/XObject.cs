@@ -17,7 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Java.Io;
+using Java.IO;
 using Java.Util;
 using Org.Xmlpull.V1;
 
@@ -231,7 +231,7 @@ namespace System.Xml.Linq
             if (list == null)
             {
                 // Single object
-                if (type.IsInstance(type))
+                if (type.JavaIsInstance(type))
                 {
                     annotations = null;
                 }
@@ -241,7 +241,7 @@ namespace System.Xml.Linq
                 var i = 0;
                 while (i < list.Count)
                 {
-                    if (type.IsInstance(list[i]))
+                    if (type.JavaIsInstance(list[i]))
                     {
                         list.Remove(i);
                     }
@@ -289,14 +289,14 @@ namespace System.Xml.Linq
             var list = annotations as ArrayList<object>;
             if (list == null)
             {
-                if (type.IsInstance(annotations))
+                if (type.JavaIsInstance(annotations))
                     return annotations;
                 return null;
             }
             for (var i = 0; i < list.Count; i++)
             {
                 var result = list[i];
-                if (type.IsInstance(result))
+                if (type.JavaIsInstance(result))
                     return result;
             }
             return null;
@@ -339,7 +339,7 @@ namespace System.Xml.Linq
                 var list = annotations as ArrayList<object>;
                 if (list == null)
                 {
-                    if (type.IsInstance(annotations))
+                    if (type.JavaIsInstance(annotations))
                         yield return annotations;
                 }
                 else
@@ -347,7 +347,7 @@ namespace System.Xml.Linq
                     for (var i = 0; i < list.Count; i++)
                     {
                         var result = list[i];
-                        if (type.IsInstance(result))
+                        if (type.JavaIsInstance(result))
                             yield return result;
                     }
                 }

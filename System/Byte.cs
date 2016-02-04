@@ -45,19 +45,22 @@ namespace System
             return default(int);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(_IntValue(), provider);
+            return NumberFormatter.Format((int)this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, _IntValue(), null);
+            return NumberFormatter.Format(format, (int)this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, _IntValue(), provider);
+            return NumberFormatter.Format(format, (int)this, provider);
         }
 
         public static byte Parse(string s)
@@ -77,6 +80,7 @@ namespace System
         {
             return Parse(s);
         }
+
 
         /// <summary>
         /// Try to parse the given string into a byte value.
@@ -103,6 +107,29 @@ namespace System
                 result = 0;
                 return false;
             }
+        }
+
+        public int CompareTo(byte o)
+        {
+            return (_IntValue() & 255).CompareTo(o._IntValue() & 255);
+        }
+
+        [Dot42.DexImport("equals", "(Ljava/lang/Object;)Z", AccessFlags = 1)]
+        public bool Equals(object @object) /* MethodBuilder.Create */
+        {
+            return default(bool);
+        }
+
+        [Dot42.DexImport("hashCode", "()I", AccessFlags = 1)]
+        public int GetHashCode() /* MethodBuilder.Create */
+        {
+            return default(int);
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(byte other)
+        {
+            return other == this;
         }
 
     }

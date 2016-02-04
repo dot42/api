@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using Java.Lang;
 
 namespace Dot42.Internal
 {
@@ -21,7 +22,7 @@ namespace Dot42.Internal
     /// Base class for enum implementations
     /// </summary>
     [Include(TypeCondition = typeof(System.Enum))]
-    internal abstract class Enum : Java.Lang.Enum<Enum>
+    internal abstract class Enum : Enum<Enum>, IFormattable
 	{
         /// <summary>
         /// Default ctor
@@ -36,7 +37,7 @@ namespace Dot42.Internal
         /// Gets the underlying value as int.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal virtual int IntValue()
+        public virtual int IntValue()
         {
             return (int)LongValue();
         }
@@ -45,32 +46,91 @@ namespace Dot42.Internal
         /// Gets the underlying value as long.
         /// </summary>
         [Include(TypeCondition = typeof(System.Enum))]
-        internal virtual long LongValue()
+        public virtual long LongValue()
         {
             return (long)IntValue();
         }
 
         [Include(TypeCondition = typeof(System.Enum))]
-        internal static Enum Get(System.Type enumType, int value)
+        public static Enum Get(Type enumType, int value)
         {
-            var infoField = enumType.GetDeclaredField("info__");
-            var infoInstance = (EnumInfo)infoField.GetValue(null);
-            var result = infoInstance.GetValue(value);
+            var info = EnumInfo.GetEnumInfo(enumType);
+
+            var result = info.GetValue(value);
             if (result == null)
                 throw new ArgumentException();
+
             return result;
         }
 
         [Include(TypeCondition = typeof(System.Enum))]
-        internal static Enum Get(System.Type enumType, long value)
+        public static Enum Get(Type enumType, long value)
         {
-            var infoField = enumType.GetDeclaredField("info__");
-            var infoInstance = (EnumInfo)infoField.GetValue(null);
-            var result = infoInstance.GetValue(value);
+            var info = EnumInfo.GetEnumInfo(enumType);
+
+            var result = info.GetValue(value);
+
             if (result == null)
                 throw new ArgumentException();
+            
             return result;
         }
-    }
+
+        /// <summary>
+        /// Value should be java.lang.Integer, java.lang.Long, java.lang.Short,
+        /// java.lang.Byte or another Enum type.
+        /// </summary>
+        [Include(TypeCondition = typeof(System.Enum))]
+        public static Enum GetFromObject(Type enumType, object value)
+        {
+            var info = EnumInfo.GetEnumInfo(enumType);
+
+            bool isLong = info.Underlying == typeof(long);
+
+            if (isLong)
+            {
+                if (value is long)
+                    return Get(enumType, (long)value);
+                if (value is int)
+                    return Get(enumType, (long)(int)value);
+                if (value is short)
+                    return Get(enumType, (long)(short)value);
+                if (value is char)
+                    return Get(enumType, (long)(char)value);
+                if (value is byte)
+                    return Get(enumType, (long)(byte)value);
+                if (value is Enum)
+                    return Get(enumType, ((Enum)value).LongValue());
+            }
+            else
+            {
+                if (value is long)
+                    return Get(enumType, (int)(long)value);
+                if (value is int)
+                    return Get(enumType, (int)value);
+                if (value is short)
+                    return Get(enumType, (int)(short)value);
+                if (value is char)
+                    return Get(enumType, (int)(char)value);
+                if (value is byte)
+                    return Get(enumType, (int)(byte)value);
+                if (value is Enum)
+                    return Get(enumType, ((Enum)value).IntValue());
+            }
+
+            throw new ArgumentException(String.Format("type: {0}; val: {1}", value.GetType(), value.ToString()), "value");
+        }
+
+        public string ToString(string format)
+        {
+            return CompilerHelper.EnumToString((Enum<object>)(object)this, format);
+        }
+
+
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            return CompilerHelper.EnumToString((Enum<object>)(object)this, format);
+        }
+	}
 }
 

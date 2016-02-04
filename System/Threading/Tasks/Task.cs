@@ -13,14 +13,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using System.Runtime.CompilerServices;
-
 using Android.App;
-using Android.Util;
-using Java.Util.Concurrent;
 using Java.Util.Concurrent.Atomic;
-
 using Dot42.Internal;
 using Dot42.Threading.Tasks;
 
@@ -34,14 +33,16 @@ namespace System.Threading.Tasks
 
         // With this attribute each thread has its own value so that it's correct for our Schedule code and for Parent property.
         //[ThreadStatic]
-        private static readonly	Java.Lang.ThreadLocal<Task> current = new Java.Lang.ThreadLocal<Task>();
+        private static readonly Java.Lang.ThreadLocal<Task> current = new Java.Lang.ThreadLocal<Task>();
+        
+        private static readonly Task CompletedTask = FromResult(0);
 
         private readonly int id;
         private readonly TaskCreationOptions creationOptions;
         private TaskStatus status;
 	    private object state;
 	    private TaskActionInvoker invoker;
-        internal AtomicBoolean executing = new AtomicBoolean(false);
+	    internal int executing = 0;
 
 	    private readonly TaskCompletionQueue<IContinuation> continuations = new TaskCompletionQueue<IContinuation>();
 
@@ -52,7 +53,7 @@ namespace System.Threading.Tasks
 
         private TaskExceptionSlot exSlot;
 
-        private const TaskCreationOptions MaxTaskCreationOptions = TaskCreationOptions.PreferFairness | TaskCreationOptions.LongRunning | TaskCreationOptions.AttachedToParent;
+        private const TaskCreationOptions MaxTaskCreationOptions = TaskCreationOptions.PreferFairness | TaskCreationOptions.LongRunning | TaskCreationOptions.AttachedToParent | TaskCreationOptions.DenyChildAttach;
         internal const TaskCreationOptions WorkerTaskNotSupportedOptions = TaskCreationOptions.LongRunning | TaskCreationOptions.PreferFairness;
 
         #region Constuctors
@@ -111,7 +112,8 @@ namespace System.Threading.Tasks
 	    internal Task(TaskActionInvoker invoker, object state, CancellationToken cancellationToken,
 	                  TaskCreationOptions creationOptions, Task parent = null, Task contAncestor = null, bool ignoreCancellation = false)
 	    {
-	        if (SynchronizationContext.Current == null) SynchronizationContext.SetSynchronizationContext(new AndroidSynchronizationContext());
+	        if (SynchronizationContext.Current == null) 
+                SynchronizationContext.SetSynchronizationContext(new SynchronizationContext());
 
             this.invoker = invoker;
             this.creationOptions = creationOptions;
@@ -124,7 +126,8 @@ namespace System.Threading.Tasks
 
             // Process creationOptions
 
-            //if (parent != null && HasFlag(creationOptions, TaskCreationOptions.AttachedToParent))
+            //if (parent != null && HasFlag(creationOptions, TaskCreationOptions.AttachedToParent)
+            //                   && !HasFlags(parent.creationOptions, TaskCreationOptions.DenyChildAttach))
             //    parent.AddChild();
 
             if (cancellationToken.CanBeCanceled && !ignoreCancellation)
@@ -294,6 +297,9 @@ namespace System.Threading.Tasks
 
         internal void SetupScheduler(TaskScheduler scheduler)
         {
+            if(scheduler == null)
+                throw new ArgumentNullException();
+
             this.scheduler = scheduler;
             status = TaskStatus.WaitingForActivation;
         }
@@ -350,7 +356,7 @@ namespace System.Threading.Tasks
              * breaking its semantic (the task can be executed twice but the
              * second time it will return immediately
              */
-            if (executing.GetAndSet(true))
+            if (Interlocked.Exchange(ref executing, 1) != 0)
                 return;
 
             // Disable CancellationToken direct cancellation
@@ -538,12 +544,9 @@ namespace System.Threading.Tasks
             if (continuations.HasElements)
             {
                 IContinuation continuation;
-                while (continuations.TryGetNextCompletion(out continuation))
+                while ((continuation = continuations.PollCompletion()) != null)
                 {
-                    //TODO: remove line below if case 828 has been solved
-                    if (continuation == null) break;
-                    
-                    continuation.Execute();
+                    continuation.Execute(this);
                 }
             }
         }
@@ -764,7 +767,54 @@ namespace System.Threading.Tasks
             return firstFinished;
         }
 
-        public static Task Run(Action action)
+        public static Task WhenAll(params Task[] tasks)
+        {
+            if (tasks.Length == 0)
+                return CompletedTask;
+            return WhenAll(tasks.ToList());
+        }
+
+        public static Task WhenAll(IEnumerable<Task> tasks)
+        {
+            return WhenAll(tasks.ToList());
+        }
+
+	    private static Task WhenAll(Collections.Generic.IList<Task> tasks)
+	    {
+            CheckForNullTasks(tasks);
+            if (tasks.Count == 0)
+	            return CompletedTask;
+
+	        var task = new TaskCompletionSource<object>();
+	        new WhenAllContinuation(task, tasks);
+	        return task.Task;
+	    }
+
+        public static Task WhenAny(params Task[] tasks)
+        {
+            if (tasks.Length == 0)
+                return CompletedTask;
+            return WhenAny(tasks.ToList());
+        }
+
+        public static Task WhenAny(IEnumerable<Task> tasks)
+        {
+            return WhenAny(tasks.ToList());
+        }
+
+        private static Task<Task> WhenAny(Collections.Generic.IList<Task> tasks)
+        {
+            CheckForNullTasks(tasks);
+            if (tasks.Count == 0)
+                throw  new ArgumentException("tasks");
+
+            var task = new TaskCompletionSource<Task>();
+            new WhenAnyContinuation(task, tasks);
+            return task.Task;
+        }
+
+
+	    public static Task Run(Action action)
         {
             return Run(action, CancellationToken.None);
         }
@@ -786,15 +836,21 @@ namespace System.Threading.Tasks
         {
             if (cancellationToken.IsCancellationRequested)
                 return TaskConstants<TResult>.Canceled;
-
             return Task.Factory.StartNew(function, cancellationToken, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default);
         }
+
+	    public static Task<T> FromResult<T>(T value)
+	    {
+	        var task = new TaskCompletionSource<T>();
+            task.SetResult(value);
+	        return task.Task;
+	    }
 
         internal void ContinueWith(IContinuation continuation)
         {
             if (IsCompleted)
             {
-                continuation.Execute();
+                continuation.Execute(this);
                 return;
             }
 
@@ -802,7 +858,23 @@ namespace System.Threading.Tasks
 
             // Retry in case completion was achieved but event adding was too late
             if (IsCompleted && continuations.Remove(continuation))
-                continuation.Execute();
+                continuation.Execute(this);
+        }
+
+        public Task ContinueWith(Action<Task> continuation)
+        {
+            var task = new Task(() => continuation(this));
+            task.SetupScheduler(TaskScheduler.Default);
+            ContinueWith(new TaskContinuation(task, TaskContinuationOptions.None));
+            return task;
+        }
+
+        public Task ContinueWith(Action<Task> continuation, TaskContinuationOptions options)
+        {
+            var task = new Task(() => continuation(this));
+            task.SetupScheduler(TaskScheduler.Default);
+            ContinueWith(new TaskContinuation(task, options));
+            return task;
         }
 
         internal void RemoveContinuation(IContinuation continuation)
@@ -823,6 +895,12 @@ namespace System.Threading.Tasks
         }
 
         private static void CheckForNullTasks(Task[] tasks)
+        {
+            foreach (var t in tasks)
+                if (t == null)
+                    throw new ArgumentException("tasks", "the tasks argument contains a null element");
+        }
+        private static void CheckForNullTasks(System.Collections.Generic.IList<Task> tasks)
         {
             foreach (var t in tasks)
                 if (t == null)
@@ -906,8 +984,8 @@ namespace System.Threading.Tasks
             {
                 cancellationToken.Register(() =>
                     {
-                        delayed.Cancel(false);
-                        source.SetCanceled();
+                        if(delayed.Cancel(false))
+                            source.TrySetCanceled();
                     });
             }
              

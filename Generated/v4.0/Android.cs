@@ -1,21 +1,713 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: Android.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace Android
 {
+		/// <java-name>
+		/// android/Manifest
+		/// </java-name>
+		[Dot42.DexImport("android/Manifest", AccessFlags = 49)]
+		public sealed partial class Manifest
+ /* scope: __dot42__ */ 
+		{
+				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+				public Manifest() /* MethodBuilder.Create */ 
+				{
+				}
+
+				/// <java-name>
+				/// android/Manifest$permission_group
+				/// </java-name>
+				[Dot42.DexImport("android/Manifest$permission_group", AccessFlags = 25)]
+				public sealed partial class Permission_group
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// ACCOUNTS
+						/// </java-name>
+						[Dot42.DexImport("ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCOUNTS = "android.permission-group.ACCOUNTS";
+						/// <java-name>
+						/// COST_MONEY
+						/// </java-name>
+						[Dot42.DexImport("COST_MONEY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string COST_MONEY = "android.permission-group.COST_MONEY";
+						/// <java-name>
+						/// DEVELOPMENT_TOOLS
+						/// </java-name>
+						[Dot42.DexImport("DEVELOPMENT_TOOLS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEVELOPMENT_TOOLS = "android.permission-group.DEVELOPMENT_TOOLS";
+						/// <java-name>
+						/// HARDWARE_CONTROLS
+						/// </java-name>
+						[Dot42.DexImport("HARDWARE_CONTROLS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string HARDWARE_CONTROLS = "android.permission-group.HARDWARE_CONTROLS";
+						/// <java-name>
+						/// LOCATION
+						/// </java-name>
+						[Dot42.DexImport("LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string LOCATION = "android.permission-group.LOCATION";
+						/// <java-name>
+						/// MESSAGES
+						/// </java-name>
+						[Dot42.DexImport("MESSAGES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MESSAGES = "android.permission-group.MESSAGES";
+						/// <java-name>
+						/// NETWORK
+						/// </java-name>
+						[Dot42.DexImport("NETWORK", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NETWORK = "android.permission-group.NETWORK";
+						/// <java-name>
+						/// PERSONAL_INFO
+						/// </java-name>
+						[Dot42.DexImport("PERSONAL_INFO", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSONAL_INFO = "android.permission-group.PERSONAL_INFO";
+						/// <java-name>
+						/// PHONE_CALLS
+						/// </java-name>
+						[Dot42.DexImport("PHONE_CALLS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PHONE_CALLS = "android.permission-group.PHONE_CALLS";
+						/// <java-name>
+						/// STORAGE
+						/// </java-name>
+						[Dot42.DexImport("STORAGE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string STORAGE = "android.permission-group.STORAGE";
+						/// <java-name>
+						/// SYSTEM_TOOLS
+						/// </java-name>
+						[Dot42.DexImport("SYSTEM_TOOLS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SYSTEM_TOOLS = "android.permission-group.SYSTEM_TOOLS";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public Permission_group() /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+				/// <java-name>
+				/// android/Manifest$permission
+				/// </java-name>
+				[Dot42.DexImport("android/Manifest$permission", AccessFlags = 25)]
+				public sealed partial class Permission
+ /* scope: __dot42__ */ 
+				{
+						/// <java-name>
+						/// ACCESS_CHECKIN_PROPERTIES
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_CHECKIN_PROPERTIES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_CHECKIN_PROPERTIES = "android.permission.ACCESS_CHECKIN_PROPERTIES";
+						/// <java-name>
+						/// ACCESS_COARSE_LOCATION
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_COARSE_LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_COARSE_LOCATION = "android.permission.ACCESS_COARSE_LOCATION";
+						/// <java-name>
+						/// ACCESS_FINE_LOCATION
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_FINE_LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_FINE_LOCATION = "android.permission.ACCESS_FINE_LOCATION";
+						/// <java-name>
+						/// ACCESS_LOCATION_EXTRA_COMMANDS
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_LOCATION_EXTRA_COMMANDS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_LOCATION_EXTRA_COMMANDS = "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS";
+						/// <java-name>
+						/// ACCESS_MOCK_LOCATION
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_MOCK_LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_MOCK_LOCATION = "android.permission.ACCESS_MOCK_LOCATION";
+						/// <java-name>
+						/// ACCESS_NETWORK_STATE
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_NETWORK_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_NETWORK_STATE = "android.permission.ACCESS_NETWORK_STATE";
+						/// <java-name>
+						/// ACCESS_SURFACE_FLINGER
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_SURFACE_FLINGER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_SURFACE_FLINGER = "android.permission.ACCESS_SURFACE_FLINGER";
+						/// <java-name>
+						/// ACCESS_WIFI_STATE
+						/// </java-name>
+						[Dot42.DexImport("ACCESS_WIFI_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCESS_WIFI_STATE = "android.permission.ACCESS_WIFI_STATE";
+						/// <java-name>
+						/// ACCOUNT_MANAGER
+						/// </java-name>
+						[Dot42.DexImport("ACCOUNT_MANAGER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ACCOUNT_MANAGER = "android.permission.ACCOUNT_MANAGER";
+						/// <java-name>
+						/// ADD_VOICEMAIL
+						/// </java-name>
+						[Dot42.DexImport("ADD_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string ADD_VOICEMAIL = "com.android.voicemail.permission.ADD_VOICEMAIL";
+						/// <java-name>
+						/// AUTHENTICATE_ACCOUNTS
+						/// </java-name>
+						[Dot42.DexImport("AUTHENTICATE_ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string AUTHENTICATE_ACCOUNTS = "android.permission.AUTHENTICATE_ACCOUNTS";
+						/// <java-name>
+						/// BATTERY_STATS
+						/// </java-name>
+						[Dot42.DexImport("BATTERY_STATS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BATTERY_STATS = "android.permission.BATTERY_STATS";
+						/// <java-name>
+						/// BIND_APPWIDGET
+						/// </java-name>
+						[Dot42.DexImport("BIND_APPWIDGET", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BIND_APPWIDGET = "android.permission.BIND_APPWIDGET";
+						/// <java-name>
+						/// BIND_DEVICE_ADMIN
+						/// </java-name>
+						[Dot42.DexImport("BIND_DEVICE_ADMIN", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BIND_DEVICE_ADMIN = "android.permission.BIND_DEVICE_ADMIN";
+						/// <java-name>
+						/// BIND_INPUT_METHOD
+						/// </java-name>
+						[Dot42.DexImport("BIND_INPUT_METHOD", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BIND_INPUT_METHOD = "android.permission.BIND_INPUT_METHOD";
+						/// <java-name>
+						/// BIND_REMOTEVIEWS
+						/// </java-name>
+						[Dot42.DexImport("BIND_REMOTEVIEWS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BIND_REMOTEVIEWS = "android.permission.BIND_REMOTEVIEWS";
+						/// <java-name>
+						/// BIND_TEXT_SERVICE
+						/// </java-name>
+						[Dot42.DexImport("BIND_TEXT_SERVICE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BIND_TEXT_SERVICE = "android.permission.BIND_TEXT_SERVICE";
+						/// <java-name>
+						/// BIND_VPN_SERVICE
+						/// </java-name>
+						[Dot42.DexImport("BIND_VPN_SERVICE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BIND_VPN_SERVICE = "android.permission.BIND_VPN_SERVICE";
+						/// <java-name>
+						/// BIND_WALLPAPER
+						/// </java-name>
+						[Dot42.DexImport("BIND_WALLPAPER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BIND_WALLPAPER = "android.permission.BIND_WALLPAPER";
+						/// <java-name>
+						/// BLUETOOTH
+						/// </java-name>
+						[Dot42.DexImport("BLUETOOTH", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BLUETOOTH = "android.permission.BLUETOOTH";
+						/// <java-name>
+						/// BLUETOOTH_ADMIN
+						/// </java-name>
+						[Dot42.DexImport("BLUETOOTH_ADMIN", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BLUETOOTH_ADMIN = "android.permission.BLUETOOTH_ADMIN";
+						/// <java-name>
+						/// BRICK
+						/// </java-name>
+						[Dot42.DexImport("BRICK", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BRICK = "android.permission.BRICK";
+						/// <java-name>
+						/// BROADCAST_PACKAGE_REMOVED
+						/// </java-name>
+						[Dot42.DexImport("BROADCAST_PACKAGE_REMOVED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BROADCAST_PACKAGE_REMOVED = "android.permission.BROADCAST_PACKAGE_REMOVED";
+						/// <java-name>
+						/// BROADCAST_SMS
+						/// </java-name>
+						[Dot42.DexImport("BROADCAST_SMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BROADCAST_SMS = "android.permission.BROADCAST_SMS";
+						/// <java-name>
+						/// BROADCAST_STICKY
+						/// </java-name>
+						[Dot42.DexImport("BROADCAST_STICKY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BROADCAST_STICKY = "android.permission.BROADCAST_STICKY";
+						/// <java-name>
+						/// BROADCAST_WAP_PUSH
+						/// </java-name>
+						[Dot42.DexImport("BROADCAST_WAP_PUSH", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string BROADCAST_WAP_PUSH = "android.permission.BROADCAST_WAP_PUSH";
+						/// <java-name>
+						/// CALL_PHONE
+						/// </java-name>
+						[Dot42.DexImport("CALL_PHONE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CALL_PHONE = "android.permission.CALL_PHONE";
+						/// <java-name>
+						/// CALL_PRIVILEGED
+						/// </java-name>
+						[Dot42.DexImport("CALL_PRIVILEGED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CALL_PRIVILEGED = "android.permission.CALL_PRIVILEGED";
+						/// <java-name>
+						/// CAMERA
+						/// </java-name>
+						[Dot42.DexImport("CAMERA", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CAMERA = "android.permission.CAMERA";
+						/// <java-name>
+						/// CHANGE_COMPONENT_ENABLED_STATE
+						/// </java-name>
+						[Dot42.DexImport("CHANGE_COMPONENT_ENABLED_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CHANGE_COMPONENT_ENABLED_STATE = "android.permission.CHANGE_COMPONENT_ENABLED_STATE";
+						/// <java-name>
+						/// CHANGE_CONFIGURATION
+						/// </java-name>
+						[Dot42.DexImport("CHANGE_CONFIGURATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CHANGE_CONFIGURATION = "android.permission.CHANGE_CONFIGURATION";
+						/// <java-name>
+						/// CHANGE_NETWORK_STATE
+						/// </java-name>
+						[Dot42.DexImport("CHANGE_NETWORK_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CHANGE_NETWORK_STATE = "android.permission.CHANGE_NETWORK_STATE";
+						/// <java-name>
+						/// CHANGE_WIFI_MULTICAST_STATE
+						/// </java-name>
+						[Dot42.DexImport("CHANGE_WIFI_MULTICAST_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CHANGE_WIFI_MULTICAST_STATE = "android.permission.CHANGE_WIFI_MULTICAST_STATE";
+						/// <java-name>
+						/// CHANGE_WIFI_STATE
+						/// </java-name>
+						[Dot42.DexImport("CHANGE_WIFI_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CHANGE_WIFI_STATE = "android.permission.CHANGE_WIFI_STATE";
+						/// <java-name>
+						/// CLEAR_APP_CACHE
+						/// </java-name>
+						[Dot42.DexImport("CLEAR_APP_CACHE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CLEAR_APP_CACHE = "android.permission.CLEAR_APP_CACHE";
+						/// <java-name>
+						/// CLEAR_APP_USER_DATA
+						/// </java-name>
+						[Dot42.DexImport("CLEAR_APP_USER_DATA", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CLEAR_APP_USER_DATA = "android.permission.CLEAR_APP_USER_DATA";
+						/// <java-name>
+						/// CONTROL_LOCATION_UPDATES
+						/// </java-name>
+						[Dot42.DexImport("CONTROL_LOCATION_UPDATES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string CONTROL_LOCATION_UPDATES = "android.permission.CONTROL_LOCATION_UPDATES";
+						/// <java-name>
+						/// DELETE_CACHE_FILES
+						/// </java-name>
+						[Dot42.DexImport("DELETE_CACHE_FILES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DELETE_CACHE_FILES = "android.permission.DELETE_CACHE_FILES";
+						/// <java-name>
+						/// DELETE_PACKAGES
+						/// </java-name>
+						[Dot42.DexImport("DELETE_PACKAGES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DELETE_PACKAGES = "android.permission.DELETE_PACKAGES";
+						/// <java-name>
+						/// DEVICE_POWER
+						/// </java-name>
+						[Dot42.DexImport("DEVICE_POWER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DEVICE_POWER = "android.permission.DEVICE_POWER";
+						/// <java-name>
+						/// DIAGNOSTIC
+						/// </java-name>
+						[Dot42.DexImport("DIAGNOSTIC", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DIAGNOSTIC = "android.permission.DIAGNOSTIC";
+						/// <java-name>
+						/// DISABLE_KEYGUARD
+						/// </java-name>
+						[Dot42.DexImport("DISABLE_KEYGUARD", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DISABLE_KEYGUARD = "android.permission.DISABLE_KEYGUARD";
+						/// <java-name>
+						/// DUMP
+						/// </java-name>
+						[Dot42.DexImport("DUMP", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string DUMP = "android.permission.DUMP";
+						/// <java-name>
+						/// EXPAND_STATUS_BAR
+						/// </java-name>
+						[Dot42.DexImport("EXPAND_STATUS_BAR", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string EXPAND_STATUS_BAR = "android.permission.EXPAND_STATUS_BAR";
+						/// <java-name>
+						/// FACTORY_TEST
+						/// </java-name>
+						[Dot42.DexImport("FACTORY_TEST", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string FACTORY_TEST = "android.permission.FACTORY_TEST";
+						/// <java-name>
+						/// FLASHLIGHT
+						/// </java-name>
+						[Dot42.DexImport("FLASHLIGHT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string FLASHLIGHT = "android.permission.FLASHLIGHT";
+						/// <java-name>
+						/// FORCE_BACK
+						/// </java-name>
+						[Dot42.DexImport("FORCE_BACK", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string FORCE_BACK = "android.permission.FORCE_BACK";
+						/// <java-name>
+						/// GET_ACCOUNTS
+						/// </java-name>
+						[Dot42.DexImport("GET_ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GET_ACCOUNTS = "android.permission.GET_ACCOUNTS";
+						/// <java-name>
+						/// GET_PACKAGE_SIZE
+						/// </java-name>
+						[Dot42.DexImport("GET_PACKAGE_SIZE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GET_PACKAGE_SIZE = "android.permission.GET_PACKAGE_SIZE";
+						/// <java-name>
+						/// GET_TASKS
+						/// </java-name>
+						[Dot42.DexImport("GET_TASKS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GET_TASKS = "android.permission.GET_TASKS";
+						/// <java-name>
+						/// GLOBAL_SEARCH
+						/// </java-name>
+						[Dot42.DexImport("GLOBAL_SEARCH", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string GLOBAL_SEARCH = "android.permission.GLOBAL_SEARCH";
+						/// <java-name>
+						/// HARDWARE_TEST
+						/// </java-name>
+						[Dot42.DexImport("HARDWARE_TEST", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string HARDWARE_TEST = "android.permission.HARDWARE_TEST";
+						/// <java-name>
+						/// INJECT_EVENTS
+						/// </java-name>
+						[Dot42.DexImport("INJECT_EVENTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string INJECT_EVENTS = "android.permission.INJECT_EVENTS";
+						/// <java-name>
+						/// INSTALL_LOCATION_PROVIDER
+						/// </java-name>
+						[Dot42.DexImport("INSTALL_LOCATION_PROVIDER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string INSTALL_LOCATION_PROVIDER = "android.permission.INSTALL_LOCATION_PROVIDER";
+						/// <java-name>
+						/// INSTALL_PACKAGES
+						/// </java-name>
+						[Dot42.DexImport("INSTALL_PACKAGES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string INSTALL_PACKAGES = "android.permission.INSTALL_PACKAGES";
+						/// <java-name>
+						/// INTERNAL_SYSTEM_WINDOW
+						/// </java-name>
+						[Dot42.DexImport("INTERNAL_SYSTEM_WINDOW", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string INTERNAL_SYSTEM_WINDOW = "android.permission.INTERNAL_SYSTEM_WINDOW";
+						/// <java-name>
+						/// INTERNET
+						/// </java-name>
+						[Dot42.DexImport("INTERNET", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string INTERNET = "android.permission.INTERNET";
+						/// <java-name>
+						/// KILL_BACKGROUND_PROCESSES
+						/// </java-name>
+						[Dot42.DexImport("KILL_BACKGROUND_PROCESSES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string KILL_BACKGROUND_PROCESSES = "android.permission.KILL_BACKGROUND_PROCESSES";
+						/// <java-name>
+						/// MANAGE_ACCOUNTS
+						/// </java-name>
+						[Dot42.DexImport("MANAGE_ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MANAGE_ACCOUNTS = "android.permission.MANAGE_ACCOUNTS";
+						/// <java-name>
+						/// MANAGE_APP_TOKENS
+						/// </java-name>
+						[Dot42.DexImport("MANAGE_APP_TOKENS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MANAGE_APP_TOKENS = "android.permission.MANAGE_APP_TOKENS";
+						/// <java-name>
+						/// MASTER_CLEAR
+						/// </java-name>
+						[Dot42.DexImport("MASTER_CLEAR", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MASTER_CLEAR = "android.permission.MASTER_CLEAR";
+						/// <java-name>
+						/// MODIFY_AUDIO_SETTINGS
+						/// </java-name>
+						[Dot42.DexImport("MODIFY_AUDIO_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MODIFY_AUDIO_SETTINGS = "android.permission.MODIFY_AUDIO_SETTINGS";
+						/// <java-name>
+						/// MODIFY_PHONE_STATE
+						/// </java-name>
+						[Dot42.DexImport("MODIFY_PHONE_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MODIFY_PHONE_STATE = "android.permission.MODIFY_PHONE_STATE";
+						/// <java-name>
+						/// MOUNT_FORMAT_FILESYSTEMS
+						/// </java-name>
+						[Dot42.DexImport("MOUNT_FORMAT_FILESYSTEMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MOUNT_FORMAT_FILESYSTEMS = "android.permission.MOUNT_FORMAT_FILESYSTEMS";
+						/// <java-name>
+						/// MOUNT_UNMOUNT_FILESYSTEMS
+						/// </java-name>
+						[Dot42.DexImport("MOUNT_UNMOUNT_FILESYSTEMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string MOUNT_UNMOUNT_FILESYSTEMS = "android.permission.MOUNT_UNMOUNT_FILESYSTEMS";
+						/// <java-name>
+						/// NFC
+						/// </java-name>
+						[Dot42.DexImport("NFC", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string NFC = "android.permission.NFC";
+						/// <java-name>
+						/// PERSISTENT_ACTIVITY
+						/// </java-name>
+						[Dot42.DexImport("PERSISTENT_ACTIVITY", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PERSISTENT_ACTIVITY = "android.permission.PERSISTENT_ACTIVITY";
+						/// <java-name>
+						/// PROCESS_OUTGOING_CALLS
+						/// </java-name>
+						[Dot42.DexImport("PROCESS_OUTGOING_CALLS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string PROCESS_OUTGOING_CALLS = "android.permission.PROCESS_OUTGOING_CALLS";
+						/// <java-name>
+						/// READ_CALENDAR
+						/// </java-name>
+						[Dot42.DexImport("READ_CALENDAR", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_CALENDAR = "android.permission.READ_CALENDAR";
+						/// <java-name>
+						/// READ_CONTACTS
+						/// </java-name>
+						[Dot42.DexImport("READ_CONTACTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_CONTACTS = "android.permission.READ_CONTACTS";
+						/// <java-name>
+						/// READ_FRAME_BUFFER
+						/// </java-name>
+						[Dot42.DexImport("READ_FRAME_BUFFER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_FRAME_BUFFER = "android.permission.READ_FRAME_BUFFER";
+						/// <java-name>
+						/// READ_HISTORY_BOOKMARKS
+						/// </java-name>
+						[Dot42.DexImport("READ_HISTORY_BOOKMARKS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_HISTORY_BOOKMARKS = "com.android.browser.permission.READ_HISTORY_BOOKMARKS";
+						/// <java-name>
+						/// READ_INPUT_STATE
+						/// </java-name>
+						[Dot42.DexImport("READ_INPUT_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_INPUT_STATE = "android.permission.READ_INPUT_STATE";
+						/// <java-name>
+						/// READ_LOGS
+						/// </java-name>
+						[Dot42.DexImport("READ_LOGS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_LOGS = "android.permission.READ_LOGS";
+						/// <java-name>
+						/// READ_PHONE_STATE
+						/// </java-name>
+						[Dot42.DexImport("READ_PHONE_STATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_PHONE_STATE = "android.permission.READ_PHONE_STATE";
+						/// <java-name>
+						/// READ_PROFILE
+						/// </java-name>
+						[Dot42.DexImport("READ_PROFILE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_PROFILE = "android.permission.READ_PROFILE";
+						/// <java-name>
+						/// READ_SMS
+						/// </java-name>
+						[Dot42.DexImport("READ_SMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_SMS = "android.permission.READ_SMS";
+						/// <java-name>
+						/// READ_SYNC_SETTINGS
+						/// </java-name>
+						[Dot42.DexImport("READ_SYNC_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_SYNC_SETTINGS = "android.permission.READ_SYNC_SETTINGS";
+						/// <java-name>
+						/// READ_SYNC_STATS
+						/// </java-name>
+						[Dot42.DexImport("READ_SYNC_STATS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string READ_SYNC_STATS = "android.permission.READ_SYNC_STATS";
+						/// <java-name>
+						/// REBOOT
+						/// </java-name>
+						[Dot42.DexImport("REBOOT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string REBOOT = "android.permission.REBOOT";
+						/// <java-name>
+						/// RECEIVE_BOOT_COMPLETED
+						/// </java-name>
+						[Dot42.DexImport("RECEIVE_BOOT_COMPLETED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string RECEIVE_BOOT_COMPLETED = "android.permission.RECEIVE_BOOT_COMPLETED";
+						/// <java-name>
+						/// RECEIVE_MMS
+						/// </java-name>
+						[Dot42.DexImport("RECEIVE_MMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string RECEIVE_MMS = "android.permission.RECEIVE_MMS";
+						/// <java-name>
+						/// RECEIVE_SMS
+						/// </java-name>
+						[Dot42.DexImport("RECEIVE_SMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string RECEIVE_SMS = "android.permission.RECEIVE_SMS";
+						/// <java-name>
+						/// RECEIVE_WAP_PUSH
+						/// </java-name>
+						[Dot42.DexImport("RECEIVE_WAP_PUSH", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string RECEIVE_WAP_PUSH = "android.permission.RECEIVE_WAP_PUSH";
+						/// <java-name>
+						/// RECORD_AUDIO
+						/// </java-name>
+						[Dot42.DexImport("RECORD_AUDIO", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string RECORD_AUDIO = "android.permission.RECORD_AUDIO";
+						/// <java-name>
+						/// REORDER_TASKS
+						/// </java-name>
+						[Dot42.DexImport("REORDER_TASKS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string REORDER_TASKS = "android.permission.REORDER_TASKS";
+						/// <java-name>
+						/// RESTART_PACKAGES
+						/// </java-name>
+						[Dot42.DexImport("RESTART_PACKAGES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string RESTART_PACKAGES = "android.permission.RESTART_PACKAGES";
+						/// <java-name>
+						/// SEND_SMS
+						/// </java-name>
+						[Dot42.DexImport("SEND_SMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SEND_SMS = "android.permission.SEND_SMS";
+						/// <java-name>
+						/// SET_ACTIVITY_WATCHER
+						/// </java-name>
+						[Dot42.DexImport("SET_ACTIVITY_WATCHER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_ACTIVITY_WATCHER = "android.permission.SET_ACTIVITY_WATCHER";
+						/// <java-name>
+						/// SET_ALARM
+						/// </java-name>
+						[Dot42.DexImport("SET_ALARM", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_ALARM = "com.android.alarm.permission.SET_ALARM";
+						/// <java-name>
+						/// SET_ALWAYS_FINISH
+						/// </java-name>
+						[Dot42.DexImport("SET_ALWAYS_FINISH", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_ALWAYS_FINISH = "android.permission.SET_ALWAYS_FINISH";
+						/// <java-name>
+						/// SET_ANIMATION_SCALE
+						/// </java-name>
+						[Dot42.DexImport("SET_ANIMATION_SCALE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_ANIMATION_SCALE = "android.permission.SET_ANIMATION_SCALE";
+						/// <java-name>
+						/// SET_DEBUG_APP
+						/// </java-name>
+						[Dot42.DexImport("SET_DEBUG_APP", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_DEBUG_APP = "android.permission.SET_DEBUG_APP";
+						/// <java-name>
+						/// SET_ORIENTATION
+						/// </java-name>
+						[Dot42.DexImport("SET_ORIENTATION", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_ORIENTATION = "android.permission.SET_ORIENTATION";
+						/// <java-name>
+						/// SET_POINTER_SPEED
+						/// </java-name>
+						[Dot42.DexImport("SET_POINTER_SPEED", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_POINTER_SPEED = "android.permission.SET_POINTER_SPEED";
+						/// <java-name>
+						/// SET_PREFERRED_APPLICATIONS
+						/// </java-name>
+						[Dot42.DexImport("SET_PREFERRED_APPLICATIONS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_PREFERRED_APPLICATIONS = "android.permission.SET_PREFERRED_APPLICATIONS";
+						/// <java-name>
+						/// SET_PROCESS_LIMIT
+						/// </java-name>
+						[Dot42.DexImport("SET_PROCESS_LIMIT", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_PROCESS_LIMIT = "android.permission.SET_PROCESS_LIMIT";
+						/// <java-name>
+						/// SET_TIME
+						/// </java-name>
+						[Dot42.DexImport("SET_TIME", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_TIME = "android.permission.SET_TIME";
+						/// <java-name>
+						/// SET_TIME_ZONE
+						/// </java-name>
+						[Dot42.DexImport("SET_TIME_ZONE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_TIME_ZONE = "android.permission.SET_TIME_ZONE";
+						/// <java-name>
+						/// SET_WALLPAPER
+						/// </java-name>
+						[Dot42.DexImport("SET_WALLPAPER", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_WALLPAPER = "android.permission.SET_WALLPAPER";
+						/// <java-name>
+						/// SET_WALLPAPER_HINTS
+						/// </java-name>
+						[Dot42.DexImport("SET_WALLPAPER_HINTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SET_WALLPAPER_HINTS = "android.permission.SET_WALLPAPER_HINTS";
+						/// <java-name>
+						/// SIGNAL_PERSISTENT_PROCESSES
+						/// </java-name>
+						[Dot42.DexImport("SIGNAL_PERSISTENT_PROCESSES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SIGNAL_PERSISTENT_PROCESSES = "android.permission.SIGNAL_PERSISTENT_PROCESSES";
+						/// <java-name>
+						/// STATUS_BAR
+						/// </java-name>
+						[Dot42.DexImport("STATUS_BAR", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string STATUS_BAR = "android.permission.STATUS_BAR";
+						/// <java-name>
+						/// SUBSCRIBED_FEEDS_READ
+						/// </java-name>
+						[Dot42.DexImport("SUBSCRIBED_FEEDS_READ", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SUBSCRIBED_FEEDS_READ = "android.permission.SUBSCRIBED_FEEDS_READ";
+						/// <java-name>
+						/// SUBSCRIBED_FEEDS_WRITE
+						/// </java-name>
+						[Dot42.DexImport("SUBSCRIBED_FEEDS_WRITE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SUBSCRIBED_FEEDS_WRITE = "android.permission.SUBSCRIBED_FEEDS_WRITE";
+						/// <java-name>
+						/// SYSTEM_ALERT_WINDOW
+						/// </java-name>
+						[Dot42.DexImport("SYSTEM_ALERT_WINDOW", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string SYSTEM_ALERT_WINDOW = "android.permission.SYSTEM_ALERT_WINDOW";
+						/// <java-name>
+						/// UPDATE_DEVICE_STATS
+						/// </java-name>
+						[Dot42.DexImport("UPDATE_DEVICE_STATS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string UPDATE_DEVICE_STATS = "android.permission.UPDATE_DEVICE_STATS";
+						/// <java-name>
+						/// USE_CREDENTIALS
+						/// </java-name>
+						[Dot42.DexImport("USE_CREDENTIALS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string USE_CREDENTIALS = "android.permission.USE_CREDENTIALS";
+						/// <java-name>
+						/// USE_SIP
+						/// </java-name>
+						[Dot42.DexImport("USE_SIP", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string USE_SIP = "android.permission.USE_SIP";
+						/// <java-name>
+						/// VIBRATE
+						/// </java-name>
+						[Dot42.DexImport("VIBRATE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string VIBRATE = "android.permission.VIBRATE";
+						/// <java-name>
+						/// WAKE_LOCK
+						/// </java-name>
+						[Dot42.DexImport("WAKE_LOCK", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WAKE_LOCK = "android.permission.WAKE_LOCK";
+						/// <java-name>
+						/// WRITE_APN_SETTINGS
+						/// </java-name>
+						[Dot42.DexImport("WRITE_APN_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_APN_SETTINGS = "android.permission.WRITE_APN_SETTINGS";
+						/// <java-name>
+						/// WRITE_CALENDAR
+						/// </java-name>
+						[Dot42.DexImport("WRITE_CALENDAR", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_CALENDAR = "android.permission.WRITE_CALENDAR";
+						/// <java-name>
+						/// WRITE_CONTACTS
+						/// </java-name>
+						[Dot42.DexImport("WRITE_CONTACTS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_CONTACTS = "android.permission.WRITE_CONTACTS";
+						/// <java-name>
+						/// WRITE_EXTERNAL_STORAGE
+						/// </java-name>
+						[Dot42.DexImport("WRITE_EXTERNAL_STORAGE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_EXTERNAL_STORAGE = "android.permission.WRITE_EXTERNAL_STORAGE";
+						/// <java-name>
+						/// WRITE_GSERVICES
+						/// </java-name>
+						[Dot42.DexImport("WRITE_GSERVICES", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_GSERVICES = "android.permission.WRITE_GSERVICES";
+						/// <java-name>
+						/// WRITE_HISTORY_BOOKMARKS
+						/// </java-name>
+						[Dot42.DexImport("WRITE_HISTORY_BOOKMARKS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_HISTORY_BOOKMARKS = "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS";
+						/// <java-name>
+						/// WRITE_PROFILE
+						/// </java-name>
+						[Dot42.DexImport("WRITE_PROFILE", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_PROFILE = "android.permission.WRITE_PROFILE";
+						/// <java-name>
+						/// WRITE_SECURE_SETTINGS
+						/// </java-name>
+						[Dot42.DexImport("WRITE_SECURE_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_SECURE_SETTINGS = "android.permission.WRITE_SECURE_SETTINGS";
+						/// <java-name>
+						/// WRITE_SETTINGS
+						/// </java-name>
+						[Dot42.DexImport("WRITE_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_SETTINGS = "android.permission.WRITE_SETTINGS";
+						/// <java-name>
+						/// WRITE_SMS
+						/// </java-name>
+						[Dot42.DexImport("WRITE_SMS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_SMS = "android.permission.WRITE_SMS";
+						/// <java-name>
+						/// WRITE_SYNC_SETTINGS
+						/// </java-name>
+						[Dot42.DexImport("WRITE_SYNC_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
+						public const string WRITE_SYNC_SETTINGS = "android.permission.WRITE_SYNC_SETTINGS";
+						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
+						public Permission() /* MethodBuilder.Create */ 
+						{
+						}
+
+				}
+
+		}
+
 		/// <java-name>
 		/// android/R
 		/// </java-name>
@@ -9010,713 +9702,5 @@ namespace Android
 
 		}
 
-		/// <java-name>
-		/// android/Manifest
-		/// </java-name>
-		[Dot42.DexImport("android/Manifest", AccessFlags = 49)]
-		public sealed partial class Manifest
- /* scope: __dot42__ */ 
-		{
-				[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-				public Manifest() /* MethodBuilder.Create */ 
-				{
-				}
-
-				/// <java-name>
-				/// android/Manifest$permission_group
-				/// </java-name>
-				[Dot42.DexImport("android/Manifest$permission_group", AccessFlags = 25)]
-				public sealed partial class Permission_group
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// ACCOUNTS
-						/// </java-name>
-						[Dot42.DexImport("ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCOUNTS = "android.permission-group.ACCOUNTS";
-						/// <java-name>
-						/// COST_MONEY
-						/// </java-name>
-						[Dot42.DexImport("COST_MONEY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string COST_MONEY = "android.permission-group.COST_MONEY";
-						/// <java-name>
-						/// DEVELOPMENT_TOOLS
-						/// </java-name>
-						[Dot42.DexImport("DEVELOPMENT_TOOLS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEVELOPMENT_TOOLS = "android.permission-group.DEVELOPMENT_TOOLS";
-						/// <java-name>
-						/// HARDWARE_CONTROLS
-						/// </java-name>
-						[Dot42.DexImport("HARDWARE_CONTROLS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string HARDWARE_CONTROLS = "android.permission-group.HARDWARE_CONTROLS";
-						/// <java-name>
-						/// LOCATION
-						/// </java-name>
-						[Dot42.DexImport("LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string LOCATION = "android.permission-group.LOCATION";
-						/// <java-name>
-						/// MESSAGES
-						/// </java-name>
-						[Dot42.DexImport("MESSAGES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MESSAGES = "android.permission-group.MESSAGES";
-						/// <java-name>
-						/// NETWORK
-						/// </java-name>
-						[Dot42.DexImport("NETWORK", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NETWORK = "android.permission-group.NETWORK";
-						/// <java-name>
-						/// PERSONAL_INFO
-						/// </java-name>
-						[Dot42.DexImport("PERSONAL_INFO", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSONAL_INFO = "android.permission-group.PERSONAL_INFO";
-						/// <java-name>
-						/// PHONE_CALLS
-						/// </java-name>
-						[Dot42.DexImport("PHONE_CALLS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PHONE_CALLS = "android.permission-group.PHONE_CALLS";
-						/// <java-name>
-						/// STORAGE
-						/// </java-name>
-						[Dot42.DexImport("STORAGE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string STORAGE = "android.permission-group.STORAGE";
-						/// <java-name>
-						/// SYSTEM_TOOLS
-						/// </java-name>
-						[Dot42.DexImport("SYSTEM_TOOLS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SYSTEM_TOOLS = "android.permission-group.SYSTEM_TOOLS";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public Permission_group() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-				/// <java-name>
-				/// android/Manifest$permission
-				/// </java-name>
-				[Dot42.DexImport("android/Manifest$permission", AccessFlags = 25)]
-				public sealed partial class Permission
- /* scope: __dot42__ */ 
-				{
-						/// <java-name>
-						/// ACCESS_CHECKIN_PROPERTIES
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_CHECKIN_PROPERTIES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_CHECKIN_PROPERTIES = "android.permission.ACCESS_CHECKIN_PROPERTIES";
-						/// <java-name>
-						/// ACCESS_COARSE_LOCATION
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_COARSE_LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_COARSE_LOCATION = "android.permission.ACCESS_COARSE_LOCATION";
-						/// <java-name>
-						/// ACCESS_FINE_LOCATION
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_FINE_LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_FINE_LOCATION = "android.permission.ACCESS_FINE_LOCATION";
-						/// <java-name>
-						/// ACCESS_LOCATION_EXTRA_COMMANDS
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_LOCATION_EXTRA_COMMANDS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_LOCATION_EXTRA_COMMANDS = "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS";
-						/// <java-name>
-						/// ACCESS_MOCK_LOCATION
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_MOCK_LOCATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_MOCK_LOCATION = "android.permission.ACCESS_MOCK_LOCATION";
-						/// <java-name>
-						/// ACCESS_NETWORK_STATE
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_NETWORK_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_NETWORK_STATE = "android.permission.ACCESS_NETWORK_STATE";
-						/// <java-name>
-						/// ACCESS_SURFACE_FLINGER
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_SURFACE_FLINGER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_SURFACE_FLINGER = "android.permission.ACCESS_SURFACE_FLINGER";
-						/// <java-name>
-						/// ACCESS_WIFI_STATE
-						/// </java-name>
-						[Dot42.DexImport("ACCESS_WIFI_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCESS_WIFI_STATE = "android.permission.ACCESS_WIFI_STATE";
-						/// <java-name>
-						/// ACCOUNT_MANAGER
-						/// </java-name>
-						[Dot42.DexImport("ACCOUNT_MANAGER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ACCOUNT_MANAGER = "android.permission.ACCOUNT_MANAGER";
-						/// <java-name>
-						/// ADD_VOICEMAIL
-						/// </java-name>
-						[Dot42.DexImport("ADD_VOICEMAIL", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string ADD_VOICEMAIL = "com.android.voicemail.permission.ADD_VOICEMAIL";
-						/// <java-name>
-						/// AUTHENTICATE_ACCOUNTS
-						/// </java-name>
-						[Dot42.DexImport("AUTHENTICATE_ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string AUTHENTICATE_ACCOUNTS = "android.permission.AUTHENTICATE_ACCOUNTS";
-						/// <java-name>
-						/// BATTERY_STATS
-						/// </java-name>
-						[Dot42.DexImport("BATTERY_STATS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BATTERY_STATS = "android.permission.BATTERY_STATS";
-						/// <java-name>
-						/// BIND_APPWIDGET
-						/// </java-name>
-						[Dot42.DexImport("BIND_APPWIDGET", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BIND_APPWIDGET = "android.permission.BIND_APPWIDGET";
-						/// <java-name>
-						/// BIND_DEVICE_ADMIN
-						/// </java-name>
-						[Dot42.DexImport("BIND_DEVICE_ADMIN", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BIND_DEVICE_ADMIN = "android.permission.BIND_DEVICE_ADMIN";
-						/// <java-name>
-						/// BIND_INPUT_METHOD
-						/// </java-name>
-						[Dot42.DexImport("BIND_INPUT_METHOD", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BIND_INPUT_METHOD = "android.permission.BIND_INPUT_METHOD";
-						/// <java-name>
-						/// BIND_REMOTEVIEWS
-						/// </java-name>
-						[Dot42.DexImport("BIND_REMOTEVIEWS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BIND_REMOTEVIEWS = "android.permission.BIND_REMOTEVIEWS";
-						/// <java-name>
-						/// BIND_TEXT_SERVICE
-						/// </java-name>
-						[Dot42.DexImport("BIND_TEXT_SERVICE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BIND_TEXT_SERVICE = "android.permission.BIND_TEXT_SERVICE";
-						/// <java-name>
-						/// BIND_VPN_SERVICE
-						/// </java-name>
-						[Dot42.DexImport("BIND_VPN_SERVICE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BIND_VPN_SERVICE = "android.permission.BIND_VPN_SERVICE";
-						/// <java-name>
-						/// BIND_WALLPAPER
-						/// </java-name>
-						[Dot42.DexImport("BIND_WALLPAPER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BIND_WALLPAPER = "android.permission.BIND_WALLPAPER";
-						/// <java-name>
-						/// BLUETOOTH
-						/// </java-name>
-						[Dot42.DexImport("BLUETOOTH", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BLUETOOTH = "android.permission.BLUETOOTH";
-						/// <java-name>
-						/// BLUETOOTH_ADMIN
-						/// </java-name>
-						[Dot42.DexImport("BLUETOOTH_ADMIN", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BLUETOOTH_ADMIN = "android.permission.BLUETOOTH_ADMIN";
-						/// <java-name>
-						/// BRICK
-						/// </java-name>
-						[Dot42.DexImport("BRICK", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BRICK = "android.permission.BRICK";
-						/// <java-name>
-						/// BROADCAST_PACKAGE_REMOVED
-						/// </java-name>
-						[Dot42.DexImport("BROADCAST_PACKAGE_REMOVED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BROADCAST_PACKAGE_REMOVED = "android.permission.BROADCAST_PACKAGE_REMOVED";
-						/// <java-name>
-						/// BROADCAST_SMS
-						/// </java-name>
-						[Dot42.DexImport("BROADCAST_SMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BROADCAST_SMS = "android.permission.BROADCAST_SMS";
-						/// <java-name>
-						/// BROADCAST_STICKY
-						/// </java-name>
-						[Dot42.DexImport("BROADCAST_STICKY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BROADCAST_STICKY = "android.permission.BROADCAST_STICKY";
-						/// <java-name>
-						/// BROADCAST_WAP_PUSH
-						/// </java-name>
-						[Dot42.DexImport("BROADCAST_WAP_PUSH", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string BROADCAST_WAP_PUSH = "android.permission.BROADCAST_WAP_PUSH";
-						/// <java-name>
-						/// CALL_PHONE
-						/// </java-name>
-						[Dot42.DexImport("CALL_PHONE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CALL_PHONE = "android.permission.CALL_PHONE";
-						/// <java-name>
-						/// CALL_PRIVILEGED
-						/// </java-name>
-						[Dot42.DexImport("CALL_PRIVILEGED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CALL_PRIVILEGED = "android.permission.CALL_PRIVILEGED";
-						/// <java-name>
-						/// CAMERA
-						/// </java-name>
-						[Dot42.DexImport("CAMERA", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CAMERA = "android.permission.CAMERA";
-						/// <java-name>
-						/// CHANGE_COMPONENT_ENABLED_STATE
-						/// </java-name>
-						[Dot42.DexImport("CHANGE_COMPONENT_ENABLED_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CHANGE_COMPONENT_ENABLED_STATE = "android.permission.CHANGE_COMPONENT_ENABLED_STATE";
-						/// <java-name>
-						/// CHANGE_CONFIGURATION
-						/// </java-name>
-						[Dot42.DexImport("CHANGE_CONFIGURATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CHANGE_CONFIGURATION = "android.permission.CHANGE_CONFIGURATION";
-						/// <java-name>
-						/// CHANGE_NETWORK_STATE
-						/// </java-name>
-						[Dot42.DexImport("CHANGE_NETWORK_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CHANGE_NETWORK_STATE = "android.permission.CHANGE_NETWORK_STATE";
-						/// <java-name>
-						/// CHANGE_WIFI_MULTICAST_STATE
-						/// </java-name>
-						[Dot42.DexImport("CHANGE_WIFI_MULTICAST_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CHANGE_WIFI_MULTICAST_STATE = "android.permission.CHANGE_WIFI_MULTICAST_STATE";
-						/// <java-name>
-						/// CHANGE_WIFI_STATE
-						/// </java-name>
-						[Dot42.DexImport("CHANGE_WIFI_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CHANGE_WIFI_STATE = "android.permission.CHANGE_WIFI_STATE";
-						/// <java-name>
-						/// CLEAR_APP_CACHE
-						/// </java-name>
-						[Dot42.DexImport("CLEAR_APP_CACHE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CLEAR_APP_CACHE = "android.permission.CLEAR_APP_CACHE";
-						/// <java-name>
-						/// CLEAR_APP_USER_DATA
-						/// </java-name>
-						[Dot42.DexImport("CLEAR_APP_USER_DATA", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CLEAR_APP_USER_DATA = "android.permission.CLEAR_APP_USER_DATA";
-						/// <java-name>
-						/// CONTROL_LOCATION_UPDATES
-						/// </java-name>
-						[Dot42.DexImport("CONTROL_LOCATION_UPDATES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string CONTROL_LOCATION_UPDATES = "android.permission.CONTROL_LOCATION_UPDATES";
-						/// <java-name>
-						/// DELETE_CACHE_FILES
-						/// </java-name>
-						[Dot42.DexImport("DELETE_CACHE_FILES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DELETE_CACHE_FILES = "android.permission.DELETE_CACHE_FILES";
-						/// <java-name>
-						/// DELETE_PACKAGES
-						/// </java-name>
-						[Dot42.DexImport("DELETE_PACKAGES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DELETE_PACKAGES = "android.permission.DELETE_PACKAGES";
-						/// <java-name>
-						/// DEVICE_POWER
-						/// </java-name>
-						[Dot42.DexImport("DEVICE_POWER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DEVICE_POWER = "android.permission.DEVICE_POWER";
-						/// <java-name>
-						/// DIAGNOSTIC
-						/// </java-name>
-						[Dot42.DexImport("DIAGNOSTIC", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DIAGNOSTIC = "android.permission.DIAGNOSTIC";
-						/// <java-name>
-						/// DISABLE_KEYGUARD
-						/// </java-name>
-						[Dot42.DexImport("DISABLE_KEYGUARD", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DISABLE_KEYGUARD = "android.permission.DISABLE_KEYGUARD";
-						/// <java-name>
-						/// DUMP
-						/// </java-name>
-						[Dot42.DexImport("DUMP", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string DUMP = "android.permission.DUMP";
-						/// <java-name>
-						/// EXPAND_STATUS_BAR
-						/// </java-name>
-						[Dot42.DexImport("EXPAND_STATUS_BAR", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string EXPAND_STATUS_BAR = "android.permission.EXPAND_STATUS_BAR";
-						/// <java-name>
-						/// FACTORY_TEST
-						/// </java-name>
-						[Dot42.DexImport("FACTORY_TEST", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string FACTORY_TEST = "android.permission.FACTORY_TEST";
-						/// <java-name>
-						/// FLASHLIGHT
-						/// </java-name>
-						[Dot42.DexImport("FLASHLIGHT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string FLASHLIGHT = "android.permission.FLASHLIGHT";
-						/// <java-name>
-						/// FORCE_BACK
-						/// </java-name>
-						[Dot42.DexImport("FORCE_BACK", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string FORCE_BACK = "android.permission.FORCE_BACK";
-						/// <java-name>
-						/// GET_ACCOUNTS
-						/// </java-name>
-						[Dot42.DexImport("GET_ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GET_ACCOUNTS = "android.permission.GET_ACCOUNTS";
-						/// <java-name>
-						/// GET_PACKAGE_SIZE
-						/// </java-name>
-						[Dot42.DexImport("GET_PACKAGE_SIZE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GET_PACKAGE_SIZE = "android.permission.GET_PACKAGE_SIZE";
-						/// <java-name>
-						/// GET_TASKS
-						/// </java-name>
-						[Dot42.DexImport("GET_TASKS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GET_TASKS = "android.permission.GET_TASKS";
-						/// <java-name>
-						/// GLOBAL_SEARCH
-						/// </java-name>
-						[Dot42.DexImport("GLOBAL_SEARCH", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string GLOBAL_SEARCH = "android.permission.GLOBAL_SEARCH";
-						/// <java-name>
-						/// HARDWARE_TEST
-						/// </java-name>
-						[Dot42.DexImport("HARDWARE_TEST", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string HARDWARE_TEST = "android.permission.HARDWARE_TEST";
-						/// <java-name>
-						/// INJECT_EVENTS
-						/// </java-name>
-						[Dot42.DexImport("INJECT_EVENTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string INJECT_EVENTS = "android.permission.INJECT_EVENTS";
-						/// <java-name>
-						/// INSTALL_LOCATION_PROVIDER
-						/// </java-name>
-						[Dot42.DexImport("INSTALL_LOCATION_PROVIDER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string INSTALL_LOCATION_PROVIDER = "android.permission.INSTALL_LOCATION_PROVIDER";
-						/// <java-name>
-						/// INSTALL_PACKAGES
-						/// </java-name>
-						[Dot42.DexImport("INSTALL_PACKAGES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string INSTALL_PACKAGES = "android.permission.INSTALL_PACKAGES";
-						/// <java-name>
-						/// INTERNAL_SYSTEM_WINDOW
-						/// </java-name>
-						[Dot42.DexImport("INTERNAL_SYSTEM_WINDOW", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string INTERNAL_SYSTEM_WINDOW = "android.permission.INTERNAL_SYSTEM_WINDOW";
-						/// <java-name>
-						/// INTERNET
-						/// </java-name>
-						[Dot42.DexImport("INTERNET", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string INTERNET = "android.permission.INTERNET";
-						/// <java-name>
-						/// KILL_BACKGROUND_PROCESSES
-						/// </java-name>
-						[Dot42.DexImport("KILL_BACKGROUND_PROCESSES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string KILL_BACKGROUND_PROCESSES = "android.permission.KILL_BACKGROUND_PROCESSES";
-						/// <java-name>
-						/// MANAGE_ACCOUNTS
-						/// </java-name>
-						[Dot42.DexImport("MANAGE_ACCOUNTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MANAGE_ACCOUNTS = "android.permission.MANAGE_ACCOUNTS";
-						/// <java-name>
-						/// MANAGE_APP_TOKENS
-						/// </java-name>
-						[Dot42.DexImport("MANAGE_APP_TOKENS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MANAGE_APP_TOKENS = "android.permission.MANAGE_APP_TOKENS";
-						/// <java-name>
-						/// MASTER_CLEAR
-						/// </java-name>
-						[Dot42.DexImport("MASTER_CLEAR", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MASTER_CLEAR = "android.permission.MASTER_CLEAR";
-						/// <java-name>
-						/// MODIFY_AUDIO_SETTINGS
-						/// </java-name>
-						[Dot42.DexImport("MODIFY_AUDIO_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MODIFY_AUDIO_SETTINGS = "android.permission.MODIFY_AUDIO_SETTINGS";
-						/// <java-name>
-						/// MODIFY_PHONE_STATE
-						/// </java-name>
-						[Dot42.DexImport("MODIFY_PHONE_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MODIFY_PHONE_STATE = "android.permission.MODIFY_PHONE_STATE";
-						/// <java-name>
-						/// MOUNT_FORMAT_FILESYSTEMS
-						/// </java-name>
-						[Dot42.DexImport("MOUNT_FORMAT_FILESYSTEMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MOUNT_FORMAT_FILESYSTEMS = "android.permission.MOUNT_FORMAT_FILESYSTEMS";
-						/// <java-name>
-						/// MOUNT_UNMOUNT_FILESYSTEMS
-						/// </java-name>
-						[Dot42.DexImport("MOUNT_UNMOUNT_FILESYSTEMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string MOUNT_UNMOUNT_FILESYSTEMS = "android.permission.MOUNT_UNMOUNT_FILESYSTEMS";
-						/// <java-name>
-						/// NFC
-						/// </java-name>
-						[Dot42.DexImport("NFC", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string NFC = "android.permission.NFC";
-						/// <java-name>
-						/// PERSISTENT_ACTIVITY
-						/// </java-name>
-						[Dot42.DexImport("PERSISTENT_ACTIVITY", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PERSISTENT_ACTIVITY = "android.permission.PERSISTENT_ACTIVITY";
-						/// <java-name>
-						/// PROCESS_OUTGOING_CALLS
-						/// </java-name>
-						[Dot42.DexImport("PROCESS_OUTGOING_CALLS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string PROCESS_OUTGOING_CALLS = "android.permission.PROCESS_OUTGOING_CALLS";
-						/// <java-name>
-						/// READ_CALENDAR
-						/// </java-name>
-						[Dot42.DexImport("READ_CALENDAR", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_CALENDAR = "android.permission.READ_CALENDAR";
-						/// <java-name>
-						/// READ_CONTACTS
-						/// </java-name>
-						[Dot42.DexImport("READ_CONTACTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_CONTACTS = "android.permission.READ_CONTACTS";
-						/// <java-name>
-						/// READ_FRAME_BUFFER
-						/// </java-name>
-						[Dot42.DexImport("READ_FRAME_BUFFER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_FRAME_BUFFER = "android.permission.READ_FRAME_BUFFER";
-						/// <java-name>
-						/// READ_HISTORY_BOOKMARKS
-						/// </java-name>
-						[Dot42.DexImport("READ_HISTORY_BOOKMARKS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_HISTORY_BOOKMARKS = "com.android.browser.permission.READ_HISTORY_BOOKMARKS";
-						/// <java-name>
-						/// READ_INPUT_STATE
-						/// </java-name>
-						[Dot42.DexImport("READ_INPUT_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_INPUT_STATE = "android.permission.READ_INPUT_STATE";
-						/// <java-name>
-						/// READ_LOGS
-						/// </java-name>
-						[Dot42.DexImport("READ_LOGS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_LOGS = "android.permission.READ_LOGS";
-						/// <java-name>
-						/// READ_PHONE_STATE
-						/// </java-name>
-						[Dot42.DexImport("READ_PHONE_STATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_PHONE_STATE = "android.permission.READ_PHONE_STATE";
-						/// <java-name>
-						/// READ_PROFILE
-						/// </java-name>
-						[Dot42.DexImport("READ_PROFILE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_PROFILE = "android.permission.READ_PROFILE";
-						/// <java-name>
-						/// READ_SMS
-						/// </java-name>
-						[Dot42.DexImport("READ_SMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_SMS = "android.permission.READ_SMS";
-						/// <java-name>
-						/// READ_SYNC_SETTINGS
-						/// </java-name>
-						[Dot42.DexImport("READ_SYNC_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_SYNC_SETTINGS = "android.permission.READ_SYNC_SETTINGS";
-						/// <java-name>
-						/// READ_SYNC_STATS
-						/// </java-name>
-						[Dot42.DexImport("READ_SYNC_STATS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string READ_SYNC_STATS = "android.permission.READ_SYNC_STATS";
-						/// <java-name>
-						/// REBOOT
-						/// </java-name>
-						[Dot42.DexImport("REBOOT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string REBOOT = "android.permission.REBOOT";
-						/// <java-name>
-						/// RECEIVE_BOOT_COMPLETED
-						/// </java-name>
-						[Dot42.DexImport("RECEIVE_BOOT_COMPLETED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string RECEIVE_BOOT_COMPLETED = "android.permission.RECEIVE_BOOT_COMPLETED";
-						/// <java-name>
-						/// RECEIVE_MMS
-						/// </java-name>
-						[Dot42.DexImport("RECEIVE_MMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string RECEIVE_MMS = "android.permission.RECEIVE_MMS";
-						/// <java-name>
-						/// RECEIVE_SMS
-						/// </java-name>
-						[Dot42.DexImport("RECEIVE_SMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string RECEIVE_SMS = "android.permission.RECEIVE_SMS";
-						/// <java-name>
-						/// RECEIVE_WAP_PUSH
-						/// </java-name>
-						[Dot42.DexImport("RECEIVE_WAP_PUSH", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string RECEIVE_WAP_PUSH = "android.permission.RECEIVE_WAP_PUSH";
-						/// <java-name>
-						/// RECORD_AUDIO
-						/// </java-name>
-						[Dot42.DexImport("RECORD_AUDIO", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string RECORD_AUDIO = "android.permission.RECORD_AUDIO";
-						/// <java-name>
-						/// REORDER_TASKS
-						/// </java-name>
-						[Dot42.DexImport("REORDER_TASKS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string REORDER_TASKS = "android.permission.REORDER_TASKS";
-						/// <java-name>
-						/// RESTART_PACKAGES
-						/// </java-name>
-						[Dot42.DexImport("RESTART_PACKAGES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string RESTART_PACKAGES = "android.permission.RESTART_PACKAGES";
-						/// <java-name>
-						/// SEND_SMS
-						/// </java-name>
-						[Dot42.DexImport("SEND_SMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SEND_SMS = "android.permission.SEND_SMS";
-						/// <java-name>
-						/// SET_ACTIVITY_WATCHER
-						/// </java-name>
-						[Dot42.DexImport("SET_ACTIVITY_WATCHER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_ACTIVITY_WATCHER = "android.permission.SET_ACTIVITY_WATCHER";
-						/// <java-name>
-						/// SET_ALARM
-						/// </java-name>
-						[Dot42.DexImport("SET_ALARM", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_ALARM = "com.android.alarm.permission.SET_ALARM";
-						/// <java-name>
-						/// SET_ALWAYS_FINISH
-						/// </java-name>
-						[Dot42.DexImport("SET_ALWAYS_FINISH", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_ALWAYS_FINISH = "android.permission.SET_ALWAYS_FINISH";
-						/// <java-name>
-						/// SET_ANIMATION_SCALE
-						/// </java-name>
-						[Dot42.DexImport("SET_ANIMATION_SCALE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_ANIMATION_SCALE = "android.permission.SET_ANIMATION_SCALE";
-						/// <java-name>
-						/// SET_DEBUG_APP
-						/// </java-name>
-						[Dot42.DexImport("SET_DEBUG_APP", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_DEBUG_APP = "android.permission.SET_DEBUG_APP";
-						/// <java-name>
-						/// SET_ORIENTATION
-						/// </java-name>
-						[Dot42.DexImport("SET_ORIENTATION", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_ORIENTATION = "android.permission.SET_ORIENTATION";
-						/// <java-name>
-						/// SET_POINTER_SPEED
-						/// </java-name>
-						[Dot42.DexImport("SET_POINTER_SPEED", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_POINTER_SPEED = "android.permission.SET_POINTER_SPEED";
-						/// <java-name>
-						/// SET_PREFERRED_APPLICATIONS
-						/// </java-name>
-						[Dot42.DexImport("SET_PREFERRED_APPLICATIONS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_PREFERRED_APPLICATIONS = "android.permission.SET_PREFERRED_APPLICATIONS";
-						/// <java-name>
-						/// SET_PROCESS_LIMIT
-						/// </java-name>
-						[Dot42.DexImport("SET_PROCESS_LIMIT", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_PROCESS_LIMIT = "android.permission.SET_PROCESS_LIMIT";
-						/// <java-name>
-						/// SET_TIME
-						/// </java-name>
-						[Dot42.DexImport("SET_TIME", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_TIME = "android.permission.SET_TIME";
-						/// <java-name>
-						/// SET_TIME_ZONE
-						/// </java-name>
-						[Dot42.DexImport("SET_TIME_ZONE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_TIME_ZONE = "android.permission.SET_TIME_ZONE";
-						/// <java-name>
-						/// SET_WALLPAPER
-						/// </java-name>
-						[Dot42.DexImport("SET_WALLPAPER", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_WALLPAPER = "android.permission.SET_WALLPAPER";
-						/// <java-name>
-						/// SET_WALLPAPER_HINTS
-						/// </java-name>
-						[Dot42.DexImport("SET_WALLPAPER_HINTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SET_WALLPAPER_HINTS = "android.permission.SET_WALLPAPER_HINTS";
-						/// <java-name>
-						/// SIGNAL_PERSISTENT_PROCESSES
-						/// </java-name>
-						[Dot42.DexImport("SIGNAL_PERSISTENT_PROCESSES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SIGNAL_PERSISTENT_PROCESSES = "android.permission.SIGNAL_PERSISTENT_PROCESSES";
-						/// <java-name>
-						/// STATUS_BAR
-						/// </java-name>
-						[Dot42.DexImport("STATUS_BAR", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string STATUS_BAR = "android.permission.STATUS_BAR";
-						/// <java-name>
-						/// SUBSCRIBED_FEEDS_READ
-						/// </java-name>
-						[Dot42.DexImport("SUBSCRIBED_FEEDS_READ", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SUBSCRIBED_FEEDS_READ = "android.permission.SUBSCRIBED_FEEDS_READ";
-						/// <java-name>
-						/// SUBSCRIBED_FEEDS_WRITE
-						/// </java-name>
-						[Dot42.DexImport("SUBSCRIBED_FEEDS_WRITE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SUBSCRIBED_FEEDS_WRITE = "android.permission.SUBSCRIBED_FEEDS_WRITE";
-						/// <java-name>
-						/// SYSTEM_ALERT_WINDOW
-						/// </java-name>
-						[Dot42.DexImport("SYSTEM_ALERT_WINDOW", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string SYSTEM_ALERT_WINDOW = "android.permission.SYSTEM_ALERT_WINDOW";
-						/// <java-name>
-						/// UPDATE_DEVICE_STATS
-						/// </java-name>
-						[Dot42.DexImport("UPDATE_DEVICE_STATS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string UPDATE_DEVICE_STATS = "android.permission.UPDATE_DEVICE_STATS";
-						/// <java-name>
-						/// USE_CREDENTIALS
-						/// </java-name>
-						[Dot42.DexImport("USE_CREDENTIALS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string USE_CREDENTIALS = "android.permission.USE_CREDENTIALS";
-						/// <java-name>
-						/// USE_SIP
-						/// </java-name>
-						[Dot42.DexImport("USE_SIP", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string USE_SIP = "android.permission.USE_SIP";
-						/// <java-name>
-						/// VIBRATE
-						/// </java-name>
-						[Dot42.DexImport("VIBRATE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string VIBRATE = "android.permission.VIBRATE";
-						/// <java-name>
-						/// WAKE_LOCK
-						/// </java-name>
-						[Dot42.DexImport("WAKE_LOCK", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WAKE_LOCK = "android.permission.WAKE_LOCK";
-						/// <java-name>
-						/// WRITE_APN_SETTINGS
-						/// </java-name>
-						[Dot42.DexImport("WRITE_APN_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_APN_SETTINGS = "android.permission.WRITE_APN_SETTINGS";
-						/// <java-name>
-						/// WRITE_CALENDAR
-						/// </java-name>
-						[Dot42.DexImport("WRITE_CALENDAR", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_CALENDAR = "android.permission.WRITE_CALENDAR";
-						/// <java-name>
-						/// WRITE_CONTACTS
-						/// </java-name>
-						[Dot42.DexImport("WRITE_CONTACTS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_CONTACTS = "android.permission.WRITE_CONTACTS";
-						/// <java-name>
-						/// WRITE_EXTERNAL_STORAGE
-						/// </java-name>
-						[Dot42.DexImport("WRITE_EXTERNAL_STORAGE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_EXTERNAL_STORAGE = "android.permission.WRITE_EXTERNAL_STORAGE";
-						/// <java-name>
-						/// WRITE_GSERVICES
-						/// </java-name>
-						[Dot42.DexImport("WRITE_GSERVICES", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_GSERVICES = "android.permission.WRITE_GSERVICES";
-						/// <java-name>
-						/// WRITE_HISTORY_BOOKMARKS
-						/// </java-name>
-						[Dot42.DexImport("WRITE_HISTORY_BOOKMARKS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_HISTORY_BOOKMARKS = "com.android.browser.permission.WRITE_HISTORY_BOOKMARKS";
-						/// <java-name>
-						/// WRITE_PROFILE
-						/// </java-name>
-						[Dot42.DexImport("WRITE_PROFILE", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_PROFILE = "android.permission.WRITE_PROFILE";
-						/// <java-name>
-						/// WRITE_SECURE_SETTINGS
-						/// </java-name>
-						[Dot42.DexImport("WRITE_SECURE_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_SECURE_SETTINGS = "android.permission.WRITE_SECURE_SETTINGS";
-						/// <java-name>
-						/// WRITE_SETTINGS
-						/// </java-name>
-						[Dot42.DexImport("WRITE_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_SETTINGS = "android.permission.WRITE_SETTINGS";
-						/// <java-name>
-						/// WRITE_SMS
-						/// </java-name>
-						[Dot42.DexImport("WRITE_SMS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_SMS = "android.permission.WRITE_SMS";
-						/// <java-name>
-						/// WRITE_SYNC_SETTINGS
-						/// </java-name>
-						[Dot42.DexImport("WRITE_SYNC_SETTINGS", "Ljava/lang/String;", AccessFlags = 25)]
-						public const string WRITE_SYNC_SETTINGS = "android.permission.WRITE_SYNC_SETTINGS";
-						[Dot42.DexImport("<init>", "()V", AccessFlags = 1)]
-						public Permission() /* MethodBuilder.Create */ 
-						{
-						}
-
-				}
-
-		}
-
 }
-
 

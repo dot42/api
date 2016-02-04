@@ -17,7 +17,7 @@ using Dot42.Collections;
 
 namespace Java.Util
 {
-    public class JavaListWrapper<T> : JavaCollectionWrapper<T>, System.Collections.Generic.IList<T>, System.Collections.IList
+    public class JavaListWrapper<T> : JavaCollectionWrapper<T>, System.Collections.Generic.IList<T>, System.Collections.IList, IJavaCollectionWrapper<T>
     {
         /// <summary>
         /// Default ctor
@@ -36,7 +36,7 @@ namespace Java.Util
         }
 
         /// <summary>
-        /// Add ths given element to the end of this list.
+        /// Add the given element to the end of this list.
         /// </summary>
         /// <returns>The index at which the element was added or -1 if the element was not added.</returns>
         int System.Collections.IList.Add(object item)
@@ -111,7 +111,7 @@ namespace Java.Util
         /// </summary>
         bool System.Collections.IList.Contains(object element)
         {
-            return Contains((T) element);
+            return base.Contains((T) element);
         }
 
         /// <summary>
@@ -133,14 +133,6 @@ namespace Java.Util
         }
 
         /// <summary>
-        /// Is the given element contained in this list?
-        /// </summary>
-        bool System.Collections.Generic.IList<T>.Contains(T element)
-        {
-            return Contains(element);
-        }
-
-        /// <summary>
         /// Gets/sets an item in this list at the given index.
         /// </summary>
         T System.Collections.Generic.IList<T>.this[int index]
@@ -152,7 +144,7 @@ namespace Java.Util
         /// <summary>
         /// Gets the wapped list.
         /// </summary>
-        protected Java.Util.IList<T> List { get { return (IList<T>) Collection; } }
+        protected Java.Util.IList<T> List { get { return (IList<T>) base.Collection; } }
     }
 }
 

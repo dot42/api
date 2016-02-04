@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Dot42;
-using Java.Io;
+using Java.IO;
 using Org.Xmlpull.V1;
 
 namespace System.Xml.Linq

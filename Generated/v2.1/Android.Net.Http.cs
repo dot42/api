@@ -1,23 +1,8 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: Android.Net.Http.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace Android.Net.Http
 {
 		/// <summary>
-		/// <para>SSL certificate info (certificate details) class </para>    
+		///  <para>SSL certificate info (certificate details) class </para>    
 		/// </summary>
 		/// <java-name>
 		/// android/net/http/SslCertificate
@@ -32,7 +17,7 @@ namespace Android.Net.Http
 				}
 
 				/// <summary>
-				/// <para>Creates a new SSL certificate object from an X509 certificate </para>        
+				///  <para>Creates a new SSL certificate object from an X509 certificate </para>        
 				/// </summary>
 				[Dot42.DexImport("<init>", "(Ljava/security/cert/X509Certificate;)V", AccessFlags = 1)]
 				public SslCertificate(global::Java.Security.Cert.X509Certificate certificate) /* MethodBuilder.Create */ 
@@ -40,100 +25,40 @@ namespace Android.Net.Http
 				}
 
 				/// <summary>
-				/// <para>Saves the certificate state to a bundle </para>        
+				///  <para>Saves the certificate state to a bundle </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>A bundle with the certificate stored in it or null if fails </para>
+				///  <para>A bundle with the certificate stored in it or null if fails </para>
 				/// </returns>
 				/// <java-name>
 				/// saveState
 				/// </java-name>
 				[Dot42.DexImport("saveState", "(Landroid/net/http/SslCertificate;)Landroid/os/Bundle;", AccessFlags = 9)]
-				public static global::Android.Os.Bundle SaveState(global::Android.Net.Http.SslCertificate certificate) /* MethodBuilder.Create */ 
+				public static global::Android.OS.Bundle SaveState(global::Android.Net.Http.SslCertificate certificate) /* MethodBuilder.Create */ 
 				{
-						return default(global::Android.Os.Bundle);
+						return default(global::Android.OS.Bundle);
 				}
 
 				/// <summary>
-				/// <para>Restores the certificate stored in the bundle </para>        
+				///  <para>Restores the certificate stored in the bundle </para>        
 				/// </summary>
 				/// <returns>
-				/// <para>The SSL certificate stored in the bundle or null if fails </para>
+				///  <para>The SSL certificate stored in the bundle or null if fails </para>
 				/// </returns>
 				/// <java-name>
 				/// restoreState
 				/// </java-name>
 				[Dot42.DexImport("restoreState", "(Landroid/os/Bundle;)Landroid/net/http/SslCertificate;", AccessFlags = 9)]
-				public static global::Android.Net.Http.SslCertificate RestoreState(global::Android.Os.Bundle bundle) /* MethodBuilder.Create */ 
+				public static global::Android.Net.Http.SslCertificate RestoreState(global::Android.OS.Bundle bundle) /* MethodBuilder.Create */ 
 				{
 						return default(global::Android.Net.Http.SslCertificate);
 				}
 
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use getValidNotBeforeDate() </para></xrefdescription></xrefsect></para>        
+				///  <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Not-before date from the certificate validity period in ISO 8601 format or "" if none has been set</para>
-				/// </returns>
-				/// <java-name>
-				/// getValidNotBefore
-				/// </java-name>
-				[Dot42.DexImport("getValidNotBefore", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetValidNotBefore() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use getValidNotAfterDate() </para></xrefdescription></xrefsect></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>Not-after date from the certificate validity period in ISO 8601 format or "" if none has been set</para>
-				/// </returns>
-				/// <java-name>
-				/// getValidNotAfter
-				/// </java-name>
-				[Dot42.DexImport("getValidNotAfter", "()Ljava/lang/String;", AccessFlags = 1)]
-				public virtual string GetValidNotAfter() /* MethodBuilder.Create */ 
-				{
-						return default(string);
-				}
-
-				/// <summary>
-				/// <para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>Issued-to distinguished name or null if none has been set </para>
-				/// </returns>
-				/// <java-name>
-				/// getIssuedTo
-				/// </java-name>
-				[Dot42.DexImport("getIssuedTo", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-				public virtual global::Android.Net.Http.SslCertificate.DName GetIssuedTo() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Http.SslCertificate.DName);
-				}
-
-				/// <summary>
-				/// <para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>Issued-by distinguished name or null if none has been set </para>
-				/// </returns>
-				/// <java-name>
-				/// getIssuedBy
-				/// </java-name>
-				[Dot42.DexImport("getIssuedBy", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-				public virtual global::Android.Net.Http.SslCertificate.DName GetIssuedBy() /* MethodBuilder.Create */ 
-				{
-						return default(global::Android.Net.Http.SslCertificate.DName);
-				}
-
-				/// <summary>
-				/// <para></para>        
-				/// </summary>
-				/// <returns>
-				/// <para>A string representation of this certificate for debugging </para>
+				///  <para>A string representation of this certificate for debugging </para>
 				/// </returns>
 				/// <java-name>
 				/// toString
@@ -145,72 +70,72 @@ namespace Android.Net.Http
 				}
 
 				[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-				internal SslCertificate() /* TypeBuilder.AddDefaultConstructor */ 
+				protected internal SslCertificate() /* TypeBuilder.AddDefaultConstructor */ 
 				{
 				}
 
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use getValidNotBeforeDate() </para></xrefdescription></xrefsect></para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use getValidNotBeforeDate() </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Not-before date from the certificate validity period in ISO 8601 format or "" if none has been set</para>
+				///  <para>Not-before date from the certificate validity period in ISO 8601 format or "" if none has been set</para>
 				/// </returns>
 				/// <java-name>
 				/// getValidNotBefore
 				/// </java-name>
-				public string ValidNotBefore
+				public virtual string ValidNotBefore
 				{
-				[Dot42.DexImport("getValidNotBefore", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetValidNotBefore(); }
+						[Dot42.DexImport("getValidNotBefore", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <summary>
-				/// <para><xrefsect><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use getValidNotAfterDate() </para></xrefdescription></xrefsect></para>        
+				///  <para> <xrefsect> <xreftitle>Deprecated</xreftitle> <xrefdescription> <para>Use getValidNotAfterDate() </para></xrefdescription></xrefsect></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Not-after date from the certificate validity period in ISO 8601 format or "" if none has been set</para>
+				///  <para>Not-after date from the certificate validity period in ISO 8601 format or "" if none has been set</para>
 				/// </returns>
 				/// <java-name>
 				/// getValidNotAfter
 				/// </java-name>
-				public string ValidNotAfter
+				public virtual string ValidNotAfter
 				{
-				[Dot42.DexImport("getValidNotAfter", "()Ljava/lang/String;", AccessFlags = 1)]
-						get{ return GetValidNotAfter(); }
+						[Dot42.DexImport("getValidNotAfter", "()Ljava/lang/String;", AccessFlags = 1)]
+						get{ return default(string); }
 				}
 
 				/// <summary>
-				/// <para></para>        
+				///  <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Issued-to distinguished name or null if none has been set </para>
+				///  <para>Issued-to distinguished name or null if none has been set </para>
 				/// </returns>
 				/// <java-name>
 				/// getIssuedTo
 				/// </java-name>
-				public global::Android.Net.Http.SslCertificate.DName IssuedTo
+				public virtual global::Android.Net.Http.SslCertificate.DName IssuedTo
 				{
-				[Dot42.DexImport("getIssuedTo", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-						get{ return GetIssuedTo(); }
+						[Dot42.DexImport("getIssuedTo", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Http.SslCertificate.DName); }
 				}
 
 				/// <summary>
-				/// <para></para>        
+				///  <para></para>        
 				/// </summary>
 				/// <returns>
-				/// <para>Issued-by distinguished name or null if none has been set </para>
+				///  <para>Issued-by distinguished name or null if none has been set </para>
 				/// </returns>
 				/// <java-name>
 				/// getIssuedBy
 				/// </java-name>
-				public global::Android.Net.Http.SslCertificate.DName IssuedBy
+				public virtual global::Android.Net.Http.SslCertificate.DName IssuedBy
 				{
-				[Dot42.DexImport("getIssuedBy", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
-						get{ return GetIssuedBy(); }
+						[Dot42.DexImport("getIssuedBy", "()Landroid/net/http/SslCertificate$DName;", AccessFlags = 1)]
+						get{ return default(global::Android.Net.Http.SslCertificate.DName); }
 				}
 
 				/// <summary>
-				/// <para>A distinguished name helper class: a 3-tuple of: <ul><li><para>the most specific common name (CN) </para></li><li><para>the most specific organization (O) </para></li><li><para>the most specific organizational unit (OU) <ul><li></li></ul></para></li></ul></para>    
+				///  <para>A distinguished name helper class: a 3-tuple of:  <ul> <li> <para>the most specific common name (CN) </para></li> <li> <para>the most specific organization (O) </para></li> <li> <para>the most specific organizational unit (OU)  <ul> <li></li></ul></para></li></ul></para>    
 				/// </summary>
 				/// <java-name>
 				/// android/net/http/SslCertificate$DName
@@ -230,10 +155,10 @@ namespace Android.Net.Http
 						}
 
 						/// <summary>
-						/// <para></para>        
+						///  <para></para>        
 						/// </summary>
 						/// <returns>
-						/// <para>The distinguished name (normally includes CN, O, and OU names) </para>
+						///  <para>The distinguished name (normally includes CN, O, and OU names) </para>
 						/// </returns>
 						/// <java-name>
 						/// getDName
@@ -244,99 +169,54 @@ namespace Android.Net.Http
 								return default(string);
 						}
 
-						/// <summary>
-						/// <para></para>        
-						/// </summary>
-						/// <returns>
-						/// <para>The most specific Common-name (CN) component of this name </para>
-						/// </returns>
-						/// <java-name>
-						/// getCName
-						/// </java-name>
-						[Dot42.DexImport("getCName", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetCName() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <summary>
-						/// <para></para>        
-						/// </summary>
-						/// <returns>
-						/// <para>The most specific Organization (O) component of this name </para>
-						/// </returns>
-						/// <java-name>
-						/// getOName
-						/// </java-name>
-						[Dot42.DexImport("getOName", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetOName() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
-						/// <summary>
-						/// <para></para>        
-						/// </summary>
-						/// <returns>
-						/// <para>The most specific Organizational Unit (OU) component of this name </para>
-						/// </returns>
-						/// <java-name>
-						/// getUName
-						/// </java-name>
-						[Dot42.DexImport("getUName", "()Ljava/lang/String;", AccessFlags = 1)]
-						public virtual string GetUName() /* MethodBuilder.Create */ 
-						{
-								return default(string);
-						}
-
 						[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-						internal DName() /* TypeBuilder.AddDefaultConstructor */ 
+						protected internal DName() /* TypeBuilder.AddDefaultConstructor */ 
 						{
 						}
 
 						/// <summary>
-						/// <para></para>        
+						///  <para></para>        
 						/// </summary>
 						/// <returns>
-						/// <para>The most specific Common-name (CN) component of this name </para>
+						///  <para>The most specific Common-name (CN) component of this name </para>
 						/// </returns>
 						/// <java-name>
 						/// getCName
 						/// </java-name>
-						public string CName
+						public virtual string CName
 						{
-						[Dot42.DexImport("getCName", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetCName(); }
+								[Dot42.DexImport("getCName", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <summary>
-						/// <para></para>        
+						///  <para></para>        
 						/// </summary>
 						/// <returns>
-						/// <para>The most specific Organization (O) component of this name </para>
+						///  <para>The most specific Organization (O) component of this name </para>
 						/// </returns>
 						/// <java-name>
 						/// getOName
 						/// </java-name>
-						public string OName
+						public virtual string OName
 						{
-						[Dot42.DexImport("getOName", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetOName(); }
+								[Dot42.DexImport("getOName", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 						/// <summary>
-						/// <para></para>        
+						///  <para></para>        
 						/// </summary>
 						/// <returns>
-						/// <para>The most specific Organizational Unit (OU) component of this name </para>
+						///  <para>The most specific Organizational Unit (OU) component of this name </para>
 						/// </returns>
 						/// <java-name>
 						/// getUName
 						/// </java-name>
-						public string UName
+						public virtual string UName
 						{
-						[Dot42.DexImport("getUName", "()Ljava/lang/String;", AccessFlags = 1)]
-								get{ return GetUName(); }
+								[Dot42.DexImport("getUName", "()Ljava/lang/String;", AccessFlags = 1)]
+								get{ return default(string); }
 						}
 
 				}
@@ -344,5 +224,4 @@ namespace Android.Net.Http
 		}
 
 }
-
 

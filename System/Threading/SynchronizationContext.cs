@@ -14,8 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Runtime.ConstrainedExecution;
-
 using Android.App;
+using Dot42;
 using Java.Lang;
 
 using Dot42.Internal;
@@ -85,9 +85,7 @@ namespace System.Threading
 		
 		public virtual void Post (SendOrPostCallback d, object state)
 		{
-            var thread = new Thread(new MySendOrPostRunner(d, state));
-            thread.Name = "Synchronisation context worker thread";
-            thread.Start();
+            ThreadPool.QueueUserWorkItem(new MySendOrPostRunner(d, state));
 		}
 		
 		public virtual void Send (SendOrPostCallback d, object state)
@@ -122,13 +120,14 @@ namespace System.Threading
             InstanceSynchronizationContext.RegisterActivity(instanceReference);
         }
 
+        [NotImplemented]
 	    protected void SetWaitNotificationRequired ()
 		{
 			notification_required = true;
             throw new NotImplementedException("System.Threading.SynchronizationContect.SetWaitNotificationRequired");
 		}
 
-		[CLSCompliant (false)]
+		[CLSCompliant (false)][NotImplemented]
 		public virtual int Wait (IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout)
 		{
 			return WaitHelper (waitHandles, waitAll, millisecondsTimeout);

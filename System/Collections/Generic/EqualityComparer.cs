@@ -26,35 +26,82 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-using System.Runtime.InteropServices;
+
+using System.Diagnostics.CodeAnalysis;
+using Android.Widget;
+using Dot42.Collections.Specialized;
+using Java.Lang.Ref;
+using Java.Util.Concurrent;
 
 namespace System.Collections.Generic {
 	[Serializable]
-	public abstract class EqualityComparer <T> : IEqualityComparer, IEqualityComparer <T> {
+	public abstract class EqualityComparer <T> : IEqualityComparer, IEqualityComparer <T> 
+    {
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
+        private static readonly ConcurrentTypeHashMap<object> Comparers = new ConcurrentTypeHashMap<object>();
+        //private static readonly ConcurrentHashMap<Type, object> Comparers = new ConcurrentHashMap<Type, object>();
 		
-		static EqualityComparer ()
-		{
-			if (typeof (T) == typeof (string)){
-				_default = (EqualityComparer<T>) (object) new InternalStringComparer ();
-				return;
-			}
-			if (typeof (IEquatable <T>).IsAssignableFrom (typeof (T)))
-				_default = (EqualityComparer <T>) Activator.CreateInstance (typeof (GenericEqualityComparer <>).MakeGenericType (typeof (T)));
-			else
-				_default = new DefaultComparer ();
-		}
-		
-		public abstract int GetHashCode (T obj);
+	    public abstract int GetHashCode (T obj);
 		public abstract bool Equals (T x, T y);
 	
-		static readonly EqualityComparer <T> _default;
-		
-		public static EqualityComparer <T> Default {
-			get {
-				return _default;
-			}
-		}
+        // Works with dot42's generics implementation.
+        // We try to return the very same instance for the same class.
+	    public static EqualityComparer<T> Default
+	    {
+	        get
+	        {
+                object previous = null;
+	            var type = typeof (T);
+                
+	            var comparer = Comparers.Get(type);
+                if(comparer == null)
+	                previous = Comparers.PutIfAbsent(type, comparer = CreateComparer(type));
+
+	            return (EqualityComparer<T>) (previous ?? comparer);
+	        }
+	    }
+
+        // The goal is to hold weak-/softreferences to both type and comparer,
+        // to allow the garbage collector to reclaim unused types and classloaders.
+        // If java would support Ephemerons, we would use them to attach our comparer
+        // to the type.
+	    //public static EqualityComparer<T> Default 
+        //{
+        //    get
+        //    {
+        //        object previous = null;
+        //        Reference<object> comparerRef = Comparers.Get(typeof (T));
+        //        object comparer = comparerRef == null ? null : comparerRef.Get();
+        //        object newComparer = null;
+        //        SoftReference<object> newReference = null;
+
+        //        while (comparer == null)
+        //        {
+        //            comparer = newComparer = newComparer ?? CreateComparer(typeof (T));
+        //            newReference = newReference ?? new SoftReference<object>(comparer);
+
+        //            if (previous == null)
+        //            {
+        //                // detect race conditions.
+        //                previous = Comparers.PutIfAbsent(typeof (T), newReference);
+        //                if (previous != null)
+        //                    comparer = ((Reference<object>) previous).Get();
+        //            }
+        //            else
+        //            {
+        //                // Without ephemerons, we seem to have no chance to force returning
+        //                // the very same instance. A third thread could just grab our just
+        //                // set instance, if we would try to revert a wrong setting.
+        //                // This means that two concurrent calls to EqualityComparer<T>.Default 
+        //                // possibly lead to two different instances. Probably not a big
+        //                // thing.
+        //                previous = Comparers.Put(typeof(T), newReference);
+        //                comparer = newComparer;
+        //            }
+        //        }
+        //        return (EqualityComparer<T>)comparer;
+        //    }
+        //}
 
 		int IEqualityComparer.GetHashCode (object obj)
 		{
@@ -81,9 +128,23 @@ namespace System.Collections.Generic {
 				throw new ArgumentException ("Argument is not compatible", "y");
 			return Equals ((T)x, (T)y);
 		}
-		
+
+        private static EqualityComparer<T> CreateComparer(Type type)
+        {
+            if (type == typeof(string))
+            {
+                return (EqualityComparer<T>)(object)new InternalStringComparer();
+            }
+            if (typeof(IEquatable<T>).IsAssignableFrom(type))
+                return (EqualityComparer<T>)
+                        Activator.CreateInstance(typeof(GenericEqualityComparer<>).MakeGenericType(typeof(T)));
+            else
+                return new DefaultComparer();
+        }
+
 		[Serializable]
-		sealed class DefaultComparer : EqualityComparer<T> {
+		internal sealed class DefaultComparer : EqualityComparer<T> 
+        {
 	
 			public override int GetHashCode (T obj)
 			{
@@ -125,7 +186,8 @@ namespace System.Collections.Generic {
 	}
 
 	[Serializable]
-	sealed class GenericEqualityComparer <T> : EqualityComparer <T> where T : IEquatable <T> {
+	sealed class GenericEqualityComparer <T> : EqualityComparer <T> where T : IEquatable <T> 
+    {
 
 		public override int GetHashCode (T obj)
 		{

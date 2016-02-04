@@ -17,7 +17,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using Dot42;
-using Java.Io;
+using Java.IO;
 using Java.Net;
 
 namespace System.Net
@@ -67,7 +67,7 @@ namespace System.Net
             try
             {
                 connection = OpenConnection(address);
-                inputStream = connection.GetInputStream();
+                inputStream = connection.InputStream;
                 var memStream = new ByteArrayOutputStream();
                 var buffer = new byte[BUFFER_SIZE];
                 int len;
@@ -143,7 +143,7 @@ namespace System.Net
             try
             {
                 connection = OpenConnection(address);
-                inputStream = connection.GetInputStream();
+                inputStream = connection.InputStream;
                 var reader = new InputStreamReader(inputStream);
                 var buffer = new char[BUFFER_SIZE];
                 var builder = new StringBuilder();
@@ -221,7 +221,7 @@ namespace System.Net
             try
             {
                 connection = OpenConnection(address);
-                inputStream = connection.GetInputStream();
+                inputStream = connection.InputStream;
                 var buffer = new byte[BUFFER_SIZE];
                 int len;
 
@@ -278,7 +278,7 @@ namespace System.Net
             var httpConnection = connection as HttpURLConnection;
             if (httpConnection != null)
             {
-                httpConnection.SetInstanceFollowRedirects(true);
+                httpConnection.InstanceFollowRedirects = true;
             }
             return connection;
         }

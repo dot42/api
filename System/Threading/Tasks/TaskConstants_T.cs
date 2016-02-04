@@ -14,12 +14,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using System.Runtime.CompilerServices;
+using System.Diagnostics.CodeAnalysis;
 
 namespace System.Threading.Tasks
 {
 	internal class TaskConstants<T>
 	{
+        [SuppressMessage("dot42", "StaticFieldInGenericType")]
 	    private static Task<T> canceled = null;
 
 	    internal static Task<T> Canceled

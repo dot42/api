@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System.Globalization;
+using Dot42;
 using Dot42.Internal;
 
 namespace System
@@ -31,7 +32,7 @@ namespace System
         {
             return (value == PositiveInfinity);
         }
-
+        // TODO: we get more than necessary boxing/unboxing on this call.
         public int CompareTo(double value)
         {
             if(IsNaN())  
@@ -48,7 +49,7 @@ namespace System
         {
             if (value == null) return +1;
             if(!(value is double)) throw new ArgumentException("value is not a double");
-
+            // TODO: here we unbox the value, only to have it boxed again shortly afterwards.
             return CompareTo((double)value);
         }
 
@@ -88,19 +89,22 @@ namespace System
             return Parse(s);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format(DoubleValue(), provider);
+            return NumberFormatter.Format(this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, DoubleValue(), null);
+            return NumberFormatter.Format(format, this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, DoubleValue(), provider);
+            return NumberFormatter.Format(format, this, provider);
         }
 
         /// <summary>
@@ -109,6 +113,12 @@ namespace System
         public TypeCode GetTypeCode()
         {
             return TypeCode.Double;
+        }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(double other)
+        {
+            return other == this;
         }
     }
 }

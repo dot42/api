@@ -314,7 +314,7 @@ namespace System
         [CLSCompliant(false)]
         public static bool ToBoolean(ulong value)
         {
-            return (value != 0);
+            return (value != (ulong)0);
         }
 
         [CLSCompliant(false)]
@@ -869,7 +869,7 @@ namespace System
 
         public static double ToDouble(bool value)
         {
-            return value ? 1 : 0;
+            return (double)(value ? 1 : 0);
         }
 
         public static double ToDouble(byte value)
@@ -1034,7 +1034,7 @@ namespace System
         [CLSCompliant(false)]
         public static short ToInt16(sbyte value)
         {
-            return value;
+            return (short)value;
         }
 
         public static short ToInt16(short value)
@@ -1116,6 +1116,7 @@ namespace System
             if (value is double) return ToInt16((double)value);
             if (value is DateTime) return ToInt16((DateTime)value);
             if (value is string) return ToInt16((string)value, provider);
+            if (value is Dot42.Internal.Enum) return (short)((Dot42.Internal.Enum)value).IntValue();
 
             return ((IConvertible)value).ToInt16(provider);
         }
@@ -1252,6 +1253,7 @@ namespace System
             if (value is double) return ToInt32((double)value);
             if (value is DateTime) return ToInt32((DateTime)value);
             if (value is string) return ToInt32((string)value, provider);
+            if (value is Dot42.Internal.Enum) return ((Dot42.Internal.Enum)value).IntValue();
 
             return ((IConvertible)value).ToInt32(provider);
         }
@@ -1260,7 +1262,7 @@ namespace System
 
         public static long ToInt64(bool value)
         {
-            return value ? 1 : 0;
+            return value ? 1L : 0L;
         }
 
         public static long ToInt64(byte value)
@@ -1321,14 +1323,14 @@ namespace System
         public static long ToInt64(string value)
         {
             if (value == null)
-                return 0; // LAMESPEC: Spec says throw ArgumentNullException
+                return 0L; // LAMESPEC: Spec says throw ArgumentNullException
             return Int64.Parse(value);
         }
 
         public static long ToInt64(string value, IFormatProvider provider)
         {
             if (value == null)
-                return 0; // LAMESPEC: Spec says throw ArgumentNullException
+                return 0L; // LAMESPEC: Spec says throw ArgumentNullException
             return Int64.Parse(value, provider);
         }
 
@@ -1358,14 +1360,14 @@ namespace System
         public static long ToInt64(object value)
         {
             if (value == null)
-                return 0;
+                return 0L;
             return ToInt64(value, null);
         }
 
         public static long ToInt64(object value, IFormatProvider provider)
         {
             if (value == null)
-                return 0;
+                return 0L;
 
             if (value is bool) return ToInt64((bool)value);
             if (value is byte) return ToInt64((byte)value);
@@ -1377,6 +1379,7 @@ namespace System
             if (value is double) return ToInt64((double)value);
             if (value is DateTime) return ToInt64((DateTime)value);
             if (value is string) return ToInt64((string)value, provider);
+            if (value is Dot42.Internal.Enum) return ((Dot42.Internal.Enum) value).LongValue();
 
             return ((IConvertible)value).ToInt64(provider);
         }
@@ -1534,7 +1537,7 @@ namespace System
 
         public static float ToSingle(bool value)
         {
-            return value ? 1 : 0;
+            return value ? 1f : 0f;
         }
 
         public static float ToSingle(byte value)
@@ -1651,12 +1654,12 @@ namespace System
 
         public static string ToString(bool value)
         {
-            return value.ToString();
+            return value? "True" : "False";
         }
 
         public static string ToString(bool value, IFormatProvider provider)
         {
-            return value.ToString(); // the same as ToString (bool).
+            return value ? "True" : "False"; // the same as ToString (bool).
         }
 
         public static string ToString(byte value)
@@ -1668,6 +1671,7 @@ namespace System
         {
             return value.ToString(provider);
         }
+
 
         public static string ToString(byte value, int toBase)
         {
@@ -1690,6 +1694,7 @@ namespace System
                     throw new ArgumentException(Locale.GetText("toBase is not valid."));
             }
         }
+         
 
         public static string ToString(char value)
         {
@@ -2405,6 +2410,9 @@ namespace System
                 throw new ArgumentException("fromBase is not valid.");
             if (value == null)
                 return 0;
+            if (value == "")
+                throw new ArgumentOutOfRangeException("value");
+
 
             int chars = 0;
             int result = 0;
@@ -2522,12 +2530,16 @@ namespace System
         {
             if (NotValidBase(fromBase))
                 throw new ArgumentException("fromBase is not valid.");
+
             if (value == null)
-                return 0;
+                return 0L;
+
+            if (value == "")
+                throw new ArgumentOutOfRangeException("value");
 
             int chars = 0;
             int digitValue = -1;
-            long result = 0;
+            long result = 0L;
             bool negative = false;
 
             int i = 0;
@@ -2864,6 +2876,66 @@ namespace System
                         return convertValue.ToType(conversionType, provider);
                 }
             }
+
+            if (conversionType == conversionTable[0]) // 0 Empty
+                throw new ArgumentNullException();
+
+            else if (conversionType == conversionTable[1]) // 1 TypeCode.Object
+                return (object)value;
+
+            else if (conversionType == conversionTable[2]) // 2 TypeCode.DBNull
+                throw new InvalidCastException(
+                    "Cannot cast to DBNull, it's not IConvertible");
+
+            else if (conversionType == conversionTable[3]) // 3 TypeCode.Boolean
+                return ToBoolean(value, provider);
+
+            else if (conversionType == conversionTable[4]) // 4 TypeCode.Char
+                return ToChar(value, provider);
+
+            else if (conversionType == conversionTable[5]) // 5 TypeCode.SByte
+                return ToSByte(value, provider);
+
+            else if (conversionType == conversionTable[6]) // 6 TypeCode.Byte
+                return ToByte(value, provider);
+
+            else if (conversionType == conversionTable[7]) // 7 TypeCode.Int16
+                return ToInt16(value, provider);
+
+            else if (conversionType == conversionTable[8]) // 8 TypeCode.UInt16
+                return ToUInt16(value, provider);
+
+            else if (conversionType == conversionTable[9]) // 9 TypeCode.Int32
+                return ToInt32(value, provider);
+
+            else if (conversionType == conversionTable[10]) // 10 TypeCode.UInt32
+                return ToUInt32(value, provider);
+
+            else if (conversionType == conversionTable[11]) // 11 TypeCode.Int64
+                return ToInt64(value, provider);
+
+            else if (conversionType == conversionTable[12]) // 12 TypeCode.UInt64
+                return ToUInt64(value, provider);
+
+            else if (conversionType == conversionTable[13]) // 13 TypeCode.Single
+                return ToSingle(value, provider);
+
+            else if (conversionType == conversionTable[14]) // 14 TypeCode.Double
+                return ToDouble(value, provider);
+
+            else if (conversionType == conversionTable[15]) // 15 TypeCode.Decimal
+                return ToDecimal(value, provider);
+
+            else if (conversionType == conversionTable[16]) // 16 TypeCode.DateTime
+                return ToDateTime(value, provider);
+
+            else if (conversionType == conversionTable[18]) // 18 TypeCode.String
+                return ToString(value, provider);
+
+            else if (conversionType.IsEnum)
+                return Dot42.Internal.Enum.GetFromObject(conversionType, value);
+
+
             // Not in the conversion table
             throw new InvalidCastException((Locale.GetText(
                                  "Value is not a convertible object: " + value.GetType().ToString() + " to " + conversionType.FullName)));

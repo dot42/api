@@ -13,14 +13,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using JOutputStream = Java.Io.OutputStream;
+using JOutputStream = Java.IO.OutputStream;
 
 namespace System.IO
 {
     /// <summary>
     /// Wrapper for java OutputStream.
     /// </summary>
-	internal class JavaOutputStreamWrapper : Stream
+	public class JavaOutputStreamWrapper : Stream
     {
         private readonly JOutputStream stream;
         private long position;
@@ -42,7 +42,10 @@ namespace System.IO
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-                stream.Close();
+            { 
+                try{ stream.Close(); }
+                catch {}
+            }
         }
 
         /// <summary>

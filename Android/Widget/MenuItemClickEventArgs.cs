@@ -14,11 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 
 namespace Android.Widget
 {
-	public class MenuItemClickEventArgs : View.ViewEventArgs
+	public class MenuItemClickEventArgs : Views.ViewEventArgs
 	{
 	    public MenuItemClickEventArgs(IMenuItem menuItem)
 	    {
@@ -28,7 +28,7 @@ namespace Android.Widget
 	    /// <summary>
         /// MenuItem that was clicked.
         /// </summary>
-	    public View.IMenuItem MenuItem { get; private set; }
+	    public Views.IMenuItem MenuItem { get; private set; }
     }
 }
 

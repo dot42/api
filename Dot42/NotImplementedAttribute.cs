@@ -21,8 +21,16 @@ namespace Dot42
     /// This attribute is attached to classes and methods that provide only stub methods, but no real implementation.
     /// </summary>
 	[AttributeUsage(AttributeTargets.All)]
-    public sealed class NotImplementedAttribute : Attribute
+    [Ignore]
+    public sealed class NotImplementedAttribute : ObsoleteAttribute
 	{
+        public NotImplementedAttribute() : base("this method has not yet been implemented in Dot42")
+        {
+        }
+        public NotImplementedAttribute(string message)
+            : base(message)
+        {
+        }
 	}
 }
 

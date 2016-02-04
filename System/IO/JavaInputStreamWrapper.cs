@@ -13,14 +13,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using JInputStream = Java.Io.InputStream;
+using JInputStream = Java.IO.InputStream;
 
 namespace System.IO
 {
     /// <summary>
     /// Stream wrapper for java InputStream.
     /// </summary>
-	internal class JavaInputStreamWrapper : Stream
+	public class JavaInputStreamWrapper : Stream
 	{
 	    private readonly JInputStream stream;
         private long position;
@@ -42,7 +42,11 @@ namespace System.IO
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-                stream.Close();
+            {
+                try{ stream.Close(); }
+                catch {}
+            }
+                
         }
 
         /// <summary>

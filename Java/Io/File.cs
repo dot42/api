@@ -15,7 +15,7 @@
 // limitations under the License.
 using Java.Lang;
 
-namespace Java.Io
+namespace Java.IO
 {
 	partial class File
 	{
@@ -26,7 +26,7 @@ namespace Java.Io
         {
             if (ReferenceEquals(file, null))
                 return null;
-            return file.GetAbsolutePath();
+            return file.AbsolutePath;
         }
     }
 }

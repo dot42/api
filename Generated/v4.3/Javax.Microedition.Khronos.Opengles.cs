@@ -1,221 +1,207 @@
-// Copyright (C) 2014 dot42
-//
-// Original filename: Javax.Microedition.Khronos.Opengles.cs
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-#pragma warning disable 1717
+﻿#pragma warning disable 1717
 namespace Javax.Microedition.Khronos.Opengles
 {
 		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL10Ext
+		/// javax/microedition/khronos/opengles/GL
 		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL10Ext", AccessFlags = 1537)]
-		public partial interface IGL10Ext : global::Javax.Microedition.Khronos.Opengles.IGL
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL", AccessFlags = 1537)]
+		public partial interface IGL
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// glQueryMatrixxOES
-				/// </java-name>
-				[Dot42.DexImport("glQueryMatrixxOES", "([II[II)I", AccessFlags = 1025)]
-				int GlQueryMatrixxOES(int[] mantissa, int mantissaOffset, int[] exponent, int exponentOffset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glQueryMatrixxOES
-				/// </java-name>
-				[Dot42.DexImport("glQueryMatrixxOES", "(Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)I", AccessFlags = 1025)]
-				int GlQueryMatrixxOES(global::Java.Nio.IntBuffer mantissa, global::Java.Nio.IntBuffer exponent) /* MethodBuilder.Create */ ;
-
 		}
 
 		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL11Ext
+		/// javax/microedition/khronos/opengles/GL10
 		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11Ext", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IGL11ExtConstants
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL10", AccessFlags = 1537)]
+		public partial interface IGL10 : global::Javax.Microedition.Khronos.Opengles.IGL
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES
+				/// glActiveTexture
 				/// </java-name>
-				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES", "I", AccessFlags = 25)]
-				public const int GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES = 35742;
-				/// <java-name>
-				/// GL_MATRIX_INDEX_ARRAY_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_OES", "I", AccessFlags = 25)]
-				public const int GL_MATRIX_INDEX_ARRAY_OES = 34884;
-				/// <java-name>
-				/// GL_MATRIX_INDEX_ARRAY_POINTER_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_POINTER_OES", "I", AccessFlags = 25)]
-				public const int GL_MATRIX_INDEX_ARRAY_POINTER_OES = 34889;
-				/// <java-name>
-				/// GL_MATRIX_INDEX_ARRAY_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_MATRIX_INDEX_ARRAY_SIZE_OES = 34886;
-				/// <java-name>
-				/// GL_MATRIX_INDEX_ARRAY_STRIDE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_STRIDE_OES", "I", AccessFlags = 25)]
-				public const int GL_MATRIX_INDEX_ARRAY_STRIDE_OES = 34888;
-				/// <java-name>
-				/// GL_MATRIX_INDEX_ARRAY_TYPE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_TYPE_OES", "I", AccessFlags = 25)]
-				public const int GL_MATRIX_INDEX_ARRAY_TYPE_OES = 34887;
-				/// <java-name>
-				/// GL_MATRIX_PALETTE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MATRIX_PALETTE_OES", "I", AccessFlags = 25)]
-				public const int GL_MATRIX_PALETTE_OES = 34880;
-				/// <java-name>
-				/// GL_MAX_PALETTE_MATRICES_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MAX_PALETTE_MATRICES_OES", "I", AccessFlags = 25)]
-				public const int GL_MAX_PALETTE_MATRICES_OES = 34882;
-				/// <java-name>
-				/// GL_MAX_VERTEX_UNITS_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MAX_VERTEX_UNITS_OES", "I", AccessFlags = 25)]
-				public const int GL_MAX_VERTEX_UNITS_OES = 34468;
-				/// <java-name>
-				/// GL_TEXTURE_CROP_RECT_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CROP_RECT_OES", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CROP_RECT_OES = 35741;
-				/// <java-name>
-				/// GL_WEIGHT_ARRAY_BUFFER_BINDING_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_WEIGHT_ARRAY_BUFFER_BINDING_OES", "I", AccessFlags = 25)]
-				public const int GL_WEIGHT_ARRAY_BUFFER_BINDING_OES = 34974;
-				/// <java-name>
-				/// GL_WEIGHT_ARRAY_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_WEIGHT_ARRAY_OES", "I", AccessFlags = 25)]
-				public const int GL_WEIGHT_ARRAY_OES = 34477;
-				/// <java-name>
-				/// GL_WEIGHT_ARRAY_POINTER_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_WEIGHT_ARRAY_POINTER_OES", "I", AccessFlags = 25)]
-				public const int GL_WEIGHT_ARRAY_POINTER_OES = 34476;
-				/// <java-name>
-				/// GL_WEIGHT_ARRAY_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_WEIGHT_ARRAY_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_WEIGHT_ARRAY_SIZE_OES = 34475;
-				/// <java-name>
-				/// GL_WEIGHT_ARRAY_STRIDE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_WEIGHT_ARRAY_STRIDE_OES", "I", AccessFlags = 25)]
-				public const int GL_WEIGHT_ARRAY_STRIDE_OES = 34474;
-				/// <java-name>
-				/// GL_WEIGHT_ARRAY_TYPE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_WEIGHT_ARRAY_TYPE_OES", "I", AccessFlags = 25)]
-				public const int GL_WEIGHT_ARRAY_TYPE_OES = 34473;
-		}
-
-		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL11Ext
-		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11Ext", AccessFlags = 1537)]
-		public partial interface IGL11Ext : global::Javax.Microedition.Khronos.Opengles.IGL
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// glTexParameterfv
-				/// </java-name>
-				[Dot42.DexImport("glTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexParameterfv(int target, int pname, float[] param, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glActiveTexture", "(I)V", AccessFlags = 1025)]
+				void GlActiveTexture(int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glCurrentPaletteMatrixOES
+				/// glAlphaFunc
 				/// </java-name>
-				[Dot42.DexImport("glCurrentPaletteMatrixOES", "(I)V", AccessFlags = 1025)]
-				void GlCurrentPaletteMatrixOES(int matrixpaletteindex) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glAlphaFunc", "(IF)V", AccessFlags = 1025)]
+				void GlAlphaFunc(int func, float @ref) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexfOES
+				/// glAlphaFuncx
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexfOES", "(FFFFF)V", AccessFlags = 1025)]
-				void GlDrawTexfOES(float x, float y, float z, float width, float height) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glAlphaFuncx", "(II)V", AccessFlags = 1025)]
+				void GlAlphaFuncx(int func, int @ref) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexfvOES
+				/// glBindTexture
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexfvOES", "([FI)V", AccessFlags = 1025)]
-				void GlDrawTexfvOES(float[] coords, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glBindTexture", "(II)V", AccessFlags = 1025)]
+				void GlBindTexture(int target, int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexfvOES
+				/// glBlendFunc
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexfvOES", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexfvOES(global::Java.Nio.FloatBuffer coords) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glBlendFunc", "(II)V", AccessFlags = 1025)]
+				void GlBlendFunc(int sfactor, int dfactor) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexiOES
+				/// glClear
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexiOES", "(IIIII)V", AccessFlags = 1025)]
-				void GlDrawTexiOES(int x, int y, int z, int width, int height) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClear", "(I)V", AccessFlags = 1025)]
+				void GlClear(int mask) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexivOES
+				/// glClearColor
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexivOES", "([II)V", AccessFlags = 1025)]
-				void GlDrawTexivOES(int[] coords, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClearColor", "(FFFF)V", AccessFlags = 1025)]
+				void GlClearColor(float red, float green, float blue, float alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexivOES
+				/// glClearColorx
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexivOES", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexivOES(global::Java.Nio.IntBuffer coords) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClearColorx", "(IIII)V", AccessFlags = 1025)]
+				void GlClearColorx(int red, int green, int blue, int alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexsOES
+				/// glClearDepthf
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexsOES", "(SSSSS)V", AccessFlags = 1025)]
-				void GlDrawTexsOES(short x, short y, short z, short width, short height) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClearDepthf", "(F)V", AccessFlags = 1025)]
+				void GlClearDepthf(float depth) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexsvOES
+				/// glClearDepthx
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexsvOES", "([SI)V", AccessFlags = 1025)]
-				void GlDrawTexsvOES(short[] coords, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClearDepthx", "(I)V", AccessFlags = 1025)]
+				void GlClearDepthx(int depth) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexsvOES
+				/// glClearStencil
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexsvOES", "(Ljava/nio/ShortBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexsvOES(global::Java.Nio.ShortBuffer coords) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClearStencil", "(I)V", AccessFlags = 1025)]
+				void GlClearStencil(int s) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexxOES
+				/// glClientActiveTexture
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexxOES", "(IIIII)V", AccessFlags = 1025)]
-				void GlDrawTexxOES(int x, int y, int z, int width, int height) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClientActiveTexture", "(I)V", AccessFlags = 1025)]
+				void GlClientActiveTexture(int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexxvOES
+				/// glColor4f
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexxvOES", "([II)V", AccessFlags = 1025)]
-				void GlDrawTexxvOES(int[] coords, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glColor4f", "(FFFF)V", AccessFlags = 1025)]
+				void GlColor4f(float red, float green, float blue, float alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glDrawTexxvOES
+				/// glColor4x
 				/// </java-name>
-				[Dot42.DexImport("glDrawTexxvOES", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDrawTexxvOES(global::Java.Nio.IntBuffer coords) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glColor4x", "(IIII)V", AccessFlags = 1025)]
+				void GlColor4x(int red, int green, int blue, int alpha) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glColorMask
+				/// </java-name>
+				[Dot42.DexImport("glColorMask", "(ZZZZ)V", AccessFlags = 1025)]
+				void GlColorMask(bool red, bool green, bool blue, bool alpha) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glColorPointer
+				/// </java-name>
+				[Dot42.DexImport("glColorPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlColorPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCompressedTexImage2D
+				/// </java-name>
+				[Dot42.DexImport("glCompressedTexImage2D", "(IIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCompressedTexSubImage2D
+				/// </java-name>
+				[Dot42.DexImport("glCompressedTexSubImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlCompressedTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCopyTexImage2D
+				/// </java-name>
+				[Dot42.DexImport("glCopyTexImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
+				void GlCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCopyTexSubImage2D
+				/// </java-name>
+				[Dot42.DexImport("glCopyTexSubImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
+				void GlCopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCullFace
+				/// </java-name>
+				[Dot42.DexImport("glCullFace", "(I)V", AccessFlags = 1025)]
+				void GlCullFace(int mode) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDeleteTextures
+				/// </java-name>
+				[Dot42.DexImport("glDeleteTextures", "(I[II)V", AccessFlags = 1025)]
+				void GlDeleteTextures(int n, int[] textures, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDeleteTextures
+				/// </java-name>
+				[Dot42.DexImport("glDeleteTextures", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlDeleteTextures(int n, global::Java.Nio.IntBuffer textures) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDepthFunc
+				/// </java-name>
+				[Dot42.DexImport("glDepthFunc", "(I)V", AccessFlags = 1025)]
+				void GlDepthFunc(int func) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDepthMask
+				/// </java-name>
+				[Dot42.DexImport("glDepthMask", "(Z)V", AccessFlags = 1025)]
+				void GlDepthMask(bool flag) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDepthRangef
+				/// </java-name>
+				[Dot42.DexImport("glDepthRangef", "(FF)V", AccessFlags = 1025)]
+				void GlDepthRangef(float zNear, float zFar) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDepthRangex
+				/// </java-name>
+				[Dot42.DexImport("glDepthRangex", "(II)V", AccessFlags = 1025)]
+				void GlDepthRangex(int zNear, int zFar) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDisable
+				/// </java-name>
+				[Dot42.DexImport("glDisable", "(I)V", AccessFlags = 1025)]
+				void GlDisable(int cap) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDisableClientState
+				/// </java-name>
+				[Dot42.DexImport("glDisableClientState", "(I)V", AccessFlags = 1025)]
+				void GlDisableClientState(int array) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawArrays
+				/// </java-name>
+				[Dot42.DexImport("glDrawArrays", "(III)V", AccessFlags = 1025)]
+				void GlDrawArrays(int mode, int first, int count) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawElements
+				/// </java-name>
+				[Dot42.DexImport("glDrawElements", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlDrawElements(int mode, int count, int type, global::Java.Nio.Buffer indices) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glEnable
@@ -230,44 +216,545 @@ namespace Javax.Microedition.Khronos.Opengles
 				void GlEnableClientState(int array) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLoadPaletteFromModelViewMatrixOES
+				/// glFinish
 				/// </java-name>
-				[Dot42.DexImport("glLoadPaletteFromModelViewMatrixOES", "()V", AccessFlags = 1025)]
-				void GlLoadPaletteFromModelViewMatrixOES() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glFinish", "()V", AccessFlags = 1025)]
+				void GlFinish() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glMatrixIndexPointerOES
+				/// glFlush
 				/// </java-name>
-				[Dot42.DexImport("glMatrixIndexPointerOES", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlMatrixIndexPointerOES(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glFlush", "()V", AccessFlags = 1025)]
+				void GlFlush() /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glMatrixIndexPointerOES
+				/// glFogf
 				/// </java-name>
-				[Dot42.DexImport("glMatrixIndexPointerOES", "(IIII)V", AccessFlags = 1025)]
-				void GlMatrixIndexPointerOES(int size, int type, int stride, int pointer) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glFogf", "(IF)V", AccessFlags = 1025)]
+				void GlFogf(int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glWeightPointerOES
+				/// glFogfv
 				/// </java-name>
-				[Dot42.DexImport("glWeightPointerOES", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlWeightPointerOES(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glFogfv", "(I[FI)V", AccessFlags = 1025)]
+				void GlFogfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glWeightPointerOES
+				/// glFogfv
 				/// </java-name>
-				[Dot42.DexImport("glWeightPointerOES", "(IIII)V", AccessFlags = 1025)]
-				void GlWeightPointerOES(int size, int type, int stride, int pointer) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glFogfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlFogfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
-		}
+				/// <java-name>
+				/// glFogx
+				/// </java-name>
+				[Dot42.DexImport("glFogx", "(II)V", AccessFlags = 1025)]
+				void GlFogx(int pname, int param) /* MethodBuilder.Create */ ;
 
-		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL
-		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL", AccessFlags = 1537)]
-		public partial interface IGL
- /* scope: __dot42__ */ 
-		{
+				/// <java-name>
+				/// glFogxv
+				/// </java-name>
+				[Dot42.DexImport("glFogxv", "(I[II)V", AccessFlags = 1025)]
+				void GlFogxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glFogxv
+				/// </java-name>
+				[Dot42.DexImport("glFogxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlFogxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glFrontFace
+				/// </java-name>
+				[Dot42.DexImport("glFrontFace", "(I)V", AccessFlags = 1025)]
+				void GlFrontFace(int mode) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glFrustumf
+				/// </java-name>
+				[Dot42.DexImport("glFrustumf", "(FFFFFF)V", AccessFlags = 1025)]
+				void GlFrustumf(float left, float right, float bottom, float top, float zNear, float zFar) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glFrustumx
+				/// </java-name>
+				[Dot42.DexImport("glFrustumx", "(IIIIII)V", AccessFlags = 1025)]
+				void GlFrustumx(int left, int right, int bottom, int top, int zNear, int zFar) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGenTextures
+				/// </java-name>
+				[Dot42.DexImport("glGenTextures", "(I[II)V", AccessFlags = 1025)]
+				void GlGenTextures(int n, int[] textures, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGenTextures
+				/// </java-name>
+				[Dot42.DexImport("glGenTextures", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGenTextures(int n, global::Java.Nio.IntBuffer textures) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetError
+				/// </java-name>
+				[Dot42.DexImport("glGetError", "()I", AccessFlags = 1025)]
+				int GlGetError() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetIntegerv
+				/// </java-name>
+				[Dot42.DexImport("glGetIntegerv", "(I[II)V", AccessFlags = 1025)]
+				void GlGetIntegerv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetIntegerv
+				/// </java-name>
+				[Dot42.DexImport("glGetIntegerv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetIntegerv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetString
+				/// </java-name>
+				[Dot42.DexImport("glGetString", "(I)Ljava/lang/String;", AccessFlags = 1025)]
+				string GlGetString(int name) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glHint
+				/// </java-name>
+				[Dot42.DexImport("glHint", "(II)V", AccessFlags = 1025)]
+				void GlHint(int target, int mode) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightModelf
+				/// </java-name>
+				[Dot42.DexImport("glLightModelf", "(IF)V", AccessFlags = 1025)]
+				void GlLightModelf(int pname, float param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightModelfv
+				/// </java-name>
+				[Dot42.DexImport("glLightModelfv", "(I[FI)V", AccessFlags = 1025)]
+				void GlLightModelfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightModelfv
+				/// </java-name>
+				[Dot42.DexImport("glLightModelfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlLightModelfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightModelx
+				/// </java-name>
+				[Dot42.DexImport("glLightModelx", "(II)V", AccessFlags = 1025)]
+				void GlLightModelx(int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightModelxv
+				/// </java-name>
+				[Dot42.DexImport("glLightModelxv", "(I[II)V", AccessFlags = 1025)]
+				void GlLightModelxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightModelxv
+				/// </java-name>
+				[Dot42.DexImport("glLightModelxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlLightModelxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightf
+				/// </java-name>
+				[Dot42.DexImport("glLightf", "(IIF)V", AccessFlags = 1025)]
+				void GlLightf(int light, int pname, float param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightfv
+				/// </java-name>
+				[Dot42.DexImport("glLightfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlLightfv(int light, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightfv
+				/// </java-name>
+				[Dot42.DexImport("glLightfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlLightfv(int light, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightx
+				/// </java-name>
+				[Dot42.DexImport("glLightx", "(III)V", AccessFlags = 1025)]
+				void GlLightx(int light, int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightxv
+				/// </java-name>
+				[Dot42.DexImport("glLightxv", "(II[II)V", AccessFlags = 1025)]
+				void GlLightxv(int light, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLightxv
+				/// </java-name>
+				[Dot42.DexImport("glLightxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlLightxv(int light, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLineWidth
+				/// </java-name>
+				[Dot42.DexImport("glLineWidth", "(F)V", AccessFlags = 1025)]
+				void GlLineWidth(float width) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLineWidthx
+				/// </java-name>
+				[Dot42.DexImport("glLineWidthx", "(I)V", AccessFlags = 1025)]
+				void GlLineWidthx(int width) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLoadIdentity
+				/// </java-name>
+				[Dot42.DexImport("glLoadIdentity", "()V", AccessFlags = 1025)]
+				void GlLoadIdentity() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLoadMatrixf
+				/// </java-name>
+				[Dot42.DexImport("glLoadMatrixf", "([FI)V", AccessFlags = 1025)]
+				void GlLoadMatrixf(float[] m, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLoadMatrixf
+				/// </java-name>
+				[Dot42.DexImport("glLoadMatrixf", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlLoadMatrixf(global::Java.Nio.FloatBuffer m) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLoadMatrixx
+				/// </java-name>
+				[Dot42.DexImport("glLoadMatrixx", "([II)V", AccessFlags = 1025)]
+				void GlLoadMatrixx(int[] m, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLoadMatrixx
+				/// </java-name>
+				[Dot42.DexImport("glLoadMatrixx", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlLoadMatrixx(global::Java.Nio.IntBuffer m) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLogicOp
+				/// </java-name>
+				[Dot42.DexImport("glLogicOp", "(I)V", AccessFlags = 1025)]
+				void GlLogicOp(int opcode) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMaterialf
+				/// </java-name>
+				[Dot42.DexImport("glMaterialf", "(IIF)V", AccessFlags = 1025)]
+				void GlMaterialf(int face, int pname, float param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMaterialfv
+				/// </java-name>
+				[Dot42.DexImport("glMaterialfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlMaterialfv(int face, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMaterialfv
+				/// </java-name>
+				[Dot42.DexImport("glMaterialfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlMaterialfv(int face, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMaterialx
+				/// </java-name>
+				[Dot42.DexImport("glMaterialx", "(III)V", AccessFlags = 1025)]
+				void GlMaterialx(int face, int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMaterialxv
+				/// </java-name>
+				[Dot42.DexImport("glMaterialxv", "(II[II)V", AccessFlags = 1025)]
+				void GlMaterialxv(int face, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMaterialxv
+				/// </java-name>
+				[Dot42.DexImport("glMaterialxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlMaterialxv(int face, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMatrixMode
+				/// </java-name>
+				[Dot42.DexImport("glMatrixMode", "(I)V", AccessFlags = 1025)]
+				void GlMatrixMode(int mode) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMultMatrixf
+				/// </java-name>
+				[Dot42.DexImport("glMultMatrixf", "([FI)V", AccessFlags = 1025)]
+				void GlMultMatrixf(float[] m, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMultMatrixf
+				/// </java-name>
+				[Dot42.DexImport("glMultMatrixf", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlMultMatrixf(global::Java.Nio.FloatBuffer m) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMultMatrixx
+				/// </java-name>
+				[Dot42.DexImport("glMultMatrixx", "([II)V", AccessFlags = 1025)]
+				void GlMultMatrixx(int[] m, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMultMatrixx
+				/// </java-name>
+				[Dot42.DexImport("glMultMatrixx", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlMultMatrixx(global::Java.Nio.IntBuffer m) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMultiTexCoord4f
+				/// </java-name>
+				[Dot42.DexImport("glMultiTexCoord4f", "(IFFFF)V", AccessFlags = 1025)]
+				void GlMultiTexCoord4f(int target, float s, float t, float r, float q) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMultiTexCoord4x
+				/// </java-name>
+				[Dot42.DexImport("glMultiTexCoord4x", "(IIIII)V", AccessFlags = 1025)]
+				void GlMultiTexCoord4x(int target, int s, int t, int r, int q) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glNormal3f
+				/// </java-name>
+				[Dot42.DexImport("glNormal3f", "(FFF)V", AccessFlags = 1025)]
+				void GlNormal3f(float nx, float ny, float nz) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glNormal3x
+				/// </java-name>
+				[Dot42.DexImport("glNormal3x", "(III)V", AccessFlags = 1025)]
+				void GlNormal3x(int nx, int ny, int nz) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glNormalPointer
+				/// </java-name>
+				[Dot42.DexImport("glNormalPointer", "(IILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlNormalPointer(int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glOrthof
+				/// </java-name>
+				[Dot42.DexImport("glOrthof", "(FFFFFF)V", AccessFlags = 1025)]
+				void GlOrthof(float left, float right, float bottom, float top, float zNear, float zFar) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glOrthox
+				/// </java-name>
+				[Dot42.DexImport("glOrthox", "(IIIIII)V", AccessFlags = 1025)]
+				void GlOrthox(int left, int right, int bottom, int top, int zNear, int zFar) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glPixelStorei
+				/// </java-name>
+				[Dot42.DexImport("glPixelStorei", "(II)V", AccessFlags = 1025)]
+				void GlPixelStorei(int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glPointSize
+				/// </java-name>
+				[Dot42.DexImport("glPointSize", "(F)V", AccessFlags = 1025)]
+				void GlPointSize(float size) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glPointSizex
+				/// </java-name>
+				[Dot42.DexImport("glPointSizex", "(I)V", AccessFlags = 1025)]
+				void GlPointSizex(int size) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glPolygonOffset
+				/// </java-name>
+				[Dot42.DexImport("glPolygonOffset", "(FF)V", AccessFlags = 1025)]
+				void GlPolygonOffset(float factor, float units) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glPolygonOffsetx
+				/// </java-name>
+				[Dot42.DexImport("glPolygonOffsetx", "(II)V", AccessFlags = 1025)]
+				void GlPolygonOffsetx(int factor, int units) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glPopMatrix
+				/// </java-name>
+				[Dot42.DexImport("glPopMatrix", "()V", AccessFlags = 1025)]
+				void GlPopMatrix() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glPushMatrix
+				/// </java-name>
+				[Dot42.DexImport("glPushMatrix", "()V", AccessFlags = 1025)]
+				void GlPushMatrix() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glReadPixels
+				/// </java-name>
+				[Dot42.DexImport("glReadPixels", "(IIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlReadPixels(int x, int y, int width, int height, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glRotatef
+				/// </java-name>
+				[Dot42.DexImport("glRotatef", "(FFFF)V", AccessFlags = 1025)]
+				void GlRotatef(float angle, float x, float y, float z) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glRotatex
+				/// </java-name>
+				[Dot42.DexImport("glRotatex", "(IIII)V", AccessFlags = 1025)]
+				void GlRotatex(int angle, int x, int y, int z) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glSampleCoverage
+				/// </java-name>
+				[Dot42.DexImport("glSampleCoverage", "(FZ)V", AccessFlags = 1025)]
+				void GlSampleCoverage(float value, bool invert) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glSampleCoveragex
+				/// </java-name>
+				[Dot42.DexImport("glSampleCoveragex", "(IZ)V", AccessFlags = 1025)]
+				void GlSampleCoveragex(int value, bool invert) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glScalef
+				/// </java-name>
+				[Dot42.DexImport("glScalef", "(FFF)V", AccessFlags = 1025)]
+				void GlScalef(float x, float y, float z) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glScalex
+				/// </java-name>
+				[Dot42.DexImport("glScalex", "(III)V", AccessFlags = 1025)]
+				void GlScalex(int x, int y, int z) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glScissor
+				/// </java-name>
+				[Dot42.DexImport("glScissor", "(IIII)V", AccessFlags = 1025)]
+				void GlScissor(int x, int y, int width, int height) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glShadeModel
+				/// </java-name>
+				[Dot42.DexImport("glShadeModel", "(I)V", AccessFlags = 1025)]
+				void GlShadeModel(int mode) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glStencilFunc
+				/// </java-name>
+				[Dot42.DexImport("glStencilFunc", "(III)V", AccessFlags = 1025)]
+				void GlStencilFunc(int func, int @ref, int mask) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glStencilMask
+				/// </java-name>
+				[Dot42.DexImport("glStencilMask", "(I)V", AccessFlags = 1025)]
+				void GlStencilMask(int mask) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glStencilOp
+				/// </java-name>
+				[Dot42.DexImport("glStencilOp", "(III)V", AccessFlags = 1025)]
+				void GlStencilOp(int fail, int zfail, int zpass) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexCoordPointer
+				/// </java-name>
+				[Dot42.DexImport("glTexCoordPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlTexCoordPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvf
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvf", "(IIF)V", AccessFlags = 1025)]
+				void GlTexEnvf(int target, int pname, float param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvfv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlTexEnvfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvfv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlTexEnvfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvx
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvx", "(III)V", AccessFlags = 1025)]
+				void GlTexEnvx(int target, int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvxv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvxv", "(II[II)V", AccessFlags = 1025)]
+				void GlTexEnvxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvxv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlTexEnvxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexImage2D
+				/// </java-name>
+				[Dot42.DexImport("glTexImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexParameterf
+				/// </java-name>
+				[Dot42.DexImport("glTexParameterf", "(IIF)V", AccessFlags = 1025)]
+				void GlTexParameterf(int target, int pname, float param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexParameterx
+				/// </java-name>
+				[Dot42.DexImport("glTexParameterx", "(III)V", AccessFlags = 1025)]
+				void GlTexParameterx(int target, int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexSubImage2D
+				/// </java-name>
+				[Dot42.DexImport("glTexSubImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTranslatef
+				/// </java-name>
+				[Dot42.DexImport("glTranslatef", "(FFF)V", AccessFlags = 1025)]
+				void GlTranslatef(float x, float y, float z) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTranslatex
+				/// </java-name>
+				[Dot42.DexImport("glTranslatex", "(III)V", AccessFlags = 1025)]
+				void GlTranslatex(int x, int y, int z) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glVertexPointer
+				/// </java-name>
+				[Dot42.DexImport("glVertexPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlVertexPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glViewport
+				/// </java-name>
+				[Dot42.DexImport("glViewport", "(IIII)V", AccessFlags = 1025)]
+				void GlViewport(int x, int y, int width, int height) /* MethodBuilder.Create */ ;
+
 		}
 
 		/// <java-name>
@@ -1465,1515 +1952,440 @@ namespace Javax.Microedition.Khronos.Opengles
 		}
 
 		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL10
+		/// javax/microedition/khronos/opengles/GL10Ext
 		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL10", AccessFlags = 1537)]
-		public partial interface IGL10 : global::Javax.Microedition.Khronos.Opengles.IGL
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL10Ext", AccessFlags = 1537)]
+		public partial interface IGL10Ext : global::Javax.Microedition.Khronos.Opengles.IGL
  /* scope: __dot42__ */ 
 		{
 				/// <java-name>
-				/// glActiveTexture
+				/// glQueryMatrixxOES
 				/// </java-name>
-				[Dot42.DexImport("glActiveTexture", "(I)V", AccessFlags = 1025)]
-				void GlActiveTexture(int texture) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glQueryMatrixxOES", "([II[II)I", AccessFlags = 1025)]
+				int GlQueryMatrixxOES(int[] mantissa, int mantissaOffset, int[] exponent, int exponentOffset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glAlphaFunc
+				/// glQueryMatrixxOES
 				/// </java-name>
-				[Dot42.DexImport("glAlphaFunc", "(IF)V", AccessFlags = 1025)]
-				void GlAlphaFunc(int func, float @ref) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glQueryMatrixxOES", "(Ljava/nio/IntBuffer;Ljava/nio/IntBuffer;)I", AccessFlags = 1025)]
+				int GlQueryMatrixxOES(global::Java.Nio.IntBuffer mantissa, global::Java.Nio.IntBuffer exponent) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/microedition/khronos/opengles/GL11
+		/// </java-name>
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11", AccessFlags = 1537)]
+		public partial interface IGL11 : global::Javax.Microedition.Khronos.Opengles.IGL10
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// glGetPointerv
+				/// </java-name>
+				[Dot42.DexImport("glGetPointerv", "(I[Ljava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlGetPointerv(int pname, global::Java.Nio.Buffer[] @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glAlphaFuncx
+				/// glBindBuffer
 				/// </java-name>
-				[Dot42.DexImport("glAlphaFuncx", "(II)V", AccessFlags = 1025)]
-				void GlAlphaFuncx(int func, int @ref) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glBindBuffer", "(II)V", AccessFlags = 1025)]
+				void GlBindBuffer(int target, int buffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glBindTexture
+				/// glBufferData
 				/// </java-name>
-				[Dot42.DexImport("glBindTexture", "(II)V", AccessFlags = 1025)]
-				void GlBindTexture(int target, int texture) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glBufferData", "(IILjava/nio/Buffer;I)V", AccessFlags = 1025)]
+				void GlBufferData(int target, int size, global::Java.Nio.Buffer data, int usage) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glBlendFunc
+				/// glBufferSubData
 				/// </java-name>
-				[Dot42.DexImport("glBlendFunc", "(II)V", AccessFlags = 1025)]
-				void GlBlendFunc(int sfactor, int dfactor) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glBufferSubData", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlBufferSubData(int target, int offset, int size, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glClear
+				/// glClipPlanef
 				/// </java-name>
-				[Dot42.DexImport("glClear", "(I)V", AccessFlags = 1025)]
-				void GlClear(int mask) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClipPlanef", "(I[FI)V", AccessFlags = 1025)]
+				void GlClipPlanef(int plane, float[] equation, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glClearColor
+				/// glClipPlanef
 				/// </java-name>
-				[Dot42.DexImport("glClearColor", "(FFFF)V", AccessFlags = 1025)]
-				void GlClearColor(float red, float green, float blue, float alpha) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClipPlanef", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlClipPlanef(int plane, global::Java.Nio.FloatBuffer equation) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glClearColorx
+				/// glClipPlanex
 				/// </java-name>
-				[Dot42.DexImport("glClearColorx", "(IIII)V", AccessFlags = 1025)]
-				void GlClearColorx(int red, int green, int blue, int alpha) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClipPlanex", "(I[II)V", AccessFlags = 1025)]
+				void GlClipPlanex(int plane, int[] equation, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glClearDepthf
+				/// glClipPlanex
 				/// </java-name>
-				[Dot42.DexImport("glClearDepthf", "(F)V", AccessFlags = 1025)]
-				void GlClearDepthf(float depth) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glClipPlanex", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlClipPlanex(int plane, global::Java.Nio.IntBuffer equation) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glClearDepthx
+				/// glColor4ub
 				/// </java-name>
-				[Dot42.DexImport("glClearDepthx", "(I)V", AccessFlags = 1025)]
-				void GlClearDepthx(int depth) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glClearStencil
-				/// </java-name>
-				[Dot42.DexImport("glClearStencil", "(I)V", AccessFlags = 1025)]
-				void GlClearStencil(int s) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glClientActiveTexture
-				/// </java-name>
-				[Dot42.DexImport("glClientActiveTexture", "(I)V", AccessFlags = 1025)]
-				void GlClientActiveTexture(int texture) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glColor4f
-				/// </java-name>
-				[Dot42.DexImport("glColor4f", "(FFFF)V", AccessFlags = 1025)]
-				void GlColor4f(float red, float green, float blue, float alpha) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glColor4x
-				/// </java-name>
-				[Dot42.DexImport("glColor4x", "(IIII)V", AccessFlags = 1025)]
-				void GlColor4x(int red, int green, int blue, int alpha) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glColorMask
-				/// </java-name>
-				[Dot42.DexImport("glColorMask", "(ZZZZ)V", AccessFlags = 1025)]
-				void GlColorMask(bool red, bool green, bool blue, bool alpha) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 1025)]
+				void GlColor4ub(byte red, byte green, byte blue, byte alpha) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glColorPointer
 				/// </java-name>
-				[Dot42.DexImport("glColorPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlColorPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glColorPointer", "(IIII)V", AccessFlags = 1025)]
+				void GlColorPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glCompressedTexImage2D
+				/// glDeleteBuffers
 				/// </java-name>
-				[Dot42.DexImport("glCompressedTexImage2D", "(IIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDeleteBuffers", "(I[II)V", AccessFlags = 1025)]
+				void GlDeleteBuffers(int n, int[] buffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glCompressedTexSubImage2D
+				/// glDeleteBuffers
 				/// </java-name>
-				[Dot42.DexImport("glCompressedTexSubImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlCompressedTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glCopyTexImage2D
-				/// </java-name>
-				[Dot42.DexImport("glCopyTexImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
-				void GlCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glCopyTexSubImage2D
-				/// </java-name>
-				[Dot42.DexImport("glCopyTexSubImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
-				void GlCopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glCullFace
-				/// </java-name>
-				[Dot42.DexImport("glCullFace", "(I)V", AccessFlags = 1025)]
-				void GlCullFace(int mode) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteTextures
-				/// </java-name>
-				[Dot42.DexImport("glDeleteTextures", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteTextures(int n, int[] textures, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteTextures
-				/// </java-name>
-				[Dot42.DexImport("glDeleteTextures", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteTextures(int n, global::Java.Nio.IntBuffer textures) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDepthFunc
-				/// </java-name>
-				[Dot42.DexImport("glDepthFunc", "(I)V", AccessFlags = 1025)]
-				void GlDepthFunc(int func) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDepthMask
-				/// </java-name>
-				[Dot42.DexImport("glDepthMask", "(Z)V", AccessFlags = 1025)]
-				void GlDepthMask(bool flag) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDepthRangef
-				/// </java-name>
-				[Dot42.DexImport("glDepthRangef", "(FF)V", AccessFlags = 1025)]
-				void GlDepthRangef(float zNear, float zFar) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDepthRangex
-				/// </java-name>
-				[Dot42.DexImport("glDepthRangex", "(II)V", AccessFlags = 1025)]
-				void GlDepthRangex(int zNear, int zFar) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDisable
-				/// </java-name>
-				[Dot42.DexImport("glDisable", "(I)V", AccessFlags = 1025)]
-				void GlDisable(int cap) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDisableClientState
-				/// </java-name>
-				[Dot42.DexImport("glDisableClientState", "(I)V", AccessFlags = 1025)]
-				void GlDisableClientState(int array) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDrawArrays
-				/// </java-name>
-				[Dot42.DexImport("glDrawArrays", "(III)V", AccessFlags = 1025)]
-				void GlDrawArrays(int mode, int first, int count) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDeleteBuffers", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlDeleteBuffers(int n, global::Java.Nio.IntBuffer buffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glDrawElements
 				/// </java-name>
-				[Dot42.DexImport("glDrawElements", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlDrawElements(int mode, int count, int type, global::Java.Nio.Buffer indices) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDrawElements", "(IIII)V", AccessFlags = 1025)]
+				void GlDrawElements(int mode, int count, int type, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glEnable
+				/// glGenBuffers
 				/// </java-name>
-				[Dot42.DexImport("glEnable", "(I)V", AccessFlags = 1025)]
-				void GlEnable(int cap) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGenBuffers", "(I[II)V", AccessFlags = 1025)]
+				void GlGenBuffers(int n, int[] buffers, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glEnableClientState
+				/// glGenBuffers
 				/// </java-name>
-				[Dot42.DexImport("glEnableClientState", "(I)V", AccessFlags = 1025)]
-				void GlEnableClientState(int array) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGenBuffers", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGenBuffers(int n, global::Java.Nio.IntBuffer buffers) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFinish
+				/// glGetBooleanv
 				/// </java-name>
-				[Dot42.DexImport("glFinish", "()V", AccessFlags = 1025)]
-				void GlFinish() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetBooleanv", "(I[ZI)V", AccessFlags = 1025)]
+				void GlGetBooleanv(int pname, bool[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFlush
+				/// glGetBooleanv
 				/// </java-name>
-				[Dot42.DexImport("glFlush", "()V", AccessFlags = 1025)]
-				void GlFlush() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetBooleanv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetBooleanv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFogf
+				/// glGetBufferParameteriv
 				/// </java-name>
-				[Dot42.DexImport("glFogf", "(IF)V", AccessFlags = 1025)]
-				void GlFogf(int pname, float param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetBufferParameteriv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetBufferParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFogfv
+				/// glGetBufferParameteriv
 				/// </java-name>
-				[Dot42.DexImport("glFogfv", "(I[FI)V", AccessFlags = 1025)]
-				void GlFogfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetBufferParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetBufferParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFogfv
+				/// glGetClipPlanef
 				/// </java-name>
-				[Dot42.DexImport("glFogfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlFogfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetClipPlanef", "(I[FI)V", AccessFlags = 1025)]
+				void GlGetClipPlanef(int pname, float[] eqn, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFogx
+				/// glGetClipPlanef
 				/// </java-name>
-				[Dot42.DexImport("glFogx", "(II)V", AccessFlags = 1025)]
-				void GlFogx(int pname, int param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetClipPlanef", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlGetClipPlanef(int pname, global::Java.Nio.FloatBuffer eqn) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFogxv
+				/// glGetClipPlanex
 				/// </java-name>
-				[Dot42.DexImport("glFogxv", "(I[II)V", AccessFlags = 1025)]
-				void GlFogxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetClipPlanex", "(I[II)V", AccessFlags = 1025)]
+				void GlGetClipPlanex(int pname, int[] eqn, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFogxv
+				/// glGetClipPlanex
 				/// </java-name>
-				[Dot42.DexImport("glFogxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlFogxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetClipPlanex", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetClipPlanex(int pname, global::Java.Nio.IntBuffer eqn) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFrontFace
+				/// glGetFixedv
 				/// </java-name>
-				[Dot42.DexImport("glFrontFace", "(I)V", AccessFlags = 1025)]
-				void GlFrontFace(int mode) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetFixedv", "(I[II)V", AccessFlags = 1025)]
+				void GlGetFixedv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFrustumf
+				/// glGetFixedv
 				/// </java-name>
-				[Dot42.DexImport("glFrustumf", "(FFFFFF)V", AccessFlags = 1025)]
-				void GlFrustumf(float left, float right, float bottom, float top, float zNear, float zFar) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetFixedv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetFixedv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glFrustumx
+				/// glGetFloatv
 				/// </java-name>
-				[Dot42.DexImport("glFrustumx", "(IIIIII)V", AccessFlags = 1025)]
-				void GlFrustumx(int left, int right, int bottom, int top, int zNear, int zFar) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetFloatv", "(I[FI)V", AccessFlags = 1025)]
+				void GlGetFloatv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glGenTextures
+				/// glGetFloatv
 				/// </java-name>
-				[Dot42.DexImport("glGenTextures", "(I[II)V", AccessFlags = 1025)]
-				void GlGenTextures(int n, int[] textures, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetFloatv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlGetFloatv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glGenTextures
+				/// glGetLightfv
 				/// </java-name>
-				[Dot42.DexImport("glGenTextures", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenTextures(int n, global::Java.Nio.IntBuffer textures) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetLightfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlGetLightfv(int light, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glGetError
+				/// glGetLightfv
 				/// </java-name>
-				[Dot42.DexImport("glGetError", "()I", AccessFlags = 1025)]
-				int GlGetError() /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetLightfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlGetLightfv(int light, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glGetIntegerv
+				/// glGetLightxv
 				/// </java-name>
-				[Dot42.DexImport("glGetIntegerv", "(I[II)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetLightxv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetLightxv(int light, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glGetIntegerv
+				/// glGetLightxv
 				/// </java-name>
-				[Dot42.DexImport("glGetIntegerv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetLightxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetLightxv(int light, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glGetString
+				/// glGetMaterialfv
 				/// </java-name>
-				[Dot42.DexImport("glGetString", "(I)Ljava/lang/String;", AccessFlags = 1025)]
-				string GlGetString(int name) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetMaterialfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlGetMaterialfv(int face, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glHint
+				/// glGetMaterialfv
 				/// </java-name>
-				[Dot42.DexImport("glHint", "(II)V", AccessFlags = 1025)]
-				void GlHint(int target, int mode) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetMaterialfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlGetMaterialfv(int face, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightModelf
+				/// glGetMaterialxv
 				/// </java-name>
-				[Dot42.DexImport("glLightModelf", "(IF)V", AccessFlags = 1025)]
-				void GlLightModelf(int pname, float param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetMaterialxv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetMaterialxv(int face, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightModelfv
+				/// glGetMaterialxv
 				/// </java-name>
-				[Dot42.DexImport("glLightModelfv", "(I[FI)V", AccessFlags = 1025)]
-				void GlLightModelfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetMaterialxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetMaterialxv(int face, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightModelfv
+				/// glGetTexEnviv
 				/// </java-name>
-				[Dot42.DexImport("glLightModelfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlLightModelfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexEnviv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetTexEnviv(int env, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightModelx
+				/// glGetTexEnviv
 				/// </java-name>
-				[Dot42.DexImport("glLightModelx", "(II)V", AccessFlags = 1025)]
-				void GlLightModelx(int pname, int param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexEnviv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexEnviv(int env, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightModelxv
+				/// glGetTexEnvxv
 				/// </java-name>
-				[Dot42.DexImport("glLightModelxv", "(I[II)V", AccessFlags = 1025)]
-				void GlLightModelxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexEnvxv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetTexEnvxv(int env, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightModelxv
+				/// glGetTexEnvxv
 				/// </java-name>
-				[Dot42.DexImport("glLightModelxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlLightModelxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexEnvxv(int env, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightf
+				/// glGetTexParameterfv
 				/// </java-name>
-				[Dot42.DexImport("glLightf", "(IIF)V", AccessFlags = 1025)]
-				void GlLightf(int light, int pname, float param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlGetTexParameterfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightfv
+				/// glGetTexParameterfv
 				/// </java-name>
-				[Dot42.DexImport("glLightfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlLightfv(int light, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexParameterfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexParameterfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightfv
+				/// glGetTexParameteriv
 				/// </java-name>
-				[Dot42.DexImport("glLightfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlLightfv(int light, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexParameteriv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetTexParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightx
+				/// glGetTexParameteriv
 				/// </java-name>
-				[Dot42.DexImport("glLightx", "(III)V", AccessFlags = 1025)]
-				void GlLightx(int light, int pname, int param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightxv
+				/// glGetTexParameterxv
 				/// </java-name>
-				[Dot42.DexImport("glLightxv", "(II[II)V", AccessFlags = 1025)]
-				void GlLightxv(int light, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexParameterxv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetTexParameterxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLightxv
+				/// glGetTexParameterxv
 				/// </java-name>
-				[Dot42.DexImport("glLightxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlLightxv(int light, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glGetTexParameterxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexParameterxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLineWidth
+				/// glIsBuffer
 				/// </java-name>
-				[Dot42.DexImport("glLineWidth", "(F)V", AccessFlags = 1025)]
-				void GlLineWidth(float width) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glIsBuffer", "(I)Z", AccessFlags = 1025)]
+				bool GlIsBuffer(int buffer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLineWidthx
+				/// glIsEnabled
 				/// </java-name>
-				[Dot42.DexImport("glLineWidthx", "(I)V", AccessFlags = 1025)]
-				void GlLineWidthx(int width) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glIsEnabled", "(I)Z", AccessFlags = 1025)]
+				bool GlIsEnabled(int cap) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glLoadIdentity
+				/// glIsTexture
 				/// </java-name>
-				[Dot42.DexImport("glLoadIdentity", "()V", AccessFlags = 1025)]
-				void GlLoadIdentity() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glLoadMatrixf
-				/// </java-name>
-				[Dot42.DexImport("glLoadMatrixf", "([FI)V", AccessFlags = 1025)]
-				void GlLoadMatrixf(float[] m, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glLoadMatrixf
-				/// </java-name>
-				[Dot42.DexImport("glLoadMatrixf", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlLoadMatrixf(global::Java.Nio.FloatBuffer m) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glLoadMatrixx
-				/// </java-name>
-				[Dot42.DexImport("glLoadMatrixx", "([II)V", AccessFlags = 1025)]
-				void GlLoadMatrixx(int[] m, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glLoadMatrixx
-				/// </java-name>
-				[Dot42.DexImport("glLoadMatrixx", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlLoadMatrixx(global::Java.Nio.IntBuffer m) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glLogicOp
-				/// </java-name>
-				[Dot42.DexImport("glLogicOp", "(I)V", AccessFlags = 1025)]
-				void GlLogicOp(int opcode) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMaterialf
-				/// </java-name>
-				[Dot42.DexImport("glMaterialf", "(IIF)V", AccessFlags = 1025)]
-				void GlMaterialf(int face, int pname, float param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMaterialfv
-				/// </java-name>
-				[Dot42.DexImport("glMaterialfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlMaterialfv(int face, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMaterialfv
-				/// </java-name>
-				[Dot42.DexImport("glMaterialfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlMaterialfv(int face, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMaterialx
-				/// </java-name>
-				[Dot42.DexImport("glMaterialx", "(III)V", AccessFlags = 1025)]
-				void GlMaterialx(int face, int pname, int param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMaterialxv
-				/// </java-name>
-				[Dot42.DexImport("glMaterialxv", "(II[II)V", AccessFlags = 1025)]
-				void GlMaterialxv(int face, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMaterialxv
-				/// </java-name>
-				[Dot42.DexImport("glMaterialxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlMaterialxv(int face, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMatrixMode
-				/// </java-name>
-				[Dot42.DexImport("glMatrixMode", "(I)V", AccessFlags = 1025)]
-				void GlMatrixMode(int mode) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMultMatrixf
-				/// </java-name>
-				[Dot42.DexImport("glMultMatrixf", "([FI)V", AccessFlags = 1025)]
-				void GlMultMatrixf(float[] m, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMultMatrixf
-				/// </java-name>
-				[Dot42.DexImport("glMultMatrixf", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlMultMatrixf(global::Java.Nio.FloatBuffer m) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMultMatrixx
-				/// </java-name>
-				[Dot42.DexImport("glMultMatrixx", "([II)V", AccessFlags = 1025)]
-				void GlMultMatrixx(int[] m, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMultMatrixx
-				/// </java-name>
-				[Dot42.DexImport("glMultMatrixx", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlMultMatrixx(global::Java.Nio.IntBuffer m) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMultiTexCoord4f
-				/// </java-name>
-				[Dot42.DexImport("glMultiTexCoord4f", "(IFFFF)V", AccessFlags = 1025)]
-				void GlMultiTexCoord4f(int target, float s, float t, float r, float q) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glMultiTexCoord4x
-				/// </java-name>
-				[Dot42.DexImport("glMultiTexCoord4x", "(IIIII)V", AccessFlags = 1025)]
-				void GlMultiTexCoord4x(int target, int s, int t, int r, int q) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glNormal3f
-				/// </java-name>
-				[Dot42.DexImport("glNormal3f", "(FFF)V", AccessFlags = 1025)]
-				void GlNormal3f(float nx, float ny, float nz) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glNormal3x
-				/// </java-name>
-				[Dot42.DexImport("glNormal3x", "(III)V", AccessFlags = 1025)]
-				void GlNormal3x(int nx, int ny, int nz) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glIsTexture", "(I)Z", AccessFlags = 1025)]
+				bool GlIsTexture(int texture) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glNormalPointer
 				/// </java-name>
-				[Dot42.DexImport("glNormalPointer", "(IILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlNormalPointer(int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glNormalPointer", "(III)V", AccessFlags = 1025)]
+				void GlNormalPointer(int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glOrthof
+				/// glPointParameterf
 				/// </java-name>
-				[Dot42.DexImport("glOrthof", "(FFFFFF)V", AccessFlags = 1025)]
-				void GlOrthof(float left, float right, float bottom, float top, float zNear, float zFar) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glPointParameterf", "(IF)V", AccessFlags = 1025)]
+				void GlPointParameterf(int pname, float param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glOrthox
+				/// glPointParameterfv
 				/// </java-name>
-				[Dot42.DexImport("glOrthox", "(IIIIII)V", AccessFlags = 1025)]
-				void GlOrthox(int left, int right, int bottom, int top, int zNear, int zFar) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glPointParameterfv", "(I[FI)V", AccessFlags = 1025)]
+				void GlPointParameterfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glPixelStorei
+				/// glPointParameterfv
 				/// </java-name>
-				[Dot42.DexImport("glPixelStorei", "(II)V", AccessFlags = 1025)]
-				void GlPixelStorei(int pname, int param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glPointParameterfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlPointParameterfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glPointSize
+				/// glPointParameterx
 				/// </java-name>
-				[Dot42.DexImport("glPointSize", "(F)V", AccessFlags = 1025)]
-				void GlPointSize(float size) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glPointParameterx", "(II)V", AccessFlags = 1025)]
+				void GlPointParameterx(int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glPointSizex
+				/// glPointParameterxv
 				/// </java-name>
-				[Dot42.DexImport("glPointSizex", "(I)V", AccessFlags = 1025)]
-				void GlPointSizex(int size) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glPointParameterxv", "(I[II)V", AccessFlags = 1025)]
+				void GlPointParameterxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glPolygonOffset
+				/// glPointParameterxv
 				/// </java-name>
-				[Dot42.DexImport("glPolygonOffset", "(FF)V", AccessFlags = 1025)]
-				void GlPolygonOffset(float factor, float units) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glPointParameterxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlPointParameterxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glPolygonOffsetx
+				/// glPointSizePointerOES
 				/// </java-name>
-				[Dot42.DexImport("glPolygonOffsetx", "(II)V", AccessFlags = 1025)]
-				void GlPolygonOffsetx(int factor, int units) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPopMatrix
-				/// </java-name>
-				[Dot42.DexImport("glPopMatrix", "()V", AccessFlags = 1025)]
-				void GlPopMatrix() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPushMatrix
-				/// </java-name>
-				[Dot42.DexImport("glPushMatrix", "()V", AccessFlags = 1025)]
-				void GlPushMatrix() /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glReadPixels
-				/// </java-name>
-				[Dot42.DexImport("glReadPixels", "(IIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlReadPixels(int x, int y, int width, int height, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glRotatef
-				/// </java-name>
-				[Dot42.DexImport("glRotatef", "(FFFF)V", AccessFlags = 1025)]
-				void GlRotatef(float angle, float x, float y, float z) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glRotatex
-				/// </java-name>
-				[Dot42.DexImport("glRotatex", "(IIII)V", AccessFlags = 1025)]
-				void GlRotatex(int angle, int x, int y, int z) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glSampleCoverage
-				/// </java-name>
-				[Dot42.DexImport("glSampleCoverage", "(FZ)V", AccessFlags = 1025)]
-				void GlSampleCoverage(float value, bool invert) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glSampleCoveragex
-				/// </java-name>
-				[Dot42.DexImport("glSampleCoveragex", "(IZ)V", AccessFlags = 1025)]
-				void GlSampleCoveragex(int value, bool invert) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glScalef
-				/// </java-name>
-				[Dot42.DexImport("glScalef", "(FFF)V", AccessFlags = 1025)]
-				void GlScalef(float x, float y, float z) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glScalex
-				/// </java-name>
-				[Dot42.DexImport("glScalex", "(III)V", AccessFlags = 1025)]
-				void GlScalex(int x, int y, int z) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glScissor
-				/// </java-name>
-				[Dot42.DexImport("glScissor", "(IIII)V", AccessFlags = 1025)]
-				void GlScissor(int x, int y, int width, int height) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glShadeModel
-				/// </java-name>
-				[Dot42.DexImport("glShadeModel", "(I)V", AccessFlags = 1025)]
-				void GlShadeModel(int mode) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glStencilFunc
-				/// </java-name>
-				[Dot42.DexImport("glStencilFunc", "(III)V", AccessFlags = 1025)]
-				void GlStencilFunc(int func, int @ref, int mask) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glStencilMask
-				/// </java-name>
-				[Dot42.DexImport("glStencilMask", "(I)V", AccessFlags = 1025)]
-				void GlStencilMask(int mask) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glStencilOp
-				/// </java-name>
-				[Dot42.DexImport("glStencilOp", "(III)V", AccessFlags = 1025)]
-				void GlStencilOp(int fail, int zfail, int zpass) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glPointSizePointerOES", "(IILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlPointSizePointerOES(int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glTexCoordPointer
 				/// </java-name>
-				[Dot42.DexImport("glTexCoordPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlTexCoordPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexCoordPointer", "(IIII)V", AccessFlags = 1025)]
+				void GlTexCoordPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexEnvf
+				/// glTexEnvi
 				/// </java-name>
-				[Dot42.DexImport("glTexEnvf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexEnvf(int target, int pname, float param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexEnvi", "(III)V", AccessFlags = 1025)]
+				void GlTexEnvi(int target, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexEnvfv
+				/// glTexEnviv
 				/// </java-name>
-				[Dot42.DexImport("glTexEnvfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexEnviv", "(II[II)V", AccessFlags = 1025)]
+				void GlTexEnviv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexEnvfv
+				/// glTexEnviv
 				/// </java-name>
-				[Dot42.DexImport("glTexEnvfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexEnviv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlTexEnviv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexEnvx
+				/// glTexParameterfv
 				/// </java-name>
-				[Dot42.DexImport("glTexEnvx", "(III)V", AccessFlags = 1025)]
-				void GlTexEnvx(int target, int pname, int param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlTexParameterfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexEnvxv
+				/// glTexParameterfv
 				/// </java-name>
-				[Dot42.DexImport("glTexEnvxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexParameterfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlTexParameterfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexEnvxv
+				/// glTexParameteri
 				/// </java-name>
-				[Dot42.DexImport("glTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexParameteri", "(III)V", AccessFlags = 1025)]
+				void GlTexParameteri(int target, int pname, int param) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexImage2D
+				/// glTexParameteriv
 				/// </java-name>
-				[Dot42.DexImport("glTexImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlTexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexParameteriv", "(II[II)V", AccessFlags = 1025)]
+				void GlTexParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameterf
+				/// glTexParameteriv
 				/// </java-name>
-				[Dot42.DexImport("glTexParameterf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexParameterf(int target, int pname, float param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlTexParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameterx
+				/// glTexParameterxv
 				/// </java-name>
-				[Dot42.DexImport("glTexParameterx", "(III)V", AccessFlags = 1025)]
-				void GlTexParameterx(int target, int pname, int param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexParameterxv", "(II[II)V", AccessFlags = 1025)]
+				void GlTexParameterxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexSubImage2D
+				/// glTexParameterxv
 				/// </java-name>
-				[Dot42.DexImport("glTexSubImage2D", "(IIIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, global::Java.Nio.Buffer pixels) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTranslatef
-				/// </java-name>
-				[Dot42.DexImport("glTranslatef", "(FFF)V", AccessFlags = 1025)]
-				void GlTranslatef(float x, float y, float z) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTranslatex
-				/// </java-name>
-				[Dot42.DexImport("glTranslatex", "(III)V", AccessFlags = 1025)]
-				void GlTranslatex(int x, int y, int z) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glTexParameterxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlTexParameterxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
 				/// glVertexPointer
 				/// </java-name>
-				[Dot42.DexImport("glVertexPointer", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlVertexPointer(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glViewport
-				/// </java-name>
-				[Dot42.DexImport("glViewport", "(IIII)V", AccessFlags = 1025)]
-				void GlViewport(int x, int y, int width, int height) /* MethodBuilder.Create */ ;
-
-		}
-
-		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL11ExtensionPack
-		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11ExtensionPack", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
-		public static partial class IGL11ExtensionPackConstants
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// GL_BLEND_DST_ALPHA
-				/// </java-name>
-				[Dot42.DexImport("GL_BLEND_DST_ALPHA", "I", AccessFlags = 25)]
-				public const int GL_BLEND_DST_ALPHA = 32970;
-				/// <java-name>
-				/// GL_BLEND_DST_RGB
-				/// </java-name>
-				[Dot42.DexImport("GL_BLEND_DST_RGB", "I", AccessFlags = 25)]
-				public const int GL_BLEND_DST_RGB = 32968;
-				/// <java-name>
-				/// GL_BLEND_EQUATION
-				/// </java-name>
-				[Dot42.DexImport("GL_BLEND_EQUATION", "I", AccessFlags = 25)]
-				public const int GL_BLEND_EQUATION = 32777;
-				/// <java-name>
-				/// GL_BLEND_EQUATION_ALPHA
-				/// </java-name>
-				[Dot42.DexImport("GL_BLEND_EQUATION_ALPHA", "I", AccessFlags = 25)]
-				public const int GL_BLEND_EQUATION_ALPHA = 34877;
-				/// <java-name>
-				/// GL_BLEND_EQUATION_RGB
-				/// </java-name>
-				[Dot42.DexImport("GL_BLEND_EQUATION_RGB", "I", AccessFlags = 25)]
-				public const int GL_BLEND_EQUATION_RGB = 32777;
-				/// <java-name>
-				/// GL_BLEND_SRC_ALPHA
-				/// </java-name>
-				[Dot42.DexImport("GL_BLEND_SRC_ALPHA", "I", AccessFlags = 25)]
-				public const int GL_BLEND_SRC_ALPHA = 32971;
-				/// <java-name>
-				/// GL_BLEND_SRC_RGB
-				/// </java-name>
-				[Dot42.DexImport("GL_BLEND_SRC_RGB", "I", AccessFlags = 25)]
-				public const int GL_BLEND_SRC_RGB = 32969;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT0_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT0_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT0_OES = 36064;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT1_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT1_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT1_OES = 36065;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT2_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT2_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT2_OES = 36066;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT3_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT3_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT3_OES = 36067;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT4_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT4_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT4_OES = 36068;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT5_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT5_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT5_OES = 36069;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT6_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT6_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT6_OES = 36070;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT7_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT7_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT7_OES = 36071;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT8_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT8_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT8_OES = 36072;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT9_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT9_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT9_OES = 36073;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT10_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT10_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT10_OES = 36074;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT11_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT11_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT11_OES = 36075;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT12_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT12_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT12_OES = 36076;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT13_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT13_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT13_OES = 36077;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT14_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT14_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT14_OES = 36078;
-				/// <java-name>
-				/// GL_COLOR_ATTACHMENT15_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_COLOR_ATTACHMENT15_OES", "I", AccessFlags = 25)]
-				public const int GL_COLOR_ATTACHMENT15_OES = 36079;
-				/// <java-name>
-				/// GL_DECR_WRAP
-				/// </java-name>
-				[Dot42.DexImport("GL_DECR_WRAP", "I", AccessFlags = 25)]
-				public const int GL_DECR_WRAP = 34056;
-				/// <java-name>
-				/// GL_DEPTH_ATTACHMENT_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_DEPTH_ATTACHMENT_OES", "I", AccessFlags = 25)]
-				public const int GL_DEPTH_ATTACHMENT_OES = 36096;
-				/// <java-name>
-				/// GL_DEPTH_COMPONENT
-				/// </java-name>
-				[Dot42.DexImport("GL_DEPTH_COMPONENT", "I", AccessFlags = 25)]
-				public const int GL_DEPTH_COMPONENT = 6402;
-				/// <java-name>
-				/// GL_DEPTH_COMPONENT16
-				/// </java-name>
-				[Dot42.DexImport("GL_DEPTH_COMPONENT16", "I", AccessFlags = 25)]
-				public const int GL_DEPTH_COMPONENT16 = 33189;
-				/// <java-name>
-				/// GL_DEPTH_COMPONENT24
-				/// </java-name>
-				[Dot42.DexImport("GL_DEPTH_COMPONENT24", "I", AccessFlags = 25)]
-				public const int GL_DEPTH_COMPONENT24 = 33190;
-				/// <java-name>
-				/// GL_DEPTH_COMPONENT32
-				/// </java-name>
-				[Dot42.DexImport("GL_DEPTH_COMPONENT32", "I", AccessFlags = 25)]
-				public const int GL_DEPTH_COMPONENT32 = 33191;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES = 36049;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES = 36048;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES = 36051;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES = 36050;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_BINDING_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_BINDING_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_BINDING_OES = 36006;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_COMPLETE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_COMPLETE_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_COMPLETE_OES = 36053;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES = 36054;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES = 36057;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_OES = 36059;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES = 36058;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES = 36055;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_OES = 36060;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_OES = 36160;
-				/// <java-name>
-				/// GL_FRAMEBUFFER_UNSUPPORTED_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_FRAMEBUFFER_UNSUPPORTED_OES", "I", AccessFlags = 25)]
-				public const int GL_FRAMEBUFFER_UNSUPPORTED_OES = 36061;
-				/// <java-name>
-				/// GL_FUNC_ADD
-				/// </java-name>
-				[Dot42.DexImport("GL_FUNC_ADD", "I", AccessFlags = 25)]
-				public const int GL_FUNC_ADD = 32774;
-				/// <java-name>
-				/// GL_FUNC_REVERSE_SUBTRACT
-				/// </java-name>
-				[Dot42.DexImport("GL_FUNC_REVERSE_SUBTRACT", "I", AccessFlags = 25)]
-				public const int GL_FUNC_REVERSE_SUBTRACT = 32779;
-				/// <java-name>
-				/// GL_FUNC_SUBTRACT
-				/// </java-name>
-				[Dot42.DexImport("GL_FUNC_SUBTRACT", "I", AccessFlags = 25)]
-				public const int GL_FUNC_SUBTRACT = 32778;
-				/// <java-name>
-				/// GL_INCR_WRAP
-				/// </java-name>
-				[Dot42.DexImport("GL_INCR_WRAP", "I", AccessFlags = 25)]
-				public const int GL_INCR_WRAP = 34055;
-				/// <java-name>
-				/// GL_INVALID_FRAMEBUFFER_OPERATION_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_INVALID_FRAMEBUFFER_OPERATION_OES", "I", AccessFlags = 25)]
-				public const int GL_INVALID_FRAMEBUFFER_OPERATION_OES = 1286;
-				/// <java-name>
-				/// GL_MAX_COLOR_ATTACHMENTS_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MAX_COLOR_ATTACHMENTS_OES", "I", AccessFlags = 25)]
-				public const int GL_MAX_COLOR_ATTACHMENTS_OES = 36063;
-				/// <java-name>
-				/// GL_MAX_CUBE_MAP_TEXTURE_SIZE
-				/// </java-name>
-				[Dot42.DexImport("GL_MAX_CUBE_MAP_TEXTURE_SIZE", "I", AccessFlags = 25)]
-				public const int GL_MAX_CUBE_MAP_TEXTURE_SIZE = 34076;
-				/// <java-name>
-				/// GL_MAX_RENDERBUFFER_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_MAX_RENDERBUFFER_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_MAX_RENDERBUFFER_SIZE_OES = 34024;
-				/// <java-name>
-				/// GL_MIRRORED_REPEAT
-				/// </java-name>
-				[Dot42.DexImport("GL_MIRRORED_REPEAT", "I", AccessFlags = 25)]
-				public const int GL_MIRRORED_REPEAT = 33648;
-				/// <java-name>
-				/// GL_NORMAL_MAP
-				/// </java-name>
-				[Dot42.DexImport("GL_NORMAL_MAP", "I", AccessFlags = 25)]
-				public const int GL_NORMAL_MAP = 34065;
-				/// <java-name>
-				/// GL_REFLECTION_MAP
-				/// </java-name>
-				[Dot42.DexImport("GL_REFLECTION_MAP", "I", AccessFlags = 25)]
-				public const int GL_REFLECTION_MAP = 34066;
-				/// <java-name>
-				/// GL_RENDERBUFFER_ALPHA_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_ALPHA_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_ALPHA_SIZE_OES = 36179;
-				/// <java-name>
-				/// GL_RENDERBUFFER_BINDING_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_BINDING_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_BINDING_OES = 36007;
-				/// <java-name>
-				/// GL_RENDERBUFFER_BLUE_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_BLUE_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_BLUE_SIZE_OES = 36178;
-				/// <java-name>
-				/// GL_RENDERBUFFER_DEPTH_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_DEPTH_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_DEPTH_SIZE_OES = 36180;
-				/// <java-name>
-				/// GL_RENDERBUFFER_GREEN_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_GREEN_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_GREEN_SIZE_OES = 36177;
-				/// <java-name>
-				/// GL_RENDERBUFFER_HEIGHT_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_HEIGHT_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_HEIGHT_OES = 36163;
-				/// <java-name>
-				/// GL_RENDERBUFFER_INTERNAL_FORMAT_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_INTERNAL_FORMAT_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_INTERNAL_FORMAT_OES = 36164;
-				/// <java-name>
-				/// GL_RENDERBUFFER_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_OES = 36161;
-				/// <java-name>
-				/// GL_RENDERBUFFER_RED_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_RED_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_RED_SIZE_OES = 36176;
-				/// <java-name>
-				/// GL_RENDERBUFFER_STENCIL_SIZE_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_STENCIL_SIZE_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_STENCIL_SIZE_OES = 36181;
-				/// <java-name>
-				/// GL_RENDERBUFFER_WIDTH_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RENDERBUFFER_WIDTH_OES", "I", AccessFlags = 25)]
-				public const int GL_RENDERBUFFER_WIDTH_OES = 36162;
-				/// <java-name>
-				/// GL_RGB5_A1
-				/// </java-name>
-				[Dot42.DexImport("GL_RGB5_A1", "I", AccessFlags = 25)]
-				public const int GL_RGB5_A1 = 32855;
-				/// <java-name>
-				/// GL_RGB565_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_RGB565_OES", "I", AccessFlags = 25)]
-				public const int GL_RGB565_OES = 36194;
-				/// <java-name>
-				/// GL_RGB8
-				/// </java-name>
-				[Dot42.DexImport("GL_RGB8", "I", AccessFlags = 25)]
-				public const int GL_RGB8 = 32849;
-				/// <java-name>
-				/// GL_RGBA4
-				/// </java-name>
-				[Dot42.DexImport("GL_RGBA4", "I", AccessFlags = 25)]
-				public const int GL_RGBA4 = 32854;
-				/// <java-name>
-				/// GL_RGBA8
-				/// </java-name>
-				[Dot42.DexImport("GL_RGBA8", "I", AccessFlags = 25)]
-				public const int GL_RGBA8 = 32856;
-				/// <java-name>
-				/// GL_STENCIL_ATTACHMENT_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_STENCIL_ATTACHMENT_OES", "I", AccessFlags = 25)]
-				public const int GL_STENCIL_ATTACHMENT_OES = 36128;
-				/// <java-name>
-				/// GL_STENCIL_INDEX
-				/// </java-name>
-				[Dot42.DexImport("GL_STENCIL_INDEX", "I", AccessFlags = 25)]
-				public const int GL_STENCIL_INDEX = 6401;
-				/// <java-name>
-				/// GL_STENCIL_INDEX1_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_STENCIL_INDEX1_OES", "I", AccessFlags = 25)]
-				public const int GL_STENCIL_INDEX1_OES = 36166;
-				/// <java-name>
-				/// GL_STENCIL_INDEX4_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_STENCIL_INDEX4_OES", "I", AccessFlags = 25)]
-				public const int GL_STENCIL_INDEX4_OES = 36167;
-				/// <java-name>
-				/// GL_STENCIL_INDEX8_OES
-				/// </java-name>
-				[Dot42.DexImport("GL_STENCIL_INDEX8_OES", "I", AccessFlags = 25)]
-				public const int GL_STENCIL_INDEX8_OES = 36168;
-				/// <java-name>
-				/// GL_STR
-				/// </java-name>
-				[Dot42.DexImport("GL_STR", "I", AccessFlags = 25)]
-				public const int GL_STR = -1;
-				/// <java-name>
-				/// GL_TEXTURE_BINDING_CUBE_MAP
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_BINDING_CUBE_MAP", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_BINDING_CUBE_MAP = 34068;
-				/// <java-name>
-				/// GL_TEXTURE_CUBE_MAP
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CUBE_MAP = 34067;
-				/// <java-name>
-				/// GL_TEXTURE_CUBE_MAP_NEGATIVE_X
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_NEGATIVE_X", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CUBE_MAP_NEGATIVE_X = 34070;
-				/// <java-name>
-				/// GL_TEXTURE_CUBE_MAP_NEGATIVE_Y
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_NEGATIVE_Y", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CUBE_MAP_NEGATIVE_Y = 34072;
-				/// <java-name>
-				/// GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_NEGATIVE_Z", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CUBE_MAP_NEGATIVE_Z = 34074;
-				/// <java-name>
-				/// GL_TEXTURE_CUBE_MAP_POSITIVE_X
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_POSITIVE_X", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CUBE_MAP_POSITIVE_X = 34069;
-				/// <java-name>
-				/// GL_TEXTURE_CUBE_MAP_POSITIVE_Y
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_POSITIVE_Y", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CUBE_MAP_POSITIVE_Y = 34071;
-				/// <java-name>
-				/// GL_TEXTURE_CUBE_MAP_POSITIVE_Z
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_POSITIVE_Z", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_CUBE_MAP_POSITIVE_Z = 34073;
-				/// <java-name>
-				/// GL_TEXTURE_GEN_MODE
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_GEN_MODE", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_GEN_MODE = 9472;
-				/// <java-name>
-				/// GL_TEXTURE_GEN_STR
-				/// </java-name>
-				[Dot42.DexImport("GL_TEXTURE_GEN_STR", "I", AccessFlags = 25)]
-				public const int GL_TEXTURE_GEN_STR = 36192;
-		}
-
-		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL11ExtensionPack
-		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11ExtensionPack", AccessFlags = 1537)]
-		public partial interface IGL11ExtensionPack : global::Javax.Microedition.Khronos.Opengles.IGL
- /* scope: __dot42__ */ 
-		{
-				/// <java-name>
-				/// glBindFramebufferOES
-				/// </java-name>
-				[Dot42.DexImport("glBindFramebufferOES", "(II)V", AccessFlags = 1025)]
-				void GlBindFramebufferOES(int target, int framebuffer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBindRenderbufferOES
-				/// </java-name>
-				[Dot42.DexImport("glBindRenderbufferOES", "(II)V", AccessFlags = 1025)]
-				void GlBindRenderbufferOES(int target, int renderbuffer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBindTexture
-				/// </java-name>
-				[Dot42.DexImport("glBindTexture", "(II)V", AccessFlags = 1025)]
-				void GlBindTexture(int target, int texture) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBlendEquation
-				/// </java-name>
-				[Dot42.DexImport("glBlendEquation", "(I)V", AccessFlags = 1025)]
-				void GlBlendEquation(int mode) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBlendEquationSeparate
-				/// </java-name>
-				[Dot42.DexImport("glBlendEquationSeparate", "(II)V", AccessFlags = 1025)]
-				void GlBlendEquationSeparate(int modeRGB, int modeAlpha) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBlendFuncSeparate
-				/// </java-name>
-				[Dot42.DexImport("glBlendFuncSeparate", "(IIII)V", AccessFlags = 1025)]
-				void GlBlendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glCheckFramebufferStatusOES
-				/// </java-name>
-				[Dot42.DexImport("glCheckFramebufferStatusOES", "(I)I", AccessFlags = 1025)]
-				int GlCheckFramebufferStatusOES(int target) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glCompressedTexImage2D
-				/// </java-name>
-				[Dot42.DexImport("glCompressedTexImage2D", "(IIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glCopyTexImage2D
-				/// </java-name>
-				[Dot42.DexImport("glCopyTexImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
-				void GlCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteFramebuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glDeleteFramebuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteFramebuffersOES(int n, int[] framebuffers, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteFramebuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glDeleteFramebuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteFramebuffersOES(int n, global::Java.Nio.IntBuffer framebuffers) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteRenderbuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glDeleteRenderbuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteRenderbuffersOES(int n, int[] renderbuffers, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteRenderbuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glDeleteRenderbuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteRenderbuffersOES(int n, global::Java.Nio.IntBuffer renderbuffers) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glEnable
-				/// </java-name>
-				[Dot42.DexImport("glEnable", "(I)V", AccessFlags = 1025)]
-				void GlEnable(int cap) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glFramebufferRenderbufferOES
-				/// </java-name>
-				[Dot42.DexImport("glFramebufferRenderbufferOES", "(IIII)V", AccessFlags = 1025)]
-				void GlFramebufferRenderbufferOES(int target, int attachment, int renderbuffertarget, int renderbuffer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glFramebufferTexture2DOES
-				/// </java-name>
-				[Dot42.DexImport("glFramebufferTexture2DOES", "(IIIII)V", AccessFlags = 1025)]
-				void GlFramebufferTexture2DOES(int target, int attachment, int textarget, int texture, int level) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGenerateMipmapOES
-				/// </java-name>
-				[Dot42.DexImport("glGenerateMipmapOES", "(I)V", AccessFlags = 1025)]
-				void GlGenerateMipmapOES(int target) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGenFramebuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glGenFramebuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlGenFramebuffersOES(int n, int[] framebuffers, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGenFramebuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glGenFramebuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenFramebuffersOES(int n, global::Java.Nio.IntBuffer framebuffers) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGenRenderbuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glGenRenderbuffersOES", "(I[II)V", AccessFlags = 1025)]
-				void GlGenRenderbuffersOES(int n, int[] renderbuffers, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGenRenderbuffersOES
-				/// </java-name>
-				[Dot42.DexImport("glGenRenderbuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenRenderbuffersOES(int n, global::Java.Nio.IntBuffer renderbuffers) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetFramebufferAttachmentParameterivOES
-				/// </java-name>
-				[Dot42.DexImport("glGetFramebufferAttachmentParameterivOES", "(III[II)V", AccessFlags = 1025)]
-				void GlGetFramebufferAttachmentParameterivOES(int target, int attachment, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetFramebufferAttachmentParameterivOES
-				/// </java-name>
-				[Dot42.DexImport("glGetFramebufferAttachmentParameterivOES", "(IIILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetFramebufferAttachmentParameterivOES(int target, int attachment, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetIntegerv
-				/// </java-name>
-				[Dot42.DexImport("glGetIntegerv", "(I[II)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetIntegerv
-				/// </java-name>
-				[Dot42.DexImport("glGetIntegerv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetIntegerv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetRenderbufferParameterivOES
-				/// </java-name>
-				[Dot42.DexImport("glGetRenderbufferParameterivOES", "(II[II)V", AccessFlags = 1025)]
-				void GlGetRenderbufferParameterivOES(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetRenderbufferParameterivOES
-				/// </java-name>
-				[Dot42.DexImport("glGetRenderbufferParameterivOES", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetRenderbufferParameterivOES(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexGenfv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexGenfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetTexGenfv(int coord, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexGenfv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexGenfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexGenfv(int coord, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexGeniv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexGeniv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexGeniv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexGeniv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexGeniv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexGeniv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexGenxv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexGenxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexGenxv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexGenxv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexGenxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexGenxv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glIsFramebufferOES
-				/// </java-name>
-				[Dot42.DexImport("glIsFramebufferOES", "(I)Z", AccessFlags = 1025)]
-				bool GlIsFramebufferOES(int framebuffer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glIsRenderbufferOES
-				/// </java-name>
-				[Dot42.DexImport("glIsRenderbufferOES", "(I)Z", AccessFlags = 1025)]
-				bool GlIsRenderbufferOES(int renderbuffer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glRenderbufferStorageOES
-				/// </java-name>
-				[Dot42.DexImport("glRenderbufferStorageOES", "(IIII)V", AccessFlags = 1025)]
-				void GlRenderbufferStorageOES(int target, int internalformat, int width, int height) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glStencilOp
-				/// </java-name>
-				[Dot42.DexImport("glStencilOp", "(III)V", AccessFlags = 1025)]
-				void GlStencilOp(int fail, int zfail, int zpass) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnvf
-				/// </java-name>
-				[Dot42.DexImport("glTexEnvf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexEnvf(int target, int pname, float param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnvfv
-				/// </java-name>
-				[Dot42.DexImport("glTexEnvfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnvfv
-				/// </java-name>
-				[Dot42.DexImport("glTexEnvfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnvx
-				/// </java-name>
-				[Dot42.DexImport("glTexEnvx", "(III)V", AccessFlags = 1025)]
-				void GlTexEnvx(int target, int pname, int param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnvxv
-				/// </java-name>
-				[Dot42.DexImport("glTexEnvxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnvxv
-				/// </java-name>
-				[Dot42.DexImport("glTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnvxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGenf
-				/// </java-name>
-				[Dot42.DexImport("glTexGenf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexGenf(int coord, int pname, float param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGenfv
-				/// </java-name>
-				[Dot42.DexImport("glTexGenfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexGenfv(int coord, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGenfv
-				/// </java-name>
-				[Dot42.DexImport("glTexGenfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexGenfv(int coord, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGeni
-				/// </java-name>
-				[Dot42.DexImport("glTexGeni", "(III)V", AccessFlags = 1025)]
-				void GlTexGeni(int coord, int pname, int param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGeniv
-				/// </java-name>
-				[Dot42.DexImport("glTexGeniv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexGeniv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGeniv
-				/// </java-name>
-				[Dot42.DexImport("glTexGeniv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexGeniv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGenx
-				/// </java-name>
-				[Dot42.DexImport("glTexGenx", "(III)V", AccessFlags = 1025)]
-				void GlTexGenx(int coord, int pname, int param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGenxv
-				/// </java-name>
-				[Dot42.DexImport("glTexGenxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexGenxv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexGenxv
-				/// </java-name>
-				[Dot42.DexImport("glTexGenxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexGenxv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexParameterf
-				/// </java-name>
-				[Dot42.DexImport("glTexParameterf", "(IIF)V", AccessFlags = 1025)]
-				void GlTexParameterf(int target, int pname, float param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glVertexPointer", "(IIII)V", AccessFlags = 1025)]
+				void GlVertexPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
 
 		}
 
@@ -3597,422 +3009,994 @@ namespace Javax.Microedition.Khronos.Opengles
 		}
 
 		/// <java-name>
-		/// javax/microedition/khronos/opengles/GL11
+		/// javax/microedition/khronos/opengles/GL11Ext
 		/// </java-name>
-		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11", AccessFlags = 1537)]
-		public partial interface IGL11 : global::Javax.Microedition.Khronos.Opengles.IGL10
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11Ext", AccessFlags = 1537)]
+		public partial interface IGL11Ext : global::Javax.Microedition.Khronos.Opengles.IGL
  /* scope: __dot42__ */ 
 		{
-				/// <java-name>
-				/// glGetPointerv
-				/// </java-name>
-				[Dot42.DexImport("glGetPointerv", "(I[Ljava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlGetPointerv(int pname, global::Java.Nio.Buffer[] @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBindBuffer
-				/// </java-name>
-				[Dot42.DexImport("glBindBuffer", "(II)V", AccessFlags = 1025)]
-				void GlBindBuffer(int target, int buffer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBufferData
-				/// </java-name>
-				[Dot42.DexImport("glBufferData", "(IILjava/nio/Buffer;I)V", AccessFlags = 1025)]
-				void GlBufferData(int target, int size, global::Java.Nio.Buffer data, int usage) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glBufferSubData
-				/// </java-name>
-				[Dot42.DexImport("glBufferSubData", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlBufferSubData(int target, int offset, int size, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glClipPlanef
-				/// </java-name>
-				[Dot42.DexImport("glClipPlanef", "(I[FI)V", AccessFlags = 1025)]
-				void GlClipPlanef(int plane, float[] equation, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glClipPlanef
-				/// </java-name>
-				[Dot42.DexImport("glClipPlanef", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlClipPlanef(int plane, global::Java.Nio.FloatBuffer equation) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glClipPlanex
-				/// </java-name>
-				[Dot42.DexImport("glClipPlanex", "(I[II)V", AccessFlags = 1025)]
-				void GlClipPlanex(int plane, int[] equation, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glClipPlanex
-				/// </java-name>
-				[Dot42.DexImport("glClipPlanex", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlClipPlanex(int plane, global::Java.Nio.IntBuffer equation) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glColor4ub
-				/// </java-name>
-				[Dot42.DexImport("glColor4ub", "(BBBB)V", AccessFlags = 1025)]
-				void GlColor4ub(sbyte red, sbyte green, sbyte blue, sbyte alpha) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glColorPointer
-				/// </java-name>
-				[Dot42.DexImport("glColorPointer", "(IIII)V", AccessFlags = 1025)]
-				void GlColorPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteBuffers
-				/// </java-name>
-				[Dot42.DexImport("glDeleteBuffers", "(I[II)V", AccessFlags = 1025)]
-				void GlDeleteBuffers(int n, int[] buffers, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDeleteBuffers
-				/// </java-name>
-				[Dot42.DexImport("glDeleteBuffers", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlDeleteBuffers(int n, global::Java.Nio.IntBuffer buffers) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glDrawElements
-				/// </java-name>
-				[Dot42.DexImport("glDrawElements", "(IIII)V", AccessFlags = 1025)]
-				void GlDrawElements(int mode, int count, int type, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGenBuffers
-				/// </java-name>
-				[Dot42.DexImport("glGenBuffers", "(I[II)V", AccessFlags = 1025)]
-				void GlGenBuffers(int n, int[] buffers, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGenBuffers
-				/// </java-name>
-				[Dot42.DexImport("glGenBuffers", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGenBuffers(int n, global::Java.Nio.IntBuffer buffers) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetBooleanv
-				/// </java-name>
-				[Dot42.DexImport("glGetBooleanv", "(I[ZI)V", AccessFlags = 1025)]
-				void GlGetBooleanv(int pname, bool[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetBooleanv
-				/// </java-name>
-				[Dot42.DexImport("glGetBooleanv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetBooleanv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetBufferParameteriv
-				/// </java-name>
-				[Dot42.DexImport("glGetBufferParameteriv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetBufferParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetBufferParameteriv
-				/// </java-name>
-				[Dot42.DexImport("glGetBufferParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetBufferParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetClipPlanef
-				/// </java-name>
-				[Dot42.DexImport("glGetClipPlanef", "(I[FI)V", AccessFlags = 1025)]
-				void GlGetClipPlanef(int pname, float[] eqn, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetClipPlanef
-				/// </java-name>
-				[Dot42.DexImport("glGetClipPlanef", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetClipPlanef(int pname, global::Java.Nio.FloatBuffer eqn) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetClipPlanex
-				/// </java-name>
-				[Dot42.DexImport("glGetClipPlanex", "(I[II)V", AccessFlags = 1025)]
-				void GlGetClipPlanex(int pname, int[] eqn, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetClipPlanex
-				/// </java-name>
-				[Dot42.DexImport("glGetClipPlanex", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetClipPlanex(int pname, global::Java.Nio.IntBuffer eqn) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetFixedv
-				/// </java-name>
-				[Dot42.DexImport("glGetFixedv", "(I[II)V", AccessFlags = 1025)]
-				void GlGetFixedv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetFixedv
-				/// </java-name>
-				[Dot42.DexImport("glGetFixedv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetFixedv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetFloatv
-				/// </java-name>
-				[Dot42.DexImport("glGetFloatv", "(I[FI)V", AccessFlags = 1025)]
-				void GlGetFloatv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetFloatv
-				/// </java-name>
-				[Dot42.DexImport("glGetFloatv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetFloatv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetLightfv
-				/// </java-name>
-				[Dot42.DexImport("glGetLightfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetLightfv(int light, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetLightfv
-				/// </java-name>
-				[Dot42.DexImport("glGetLightfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetLightfv(int light, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetLightxv
-				/// </java-name>
-				[Dot42.DexImport("glGetLightxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetLightxv(int light, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetLightxv
-				/// </java-name>
-				[Dot42.DexImport("glGetLightxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetLightxv(int light, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetMaterialfv
-				/// </java-name>
-				[Dot42.DexImport("glGetMaterialfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetMaterialfv(int face, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetMaterialfv
-				/// </java-name>
-				[Dot42.DexImport("glGetMaterialfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetMaterialfv(int face, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetMaterialxv
-				/// </java-name>
-				[Dot42.DexImport("glGetMaterialxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetMaterialxv(int face, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetMaterialxv
-				/// </java-name>
-				[Dot42.DexImport("glGetMaterialxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetMaterialxv(int face, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexEnviv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexEnviv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexEnviv(int env, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexEnviv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexEnviv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexEnviv(int env, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexEnvxv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexEnvxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexEnvxv(int env, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexEnvxv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexEnvxv(int env, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexParameterfv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlGetTexParameterfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexParameterfv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexParameterfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexParameterfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexParameteriv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexParameteriv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexParameteriv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexParameterxv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexParameterxv", "(II[II)V", AccessFlags = 1025)]
-				void GlGetTexParameterxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glGetTexParameterxv
-				/// </java-name>
-				[Dot42.DexImport("glGetTexParameterxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlGetTexParameterxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glIsBuffer
-				/// </java-name>
-				[Dot42.DexImport("glIsBuffer", "(I)Z", AccessFlags = 1025)]
-				bool GlIsBuffer(int buffer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glIsEnabled
-				/// </java-name>
-				[Dot42.DexImport("glIsEnabled", "(I)Z", AccessFlags = 1025)]
-				bool GlIsEnabled(int cap) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glIsTexture
-				/// </java-name>
-				[Dot42.DexImport("glIsTexture", "(I)Z", AccessFlags = 1025)]
-				bool GlIsTexture(int texture) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glNormalPointer
-				/// </java-name>
-				[Dot42.DexImport("glNormalPointer", "(III)V", AccessFlags = 1025)]
-				void GlNormalPointer(int type, int stride, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPointParameterf
-				/// </java-name>
-				[Dot42.DexImport("glPointParameterf", "(IF)V", AccessFlags = 1025)]
-				void GlPointParameterf(int pname, float param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPointParameterfv
-				/// </java-name>
-				[Dot42.DexImport("glPointParameterfv", "(I[FI)V", AccessFlags = 1025)]
-				void GlPointParameterfv(int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPointParameterfv
-				/// </java-name>
-				[Dot42.DexImport("glPointParameterfv", "(ILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlPointParameterfv(int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPointParameterx
-				/// </java-name>
-				[Dot42.DexImport("glPointParameterx", "(II)V", AccessFlags = 1025)]
-				void GlPointParameterx(int pname, int param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPointParameterxv
-				/// </java-name>
-				[Dot42.DexImport("glPointParameterxv", "(I[II)V", AccessFlags = 1025)]
-				void GlPointParameterxv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPointParameterxv
-				/// </java-name>
-				[Dot42.DexImport("glPointParameterxv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlPointParameterxv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glPointSizePointerOES
-				/// </java-name>
-				[Dot42.DexImport("glPointSizePointerOES", "(IILjava/nio/Buffer;)V", AccessFlags = 1025)]
-				void GlPointSizePointerOES(int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexCoordPointer
-				/// </java-name>
-				[Dot42.DexImport("glTexCoordPointer", "(IIII)V", AccessFlags = 1025)]
-				void GlTexCoordPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnvi
-				/// </java-name>
-				[Dot42.DexImport("glTexEnvi", "(III)V", AccessFlags = 1025)]
-				void GlTexEnvi(int target, int pname, int param) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnviv
-				/// </java-name>
-				[Dot42.DexImport("glTexEnviv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexEnviv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
-
-				/// <java-name>
-				/// glTexEnviv
-				/// </java-name>
-				[Dot42.DexImport("glTexEnviv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexEnviv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
-
 				/// <java-name>
 				/// glTexParameterfv
 				/// </java-name>
 				[Dot42.DexImport("glTexParameterfv", "(II[FI)V", AccessFlags = 1025)]
-				void GlTexParameterfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+				void GlTexParameterfv(int target, int pname, float[] param, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameterfv
+				/// glCurrentPaletteMatrixOES
 				/// </java-name>
-				[Dot42.DexImport("glTexParameterfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
-				void GlTexParameterfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glCurrentPaletteMatrixOES", "(I)V", AccessFlags = 1025)]
+				void GlCurrentPaletteMatrixOES(int matrixpaletteindex) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameteri
+				/// glDrawTexfOES
 				/// </java-name>
-				[Dot42.DexImport("glTexParameteri", "(III)V", AccessFlags = 1025)]
-				void GlTexParameteri(int target, int pname, int param) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDrawTexfOES", "(FFFFF)V", AccessFlags = 1025)]
+				void GlDrawTexfOES(float x, float y, float z, float width, float height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameteriv
+				/// glDrawTexfvOES
 				/// </java-name>
-				[Dot42.DexImport("glTexParameteriv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexParameteriv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDrawTexfvOES", "([FI)V", AccessFlags = 1025)]
+				void GlDrawTexfvOES(float[] coords, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameteriv
+				/// glDrawTexfvOES
 				/// </java-name>
-				[Dot42.DexImport("glTexParameteriv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexParameteriv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDrawTexfvOES", "(Ljava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlDrawTexfvOES(global::Java.Nio.FloatBuffer coords) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameterxv
+				/// glDrawTexiOES
 				/// </java-name>
-				[Dot42.DexImport("glTexParameterxv", "(II[II)V", AccessFlags = 1025)]
-				void GlTexParameterxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDrawTexiOES", "(IIIII)V", AccessFlags = 1025)]
+				void GlDrawTexiOES(int x, int y, int z, int width, int height) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glTexParameterxv
+				/// glDrawTexivOES
 				/// </java-name>
-				[Dot42.DexImport("glTexParameterxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
-				void GlTexParameterxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDrawTexivOES", "([II)V", AccessFlags = 1025)]
+				void GlDrawTexivOES(int[] coords, int offset) /* MethodBuilder.Create */ ;
 
 				/// <java-name>
-				/// glVertexPointer
+				/// glDrawTexivOES
 				/// </java-name>
-				[Dot42.DexImport("glVertexPointer", "(IIII)V", AccessFlags = 1025)]
-				void GlVertexPointer(int size, int type, int stride, int offset) /* MethodBuilder.Create */ ;
+				[Dot42.DexImport("glDrawTexivOES", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlDrawTexivOES(global::Java.Nio.IntBuffer coords) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawTexsOES
+				/// </java-name>
+				[Dot42.DexImport("glDrawTexsOES", "(SSSSS)V", AccessFlags = 1025)]
+				void GlDrawTexsOES(short x, short y, short z, short width, short height) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawTexsvOES
+				/// </java-name>
+				[Dot42.DexImport("glDrawTexsvOES", "([SI)V", AccessFlags = 1025)]
+				void GlDrawTexsvOES(short[] coords, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawTexsvOES
+				/// </java-name>
+				[Dot42.DexImport("glDrawTexsvOES", "(Ljava/nio/ShortBuffer;)V", AccessFlags = 1025)]
+				void GlDrawTexsvOES(global::Java.Nio.ShortBuffer coords) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawTexxOES
+				/// </java-name>
+				[Dot42.DexImport("glDrawTexxOES", "(IIIII)V", AccessFlags = 1025)]
+				void GlDrawTexxOES(int x, int y, int z, int width, int height) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawTexxvOES
+				/// </java-name>
+				[Dot42.DexImport("glDrawTexxvOES", "([II)V", AccessFlags = 1025)]
+				void GlDrawTexxvOES(int[] coords, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDrawTexxvOES
+				/// </java-name>
+				[Dot42.DexImport("glDrawTexxvOES", "(Ljava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlDrawTexxvOES(global::Java.Nio.IntBuffer coords) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glEnable
+				/// </java-name>
+				[Dot42.DexImport("glEnable", "(I)V", AccessFlags = 1025)]
+				void GlEnable(int cap) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glEnableClientState
+				/// </java-name>
+				[Dot42.DexImport("glEnableClientState", "(I)V", AccessFlags = 1025)]
+				void GlEnableClientState(int array) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glLoadPaletteFromModelViewMatrixOES
+				/// </java-name>
+				[Dot42.DexImport("glLoadPaletteFromModelViewMatrixOES", "()V", AccessFlags = 1025)]
+				void GlLoadPaletteFromModelViewMatrixOES() /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMatrixIndexPointerOES
+				/// </java-name>
+				[Dot42.DexImport("glMatrixIndexPointerOES", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlMatrixIndexPointerOES(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glMatrixIndexPointerOES
+				/// </java-name>
+				[Dot42.DexImport("glMatrixIndexPointerOES", "(IIII)V", AccessFlags = 1025)]
+				void GlMatrixIndexPointerOES(int size, int type, int stride, int pointer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glWeightPointerOES
+				/// </java-name>
+				[Dot42.DexImport("glWeightPointerOES", "(IIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlWeightPointerOES(int size, int type, int stride, global::Java.Nio.Buffer pointer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glWeightPointerOES
+				/// </java-name>
+				[Dot42.DexImport("glWeightPointerOES", "(IIII)V", AccessFlags = 1025)]
+				void GlWeightPointerOES(int size, int type, int stride, int pointer) /* MethodBuilder.Create */ ;
 
 		}
 
-}
+		/// <java-name>
+		/// javax/microedition/khronos/opengles/GL11Ext
+		/// </java-name>
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11Ext", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IGL11ExtConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES", "I", AccessFlags = 25)]
+				public const int GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES = 35742;
+				/// <java-name>
+				/// GL_MATRIX_INDEX_ARRAY_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_OES", "I", AccessFlags = 25)]
+				public const int GL_MATRIX_INDEX_ARRAY_OES = 34884;
+				/// <java-name>
+				/// GL_MATRIX_INDEX_ARRAY_POINTER_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_POINTER_OES", "I", AccessFlags = 25)]
+				public const int GL_MATRIX_INDEX_ARRAY_POINTER_OES = 34889;
+				/// <java-name>
+				/// GL_MATRIX_INDEX_ARRAY_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_MATRIX_INDEX_ARRAY_SIZE_OES = 34886;
+				/// <java-name>
+				/// GL_MATRIX_INDEX_ARRAY_STRIDE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_STRIDE_OES", "I", AccessFlags = 25)]
+				public const int GL_MATRIX_INDEX_ARRAY_STRIDE_OES = 34888;
+				/// <java-name>
+				/// GL_MATRIX_INDEX_ARRAY_TYPE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MATRIX_INDEX_ARRAY_TYPE_OES", "I", AccessFlags = 25)]
+				public const int GL_MATRIX_INDEX_ARRAY_TYPE_OES = 34887;
+				/// <java-name>
+				/// GL_MATRIX_PALETTE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MATRIX_PALETTE_OES", "I", AccessFlags = 25)]
+				public const int GL_MATRIX_PALETTE_OES = 34880;
+				/// <java-name>
+				/// GL_MAX_PALETTE_MATRICES_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MAX_PALETTE_MATRICES_OES", "I", AccessFlags = 25)]
+				public const int GL_MAX_PALETTE_MATRICES_OES = 34882;
+				/// <java-name>
+				/// GL_MAX_VERTEX_UNITS_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MAX_VERTEX_UNITS_OES", "I", AccessFlags = 25)]
+				public const int GL_MAX_VERTEX_UNITS_OES = 34468;
+				/// <java-name>
+				/// GL_TEXTURE_CROP_RECT_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CROP_RECT_OES", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CROP_RECT_OES = 35741;
+				/// <java-name>
+				/// GL_WEIGHT_ARRAY_BUFFER_BINDING_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_WEIGHT_ARRAY_BUFFER_BINDING_OES", "I", AccessFlags = 25)]
+				public const int GL_WEIGHT_ARRAY_BUFFER_BINDING_OES = 34974;
+				/// <java-name>
+				/// GL_WEIGHT_ARRAY_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_WEIGHT_ARRAY_OES", "I", AccessFlags = 25)]
+				public const int GL_WEIGHT_ARRAY_OES = 34477;
+				/// <java-name>
+				/// GL_WEIGHT_ARRAY_POINTER_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_WEIGHT_ARRAY_POINTER_OES", "I", AccessFlags = 25)]
+				public const int GL_WEIGHT_ARRAY_POINTER_OES = 34476;
+				/// <java-name>
+				/// GL_WEIGHT_ARRAY_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_WEIGHT_ARRAY_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_WEIGHT_ARRAY_SIZE_OES = 34475;
+				/// <java-name>
+				/// GL_WEIGHT_ARRAY_STRIDE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_WEIGHT_ARRAY_STRIDE_OES", "I", AccessFlags = 25)]
+				public const int GL_WEIGHT_ARRAY_STRIDE_OES = 34474;
+				/// <java-name>
+				/// GL_WEIGHT_ARRAY_TYPE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_WEIGHT_ARRAY_TYPE_OES", "I", AccessFlags = 25)]
+				public const int GL_WEIGHT_ARRAY_TYPE_OES = 34473;
+		}
 
+		/// <java-name>
+		/// javax/microedition/khronos/opengles/GL11ExtensionPack
+		/// </java-name>
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11ExtensionPack", AccessFlags = 1537)]
+		public partial interface IGL11ExtensionPack : global::Javax.Microedition.Khronos.Opengles.IGL
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// glBindFramebufferOES
+				/// </java-name>
+				[Dot42.DexImport("glBindFramebufferOES", "(II)V", AccessFlags = 1025)]
+				void GlBindFramebufferOES(int target, int framebuffer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glBindRenderbufferOES
+				/// </java-name>
+				[Dot42.DexImport("glBindRenderbufferOES", "(II)V", AccessFlags = 1025)]
+				void GlBindRenderbufferOES(int target, int renderbuffer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glBindTexture
+				/// </java-name>
+				[Dot42.DexImport("glBindTexture", "(II)V", AccessFlags = 1025)]
+				void GlBindTexture(int target, int texture) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glBlendEquation
+				/// </java-name>
+				[Dot42.DexImport("glBlendEquation", "(I)V", AccessFlags = 1025)]
+				void GlBlendEquation(int mode) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glBlendEquationSeparate
+				/// </java-name>
+				[Dot42.DexImport("glBlendEquationSeparate", "(II)V", AccessFlags = 1025)]
+				void GlBlendEquationSeparate(int modeRGB, int modeAlpha) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glBlendFuncSeparate
+				/// </java-name>
+				[Dot42.DexImport("glBlendFuncSeparate", "(IIII)V", AccessFlags = 1025)]
+				void GlBlendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCheckFramebufferStatusOES
+				/// </java-name>
+				[Dot42.DexImport("glCheckFramebufferStatusOES", "(I)I", AccessFlags = 1025)]
+				int GlCheckFramebufferStatusOES(int target) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCompressedTexImage2D
+				/// </java-name>
+				[Dot42.DexImport("glCompressedTexImage2D", "(IIIIIIILjava/nio/Buffer;)V", AccessFlags = 1025)]
+				void GlCompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, int imageSize, global::Java.Nio.Buffer data) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glCopyTexImage2D
+				/// </java-name>
+				[Dot42.DexImport("glCopyTexImage2D", "(IIIIIIII)V", AccessFlags = 1025)]
+				void GlCopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDeleteFramebuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glDeleteFramebuffersOES", "(I[II)V", AccessFlags = 1025)]
+				void GlDeleteFramebuffersOES(int n, int[] framebuffers, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDeleteFramebuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glDeleteFramebuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlDeleteFramebuffersOES(int n, global::Java.Nio.IntBuffer framebuffers) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDeleteRenderbuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glDeleteRenderbuffersOES", "(I[II)V", AccessFlags = 1025)]
+				void GlDeleteRenderbuffersOES(int n, int[] renderbuffers, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glDeleteRenderbuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glDeleteRenderbuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlDeleteRenderbuffersOES(int n, global::Java.Nio.IntBuffer renderbuffers) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glEnable
+				/// </java-name>
+				[Dot42.DexImport("glEnable", "(I)V", AccessFlags = 1025)]
+				void GlEnable(int cap) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glFramebufferRenderbufferOES
+				/// </java-name>
+				[Dot42.DexImport("glFramebufferRenderbufferOES", "(IIII)V", AccessFlags = 1025)]
+				void GlFramebufferRenderbufferOES(int target, int attachment, int renderbuffertarget, int renderbuffer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glFramebufferTexture2DOES
+				/// </java-name>
+				[Dot42.DexImport("glFramebufferTexture2DOES", "(IIIII)V", AccessFlags = 1025)]
+				void GlFramebufferTexture2DOES(int target, int attachment, int textarget, int texture, int level) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGenerateMipmapOES
+				/// </java-name>
+				[Dot42.DexImport("glGenerateMipmapOES", "(I)V", AccessFlags = 1025)]
+				void GlGenerateMipmapOES(int target) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGenFramebuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glGenFramebuffersOES", "(I[II)V", AccessFlags = 1025)]
+				void GlGenFramebuffersOES(int n, int[] framebuffers, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGenFramebuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glGenFramebuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGenFramebuffersOES(int n, global::Java.Nio.IntBuffer framebuffers) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGenRenderbuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glGenRenderbuffersOES", "(I[II)V", AccessFlags = 1025)]
+				void GlGenRenderbuffersOES(int n, int[] renderbuffers, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGenRenderbuffersOES
+				/// </java-name>
+				[Dot42.DexImport("glGenRenderbuffersOES", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGenRenderbuffersOES(int n, global::Java.Nio.IntBuffer renderbuffers) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetFramebufferAttachmentParameterivOES
+				/// </java-name>
+				[Dot42.DexImport("glGetFramebufferAttachmentParameterivOES", "(III[II)V", AccessFlags = 1025)]
+				void GlGetFramebufferAttachmentParameterivOES(int target, int attachment, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetFramebufferAttachmentParameterivOES
+				/// </java-name>
+				[Dot42.DexImport("glGetFramebufferAttachmentParameterivOES", "(IIILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetFramebufferAttachmentParameterivOES(int target, int attachment, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetIntegerv
+				/// </java-name>
+				[Dot42.DexImport("glGetIntegerv", "(I[II)V", AccessFlags = 1025)]
+				void GlGetIntegerv(int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetIntegerv
+				/// </java-name>
+				[Dot42.DexImport("glGetIntegerv", "(ILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetIntegerv(int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetRenderbufferParameterivOES
+				/// </java-name>
+				[Dot42.DexImport("glGetRenderbufferParameterivOES", "(II[II)V", AccessFlags = 1025)]
+				void GlGetRenderbufferParameterivOES(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetRenderbufferParameterivOES
+				/// </java-name>
+				[Dot42.DexImport("glGetRenderbufferParameterivOES", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetRenderbufferParameterivOES(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetTexGenfv
+				/// </java-name>
+				[Dot42.DexImport("glGetTexGenfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlGetTexGenfv(int coord, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetTexGenfv
+				/// </java-name>
+				[Dot42.DexImport("glGetTexGenfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexGenfv(int coord, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetTexGeniv
+				/// </java-name>
+				[Dot42.DexImport("glGetTexGeniv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetTexGeniv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetTexGeniv
+				/// </java-name>
+				[Dot42.DexImport("glGetTexGeniv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexGeniv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetTexGenxv
+				/// </java-name>
+				[Dot42.DexImport("glGetTexGenxv", "(II[II)V", AccessFlags = 1025)]
+				void GlGetTexGenxv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glGetTexGenxv
+				/// </java-name>
+				[Dot42.DexImport("glGetTexGenxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlGetTexGenxv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glIsFramebufferOES
+				/// </java-name>
+				[Dot42.DexImport("glIsFramebufferOES", "(I)Z", AccessFlags = 1025)]
+				bool GlIsFramebufferOES(int framebuffer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glIsRenderbufferOES
+				/// </java-name>
+				[Dot42.DexImport("glIsRenderbufferOES", "(I)Z", AccessFlags = 1025)]
+				bool GlIsRenderbufferOES(int renderbuffer) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glRenderbufferStorageOES
+				/// </java-name>
+				[Dot42.DexImport("glRenderbufferStorageOES", "(IIII)V", AccessFlags = 1025)]
+				void GlRenderbufferStorageOES(int target, int internalformat, int width, int height) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glStencilOp
+				/// </java-name>
+				[Dot42.DexImport("glStencilOp", "(III)V", AccessFlags = 1025)]
+				void GlStencilOp(int fail, int zfail, int zpass) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvf
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvf", "(IIF)V", AccessFlags = 1025)]
+				void GlTexEnvf(int target, int pname, float param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvfv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlTexEnvfv(int target, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvfv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlTexEnvfv(int target, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvx
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvx", "(III)V", AccessFlags = 1025)]
+				void GlTexEnvx(int target, int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvxv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvxv", "(II[II)V", AccessFlags = 1025)]
+				void GlTexEnvxv(int target, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexEnvxv
+				/// </java-name>
+				[Dot42.DexImport("glTexEnvxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlTexEnvxv(int target, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGenf
+				/// </java-name>
+				[Dot42.DexImport("glTexGenf", "(IIF)V", AccessFlags = 1025)]
+				void GlTexGenf(int coord, int pname, float param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGenfv
+				/// </java-name>
+				[Dot42.DexImport("glTexGenfv", "(II[FI)V", AccessFlags = 1025)]
+				void GlTexGenfv(int coord, int pname, float[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGenfv
+				/// </java-name>
+				[Dot42.DexImport("glTexGenfv", "(IILjava/nio/FloatBuffer;)V", AccessFlags = 1025)]
+				void GlTexGenfv(int coord, int pname, global::Java.Nio.FloatBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGeni
+				/// </java-name>
+				[Dot42.DexImport("glTexGeni", "(III)V", AccessFlags = 1025)]
+				void GlTexGeni(int coord, int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGeniv
+				/// </java-name>
+				[Dot42.DexImport("glTexGeniv", "(II[II)V", AccessFlags = 1025)]
+				void GlTexGeniv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGeniv
+				/// </java-name>
+				[Dot42.DexImport("glTexGeniv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlTexGeniv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGenx
+				/// </java-name>
+				[Dot42.DexImport("glTexGenx", "(III)V", AccessFlags = 1025)]
+				void GlTexGenx(int coord, int pname, int param) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGenxv
+				/// </java-name>
+				[Dot42.DexImport("glTexGenxv", "(II[II)V", AccessFlags = 1025)]
+				void GlTexGenxv(int coord, int pname, int[] @params, int offset) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexGenxv
+				/// </java-name>
+				[Dot42.DexImport("glTexGenxv", "(IILjava/nio/IntBuffer;)V", AccessFlags = 1025)]
+				void GlTexGenxv(int coord, int pname, global::Java.Nio.IntBuffer @params) /* MethodBuilder.Create */ ;
+
+				/// <java-name>
+				/// glTexParameterf
+				/// </java-name>
+				[Dot42.DexImport("glTexParameterf", "(IIF)V", AccessFlags = 1025)]
+				void GlTexParameterf(int target, int pname, float param) /* MethodBuilder.Create */ ;
+
+		}
+
+		/// <java-name>
+		/// javax/microedition/khronos/opengles/GL11ExtensionPack
+		/// </java-name>
+		[Dot42.DexImport("javax/microedition/khronos/opengles/GL11ExtensionPack", AccessFlags = 1537, IgnoreFromJava = true, Priority = 1)]
+		public static partial class IGL11ExtensionPackConstants
+ /* scope: __dot42__ */ 
+		{
+				/// <java-name>
+				/// GL_BLEND_DST_ALPHA
+				/// </java-name>
+				[Dot42.DexImport("GL_BLEND_DST_ALPHA", "I", AccessFlags = 25)]
+				public const int GL_BLEND_DST_ALPHA = 32970;
+				/// <java-name>
+				/// GL_BLEND_DST_RGB
+				/// </java-name>
+				[Dot42.DexImport("GL_BLEND_DST_RGB", "I", AccessFlags = 25)]
+				public const int GL_BLEND_DST_RGB = 32968;
+				/// <java-name>
+				/// GL_BLEND_EQUATION
+				/// </java-name>
+				[Dot42.DexImport("GL_BLEND_EQUATION", "I", AccessFlags = 25)]
+				public const int GL_BLEND_EQUATION = 32777;
+				/// <java-name>
+				/// GL_BLEND_EQUATION_ALPHA
+				/// </java-name>
+				[Dot42.DexImport("GL_BLEND_EQUATION_ALPHA", "I", AccessFlags = 25)]
+				public const int GL_BLEND_EQUATION_ALPHA = 34877;
+				/// <java-name>
+				/// GL_BLEND_EQUATION_RGB
+				/// </java-name>
+				[Dot42.DexImport("GL_BLEND_EQUATION_RGB", "I", AccessFlags = 25)]
+				public const int GL_BLEND_EQUATION_RGB = 32777;
+				/// <java-name>
+				/// GL_BLEND_SRC_ALPHA
+				/// </java-name>
+				[Dot42.DexImport("GL_BLEND_SRC_ALPHA", "I", AccessFlags = 25)]
+				public const int GL_BLEND_SRC_ALPHA = 32971;
+				/// <java-name>
+				/// GL_BLEND_SRC_RGB
+				/// </java-name>
+				[Dot42.DexImport("GL_BLEND_SRC_RGB", "I", AccessFlags = 25)]
+				public const int GL_BLEND_SRC_RGB = 32969;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT0_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT0_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT0_OES = 36064;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT1_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT1_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT1_OES = 36065;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT2_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT2_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT2_OES = 36066;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT3_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT3_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT3_OES = 36067;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT4_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT4_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT4_OES = 36068;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT5_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT5_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT5_OES = 36069;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT6_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT6_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT6_OES = 36070;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT7_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT7_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT7_OES = 36071;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT8_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT8_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT8_OES = 36072;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT9_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT9_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT9_OES = 36073;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT10_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT10_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT10_OES = 36074;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT11_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT11_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT11_OES = 36075;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT12_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT12_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT12_OES = 36076;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT13_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT13_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT13_OES = 36077;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT14_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT14_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT14_OES = 36078;
+				/// <java-name>
+				/// GL_COLOR_ATTACHMENT15_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_COLOR_ATTACHMENT15_OES", "I", AccessFlags = 25)]
+				public const int GL_COLOR_ATTACHMENT15_OES = 36079;
+				/// <java-name>
+				/// GL_DECR_WRAP
+				/// </java-name>
+				[Dot42.DexImport("GL_DECR_WRAP", "I", AccessFlags = 25)]
+				public const int GL_DECR_WRAP = 34056;
+				/// <java-name>
+				/// GL_DEPTH_ATTACHMENT_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_DEPTH_ATTACHMENT_OES", "I", AccessFlags = 25)]
+				public const int GL_DEPTH_ATTACHMENT_OES = 36096;
+				/// <java-name>
+				/// GL_DEPTH_COMPONENT
+				/// </java-name>
+				[Dot42.DexImport("GL_DEPTH_COMPONENT", "I", AccessFlags = 25)]
+				public const int GL_DEPTH_COMPONENT = 6402;
+				/// <java-name>
+				/// GL_DEPTH_COMPONENT16
+				/// </java-name>
+				[Dot42.DexImport("GL_DEPTH_COMPONENT16", "I", AccessFlags = 25)]
+				public const int GL_DEPTH_COMPONENT16 = 33189;
+				/// <java-name>
+				/// GL_DEPTH_COMPONENT24
+				/// </java-name>
+				[Dot42.DexImport("GL_DEPTH_COMPONENT24", "I", AccessFlags = 25)]
+				public const int GL_DEPTH_COMPONENT24 = 33190;
+				/// <java-name>
+				/// GL_DEPTH_COMPONENT32
+				/// </java-name>
+				[Dot42.DexImport("GL_DEPTH_COMPONENT32", "I", AccessFlags = 25)]
+				public const int GL_DEPTH_COMPONENT32 = 33191;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES = 36049;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES = 36048;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES = 36051;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES = 36050;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_BINDING_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_BINDING_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_BINDING_OES = 36006;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_COMPLETE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_COMPLETE_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_COMPLETE_OES = 36053;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES = 36054;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES = 36057;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_OES = 36059;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES = 36058;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES = 36055;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_OES = 36060;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_OES = 36160;
+				/// <java-name>
+				/// GL_FRAMEBUFFER_UNSUPPORTED_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_FRAMEBUFFER_UNSUPPORTED_OES", "I", AccessFlags = 25)]
+				public const int GL_FRAMEBUFFER_UNSUPPORTED_OES = 36061;
+				/// <java-name>
+				/// GL_FUNC_ADD
+				/// </java-name>
+				[Dot42.DexImport("GL_FUNC_ADD", "I", AccessFlags = 25)]
+				public const int GL_FUNC_ADD = 32774;
+				/// <java-name>
+				/// GL_FUNC_REVERSE_SUBTRACT
+				/// </java-name>
+				[Dot42.DexImport("GL_FUNC_REVERSE_SUBTRACT", "I", AccessFlags = 25)]
+				public const int GL_FUNC_REVERSE_SUBTRACT = 32779;
+				/// <java-name>
+				/// GL_FUNC_SUBTRACT
+				/// </java-name>
+				[Dot42.DexImport("GL_FUNC_SUBTRACT", "I", AccessFlags = 25)]
+				public const int GL_FUNC_SUBTRACT = 32778;
+				/// <java-name>
+				/// GL_INCR_WRAP
+				/// </java-name>
+				[Dot42.DexImport("GL_INCR_WRAP", "I", AccessFlags = 25)]
+				public const int GL_INCR_WRAP = 34055;
+				/// <java-name>
+				/// GL_INVALID_FRAMEBUFFER_OPERATION_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_INVALID_FRAMEBUFFER_OPERATION_OES", "I", AccessFlags = 25)]
+				public const int GL_INVALID_FRAMEBUFFER_OPERATION_OES = 1286;
+				/// <java-name>
+				/// GL_MAX_COLOR_ATTACHMENTS_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MAX_COLOR_ATTACHMENTS_OES", "I", AccessFlags = 25)]
+				public const int GL_MAX_COLOR_ATTACHMENTS_OES = 36063;
+				/// <java-name>
+				/// GL_MAX_CUBE_MAP_TEXTURE_SIZE
+				/// </java-name>
+				[Dot42.DexImport("GL_MAX_CUBE_MAP_TEXTURE_SIZE", "I", AccessFlags = 25)]
+				public const int GL_MAX_CUBE_MAP_TEXTURE_SIZE = 34076;
+				/// <java-name>
+				/// GL_MAX_RENDERBUFFER_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_MAX_RENDERBUFFER_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_MAX_RENDERBUFFER_SIZE_OES = 34024;
+				/// <java-name>
+				/// GL_MIRRORED_REPEAT
+				/// </java-name>
+				[Dot42.DexImport("GL_MIRRORED_REPEAT", "I", AccessFlags = 25)]
+				public const int GL_MIRRORED_REPEAT = 33648;
+				/// <java-name>
+				/// GL_NORMAL_MAP
+				/// </java-name>
+				[Dot42.DexImport("GL_NORMAL_MAP", "I", AccessFlags = 25)]
+				public const int GL_NORMAL_MAP = 34065;
+				/// <java-name>
+				/// GL_REFLECTION_MAP
+				/// </java-name>
+				[Dot42.DexImport("GL_REFLECTION_MAP", "I", AccessFlags = 25)]
+				public const int GL_REFLECTION_MAP = 34066;
+				/// <java-name>
+				/// GL_RENDERBUFFER_ALPHA_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_ALPHA_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_ALPHA_SIZE_OES = 36179;
+				/// <java-name>
+				/// GL_RENDERBUFFER_BINDING_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_BINDING_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_BINDING_OES = 36007;
+				/// <java-name>
+				/// GL_RENDERBUFFER_BLUE_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_BLUE_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_BLUE_SIZE_OES = 36178;
+				/// <java-name>
+				/// GL_RENDERBUFFER_DEPTH_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_DEPTH_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_DEPTH_SIZE_OES = 36180;
+				/// <java-name>
+				/// GL_RENDERBUFFER_GREEN_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_GREEN_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_GREEN_SIZE_OES = 36177;
+				/// <java-name>
+				/// GL_RENDERBUFFER_HEIGHT_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_HEIGHT_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_HEIGHT_OES = 36163;
+				/// <java-name>
+				/// GL_RENDERBUFFER_INTERNAL_FORMAT_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_INTERNAL_FORMAT_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_INTERNAL_FORMAT_OES = 36164;
+				/// <java-name>
+				/// GL_RENDERBUFFER_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_OES = 36161;
+				/// <java-name>
+				/// GL_RENDERBUFFER_RED_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_RED_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_RED_SIZE_OES = 36176;
+				/// <java-name>
+				/// GL_RENDERBUFFER_STENCIL_SIZE_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_STENCIL_SIZE_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_STENCIL_SIZE_OES = 36181;
+				/// <java-name>
+				/// GL_RENDERBUFFER_WIDTH_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RENDERBUFFER_WIDTH_OES", "I", AccessFlags = 25)]
+				public const int GL_RENDERBUFFER_WIDTH_OES = 36162;
+				/// <java-name>
+				/// GL_RGB5_A1
+				/// </java-name>
+				[Dot42.DexImport("GL_RGB5_A1", "I", AccessFlags = 25)]
+				public const int GL_RGB5_A1 = 32855;
+				/// <java-name>
+				/// GL_RGB565_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_RGB565_OES", "I", AccessFlags = 25)]
+				public const int GL_RGB565_OES = 36194;
+				/// <java-name>
+				/// GL_RGB8
+				/// </java-name>
+				[Dot42.DexImport("GL_RGB8", "I", AccessFlags = 25)]
+				public const int GL_RGB8 = 32849;
+				/// <java-name>
+				/// GL_RGBA4
+				/// </java-name>
+				[Dot42.DexImport("GL_RGBA4", "I", AccessFlags = 25)]
+				public const int GL_RGBA4 = 32854;
+				/// <java-name>
+				/// GL_RGBA8
+				/// </java-name>
+				[Dot42.DexImport("GL_RGBA8", "I", AccessFlags = 25)]
+				public const int GL_RGBA8 = 32856;
+				/// <java-name>
+				/// GL_STENCIL_ATTACHMENT_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_STENCIL_ATTACHMENT_OES", "I", AccessFlags = 25)]
+				public const int GL_STENCIL_ATTACHMENT_OES = 36128;
+				/// <java-name>
+				/// GL_STENCIL_INDEX
+				/// </java-name>
+				[Dot42.DexImport("GL_STENCIL_INDEX", "I", AccessFlags = 25)]
+				public const int GL_STENCIL_INDEX = 6401;
+				/// <java-name>
+				/// GL_STENCIL_INDEX1_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_STENCIL_INDEX1_OES", "I", AccessFlags = 25)]
+				public const int GL_STENCIL_INDEX1_OES = 36166;
+				/// <java-name>
+				/// GL_STENCIL_INDEX4_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_STENCIL_INDEX4_OES", "I", AccessFlags = 25)]
+				public const int GL_STENCIL_INDEX4_OES = 36167;
+				/// <java-name>
+				/// GL_STENCIL_INDEX8_OES
+				/// </java-name>
+				[Dot42.DexImport("GL_STENCIL_INDEX8_OES", "I", AccessFlags = 25)]
+				public const int GL_STENCIL_INDEX8_OES = 36168;
+				/// <java-name>
+				/// GL_STR
+				/// </java-name>
+				[Dot42.DexImport("GL_STR", "I", AccessFlags = 25)]
+				public const int GL_STR = -1;
+				/// <java-name>
+				/// GL_TEXTURE_BINDING_CUBE_MAP
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_BINDING_CUBE_MAP", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_BINDING_CUBE_MAP = 34068;
+				/// <java-name>
+				/// GL_TEXTURE_CUBE_MAP
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CUBE_MAP = 34067;
+				/// <java-name>
+				/// GL_TEXTURE_CUBE_MAP_NEGATIVE_X
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_NEGATIVE_X", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CUBE_MAP_NEGATIVE_X = 34070;
+				/// <java-name>
+				/// GL_TEXTURE_CUBE_MAP_NEGATIVE_Y
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_NEGATIVE_Y", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CUBE_MAP_NEGATIVE_Y = 34072;
+				/// <java-name>
+				/// GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_NEGATIVE_Z", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CUBE_MAP_NEGATIVE_Z = 34074;
+				/// <java-name>
+				/// GL_TEXTURE_CUBE_MAP_POSITIVE_X
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_POSITIVE_X", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CUBE_MAP_POSITIVE_X = 34069;
+				/// <java-name>
+				/// GL_TEXTURE_CUBE_MAP_POSITIVE_Y
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_POSITIVE_Y", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CUBE_MAP_POSITIVE_Y = 34071;
+				/// <java-name>
+				/// GL_TEXTURE_CUBE_MAP_POSITIVE_Z
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_CUBE_MAP_POSITIVE_Z", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_CUBE_MAP_POSITIVE_Z = 34073;
+				/// <java-name>
+				/// GL_TEXTURE_GEN_MODE
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_GEN_MODE", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_GEN_MODE = 9472;
+				/// <java-name>
+				/// GL_TEXTURE_GEN_STR
+				/// </java-name>
+				[Dot42.DexImport("GL_TEXTURE_GEN_STR", "I", AccessFlags = 25)]
+				public const int GL_TEXTURE_GEN_STR = 36192;
+		}
+
+}
 

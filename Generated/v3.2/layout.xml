@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout>
+  <viewgroup name="FragmentBreadCrumbs" super="ViewGroup" />
+  <view name="KeyboardView" super="View" />
+  <view name="ExtractEditText" super="EditText" />
+  <view name="SurfaceView" super="View" />
+  <view name="View" />
+  <viewgroup name="ViewGroup" abstract="true" super="View" />
+  <view name="ViewStub" super="View" />
+  <view name="CheckBox" super="CompoundButton" />
+  <viewgroup name="ImageSwitcher" super="ViewSwitcher" />
+  <view name="AbsSeekBar" abstract="true" super="ProgressBar" />
+  <view name="DigitalClock" super="TextView" />
+  <viewgroup name="DatePicker" super="FrameLayout" />
+  <viewgroup name="SearchView" super="LinearLayout" />
+  <view name="RadioButton" super="CompoundButton" />
+  <view name="EditText" super="TextView" />
+  <viewgroup name="LinearLayout" super="ViewGroup" />
+  <view name="QuickContactBadge" super="ImageView" />
+  <viewgroup name="MediaController" super="FrameLayout" />
+  <viewgroup name="DialerFilter" super="RelativeLayout" />
+  <viewgroup name="Gallery" super="AbsSpinner" />
+  <viewgroup name="ViewAnimator" super="FrameLayout" />
+  <view name="SeekBar" super="AbsSeekBar" />
+  <view name="ToggleButton" super="CompoundButton" />
+  <view name="VideoView" super="SurfaceView" />
+  <viewgroup name="NumberPicker" super="LinearLayout" />
+  <viewgroup name="ExpandableListView" super="ListView" />
+  <view name="CheckedTextView" super="TextView" />
+  <viewgroup name="TextSwitcher" super="ViewSwitcher" />
+  <viewgroup name="AdapterViewFlipper" super="AdapterViewAnimator" />
+  <view name="ImageView" super="View" />
+  <view name="AnalogClock" super="View" />
+  <viewgroup name="ListView" super="AbsListView" />
+  <view name="ProgressBar" super="View" />
+  <viewgroup name="AbsoluteLayout" super="ViewGroup" />
+  <viewgroup name="GridView" super="AbsListView" />
+  <viewgroup name="ViewFlipper" super="ViewAnimator" />
+  <view name="ImageButton" super="ImageView" />
+  <viewgroup name="TwoLineListItem" super="RelativeLayout" />
+  <viewgroup name="SlidingDrawer" super="ViewGroup" />
+  <viewgroup name="RelativeLayout" super="ViewGroup" />
+  <view name="CompoundButton" abstract="true" super="Button" />
+  <viewgroup name="TabHost" super="FrameLayout" />
+  <viewgroup name="AbsListView" abstract="true" super="AdapterView" />
+  <view name="Button" super="TextView" />
+  <viewgroup name="StackView" super="AdapterViewAnimator" />
+  <viewgroup name="TabWidget" super="LinearLayout" />
+  <viewgroup name="CalendarView" super="FrameLayout" />
+  <viewgroup name="AdapterView" abstract="true" super="ViewGroup" />
+  <view name="MultiAutoCompleteTextView" super="AutoCompleteTextView" />
+  <view name="Chronometer" super="TextView" />
+  <viewgroup name="TimePicker" super="FrameLayout" />
+  <viewgroup name="ZoomControls" super="LinearLayout" />
+  <viewgroup name="TableRow" super="LinearLayout" />
+  <viewgroup name="FrameLayout" super="ViewGroup" />
+  <viewgroup name="RadioGroup" super="LinearLayout" />
+  <viewgroup name="AbsSpinner" abstract="true" super="AdapterView" />
+  <viewgroup name="HorizontalScrollView" super="FrameLayout" />
+  <view name="AutoCompleteTextView" super="EditText" />
+  <viewgroup name="ViewSwitcher" super="ViewAnimator" />
+  <viewgroup name="ScrollView" super="FrameLayout" />
+  <viewgroup name="AdapterViewAnimator" abstract="true" super="AdapterView" />
+  <view name="TextView" super="View" />
+  <viewgroup name="Spinner" super="AbsSpinner" />
+  <viewgroup name="TableLayout" super="LinearLayout" />
+  <view name="ZoomButton" super="ImageButton" />
+  <view name="RatingBar" super="AbsSeekBar" />
+  <viewgroup name="AppWidgetHostView" super="FrameLayout" />
+  <viewgroup name="WebView" super="AbsoluteLayout" />
+  <view name="RSSurfaceView" super="SurfaceView" />
+  <view name="GLSurfaceView" super="SurfaceView" />
+  <viewgroup name="GestureOverlayView" super="FrameLayout" />
+</layout>

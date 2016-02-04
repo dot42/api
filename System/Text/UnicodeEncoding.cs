@@ -82,7 +82,7 @@ namespace System.Text
 
         public override int GetMaxCharCount(int byteCount)
         {
-            return Math.Round(byteCount/2f);
+            return Math.JavaRound(byteCount/2f);
         }
     }
 }

@@ -242,6 +242,13 @@ namespace Dot42.Internal
             return null;
         }
 
+        [Include(TypeCondition = typeof(IEnumerable<>))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+	    public static IEnumerable<object> AsEnumerableOfObject(object value)
+	    {
+	        return (IEnumerable<object>)AsEnumerable(value);
+	    }
+
         /// <summary>
         /// Convert an array to an ICollection instance.
         /// </summary>
@@ -249,6 +256,14 @@ namespace Dot42.Internal
         [Include(TypeCondition = typeof(System.Collections.Generic.ICollection<>))]
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public static ICollection AsCollection(object value)
+        {
+            var array = value as Array;
+            return (array != null) ? new ArrayCollectionWrapper(array) : null;
+        }
+
+        [Include(TypeCondition = typeof(System.Collections.Generic.ICollection<>))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public static ICollection<object> AsCollectionOfObject(object value)
         {
             var array = value as Array;
             return (array != null) ? new ArrayCollectionWrapper(array) : null;
@@ -266,14 +281,62 @@ namespace Dot42.Internal
             return (array != null) ? new ArrayListWrapper(array) : null;
         }
 
+        [Include(TypeCondition = typeof(IList<>))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public static IList<object> AsListOfObject(object value)
+        {
+            var array = value as Array;
+            return (array != null) ? new ArrayListWrapper(array) : null;
+        }
+
+	    [Include(TypeCondition = typeof(Attribute))]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        // used by the attribute system to handle array parameters
+	    public static object ConvertArray(object sourceObjectArray, Type targetElementType)
+	    {
+	        object[] sourceArray = (object[]) sourceObjectArray;
+
+	        var len = sourceArray.Length;
+            var ret = (Array)Java.Lang.Reflect.Array.NewInstance(targetElementType, len);
+
+	        if (!targetElementType.IsPrimitive)
+	        {
+	            Java.Lang.System.Arraycopy(sourceArray, 0, ret, 0, len);
+	        }
+            else if (targetElementType == typeof (byte))
+	            for (int i = 0; i < len; ++i) ret[i] = (byte) sourceArray[i];
+            else if (targetElementType == typeof(sbyte))
+                for (int i = 0; i < len; ++i) ret[i] = (sbyte)sourceArray[i];
+            else if (targetElementType == typeof(short))
+                for (int i = 0; i < len; ++i) ret[i] = (short)sourceArray[i];
+            else if (targetElementType == typeof(ushort))
+                for (int i = 0; i < len; ++i) ret[i] = (ushort)sourceArray[i];
+            else if (targetElementType == typeof(int))
+                for (int i = 0; i < len; ++i) ret[i] = (int)sourceArray[i];
+            else if (targetElementType == typeof(uint))
+                for (int i = 0; i < len; ++i) ret[i] = (uint)sourceArray[i];
+            else if (targetElementType == typeof(long))
+                for (int i = 0; i < len; ++i) ret[i] = (long)sourceArray[i];
+            else if (targetElementType == typeof(ulong))
+                for (int i = 0; i < len; ++i) ret[i] = (ulong)sourceArray[i];
+            else if (targetElementType == typeof(float))
+                for (int i = 0; i < len; ++i) ret[i] = (float)sourceArray[i];
+            else if (targetElementType == typeof (double))
+                for (int i = 0; i < len; ++i) ret[i] = (double) sourceArray[i];
+            else
+                throw new System.Exception("unsupported type: " + targetElementType);
+
+	        return ret;
+	    }
+
         /// <summary>
         /// ICollection wrapper for array's
         /// </summary>
         [Include(TypeCondition = typeof(ICollection))]
         [Include(TypeCondition = typeof(System.Collections.Generic.ICollection<>))]
-        private class ArrayCollectionWrapper : ICollection, ICollection<object>
+        internal class ArrayCollectionWrapper : ICollection, ICollection<object>
         {
-            protected readonly Array array;
+            internal protected readonly Array array;
 
             /// <summary>
             /// Default ctor
@@ -305,6 +368,7 @@ namespace Dot42.Internal
             }
 
             public bool IsReadOnly { get; private set; }
+
             public void Add(object item)
             {
                 throw new NotImplementedException();
@@ -312,6 +376,7 @@ namespace Dot42.Internal
 
             public void Clear()
             {
+                // shouldn't this throw a NotImplementedException?
                 Array.Clear(array, 0, Java.Lang.Reflect.Array.GetLength(array));
             }
 

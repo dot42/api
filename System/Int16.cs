@@ -13,6 +13,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Dot42;
 using Dot42.Internal;
 using Java.Lang;
 
@@ -20,25 +22,35 @@ namespace System
 {
 	partial struct Int16: IFormattable
 	{
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(IFormatProvider provider)
         {
-            return NumberFormatter.Format((int)ShortValue(), provider);
+            return NumberFormatter.Format((int)this, provider);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format)
         {
-            return NumberFormatter.Format(format, (int)ShortValue(), null);
+            return NumberFormatter.Format(format, (int)this, null);
         }
 
+        [Inline, DexNative] // avoid boxing, do not generate actual method
         public string ToString(string format, IFormatProvider provider)
         {
-            return NumberFormatter.Format(format, (int)ShortValue(), provider);
+            return NumberFormatter.Format(format, (int)this, provider);
         }
 
         public static short Parse(string s, IFormatProvider provider)
         {
             return Parse(s);
         }
+
+        [Inline, DexNative] // avoid boxing, do not generate actual method
+        public bool Equals(short other)
+        {
+            return other == this;
+        }
+
 
         /// <summary>
         /// Try to parse the given string into a short value.

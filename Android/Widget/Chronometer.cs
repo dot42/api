@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 using Dot42;
 
 namespace Android.Widget
@@ -41,7 +41,7 @@ namespace Android.Widget
         {
             add
             {
-                var listener = this.GetOrCreate<ChronometerOnChronometerTickListener>(chronometerTickListenerKey, true, SetOnChronometerTickListener);
+                var listener = this.GetOrCreate<ChronometerOnChronometerTickListener>(chronometerTickListenerKey, true, a=> OnChronometerTickListener = a);
                 listener.Tick.Add(value);
             }
             remove

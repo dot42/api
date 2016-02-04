@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout>
+  <view name="MediaRouteButton" super="View" />
+  <viewgroup name="FragmentBreadCrumbs" super="ViewGroup" />
+  <viewgroup name="WebView" super="AbsoluteLayout" />
+  <view name="GLSurfaceView" super="SurfaceView" />
+  <viewgroup name="AppWidgetHostView" super="FrameLayout" />
+  <view name="ExtractEditText" super="EditText" />
+  <view name="KeyboardView" super="View" />
+  <view name="SurfaceView" super="View" />
+  <viewgroup name="ViewGroup" abstract="true" super="View" />
+  <view name="ViewStub" super="View" />
+  <view name="TextureView" super="View" />
+  <view name="View" />
+  <viewgroup name="GestureOverlayView" super="FrameLayout" />
+  <view name="Switch" super="CompoundButton" />
+  <view name="RatingBar" super="AbsSeekBar" />
+  <viewgroup name="DatePicker" super="FrameLayout" />
+  <viewgroup name="ImageSwitcher" super="ViewSwitcher" />
+  <viewgroup name="CalendarView" super="FrameLayout" />
+  <viewgroup name="TabHost" super="FrameLayout" />
+  <viewgroup name="ListView" super="AbsListView" />
+  <viewgroup name="TimePicker" super="FrameLayout" />
+  <view name="DigitalClock" super="TextView" />
+  <view name="ToggleButton" super="CompoundButton" />
+  <view name="MultiAutoCompleteTextView" super="AutoCompleteTextView" />
+  <view name="AbsSeekBar" abstract="true" super="ProgressBar" />
+  <viewgroup name="ExpandableListView" super="ListView" />
+  <view name="EditText" super="TextView" />
+  <viewgroup name="HorizontalScrollView" super="FrameLayout" />
+  <view name="ZoomButton" super="ImageButton" />
+  <viewgroup name="SlidingDrawer" super="ViewGroup" />
+  <view name="RadioButton" super="CompoundButton" />
+  <view name="Button" super="TextView" />
+  <viewgroup name="ZoomControls" super="LinearLayout" />
+  <viewgroup name="Spinner" super="AbsSpinner" />
+  <view name="AutoCompleteTextView" super="EditText" />
+  <viewgroup name="AbsoluteLayout" super="ViewGroup" />
+  <view name="TextClock" super="TextView" />
+  <viewgroup name="TableRow" super="LinearLayout" />
+  <view name="CompoundButton" abstract="true" super="Button" />
+  <viewgroup name="FrameLayout" super="ViewGroup" />
+  <view name="Chronometer" super="TextView" />
+  <view name="SeekBar" super="AbsSeekBar" />
+  <view name="VideoView" super="SurfaceView" />
+  <viewgroup name="AbsListView" abstract="true" super="AdapterView" />
+  <viewgroup name="TabWidget" super="LinearLayout" />
+  <viewgroup name="AdapterViewFlipper" super="AdapterViewAnimator" />
+  <viewgroup name="AbsSpinner" abstract="true" super="AdapterView" />
+  <view name="AnalogClock" super="View" />
+  <viewgroup name="GridView" super="AbsListView" />
+  <viewgroup name="SearchView" super="LinearLayout" />
+  <viewgroup name="DialerFilter" super="RelativeLayout" />
+  <view name="ImageButton" super="ImageView" />
+  <viewgroup name="AdapterViewAnimator" abstract="true" super="AdapterView" />
+  <view name="CheckedTextView" super="TextView" />
+  <view name="QuickContactBadge" super="ImageView" />
+  <view name="Space" super="View" />
+  <viewgroup name="TextSwitcher" super="ViewSwitcher" />
+  <viewgroup name="TableLayout" super="LinearLayout" />
+  <viewgroup name="ViewSwitcher" super="ViewAnimator" />
+  <viewgroup name="GridLayout" super="ViewGroup" />
+  <viewgroup name="RelativeLayout" super="ViewGroup" />
+  <viewgroup name="ViewFlipper" super="ViewAnimator" />
+  <view name="ImageView" super="View" />
+  <viewgroup name="AdapterView" abstract="true" super="ViewGroup" />
+  <view name="ProgressBar" super="View" />
+  <viewgroup name="LinearLayout" super="ViewGroup" />
+  <viewgroup name="RadioGroup" super="LinearLayout" />
+  <viewgroup name="NumberPicker" super="LinearLayout" />
+  <viewgroup name="Gallery" super="AbsSpinner" />
+  <view name="CheckBox" super="CompoundButton" />
+  <view name="TextView" super="View" />
+  <viewgroup name="TwoLineListItem" super="RelativeLayout" />
+  <viewgroup name="ViewAnimator" super="FrameLayout" />
+  <viewgroup name="StackView" super="AdapterViewAnimator" />
+  <viewgroup name="ScrollView" super="FrameLayout" />
+  <viewgroup name="MediaController" super="FrameLayout" />
+</layout>

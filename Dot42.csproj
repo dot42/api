@@ -51,6 +51,8 @@
     <AndroidDefines Condition=" '$(ApiLevel)' &gt;= 17 ">ANDROID_17P;$(AndroidDefines)</AndroidDefines>
     <AndroidDefines Condition=" '$(ApiLevel)' &gt;= 18 ">ANDROID_18P;$(AndroidDefines)</AndroidDefines>
     <AndroidDefines Condition=" '$(ApiLevel)' &gt;= 19 ">ANDROID_19P;$(AndroidDefines)</AndroidDefines>
+    <!--only on roslyn compiler: /runtimemetadataversion:v4.0.30319 -->
+    <CompilerResponseFile Condition="'$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' &gt; '12.0'">AssemblyInfo/dot42.rsp</CompilerResponseFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,45 +77,89 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(TargetFrameworkDirectory)\*.cs" />
-    <Compile Include="Android\Appwidget\AppWidgetProvider.cs" />
+    <Compile Include="Android\App\Application.cs" />
+    <Compile Include="Android\Content\Context.cs" />
+    <Compile Include="Android\Text\AfterTextChangedEventArgs.cs" />
+    <Compile Include="Android\Util\Log.cs" />
+    <Compile Include="Android\Views\LongClickEventArgs.cs" />
+    <Compile Include="AssemblyInfo\JetBrains.Annotations.cs" />
+    <Compile Include="Dot42\Collections\CollectionToJavaWrapper.cs" />
+    <Compile Include="Dot42\Collections\EnumeratorWrapper.cs" />
+    <Compile Include="Dot42\Collections\IJavaCollectionWrapper.cs" />
+    <Compile Include="Dot42\Collections\Specialized\ConcurrentTypeHashMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\FastConcurrentHashMap2.cs" />
+    <Compile Include="Dot42\Collections\Specialized\OpenEqualityComparerHashMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\OpenIdentityHashMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\OpenHashMapBase.cs" />
+    <Compile Include="Dot42\Collections\Specialized\OpenWeakReferenceHashMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\IOpenHashMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\LongIntMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\IntIntMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\OpenHashMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\Tools.cs" />
+    <Compile Include="Dot42\Collections\Specialized\FastConcurrentHashMap.cs" />
+    <Compile Include="Dot42\Collections\Specialized\OpenReferenceHashMapBase.cs" />
+    <Compile Include="Dot42\Internal\Application.cs" />
+    <Compile Include="Dot42\Internal\StringEnumerator.cs" />
+    <Compile Include="Dot42\Internal\AssemblyTypes.cs" />
+    <Compile Include="Dot42\Internal\CompilerHelper.Primitive.cs" />
+    <Compile Include="Dot42\Internal\DateFormatFactory.cs" />
+    <Compile Include="Dot42\Internal\DateTimeParsing.cs" />
+    <Compile Include="Dot42\Internal\Generics\DefinitionParser.cs" />
+    <Compile Include="Dot42\Internal\IAssemblyTypes.cs" />
+    <Compile Include="Dot42\Internal\IGenericTypeDefinition.cs" />
+    <Compile Include="Dot42\Internal\INullableMarker.cs" />
+    <Compile Include="Dot42\Internal\NumberFormatFactory.cs" />
+    <Compile Include="Dot42\Internal\ReflectionCache.cs" />
+    <Compile Include="Dot42\Internal\ReflectionHelper.cs" />
+    <Compile Include="Dot42\Internal\ReflectionInfo\FrameworkPropertyInfoProvider.cs" />
+    <Compile Include="Dot42\Internal\ReflectionInfo\EventInfoProvider.cs" />
+    <Compile Include="Dot42\IncludeFrameworkProperties.cs" />
+    <Compile Include="Dot42\Internal\IReflectionInfo.cs" />
+    <Compile Include="Dot42\Internal\Threading\ThreadPoolImpl.cs" />
+    <Compile Include="Dot42\SerializedParameterAttribute.cs" />
+    <Compile Include="Dot42\SerializationMethodAttribute.cs" />
+    <Compile Include="Android\Appwidget\AppWidgetProvider.cs">
+      <SubType>AppWidgetProvider</SubType>
+    </Compile>
     <Compile Include="Android\App\Activity.cs" />
     <Compile Include="Android\App\AlertDialog.Builder.cs" />
     <Compile Include="Android\App\Instrumentation.cs" />
+    <Compile Include="Android\App\Result.cs" />
     <Compile Include="Android\App\UiAutomation.cs" />
     <Compile Include="Android\Content\DialogInterfaceClickEventArgs.cs" />
     <Compile Include="Android\Database\CursorJoiner.cs" />
-    <Compile Include="Android\Graphics\Drawable\AnimationDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\ClipDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\Drawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\DrawableContainer.cs" />
-    <Compile Include="Android\Graphics\Drawable\InsetDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\LayerDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\RotateDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\ScaleDrawable.cs" />
-    <Compile Include="Android\Graphics\Drawable\TransitionDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\AnimationDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\ClipDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\Drawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\DrawableContainer.cs" />
+    <Compile Include="Android\Graphics\Drawables\InsetDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\LayerDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\RotateDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\ScaleDrawable.cs" />
+    <Compile Include="Android\Graphics\Drawables\TransitionDrawable.cs" />
     <Compile Include="Android\Media\BufferingUpdateEventArgs.cs" />
     <Compile Include="Android\Media\VideoSizeEventArgs.cs" />
     <Compile Include="Android\Media\TimedTextEventArgs.cs" />
     <Compile Include="Android\Media\InfoEventArgs.cs" />
     <Compile Include="Android\Media\MediaPlayer.cs" />
     <Compile Include="Android\Opengl\GLSurfaceView.cs" />
-    <Compile Include="Android\Os\AsyncTask.cs" />
-    <Compile Include="Android\Os\Handler.cs" />
-    <Compile Include="Android\Os\HandlerFuncCallback.cs" />
-    <Compile Include="Android\Os\Message.cs" />
+    <Compile Include="Android\OS\AsyncTask.cs" />
+    <Compile Include="Android\OS\Handler.cs" />
+    <Compile Include="Dot42\Internal\Threading\HandlerFuncCallback.cs" />
+    <Compile Include="Android\OS\Message.cs" />
     <Compile Include="Android\Test\InstrumentationTestCase.cs" />
-    <Compile Include="Android\View\ViewGroup.cs" />
-    <Compile Include="Android\View\HierarchyChangeEventArgs.cs" />
-    <Compile Include="Android\View\SystemUiVisibilityChangeEventArgs.cs" />
-    <Compile Include="Android\View\FocusChangeEventArgs.cs" />
-    <Compile Include="Android\View\CreateContextMenuEventArgs.cs" />
-    <Compile Include="Android\View\LayoutChangeEventArgs.cs" />
-    <Compile Include="Android\View\ViewEventArgs.cs" />
-    <Compile Include="Android\View\DragEventArgs.cs" />
-    <Compile Include="Android\View\MotionEventArgs.cs" />
-    <Compile Include="Android\View\ViewPropertyAnimator.cs" />
+    <Compile Include="Android\Views\ViewGroup.cs" />
+    <Compile Include="Android\Views\HierarchyChangeEventArgs.cs" />
+    <Compile Include="Android\Views\SystemUiVisibilityChangeEventArgs.cs" />
+    <Compile Include="Android\Views\FocusChangeEventArgs.cs" />
+    <Compile Include="Android\Views\CreateContextMenuEventArgs.cs" />
+    <Compile Include="Android\Views\LayoutChangeEventArgs.cs" />
+    <Compile Include="Android\Views\ViewEventArgs.cs" />
+    <Compile Include="Android\Views\DragEventArgs.cs" />
+    <Compile Include="Android\Views\MotionEventArgs.cs" />
+    <Compile Include="Android\Views\ViewPropertyAnimator.cs" />
     <Compile Include="Android\Widget\AdapterView.cs" />
-    <Compile Include="Android\Widget\CheckedChangedEventArgs.cs" />
     <Compile Include="Android\Widget\CompoundButton.cs" />
     <Compile Include="Android\Widget\AbsListView.cs" />
     <Compile Include="Android\Widget\CalendarView.cs" />
@@ -124,7 +170,6 @@
     <Compile Include="Android\Widget\GroupClickEventArgs.cs" />
     <Compile Include="Android\Widget\ExpandableListView.cs" />
     <Compile Include="Android\Widget\RadioGroup.cs" />
-    <Compile Include="Android\Widget\RadioGroupCheckedChangedEventArgs.cs" />
     <Compile Include="Android\Widget\PopupWindow.cs" />
     <Compile Include="Android\Widget\RatingChangedEventArgs.cs" />
     <Compile Include="Android\Widget\RatingBar.cs" />
@@ -152,24 +197,35 @@
     <Compile Include="Android\Widget\ScrollEventArgs.cs" />
     <Compile Include="Android\Widget\ScrollState.cs" />
     <Compile Include="Android\Widget\ScrollStateChangedEventArgs.cs" />
-    <Compile Include="Android\Widget\ItemSelectedEventArgs.cs" />
-    <Compile Include="Android\Widget\ItemClickEventArgs.cs" />
     <Compile Include="Android\Widget\ProgressChangedEventArgs.cs" />
     <Compile Include="Android\Widget\SeekBar.cs" />
     <Compile Include="Android\Widget\Spinner.cs" />
-    <Compile Include="Android\View\TouchEventArgs.cs" />
-    <Compile Include="Android\View\InputEventArgs.cs" />
-    <Compile Include="Android\View\KeyEventArgs.cs" />
-    <Compile Include="Android\View\View.cs" />
+    <Compile Include="Android\Views\TouchEventArgs.cs" />
+    <Compile Include="Android\Views\InputEventArgs.cs" />
+    <Compile Include="Android\Views\KeyEventArgs.cs" />
+    <Compile Include="Android\Views\View.cs" />
     <Compile Include="AssemblyInfo\Dot42.cs" />
     <Compile Include="Dot42\ApiEnhancementIgnoreMethodsAttribute.cs" />
+    <Compile Include="Dot42\Collections\IteratorWrapperWithSelector.cs" />
     <Compile Include="Dot42\Collections\Null.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericInstanceConstructorInfo.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericsReflection.cs" />
+    <Compile Include="Dot42\IncludeAttribute.cs" />
     <Compile Include="Dot42\Internal\AssertFailedException.cs" />
+    <Compile Include="Dot42\Internal\CompilerHelper.Enum.cs" />
+    <Compile Include="Dot42\Internal\DateTimeFormatting.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericInstanceFactory.cs" />
+    <Compile Include="Dot42\Internal\Generics\GenericTypeInfo.cs" />
     <Compile Include="Dot42\Internal\IAttributesProvider.cs" />
+    <Compile Include="Dot42\Internal\IGenericDefinition.cs" />
     <Compile Include="Dot42\Internal\IProperties.cs" />
     <Compile Include="Dot42\Internal\IProperty.cs" />
-    <Compile Include="Dot42\Internal\PropertyInfoProvider.cs" />
+    <Compile Include="Dot42\Internal\LazyAndWeak.cs" />
+    <Compile Include="Dot42\Internal\Generics\NullableReflection.cs" />
+    <Compile Include="Dot42\Internal\ReflectionInfo\PropertyInfoProvider.cs" />
     <Compile Include="Dot42\Internal\TaskMonitorService.cs" />
+    <Compile Include="Dot42\ReferenceSources\SR.cs" />
+    <Compile Include="Dot42\SR.cs" />
     <Compile Include="Dot42\Test\AsyncSynchronizationContext.cs" />
     <Compile Include="Dot42\Threading\Tasks\InstanceReference.cs" />
     <Compile Include="Dot42\Internal\AndroidSynchronizationContext.cs" />
@@ -208,11 +264,10 @@
     <Compile Include="Dot42\Internal\Checked.cs" />
     <Compile Include="Dot42\Internal\IGenericMethodParameter.cs" />
     <Compile Include="Dot42\Internal\IGenericTypeParameter.cs" />
-    <Compile Include="Dot42\Internal\IGenericInstanceClass.cs" />
+    <Compile Include="Dot42\Internal\ITypeReflectionInfo.cs" />
     <Compile Include="Dot42\Internal\TypeHelper.cs" />
     <Compile Include="Dot42\Internal\IAttributes.cs" />
     <Compile Include="Dot42\Internal\CustomAttributeProvider.cs" />
-    <Compile Include="Dot42\Internal\IAnnotationType.cs" />
     <Compile Include="Dot42\Internal\IAttribute.cs" />
     <Compile Include="Dot42\Manifest\ActivityAttribute.cs" />
     <Compile Include="Dot42\Manifest\ApplicationAttribute.cs" />
@@ -242,23 +297,23 @@
     <Compile Include="Dot42\NotImplementedAttribute.cs" />
     <Compile Include="Dot42\ResourceIdAttribute.cs" />
     <Compile Include="Dot42\Manifest\IntentFilterAttribute.cs" />
-    <Compile Include="Dot42\IncludeAttribute.cs" />
+    <Compile Include="Dot42\IncludeTypeAttribute.cs" />
     <Compile Include="Dot42\DexNameAttribute.cs" />
     <Compile Include="Dot42\DexNativeAttribute.cs" />
     <Compile Include="Dot42\IgnoreAttribute.cs" />
     <Compile Include="Dot42\EventHandlerListener.cs" />
     <Compile Include="Dot42\FrameworkLibraryAttribute.cs" />
     <Compile Include="Dot42\Manifest\InstrumentationAttribute.cs" />
-    <Compile Include="Dot42\Internal\RepeatingCharSequence.cs" />
     <Compile Include="Dot42\DexImportAttribute.cs" />
     <Compile Include="Dot42\Locale.cs" />
     <Compile Include="Dot42\Manifest\UIOptions.cs" />
     <Compile Include="Dot42\Manifest\UsesLibraryAttribute.cs" />
-    <Compile Include="Java\Io\File.cs" />
+    <Compile Include="Java\IO\File.cs" />
     <Compile Include="Java\Lang\Character.cs" />
     <Compile Include="Java\Lang\Boolean.cs" />
     <Compile Include="Java\Lang\Void.cs" />
     <Compile Include="Java\Util\Concurrent\AbstractExecutorService.cs" />
+    <Compile Include="Java\Util\Concurrent\Atomic.cs" />
     <Compile Include="Java\Util\Concurrent\CyclicBarrier.cs" />
     <Compile Include="Java\Util\Concurrent\ExecutorCompletionService.cs" />
     <Compile Include="Java\Util\Concurrent\Executors.cs" />
@@ -267,17 +322,31 @@
     <Compile Include="Java\Util\Concurrent\ThreadPoolExecutor.cs" />
     <Compile Include="Junit\Framework\TestCase.cs" />
     <Compile Include="NUnit\Framework\Attributes\TearDownAttribute.cs" />
+    <Compile Include="NUnit\Framework\CollectionAssert.cs" />
+    <Compile Include="System\AmbiguousMatchException.cs" />
     <Compile Include="System\AggregateException.cs" />
     <Compile Include="System\AsyncCallback.cs" />
     <Compile Include="System\Buffer.cs" />
+    <Compile Include="System\Collections\Generic\DictionaryImplHashMapWithComparerWrapper.cs" />
+    <Compile Include="System\Collections\Generic\DictionaryImplOpenIdentityHashMap.cs" />
+    <Compile Include="System\Collections\HashHelpers.cs" />
     <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
     <Compile Include="System\Collections\DictionaryEntry.cs" />
+    <Compile Include="System\Collections\Generic\Dictionary.cs" />
+    <Compile Include="System\Collections\Generic\IDictionary.cs" />
+    <Compile Include="System\Collections\Generic\LinkedList.cs" />
+    <Compile Include="System\Collections\ObjectModel\Collection.cs" />
+    <Compile Include="System\Collections\Generic\Queue.cs" />
     <Compile Include="System\Collections\Generic\SortedDictionary.cs" />
     <Compile Include="System\Collections\Generic\Stack.cs" />
     <Compile Include="System\Collections\IDictionaryEnumerator.cs" />
+    <Compile Include="System\Collections\ObjectModel\KeyedCollection.cs" />
+    <Compile Include="System\Collections\ObjectModel\ObservableCollection.cs" />
     <Compile Include="System\Collections\SortedList.cs" />
+    <Compile Include="System\Collections\Specialized\INotifyCollectionChanged.cs" />
     <Compile Include="System\Collections\Specialized\NameObjectCollectionBase.cs" />
     <Compile Include="System\Collections\Specialized\NameValueCollection.cs" />
+    <Compile Include="System\Collections\Specialized\NotifyCollectionChangedEventArgs.cs" />
     <Compile Include="System\Collections\Specialized\StringCollection.cs" />
     <Compile Include="System\Collections\Specialized\StringDictionary.cs" />
     <Compile Include="System\Collections\Stack.cs" />
@@ -290,11 +359,16 @@
     <Compile Include="System\ApplicationException.cs" />
     <Compile Include="System\Boolean.cs" />
     <Compile Include="System\Console.cs" />
+    <Compile Include="System\DateTimeOffset.cs" />
     <Compile Include="System\DayOfWeek.cs" />
+    <Compile Include="System\Decimal_BigInteger.cs" />
+    <Compile Include="System\Diagnostics\Contracts\Contracts.cs" />
     <Compile Include="System\Diagnostics\Stopwatch.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\SuppressMessageAttribute.cs" />
     <Compile Include="System\Enum.cs" />
     <Compile Include="System\Exception.cs" />
     <Compile Include="System\GC.cs" />
+    <Compile Include="System\Globalization\DateTimeStyles.cs" />
     <Compile Include="System\ICloneable.cs" />
     <Compile Include="System\IO\BinaryReader.cs" />
     <Compile Include="System\IO\BinaryWriter.cs" />
@@ -310,9 +384,12 @@
     <Compile Include="System\IO\JavaOutputStreamWrapper.cs" />
     <Compile Include="System\IO\StreamReader.cs" />
     <Compile Include="System\IO\StreamWriter.cs" />
+    <Compile Include="System\IO\StringReader.cs" />
     <Compile Include="System\IO\StringWriter.cs" />
     <Compile Include="System\IO\TextReader.cs" />
     <Compile Include="System\IO\TextWriter.cs" />
+    <Compile Include="System\Lazy.cs" />
+    <Compile Include="System\Linq\Expressions\SystemLinqExpressionsIsNotYetImplementedInDot42.cs" />
     <Compile Include="System\MarshalByRefObject.cs" />
     <Compile Include="System\Net\Cache\RequestCacheLevel.cs" />
     <Compile Include="System\Net\Cache\RequestCachePolicy.cs" />
@@ -338,11 +415,23 @@
     <Compile Include="System\Reflection\AssemblyKeyNameAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyFlagsAttribute.cs" />
     <Compile Include="System\Reflection\AssemblyNameFlags.cs" />
+    <Compile Include="Dot42\Internal\AttributesWrapper.cs" />
+    <Compile Include="System\Reflection\CustomAttributeExtensions.cs" />
+    <Compile Include="System\Reflection\IntrospectionExtensions.cs" />
+    <Compile Include="System\Reflection\MemberTypes.cs" />
+    <Compile Include="System\Reflection\ReflectionTypeLoadException.cs" />
+    <Compile Include="System\Reflection\TargetParameterCountException.cs" />
+    <Compile Include="System\Reflection\EventInfo.cs" />
+    <Compile Include="System\Reflection\MethodBase.cs" />
+    <Compile Include="System\Reflection\ParameterInfo.cs" />
     <Compile Include="System\Reflection\PropertyInfo.cs" />
+    <Compile Include="System\Reflection\RuntimeReflectionExtensions.cs" />
+    <Compile Include="System\Reflection\TypeInfo.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncStateMachineAttribute.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncTaskMethodBuilder.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncTaskMethodBuilder_T.cs" />
     <Compile Include="System\Runtime\CompilerServices\AsyncVoidMethodBuilder.cs" />
+    <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
     <Compile Include="System\Runtime\CompilerServices\ConfiguredTaskAwaitable.cs" />
     <Compile Include="System\Runtime\CompilerServices\ConfiguredTaskAwaitable_T.cs" />
     <Compile Include="System\Runtime\CompilerServices\IAsyncStateMachine.cs" />
@@ -359,8 +448,14 @@
     <Compile Include="System\Runtime\InteropServices\FieldOffsetAttribute.cs" />
     <Compile Include="System\Runtime\InteropServices\GuidAttribute.cs" />
     <Compile Include="System\Runtime\InteropServices\InAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\IgnoreDataMemberAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\EnumMemberAttribute.cs" />
     <Compile Include="System\Runtime\Serialization\DataContractAttribute.cs" />
     <Compile Include="System\Runtime\Serialization\DataMemberAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnDeserializedAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnDeserializingAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnSerializedAttribute.cs" />
+    <Compile Include="System\Runtime\Serialization\OnSerializingAttribute.cs" />
     <Compile Include="System\Security\AllowPartiallyTrustedCallers.cs" />
     <Compile Include="System\Security\SecuritySafeCriticalAttribute.cs" />
     <Compile Include="System\Security\SecurityException.cs" />
@@ -395,6 +490,7 @@
     <Compile Include="System\ServiceModel\Web\WebMessageBodyStyle.cs" />
     <Compile Include="System\ServiceModel\Web\WebMessageFormat.cs" />
     <Compile Include="System\ServiceModel\XmlSerializerFormatAttribute.cs" />
+    <Compile Include="System\StringComparer.cs" />
     <Compile Include="System\Text\RegularExpressions\Capture.cs" />
     <Compile Include="System\Text\RegularExpressions\CaptureCollection.cs" />
     <Compile Include="System\Text\RegularExpressions\Group.cs" />
@@ -424,10 +520,13 @@
     <Compile Include="System\Threading\CancellationToken.cs" />
     <Compile Include="System\Threading\CancellationTokenRegistration.cs" />
     <Compile Include="System\Threading\CancellationTokenSource.cs" />
+    <Compile Include="System\Threading\AutoResetEvent.cs" />
+    <Compile Include="System\Threading\Interlocked.cs" />
     <Compile Include="System\Threading\ParameterizedThreadStartRunnable.cs" />
     <Compile Include="System\Threading\EventResetMode.cs" />
     <Compile Include="System\Threading\EventWaitHandle.cs" />
     <Compile Include="System\Threading\ManualResetEvent.cs" />
+    <Compile Include="System\Threading\SemaphoreSlim.cs" />
     <Compile Include="System\Threading\SendOrPostCallback.cs" />
     <Compile Include="System\Threading\SynchronizationContext.cs" />
     <Compile Include="System\Threading\Tasks\Task.cs" />
@@ -449,13 +548,21 @@
     <Compile Include="System\Threading\Tasks\Task_TResult.cs" />
     <Compile Include="Dot42\Internal\ThreadPoolScheduler.cs" />
     <Compile Include="System\Threading\Tasks\UnobservedTaskExceptionEventArgs.cs" />
+    <Compile Include="System\Threading\ThreadPool.cs" />
     <Compile Include="System\Threading\Timeout.cs" />
+    <Compile Include="System\ThrowHelper.cs" />
+    <Compile Include="System\TimeoutException.cs" />
     <Compile Include="System\TimeSpan.cs" />
+    <Compile Include="System\TimeZoneInfo.cs" />
+    <Compile Include="System\Tuple.cs" />
     <Compile Include="System\Uri.cs" />
     <Compile Include="System\UriBuilder.cs" />
     <Compile Include="System\UriFormatException.cs" />
     <Compile Include="System\UriTemplate.cs" />
+    <Compile Include="System\ValueType.cs" />
+    <Compile Include="System\WeakReference`1.cs" />
     <Compile Include="System\WeakReference.cs" />
+    <Compile Include="System\Windows.Input\ICommand.cs" />
     <Compile Include="System\Xml\Linq\Extensions.cs" />
     <Compile Include="System\Xml\Linq\SaveOptions.cs" />
     <Compile Include="System\Xml\Linq\LoadOptions.cs" />
@@ -495,6 +602,7 @@
     <Compile Include="System\Xml\Serialization\XmlAnyAttributeAttribute.cs" />
     <Compile Include="System\Xml\XmlConvert.cs" />
     <Compile Include="System\Xml\XmlNodeType.cs" />
+    <None Include="AssemblyInfo\dot42.rsp" />
     <None Include="ForwardAssemblies\corlib.cs" />
     <None Include="ForwardAssemblies\Microsoft.CSharp.cs" />
     <None Include="ForwardAssemblies\Microsoft.VisualBasic.cs" />
@@ -615,7 +723,7 @@
     <Compile Include="System\Collections\Generic\Comparer.cs" />
     <Compile Include="System\Collections\Generic\IReadOnlyList.cs" />
     <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
-    <Compile Include="System\Collections\Generic\Dictionary.cs" />
+    <Compile Include="System\Collections\Generic\DictionaryImplHashMap.cs" />
     <Compile Include="System\Collections\Generic\EqualityComparer.cs" />
     <Compile Include="System\Collections\Generic\HashSet.cs" />
     <Compile Include="System\Collections\Generic\ICollection.cs" />
@@ -832,13 +940,12 @@
     <Compile Include="System\Void.cs" />
     <Compile Include="Android\Text\TextUtils.SimpleStringSplitter.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Custom override -->
   <Target Name="GetReferenceAssemblyPaths" DependsOnTargets="$(GetReferenceAssemblyPathsDependsOn)">
   </Target>
   <PropertyGroup>
-    <PostBuildTargetDir>$(SolutionDir)Build\Application\Frameworks\$(AndroidVersion)\</PostBuildTargetDir>
-    <PostBuildEvent Condition=" '$(TargetDir)' != '$(PostBuildTargetDir)' ">xcopy /F /Y $(TargetDir)$(TargetName).* $(PostBuildTargetDir)</PostBuildEvent>
+    <PostBuildTargetDir>$([System.IO.Path]::GetFullPath('$(SolutionDir)..\..\Build\Application\Frameworks\$(AndroidVersion)\'))</PostBuildTargetDir>
+    <PostBuildEvent Condition=" '$(TargetDir)' != '$(PostBuildTargetDir)' ">xcopy /F /Y /I $(TargetDir)$(TargetName).* $(PostBuildTargetDir)</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
-using Android.View;
+using Android.Views;
 using Dot42;
 
 namespace Android.Widget
@@ -124,14 +124,14 @@ namespace Android.Widget
         internal readonly Dot42.EventHandlerListener<GroupPositionEventArgs> GroupCollapse = new EventHandlerListener<GroupPositionEventArgs>();
         internal readonly Dot42.EventHandlerListener<GroupPositionEventArgs> GroupExpand = new EventHandlerListener<GroupPositionEventArgs>();
 
-        public bool OnChildClick(ExpandableListView parent, View.View v, int groupPosition, int childPosition, long id)
+        public bool OnChildClick(ExpandableListView parent, Views.View v, int groupPosition, int childPosition, long id)
         {
             var args = new ChildClickEventArgs(v, groupPosition, childPosition, id);
             ChildClick.Invoke(parent, args);
             return args.IsHandled;
         }
 
-        public bool OnGroupClick(ExpandableListView parent, View.View v, int groupPosition, long id)
+        public bool OnGroupClick(ExpandableListView parent, Views.View v, int groupPosition, long id)
         {
             var args = new GroupClickEventArgs(v, groupPosition, id);
             GroupClick.Invoke(parent, args);

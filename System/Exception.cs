@@ -13,7 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Java.Io;
+using Java.IO;
 
 namespace System
 {
@@ -31,7 +31,7 @@ namespace System
         /// <summary>
         /// Gets a string representation of the immediate frames on the call stack.
         /// </summary>
-        public virtual string StackTrace 
+        public string StackTrace 
         { 
             get
             {
@@ -42,6 +42,20 @@ namespace System
             }
         }
 
+        public virtual Exception InnerException
+        {
+            [Dot42.DexImport("getCause", "()Ljava/lang/Throwable;", AccessFlags = 1)]
+            get { return Cause; }
+        }
+
+        public Exception GetBaseException()
+        {
+            // Not sure is this is the real thing...
+            var ex = this;
+            while (ex.InnerException != null)
+                ex = ex.InnerException;
+            return ex;
+        }
 
 	}
 }

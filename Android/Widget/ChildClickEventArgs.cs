@@ -13,11 +13,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Android.Views;
+
 namespace Android.Widget
 {
-	public class ChildClickEventArgs : View.ViewEventArgs
+	public class ChildClickEventArgs : ViewEventArgs
 	{
-	    public ChildClickEventArgs(View.View view, int groupPosition, int childPosition, long id)
+	    public ChildClickEventArgs(View view, int groupPosition, int childPosition, long id)
 	    {
 	        Id = id;
 	        ChildPosition = childPosition;
@@ -28,7 +31,7 @@ namespace Android.Widget
         /// <summary>
         /// The view within the expandable list/ListView that was clicked
         /// </summary>
-	    public View.View View { get; private set; }
+	    public View View { get; private set; }
 
         /// <summary>
         /// The group position that contains the child that was clicked

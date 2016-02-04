@@ -13,7 +13,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Android.View;
+using Android.Views;
 using System;
 using Dot42;
 
@@ -23,7 +23,12 @@ namespace Android.Widget
     {
 #region System resource ID's
 #pragma warning disable 649
+        
+        [Dot42.ResourceId("__dot42_autocompletetextview_itemselected_listener")]
+        private static readonly int itemSelectedListenerKey;
 
+        [Dot42.ResourceId("__dot42_autocompletetextview_itemclick_listener")]
+        private static readonly int itemClickListenerKey;
 #if ANDROID_17P
         [Dot42.ResourceId("__dot42_autocompletetextview_dismiss_listener")]
         private static readonly int dismissListenerKey;
@@ -32,6 +37,53 @@ namespace Android.Widget
 #pragma warning restore 649
 #endregion // System resource ID's
 
+        /// <summary>
+        /// Fired when an item in this view has been selected.
+        /// </summary>
+        [ListenerInterface("android/widget/AdapterView$OnItemSelectedListener")]
+        public event EventHandler<AdapterView.ItemSelectedEventArgs> ItemSelected
+        {
+            add
+            {
+                var listener = (AdapterViewOnItemSelectedListener<object>)GetTag(itemSelectedListenerKey);
+                if (listener == null)
+                {
+                    listener = new AdapterViewOnItemSelectedListener<object>();
+                    SetTag(itemSelectedListenerKey, listener);
+                    OnItemSelectedListener = listener;
+                }
+                listener.ItemSelected.Add(value);
+            }
+            remove
+            {
+                var listener = (AdapterViewOnItemSelectedListener<object>)GetTag(itemSelectedListenerKey);
+                if (listener != null) listener.ItemSelected.Remove(value);
+            }
+        }
+
+        /// <summary>
+        /// Fired when this view item is clicked on.
+        /// </summary>
+        [ListenerInterface("android/widget/AdapterView$OnItemClickListener")]
+        public event EventHandler<AdapterView.ItemClickEventArgs> ItemClick
+        {
+            add
+            {
+                var listener = (AdapterViewOnItemClickListener<object>)GetTag(itemClickListenerKey);
+                if (listener == null)
+                {
+                    listener = new AdapterViewOnItemClickListener<object>();
+                    SetTag(itemClickListenerKey, listener);
+                    OnItemClickListener = listener;
+                }
+                listener.Add(value);
+            }
+            remove
+            {
+                var listener = (AdapterViewOnItemClickListener<object>)GetTag(itemClickListenerKey);
+                if (listener != null) listener.Remove(value);
+            }
+        }
 #if ANDROID_17P
         /// <summary>
         /// Fired whenever the AutoCompleteTextView's list of completion options has been dismissed and is no longer available for user interaction.

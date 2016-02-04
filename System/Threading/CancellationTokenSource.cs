@@ -28,7 +28,6 @@
 
 using System.Collections.Generic;
 using System.Collections.Concurrent;
-using Java.Util.Concurrent.Atomic;
 
 namespace System.Threading
 {
@@ -37,12 +36,12 @@ namespace System.Threading
 #endif
 	public class CancellationTokenSource : IDisposable
 	{
-		bool canceled;
-		bool disposed;
+		volatile bool canceled;
+		volatile bool disposed;
 
-        AtomicInteger currId =  new AtomicInteger(int.MinValue);
+	    private int currId = int.MinValue;
 		ConcurrentDictionary<CancellationTokenRegistration, Action> callbacks;
-		AtomicReference<CancellationTokenRegistration[]> linkedTokens;
+		CancellationTokenRegistration[] linkedTokens;
 
 		ManualResetEvent handle;
 		
@@ -133,7 +132,7 @@ namespace System.Threading
 			
 			try {
 				Action cb;
-				for (int id = int.MinValue + 1; id <= currId.Get(); id++) {
+				for (int id = int.MinValue + 1; id <= currId; id++) {
 					if (!callbacks.TryRemove (new CancellationTokenRegistration (id, this), out cb))
 						continue;
 					if (cb == null)
@@ -219,7 +218,7 @@ namespace System.Threading
 				if (token.CanBeCanceled)
 					registrations.Add (token.Register (action));
 			}
-			src.linkedTokens = new AtomicReference<CancellationTokenRegistration[]>(registrations.ToArray());
+			src.linkedTokens = registrations.ToArray();
 			
 			return src;
 		}
@@ -269,7 +268,7 @@ namespace System.Threading
 		void UnregisterLinkedTokens ()
 		{
             
-			var registrations = linkedTokens.GetAndSet(null);
+			var registrations = Interlocked.Exchange(ref linkedTokens,null);
 			if (registrations == null)
 				return;
 			foreach (var linked in registrations)
@@ -280,7 +279,7 @@ namespace System.Threading
 		{
 			CheckDisposed ();
 
-			var tokenReg = new CancellationTokenRegistration (currId.IncrementAndGet(), this);
+			var tokenReg = new CancellationTokenRegistration (Interlocked.Increment(ref currId), this);
 
 			/* If the source is already canceled we execute the callback immediately
 			 * if not, we try to add it to the queue and if it is currently being processed
