@@ -7,8 +7,8 @@ namespace System
 {
 	/// <summary>
 	/// Represents a floating-point decimal data type with up to 29 significant
-	/// digits, suitable for financial and commercial calculations
-	/// based on javas BigDecimal
+	/// digits, suitable for financial and commercial calculations.
+	/// Based on Javas BigDecimal
 	/// </summary>
 	[Serializable]
 	public struct Decimal: IFormattable, IConvertible, IComparable, IComparable<Decimal>, IEquatable <Decimal>
@@ -22,18 +22,20 @@ namespace System
 		public const decimal MinusOne = -1m;
 		public const decimal One = 1m;
 		public const decimal Zero = 0m;
-        private const decimal _0x8000000000000000 = (decimal)0x8000000000000000UL;
 
-	    private readonly BigDecimal _val;
-
-	    private const decimal Scale32Bit = ((long) uint.MaxValue) + 1;
+        private static readonly decimal _0x8000000000000000 = FromInvariantString("9223372036854775808"); //(decimal)0x8000000000000000UL;
+	    private static readonly decimal Scale32Bit = ((long) uint.MaxValue) + 1;
 
         private const uint MaxScale = 28;
         private const uint SignFlag = 0x80000000;
         private const int ScaleShift = 16;
         private const uint ReservedSs32Bits = 0x7F00FFFF;
 
-		public Decimal (int lo, int mid, int hi, bool isNegative, byte scale)
+
+
+        private readonly BigDecimal _val;
+
+        public Decimal (int lo, int mid, int hi, bool isNegative, byte scale)
 		{
 			_val = FromValues(lo, mid, hi, isNegative, scale);
 		}
@@ -46,12 +48,16 @@ namespace System
 			}
 		}
 
-        // Note: we should have special redirection code to allow this overload that clashes with the one above
-        //       until then we keep this obsolete. This should keep Roslyn happy.
-        [CLSCompliant(false)][Obsolete("do not use", true)]
-        public Decimal (uint value) 
-		{
-            _val = new BigDecimal((long)value);
+        // Note: Roslyn compiler requires this overload.
+        //       it will never be called, but redirected by the dot42 compiler.
+        [CLSCompliant(false)]
+        [DexNative]
+        public Decimal (uint value)
+        {
+            //_val = new BigDecimal((long)value);
+
+            var ensureImplicitOpIncluded = (decimal)value; // make sure the implicit operator is included
+            throw new NotImplementedException(); // but see implicit operator below.
 		}
 
 		public Decimal (long value) 
@@ -59,11 +65,13 @@ namespace System
             _val = new BigDecimal(value);
 		}
 
-        // Note: we should have special redirection code to allow this overload that clashes with the one above
-        //       until then we keep this obsolete. This should keep Roslyn happy.
-		[CLSCompliant(false)][Obsolete("do not use", true)]
+        // Note: Roslyn compiler requires this overload.
+        //       it will never be called, but redirected by the dot42 compiler.
+        [CLSCompliant(false)]
+        [DexNative]
 		public Decimal (ulong value) 
 		{
+            var ensureImplicitOpIncluded = (decimal)value; // make sure the implicit operator is included
 			throw new NotImplementedException(); // but see implicit operator below.
 		}
 
@@ -279,6 +287,7 @@ namespace System
 		}
 
 		[CLSCompliant(false)]
+        [Include] // include, as the constructor-redirection code depends on this. This should better be handled somewhere else.
 		public static implicit operator Decimal (uint value) 
 		{
 			return new Decimal ((long)value);
@@ -290,7 +299,8 @@ namespace System
 		}
 
 		[CLSCompliant(false)]
-		public static implicit operator Decimal (ulong value)
+        [Include] // include, as the constructor-redirection code depends on this. This should better be handled somewhere else.
+        public static implicit operator Decimal (ulong value)
 		{
 		    unchecked
 		    {
@@ -299,8 +309,8 @@ namespace System
                 if(valWithoutHighestBit == value)
                     return new Decimal((long) value);
 
-		        // add value for highest bit to the value with removed highest bit.
-		        return new Decimal((long)valWithoutHighestBit) + (decimal) 0x8000000000000000UL;
+                // add value for highest bit to the value with removed highest bit.
+                return new Decimal((long)valWithoutHighestBit) + _0x8000000000000000; 
 		    }
 		}
 

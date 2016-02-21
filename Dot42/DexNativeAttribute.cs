@@ -21,7 +21,7 @@ namespace Dot42
     /// Indicates that a method is converted by the compiler to native code.
     /// This attribute is for internal use only.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.Method|AttributeTargets.Constructor)]
     [Ignore]
     public sealed class DexNativeAttribute : Attribute
     {
